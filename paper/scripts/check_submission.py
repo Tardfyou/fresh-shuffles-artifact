@@ -44,16 +44,26 @@ else:
         checks["page_limit_ok"] = len(pdf.pages) <= 18
         checks["us_letter_ok"] = abs(pdf.pages[0].width - 612) < 1 and abs(pdf.pages[0].height - 792) < 1
         texts = [page.extract_text() or "" for page in pdf.pages]
+        # Read each column separately: full-page extraction can merge an
+        # appendix heading with a bibliography line in the other column.
+        column_texts = [
+            [
+                page.crop((0, 0, page.width / 2, page.height)).extract_text() or "",
+                page.crop((page.width / 2, 0, page.width, page.height)).extract_text() or "",
+            ]
+            for page in pdf.pages
+        ]
         appendix_pages = [
             i + 1
-            for i, text in enumerate(texts)
-            if any(line.strip() == "Appendix A." for line in text.splitlines())
+            for i, columns in enumerate(column_texts)
+            if any(line.strip() == "Appendix A." for text in columns for line in text.splitlines())
         ]
         conclusion_pages = [i + 1 for i, text in enumerate(texts) if re.search(r"\b8\.\s+Conclusion\b", text)]
         checks["conclusion_pages"] = conclusion_pages
         checks["appendix_start_page"] = appendix_pages[0] if appendix_pages else None
+        checks["appendix_heading_present"] = bool(appendix_pages)
         checks["main_text_within_13_pages"] = bool(conclusion_pages) and max(conclusion_pages) <= 13
-        if not checks["page_limit_ok"] or not checks["us_letter_ok"] or not checks["main_text_within_13_pages"]:
+        if not checks["page_limit_ok"] or not checks["us_letter_ok"] or not checks["main_text_within_13_pages"] or not checks["appendix_heading_present"]:
             failures.append("pdf_format_or_page_limit")
 
 tex = "\n".join(path.read_text(errors="replace") for path in sorted(ROOT.rglob("*.tex")))

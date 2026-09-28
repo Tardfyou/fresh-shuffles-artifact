@@ -97,9 +97,9 @@ def rot_from_pair(v, w):
     from attack_lib import rot_strided
     return rot_strided(ang, v.numel())
 
-# note: in fused mode, w recovered from states satisfies w = M v (rows of V M);
-# angle relation: w = M v  =>  angle_i = atan2(v_b,v_a) - atan2(w_b,w_a)?  we
-# validate empirically below by dictionary self-check instead of trusting sign.
+# With column-vector notation, w = M.T @ v for cache rows transformed by V M.
+# rot_from_pair follows attack_lib.rot_strided's rotation convention.
+# The fixed-marker diagnostic below does not select or validate angle signs.
 accs = {}
 for h in range(H):
     if h not in secrets:
@@ -108,7 +108,8 @@ for h in range(H):
     M_hat = rot_from_pair(plain_probe[h][0], sec["w"])
     Dhat = DICT[:, h] @ M_hat
     Dn_hat = torch.nn.functional.normalize(Dhat, dim=-1)
-    # self-check: demixed probe blocks should map to public dictionary
+    # Legacy diagnostic: subtract marker column 0 from every sampled state.
+    # This is not a full probe-decoding validation; most states move the marker.
     blocks = prot[0][1][0, h].float().view(nblk_pad, B, D)[first_blk:NB]
     cid, cents, *_ = cluster_states(blocks)
     ok = 0
@@ -118,7 +119,7 @@ for h in range(H):
             sec["s"] @ (C - torch.outer(sec["s"][0], sec["a_hat"])), dim=-1)
         sims = Xn @ Dn_hat.T
         pred = sims.argmax(1)
-        # probe is a repeated token: all rows should map to the SAME public token
+        # Count single-token consistency under this fixed marker hypothesis.
         ok += int(len(set(pred.tolist())) == 1)
     res[f"head{h}_probe_selfcheck"] = f"{ok}/8"
     accs[h] = (sec, Dn_hat)

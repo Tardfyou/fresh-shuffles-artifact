@@ -33,6 +33,10 @@ for row in configs:
 assert [correct, total] == stats["global"] == [263029, 263904]
 assert len(configs) == 12 and len(perfect) == 6
 assert all(d["S_bijection"] for d in diagnostics)
+fusion_module = root.parent / "experiments/kvcloak/fusion.py"
+fusion_snapshot = root.parent / "sources/defense__core__fusion.py.txt"
+assert fusion_module.is_file()
+assert fusion_module.read_bytes() == fusion_snapshot.read_bytes()
 privacy = read("privacy_v3.json")["per_entity"]
 unique = sum(r["strictly_higher"] == 0 and r["tie_group_size"] == 1 for r in privacy)
 expected = {str(k): sum(min(1, max(0, (k-r["strictly_higher"])/r["tie_group_size"]))
@@ -75,6 +79,7 @@ out = {
     "privacy_expected_topk": expected,
     "citation_keys": sorted(cites),
     "all_citations_resolve": True,
+    "fusion_dependency_matches_snapshot": True,
     "pdf_pages": page_count,
     "page1_fonts": dict(fonts),
     "anonymous_artifact_hyperlink_present": True,

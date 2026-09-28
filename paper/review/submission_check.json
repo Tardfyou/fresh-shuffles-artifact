@@ -12,11 +12,12 @@
     9
   ],
   "appendix_start_page": 10,
+  "appendix_heading_present": true,
   "main_text_within_13_pages": true,
   "placeholder_count": 0,
   "anonymous_source_ok": true,
   "generated_table_rows_match_source": true,
-  "paper_sha256": "d7d946afadd2b07ca05ffea6f73b08ba6eb68874c237867457dbe64eaa431c49",
+  "paper_sha256": "10f1d7a8ed9d5f2aa18a48983fadc07cb6f97db7ac640bcc5d7a3d4e84a19798",
   "status": "pass",
   "failures": []
 }

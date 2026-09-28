@@ -46,6 +46,7 @@
     "tinyllama"
   ],
   "all_citations_resolve": true,
+  "fusion_dependency_matches_snapshot": true,
   "pdf_pages": 11,
   "page1_fonts": {
     "NimbusRomNo9L-Medi": 1426,
@@ -57,7 +58,7 @@
     "CMR10": 2
   },
   "anonymous_artifact_hyperlink_present": true,
-  "pdf_sha256": "d7d946afadd2b07ca05ffea6f73b08ba6eb68874c237867457dbe64eaa431c49",
+  "pdf_sha256": "10f1d7a8ed9d5f2aa18a48983fadc07cb6f97db7ac640bcc5d7a3d4e84a19798",
   "limitations_retained": [
     "Head-token observations are correlated; no population prevalence estimate",
     "Privacy study is single-model/single-key with incomplete retained traces",

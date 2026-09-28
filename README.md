@@ -41,6 +41,8 @@ The final manuscript corrects the number of perfect main-suite configurations to
 
 The supplied requirements describe manuscript regeneration only. The historical model runs lack a complete contemporaneous dependency lock; no claim of independently reproduced or bit-identical model runs is made by the asset checks.
 
+The official-entry record is a historical file-format experiment: its defender thresholds used the first eight target conversations, and its harness did not enforce successful subprocess completion before reading a reused output directory. The summary alone does not certify a fresh end-to-end run. The S/a comparison retains rounded percentages, not raw counts. These qualifications are explicit in the manuscript. The importable fusion helper is packaged byte-for-byte from its retained upstream snapshot.
+
 ## Third-party material
 
 KV-Cloak source snapshots derive from `SiO-2/kvcloak` commit `6b40f36edb2f337557543e7e60b10022308883d4`; its Apache-2.0 license is retained in [THIRD_PARTY_KVCLOAK_LICENSE](THIRD_PARTY_KVCLOAK_LICENSE). IEEEtran files retain their original notices. No additional blanket license is asserted for third-party material or the manuscript.

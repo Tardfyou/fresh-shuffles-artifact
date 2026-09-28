@@ -1,14 +1,16 @@
-"""Hardened-config attack: need_ratio=True (row-scaled S, row-scaled M).
+"""Recorded need_ratio=True variant with positive column scaling.
 
-S_used = D_r S0, M_used = D_m M_rot (D_r, D_m diagonal > 0, same factor per
-rotation pair). Model of probe states: C_j = u' w'^T + s'_j a^T with
-u' = D_r S0 1, s'_j = D_r S0 e_j  =>  sum_j s'_j = u'.
+The official broadcast gives S_used = S0 D_r and M_used = M_rot D_m.
+Probe states have the form C_j = u w^T + s_j a^T, where
+u = S_used 1 and s_j is column j of S_used.
 
-Pipeline: cluster -> a-direction (rank-1 diffs) -> constrained ALS for
-(u', w', {s'_j}) -> diagonal D_r via orthonormalizability of {D_r^-1 s'_j}
--> S_used^{-T} numeric inverse -> M_rot angles from (v, w') pair arguments,
-pair ratios m_i = ||w'_pair|| / ||v_pair|| (rotations preserve pair norms)
--> demix X = S_used^{-T}(C - s'_j a^T) M_rot^T D_m^-1 -> dictionary match.
+The routine estimates the marker direction from state differences, fits
+orthogonality constraints by least squares and a scalar scan, and estimates
+paired column rotations/scales from the public probe. Target decoding uses
+the recovered columns as rows (a transpose, not a numerical inverse).
+Under exact column recovery this leaves positive row scalings, which
+normalized cosine matching ignores. Saved results evaluate this numerical
+procedure; the orthogonal default-case theorem does not prove the variant.
 """
 import json
 import math
@@ -133,7 +135,7 @@ for h in range(H):
     a_hat, u_hat, w_hat, s_hat, tau = fit_scaled_states(cents)
     # ground truth for diagnostics
     conf = cfg[0][h][1]
-    S_true = (conf["S"].float() * conf["S_ratios"]).T  # careful: S_used = D_r S0, S_ratios rows
+    S_true = (conf["S"].float() * conf["S_ratios"]).T  # rows are columns of S0 D_r
     S_used_true = conf["S"].float() * conf["S_ratios"]  # column scaling (torch broadcast)
     a_true = conf["a"].float()
     cos = lambda x, y: (torch.dot(x, y) / (x.norm() * y.norm() + 1e-12)).item()
@@ -142,8 +144,7 @@ for h in range(H):
         s_hat.unsqueeze(1), S_used_true.t().unsqueeze(0), dim=2)
     diag = {"cos_a": round(abs(cos(a_hat, a_true)), 6),
             "S_min_cos": round(sc.abs().max(1).values.min().item(), 6)}
-    # Dr solve
-    # D_r not needed: demix leaves positive row scalings (cos-invariant)
+    # No explicit D_r inverse: transpose demixing leaves positive row scalings.
     # M from (v, w'): angles by pair args; m_i by pair norms
     D2 = D // 2
     angles = torch.zeros(D2)
@@ -156,9 +157,9 @@ for h in range(H):
         angles[i] = math.atan2(wb, wa) - math.atan2(vb, va)
         m[i] = math.hypot(wa, wb) / math.hypot(va, vb)
     M_rot = rot_strided(angles, D)
-    # S_used^{-T}: build S_used columns = states: S_used_hat = s_hat^T * ??? rows are states in
-    # unknown column order -> S_used_hat = s_hat.T (columns = states). Then
-    # X = (S_used_hat^{-T}) (C - s_j a^T) M_rot.T diag(1/m_pairs)
+    # s_hat contains estimated columns as rows, in unknown column order.
+    # Decoding below left-multiplies by s_hat, divides by paired column
+    # scales, then right-multiplies by M_rot.T before cosine normalization.
     m_full = torch.cat([m, m])
     secrets[h] = (s_hat, a_hat, M_rot, m_full)  # demix via rows-of-states matrix
     diag["tau"] = round(float(tau), 6)
