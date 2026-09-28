@@ -1,0 +1,142 @@
+{
+ "model": "Qwen/Qwen2.5-0.5B",
+ "tag": "qwen25_05b_b32",
+ "b": 32,
+ "layers": 24,
+ "kv_heads": 2,
+ "head_dim": 64,
+ "probe_char": "a",
+ "probe_raw_entry": true,
+ "probe_prefix_tokens": 0,
+ "probe_tokens": 20250,
+ "premise_rows_identical": true,
+ "probe_obf_time_s": 0.295,
+ "probe_core_blocks": 632,
+ "head0_states": 32,
+ "head0_separation": 1045.4,
+ "head0_blocks_to_all_states": 127,
+ "head0_recovery": {
+  "cos_a": 0.999997,
+  "a_norm_relerr": 5.9e-05,
+  "cos_u": 0.999999,
+  "w_relerr": 0.0047,
+  "S_min_signed_cos": 0.999998,
+  "S_bijection": true
+ },
+ "head1_states": 32,
+ "head1_separation": 1117.6,
+ "head1_blocks_to_all_states": 103,
+ "head1_recovery": {
+  "cos_a": 0.999998,
+  "a_norm_relerr": 0.000283,
+  "cos_u": 0.999998,
+  "w_relerr": 0.005972,
+  "S_min_signed_cos": 0.999997,
+  "S_bijection": true
+ },
+ "norm_detected": "input_layernorm",
+ "norm_capture_err": 0.0,
+ "dict_selfcheck": 1.0,
+ "victims": {
+  "prose_en": {
+   "acc": {
+    "seed5001": 1.0,
+    "seed5002": 1.0
+   },
+   "raw": {
+    "seed5001": [
+     320,
+     320
+    ],
+    "seed5002": [
+     320,
+     320
+    ]
+   },
+   "tokens": 160,
+   "ms_per_block": 257.4
+  },
+  "python_code": {
+   "acc": {
+    "seed5001": 1.0,
+    "seed5002": 1.0
+   },
+   "raw": {
+    "seed5001": [
+     576,
+     576
+    ],
+    "seed5002": [
+     576,
+     576
+    ]
+   },
+   "tokens": 288,
+   "ms_per_block": 179.6
+  },
+  "chinese": {
+   "acc": {
+    "seed5001": 1.0,
+    "seed5002": 1.0
+   },
+   "raw": {
+    "seed5001": [
+     512,
+     512
+    ],
+    "seed5002": [
+     512,
+     512
+    ]
+   },
+   "tokens": 256,
+   "ms_per_block": 160.2
+  },
+  "dialogue": {
+   "acc": {
+    "seed5001": 1.0,
+    "seed5002": 1.0
+   },
+   "raw": {
+    "seed5001": [
+     384,
+     384
+    ],
+    "seed5002": [
+     384,
+     384
+    ]
+   },
+   "tokens": 192,
+   "ms_per_block": 194.8
+  },
+  "math": {
+   "acc": {
+    "seed5001": 1.0,
+    "seed5002": 1.0
+   },
+   "raw": {
+    "seed5001": [
+     512,
+     512
+    ],
+    "seed5002": [
+     512,
+     512
+    ]
+   },
+   "tokens": 256,
+   "ms_per_block": 191.8
+  }
+ },
+ "control_fresh_secrets": 0.0063,
+ "control_fresh_secrets_raw": [
+  1,
+  160
+ ],
+ "control_fresh_secrets_counts": [
+  1,
+  160
+ ],
+ "total_time_s": 113.6
+}

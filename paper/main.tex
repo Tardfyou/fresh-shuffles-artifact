@@ -1,0 +1,35 @@
+\documentclass[conference,compsoc]{IEEEtran}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx,booktabs,array,multirow}
+\usepackage{xcolor,url}
+\usepackage[hidelinks,pdfauthor={},pdftitle={Fresh Shuffles, Reused Secrets: Breaking KV-Cloak with Repeated-Token Prompts}]{hyperref}
+\graphicspath{{figures/}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\ones}{\mathbf{1}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\T}{\mathsf{T}}
+\newcommand{\scheme}{KV-Cloak}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\Stab}{\operatorname{Stab}}
+\newcommand{\argmax}{\operatorname*{arg\,max}}
+\begin{document}
+\title{Fresh Shuffles, Reused Secrets:\\Breaking KV-Cloak with Repeated-Token Prompts}
+\author{}
+\maketitle
+\input{sections/abstract}
+\input{sections/introduction}
+\input{sections/model}
+\input{sections/analysis}
+\input{sections/attack}
+\input{sections/evaluation}
+\input{sections/discussion}
+\input{sections/related}
+\input{sections/conclusion}
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+\appendices
+\input{sections/appendix}
+\end{document}

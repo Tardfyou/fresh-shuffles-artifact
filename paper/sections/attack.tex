@@ -1,0 +1,36 @@
+\section{Attack Construction}
+\label{sec:attack}
+\subsection{Reachable probes and state recovery}
+The attack searches a small character set for text whose normal tokenization contains a sufficiently long constant-token run. It submits the tokenizer's complete output, including any beginning-of-sequence or other prefix tokens. If the run begins at token offset $p$ and the input contains $L$ tokens, the usable block indices are
+\begin{equation}
+ \left\lceil p/b\right\rceil,\ldots,\left\lfloor L/b\right\rfloor-1.
+\end{equation}
+This filtering happens on the attacker side. It does not remove the prefix before the model computes its cache. The main suite records the probe text character, prefix length, total token count, and whether this raw-entry path succeeded. All twelve included configurations use that path.
+
+For each head, the attacker flattens protected probe blocks, groups nearby states, and computes a representative for each group. It then estimates the rank-one directions in~\eqref{eq:rankone}, aligns their signs, and combines them to estimate $a$. Projection orthogonal to that direction yields $u$; the known public probe vector selects its sign. Equations~\eqref{eq:w} and~\eqref{eq:s} recover the remaining parameters. The implementation checks state coverage before attempting recovery. Ground-truth column similarities are evaluation diagnostics, not decisions supplied to the attack.
+
+Let $\widetilde S$ contain the recovered columns in state order. In exact arithmetic, $\widetilde S=S\Pi$ for some unknown permutation $\Pi$. Then $\widetilde S^\T S=\Pi^\T$. This unordered recovery is sufficient for content extraction: it only changes the order in which recovered rows are returned.
+
+\subsection{Decoding an unseen block}
+For each protected target block $C$, the attacker enumerates the $b$ possible marker columns. For hypothesis $j$, it forms
+\begin{equation}
+ Y_j=\widetilde S^\T(C-\widetilde s_j a^\T)\widehat M^\T.
+ \label{eq:decode}
+\end{equation}
+Under the correct marker hypothesis and exact recovery, $Y_j$ is a row-permuted copy of $V$. For each row, the attacker selects the nearest normalized vector from the dictionary in~\eqref{eq:dictionary}. It chooses the marker hypothesis with the largest sum of rowwise best-match cosine scores. This final selection is a measured heuristic; the identification theorem does not by itself guarantee its success for every vocabulary and block.
+
+The output preserves multiplicity but not within-block order. We score it by multiset intersection:
+\begin{equation}
+ \operatorname{hit}(\widehat T,T)=\sum_t\min\{n_{\widehat T}(t),n_T(t)\}.
+ \label{eq:metric}
+\end{equation}
+The denominator is $b$ per scored head and block. Repeated observations of the same token across heads remain separate evaluation opportunities; they are not independent textual samples.
+
+The dictionary is a one-time public-model computation. Calibration uses state clustering and small-matrix factorizations. Target recovery tries $b$ marker hypotheses and performs rowwise dictionary comparisons. Thus the attack does not enumerate $b!$ permutations. Its practical cost still depends on vocabulary size, dimension, and implementation of nearest-neighbor search. We do not present a deployment-throughput claim from the current CPU scripts.
+
+\subsection{Fusion, scaling, and secret scope}
+In fused mode, the server folds $M$ into its projection weights, producing $VM$ before the cache obfuscator. The attacker still uses its unfused public model. It recovers the corresponding transformed probe vector from protected states and composes the public dictionary with $\widehat M$. Our isolated experiment uses independent public and defender model objects; the earlier shortcut of constructing an attack dictionary from fused defender weights is excluded from its reported result.
+
+The optional scaling configuration changes orthogonal matrices into structured rotation/scaling transforms. It requires modified recovery equations rather than an unqualified application of Theorem~\ref{thm:identification}. We include its recorded behavior as a separate implementation variant. The exact theorem applies to its stated orthogonal setting only.
+
+Parameters are recovered for a head and secret epoch. A new permutation does not invalidate them; a new secret transform may. This distinction is tested by applying recovered parameters to fresh requests under the same configuration, to a new configuration as a negative control, and to a refreshed configuration after recalibration. Those tests isolate parameter reuse from a claim that the attack survives arbitrary key rotation.

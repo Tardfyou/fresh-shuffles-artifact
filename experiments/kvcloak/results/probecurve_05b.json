@@ -1,0 +1,93 @@
+{
+ "probe_curve": [
+  {
+   "blocks": 16,
+   "P_all_states": 0.0,
+   "P_full_recovery": 0.0,
+   "min_states_seen": 7,
+   "coupon_pred_all": 0.001
+  },
+  {
+   "blocks": 24,
+   "P_all_states": 0.0,
+   "P_full_recovery": 0.0,
+   "min_states_seen": 10,
+   "coupon_pred_all": 0.022
+  },
+  {
+   "blocks": 32,
+   "P_all_states": 0.0,
+   "P_full_recovery": 0.0,
+   "min_states_seen": 12,
+   "coupon_pred_all": 0.114
+  },
+  {
+   "blocks": 48,
+   "P_all_states": 0.3,
+   "P_full_recovery": 0.3,
+   "min_states_seen": 14,
+   "coupon_pred_all": 0.478
+  },
+  {
+   "blocks": 54,
+   "P_all_states": 0.3,
+   "P_full_recovery": 0.3,
+   "min_states_seen": 15,
+   "coupon_pred_all": 0.608
+  },
+  {
+   "blocks": 64,
+   "P_all_states": 0.3,
+   "P_full_recovery": 0.3,
+   "min_states_seen": 15,
+   "coupon_pred_all": 0.772
+  },
+  {
+   "blocks": 80,
+   "P_all_states": 0.9,
+   "P_full_recovery": 0.9,
+   "min_states_seen": 14,
+   "coupon_pred_all": 0.912
+  },
+  {
+   "blocks": 96,
+   "P_all_states": 0.9,
+   "P_full_recovery": 0.9,
+   "min_states_seen": 15,
+   "coupon_pred_all": 0.968
+  },
+  {
+   "blocks": 128,
+   "P_all_states": 1.0,
+   "P_full_recovery": 1.0,
+   "min_states_seen": 16,
+   "coupon_pred_all": 0.996
+  },
+  {
+   "blocks": 160,
+   "P_all_states": 0.9,
+   "P_full_recovery": 0.9,
+   "min_states_seen": 15,
+   "coupon_pred_all": 0.999
+  },
+  {
+   "blocks": 192,
+   "P_all_states": 1.0,
+   "P_full_recovery": 1.0,
+   "min_states_seen": 16,
+   "coupon_pred_all": 1.0
+  },
+  {
+   "blocks": 256,
+   "P_all_states": 1.0,
+   "P_full_recovery": 1.0,
+   "min_states_seen": 16,
+   "coupon_pred_all": 1.0
+  }
+ ],
+ "theory": {
+  "b": 16,
+  "bHb": 54.1,
+  "note": "expected blocks to collect all states"
+ }
+}

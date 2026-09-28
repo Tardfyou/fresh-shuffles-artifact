@@ -1,0 +1,35 @@
+{
+ "mode": "fused",
+ "model": "Qwen/Qwen2.5-0.5B",
+ "kv_heads": 2,
+ "head_dim": 64,
+ "fusion_time_s": 0.15,
+ "premise_rows_identical": true,
+ "head0_states": 16,
+ "head0_w_relerr": 0.00307,
+ "head1_states": 16,
+ "head1_w_relerr": 0.00276,
+ "dict_selfcheck": 1.0,
+ "victims": {
+  "prose_en": {
+   "seed6001": 1.0,
+   "seed6002": 1.0
+  },
+  "python_code": {
+   "seed6001": 1.0,
+   "seed6002": 1.0
+  },
+  "chinese": {
+   "seed6001": 1.0,
+   "seed6002": 1.0
+  },
+  "dialogue": {
+   "seed6001": 1.0,
+   "seed6002": 1.0
+  },
+  "math": {
+   "seed6001": 1.0,
+   "seed6002": 1.0
+  }
+ }
+}

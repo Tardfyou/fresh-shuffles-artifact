@@ -1,0 +1,7 @@
+{
+ "exact_block_order": 0.0,
+ "position_accuracy": 0.1590909090909091,
+ "baseline_random_position": 0.0625,
+ "blocks": 11,
+ "scorer": "Qwen/Qwen2.5-3B"
+}

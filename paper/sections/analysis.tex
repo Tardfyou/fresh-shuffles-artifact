@@ -1,0 +1,79 @@
+\section{From Permutation Count to Observable Orbit}
+\label{sec:analysis}
+The analysis separates three questions: how many states can a chosen input produce; whether those states identify reusable parameters; and how many blocks are required to observe them. A large permutation group alone answers none of these questions.
+
+\subsection{Input symmetry collapses the orbit}
+Suppose a legal input produces $V=\ones v^\T$. Every row permutation then satisfies $PV=V$. Define $w=M^\T v$ and $u=S\ones$. Equation~\eqref{eq:cloak} becomes
+\begin{equation}
+ C(P)=u w^\T+S P A.
+ \label{eq:orbit}
+\end{equation}
+Only the marker moves. Identical rows, rather than rank one alone, are essential: a general rank-one matrix $xv^\T$ need not be invariant when the entries of $x$ differ.
+
+\begin{proposition}[Marker orbit]
+For fixed $V=\ones v^\T$, fixed $A,M$, and invertible $S$, the number of distinct exact-arithmetic ciphertexts under all row permutations is
+\begin{equation}
+ |\{C(P):P\in\mathcal S_b\}|=\frac{b!}{|\Stab(A)|},
+ \label{eq:stabilizer}
+\end{equation}
+where $\Stab(A)=\{P:PA=A\}$. For $A=e_ra^\T$ with $a\ne0$, this number is $b$.
+\end{proposition}
+\begin{proof}
+Adding the constant $uw^\T$ and multiplying by invertible $S$ preserve equality of outputs. Thus two outputs agree exactly when their permuted markers agree. The orbit--stabilizer identity gives~\eqref{eq:stabilizer}. A single nonzero marker row can occupy $b$ distinct positions.
+\end{proof}
+
+For $k$ identical nonzero marker rows and $b-k$ zero rows, the count is $\binom bk$. If all marker rows are identical, it is one even though the marker has full support. If the $k$ nonzero rows are distinct and different from zero, the count is $b!/(b-k)!$. These examples prevent a misleading sparse-versus-dense dichotomy: marker support size alone does not determine security. Our implemented recovery routine uses the single-row case, not an attack on every orbit in~\eqref{eq:stabilizer}.
+
+In that case, let $s_j=Se_j$. The $b$ ideal states are
+\begin{equation}
+ C_j=uw^\T+s_j a^\T,\qquad j=1,\ldots,b.
+ \label{eq:state}
+\end{equation}
+Fresh $P$ remains present in the implementation. The attack neither predicts its random seed nor forces it to repeat. Instead, many permutations have the same effect on the chosen input.
+
+\subsection{Identification from the state geometry}
+The next result describes an equivalent demixer, not the original order of $S$'s columns.
+
+\begin{theorem}[Default-configuration identification]
+\label{thm:identification}
+Assume all states in~\eqref{eq:state} are available; $S$ is orthogonal; $a$ is nonzero with known positive orientation; $v$ is known; and $w$ has a nonzero component orthogonal to $a$. Assume further that the known norm $\|w\|=\|v\|$ distinguishes the two signs of $u$. Then $a,w,u$ and the columns of $S$ are identifiable, with the columns unordered. If $M$ consists of independent two-dimensional rotations and the restriction of $v$ to every pair is nonzero, $M$ is identifiable modulo full rotations.
+\end{theorem}
+\begin{proof}
+For $i\ne j$,
+\begin{equation}
+ C_i-C_j=(s_i-s_j)a^\T.
+ \label{eq:rankone}
+\end{equation}
+This matrix has rank one. Its right singular direction identifies $a/\|a\|$ up to sign; positivity fixes the orientation. Since distinct orthonormal columns satisfy $\|s_i-s_j\|=\sqrt2$, its nonzero singular value is $\sqrt2\|a\|$, identifying the magnitude.
+
+Let $Q_a=I-aa^\T/\|a\|^2$. Then $C_jQ_a=u(Q_aw)^\T$ is a nonzero rank-one matrix. Its left direction identifies $u$ up to sign, and $\|u\|=\sqrt b$ fixes its magnitude. For either sign candidate, use $u^\T s_j=1$ to compute
+\begin{equation}
+ w^\T=\frac{u^\T C_j-a^\T}{b}.
+ \label{eq:w}
+\end{equation}
+The assumed norm separation selects the correct sign. Each column follows from
+\begin{equation}
+ s_j=\frac{(C_j-uw^\T)a}{\|a\|^2}.
+ \label{eq:s}
+\end{equation}
+The state labels do not identify the original column indices, leaving an arbitrary column permutation. Finally, within every nonzero coordinate pair, the angle from the known $v$ pair to the recovered $w$ pair identifies the corresponding rotation under the implementation's convention.
+\end{proof}
+
+The qualifications are substantive. Choosing $-u$ in~\eqref{eq:w} gives $w'=-w-2a/b$, not merely a harmless sign flip. The norm test fails to distinguish signs precisely when $\langle w,a\rangle=-\|a\|^2/b$. Similarly, a zero pair in $v$ cannot reveal that pair's rotation. A different legal probe may resolve these degeneracies, but our theorem does not promise that one arbitrary token always suffices. Nor does it extend one-pair identification to a general orthogonal $M$.
+
+\subsection{Collection cost and finite precision}
+If each block independently maps the marker uniformly to a row, collecting all $b$ states is a coupon-collector process. The expected block count is $bH_b$, with $H_b=\sum_{i=1}^b1/i$. For $b=16$, this is about 54.1 blocks. A union bound gives
+\begin{equation}
+ \Pr[\text{some state missing after }n]\le b(1-1/b)^n
+ \le be^{-n/b}.
+ \label{eq:collection}
+\end{equation}
+For $H$ heads, $n\ge b\log(bH/\delta)$ suffices for the analogous union-bound failure probability $\delta$. Heads need not be independent for this union bound; blockwise sampling within each head must satisfy the premise. Prefixes and padding reduce the number of usable blocks. A count of observed clusters is a calibration diagnostic, not a guarantee of success within a fixed budget or after the key has changed.
+
+Floating-point implementations need not produce identical bit patterns for permutations in the same ideal state. Different accumulation orders can create nearby realizations. If every observed block is within Frobenius distance $\epsilon$ of its ideal state, within-state distances are at most $2\epsilon$. For distinct states, orthogonality gives
+\begin{equation}
+ \|C_i-C_j\|_F=\sqrt2\|a\|.
+\end{equation}
+Consequently a separating distance threshold exists whenever $4\epsilon<\sqrt2\|a\|$. This sufficient condition explains why rounding variants can remain clusterable; it is not an asserted error bound for every hardware backend. The experiments measure recovery under the actual bf16 cloak operations instead of inferring it solely from ideal arithmetic.
+
+For dictionary decoding, suppose the true normalized vector $z$ has margin $\gamma$ over every incorrect normalized dictionary vector in inner product, and the recovered normalized vector differs from $z$ by at most $\eta$ in Euclidean norm. Each score changes by at most $\eta$, so $2\eta<\gamma$ suffices to preserve its nearest neighbor. This conditional statement does not cover selecting the correct marker hypothesis, and it does not replace measurements of dictionary ambiguity. We make no uniform numerical-margin claim across the vocabulary.

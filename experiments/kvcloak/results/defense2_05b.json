@@ -1,0 +1,14 @@
+{
+ "cache_size_MB_1k_tok": 4.3,
+ "aead_enc_ms_per_1k_tok": 0.003,
+ "aead_dec_ms_per_1k_tok": 0.003,
+ "kvcloak_refusion_s_05b": 0.154,
+ "kvcloak_refusion_s_05b_2nd": 0.157,
+ "pbcm_rotation_cost": "0 (change PRF seed)",
+ "int8_quant_plaintext_relerr_mean": 0.01264,
+ "int8_quant_obfuscated_decoded_relerr_mean": 0.0266,
+ "known15_identification_acc": 0.0,
+ "known15_chance": 0.008,
+ "repeated_block_max_abs_cos": 0.4743,
+ "multihead_max_abs_cos": 0.1915
+}

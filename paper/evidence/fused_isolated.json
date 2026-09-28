@@ -1,0 +1,10 @@
+{
+ "mode": "fused, attacker isolated (public model only)",
+ "head0_states": 16,
+ "head1_states": 16,
+ "head0_probe_selfcheck": "1/8",
+ "head1_probe_selfcheck": "1/8",
+ "victim_prose_en": 1.0,
+ "victim_chinese": 1.0,
+ "victim_python_code": 1.0
+}

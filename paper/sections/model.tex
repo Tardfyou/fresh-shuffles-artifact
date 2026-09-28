@@ -1,0 +1,47 @@
+\section{System and Threat Model}
+\label{sec:model}
+\subsection{Cache representation and the tested transform}
+A decoder stores Key and Value vectors for previously processed tokens. For the first Value layer of the evaluated models, write
+\begin{equation}
+ v(t)=W_V\,N(E[t])+\beta_V,
+ \label{eq:dictionary}
+\end{equation}
+where $E$ is the public embedding table, $N$ is the first layer's input normalization, and $W_V,\beta_V$ are the relevant head's projection and bias. The implementation detects the appropriate normalization/projection path for each model. Equation~\eqref{eq:dictionary} does not assert that deeper-layer states depend only on the token. It also does not apply to every possible architecture with absolute position-dependent inputs.
+
+Let $V\in\R^{b\times d}$ contain one head's $b$ Value rows. The official default obfuscation path can be written as
+\begin{equation}
+ C=S P(VM+A),\qquad A=e_r a^\T.
+ \label{eq:cloak}
+\end{equation}
+Here $S\in O(b)$ is a secret orthogonal row transform, $M\in O(d)$ is a structured column transform, $P$ is a block-specific permutation, and $A$ adds a secret vector $a$ to one row. The marker vector is positive in the evaluated configuration. For a fixed head and branch, $S$, $M$, and $a$ are reused by a cloak instance. The marker's effective location changes under $P$. The implementation also exposes optional positive scaling factors; our exact derivation first addresses the default orthogonal configuration, and we evaluate one scaled configuration separately.
+
+The implementation pairs coordinate $i$ with $i+d/2$ in $M$. Each pair is rotated independently. This structure is consequential: recovering an arbitrary $d$-dimensional orthogonal matrix from one vector pair would be underdetermined. We do not make that claim. Rotary position embeddings motivate structured transforms in the original design~\cite{kvcloak,rope}; the implementation uses the paired structure on the Value branch as well.
+
+\subsection{Attacker capabilities}
+The adversary knows the original public model and tokenizer. It can submit its own text requests and read the corresponding protected cache blocks. It can also observe a target request's protected cache under the same relevant secret configuration. This observation may model an untrusted cache reader or a cache disclosure, but obtaining that access is outside our attack. A successful experiment does not show that an arbitrary remote API client can read another user's cache.
+
+The adversary does not receive $S$, $M$, $a$, victim plaintext, or the defender's fused model weights. A public local model supplies the dictionary and the plaintext vector for the attacker's own probe. Defender secrets may be used by evaluation-only diagnostics, but are not inputs to the recovery routine. The isolated fused experiment reloads the original model for the attacker and computes its transformed dictionary using recovered parameters.
+
+We assume public block size and head layout. The adversary may calibrate and attack only within a secret epoch shared by probe and target. Instance routing, per-tenant key scopes, or request-specific transformations can prevent that sharing. We do not establish how often real deployments satisfy this condition. The measured lifecycle experiment is a controlled simulation of the shared-secret setting.
+
+\subsection{Goals and exclusions}
+The primary goal is recovery of the token multiset in each complete target block. A secondary goal is identifying a synthetic value from an explicitly supplied same-type candidate set. The second goal is conditional on that candidate knowledge; it is not unconstrained recovery of an arbitrary credential.
+
+The experiments do not establish within-block ordering, whole-prompt exact match, deeper-layer recovery, or inference on an untrusted accelerator with unrestricted access to all intermediate computation. We also distinguish floating-point precision: model forward passes are FP32 in the main suite, while cloak matrix operations use bf16. This is not an end-to-end bf16 serving benchmark.
+
+\begin{table}[t]
+\centering
+\caption{Information boundary used by the attack.}
+\label{tab:boundary}
+\begin{tabular}{p{.45\columnwidth}p{.41\columnwidth}}
+\toprule
+Available to attacker & Evaluation only / unavailable \\
+\midrule
+Original model and tokenizer & Secret configuration \\
+Own text and protected probe & Victim plaintext and token labels \\
+Protected target blocks & Defender's fused dictionary \\
+Public block/head dimensions & True per-block permutation \\
+Supplied candidates (value task) & True candidate index for scoring \\
+\bottomrule
+\end{tabular}
+\end{table}

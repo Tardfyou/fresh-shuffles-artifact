@@ -1,0 +1,28 @@
+{
+ "note": "units verified: ms_per_1k_tok = seconds / ntok * 1e6",
+ "ntok": 176,
+ "cache_bytes": 2162688,
+ "pbcm_roundtrip_fp32": 8.106231689453125e-06,
+ "pbcm_roundtrip_bf16": 0.029151856899261475,
+ "pbcm": {
+  "obf_s": 0.32727,
+  "dec_s": 0.05168,
+  "obf_ms_per_1k_tok": 1859.51,
+  "dec_ms_per_1k_tok": 293.66,
+  "obf_GBps": 0.007
+ },
+ "kvcloak": {
+  "obf_s": 0.01644,
+  "dec_s": 0.02643,
+  "obf_ms_per_1k_tok": 93.42,
+  "dec_ms_per_1k_tok": 150.16,
+  "obf_GBps": 0.132
+ },
+ "aead": {
+  "enc_s": 0.00024,
+  "dec_s": 0.00023,
+  "enc_ms_per_1k_tok": 1.34,
+  "dec_ms_per_1k_tok": 1.29,
+  "enc_GBps": 9.2
+ }
+}

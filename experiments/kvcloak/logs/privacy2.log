@@ -1,0 +1,40 @@
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+context tokens: 12
+  ssn       : text_tokens=35 blocks=2
+  credit    : text_tokens=40 blocks=2
+  password  : text_tokens=30 blocks=1
+  mrn       : text_tokens=32 blocks=2
+  name      : text_tokens=26 blocks=1
+  address   : text_tokens=31 blocks=1
+surviving types: ['ssn', 'credit', 'password', 'mrn', 'name', 'address'] (6/6)
+baseline corpus: 109 tokens from NATURAL
+calibration: 2/2 heads
+  ssn       : attack_rank=  0 freq_rank= 10 top1=True top5=True top10=True recall=1.00
+  credit    : attack_rank=  1 freq_rank= 57 top1=False top5=True top10=True recall=1.00
+  password  : attack_rank= 28 freq_rank= 30 top1=False top5=False top10=False recall=1.00
+  mrn       : attack_rank=  0 freq_rank= 61 top1=True top5=True top10=True recall=1.00
+  name      : attack_rank=  0 freq_rank= 42 top1=True top5=True top10=True recall=1.00
+  address   : attack_rank=  1 freq_rank= 88 top1=False top5=True top10=True recall=1.00
+{
+ "n_entities": 6,
+ "n_types": 6,
+ "types": [
+  "ssn",
+  "credit",
+  "password",
+  "mrn",
+  "name",
+  "address"
+ ],
+ "attack_top1": 0.5,
+ "attack_top5": 0.8333333333333334,
+ "attack_top10": 0.8333333333333334,
+ "freq_top1": 0.0,
+ "freq_top5": 0.0,
+ "freq_top10": 0.0,
+ "random_top1": 0.01,
+ "random_top5": 0.05,
+ "random_top10": 0.1,
+ "entity_recall_mean": 1.0
+}
+DONE privacy v2

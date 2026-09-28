@@ -1,0 +1,76 @@
+{
+ "blocks": 64,
+ "head0": {
+  "decoded_blocks": 60,
+  "of": 64,
+  "sample": {
+   "0": [
+    8,
+    10,
+    0
+   ],
+   "1": [
+    0,
+    10,
+    1
+   ],
+   "2": [
+    6,
+    9,
+    2
+   ],
+   "4": [
+    2,
+    15,
+    4
+   ],
+   "5": [
+    10,
+    14,
+    5
+   ],
+   "6": [
+    4,
+    3,
+    6
+   ]
+  }
+ },
+ "head1": {
+  "decoded_blocks": 60,
+  "of": 64,
+  "sample": {
+   "0": [
+    8,
+    2,
+    0
+   ],
+   "1": [
+    6,
+    2,
+    1
+   ],
+   "2": [
+    4,
+    8,
+    2
+   ],
+   "3": [
+    9,
+    3,
+    3
+   ],
+   "4": [
+    14,
+    15,
+    4
+   ],
+   "6": [
+    0,
+    11,
+    6
+   ]
+  }
+ },
+ "note": "per-block (marker-state, X-state) pairs give pi_j(r) and pi_j(p_j); covering p=0..15 recovers each block's full permutation and fixes S's column labeling (previously known only up to permutation)."
+}

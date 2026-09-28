@@ -1,0 +1,34 @@
+\section{Related Work}
+\label{sec:related}
+\subsection{KV-cache and internal-state privacy}
+KV caches are central to efficient autoregressive serving; PagedAttention makes fixed-size cache blocks a first-class memory-management unit~\cite{paged}. The same states encode prompt information. Prior work reconstructs text from embeddings and internal activations through optimization, generation, or dictionary search~\cite{morris2023,li2023,dong2025}. \scheme{} demonstrates direct, collision, and injection attacks against unprotected caches, then proposes reversible cache obfuscation~\cite{kvcloak}. We analyze that proposed protection rather than repeating its attacks on plaintext caches.
+
+\subsection{Attacks on permutation and obfuscation defenses}
+Hidden No More recovers prompts from permuted hidden states and challenges proofs based on permutation hardness~\cite{hidden}. Saini et al. exploit reuse of precomputed noise bases in partial-TEE systems using chosen internal vectors, recovering secret permutations and weights~\cite{partialtee}. Collapse gives a primitive-level analysis of weight-obfuscation schemes and attacks compositions that retain algebraic structure across refreshed views~\cite{collapse}. These works establish that permutation, linear mixing, and refresh are not independently persuasive security arguments.
+
+Our observation and target differ. The attacker supplies legal text rather than arbitrary hidden vectors; the protected object is a runtime Value cache; an unknown dense row transform remains; and a new row permutation is drawn per block. Repeated text makes the data term invariant, while a sparse recovery marker turns the fresh permutations into a finite-state signal. Table~\ref{tab:neighbors} makes this mechanism-level boundary explicit.
+
+\begin{table*}[t]
+\centering
+\caption{Closest attack mechanisms. ``Refresh'' describes the component relevant to the cited attack, not every randomness source in the system.}
+\label{tab:neighbors}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{p{.17\textwidth}p{.13\textwidth}p{.13\textwidth}p{.17\textwidth}p{.29\textwidth}}
+\toprule
+Work & Protected asset & Attacker input/view & Refreshed structure & Distinguishing step \\
+\midrule
+Hidden No More~\cite{hidden} & hidden states & public model; permuted states & per-scheme permutation & candidate distances reverse the hidden permutation \\
+Partial TEE~\cite{partialtee} & weights and activations & ENCRYPT queries incl. zero and basis vectors & reused noise basis & cancel noise subspace; recover permutation and weights \\
+Collapse~\cite{collapse} & obfuscated weights & multiple exposed weight views & masks/mixing by key epoch & primitive decomposition, rank/overlap tests, alignment \\
+This work & runtime Value cache & normal text; protected cache & row permutation per block & input symmetry collapses orbit; marker differences recover equivalent demixer \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\subsection{Confidential inference and refreshed mixing}
+Confidential inference spans secure computation, trusted execution, differential privacy, obfuscation, and hybrids; the recent SoK by Yaluhin compares these families and emphasizes their distinct trust and deployment costs~\cite{sok}. GELO refreshes invertible mixing per batch and explicitly studies Gram leakage, blind-source separation, and shield vectors~\cite{gelo}. ConjFormer instead changes the architecture to be orthogonally equivariant, permitting inference in a rotated basis~\cite{conjformer}. These designs reinforce the importance of refresh scope and of testing invariants exposed by structured transforms.
+
+We do not propose a new general obfuscation system. Our mitigation result is intentionally modest: shortening the lifetime of two reused components prevents the current demixer from transferring in one setting. This preserves the paper's contribution as an attack and analysis, and avoids treating failure of a finite attack battery as a security proof.
+
+\subsection{Positioning relative to the original CPA}
+The \scheme{} paper already considers chosen-plaintext attacks on simpler linear constructions and introduces the marker and per-block permutation as part of the hardened design~\cite{kvcloak}. Repeated or low-rank inputs and public-model dictionaries are therefore not, by themselves, new contributions. The difference is retaining the complete published transform and using the marker's \emph{post-permutation orbit} to recover the reusable structure despite a fresh $P$ for every block. Our evaluation accordingly includes the official entry point, fused mode with an isolated public dictionary, fresh-secret controls, and secret-lifetime tests.

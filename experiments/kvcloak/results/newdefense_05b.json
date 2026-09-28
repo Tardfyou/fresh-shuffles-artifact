@@ -1,0 +1,12 @@
+{
+ "defense": "PBCM per-block column mixers, beacon-free",
+ "roundtrip_max_err": 0.07309532165527344,
+ "obf_ms_per_1k_tokens": 1.303,
+ "decode_ms_per_1k_tokens": 0.157,
+ "probe_distinct_states": 8129,
+ "probe_min_pairwise_dist": 0.7301,
+ "probe_median_pairwise_dist": 1.3202,
+ "adaptive_multiset_acc": 0.0234,
+ "adaptive_attack_ms_per_block": 220.2,
+ "trivial_guess_baseline": 0.0852
+}

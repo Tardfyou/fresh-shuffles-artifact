@@ -1,0 +1,26 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:00<00:00, 153.31it/s]
+[olmo2_1b] allenai/OLMo-2-0425-1B: layers=16 kv_heads=16 head_dim=128
+[olmo2_1b] probe: char='a' raw_entry=True prefix=0 total=3200
+[olmo2_1b] head 0: 16/16 states, sep=518.7, first-all=35
+[olmo2_1b] head 1: 16/16 states, sep=602.1, first-all=34
+[olmo2_1b] head 2: 16/16 states, sep=822.4, first-all=79
+[olmo2_1b] head 3: 16/16 states, sep=722.3, first-all=61
+[olmo2_1b] head 4: 16/16 states, sep=810.0, first-all=36
+[olmo2_1b] head 5: 16/16 states, sep=611.7, first-all=61
+[olmo2_1b] head 6: 16/16 states, sep=684.3, first-all=76
+[olmo2_1b] head 7: 16/16 states, sep=792.0, first-all=76
+[olmo2_1b] head 8: 16/16 states, sep=602.4, first-all=37
+[olmo2_1b] head 9: 16/16 states, sep=886.3, first-all=38
+[olmo2_1b] head 10: 16/16 states, sep=759.4, first-all=48
+[olmo2_1b] head 11: 16/16 states, sep=719.2, first-all=37
+[olmo2_1b] head 12: 16/16 states, sep=825.5, first-all=48
+[olmo2_1b] head 13: 16/16 states, sep=984.5, first-all=29
+[olmo2_1b] head 14: 16/16 states, sep=548.6, first-all=76
+[olmo2_1b] head 15: 16/16 states, sep=556.2, first-all=38
+[olmo2_1b] dict: norm=identity capterr=0.00e+00 selfcheck=1.0
+[olmo2_1b] victim prose_en: {'seed5001': 0.9989, 'seed5002': 0.9993} (176 tok)
+[olmo2_1b] victim python_code: {'seed5001': 0.9996, 'seed5002': 0.9998} (288 tok)
+[olmo2_1b] victim chinese: {'seed5001': 1.0, 'seed5002': 1.0} (480 tok)
+[olmo2_1b] victim dialogue: {'seed5001': 0.9997, 'seed5002': 0.999} (192 tok)
+[olmo2_1b] victim math: {'seed5001': 1.0, 'seed5002': 0.9998} (272 tok)
+[olmo2_1b] control fresh-secrets acc: 0.0 | total 219.4s

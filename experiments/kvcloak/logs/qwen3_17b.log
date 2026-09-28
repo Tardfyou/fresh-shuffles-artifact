@@ -1,0 +1,18 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:08<00:08,  8.69s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  3.95s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:09<00:00,  4.66s/it]
+[qwen3_17b] Qwen/Qwen3-1.7B: layers=28 kv_heads=8 head_dim=128
+[qwen3_17b] probe: char='a' raw_entry=True prefix=0 total=3200
+[qwen3_17b] head 0: 16/16 states, sep=500.2, first-all=39
+[qwen3_17b] head 1: 16/16 states, sep=662.6, first-all=38
+[qwen3_17b] head 2: 16/16 states, sep=700.5, first-all=83
+[qwen3_17b] head 3: 16/16 states, sep=574.7, first-all=65
+[qwen3_17b] head 4: 16/16 states, sep=800.8, first-all=28
+[qwen3_17b] head 5: 16/16 states, sep=617.5, first-all=65
+[qwen3_17b] head 6: 16/16 states, sep=648.2, first-all=80
+[qwen3_17b] head 7: 16/16 states, sep=1143.3, first-all=80
+[qwen3_17b] dict: norm=input_layernorm capterr=0.00e+00 selfcheck=1.0
+[qwen3_17b] victim prose_en: {'seed5001': 1.0, 'seed5002': 1.0} (176 tok)
+[qwen3_17b] victim python_code: {'seed5001': 1.0, 'seed5002': 1.0} (288 tok)
+[qwen3_17b] victim chinese: {'seed5001': 1.0, 'seed5002': 1.0} (272 tok)
+[qwen3_17b] victim dialogue: {'seed5001': 1.0, 'seed5002': 1.0} (192 tok)
+[qwen3_17b] victim math: {'seed5001': 1.0, 'seed5002': 1.0} (272 tok)
+[qwen3_17b] control fresh-secrets acc: 0.0 | total 648.2s

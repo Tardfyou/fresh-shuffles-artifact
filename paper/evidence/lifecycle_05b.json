@@ -1,0 +1,72 @@
+[
+ {
+  "phase": "epoch1",
+  "request": "attacker probe (calibration)",
+  "acc": "-"
+ },
+ {
+  "phase": "epoch1",
+  "request": "recovered 2/2 heads",
+  "acc": "-"
+ },
+ {
+  "phase": "epoch1",
+  "request": "user1_medical",
+  "acc": 1.0
+ },
+ {
+  "phase": "epoch1",
+  "request": "user2_legal",
+  "acc": 1.0
+ },
+ {
+  "phase": "epoch1",
+  "request": "user3_finance",
+  "acc": 1.0
+ },
+ {
+  "phase": "epoch1",
+  "request": "user4_engineering",
+  "acc": 1.0
+ },
+ {
+  "phase": "epoch1",
+  "request": "user5_personal",
+  "acc": 1.0
+ },
+ {
+  "phase": "epoch1",
+  "request": "user6_code",
+  "acc": 1.0
+ },
+ {
+  "phase": "epoch1",
+  "request": "user7_travel",
+  "acc": 1.0
+ },
+ {
+  "phase": "epoch1",
+  "request": "user8_academic",
+  "acc": 1.0
+ },
+ {
+  "phase": "epoch1",
+  "request": "user9_recipe",
+  "acc": 1.0
+ },
+ {
+  "phase": "epoch1",
+  "request": "user10_secrets",
+  "acc": 1.0
+ },
+ {
+  "phase": "epoch2",
+  "request": "user10_secrets with STALE epoch-1 keys",
+  "acc": 0.0078
+ },
+ {
+  "phase": "epoch2",
+  "request": "user10_secrets after ONE recalibration probe",
+  "acc": 1.0
+ }
+]

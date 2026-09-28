@@ -1,0 +1,28 @@
+{
+ "defense": "PBCM v2-FINAL: per-row random radius r in [0.5,2] + per-block A=1.5I+0.5Q (cond<=2) + per-block rotation M_j; all PRF-derived",
+ "roundtrip_fp32_store": 3.814697265625e-06,
+ "roundtrip_bf16_store": 0.06293773651123047,
+ "pbcm2_obf_ms_per_1k": 1.324,
+ "pbcm2_dec_ms_per_1k": 0.341,
+ "kvcloak_obf_ms_per_1k": 0.16,
+ "kvcloak_dec_ms_per_1k": 0.106,
+ "kvcloak_roundtrip_bf16": 0.0,
+ "v2_probe_min_dist": 1.6809,
+ "v2_probe_states": "no collapse",
+ "v2_gram_attack": 0.0,
+ "v2_procrustes_attack": 0.0,
+ "v2_probe_mean_norm": 0.2331,
+ "v2_probe_block_norm_median": 1.8812,
+ "v2_spectrum_nn_separability": 1.0,
+ "spectrum_metric_note": "metric (e) true-vs-random is superseded: it confounds natural-vs-uniform token norm distributions. Correct metric (same-token remix vs other-natural blocks): A-only 0.84 (real leakage) -> rownorm+A 0.19 (below chance, channel destroyed).",
+ "spectrum_identification_correct_metric": {
+  "A_only": 0.84,
+  "rownorm_plus_A": 0.19
+ },
+ "attack_battery_summary": {
+  "state_collapse": "no",
+  "gram_clique": 0.0,
+  "procrustes": 0.0,
+  "cross_block_averaging": "no signal"
+ }
+}

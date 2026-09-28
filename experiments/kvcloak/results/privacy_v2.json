@@ -1,0 +1,167 @@
+{
+ "summary": {
+  "n_entities": 6,
+  "n_types": 6,
+  "types": [
+   "ssn",
+   "credit",
+   "password",
+   "mrn",
+   "name",
+   "address"
+  ],
+  "attack_top1": 0.5,
+  "attack_top5": 0.8333333333333334,
+  "attack_top10": 0.8333333333333334,
+  "freq_top1": 0.0,
+  "freq_top5": 0.0,
+  "freq_top10": 0.0,
+  "random_top1": 0.01,
+  "random_top5": 0.05,
+  "random_top10": 0.1,
+  "entity_recall_mean": 1.0
+ },
+ "per_entity": [
+  {
+   "type": "ssn",
+   "true_value": "491-76-5761",
+   "n_candidates": 100,
+   "attack_rank": 0,
+   "attack_top1": true,
+   "attack_top5": true,
+   "attack_top10": true,
+   "freq_rank": 10,
+   "freq_top1": false,
+   "freq_top5": false,
+   "freq_top10": false,
+   "random_rank": 34,
+   "entity_token_recall": 1.0,
+   "entity_span": [
+    0,
+    32
+   ],
+   "entity_blocks": [
+    0,
+    1
+   ],
+   "n_entity_tokens": 7
+  },
+  {
+   "type": "credit",
+   "true_value": "8778570662980947",
+   "n_candidates": 100,
+   "attack_rank": 1,
+   "attack_top1": false,
+   "attack_top5": true,
+   "attack_top10": true,
+   "freq_rank": 57,
+   "freq_top1": false,
+   "freq_top5": false,
+   "freq_top10": false,
+   "random_rank": 46,
+   "entity_token_recall": 1.0,
+   "entity_span": [
+    0,
+    32
+   ],
+   "entity_blocks": [
+    0,
+    1
+   ],
+   "n_entity_tokens": 8
+  },
+  {
+   "type": "password",
+   "true_value": "P@ss1905",
+   "n_candidates": 100,
+   "attack_rank": 28,
+   "attack_top1": false,
+   "attack_top5": false,
+   "attack_top10": false,
+   "freq_rank": 30,
+   "freq_top1": false,
+   "freq_top5": false,
+   "freq_top10": false,
+   "random_rank": 28,
+   "entity_token_recall": 1.0,
+   "entity_span": [
+    0,
+    16
+   ],
+   "entity_blocks": [
+    0
+   ],
+   "n_entity_tokens": 3
+  },
+  {
+   "type": "mrn",
+   "true_value": "MRN-774001",
+   "n_candidates": 100,
+   "attack_rank": 0,
+   "attack_top1": true,
+   "attack_top5": true,
+   "attack_top10": true,
+   "freq_rank": 61,
+   "freq_top1": false,
+   "freq_top5": false,
+   "freq_top10": false,
+   "random_rank": 68,
+   "entity_token_recall": 1.0,
+   "entity_span": [
+    0,
+    32
+   ],
+   "entity_blocks": [
+    0,
+    1
+   ],
+   "n_entity_tokens": 6
+  },
+  {
+   "type": "name",
+   "true_value": "Nightingale",
+   "n_candidates": 100,
+   "attack_rank": 0,
+   "attack_top1": true,
+   "attack_top5": true,
+   "attack_top10": true,
+   "freq_rank": 42,
+   "freq_top1": false,
+   "freq_top5": false,
+   "freq_top10": false,
+   "random_rank": 54,
+   "entity_token_recall": 1.0,
+   "entity_span": [
+    0,
+    16
+   ],
+   "entity_blocks": [
+    0
+   ],
+   "n_entity_tokens": 1
+  },
+  {
+   "type": "address",
+   "true_value": "4045 Alder Street",
+   "n_candidates": 100,
+   "attack_rank": 1,
+   "attack_top1": false,
+   "attack_top5": true,
+   "attack_top10": true,
+   "freq_rank": 88,
+   "freq_top1": false,
+   "freq_top5": false,
+   "freq_top10": false,
+   "random_rank": 74,
+   "entity_token_recall": 1.0,
+   "entity_span": [
+    0,
+    16
+   ],
+   "entity_blocks": [
+    0
+   ],
+   "n_entity_tokens": 2
+  }
+ ]
+}

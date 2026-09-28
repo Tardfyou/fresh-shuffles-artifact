@@ -1,0 +1,34 @@
+{
+ "1": {
+  "states": [
+   16,
+   16
+  ],
+  "attack_acc": 1.0,
+  "decoder": 0.0
+ },
+ "2": {
+  "states": [
+   98,
+   99
+  ],
+  "attack_acc": null,
+  "decoder": "crash: RuntimeError"
+ },
+ "4": {
+  "states": [
+   123,
+   125
+  ],
+  "attack_acc": null,
+  "decoder": "crash: RuntimeError"
+ },
+ "full": {
+  "states": [
+   128,
+   128
+  ],
+  "attack_acc": null,
+  "decoder": "crash: RuntimeError"
+ }
+}

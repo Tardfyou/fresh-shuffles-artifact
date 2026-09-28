@@ -1,0 +1,10 @@
+.venv*/
+__pycache__/
+*.pyc
+paper/build/*.aux
+paper/build/*.bbl
+paper/build/*.blg
+paper/build/*.log
+paper/build/*.out
+paper/build/*.xdv
+paper/figures/*.png

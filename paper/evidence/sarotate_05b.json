@@ -1,0 +1,9 @@
+{
+ "variant": "KV-Cloak + per-request S/a rotation (M static)",
+ "sa_regen_ms_per_request": 0.031,
+ "sa_regen_ms_full_model": 2.9,
+ "cross_request_acc": 0.0,
+ "same_epoch_acc": 0.9744,
+ "per_request_decode_roundtrip_maxerr": 0.0002818107604980469,
+ "per_request_decode_perm_equiv": false
+}

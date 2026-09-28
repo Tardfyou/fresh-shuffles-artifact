@@ -1,0 +1,106 @@
+{
+  "scope": "Arithmetic recalculation from recorded g,m; no model execution and no verification of unsaved candidate scores",
+  "source": "results/privacy_v3.json",
+  "source_sha256": "cbdf73c2545fc3292f5db482280528d83f455a0a3ffa199c00c2b7ac48c48df4",
+  "all": {
+    "n": 30,
+    "tied_or_unique_first_count": 30,
+    "unique_first_count": 21,
+    "topk_expected": {
+      "1": 0.7735725059254471,
+      "5": 0.9095291962939023,
+      "10": 0.9523917259211376
+    },
+    "max_tie_group": 20
+  },
+  "marked_complete_only": {
+    "n": 15,
+    "tied_or_unique_first_count": 15,
+    "unique_first_count": 8,
+    "topk_expected": {
+      "1": 0.6138116785175608,
+      "5": 0.8190583925878043,
+      "10": 0.9047834518422754
+    },
+    "max_tie_group": 20
+  },
+  "marked_incomplete_only": {
+    "n": 15,
+    "tied_or_unique_first_count": 15,
+    "unique_first_count": 13,
+    "topk_expected": {
+      "1": 0.9333333333333333,
+      "5": 1.0,
+      "10": 1.0
+    },
+    "max_tie_group": 2
+  },
+  "per_type": {
+    "address": {
+      "n": 5,
+      "tied_or_unique_first_count": 5,
+      "unique_first_count": 5,
+      "topk_expected": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "max_tie_group": 1
+    },
+    "credit": {
+      "n": 5,
+      "tied_or_unique_first_count": 5,
+      "unique_first_count": 1,
+      "topk_expected": {
+        "1": 0.27605042016806725,
+        "5": 0.5802521008403361,
+        "10": 0.7605042016806722
+      },
+      "max_tie_group": 20
+    },
+    "mrn": {
+      "n": 5,
+      "tied_or_unique_first_count": 5,
+      "unique_first_count": 5,
+      "topk_expected": {
+        "1": 1.0,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "max_tie_group": 1
+    },
+    "name": {
+      "n": 5,
+      "tied_or_unique_first_count": 5,
+      "unique_first_count": 4,
+      "topk_expected": {
+        "1": 0.9,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "max_tie_group": 2
+    },
+    "password": {
+      "n": 5,
+      "tied_or_unique_first_count": 5,
+      "unique_first_count": 4,
+      "topk_expected": {
+        "1": 0.9,
+        "5": 1.0,
+        "10": 1.0
+      },
+      "max_tie_group": 2
+    },
+    "ssn": {
+      "n": 5,
+      "tied_or_unique_first_count": 5,
+      "unique_first_count": 2,
+      "topk_expected": {
+        "1": 0.5653846153846154,
+        "5": 0.876923076923077,
+        "10": 0.9538461538461538
+      },
+      "max_tie_group": 13
+    }
+  }
+}

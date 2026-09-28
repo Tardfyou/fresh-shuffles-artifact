@@ -1,0 +1,43 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:01<00:01,  1.35s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.01it/s]Loading checkpoint shards: 100%|██████████| 2/2 [00:02<00:00,  1.05s/it]
+[phi3_mini] microsoft/Phi-3-mini-4k-instruct: layers=32 kv_heads=32 head_dim=96
+Token indices sequence length is longer than the specified maximum sequence length for this model (4097 > 4096). Running this sequence through the model will result in indexing errors
+[phi3_mini] probe: char='1' raw_entry=True prefix=1 total=4080
+[phi3_mini] head 0: 16/16 states, sep=1340.4, first-all=88
+[phi3_mini] head 1: 16/16 states, sep=1301.8, first-all=105
+[phi3_mini] head 2: 16/16 states, sep=986.4, first-all=62
+[phi3_mini] head 3: 16/16 states, sep=1285.2, first-all=51
+[phi3_mini] head 4: 16/16 states, sep=826.8, first-all=38
+[phi3_mini] head 5: 16/16 states, sep=1137.1, first-all=51
+[phi3_mini] head 6: 16/16 states, sep=1375.6, first-all=66
+[phi3_mini] head 7: 16/16 states, sep=1000.3, first-all=66
+[phi3_mini] head 8: 16/16 states, sep=1216.1, first-all=54
+[phi3_mini] head 9: 16/16 states, sep=1132.3, first-all=53
+[phi3_mini] head 10: 16/16 states, sep=894.9, first-all=34
+[phi3_mini] head 11: 16/16 states, sep=894.8, first-all=54
+[phi3_mini] head 12: 16/16 states, sep=1016.5, first-all=39
+[phi3_mini] head 13: 16/16 states, sep=851.9, first-all=65
+[phi3_mini] head 14: 16/16 states, sep=1365.5, first-all=66
+[phi3_mini] head 15: 16/16 states, sep=1038.3, first-all=30
+[phi3_mini] head 16: 16/16 states, sep=1232.1, first-all=70
+[phi3_mini] head 17: 16/16 states, sep=1069.0, first-all=105
+[phi3_mini] head 18: 16/16 states, sep=1531.0, first-all=53
+[phi3_mini] head 19: 16/16 states, sep=935.2, first-all=88
+[phi3_mini] head 20: 16/16 states, sep=1120.2, first-all=70
+[phi3_mini] head 21: 16/16 states, sep=1177.4, first-all=51
+[phi3_mini] head 22: 16/16 states, sep=1081.2, first-all=39
+[phi3_mini] head 23: 16/16 states, sep=941.8, first-all=30
+[phi3_mini] head 24: 16/16 states, sep=978.7, first-all=54
+[phi3_mini] head 25: 16/16 states, sep=990.2, first-all=70
+[phi3_mini] head 26: 16/16 states, sep=1332.7, first-all=70
+[phi3_mini] head 27: 16/16 states, sep=1185.4, first-all=38
+[phi3_mini] head 28: 16/16 states, sep=1081.8, first-all=88
+[phi3_mini] head 29: 16/16 states, sep=1195.1, first-all=54
+[phi3_mini] head 30: 16/16 states, sep=837.1, first-all=70
+[phi3_mini] head 31: 16/16 states, sep=1149.8, first-all=54
+[phi3_mini] dict: norm=input_layernorm capterr=0.00e+00 selfcheck=1.0
+[phi3_mini] victim prose_en: {'seed5001': 0.9929, 'seed5002': 0.9928} (208 tok)
+[phi3_mini] victim python_code: {'seed5001': 0.9927, 'seed5002': 0.9932} (384 tok)
+[phi3_mini] victim chinese: {'seed5001': 0.9934, 'seed5002': 0.9938} (608 tok)
+[phi3_mini] victim dialogue: {'seed5001': 0.994, 'seed5002': 0.9938} (240 tok)
+[phi3_mini] victim math: {'seed5001': 0.9923, 'seed5002': 0.9924} (320 tok)
+[phi3_mini] control fresh-secrets acc: 0.0 | total 194.5s

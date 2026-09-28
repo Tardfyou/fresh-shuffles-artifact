@@ -1,0 +1,15 @@
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+Loading checkpoint shards:   0%|          | 0/4 [00:00<?, ?it/s]Loading checkpoint shards:  25%|██▌       | 1/4 [00:06<00:20,  6.69s/it]Loading checkpoint shards:  50%|█████     | 2/4 [00:11<00:11,  5.70s/it]Loading checkpoint shards:  75%|███████▌  | 3/4 [00:16<00:05,  5.17s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:19<00:00,  4.49s/it]Loading checkpoint shards: 100%|██████████| 4/4 [00:19<00:00,  4.92s/it]
+[qwen25_7b] Qwen/Qwen2.5-7B: layers=28 kv_heads=4 head_dim=128
+[qwen25_7b] probe: char='a' raw_entry=True prefix=0 total=3200
+[qwen25_7b] head 0: 16/16 states, sep=524.2, first-all=38
+[qwen25_7b] head 1: 16/16 states, sep=795.2, first-all=49
+[qwen25_7b] head 2: 16/16 states, sep=875.5, first-all=41
+[qwen25_7b] head 3: 16/16 states, sep=818.1, first-all=40
+[qwen25_7b] dict: norm=input_layernorm capterr=0.00e+00 selfcheck=1.0
+[qwen25_7b] victim prose_en: {'seed5001': 0.9972, 'seed5002': 0.9957} (176 tok)
+[qwen25_7b] victim python_code: {'seed5001': 0.9983, 'seed5002': 0.9983} (288 tok)
+[qwen25_7b] victim chinese: {'seed5001': 1.0, 'seed5002': 1.0} (272 tok)
+[qwen25_7b] victim dialogue: {'seed5001': 0.9974, 'seed5002': 0.9987} (192 tok)
+[qwen25_7b] victim math: {'seed5001': 0.9954, 'seed5002': 0.9954} (272 tok)
+[qwen25_7b] control fresh-secrets acc: 0.0 | total 372.7s

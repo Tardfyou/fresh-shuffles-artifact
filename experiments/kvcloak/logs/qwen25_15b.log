@@ -1,0 +1,12 @@
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+[qwen25_15b] Qwen/Qwen2.5-1.5B: layers=28 kv_heads=2 head_dim=128
+[qwen25_15b] probe: char='a' raw_entry=True prefix=0 total=3200
+[qwen25_15b] head 0: 16/16 states, sep=873.7, first-all=29
+[qwen25_15b] head 1: 16/16 states, sep=689.8, first-all=56
+[qwen25_15b] dict: norm=input_layernorm capterr=0.00e+00 selfcheck=1.0
+[qwen25_15b] victim prose_en: {'seed5001': 0.983, 'seed5002': 0.9858} (176 tok)
+[qwen25_15b] victim python_code: {'seed5001': 0.9965, 'seed5002': 0.9965} (288 tok)
+[qwen25_15b] victim chinese: {'seed5001': 1.0, 'seed5002': 1.0} (272 tok)
+[qwen25_15b] victim dialogue: {'seed5001': 0.987, 'seed5002': 0.9844} (192 tok)
+[qwen25_15b] victim math: {'seed5001': 0.9963, 'seed5002': 0.9926} (272 tok)
+[qwen25_15b] control fresh-secrets acc: 0.0 | total 167.1s

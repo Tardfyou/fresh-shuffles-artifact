@@ -1,0 +1,22 @@
+{
+ "all_30": {
+  "parallel_or_unique_first": "30/30",
+  "unique_first": "21/30 = 70.0%",
+  "top1_prob_mean": 0.7736,
+  "top5_prob_mean": 0.9095,
+  "top10_prob_mean": 0.9524
+ },
+ "complete_15": {
+  "unique_first": "8/15 = 53.3%",
+  "top1_prob_mean": 0.6138,
+  "top5_prob_mean": 0.8191,
+  "top10_prob_mean": 0.9048
+ },
+ "protocol_notes": {
+  "true_value_selection": "fixed: first 5 candidates in generation order (true_idx=0-4)",
+  "baseline": "uniform random guess from 100 candidates (NOT matched to generation process)",
+  "entity_completeness": "approximate: token-set intersection, not verified character span",
+  "evidence_level": "true_score + g + m saved; full candidate scores, input IDs, recovered multisets NOT saved"
+ },
+ "recommended_wording": "In one model (Qwen2.5-0.5B), one secret configuration, and 30 synthetic closed-set candidate cases, the true value always achieved the highest score (allowing ties; g=0 for all 30). Under uniform random tie-breaking within recorded tie-groups, expected top-1 = 77.36%, top-5 = 90.95%, top-10 = 95.24% (vs 1%/5%/10% for uniform random guess from 100 candidates)."
+}

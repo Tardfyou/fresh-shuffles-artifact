@@ -1,0 +1,17 @@
+[llama32_1b] unsloth/Llama-3.2-1B: layers=16 kv_heads=8 head_dim=64
+[llama32_1b] probe: char='a' raw_entry=True prefix=1 total=3201
+[llama32_1b] head 0: 16/16 states, sep=1069.1, first-all=48
+[llama32_1b] head 1: 16/16 states, sep=982.8, first-all=46
+[llama32_1b] head 2: 16/16 states, sep=1174.8, first-all=38
+[llama32_1b] head 3: 16/16 states, sep=1215.1, first-all=51
+[llama32_1b] head 4: 16/16 states, sep=910.5, first-all=34
+[llama32_1b] head 5: 16/16 states, sep=1199.6, first-all=51
+[llama32_1b] head 6: 16/16 states, sep=1070.4, first-all=91
+[llama32_1b] head 7: 16/16 states, sep=1113.0, first-all=91
+[llama32_1b] dict: norm=input_layernorm capterr=0.00e+00 selfcheck=1.0
+[llama32_1b] victim prose_en: {'seed5001': 0.9986, 'seed5002': 0.9979} (176 tok)
+[llama32_1b] victim python_code: {'seed5001': 0.9978, 'seed5002': 0.9974} (288 tok)
+[llama32_1b] victim chinese: {'seed5001': 0.9993, 'seed5002': 1.0} (336 tok)
+[llama32_1b] victim dialogue: {'seed5001': 0.998, 'seed5002': 0.9967} (192 tok)
+[llama32_1b] victim math: {'seed5001': 0.9986, 'seed5002': 0.9986} (272 tok)
+[llama32_1b] control fresh-secrets acc: 0.0 | total 97.1s

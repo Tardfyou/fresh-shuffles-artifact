@@ -1,0 +1,41 @@
+{
+ "mode": "need_ratio",
+ "model": "Qwen/Qwen2.5-0.5B",
+ "S_ratio": 1.25,
+ "M_ratio": 1.25,
+ "dict_selfcheck_probe": null,
+ "head0_states": 16,
+ "head0_diag": {
+  "cos_a": 0.999998,
+  "S_min_cos": 0.999995,
+  "tau": -109.434311
+ },
+ "head1_states": 16,
+ "head1_diag": {
+  "cos_a": 0.999996,
+  "S_min_cos": 0.999994,
+  "tau": 72.9608
+ },
+ "victims": {
+  "prose_en": {
+   "seed7001": 1.0,
+   "seed7002": 1.0
+  },
+  "python_code": {
+   "seed7001": 1.0,
+   "seed7002": 1.0
+  },
+  "chinese": {
+   "seed7001": 1.0,
+   "seed7002": 1.0
+  },
+  "dialogue": {
+   "seed7001": 1.0,
+   "seed7002": 1.0
+  },
+  "math": {
+   "seed7001": 1.0,
+   "seed7002": 1.0
+  }
+ }
+}

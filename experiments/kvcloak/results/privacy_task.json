@@ -1,0 +1,1285 @@
+{
+ "summary": {
+  "total_texts": 150,
+  "total_epochs": 10,
+  "calibration_success_rate": 1.0,
+  "entity_type_id_acc": 0.8,
+  "entity_token_recall": 0.7094,
+  "held_out_type_acc": 0.6667,
+  "train_type_acc": 1.0,
+  "random_type_baseline": 0.1667,
+  "note": "entity_recall = fraction of entity-value tokens present in recovered multiset"
+ },
+ "per_epoch": [
+  {
+   "epoch": 0,
+   "cal_ok": true,
+   "n_heads": 2,
+   "results": [
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5714285714285714,
+     "entity_value": "491-76-5761"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 1.0,
+     "entity_value": "781-69-3408"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5,
+     "entity_value": "546-40-6996"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 0.8571428571428571,
+     "entity_value": "593-18-9317"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.42857142857142855,
+     "entity_value": "109-49-9223"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7142857142857143,
+     "entity_value": "9967787202762246"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5555555555555556,
+     "entity_value": "5720288775436739"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "0950648935677301"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5,
+     "entity_value": "2229211971024531"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.6666666666666666,
+     "entity_value": "3224688499290197"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.75,
+     "entity_value": "MRN-645740"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.8888888888888888,
+     "entity_value": "MRN-210374"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-719546"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.875,
+     "entity_value": "MRN-161597"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-256730"
+    }
+   ]
+  },
+  {
+   "epoch": 1,
+   "cal_ok": true,
+   "n_heads": 2,
+   "results": [
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5714285714285714,
+     "entity_value": "491-76-5761"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 1.0,
+     "entity_value": "781-69-3408"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5,
+     "entity_value": "546-40-6996"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 0.8571428571428571,
+     "entity_value": "593-18-9317"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.42857142857142855,
+     "entity_value": "109-49-9223"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7142857142857143,
+     "entity_value": "9967787202762246"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5555555555555556,
+     "entity_value": "5720288775436739"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "0950648935677301"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5,
+     "entity_value": "2229211971024531"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.6666666666666666,
+     "entity_value": "3224688499290197"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.75,
+     "entity_value": "MRN-645740"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.8888888888888888,
+     "entity_value": "MRN-210374"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-719546"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.875,
+     "entity_value": "MRN-161597"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-256730"
+    }
+   ]
+  },
+  {
+   "epoch": 2,
+   "cal_ok": true,
+   "n_heads": 2,
+   "results": [
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5714285714285714,
+     "entity_value": "491-76-5761"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 1.0,
+     "entity_value": "781-69-3408"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5,
+     "entity_value": "546-40-6996"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 0.8571428571428571,
+     "entity_value": "593-18-9317"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.42857142857142855,
+     "entity_value": "109-49-9223"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7142857142857143,
+     "entity_value": "9967787202762246"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5555555555555556,
+     "entity_value": "5720288775436739"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "0950648935677301"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5,
+     "entity_value": "2229211971024531"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.6666666666666666,
+     "entity_value": "3224688499290197"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.75,
+     "entity_value": "MRN-645740"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.8888888888888888,
+     "entity_value": "MRN-210374"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-719546"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.875,
+     "entity_value": "MRN-161597"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-256730"
+    }
+   ]
+  },
+  {
+   "epoch": 3,
+   "cal_ok": true,
+   "n_heads": 2,
+   "results": [
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5714285714285714,
+     "entity_value": "491-76-5761"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 1.0,
+     "entity_value": "781-69-3408"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5,
+     "entity_value": "546-40-6996"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 0.8571428571428571,
+     "entity_value": "593-18-9317"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.42857142857142855,
+     "entity_value": "109-49-9223"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7142857142857143,
+     "entity_value": "9967787202762246"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5555555555555556,
+     "entity_value": "5720288775436739"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "0950648935677301"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5,
+     "entity_value": "2229211971024531"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.6666666666666666,
+     "entity_value": "3224688499290197"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.75,
+     "entity_value": "MRN-645740"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.8888888888888888,
+     "entity_value": "MRN-210374"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-719546"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.875,
+     "entity_value": "MRN-161597"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-256730"
+    }
+   ]
+  },
+  {
+   "epoch": 4,
+   "cal_ok": true,
+   "n_heads": 2,
+   "results": [
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5714285714285714,
+     "entity_value": "491-76-5761"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 1.0,
+     "entity_value": "781-69-3408"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5,
+     "entity_value": "546-40-6996"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 0.8571428571428571,
+     "entity_value": "593-18-9317"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.42857142857142855,
+     "entity_value": "109-49-9223"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7142857142857143,
+     "entity_value": "9967787202762246"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5555555555555556,
+     "entity_value": "5720288775436739"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "0950648935677301"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5,
+     "entity_value": "2229211971024531"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.6666666666666666,
+     "entity_value": "3224688499290197"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.75,
+     "entity_value": "MRN-645740"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.8888888888888888,
+     "entity_value": "MRN-210374"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-719546"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.875,
+     "entity_value": "MRN-161597"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-256730"
+    }
+   ]
+  },
+  {
+   "epoch": 5,
+   "cal_ok": true,
+   "n_heads": 2,
+   "results": [
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5714285714285714,
+     "entity_value": "491-76-5761"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 1.0,
+     "entity_value": "781-69-3408"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5,
+     "entity_value": "546-40-6996"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 0.8571428571428571,
+     "entity_value": "593-18-9317"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.42857142857142855,
+     "entity_value": "109-49-9223"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7142857142857143,
+     "entity_value": "9967787202762246"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5555555555555556,
+     "entity_value": "5720288775436739"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "0950648935677301"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5,
+     "entity_value": "2229211971024531"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.6666666666666666,
+     "entity_value": "3224688499290197"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.75,
+     "entity_value": "MRN-645740"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.8888888888888888,
+     "entity_value": "MRN-210374"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-719546"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.875,
+     "entity_value": "MRN-161597"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-256730"
+    }
+   ]
+  },
+  {
+   "epoch": 6,
+   "cal_ok": true,
+   "n_heads": 2,
+   "results": [
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5714285714285714,
+     "entity_value": "491-76-5761"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 1.0,
+     "entity_value": "781-69-3408"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5,
+     "entity_value": "546-40-6996"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 0.8571428571428571,
+     "entity_value": "593-18-9317"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.42857142857142855,
+     "entity_value": "109-49-9223"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7142857142857143,
+     "entity_value": "9967787202762246"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5555555555555556,
+     "entity_value": "5720288775436739"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "0950648935677301"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5,
+     "entity_value": "2229211971024531"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.6666666666666666,
+     "entity_value": "3224688499290197"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.75,
+     "entity_value": "MRN-645740"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.8888888888888888,
+     "entity_value": "MRN-210374"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-719546"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.875,
+     "entity_value": "MRN-161597"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-256730"
+    }
+   ]
+  },
+  {
+   "epoch": 7,
+   "cal_ok": true,
+   "n_heads": 2,
+   "results": [
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5714285714285714,
+     "entity_value": "491-76-5761"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 1.0,
+     "entity_value": "781-69-3408"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5,
+     "entity_value": "546-40-6996"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 0.8571428571428571,
+     "entity_value": "593-18-9317"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.42857142857142855,
+     "entity_value": "109-49-9223"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7142857142857143,
+     "entity_value": "9967787202762246"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5555555555555556,
+     "entity_value": "5720288775436739"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "0950648935677301"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5,
+     "entity_value": "2229211971024531"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.6666666666666666,
+     "entity_value": "3224688499290197"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.75,
+     "entity_value": "MRN-645740"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.8888888888888888,
+     "entity_value": "MRN-210374"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-719546"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.875,
+     "entity_value": "MRN-161597"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-256730"
+    }
+   ]
+  },
+  {
+   "epoch": 8,
+   "cal_ok": true,
+   "n_heads": 2,
+   "results": [
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5714285714285714,
+     "entity_value": "491-76-5761"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 1.0,
+     "entity_value": "781-69-3408"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5,
+     "entity_value": "546-40-6996"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 0.8571428571428571,
+     "entity_value": "593-18-9317"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.42857142857142855,
+     "entity_value": "109-49-9223"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7142857142857143,
+     "entity_value": "9967787202762246"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5555555555555556,
+     "entity_value": "5720288775436739"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "0950648935677301"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5,
+     "entity_value": "2229211971024531"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.6666666666666666,
+     "entity_value": "3224688499290197"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.75,
+     "entity_value": "MRN-645740"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.8888888888888888,
+     "entity_value": "MRN-210374"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-719546"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.875,
+     "entity_value": "MRN-161597"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-256730"
+    }
+   ]
+  },
+  {
+   "epoch": 9,
+   "cal_ok": true,
+   "n_heads": 2,
+   "results": [
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5714285714285714,
+     "entity_value": "491-76-5761"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 1.0,
+     "entity_value": "781-69-3408"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.5,
+     "entity_value": "546-40-6996"
+    },
+    {
+     "type": "ssn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "ssn",
+     "entity_recall": 0.8571428571428571,
+     "entity_value": "593-18-9317"
+    },
+    {
+     "type": "ssn",
+     "held_out": true,
+     "type_correct": false,
+     "type_pred": "password",
+     "entity_recall": 0.42857142857142855,
+     "entity_value": "109-49-9223"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7142857142857143,
+     "entity_value": "9967787202762246"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5555555555555556,
+     "entity_value": "5720288775436739"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "0950648935677301"
+    },
+    {
+     "type": "credit",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.5,
+     "entity_value": "2229211971024531"
+    },
+    {
+     "type": "credit",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "credit",
+     "entity_recall": 0.6666666666666666,
+     "entity_value": "3224688499290197"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.75,
+     "entity_value": "MRN-645740"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.8888888888888888,
+     "entity_value": "MRN-210374"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-719546"
+    },
+    {
+     "type": "mrn",
+     "held_out": false,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.875,
+     "entity_value": "MRN-161597"
+    },
+    {
+     "type": "mrn",
+     "held_out": true,
+     "type_correct": true,
+     "type_pred": "mrn",
+     "entity_recall": 0.7777777777777778,
+     "entity_value": "MRN-256730"
+    }
+   ]
+  }
+ ]
+}

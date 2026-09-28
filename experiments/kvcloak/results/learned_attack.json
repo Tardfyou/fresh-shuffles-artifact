@@ -1,0 +1,22 @@
+{
+ "CONTROL_noise": {
+  "presence_auc": 0.8253,
+  "meanv_R2": -0.1333,
+  "time_s": 12.0
+ },
+ "plain": {
+  "presence_auc": 0.8867,
+  "meanv_R2": 0.9571,
+  "time_s": 10.4
+ },
+ "v1_orth": {
+  "presence_auc": 0.8251,
+  "meanv_R2": 0.4395,
+  "time_s": 10.8
+ },
+ "pbcm2": {
+  "presence_auc": 0.8264,
+  "meanv_R2": -0.0699,
+  "time_s": 12.1
+ }
+}

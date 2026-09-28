@@ -1,0 +1,164 @@
+{
+ "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+ "tag": "tinyllama",
+ "b": 16,
+ "layers": 22,
+ "kv_heads": 4,
+ "head_dim": 64,
+ "probe_char": "1",
+ "probe_raw_entry": true,
+ "probe_prefix_tokens": 2,
+ "probe_tokens": 2033,
+ "premise_rows_identical": false,
+ "probe_obf_time_s": 0.066,
+ "probe_core_blocks": 126,
+ "head0_states": 16,
+ "head0_separation": 1099.8,
+ "head0_blocks_to_all_states": 40,
+ "head0_recovery": {
+  "cos_a": 0.999998,
+  "a_norm_relerr": 0.0,
+  "cos_u": 0.999993,
+  "w_relerr": 0.008233,
+  "S_min_signed_cos": 0.999998,
+  "S_bijection": true
+ },
+ "head1_states": 16,
+ "head1_separation": 1115.5,
+ "head1_blocks_to_all_states": 51,
+ "head1_recovery": {
+  "cos_a": 0.999997,
+  "a_norm_relerr": 0.000764,
+  "cos_u": 0.999997,
+  "w_relerr": 0.006401,
+  "S_min_signed_cos": 0.999997,
+  "S_bijection": true
+ },
+ "head2_states": 16,
+ "head2_separation": 1230.8,
+ "head2_blocks_to_all_states": 43,
+ "head2_recovery": {
+  "cos_a": 0.999997,
+  "a_norm_relerr": 0.000148,
+  "cos_u": 0.999994,
+  "w_relerr": 0.010325,
+  "S_min_signed_cos": 0.999998,
+  "S_bijection": true
+ },
+ "head3_states": 16,
+ "head3_separation": 1048.0,
+ "head3_blocks_to_all_states": 42,
+ "head3_recovery": {
+  "cos_a": 0.999998,
+  "a_norm_relerr": 0.00025,
+  "cos_u": 0.999998,
+  "w_relerr": 0.010634,
+  "S_min_signed_cos": 0.999998,
+  "S_bijection": true
+ },
+ "norm_detected": "input_layernorm",
+ "norm_capture_err": 0.0,
+ "dict_selfcheck": 1.0,
+ "victims": {
+  "prose_en": {
+   "acc": {
+    "seed5001": 0.9976,
+    "seed5002": 0.9976
+   },
+   "raw": {
+    "seed5001": [
+     830,
+     832
+    ],
+    "seed5002": [
+     830,
+     832
+    ]
+   },
+   "tokens": 208,
+   "ms_per_block": 17.3
+  },
+  "python_code": {
+   "acc": {
+    "seed5001": 0.9993,
+    "seed5002": 0.9993
+   },
+   "raw": {
+    "seed5001": [
+     1535,
+     1536
+    ],
+    "seed5002": [
+     1535,
+     1536
+    ]
+   },
+   "tokens": 384,
+   "ms_per_block": 15.0
+  },
+  "chinese": {
+   "acc": {
+    "seed5001": 1.0,
+    "seed5002": 1.0
+   },
+   "raw": {
+    "seed5001": [
+     2432,
+     2432
+    ],
+    "seed5002": [
+     2432,
+     2432
+    ]
+   },
+   "tokens": 608,
+   "ms_per_block": 14.3
+  },
+  "dialogue": {
+   "acc": {
+    "seed5001": 1.0,
+    "seed5002": 1.0
+   },
+   "raw": {
+    "seed5001": [
+     960,
+     960
+    ],
+    "seed5002": [
+     960,
+     960
+    ]
+   },
+   "tokens": 240,
+   "ms_per_block": 13.1
+  },
+  "math": {
+   "acc": {
+    "seed5001": 0.9992,
+    "seed5002": 0.9992
+   },
+   "raw": {
+    "seed5001": [
+     1279,
+     1280
+    ],
+    "seed5002": [
+     1279,
+     1280
+    ]
+   },
+   "tokens": 320,
+   "ms_per_block": 13.9
+  }
+ },
+ "control_fresh_secrets": 0.0,
+ "control_fresh_secrets_raw": [
+  0,
+  208
+ ],
+ "control_fresh_secrets_counts": [
+  0,
+  208
+ ],
+ "total_time_s": 46.6
+}

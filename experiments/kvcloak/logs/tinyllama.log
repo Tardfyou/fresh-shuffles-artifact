@@ -1,0 +1,14 @@
+[tinyllama] TinyLlama/TinyLlama-1.1B-Chat-v1.0: layers=22 kv_heads=4 head_dim=64
+Token indices sequence length is longer than the specified maximum sequence length for this model (2050 > 2048). Running this sequence through the model will result in indexing errors
+[tinyllama] probe: char='1' raw_entry=True prefix=2 total=2033
+[tinyllama] head 0: 16/16 states, sep=1099.8, first-all=40
+[tinyllama] head 1: 16/16 states, sep=1115.5, first-all=51
+[tinyllama] head 2: 16/16 states, sep=1230.8, first-all=43
+[tinyllama] head 3: 16/16 states, sep=1048.0, first-all=42
+[tinyllama] dict: norm=input_layernorm capterr=0.00e+00 selfcheck=1.0
+[tinyllama] victim prose_en: {'seed5001': 0.9976, 'seed5002': 0.9976} (208 tok)
+[tinyllama] victim python_code: {'seed5001': 0.9993, 'seed5002': 0.9993} (384 tok)
+[tinyllama] victim chinese: {'seed5001': 1.0, 'seed5002': 1.0} (608 tok)
+[tinyllama] victim dialogue: {'seed5001': 1.0, 'seed5002': 1.0} (240 tok)
+[tinyllama] victim math: {'seed5001': 0.9992, 'seed5002': 0.9992} (320 tok)
+[tinyllama] control fresh-secrets acc: 0.0 | total 46.6s

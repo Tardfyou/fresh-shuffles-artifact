@@ -1,0 +1,39 @@
+\section{Reproducibility Details}
+\label{app:repro}
+\subsection{Frozen model revisions}
+Table~\ref{tab:revisions} records the local Hugging Face revision associated with every distinct checkpoint in the main suite. Qwen2.5-0.5B is reused for the block-size variants and the focused studies.
+
+\begin{table*}[h]
+\centering
+\caption{Checkpoint identifiers and locally frozen revisions.}
+\label{tab:revisions}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{ll}
+\toprule
+Checkpoint & Revision \\
+\midrule
+\texttt{Qwen/Qwen2.5-0.5B} & \texttt{060db6499f32faf8b98477b0a26969ef7d8b9987} \\
+\texttt{Qwen/Qwen2.5-1.5B} & \texttt{8faed761d45a263340a0528343f099c05c9a4323} \\
+\texttt{Qwen/Qwen2.5-3B} & \texttt{3aab1f1954e9cc14eb9509a215f9e5ca08227a9b} \\
+\texttt{Qwen/Qwen2.5-7B} & \texttt{d149729398750b98c0af14eb82c78cfe92750796} \\
+\texttt{Qwen/Qwen3-0.6B} & \texttt{c1899de289a04d12100db370d81485cdf75e47ca} \\
+\texttt{Qwen/Qwen3-1.7B} & \texttt{70d244cc86ccca08cf5af4e1e306ecf908b1ad5e} \\
+\texttt{unsloth/Llama-3.2-1B} & \texttt{9535bd9b1d1dea6acafbdc4813b728796aeb28da} \\
+\texttt{allenai/OLMo-2-0425-1B} & \texttt{a1847dff35000b4271fa70afc5db10fd29fedbdf} \\
+\texttt{microsoft/Phi-3-mini-4k-instruct} & \texttt{f39ac1d28e925b323eae81227eaba4464caced4e} \\
+\texttt{TinyLlama/TinyLlama-1.1B-Chat-v1.0} & \texttt{fe8a4ea1ffedaf415f4da2f062534de366a451e6} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+The LMSYS cache revision visible during artifact preparation is \texttt{200748d9d3cddcc9d782887541057aca0b18c5da}. The official-entry script used the public mirror \texttt{AarushSah/lmsys-chat-1m}; the saved result contains only truncated hashes and accuracies, not conversation text.
+
+\subsection{Evidence and generated assets}
+The artifact separates model-running code from manuscript generation. JSON records under \texttt{paper/evidence/} are copied from the frozen experiment results and listed with SHA-256 hashes in \texttt{manifest.json}. The script \texttt{paper/scripts/generate\_assets.py} reads only those records, regenerates all manuscript figures and an audited copy of the main-table rows, recomputes the reported privacy tie statistics, and asserts the principal denominator 263,029/263,904. The submission checker verifies that every generated row is present verbatim in the manuscript source. Neither script makes a model or network call.
+
+The original runs did not persist a complete Python dependency lock. The artifact therefore freezes source, model revisions, input/result records, and the manuscript-generation environment separately; claims of bit-identical model reruns should not be made without reconstructing the missing runtime versions. This limitation does not affect hash verification or regeneration of paper assets from the frozen records.
+
+\section{Additional Scope Notes}
+The official implementation applies the same row permutation to the corresponding K and V blocks, but the present attack and primary metric target first-layer V. An exploratory position-calibration experiment shows that controlled marker/position pairs can label 60/64 blocks per head in one setting, while direct language-model ordering does not recover an exact block. We omit an ordered-reconstruction claim because these observations do not close the K-recovery and numerical-error chain.
+
+For the single-row marker, Theorem~\ref{thm:identification} recovers columns of $S$ as a set. That is enough for multiset decoding: applying an unknown column permutation simply reorders recovered rows. Claims about the original row indices, absolute token positions, or attention semantics would require resolving that labeling and jointly validating K and V.

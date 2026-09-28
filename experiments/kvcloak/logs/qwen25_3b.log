@@ -1,0 +1,13 @@
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:07<00:07,  7.97s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.23s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:11<00:00,  5.64s/it]
+[qwen25_3b] Qwen/Qwen2.5-3B: layers=36 kv_heads=2 head_dim=128
+[qwen25_3b] probe: char='a' raw_entry=True prefix=0 total=3200
+[qwen25_3b] head 0: 16/16 states, sep=692.3, first-all=27
+[qwen25_3b] head 1: 16/16 states, sep=839.7, first-all=54
+[qwen25_3b] dict: norm=input_layernorm capterr=0.00e+00 selfcheck=1.0
+[qwen25_3b] victim prose_en: {'seed5001': 1.0, 'seed5002': 1.0} (176 tok)
+[qwen25_3b] victim python_code: {'seed5001': 1.0, 'seed5002': 1.0} (288 tok)
+[qwen25_3b] victim chinese: {'seed5001': 1.0, 'seed5002': 1.0} (272 tok)
+[qwen25_3b] victim dialogue: {'seed5001': 1.0, 'seed5002': 1.0} (192 tok)
+[qwen25_3b] victim math: {'seed5001': 1.0, 'seed5002': 1.0} (272 tok)
+[qwen25_3b] control fresh-secrets acc: 0.0 | total 216.2s
