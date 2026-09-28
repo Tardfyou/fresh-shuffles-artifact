@@ -3,7 +3,7 @@
 \subsection{Model revision inventory}
 Table~\ref{tab:revisions} records local Hugging Face cache revisions observed during artifact preparation for the checkpoint identifiers in the main suite. These are retrospective provenance records: the experiment outputs did not bind each run to a revision hash. Qwen2.5-0.5B is reused for the block-size variants and the focused studies.
 
-\begin{table*}[h]
+\begin{table*}[t]
 \centering
 \caption{Checkpoint identifiers and cache revisions observed during artifact preparation. These revisions were not recorded in per-run manifests.}
 \label{tab:revisions}
@@ -33,7 +33,103 @@ The artifact separates model-running code from manuscript generation. JSON recor
 
 The original runs did not persist a complete contemporaneous Python dependency lock. The artifact preserves source snapshots, a retrospective model-revision inventory, result records, and manuscript-generation requirements. It does not establish bit-identical model reruns. This limitation does not affect hash verification or regeneration of paper assets from the frozen records.
 
+\subsection{Architecture and software provenance}
+The Qwen3 and OLMo~2 reports provide the generation-specific background for those checkpoints~\cite{qwen3,olmo2}. The scripts load checkpoints and tokenizers through Transformers~\cite{transformers} and perform tensor operations in PyTorch~\cite{pytorch}. These references identify the software and model families; they do not substitute for a historical dependency lock or prove which revision produced an earlier result.
+
+The distinction between query heads and KV heads follows the multi-head and grouped-query attention setting~\cite{attention,gqa}. Our denominators use the recorded KV-head count, since those are the Value representations being scored. The normalization operator in Equation~\eqref{eq:dictionary} is taken from the loaded model, including RMSNorm where applicable~\cite{rmsnorm}. Applying the raw embedding table without the relevant normalization and projection would evaluate a different dictionary.
+
+\subsection{Regeneration contract}
+From the repository root, install \path{requirements-paper.txt} in a Python 3.12 environment. Run \path{paper/scripts/generate_assets.py} to regenerate the four figures and audited main-table rows. Run \path{paper/scripts/generate_supplement.py} to regenerate the appendix tables; its \texttt{--check} mode compares the checked-in tables with freshly derived text. Both commands consume saved JSON only.
+
+Compile \path{paper/main.tex} with Tectonic, placing output in \path{paper/build/}. The checks in \path{paper/scripts/check_submission.py} verify the result-copy hashes, page dimensions, appendix marker, and main-table rows. The separate \path{paper/scripts/audit_final.py} recomputes main counts and privacy expectations, checks the text-level breakdown, and inspects the PDF's actual fonts and artifact hyperlink. All table generators use deterministic ordering. PDF binary hashes may nevertheless differ after rebuilding because compilation metadata can change.
+
+This contract distinguishes three operations. Hash verification detects whether a supplied result differs from its recorded copy. Re-analysis checks arithmetic and presentation against that copy. Re-running a model would regenerate the cache observations and scores themselves. Only the first two operations are covered by the documented manuscript-generation commands. They cannot reconstruct candidate scores, input traces, or runtime provenance that were not saved.
+
+\section{Supplemental Measurement Details}
+\label{app:metrics}
+\subsection{Reconstructing the main denominator}
+Let $L_{c,t}$ be the tokenized length of target text $t$ in configuration $c$, with block size $b_c$ and $H_c$ calibrated heads. The two recorded permutation seeds contribute
+\begin{equation}
+ N_c=2H_c\sum_t b_c\left\lfloor L_{c,t}/b_c\right\rfloor.
+ \label{eq:denominator}
+\end{equation}
+This identity applies to the present records because all configured heads calibrated. If a head failed, a sum over successful heads would instead be a conditional metric and would require an explicit coverage report.
+
+For Qwen2.5-0.5B with $b=16$, the saved complete-text lengths are 176, 288, 272, 192, and 272 tokens. Their sum is 1,200, and two heads under two seeds produce 4,800 opportunities. The fresh-secret control uses only the 176-token English text and head 0, producing 176 opportunities. Thus its denominator is deliberately smaller and is not interchangeable with the primary result.
+
+The summed metric is a frequency over recorded opportunities. The same text appears across seeds and models, and its tokens appear in multiple heads. Neither the 263,904 denominator nor the five text categories supplies an independent user sample. The per-model and per-text tables are two views of the same records, not independent replications.
+
+\subsection{Per-type candidate statistics}
+Table~\ref{tab:privacyfull} expands the closed-set study's tie summaries. Every type has five cases with $g=0$. The largest tie group contains 20 candidates, illustrating why attaining the highest score is weaker than unique identification.
+
+\begin{table}[t]
+\centering
+\caption{Closed-set cases by type. Top-$k$ entries are percentages under uniform tie-breaking, computed from retained $g,m$ integers. Each row contains five cases under one key.}
+\label{tab:privacyfull}
+\input{tables/app_privacy.tex}
+\end{table}
+
+For example, a recorded SSN-like case has $g=0,m=13$. Equation~\eqref{eq:ties} assigns it expected success $1/13$, $5/13$, and $10/13$ at top-1, top-5, and top-10. A case with $m=1$ contributes one to all three metrics. Applying the upper cap of one before averaging is essential: without it, a unique maximum would incorrectly contribute five to top-5 success.
+
+The retained completeness flag marks 15 cases as complete and 15 otherwise. On the marked-complete subset, unique maxima occur in 8/15 cases and expected top-1 is 61.38\%. This subset is reported solely to expose the flag's behavior. Because it compares isolated entity-token membership rather than verified contextual spans, it cannot establish which fields were fully present or truncated. The lower subset rate is not evidence that truncation improves identification.
+
+Truth selection is also fixed: the first five candidates generated for each type become targets. Uniform guessing over all 100 candidates is a reference calculation, not the strongest prior under every disclosure of the generation protocol. These restrictions, and the absence of the complete candidate-score vectors, preclude a population-level estimate of identification advantage.
+
+\section{Configuration and Epoch Diagnostics}
+\label{app:diagnostics}
+Table~\ref{tab:diagnostics} reports the weakest recorded parameter diagnostics in each main configuration. Separation is the minimum across its heads; the $S$ column is the minimum matched-column cosine; the $w$ column is the largest relative error. These extrema summarize the saved diagnostics rather than new measurements. The ground-truth transform is used only to compute them.
+
+\begin{table*}[t]
+\centering
+\caption{Main-suite calibration diagnostics derived from saved head records. Prefix is the number of leading tokens before the repeat run; core blocks exclude prefix-containing and incomplete blocks. All heads record $b$ clusters.}
+\label{tab:diagnostics}
+\input{tables/app_diagnostics.tex}
+\end{table*}
+
+The prefix lengths explain an otherwise misleading field in several legacy JSON files. Their \texttt{premise\_rows\_identical} check compares the entire input, including the prefix, whereas the calibrator slices to complete blocks inside the repeat run. A false whole-input flag therefore does not by itself refute the repeated-core premise. The recorded prefix and core-block counts must be interpreted together.
+
+Table~\ref{tab:epochsfull} gives every model--epoch cell underlying Figure~\ref{fig:epochs}. Epoch indices are displayed as 1--5, corresponding to stored indices 0--4. The mean is an arithmetic average of the ten saved session rates; the minimum is the weakest of those sessions. Control rates come from the fresh-secret comparison. They are rounded summaries, not reconstructed raw counts or confidence intervals.
+
+\begin{table*}[t]
+\centering
+\caption{All 15 recorded model--epoch cells. Every head calibrates. Recovery columns summarize the same ten reused sessions per model; control rates are reported separately. Percentages inherit the precision of the saved records.}
+\label{tab:epochsfull}
+\input{tables/app_epochs.tex}
+\end{table*}
+
+The separation between calibration coverage and recovery remains necessary even though all heads succeed here. A complete state collection can still produce numerical parameter error, and a small error can alter a nearest-neighbor decision. Conversely, a high per-session average does not reveal whether its few mistakes share a marker hypothesis, a token identity, or a numerical cause. The retained summaries support the reported extrema but do not support a retrospective per-error attribution.
+
+\section{Details of the Algebraic Bounds}
+\label{app:bounds}
+\subsection{Marker multiplicities and the orbit}
+If the rows of a fixed marker matrix fall into equality classes of sizes $n_1,\ldots,n_r$, permutations within each class leave the marker unchanged. Its stabilizer therefore has size $\prod_{\ell=1}^r n_\ell!$, yielding an orbit of $b!/\prod_\ell n_\ell!$. A single nonzero row and $b-1$ zero rows give $b$ states. This count is algebraic; it does not by itself certify that states are distinguishable at the working precision or that a recovery algorithm identifies the mixing.
+
+\subsection{The sign test}
+The incorrect sign candidate in the identification proof gives $w'=-w-2a/b$. Expanding the squared norm gives
+\begin{equation}
+ \|w'\|^2-\|w\|^2
+ =\frac{4}{b}\langle w,a\rangle+\frac{4}{b^2}\|a\|^2.
+\end{equation}
+The norm test therefore separates the two candidates except at the degeneracy stated in Theorem~\ref{thm:identification}. This exact-arithmetic statement does not assign a tolerance to the finite-precision implementation. The measured diagnostics in Table~\ref{tab:diagnostics} supply that implementation's empirical context without converting small errors into a uniform guarantee.
+
+\subsection{Exact occupancy curve}
+For one head with independent uniform marker positions, let $q_n(k)$ be the probability of observing exactly $k$ states after $n$ blocks. Starting from $q_0(0)=1$, the recurrence is
+\begin{equation}
+ q_{n+1}(k)=\frac{k}{b}q_n(k)
+            +\frac{b-k+1}{b}q_n(k-1),
+\end{equation}
+with out-of-range probabilities set to zero. The first term repeats an observed state; the second introduces a previously unseen one. The dashed curve in Figure~\ref{fig:probe} uses $q_n(b)$, calculated deterministically by the figure generator. It is not the legacy JSON field \texttt{coupon\_pred\_all}, and it is not the probability that every numerical recovery step succeeds for both heads.
+
+\subsection{What a functional permutation check must preserve}
+A complete-row permutation preserves each row as a vector. Sorting every feature column independently does not test that property. For instance,
+\[
+ X=\begin{pmatrix}1&1\\-1&-1\end{pmatrix},
+ \qquad
+ Y=\begin{pmatrix}1&-1\\-1&1\end{pmatrix}
+\]
+have identical independently sorted columns and identical row-norm multisets, but different row-vector multisets. Neither diagnostic establishes a row permutation. For attention, corresponding K and V rows must additionally share the same permutation, with mask and position semantics handled consistently. This is why the retained S/a check does not establish full functional equivalence.
+
 \section{Additional Scope Notes}
 The official implementation applies the same row permutation to the corresponding K and V blocks, but the present attack and primary metric target first-layer V. An exploratory position-calibration experiment records marker/position labels for 60/64 blocks per head in one setting. The separate language-model ordering records contain no exact block recovery, but the multiplicity defect described in Section~\ref{sec:evaluation} limits their interpretation. These observations do not establish ordered reconstruction.
 
-For the single-row marker, Theorem~\ref{thm:identification} recovers columns of $S$ as a set. That is enough for multiset decoding: applying an unknown column permutation simply reorders recovered rows. Claims about the original row indices, absolute token positions, or attention semantics would require resolving that labeling and jointly validating K and V.
+Theorem~\ref{thm:identification} recovers unordered columns of $S$, sufficient for multiset decoding. Original positions and attention semantics would additionally require recovering column labels and jointly validating K and V.

@@ -62,6 +62,20 @@ else:
         checks["conclusion_pages"] = conclusion_pages
         checks["appendix_start_page"] = appendix_pages[0] if appendix_pages else None
         checks["appendix_heading_present"] = bool(appendix_pages)
+        reference_pages = [
+            i + 1 for i, columns in enumerate(column_texts)
+            if any(line.strip() == "References" for text in columns for line in text.splitlines())
+        ]
+        checks["references_start_page"] = reference_pages[0] if reference_pages else None
+        checks["references_and_appendix_pages"] = (
+            len(pdf.pages) - reference_pages[0] + 1 if reference_pages else None
+        )
+        checks["backmatter_target_ok"] = (
+            checks["references_and_appendix_pages"] is not None
+            and 4 <= checks["references_and_appendix_pages"] <= 5
+        )
+        if not checks["backmatter_target_ok"]:
+            failures.append("backmatter_not_four_to_five_pages")
         checks["main_text_within_13_pages"] = bool(conclusion_pages) and max(conclusion_pages) <= 13
         if not checks["page_limit_ok"] or not checks["us_letter_ok"] or not checks["main_text_within_13_pages"] or not checks["appendix_heading_present"]:
             failures.append("pdf_format_or_page_limit")

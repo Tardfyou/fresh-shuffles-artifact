@@ -18,11 +18,15 @@ Use Python 3.12 and run from the repository root:
 python3 -m venv .venv-paper
 .venv-paper/bin/pip install -r requirements-paper.txt
 .venv-paper/bin/python paper/scripts/generate_assets.py
+.venv-paper/bin/python paper/scripts/generate_supplement.py
+.venv-paper/bin/python paper/scripts/generate_supplement.py --check
 .venv-paper/bin/python paper/scripts/check_submission.py
 .venv-paper/bin/python paper/scripts/audit_final.py
 ```
 
 These commands regenerate plots and table rows from saved evidence and validate the supplied PDF and evidence hashes. They do not load a model or contact a model API.
+
+The current PDF has 15 pages: 11 pages of main content and four pages of references and appendices. Its 25 cited works include the model, architectural, and software sources used to explain the artifact. Supplemental tables expose the retained per-configuration diagnostics, all 15 model-key epochs, and per-type privacy tie statistics.
 
 To rebuild the PDF, install Tectonic and run:
 

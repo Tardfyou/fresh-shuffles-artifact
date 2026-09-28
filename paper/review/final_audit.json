@@ -49,10 +49,12 @@
     "10": 0.9523917259211376
   },
   "citation_keys": [
+    "attention",
     "collapse",
     "conjformer",
     "dong2025",
     "gelo",
+    "gqa",
     "hidden",
     "kvcloak",
     "li2023",
@@ -60,17 +62,22 @@
     "lmsys",
     "morris2023",
     "olmo",
+    "olmo2",
     "paged",
     "partialtee",
     "phi3",
+    "pytorch",
     "qwen25",
+    "qwen3",
+    "rmsnorm",
     "rope",
     "sok",
-    "tinyllama"
+    "tinyllama",
+    "transformers"
   ],
   "all_citations_resolve": true,
   "fusion_dependency_matches_snapshot": true,
-  "pdf_pages": 13,
+  "pdf_pages": 15,
   "page1_fonts": {
     "NimbusRomNo9L-Medi": 1426,
     "NimbusRomNo9L-MediItal": 8,
@@ -81,7 +88,7 @@
     "CMR10": 2
   },
   "anonymous_artifact_hyperlink_present": true,
-  "pdf_sha256": "130cad5dc9e9a77ecb3d07e1695739b9da2bd4f9460fc4a84f35530593b14dc2",
+  "pdf_sha256": "41c1bbed96d260c34e109756029c65b6f2cb68089c3ff392559f6f9abc3dfbeb",
   "limitations_retained": [
     "Head-token observations are correlated; no population prevalence estimate",
     "Privacy study is single-model/single-key with incomplete retained traces",

@@ -1,7 +1,7 @@
 {
   "evidence_manifest_entries": 29,
   "evidence_hashes_ok": true,
-  "pages_total": 13,
+  "pages_total": 15,
   "letter_page_points": [
     612.0,
     792.0
@@ -13,11 +13,14 @@
   ],
   "appendix_start_page": 12,
   "appendix_heading_present": true,
+  "references_start_page": 12,
+  "references_and_appendix_pages": 4,
+  "backmatter_target_ok": true,
   "main_text_within_13_pages": true,
   "placeholder_count": 0,
   "anonymous_source_ok": true,
   "generated_table_rows_match_source": true,
-  "paper_sha256": "130cad5dc9e9a77ecb3d07e1695739b9da2bd4f9460fc4a84f35530593b14dc2",
+  "paper_sha256": "41c1bbed96d260c34e109756029c65b6f2cb68089c3ff392559f6f9abc3dfbeb",
   "status": "pass",
   "failures": []
 }

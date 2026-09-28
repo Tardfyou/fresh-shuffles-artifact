@@ -4,9 +4,11 @@ Editorial freeze: 2026-09-28.
 
 Final adversarial corrections: 2026-09-28, following independent measurement, mathematical-consistency, and artifact reviews. Main raw counts and result JSON are unchanged. Corrections disclose auxiliary-experiment provenance, distinguish numerical heuristics from ideal proofs, and restore the missing fusion helper.
 
-The authoritative manuscript is paper/build/main.pdf. The expanded edition contains 13 pages, with the conclusion ending on page 11 and appendices beginning on page 12. It expands methodology, result interpretation, and prior-work comparisons using the same frozen evidence. Source, manuscript, and saved validation records are synchronized in this repository.
+The authoritative manuscript is paper/build/main.pdf. The complete edition contains 15 pages: main content ends on page 11, and references plus appendices occupy pages 12–15. It includes 25 cited works and supplemental measurement, provenance, and algebraic details. Source, manuscript, and saved validation records are synchronized in this repository.
 
 The additional fixed-text breakdown regroups the original 263,029 / 263,904 observations; it adds no samples. Its counts and 875 total misses are checked directly against the retained per-configuration raw counts by audit_final.py.
+
+Appendix tables are generated directly from frozen JSON by generate_supplement.py; --check detects table drift. The page check enforces the requested four-page minimum and five-page maximum for references plus appendices. Historical evidence limitations remain explicit.
 
 The anonymous review entry is https://anonymous.4open.science/r/fresh-shuffles-artifact-ED8D/.
 
