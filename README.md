@@ -2,6 +2,8 @@
 
 Research artifact for **Fresh Shuffles, Reused Secrets: Breaking KV-Cloak with Repeated-Token Prompts**.
 
+Anonymous review entry: https://anonymous.4open.science/r/fresh-shuffles-artifact-ED8D/
+
 - [Paper (PDF)](paper/build/main.pdf)
 - [Manuscript source](paper/main.tex)
 - [Frozen evidence and hash manifest](paper/evidence/manifest.json)
