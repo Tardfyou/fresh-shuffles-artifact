@@ -5,13 +5,15 @@
 \caption{Closest attack mechanisms. ``Refresh'' describes the component relevant to the cited attack, not every randomness source in the system.}
 \label{tab:neighbors}
 \setlength{\tabcolsep}{4pt}
-\begin{tabular}{p{.17\textwidth}p{.13\textwidth}p{.13\textwidth}p{.17\textwidth}p{.29\textwidth}}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.17\textwidth}>{\raggedright\arraybackslash}p{.13\textwidth}>{\raggedright\arraybackslash}p{.13\textwidth}>{\raggedright\arraybackslash}p{.17\textwidth}>{\raggedright\arraybackslash}p{.29\textwidth}}
 \toprule
-Work & Protected asset & Attacker input/view & Refreshed structure & Distinguishing step \\
+\rowcolor{TableHead}
+\textbf{Work} & \textbf{Protected asset} & \textbf{Attacker input/view} & \textbf{Refreshed structure} & \textbf{Distinguishing step} \\
 \midrule
 Hidden No More~\cite{hidden} & hidden states & public model; permuted states & per-scheme permutation & candidate distances reverse the hidden permutation \\
 Partial TEE~\cite{partialtee} & weights and activations & ENCRYPT queries incl. zero and basis vectors & fixed precomputed noise basis & cancel noise subspace; recover permutation and weights \\
 Collapse~\cite{collapse} & obfuscated weights & multiple exposed weight views & low-rank mask, scaling, permutation per epoch & primitive decomposition, rank/overlap tests, alignment \\
+\rowcolor{TableBlue}
 This work & runtime Value cache & normal text; protected cache & row permutation per block & input symmetry collapses orbit; marker differences recover equivalent demixer \\
 \bottomrule
 \end{tabular}

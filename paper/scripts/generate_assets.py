@@ -17,47 +17,75 @@ plt.rcParams.update({'font.family':'STIXGeneral','mathtext.fontset':'stix',
     'font.size':8,'axes.labelsize':8,'xtick.labelsize':7,'ytick.labelsize':7,
     'legend.fontsize':7,'axes.linewidth':.6,'lines.linewidth':1,
     'pdf.fonttype':42,'ps.fonttype':42,'savefig.pad_inches':.035})
-C=['#1f77b4','#ff7f0e','#2ca02c']; GREY='#666666'
+C=['#2878a8','#df8230','#45864b']; GREY='#59636b'
 def finish(ax):
-    ax.grid(True,ls=':',lw=.45,color='#b7b7b7',alpha=.75)
+    ax.grid(True,ls=':',lw=.4,color='#b7b7b7',alpha=.6)
     ax.set_axisbelow(True);ax.tick_params(width=.6,length=3)
 def save(fig,name):
-    # Normalize legacy double escapes before mathtext parses labels.
-    for axis in fig.axes:
-        for artist in axis.texts:
-            value = artist.get_text()
-            while chr(92) * 2 in value:
-                value = value.replace(chr(92) * 2, chr(92))
-            value = value.replace(chr(92) + 'mathsf T', 'T')
-            artist.set_text(value.replace(chr(92) + 'n', chr(10)))
     fig.savefig(FIG/(name+'.pdf'),bbox_inches='tight')
     fig.savefig(FIG/(name+'.png'),dpi=180,bbox_inches='tight');plt.close(fig)
 
 # Mechanism: original composition, deliberately stylized rather than empirical.
-fig,ax=plt.subplots(figsize=(7.05,2.25));ax.set_xlim(0,10.4);ax.set_ylim(0,3.4);ax.axis('off')
-def box(x,y,w,h,s,color='#eef4fa'):
-    ax.add_patch(Rectangle((x,y),w,h,fc=color,ec='black',lw=.65))
-    ax.text(x+w/2,y+h/2,s,ha='center',va='center',fontsize=8)
-def arrow(x1,y1,x2,y2):ax.add_patch(FancyArrowPatch((x1,y1),(x2,y2),arrowstyle='-|>',mutation_scale=9,lw=.75,color='black'))
-for x,title in [(0,'(a) Legal repeated-token request'),(3.55,'(b) A small observable orbit'),(7.15,'(c) Transfer within a key epoch')]:
-    ax.text(x,3.23,title,fontsize=8.5,fontweight='bold',va='top')
-box(.05,2.24,2.8,.54,'text → tokenizer → prefix + repeats')
+fig=plt.figure(figsize=(7.05,1.85))
+ax=fig.add_axes([0,0,1,1])
+ax.set(xlim=(0,7.05),ylim=(0,2.05));ax.axis('off')
+box_labels=[]
+def box(x,y,w,h,s,color='#eef4fa',fontsize=7.2):
+    patch=Rectangle((x,y),w,h,fc=color,ec='#303b43',lw=.6)
+    ax.add_patch(patch)
+    label=ax.text(x+w/2,y+h/2,s,ha='center',va='center',
+                  fontsize=fontsize,linespacing=1.3)
+    box_labels.append((patch,label))
+def arrow(x1,y1,x2,y2):
+    ax.add_patch(FancyArrowPatch((x1,y1),(x2,y2),arrowstyle='-|>',
+                                mutation_scale=8,lw=.75,color='#303b43'))
+for x,title,color in [(0.06,'(a) Repeated-token input',C[0]),
+                      (2.45,'(b) Observable marker orbit',C[1]),
+                      (4.84,'(c) Transfer within a key epoch',C[2])]:
+    ax.text(x+1.075,1.94,title,fontsize=7.6,fontweight='bold',
+            ha='center',va='center')
+    ax.plot([x,x+2.15],[1.80,1.80],color=color,lw=1.2)
+box(.06,1.28,2.15,.42,'Raw text → tokenizer\nprefix + repeated tokens')
 for j in range(4):
-    ax.add_patch(Rectangle((.18,1.04+j*.22),.65,.19,fc=C[0],ec='black',lw=.45))
-ax.text(1.0,1.45,r'$V=\mathbf{1}v^{\mathsf T}$'+'\nall rows identical',va='center',fontsize=9)
-ax.text(.12,.53,'Fresh row permutations leave V unchanged.',fontsize=7.7)
-arrow(2.95,1.75,3.45,1.75)
-box(3.55,2.25,3.05,.53,r'$C_j=u w^{\mathsf T}+s_j a^{\mathsf T}$','#edf4eb')
+    ax.add_patch(Rectangle((.28,.63+j*.105),.45,.087,
+                           fc=C[0],ec='#303b43',lw=.45))
+ax.text(1.42,.91,r'$V=\mathbf{1}v^{\mathsf{T}}$',
+        ha='center',va='center',fontsize=9)
+ax.text(1.42,.65,'identical Value rows',ha='center',fontsize=7)
+ax.text(1.135,.28,'Row shuffling leaves\nrepeated Value rows unchanged.',
+        ha='center',va='center',fontsize=7,linespacing=1.3,color=GREY)
+arrow(2.25,1.49,2.42,1.49)
+box(2.45,1.28,2.15,.42,r'$C_j=u w^{\mathsf{T}}+s_j a^{\mathsf{T}}$',
+    '#fdf2e5',fontsize=8.6)
 for j in range(4):
     for r in range(4):
-        ax.add_patch(Rectangle((3.75+j*.69,1.03+r*.19),.51,.17,fc=C[1] if r==j else '#d4e7f5',ec='black',lw=.4))
-ax.text(5.08,.72,r'$b!$ permutations → $b$ marker states',ha='center',fontsize=8)
-arrow(6.73,1.75,7.1,1.75)
-box(7.2,2.23,3.0,.56,'state differences → equivalent secrets','#fff0df')
-box(7.2,1.32,3.0,.56,'new request cache → row demixing')
-box(7.2,.39,3.0,.56,'public dictionary → token multiset','#edf4eb')
-arrow(8.7,2.21,8.7,1.9);arrow(8.7,1.3,8.7,.98)
-ax.text(.1,.08,'Attacker observes protected caches; server secrets remain unavailable.',fontsize=7.5,color=GREY)
+        ax.add_patch(Rectangle((2.70+j*.46,.63+r*.105),.31,.087,
+                               fc=C[1] if r==j else '#dceaf3',
+                               ec='#303b43',lw=.4))
+ax.text(3.525,.47,'Marker positions before row mixing',
+        ha='center',fontsize=6.6,color=GREY)
+ax.text(3.525,.24,r'$b!$ permutations → $b$ marker states',
+        ha='center',fontsize=7.4)
+arrow(4.64,1.49,4.81,1.49)
+box(4.84,1.28,2.15,.42,'State differences\nestimate equivalent transforms','#edf4ec')
+box(4.84,.72,2.15,.36,'Target cache → row demixing')
+box(4.84,.15,2.15,.36,'Public dictionary → token multiset','#edf4ec')
+arrow(5.915,1.26,5.915,1.10)
+arrow(5.915,.70,5.915,.53)
+# Measure labels in the exported coordinate system, including mathtext.
+fig.canvas.draw()
+renderer=fig.canvas.get_renderer()
+layout=[]
+for patch,label in box_labels:
+    inner=patch.get_window_extent(renderer)
+    text_box=label.get_window_extent(renderer)
+    assert inner.x0+4 <= text_box.x0 and text_box.x1 <= inner.x1-4, label.get_text()
+    assert inner.y0+3 <= text_box.y0 and text_box.y1 <= inner.y1-3, label.get_text()
+    layout.append({'text':label.get_text(),'font_pt':label.get_fontsize(),
+                   'horizontal_padding_px':min(text_box.x0-inner.x0,inner.x1-text_box.x1),
+                   'vertical_padding_px':min(text_box.y0-inner.y0,inner.y1-text_box.y1)})
+(ROOT/'review/figure_layout.json').write_text(
+    json.dumps({'overview_box_labels':layout,'all_labels_fit':True},indent=2)+'\n')
 save(fig,'overview')
 
 # Probe budget: derive exact one-head occupancy with a finite-state DP.
@@ -77,7 +105,7 @@ ax.set_xticks([0,1024,2048,3072,4096]);finish(ax);ax.legend(loc='lower right',fr
 save(fig,'probe_budget')
 
 # Key epochs, displayed as recorded (no invented raw counts/intervals).
-ind=read('independent_eval.json');fig,axs=plt.subplots(1,2,figsize=(7.0,2.18))
+ind=read('independent_eval.json');fig,axs=plt.subplots(1,2,figsize=(7.0,1.98))
 names={'qwen05':'Qwen2.5-0.5B','llama1b':'Llama-3.2-1B','phi3':'Phi-3-mini'}
 for idx,(key,d) in enumerate(ind.items()):
     for ax,f in zip(axs,['cond_recovery_mean','ctrl_acc']):
@@ -93,12 +121,12 @@ priv=read('privacy_v3.json')['per_entity'];types=['ssn','credit','password','mrn
 def probability(r,k):return min(1.,max(0.,(k-r['strictly_higher'])/r['tie_group_size']))
 fig,ax=plt.subplots(figsize=(3.4,2.3));x=np.arange(6);w=.36
 ys=[100*np.mean([probability(r,1) for r in priv if r['type']==t]) for t in types]
-ax.bar(x,ys,w,color=C[0],ec='black',lw=.55,label='Expected top-1 (random ties)')
+ax.bar(x,ys,.48,color=C[0],ec='#303b43',lw=.55,label='Expected top-1 (random ties)')
 ax.axhline(1,color=C[1],ls='--',lw=1,label='Uniform guess: 1%')
 ax.set(xticks=x,xticklabels=['SSN','Card','Password','MRN','Name','Address'],ylabel='Expected identification (%)',ylim=(0,110))
 ax.tick_params(axis='x',labelrotation=22)
 for i,y in enumerate(ys):ax.text(i,y+2,f'{y:.1f}',ha='center',fontsize=7)
-finish(ax);ax.legend(loc='upper left',bbox_to_anchor=(0,1.31),frameon=True,edgecolor='black',fancybox=False)
+finish(ax);ax.legend(loc='upper left',bbox_to_anchor=(0,1.23),frameon=False)
 save(fig,'privacy')
 
 # Main breadth table, raw counts only.

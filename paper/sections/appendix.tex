@@ -10,7 +10,8 @@ Table~\ref{tab:revisions} records local Hugging Face cache revisions observed du
 \setlength{\tabcolsep}{4pt}
 \begin{tabular}{ll}
 \toprule
-Checkpoint & Revision \\
+\rowcolor{TableHead}
+\textbf{Checkpoint} & \textbf{Revision} \\
 \midrule
 \texttt{Qwen/Qwen2.5-0.5B} & \texttt{060db6499f32faf8b98477b0a26969ef7d8b9987} \\
 \texttt{Qwen/Qwen2.5-1.5B} & \texttt{8faed761d45a263340a0528343f099c05c9a4323} \\
@@ -64,7 +65,7 @@ Table~\ref{tab:privacyfull} expands the closed-set study's tie summaries. Every 
 
 \begin{table}[t]
 \centering
-\caption{Closed-set cases by type. Top-$k$ entries are percentages under uniform tie-breaking, computed from retained $g,m$ integers. Each row contains five cases under one key.}
+\caption{Closed-set cases by type. Top-$k$ percentages use uniform tie-breaking from retained $g,m$ integers. Tint runs from sage (0\%) to coral (100\%) on a fixed scale. Each row contains five cases under one key.}
 \label{tab:privacyfull}
 \input{tables/app_privacy.tex}
 \end{table}

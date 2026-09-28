@@ -36,12 +36,13 @@ Across the twelve configurations in Table~\ref{tab:breadth}, the attack obtains 
 
 \begin{table*}[t]
 \centering
-\caption{Main-suite recovery from first-layer Value caches. ``Probe'' is the complete tokenizer output length; C/N is the raw multiset hit count. The control uses a fresh secret configuration.}
+\caption{Main-suite recovery from first-layer Value caches. ``Probe'' is the complete tokenizer output length; C/N is the raw multiset hit count. Coral and sage distinguish recovery and fresh-secret control columns; color does not indicate statistical significance.}
 \label{tab:breadth}
-\setlength{\tabcolsep}{3.5pt}
-\begin{tabular}{lrrrrrrr}
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{lrrrrr>{\columncolor{LeakHigh}}r>{\columncolor{LeakLow}}r}
 \toprule
-Model & $b$ & Heads & $d$ & Probe & C/N & Rec. (\%) & Control \\
+\rowcolor{TableHead}
+\textbf{Model} & $\boldsymbol{b}$ & \textbf{Heads} & $\boldsymbol{d}$ & \textbf{Probe} & \textbf{C/N} & \textbf{Rec. (\%)} & \textbf{Control} \\
 \midrule
 Llama-3.2-1B & 16 & 8 & 64 & 3,201 & 20,192/20,224 & 99.84 & 0/176 \\
 OLMo-2-1B & 16 & 16 & 128 & 3,200 & 45,043/45,056 & 99.97 & 0/176 \\
@@ -56,7 +57,8 @@ Qwen3-0.6B & 16 & 8 & 128 & 3,200 & 19,200/19,200 & 100.00 & 0/176 \\
 Qwen3-1.7B & 16 & 8 & 128 & 3,200 & 19,200/19,200 & 100.00 & 0/176 \\
 TinyLlama-1.1B & 16 & 4 & 64 & 2,033 & 14,072/14,080 & 99.94 & 0/208 \\
 \midrule
-\multicolumn{5}{r}{Total} & 263,029/263,904 & 99.668 & -- \\
+\rowcolor{TableBlue}
+\multicolumn{5}{r}{\textbf{Total}} & \textbf{263,029/263,904} & \textbf{99.668} & -- \\
 \bottomrule
 \end{tabular}
 \end{table*}
@@ -74,7 +76,8 @@ Table~\ref{tab:textcounts} regroups the same raw counts by target text. It intro
 \label{tab:textcounts}
 \begin{tabular}{lrr}
 \toprule
-Target text & Matches / opportunities & Misses \\
+\rowcolor{TableHead}
+\textbf{Target text} & \textbf{Matches / opportunities} & \textbf{Misses} \\
 \midrule
 English prose & 33,795 / 33,920 & 125 \\
 Python code & 58,587 / 58,784 & 197 \\
@@ -82,7 +85,8 @@ Chinese prose & 80,517 / 80,768 & 251 \\
 Dialogue & 37,928 / 38,048 & 120 \\
 Mathematical prose & 52,202 / 52,384 & 182 \\
 \midrule
-Total & 263,029 / 263,904 & 875 \\
+\rowcolor{TableBlue}
+\textbf{Total} & \textbf{263,029 / 263,904} & \textbf{875} \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -100,7 +104,7 @@ Figure~\ref{fig:epochs} summarizes three models and five independently generated
 
 \begin{figure*}[t]
 \centering
-\includegraphics[width=.88\textwidth]{key_epochs.pdf}
+\includegraphics[width=\textwidth]{key_epochs.pdf}
 \caption{Secret-epoch stability on three models. Every epoch calibrates all heads. The y-axis in (a) is deliberately zoomed; (b) uses demixers from the wrong configuration. The conversations are not an exclusive held-out set.}
 \label{fig:epochs}
 \end{figure*}

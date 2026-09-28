@@ -1,0 +1,35 @@
+{
+  "overview_box_labels": [
+    {
+      "text": "Raw text \u2192 tokenizer\nprefix + repeated tokens",
+      "font_pt": 7.2,
+      "horizontal_padding_px": 58.085937500000014,
+      "vertical_padding_px": 5.9512195121951095
+    },
+    {
+      "text": "$C_j=u w^{\\mathsf{T}}+s_j a^{\\mathsf{T}}$",
+      "font_pt": 8.6,
+      "horizontal_padding_px": 68.99999999999989,
+      "vertical_padding_px": 11.187330623306224
+    },
+    {
+      "text": "State differences\nestimate equivalent transforms",
+      "font_pt": 7.2,
+      "horizontal_padding_px": 43.765625,
+      "vertical_padding_px": 5.9512195121951095
+    },
+    {
+      "text": "Target cache \u2192 row demixing",
+      "font_pt": 7.2,
+      "horizontal_padding_px": 45.609375,
+      "vertical_padding_px": 9.743902439024382
+    },
+    {
+      "text": "Public dictionary \u2192 token multiset",
+      "font_pt": 7.2,
+      "horizontal_padding_px": 35.015625,
+      "vertical_padding_px": 9.743902439024383
+    }
+  ],
+  "all_labels_fit": true
+}

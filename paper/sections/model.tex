@@ -37,9 +37,10 @@ The experiments do not establish within-block ordering, whole-prompt exact match
 \centering
 \caption{Information boundary used by the attack.}
 \label{tab:boundary}
-\begin{tabular}{p{.45\columnwidth}p{.41\columnwidth}}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.45\columnwidth}>{\raggedright\arraybackslash}p{.41\columnwidth}}
 \toprule
-Available to attacker & Evaluation only / unavailable \\
+\rowcolor{TableHead}
+\textbf{Available to attacker} & \textbf{Evaluation only / unavailable} \\
 \midrule
 Original model and tokenizer & Secret configuration \\
 Own text and protected probe & Victim plaintext and token labels \\

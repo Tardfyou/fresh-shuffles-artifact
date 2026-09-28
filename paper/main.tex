@@ -2,7 +2,13 @@
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb,amsthm}
 \usepackage{graphicx,booktabs,array,multirow}
-\usepackage{xcolor,url}
+\usepackage[table]{xcolor}
+\usepackage{url}
+\definecolor{TableHead}{HTML}{EDF0F3}
+\definecolor{TableBlue}{HTML}{E7F0F7}
+\definecolor{LeakHigh}{HTML}{F2D5D2}
+\definecolor{LeakLow}{HTML}{DCEBDC}
+\newcommand{\RateCell}[1]{\cellcolor{LeakHigh!#1!LeakLow}#1}
 \usepackage[hidelinks,pdfauthor={},pdftitle={Fresh Shuffles, Reused Secrets: Breaking KV-Cloak with Repeated-Token Prompts}]{hyperref}
 \graphicspath{{figures/}}
 \newtheorem{theorem}{Theorem}
