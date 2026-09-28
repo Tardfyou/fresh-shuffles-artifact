@@ -1,11 +1,11 @@
 \section{Reproducibility Details}
 \label{app:repro}
-\subsection{Frozen model revisions}
-Table~\ref{tab:revisions} records the local Hugging Face revision associated with every distinct checkpoint in the main suite. Qwen2.5-0.5B is reused for the block-size variants and the focused studies.
+\subsection{Model revision inventory}
+Table~\ref{tab:revisions} records local Hugging Face cache revisions observed during artifact preparation for the checkpoint identifiers in the main suite. These are retrospective provenance records: the experiment outputs did not bind each run to a revision hash. Qwen2.5-0.5B is reused for the block-size variants and the focused studies.
 
 \begin{table*}[h]
 \centering
-\caption{Checkpoint identifiers and locally frozen revisions.}
+\caption{Checkpoint identifiers and cache revisions observed during artifact preparation. These revisions were not recorded in per-run manifests.}
 \label{tab:revisions}
 \setlength{\tabcolsep}{4pt}
 \begin{tabular}{ll}
@@ -26,14 +26,14 @@ Checkpoint & Revision \\
 \end{tabular}
 \end{table*}
 
-The LMSYS cache revision visible during artifact preparation is \texttt{200748d9d3cddcc9d782887541057aca0b18c5da}. The official-entry script used the public mirror \texttt{AarushSah/lmsys-chat-1m}; the saved result contains only truncated hashes and accuracies, not conversation text.
+The official-entry script used the public mirror \texttt{AarushSah/lmsys-chat-1m}. Its local cache revision observed during artifact preparation is \texttt{c9fce24f9623e40750a061581bdd3a2d1243ff79}; the saved result contains truncated hashes and accuracies, not conversation text or a run-bound dataset revision.
 
 \subsection{Evidence and generated assets}
 The artifact separates model-running code from manuscript generation. JSON records under \texttt{paper/evidence/} are copied from the frozen experiment results and listed with SHA-256 hashes in \texttt{manifest.json}. The script \texttt{paper/scripts/generate\_assets.py} reads only those records, regenerates all manuscript figures and an audited copy of the main-table rows, recomputes the reported privacy tie statistics, and asserts the principal denominator 263,029/263,904. The submission checker verifies that every generated row is present verbatim in the manuscript source. Neither script makes a model or network call.
 
-The original runs did not persist a complete Python dependency lock. The artifact therefore freezes source, model revisions, input/result records, and the manuscript-generation environment separately; claims of bit-identical model reruns should not be made without reconstructing the missing runtime versions. This limitation does not affect hash verification or regeneration of paper assets from the frozen records.
+The original runs did not persist a complete contemporaneous Python dependency lock. The artifact preserves source snapshots, a retrospective model-revision inventory, result records, and manuscript-generation requirements. It does not establish bit-identical model reruns. This limitation does not affect hash verification or regeneration of paper assets from the frozen records.
 
 \section{Additional Scope Notes}
-The official implementation applies the same row permutation to the corresponding K and V blocks, but the present attack and primary metric target first-layer V. An exploratory position-calibration experiment shows that controlled marker/position pairs can label 60/64 blocks per head in one setting, while direct language-model ordering does not recover an exact block. We omit an ordered-reconstruction claim because these observations do not close the K-recovery and numerical-error chain.
+The official implementation applies the same row permutation to the corresponding K and V blocks, but the present attack and primary metric target first-layer V. An exploratory position-calibration experiment records marker/position labels for 60/64 blocks per head in one setting. The separate language-model ordering records contain no exact block recovery, but the multiplicity defect described in Section~\ref{sec:evaluation} limits their interpretation. These observations do not establish ordered reconstruction.
 
 For the single-row marker, Theorem~\ref{thm:identification} recovers columns of $S$ as a set. That is enough for multiset decoding: applying an unknown column permutation simply reorders recovered rows. Claims about the original row indices, absolute token positions, or attention semantics would require resolving that labeling and jointly validating K and V.

@@ -1,5 +1,5 @@
 \section{Introduction}
-The KV cache turns the history of a language-model interaction into a reusable inference state. It is also a representation of that history. A party that observes the cache can potentially recover information about the prompt even when it cannot observe the client connection. Cache offloading and reuse therefore create a confidentiality question alongside their performance benefits. Block-oriented management, exemplified by PagedAttention~\cite{paged}, makes small cache blocks a natural unit for both protection and analysis.
+The KV cache stores the history of a language-model interaction as reusable inference state. A party that observes this state may recover information about the prompt even without access to the client connection. Cache offloading and reuse therefore raise a confidentiality question alongside their performance benefits. Block-oriented management, exemplified by PagedAttention~\cite{paged}, makes small cache blocks a natural unit for both protection and analysis.
 
 \scheme{}~\cite{kvcloak} addresses this question with reversible obfuscation. Its implementation combines a secret column transform, a sparse additive marker, a fresh row permutation for each block, and a secret row transform. The column transform can be folded into attention weights; the other operations protect stored blocks. The design's security argument assigns an important role to the $b!$ possible row permutations. In the published paper, fresh shuffling is the step intended to defeat recovery of a fixed linear transform through chosen plaintexts. This suggests a focused question: does the number of permutations describe the uncertainty that the attacker actually observes?
 
@@ -15,9 +15,9 @@ We also examine what the recovered contents mean for privacy and mitigation. A c
 
 Our contributions are:
 \begin{itemize}
-\item An orbit-based analysis of chosen-input symmetry in shuffled cache obfuscation. We derive state counts, identification conditions, and a collection bound, and distinguish the single-marker result from more general marker patterns.
-\item A repeated-token attack on the official \scheme{} implementation that recovers an equivalent first-layer Value demixer and transfers it across requests without accessing the defender's secret parameters or fused dictionary.
-\item A scoped evaluation of recovery, calibration cost, secret-epoch stability, closed-set value identification, and a simple refresh intervention, with explicit separation of raw-count experiments, legacy summaries, and unresolved properties.
+\item We characterize the observable orbit induced by chosen-input symmetry in shuffled cache obfuscation, deriving state counts, identification conditions, and a collection bound. The analysis distinguishes the single-marker result from more general marker patterns.
+\item We construct a repeated-token attack on the official \scheme{} implementation that recovers an equivalent first-layer Value demixer and transfers it across requests without accessing the defender's secret parameters or fused dictionary.
+\item We evaluate recovery, calibration cost, secret-epoch stability, closed-set value identification, and a simple refresh intervention, distinguishing raw-count experiments, legacy summaries, and unresolved properties.
 \end{itemize}
 
 \begin{figure*}[t]

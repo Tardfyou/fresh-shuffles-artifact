@@ -19,6 +19,7 @@ python3 -m venv .venv-paper
 .venv-paper/bin/pip install -r requirements-paper.txt
 .venv-paper/bin/python paper/scripts/generate_assets.py
 .venv-paper/bin/python paper/scripts/check_submission.py
+.venv-paper/bin/python paper/scripts/audit_final.py
 ```
 
 These commands regenerate plots and table rows from saved evidence and validate the supplied PDF and evidence hashes. They do not load a model or contact a model API.
@@ -35,6 +36,8 @@ tectonic -o paper/build paper/main.tex
 The main result is 263,029 / 263,904 head-token multiset matches across ten models and twelve configurations. This is a descriptive count with correlated observations, not a count of independent requests. The privacy study is limited to one model, one secret configuration, and 30 synthetic closed-set cases. Per-request refresh is a mitigation candidate whose complete functional correctness and general security are not established.
 
 The original JSON and experiment scripts are retained for provenance. Historical aggregate fields and script comments may predate the frozen corrections. For privacy statistics, use the integer `strictly_higher` and `tie_group_size` fields and the corrected derivation in `paper/scripts/generate_assets.py`; the legacy `unique_first` and top-k aggregate fields in `privacy_v3.json` are superseded. Earlier defense results do not establish the security of later defense versions. Consult [frozen claim boundaries](paper/evidence/FROZEN_CLAIMS.md) and the manuscript before interpreting exploratory results.
+
+The final manuscript corrects the number of perfect main-suite configurations to six. The exploratory ordering script drops token multiplicity before beam search; its retained negative results do not establish the difficulty of order recovery. Cached model and dataset revisions are retrospective records, not contemporaneous per-run provenance. See [final validation](paper/review/final_audit.json).
 
 The supplied requirements describe manuscript regeneration only. The historical model runs lack a complete contemporaneous dependency lock; no claim of independently reproduced or bit-identical model runs is made by the asset checks.
 

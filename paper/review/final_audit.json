@@ -1,0 +1,69 @@
+{
+  "scope": "Arithmetic, source/prose reconciliation, references, and compiled PDF; no model reruns",
+  "head_token_counts": [
+    263029,
+    263904
+  ],
+  "configurations": 12,
+  "calibrated_configuration_heads": 90,
+  "perfect_configurations": [
+    "qwen25_05b",
+    "qwen25_05b_b32",
+    "qwen25_05b_b8",
+    "qwen25_3b",
+    "qwen3_06b",
+    "qwen3_17b"
+  ],
+  "minimum_S_cosine": 0.999996,
+  "maximum_w_relative_error": 0.035399,
+  "privacy_unique_first": [
+    21,
+    30
+  ],
+  "privacy_expected_topk": {
+    "1": 0.7735725059254471,
+    "5": 0.9095291962939023,
+    "10": 0.9523917259211376
+  },
+  "citation_keys": [
+    "collapse",
+    "conjformer",
+    "dong2025",
+    "gelo",
+    "hidden",
+    "kvcloak",
+    "li2023",
+    "llama3",
+    "lmsys",
+    "morris2023",
+    "olmo",
+    "paged",
+    "partialtee",
+    "phi3",
+    "qwen25",
+    "rope",
+    "sok",
+    "tinyllama"
+  ],
+  "all_citations_resolve": true,
+  "pdf_pages": 11,
+  "page1_fonts": {
+    "NimbusRomNo9L-Medi": 1426,
+    "NimbusRomNo9L-MediItal": 8,
+    "CMMI9": 2,
+    "CMR9": 1,
+    "NimbusRomNo9L-Regu": 3141,
+    "CMMI10": 3,
+    "CMR10": 2
+  },
+  "anonymous_artifact_hyperlink_present": true,
+  "pdf_sha256": "d7d946afadd2b07ca05ffea6f73b08ba6eb68874c237867457dbe64eaa431c49",
+  "limitations_retained": [
+    "Head-token observations are correlated; no population prevalence estimate",
+    "Privacy study is single-model/single-key with incomplete retained traces",
+    "S/a refresh lacks validated full functional correctness and general security",
+    "Model and dataset revisions are retrospective, not per-run provenance",
+    "Exploratory ordering implementation loses multiplicity"
+  ],
+  "status": "pass"
+}
