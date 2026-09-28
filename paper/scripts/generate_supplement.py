@@ -16,18 +16,26 @@ labels = {
 }
 def table(spec, header, rows, group_models=False):
     body=[]
-    previous=None
-    for row in rows:
-        if group_models and previous is not None and row[0] != previous:
-            body.append(r"\hline")
+    for index,original in enumerate(rows):
+        row=list(original)
+        if group_models:
+            starts=index==0 or rows[index-1][0] != row[0]
+            if starts:
+                span=sum(r[0]==row[0] for r in rows)
+                row[0]=r"\multirow{" + str(span) + r"}{*}{" + row[0] + "}"
+            else:
+                row[0]=""
         body.append(" & ".join(map(str,row)) + r" \\")
-        previous=row[0]
+        last=index==len(rows)-1
+        if not last:
+            same_next=group_models and rows[index+1][0]==original[0]
+            body.append(r"\cline{2-" + str(len(row)) + "}" if same_next else r"\hline")
     styled_header=" & ".join(r"\textbf{" + cell.strip() + "}" for cell in header.split("&"))
     return "\n".join([
-        r"\begin{tabular}{" + spec + "}", r"\toprule",
-        r"\rowcolor{TableHead}", styled_header + r" \\", r"\midrule",
+        r"\begin{tabular}{" + spec + "}", r"\TableTop",
+        r"\rowcolor{TableHead}", styled_header + r" \\", r"\TableHeadRule",
         *body,
-        r"\bottomrule", r"\end{tabular}", "",
+        r"\TableBottom", r"\end{tabular}", "",
     ])
 rows = []
 for r in read("STATS.json")["per_config"]:
@@ -43,7 +51,7 @@ for r in read("STATS.json")["per_config"]:
         f'{max(x["w_relerr"] for x in ds):.6f}',
     ])
 outputs = {"app_diagnostics.tex": table(
-    r"lrrrr>{\columncolor{TableBlue}}rr", r"Model & $b$ & Prefix & Core blocks & Min. separation & Min. $S$ cosine & Max. $w$ rel. err.", rows)}
+    r"c|c|c|c|c|c|c", r"Model & $b$ & Prefix & Core blocks & Min. separation & Min. $S$ cosine & Max. $w$ rel. err.", rows)}
 rows = []
 for tag, d in read("independent_eval.json").items():
     name = {"qwen05": "Qwen2.5-0.5B", "llama1b": "Llama-3.2-1B", "phi3": "Phi-3-mini"}[tag]
@@ -54,8 +62,8 @@ for tag, d in read("independent_eval.json").items():
             f'{100*e["cond_recovery_min"]:.2f}', f'{100*e["ctrl_acc"]:.2f}',
         ])
 outputs["app_epochs.tex"] = table(
-    r"lrrr>{\columncolor{LeakHigh}}r>{\columncolor{LeakHigh}}r>{\columncolor{LeakLow}}r",
-    r"Model & Epoch & Heads & Probe & Session mean (\%) & Min. session (\%) & Control (\%)",
+    r"c|c|c|c|>{\columncolor{LeakHigh}}c|>{\columncolor{LeakHigh}}c|>{\columncolor{LeakLow}}c",
+    r"Model & Epoch & Heads & Probe & \RecDot\ Mean (\%) & Min. session (\%) & \CtrlDot\ Control (\%)",
     rows, group_models=True)
 privacy = read("privacy_v3.json")["per_entity"]
 rows = []
@@ -69,7 +77,7 @@ for tag, label in [("ssn","SSN-like"),("credit","Card-like"),("password","Passwo
     rows.append([label, f"{unique}/5", max(r["tie_group_size"] for r in rs),
                  *[r"\RateCell{" + f"{v:.2f}" + "}" for v in expected]])
 outputs["app_privacy.tex"] = table(
-    "lrrrrr", r"Type & Unique & Max. $m$ & Top-1 & Top-5 & Top-10", rows)
+    "c|c|c|c|c|c", r"Type & Unique & Max. $m$ & Top-1 & Top-5 & Top-10", rows)
 check = argparse.ArgumentParser()
 check.add_argument("--check", action="store_true")
 args = check.parse_args()

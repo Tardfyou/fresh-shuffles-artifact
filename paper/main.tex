@@ -4,11 +4,26 @@
 \usepackage{graphicx,booktabs,array,multirow}
 \usepackage[table]{xcolor}
 \usepackage{url}
-\definecolor{TableHead}{HTML}{EDF0F3}
-\definecolor{TableBlue}{HTML}{E7F0F7}
-\definecolor{LeakHigh}{HTML}{F2D5D2}
-\definecolor{LeakLow}{HTML}{DCEBDC}
-\newcommand{\RateCell}[1]{\cellcolor{LeakHigh!#1!LeakLow}#1}
+\definecolor{TableHead}{HTML}{FFFFFF}
+\definecolor{TableBlue}{HTML}{FFFFFF}
+\definecolor{LeakHigh}{rgb}{0.91333,0.53333,0.53333}
+\definecolor{LeakMidHigh}{rgb}{0.95609,0.72275,0.72275}
+\definecolor{LeakMidLow}{rgb}{0.79138,0.88196,0.72548}
+\definecolor{LeakLow}{rgb}{0.61412,0.85255,0.52313}
+\definecolor{RecoveryDot}{HTML}{A42D2D}
+\definecolor{ControlDot}{HTML}{33712A}
+\setlength{\arrayrulewidth}{0.334pt}
+\setlength{\doublerulesep}{1.2pt}
+\newcommand{\TableTop}{\hline\hline}
+\newcommand{\TableHeadRule}{\hline}
+\newcommand{\TableBottom}{\hline\hline}
+\newcommand{\RecDot}{\textcolor{RecoveryDot}{\(\bullet\)}}
+\newcommand{\CtrlDot}{\textcolor{ControlDot}{\(\bullet\)}}
+\newcommand{\RateCell}[1]{%
+  \ifdim #1pt<25pt\cellcolor{LeakLow}%
+  \else\ifdim #1pt<50pt\cellcolor{LeakMidLow}%
+  \else\ifdim #1pt<75pt\cellcolor{LeakMidHigh}%
+  \else\cellcolor{LeakHigh}\fi\fi\fi #1}
 \usepackage[hidelinks,pdfauthor={},pdftitle={Fresh Shuffles, Reused Secrets: Breaking KV-Cloak with Repeated-Token Prompts}]{hyperref}
 \graphicspath{{figures/}}
 \newtheorem{theorem}{Theorem}

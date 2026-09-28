@@ -1,24 +1,36 @@
-\begin{tabular}{lrrr>{\columncolor{LeakHigh}}r>{\columncolor{LeakHigh}}r>{\columncolor{LeakLow}}r}
-\toprule
+\begin{tabular}{c|c|c|c|>{\columncolor{LeakHigh}}c|>{\columncolor{LeakHigh}}c|>{\columncolor{LeakLow}}c}
+\TableTop
 \rowcolor{TableHead}
-\textbf{Model} & \textbf{Epoch} & \textbf{Heads} & \textbf{Probe} & \textbf{Session mean (\%)} & \textbf{Min. session (\%)} & \textbf{Control (\%)} \\
-\midrule
-Qwen2.5-0.5B & 1 & 2/2 & 3200 & 100.00 & 100.00 & 0.24 \\
-Qwen2.5-0.5B & 2 & 2/2 & 3200 & 100.00 & 100.00 & 0.00 \\
-Qwen2.5-0.5B & 3 & 2/2 & 3200 & 100.00 & 100.00 & 0.00 \\
-Qwen2.5-0.5B & 4 & 2/2 & 3200 & 100.00 & 100.00 & 0.00 \\
-Qwen2.5-0.5B & 5 & 2/2 & 3200 & 100.00 & 100.00 & 0.00 \\
+\textbf{Model} & \textbf{Epoch} & \textbf{Heads} & \textbf{Probe} & \textbf{\RecDot\ Mean (\%)} & \textbf{Min. session (\%)} & \textbf{\CtrlDot\ Control (\%)} \\
+\TableHeadRule
+\multirow{5}{*}{Qwen2.5-0.5B} & 1 & 2/2 & 3200 & 100.00 & 100.00 & 0.24 \\
+\cline{2-7}
+ & 2 & 2/2 & 3200 & 100.00 & 100.00 & 0.00 \\
+\cline{2-7}
+ & 3 & 2/2 & 3200 & 100.00 & 100.00 & 0.00 \\
+\cline{2-7}
+ & 4 & 2/2 & 3200 & 100.00 & 100.00 & 0.00 \\
+\cline{2-7}
+ & 5 & 2/2 & 3200 & 100.00 & 100.00 & 0.00 \\
 \hline
-Llama-3.2-1B & 1 & 8/8 & 3201 & 99.68 & 99.41 & 0.00 \\
-Llama-3.2-1B & 2 & 8/8 & 3201 & 99.57 & 99.12 & 0.00 \\
-Llama-3.2-1B & 3 & 8/8 & 3201 & 99.57 & 99.22 & 0.00 \\
-Llama-3.2-1B & 4 & 8/8 & 3201 & 99.68 & 99.61 & 0.03 \\
-Llama-3.2-1B & 5 & 8/8 & 3201 & 99.72 & 99.51 & 0.03 \\
+\multirow{5}{*}{Llama-3.2-1B} & 1 & 8/8 & 3201 & 99.68 & 99.41 & 0.00 \\
+\cline{2-7}
+ & 2 & 8/8 & 3201 & 99.57 & 99.12 & 0.00 \\
+\cline{2-7}
+ & 3 & 8/8 & 3201 & 99.57 & 99.22 & 0.00 \\
+\cline{2-7}
+ & 4 & 8/8 & 3201 & 99.68 & 99.61 & 0.03 \\
+\cline{2-7}
+ & 5 & 8/8 & 3201 & 99.72 & 99.51 & 0.03 \\
 \hline
-Phi-3-mini & 1 & 32/32 & 4080 & 99.38 & 99.14 & 0.10 \\
-Phi-3-mini & 2 & 32/32 & 4080 & 99.32 & 99.17 & 0.21 \\
-Phi-3-mini & 3 & 32/32 & 4080 & 99.32 & 99.15 & 0.12 \\
-Phi-3-mini & 4 & 32/32 & 4080 & 99.29 & 99.18 & 0.17 \\
-Phi-3-mini & 5 & 32/32 & 4080 & 99.40 & 99.26 & 0.18 \\
-\bottomrule
+\multirow{5}{*}{Phi-3-mini} & 1 & 32/32 & 4080 & 99.38 & 99.14 & 0.10 \\
+\cline{2-7}
+ & 2 & 32/32 & 4080 & 99.32 & 99.17 & 0.21 \\
+\cline{2-7}
+ & 3 & 32/32 & 4080 & 99.32 & 99.15 & 0.12 \\
+\cline{2-7}
+ & 4 & 32/32 & 4080 & 99.29 & 99.18 & 0.17 \\
+\cline{2-7}
+ & 5 & 32/32 & 4080 & 99.40 & 99.26 & 0.18 \\
+\TableBottom
 \end{tabular}

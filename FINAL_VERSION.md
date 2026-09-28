@@ -12,7 +12,7 @@ Appendix tables are generated directly from frozen JSON by generate_supplement.p
 
 The anonymous review entry is https://anonymous.4open.science/r/fresh-shuffles-artifact-ED8D/.
 
-Visual revision: Figure 1 uses a final-width layout with measured text-box containment. Tables use light header fills, recovery/control shading, and model-group separators. Privacy shading follows a fixed 0–100% scale; it does not encode significance. All numeric cells and plotted-data summaries are unchanged.
+Visual revision: Figure 1 uses a final-width layout with measured text-box containment. Tables use double horizontal borders, 0.334pt black rules, centered numeric cells, grouped headers, and multirow model groups. Recovery/control dots are legend markers. The privacy table uses four fixed 25-percentage-point color bands matching the reference paper's red/green palette; color does not encode significance. All numeric cells and plotted-data summaries are unchanged.
 
 Validation covers the frozen raw counts and tie summaries, evidence hashes, source table rows, citation resolution, anonymous PDF metadata, actual PDF fonts, and the embedded artifact hyperlink. It does not independently reproduce historical model runs. The manuscript retains the limitations of the saved evidence.
 

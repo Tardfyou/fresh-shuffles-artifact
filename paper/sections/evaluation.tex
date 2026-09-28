@@ -36,30 +36,43 @@ Across the twelve configurations in Table~\ref{tab:breadth}, the attack obtains 
 
 \begin{table*}[t]
 \centering
-\caption{Main-suite recovery from first-layer Value caches. ``Probe'' is the complete tokenizer output length; C/N is the raw multiset hit count. Coral and sage distinguish recovery and fresh-secret control columns; color does not indicate statistical significance.}
+\caption{Main-suite recovery from first-layer Value caches. ``Probe'' is the complete tokenizer output length; C/N is the raw multiset hit count. Red and green distinguish recovery and fresh-secret control columns; color does not indicate statistical significance.}
 \label{tab:breadth}
 \setlength{\tabcolsep}{6pt}
-\begin{tabular}{lrrrrr>{\columncolor{LeakHigh}}r>{\columncolor{LeakLow}}r}
-\toprule
+\begin{tabular}{c|c|c|c|c|c|>{\columncolor{LeakHigh}}c|>{\columncolor{LeakLow}}c}
+\TableTop
 \rowcolor{TableHead}
-\textbf{Model} & $\boldsymbol{b}$ & \textbf{Heads} & $\boldsymbol{d}$ & \textbf{Probe} & \textbf{C/N} & \textbf{Rec. (\%)} & \textbf{Control} \\
-\midrule
+\multirow{2}{*}{\textbf{Model}} & \multicolumn{4}{c|}{\textbf{Configuration}} & \multicolumn{3}{c}{\textbf{Token recovery}} \\
+\cline{2-8}
+ & $\boldsymbol{b}$ & \textbf{Heads} & $\boldsymbol{d}$ & \textbf{Probe} & \textbf{C/N} & \RecDot\ \textbf{Rec. (\%)} & \CtrlDot\ \textbf{Control} \\
+\TableHeadRule
 Llama-3.2-1B & 16 & 8 & 64 & 3,201 & 20,192/20,224 & 99.84 & 0/176 \\
+\hline
 OLMo-2-1B & 16 & 16 & 128 & 3,200 & 45,043/45,056 & 99.97 & 0/176 \\
+\hline
 Phi-3-mini & 16 & 32 & 96 & 4,080 & 111,872/112,640 & 99.32 & 0/208 \\
+\hline
 Qwen2.5-0.5B & 16 & 2 & 64 & 3,200 & 4,800/4,800 & 100.00 & 0/176 \\
+\hline
 Qwen2.5-0.5B & 32 & 2 & 64 & 20,250 & 4,608/4,608 & 100.00 & 1/160 \\
+\hline
 Qwen2.5-0.5B & 8 & 2 & 64 & 1,280 & 4,896/4,896 & 100.00 & 1/176 \\
+\hline
 Qwen2.5-1.5B & 16 & 2 & 128 & 3,200 & 4,768/4,800 & 99.33 & 0/176 \\
+\hline
 Qwen2.5-3B & 16 & 2 & 128 & 3,200 & 4,800/4,800 & 100.00 & 0/176 \\
+\hline
 Qwen2.5-7B & 16 & 4 & 128 & 3,200 & 9,578/9,600 & 99.77 & 0/176 \\
+\hline
 Qwen3-0.6B & 16 & 8 & 128 & 3,200 & 19,200/19,200 & 100.00 & 0/176 \\
+\hline
 Qwen3-1.7B & 16 & 8 & 128 & 3,200 & 19,200/19,200 & 100.00 & 0/176 \\
+\hline
 TinyLlama-1.1B & 16 & 4 & 64 & 2,033 & 14,072/14,080 & 99.94 & 0/208 \\
-\midrule
+\TableHeadRule
 \rowcolor{TableBlue}
 \multicolumn{5}{r}{\textbf{Total}} & \textbf{263,029/263,904} & \textbf{99.668} & -- \\
-\bottomrule
+\TableBottom
 \end{tabular}
 \end{table*}
 
@@ -74,20 +87,24 @@ Table~\ref{tab:textcounts} regroups the same raw counts by target text. It intro
 \centering
 \caption{The main-suite counts regrouped by fixed target text. These are the same correlated evaluation opportunities as Table~\ref{tab:breadth}, not additional experiments.}
 \label{tab:textcounts}
-\begin{tabular}{lrr}
-\toprule
+\begin{tabular}{c|c|c}
+\TableTop
 \rowcolor{TableHead}
 \textbf{Target text} & \textbf{Matches / opportunities} & \textbf{Misses} \\
-\midrule
+\TableHeadRule
 English prose & 33,795 / 33,920 & 125 \\
+\hline
 Python code & 58,587 / 58,784 & 197 \\
+\hline
 Chinese prose & 80,517 / 80,768 & 251 \\
+\hline
 Dialogue & 37,928 / 38,048 & 120 \\
+\hline
 Mathematical prose & 52,202 / 52,384 & 182 \\
-\midrule
+\TableHeadRule
 \rowcolor{TableBlue}
 \textbf{Total} & \textbf{263,029 / 263,904} & \textbf{875} \\
-\bottomrule
+\TableBottom
 \end{tabular}
 \end{table}
 
