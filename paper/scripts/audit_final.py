@@ -15,9 +15,15 @@ configs = [row for row in stats["per_config"] if row["correct"] is not None]
 correct = total = heads = 0
 perfect = []
 diagnostics = []
+text_counts = {}
 for row in configs:
     data = read(row["tag"] + ".json")
     pairs = [v for target in data["victims"].values() for v in target["raw"].values()]
+    for name, target in data["victims"].items():
+        entry = text_counts.setdefault(name, [0, 0])
+        for hits, opportunities in target["raw"].values():
+            entry[0] += hits
+            entry[1] += opportunities
     c, n = map(sum, zip(*pairs))
     assert [c, n] == [row["correct"], row["total"]]
     assert data["control_fresh_secrets_raw"] == row["control_raw"]
@@ -45,6 +51,13 @@ assert len(privacy) == 30 and unique == 21
 for k, value in expected.items():
     assert abs(value - read("privacy_v3_scoring_audit.json")["all"]["topk_expected"][k]) < 1e-12
 sections = "\n".join(p.read_text() for p in sorted((root / "sections").glob("*.tex")))
+text_labels = {
+    "prose_en": "English prose", "python_code": "Python code",
+    "chinese": "Chinese prose", "dialogue": "Dialogue", "math": "Mathematical prose"
+}
+for name, (hits, opportunities) in text_counts.items():
+    assert f"{text_labels[name]} & {hits:,} / {opportunities:,} & {opportunities-hits}" in sections
+assert sum(n-c for c,n in text_counts.values()) == total-correct == 875
 assert "100\\% on six configurations" in sections
 assert "b\\ge2" in sections
 assert "drops multiplicity" in sections
@@ -71,6 +84,8 @@ out = {
     "scope": "Arithmetic, source/prose reconciliation, references, and compiled PDF; no model reruns",
     "head_token_counts": [correct, total],
     "configurations": len(configs),
+    "per_fixed_text_counts": text_counts,
+    "misses_total": total-correct,
     "calibrated_configuration_heads": heads,
     "perfect_configurations": perfect,
     "minimum_S_cosine": min(d["S_min_signed_cos"] for d in diagnostics),

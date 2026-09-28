@@ -24,6 +24,10 @@ The adversary does not receive $S$, $M$, $a$, victim plaintext, or the defender'
 
 We assume public block size and head layout. The adversary may calibrate and attack only within a secret epoch shared by probe and target. Instance routing, per-tenant key scopes, or request-specific transformations can prevent that sharing. We do not establish how often real deployments satisfy this condition. The measured lifecycle experiment is a controlled simulation of the shared-secret setting.
 
+The relevant secret scope is an implementation instance, rather than the mere fact that two requests use the same model. Two copies of a public checkpoint can have different cloak configurations. Conversely, repeated requests processed by one configured instance can share the row and column transforms even though their block permutations differ. Our target condition is the latter: the adversary's probe and the observed target cache use the same relevant secrets. This condition belongs to the threat model and is not inferred from the model identifier.
+
+It is useful to distinguish two boundaries in assessing that condition. The first is access to cache bytes, which may be governed by a storage or execution boundary. The second is the confidentiality supplied by the cloak after those bytes become visible. Our analysis addresses the second boundary. A deployment that prevents cross-request cache observation removes a required capability; a deployment that permits observation must evaluate what its transform conceals. The controlled experiments instantiate this observation capability explicitly and therefore do not measure how frequently either deployment condition holds.
+
 \subsection{Goals and exclusions}
 The primary goal is recovery of the token multiset in each complete target block. A secondary goal is identifying a synthetic value from an explicitly supplied same-type candidate set. The second goal is conditional on that candidate knowledge; it is not unconstrained recovery of an arbitrary credential.
 

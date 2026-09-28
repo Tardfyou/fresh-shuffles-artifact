@@ -61,6 +61,10 @@ The state labels do not identify the original column indices, leaving an arbitra
 
 The qualifications are substantive. Choosing $-u$ in~\eqref{eq:w} gives $w'=-w-2a/b$, not merely a harmless sign flip. The norm test fails to distinguish signs precisely when $\langle w,a\rangle=-\|a\|^2/b$. Similarly, a zero pair in $v$ cannot reveal that pair's rotation. A different legal probe may resolve these degeneracies, but our theorem does not promise that one arbitrary token always suffices. Nor does it extend one-pair identification to a general orthogonal $M$.
 
+The identification result separates a loss of randomization from a recovery guarantee. A small orbit alone does not imply that the underlying transform is identifiable. Here, identification additionally uses orthogonal columns, the marker's known orientation, a public probe vector, and the restricted structure of $M$. Each assumption supplies a different missing piece: differences identify the marker, projection isolates the common component, and the public probe fixes the column rotation. The theorem does not infer these properties merely from observing $b$ clusters.
+
+Likewise, an equivalent demixer need not reveal the original secret representation. Relabeling the recovered columns changes their order but leaves the content-recovery objective unchanged. This distinction explains why the absence of original column labels is compatible with high multiset recovery, while it remains a material obstacle to claims about token positions. The downstream marker-selection heuristic and dictionary match still have to be evaluated after the algebraic identification step.
+
 \subsection{Collection cost and finite precision}
 If each block independently maps the marker uniformly to a row, collecting all $b$ states is a coupon-collector process. The expected block count is $bH_b$, with $H_b=\sum_{i=1}^b1/i$. For $b=16$, this is about 54.1 blocks. A union bound gives
 \begin{equation}

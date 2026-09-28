@@ -5,6 +5,29 @@
     263904
   ],
   "configurations": 12,
+  "per_fixed_text_counts": {
+    "prose_en": [
+      33795,
+      33920
+    ],
+    "python_code": [
+      58587,
+      58784
+    ],
+    "chinese": [
+      80517,
+      80768
+    ],
+    "dialogue": [
+      37928,
+      38048
+    ],
+    "math": [
+      52202,
+      52384
+    ]
+  },
+  "misses_total": 875,
   "calibrated_configuration_heads": 90,
   "perfect_configurations": [
     "qwen25_05b",
@@ -47,7 +70,7 @@
   ],
   "all_citations_resolve": true,
   "fusion_dependency_matches_snapshot": true,
-  "pdf_pages": 11,
+  "pdf_pages": 13,
   "page1_fonts": {
     "NimbusRomNo9L-Medi": 1426,
     "NimbusRomNo9L-MediItal": 8,
@@ -58,7 +81,7 @@
     "CMR10": 2
   },
   "anonymous_artifact_hyperlink_present": true,
-  "pdf_sha256": "10f1d7a8ed9d5f2aa18a48983fadc07cb6f97db7ac640bcc5d7a3d4e84a19798",
+  "pdf_sha256": "130cad5dc9e9a77ecb3d07e1695739b9da2bd4f9460fc4a84f35530593b14dc2",
   "limitations_retained": [
     "Head-token observations are correlated; no population prevalence estimate",
     "Privacy study is single-model/single-key with incomplete retained traces",
