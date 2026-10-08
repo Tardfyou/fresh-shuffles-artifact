@@ -47,7 +47,7 @@ The supplied requirements describe manuscript regeneration only. The historical 
 
 The official-entry record is a historical file-format experiment: its defender thresholds used the first eight target conversations, and its harness did not enforce successful subprocess completion before reading a reused output directory. The summary alone does not certify a fresh end-to-end run. The S/a comparison retains rounded percentages, not raw counts. These qualifications are explicit in the manuscript. The importable fusion helper is packaged byte-for-byte from its retained upstream snapshot.
 
-VeilKV v2 is included as a bounded defense-prototype measurement. Its evidence is `paper/evidence/veilkv2_05b.json` and its script is `experiments/kvcloak/exp_veilkv2.py`. The result records keymat-free FP32 correctness, stored-artifact prefix reuse, timing, residual transfer, and the BF16 K-storage limitation. It is not a security proof or a claim of a complete repair.
+VeilKV-Plus v4 is included as a bounded defense-candidate measurement. Its evidence is `paper/evidence/veilkv_plus_v4.json` and its implementation is `experiments/kvcloak/exp_veilkv_plus_v2.py`. The result records chain-aware prefix-to-tail reuse, persistent nonce freshness, integrity/replay detection, TEE-profile functionality and performance, and the arithmetic-profile negative results. The attestation path remains a stub, so this is not a hardware-secure-system proof.
 
 ## Third-party material
 

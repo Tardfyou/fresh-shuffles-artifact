@@ -26,15 +26,16 @@
 | C | PBCM 作为独立防御贡献 | ❌ 降级 | S/a 轮换是更简单的修复 |
 | D | Beacon 二分法定理 | ❌ 撤回 | 仅有 k=1 实验观察，k≥2 解码器验证未完成 |
 
-## VeilKV v2 防御原型（补充证据，不改变攻击主线）
+## VeilKV-Plus v4 防御候选（补充证据，不改变攻击主线）
 
 | 主张 | 状态 | 证据 | 措辞边界 |
 |---|---|---|---|
-| FP32 keymat-free 解码、尾块保护、三文本 greedy-50 | ✅ 有限原型证据 | `experiments/kvcloak/results/veilkv2_05b.json` | Qwen2.5-0.5B、单机；不是安全证明 |
-| 前缀去重兼容 | ✅ 收窄 | 同上 | 仅单一已存储工件复用；独立重算深层前向不逐位相等 |
-| 攻击电池 | ✅ 有限边界证据 | 同上 | 127/127探针块唯一、salted字典0/7；盲迁移仍高于随机行零假设 |
-| 性能 | ✅ 五次测量 | 同上 | 混淆约0.1738 s/千token；解码约0.296--0.313 s/千token，慢于对照 |
-| BF16部署功能正确 | ❌ 未通过/开放 | 同上 | K误差约0.90--0.95，不能写成BF16无损 |
+| TEE profile 双模型 fp32 功能、TEE-BF16 零额外误差 | ✅ strong candidate evidence | `experiments/kvcloak/results/veilkv_plus_v4.json` | 真实 attestation 未实现；仍是模拟 TEE 边界 |
+| 公共前缀与私有尾部链感知复用 | ✅ | 同上 | stored-artifact reuse 1/1、chain-aware cross-decode、错误连接点全检测；独立重算仍可能漂移 |
+| 完整性、重放和跨租户替换 | ✅ | 同上 | 12/12 检测；nonce 重启后拒绝 |
+| 私有字典与攻击电池 | ✅ 有限边界证据 | 同上及 run1 archive | 双模型 0/100 私有字典；arithmetic 谱泄露疑点仍排除 |
+| TEE 性能 | ✅ | 同上 | protect/recover 中位数约0.116/0.100 s/1k；attestation 延迟未测 |
+| arithmetic profile | ❌ falsified/limited | run1 inherited evidence | 约11.4 s/1k，且存在低功效 Llama Gram/whitening 命中，不作机密性声明 |
 
 ## 隐私任务冻结措辞（修正后）
 

@@ -3,6 +3,10 @@
     "source": "experiments/kvcloak/results/veilkv2_05b.json",
     "sha256": "23d4d469e526a5468f6e6b8a64ce7fccba143dc9c59e5d3868a99269a3fe832d"
   },
+  "veilkv_plus_v4.json": {
+    "source": "experiments/kvcloak/results/veilkv_plus_v4.json",
+    "sha256": "bc4857aab414f9393220ad3b19536c5a9ba2fcf89398462f81530d81a374f27b"
+  },
   "qwen25_3b.json": {
     "source": "experiments/kvcloak/results/qwen25_3b.json",
     "sha256": "1dd6699c9090c3ebd87d3989dc7fcd05e3704b2c163abd3a35b4e931b01fdf7c"
