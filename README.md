@@ -26,7 +26,7 @@ python3 -m venv .venv-paper
 
 These commands regenerate plots and table rows from saved evidence and validate the supplied PDF and evidence hashes. They do not load a model or contact a model API.
 
-The current PDF has 15 pages: 11 pages of main content and four pages of references and appendices. Its 25 cited works include the model, architectural, and software sources used to explain the artifact. Supplemental tables expose the retained per-configuration diagnostics, all 15 model-key epochs, and per-type privacy tie statistics.
+The current PDF has 16 pages: 12 pages of main content and four pages of references and appendices. Its 25 cited works include the model, architectural, and software sources used to explain the artifact. Supplemental tables expose the retained per-configuration diagnostics, all 15 model-key epochs, and per-type privacy tie statistics.
 
 To rebuild the PDF, install Tectonic and run:
 
@@ -46,6 +46,8 @@ The final manuscript corrects the number of perfect main-suite configurations to
 The supplied requirements describe manuscript regeneration only. The historical model runs lack a complete contemporaneous dependency lock; no claim of independently reproduced or bit-identical model runs is made by the asset checks.
 
 The official-entry record is a historical file-format experiment: its defender thresholds used the first eight target conversations, and its harness did not enforce successful subprocess completion before reading a reused output directory. The summary alone does not certify a fresh end-to-end run. The S/a comparison retains rounded percentages, not raw counts. These qualifications are explicit in the manuscript. The importable fusion helper is packaged byte-for-byte from its retained upstream snapshot.
+
+VeilKV v2 is included as a bounded defense-prototype measurement. Its evidence is `paper/evidence/veilkv2_05b.json` and its script is `experiments/kvcloak/exp_veilkv2.py`. The result records keymat-free FP32 correctness, stored-artifact prefix reuse, timing, residual transfer, and the BF16 K-storage limitation. It is not a security proof or a claim of a complete repair.
 
 ## Third-party material
 

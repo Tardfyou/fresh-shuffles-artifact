@@ -1,0 +1,86 @@
+{
+ "defense": "VeilKV v2 (keymat-free decode, padded tail, measured leak boundaries)",
+ "notes": {
+  "sliding_window_warning": "transformers config warning, benign",
+  "master_key": "K_MASTER is cross-request static by design (TEE-held; same trust class as KV-Cloak's static S/a) — limitation, not a claim"
+ },
+ "A_keymat_free_roundtrip_K": 9.1552734375e-05,
+ "A_keymat_free_roundtrip_V": 3.814697265625e-06,
+ "A_tail_block_is_nontrivial": true,
+ "A_chain_keymat_free_roundtrip_V": 4.76837158203125e-06,
+ "B1_prefix_recompute_bitwise_equal_K": "2/24",
+ "B1_prefix_recompute_bitwise_equal_V": "1/24",
+ "B1_max_bitdiff_by_layer_first_last": [
+  [
+   0,
+   0.0,
+   0.0
+  ],
+  [
+   23,
+   7.62939453125e-06,
+   9.059906005859375e-06
+  ]
+ ],
+ "B1b_chain_protected_prefix_equal_cross_request": "3/48",
+ "B2_true_prefix_guess_matches": false,
+ "B2_wrong_prefix_guesses_missed": "5/5",
+ "B3_same_content_diff_position_diverges": true,
+ "B4_prefix_ciphertext_invariant_to_tail": true,
+ "C1_veilkv_obf_fp32_s_per_1k": 0.1738,
+ "C1_veilkv_obf_fp32_sd": 0.0071,
+ "C1_veilkv_dec_fp32_s_per_1k": 0.3128,
+ "C1_veilkv_dec_fp32_sd": 0.0187,
+ "C1_veilkv_obf_bf16_s_per_1k": 0.1728,
+ "C1_veilkv_obf_bf16_sd": 0.0038,
+ "C1_veilkv_dec_bf16_s_per_1k": 0.2963,
+ "C1_veilkv_dec_bf16_sd": 0.0031,
+ "C1_kvcloak_obf_bf16_s_per_1k": 0.2116,
+ "C1_kvcloak_obf_bf16_sd": 0.1024,
+ "C1_kvcloak_dec_bf16_s_per_1k": 0.1594,
+ "C1_kvcloak_dec_bf16_sd": 0.0046,
+ "C2_roundtrip": {
+  "fp32_aligned": {
+   "K": 6.103515625e-05,
+   "V": 1.9073486328125e-06
+  },
+  "fp32_unaligned": {
+   "K": 6.103515625e-05,
+   "V": 2.86102294921875e-06
+  },
+  "bf16_aligned": {
+   "K": 0.895965576171875,
+   "V": 0.024936676025390625
+  },
+  "bf16_unaligned": {
+   "K": 0.9471588134765625,
+   "V": 0.038158416748046875
+  }
+ },
+ "C2_generation": {
+  "text0": {
+   "logits_max_diff": 0.0,
+   "next_top1_match": true,
+   "greedy50_agreement": "50/50"
+  },
+  "text1": {
+   "logits_max_diff": 0.0,
+   "next_top1_match": true,
+   "greedy50_agreement": "50/50"
+  },
+  "text2": {
+   "logits_max_diff": 0.0,
+   "next_top1_match": true,
+   "greedy50_agreement": "50/50"
+  }
+ },
+ "C2_incremental_equals_full": true,
+ "C3_probe_unique_blocks": "127/127",
+ "C3_probe_min_pairwise_dist": 1.1706,
+ "C3_probe_median_pairwise_dist": 2.0166,
+ "C3_null_random_row_token_hitrate": 0.0068,
+ "C3_keytransfer_cosine_selected_mean": 0.0625,
+ "C3_keytransfer_blind_mean": 0.0322,
+ "C3_keytransfer_blind_max": 0.3125,
+ "C3_salted_dict_hits": "0/7"
+}

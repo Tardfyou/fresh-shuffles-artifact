@@ -1,0 +1,48 @@
+loading model...
+Sliding Window Attention is enabled but not implemented for `sdpa`; unexpected results may be encountered.
+
+=== (A) keymat-free decode + padded tail ===
+roundtrip K 9.16e-05 V 3.81e-06 | tail protected block non-trivial: True
+chain-mode roundtrip V 4.77e-06
+
+=== (B) prefix-domain CPA ===
+B1 recomputed-prefix bitwise equal: K 2/24, V 1/24 (layer0 dK=0.0e+00 dV=0.0e+00; last dK=7.6e-06 dV=9.1e-06)
+B1b chain-protected prefix equal cross-request: 3/48
+B2 guess-confirmation: true guess match=False, wrong guesses missed 5/5 (accepted equality leak, MLE)
+B3 identical 16-token content at 4 positions -> all ciphertexts distinct: True
+B4 attacker prefix ciphertext invariant to own tail changes: True
+
+=== (C1) timing (5 reps, matched dtype) ===
+obf s/1k: veilkv fp32 0.1738 bf16 0.1728 | kvcloak bf16 0.2116
+dec s/1k: veilkv fp32 0.3128 bf16 0.2963 | kvcloak bf16 0.1594
+
+=== (C2) correctness matrix ===
+{
+ "fp32_aligned": {
+  "K": 6.103515625e-05,
+  "V": 1.9073486328125e-06
+ },
+ "fp32_unaligned": {
+  "K": 6.103515625e-05,
+  "V": 2.86102294921875e-06
+ },
+ "bf16_aligned": {
+  "K": 0.895965576171875,
+  "V": 0.024936676025390625
+ },
+ "bf16_unaligned": {
+  "K": 0.9471588134765625,
+  "V": 0.038158416748046875
+ }
+}
+  text0: logits 0.0, greedy50 50/50
+  text1: logits 0.0, greedy50 50/50
+  text2: logits 0.0, greedy50 50/50
+incremental decode == full decode: True
+
+=== (C3) attack battery v2 ===
+probe non-collapse: 127/127 unique blocks, min pairwise 1.1706 (no clustering used)
+key transfer: cosine-selected mean 6.2% | blind mean 3.2% max 31.2% | null (random rows hit victim tokens) 0.7%
+salted dictionary via best-derivable (chain) keys: 0/7 candidate hits (0 expected; salt is 128-bit TEE-held)
+
+saved /mnt/hdd/yichengzhi/kvcloak_results/veilkv2_05b.json
