@@ -60,12 +60,37 @@ for name, (hits, opportunities) in text_counts.items():
 assert sum(n-c for c,n in text_counts.values()) == total-correct == 875
 assert "100\\% on six configurations" in sections
 assert "b\\ge2" in sections
-assert "drops multiplicity" in sections
+assert "preserving token multiplicity" in sections
 assert "were not recorded in per-run manifests" in sections
 bib_keys = set(re.findall(r"@\w+\{([^,]+),", (root / "references.bib").read_text()))
 cites = {key.strip() for match in re.findall(r"\\cite\{([^}]+)\}", sections) for key in match.split(",")}
 assert cites <= bib_keys
 assert not re.search(r"(?i)\b(?:TODO|TBD|FIXME|PLACEHOLDER)\b|\?\?", sections)
+spectral_summary = read("arithmetic_optimized_summary.json")["spectrum_powercheck"]
+spectral_rows = [json.loads(line) for line in
+                (evidence / "arithmetic_spectrum_blocks.jsonl").read_text().splitlines()]
+spectral_counts = {}
+for model, summary in spectral_summary.items():
+    rows = [row for row in spectral_rows if row["model"] == model]
+    assert len(rows) == 100 and len({row["block"] for row in rows}) == 100
+    counts = {key: sum(row[key] for row in rows) for key in ("gram", "wht", "pro", "rnd")}
+    for metric, key in (("gram", "gram"), ("whitening", "wht"),
+                        ("procrustes", "pro"), ("random_null", "rnd")):
+        assert counts[key] / len(rows) == summary[metric]["rate"]
+    spectral_counts[model] = {"blocks": len(rows), **counts}
+defense_perf = read("veilkv_plus_v4.json")["perf"]["data"]
+baseline_ratios = {
+    "kvcloak_to_tee_protect_p50": defense_perf["protect_kvcloak"]["p50"] / defense_perf["protect_tee"]["p50"],
+    "kvcloak_to_tee_recover_p50": defense_perf["recover_kvcloak"]["p50"] / defense_perf["recover_tee"]["p50"],
+    "tee_protect_overhead_vs_nosharing_percent":
+        100 * (defense_perf["protect_tee"]["p50"] / defense_perf["protect_nosharing_aead"]["p50"] - 1),
+}
+from audit_order_v2 import summarize as summarize_ordering
+ordering = summarize_ordering()
+assert ordering['main']['records'] == 600 and ordering['boundary']['records'] == 300
+assert ordering['main']['conditions']['end2end']['exact_records'] == 18
+assert ordering['main']['nominal_length_overshoots'] == 109
+assert ordering['boundary']['paired_audit']['all_block_multisets_equal_pairs'] == 0
 with pdfplumber.open(root / "build/main.pdf") as pdf:
     fonts = Counter(ch["fontname"].split("+")[-1] for ch in pdf.pages[0].chars)
     assert fonts["NimbusRomNo9L-Regu"] > 1000
@@ -82,6 +107,12 @@ if log_path.exists():
     assert not re.search(r"(?:Citation|Reference).*undefined|Overfull \\hbox|^!", log, flags=re.M)
 out = {
     "scope": "Arithmetic, source/prose reconciliation, references, and compiled PDF; no model reruns",
+    "ordering_audit": "review/order_v2_audit.json",
+    "ordering_main_macro_pa": ordering['main']['conditions']['end2end']['macro_position_accuracy'],
+    "ordering_main_exact_records": ordering['main']['conditions']['end2end']['exact_records'],
+    "ordering_main_unique_spans": ordering['main']['unique_evaluated_spans'],
+    "ordering_nominal_overshoots": ordering['main']['nominal_length_overshoots'],
+    "ordering_blockwise_identical_pairs": ordering['boundary']['paired_audit']['all_block_multisets_equal_pairs'],
     "head_token_counts": [correct, total],
     "configurations": len(configs),
     "per_fixed_text_counts": text_counts,
@@ -94,6 +125,8 @@ out = {
     "privacy_expected_topk": expected,
     "citation_keys": sorted(cites),
     "all_citations_resolve": True,
+    "arithmetic_spectral_counts": spectral_counts,
+    "defense_baseline_ratios": baseline_ratios,
     "fusion_dependency_matches_snapshot": True,
     "pdf_pages": page_count,
     "page1_fonts": dict(fonts),
@@ -104,7 +137,7 @@ out = {
         "Privacy study is single-model/single-key with incomplete retained traces",
         "S/a refresh lacks validated full functional correctness and general security",
         "Model and dataset revisions are retrospective, not per-run provenance",
-        "Exploratory ordering implementation loses multiplicity"
+        "Ordering lacks raw predictions; nominal groups overshoot and paired inputs differ blockwise"
     ],
     "status": "pass"
 }

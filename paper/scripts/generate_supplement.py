@@ -14,7 +14,7 @@ labels = {
     "qwen25_7b": "Qwen2.5-7B", "qwen3_06b": "Qwen3-0.6B",
     "qwen3_17b": "Qwen3-1.7B", "tinyllama": "TinyLlama-1.1B",
 }
-def table(spec, header, rows, group_models=False):
+def table(spec, header, rows, group_models=False, padding=None):
     body=[]
     for index,original in enumerate(rows):
         row=list(original)
@@ -31,7 +31,7 @@ def table(spec, header, rows, group_models=False):
             same_next=group_models and rows[index+1][0]==original[0]
             body.append(r"\cline{2-" + str(len(row)) + "}" if same_next else r"\hline")
     styled_header=" & ".join(r"\textbf{" + cell.strip() + "}" for cell in header.split("&"))
-    return "\n".join([
+    return (r"\setlength{\tabcolsep}{" + padding + "}\n" if padding else "") + "\n".join([
         r"\begin{tabular}{" + spec + "}", r"\TableTop",
         r"\rowcolor{TableHead}", styled_header + r" \\", r"\TableHeadRule",
         *body,
@@ -51,20 +51,21 @@ for r in read("STATS.json")["per_config"]:
         f'{max(x["w_relerr"] for x in ds):.6f}',
     ])
 outputs = {"app_diagnostics.tex": table(
-    r"c|c|c|c|c|c|c", r"Model & $b$ & Prefix & Core blocks & Min. separation & Min. $S$ cosine & Max. $w$ rel. err.", rows)}
+    r"c|c|c|c|c|c|c", r"Model & $b$ & Prefix & Core blocks & Min. separation & Min. $S$ cosine & Max. $w$ rel. err.", rows, padding="14.8bp")}
 rows = []
 for tag, d in read("independent_eval.json").items():
     name = {"qwen05": "Qwen2.5-0.5B", "llama1b": "Llama-3.2-1B", "phi3": "Phi-3-mini"}[tag]
     for e in d["epochs"]:
         rows.append([
             name, e["epoch"]+1, f'{e["cal_heads"]}/{e["cal_total"]}',
-            e["probe_tokens"], f'{100*e["cond_recovery_mean"]:.2f}',
-            f'{100*e["cond_recovery_min"]:.2f}', f'{100*e["ctrl_acc"]:.2f}',
+            e["probe_tokens"], r"\RateCell{" + f'{100*e["cond_recovery_mean"]:.2f}' + "}",
+            r"\RateCell{" + f'{100*e["cond_recovery_min"]:.2f}' + "}",
+            r"\RateCell{" + f'{100*e["ctrl_acc"]:.2f}' + "}",
         ])
 outputs["app_epochs.tex"] = table(
-    r"c|c|c|c|>{\columncolor{LeakHigh}}c|>{\columncolor{LeakHigh}}c|>{\columncolor{LeakLow}}c",
-    r"Model & Epoch & Heads & Probe & \RecDot\ Mean (\%) & Min. session (\%) & \CtrlDot\ Control (\%)",
-    rows, group_models=True)
+    r"c|ccc|cc|c",
+    r"Model & Epoch & Heads & Probe & Mean (\%) & Min. session (\%) & Control (\%)",
+    rows, group_models=True, padding="17.2bp")
 privacy = read("privacy_v3.json")["per_entity"]
 rows = []
 for tag, label in [("ssn","SSN-like"),("credit","Card-like"),("password","Password"),
@@ -77,7 +78,7 @@ for tag, label in [("ssn","SSN-like"),("credit","Card-like"),("password","Passwo
     rows.append([label, f"{unique}/5", max(r["tie_group_size"] for r in rs),
                  *[r"\RateCell{" + f"{v:.2f}" + "}" for v in expected]])
 outputs["app_privacy.tex"] = table(
-    "c|c|c|c|c|c", r"Type & Unique & Max. $m$ & Top-1 & Top-5 & Top-10", rows)
+    "c|c|c|c|c|c", r"Type & Unique & Max. $m$ & Top-1 & Top-5 & Top-10", rows, padding="7.4bp")
 check = argparse.ArgumentParser()
 check.add_argument("--check", action="store_true")
 args = check.parse_args()

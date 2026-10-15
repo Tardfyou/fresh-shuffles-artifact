@@ -1,0 +1,36 @@
+{
+  "order_recovery": {
+    "reference": "F258 measured font, bar edges, grid and legend",
+    "canvas_bp": [
+      243.0,
+      172.79999999999998
+    ],
+    "font": "Times New Roman",
+    "fixed_canvas": true,
+    "all_text_inside_canvas": true,
+    "axes_bp": [
+      [
+        48.6,
+        39.744,
+        187.11,
+        98.49599999999998
+      ]
+    ],
+    "coordinate_origin": "bottom left",
+    "line_data": [
+      []
+    ],
+    "bar_heights": [
+      [
+        22.293333333333333,
+        5.4584,
+        7.401716666666666,
+        7.124999999999999,
+        18.895799999999998,
+        4.9265,
+        22.293333333333333,
+        5.4584
+      ]
+    ]
+  }
+}

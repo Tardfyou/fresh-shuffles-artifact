@@ -1,0 +1,13 @@
+{
+  "reference": "2026-f258-paper.pdf Figures 7/8/9 and Table II",
+  "date": "2026-10-12",
+  "status": "pass",
+  "data_unchanged": true,
+  "all_stat_text_inside_canvas": true,
+  "visual_inspection": "four statistical figures and main/appendix data tables checked in final manuscript",
+  "statistical_plot_profile": "F258 measured Times/font sizes/line widths/markers; supersedes ACL835 for this paper",
+  "pages_total": 18,
+  "main_text_pages": 13,
+  "backmatter_pages": 5,
+  "details": "f258_visual_audit.json"
+}

@@ -31,7 +31,7 @@ It is useful to distinguish two boundaries in assessing that condition. The firs
 \subsection{Goals and exclusions}
 The primary goal is recovery of the token multiset in each complete target block. A secondary goal is identifying a synthetic value from an explicitly supplied same-type candidate set. The second goal is conditional on that candidate knowledge; it is not unconstrained recovery of an arbitrary credential.
 
-The experiments do not establish within-block ordering, whole-prompt exact match, deeper-layer recovery, or inference on an untrusted accelerator with unrestricted access to all intermediate computation. We also distinguish floating-point precision: model forward passes are FP32 in the main suite, while cloak matrix operations use bf16. This is not an end-to-end bf16 serving benchmark.
+The algebraic output does not assign within-block positions; the language-prior follow-up in Section~\ref{sec:ordering} estimates sequences separately. We do not establish general exact-prompt reconstruction, deeper-layer recovery, or inference on an untrusted accelerator with unrestricted access to all intermediate computation. We also distinguish floating-point precision: model forward passes are FP32 in the main suite, while cloak matrix operations use bf16. This is not an end-to-end bf16 serving benchmark.
 
 \begin{table}[t]
 \centering

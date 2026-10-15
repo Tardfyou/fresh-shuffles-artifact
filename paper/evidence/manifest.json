@@ -122,5 +122,89 @@
   "llama32_1b.json": {
     "source": "experiments/kvcloak/results/llama32_1b.json",
     "sha256": "d35ca902e71f204368863a8fb3b001476b75cf72374ab4c51ff10357d3871e12"
+  },
+  "arithmetic_optimized_summary.json": {
+    "source": "experiments/kvcloak/results/arithmetic_optimized_summary.json",
+    "sha256": "a43d57c9867dc378381049b83b4e980c961a76ea1b306861a131c1349f2a21d0"
+  },
+  "arithmetic_spectrum_blocks.jsonl": {
+    "source": "experiments/kvcloak/results/arithmetic_spectrum_blocks.jsonl",
+    "sha256": "9c349ae324f1000eb6616e43e668b9e9ad61e9bd12807a3284890595efb21ff1"
+  },
+  "arithmetic_optimized_perf.jsonl": {
+    "source": "experiments/kvcloak/results/arithmetic_optimized_perf.jsonl",
+    "sha256": "863be0b253691472cec18fe91edf9bb3c17d3dc953cfa490405aa90a1ec1b8c0"
+  },
+  "arithmetic_optimized_manifest.json": {
+    "source": "experiments/kvcloak/results/arithmetic_optimized_manifest.json",
+    "sha256": "8bea5ac769b23b77dcf0cbb79fe4cc272e1e12eb917bc4929f5020c412d560ce"
+  },
+  "order_v2/samples_main.jsonl": {
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/samples_main.jsonl",
+    "sha256": "dbf7ac7e989a967697a3bcabf6a1eedff37f2f7bb8d32085f146045fc25a48a6"
+  },
+  "order_v2/metrics_main.jsonl": {
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/metrics_main.jsonl",
+    "sha256": "31b0c7170c49a48cc8cbc7eba862161a8f16314c623fe79bbacb5edea14759dc"
+  },
+  "order_v2/predictions_main.jsonl": {
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/predictions_main.jsonl",
+    "sha256": "726477f497624506e25d7a0761ec91981cb96df799a178083a73f547b5d14a29"
+  },
+  "order_v2/costs_main.jsonl": {
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/costs_main.jsonl",
+    "sha256": "c5fc8d821d65bf9383aeabec01fd7520ed588628dba73516476e66cd6dadd55a"
+  },
+  "order_v2/samples_boundary.jsonl": {
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/samples_boundary.jsonl",
+    "sha256": "a7a3b7290fe60b985d4989f202be4bdb448a6053f7eb7f9747ebcc9a84040e4c"
+  },
+  "order_v2/metrics_boundary.jsonl": {
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/metrics_boundary.jsonl",
+    "sha256": "73d36726967368ad53def231c225c8c36b56edf6ad69377e2314ec2fec5cb193"
+  },
+  "order_v2/predictions_boundary.jsonl": {
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/predictions_boundary.jsonl",
+    "sha256": "18bf575479dfa90ce7821b5aabdde557b7e574c9b8614a70e9aab2f5a72b958d"
+  },
+  "order_v2/costs_boundary.jsonl": {
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/costs_boundary.jsonl",
+    "sha256": "7b87b3302ea8087dd38554714b2cad91e9657a9a2eddfaca39c92fa3145ea694"
+  },
+  "order_v2/metrics_dev.jsonl": {
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/metrics_dev.jsonl",
+    "sha256": "e48f401fdd95bac8f85f00fb109aa8a04cca89e9ebe964dcb211441cac5c9832"
+  },
+  "order_v2/resume_info_main.json": {
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/resume_info_main.json",
+    "sha256": "65c16f5d0a6764003ea1157f55d695c5e4b81b8caed43bfa00fd1e209806885f"
+  },
+  "order_v2/resume_info_boundary.json": {
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/resume_info_boundary.json",
+    "sha256": "5304cee6f94a7a5eb88fe0847a69a81efc022ddbcb08c5d12c523384c46def74"
+  },
+  "order_v2/boundary_direction_analysis.json": {
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/boundary_direction_analysis.json",
+    "sha256": "2c7b7a1469dc500d7180ee1bd5a0020c7803b5f4bce8d0bdcfed184df3df0896"
+  },
+  "order_v2/RETROSPECTIVE_PROTOCOL.md": {
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/RETROSPECTIVE_PROTOCOL.md",
+    "sha256": "f299d8a338ad43f52477b8481bf1bb4bd3b82314760b89f385ebf9633b2aee57"
+  },
+  "order_v2/source_order_v2.py.txt": {
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/source_order_v2.py.txt",
+    "sha256": "12e176ab62e7c09bd0600562acbfc7be5f3809904137fa79264b78a617772421"
+  },
+  "order_v2/source_analyze_boundary.py.txt": {
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/source_analyze_boundary.py.txt",
+    "sha256": "e7f358e14ac6163aceebfd1e12d53d69d5202ddc5685f6b02071fc6d2e3c89be"
+  },
+  "order_v2/DELIVERY_PROVENANCE.json": {
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/DELIVERY_PROVENANCE.json",
+    "sha256": "8a859a97229a8976da695896ff4361bd952d0680f89dfe3be69303854fec523e"
+  },
+  "order_v2/TOKENIZATION_AUDIT.json": {
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/TOKENIZATION_AUDIT.json",
+    "sha256": "a831729814d1a1865c6b0a16f9817609d0ebfad6fb0d84598f23e62e896a800e"
   }
 }

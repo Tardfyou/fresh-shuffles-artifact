@@ -1,19 +1,11 @@
-# Frozen manuscript
+# Current manuscript and evidence
 
-Editorial freeze: 2026-09-28.
+Updated 2026-10-15. The supplied paper/build/main.pdf has 18 pages: 13 main-text pages and 5 pages of references/appendices.
 
-Final adversarial corrections: 2026-09-28, following independent measurement, mathematical-consistency, and artifact reviews. Main raw counts and result JSON are unchanged. Corrections disclose auxiliary-experiment provenance, distinguish numerical heuristics from ideal proofs, and restore the missing fusion helper.
+The main raw result remains 263,029/263,904 correlated head-token opportunities across ten models and twelve configurations. The ordering follow-up adds 600 synthetic main metric IDs and 300 boundary metric IDs, without changing that denominator. Mean main position accuracy is 22.3% versus 7.4% randomized ordering and 18.9% without cross-block context; logs record 18/600 exact spans.
 
-The authoritative manuscript is paper/build/main.pdf. The complete edition contains 15 pages: main content ends on page 11, and references plus appendices occupy pages 12–15. It includes 25 cited works and supplemental measurement, provenance, and algebraic details. Source, manuscript, and saved validation records are synchronized in this repository.
+The nominal generation minima are not exact-length buckets: 109/600 spans overshoot and 581 main spans are distinct. Raw token predictions and recovered counters were not retained. Oracle conservation supplies indirect whole-span content agreement under the inspected source; it does not certify per-block correctness. Direction-pair scores are position accuracy, and none of the 100 pairs holds every block bag fixed. No zero factual-leakage claim is made. The protocol and source snapshots are explicitly retrospective.
 
-The additional fixed-text breakdown regroups the original 263,029 / 263,904 observations; it adds no samples. Its counts and 875 total misses are checked directly against the retained per-configuration raw counts by audit_final.py.
+Evidence, all physical result rows, the offline-tokenizer audit and source snapshots are in paper/evidence/order_v2/. The acceptance report is paper/review/ORDER_V2_ACCEPTANCE_20261015.md. Output-directory usernames were anonymized in the source snapshots; original source hashes and anonymized hashes are recorded separately.
 
-Appendix tables are generated directly from frozen JSON by generate_supplement.py; --check detects table drift. The page check enforces the requested four-page minimum and five-page maximum for references plus appendices. Historical evidence limitations remain explicit.
-
-The anonymous review entry is https://anonymous.4open.science/r/fresh-shuffles-artifact-ED8D/.
-
-Visual revision: Figure 1 uses a final-width layout with measured text-box containment. Tables use double horizontal borders, 0.334pt black rules, centered numeric cells, grouped headers, and multirow model groups. Recovery/control dots are legend markers. The privacy table uses four fixed 25-percentage-point color bands matching the reference paper's red/green palette; color does not encode significance. All numeric cells and plotted-data summaries are unchanged.
-
-Validation covers the frozen raw counts and tie summaries, evidence hashes, source table rows, citation resolution, anonymous PDF metadata, actual PDF fonts, and the embedded artifact hyperlink. It does not independently reproduce historical model runs. The manuscript retains the limitations of the saved evidence.
-
-The original experiment records remain unchanged. The final manuscript and validation reports take precedence over exploratory aggregate prose.
+Figures and tables retain the measured F258 aesthetic; the ordering comparison is Figure 6 and its nominal-group table is Table IV. The Figure 5 performance baseline is unfused KV-Cloak, not the original paper's weight-fused serving path. No new model runs were performed during manuscript integration.

@@ -1,0 +1,23 @@
+{
+  "breadth_raw": [
+    263029,
+    263904
+  ],
+  "breadth_percent": 99.66844003880199,
+  "privacy_n": 30,
+  "privacy_unique_first": 21,
+  "privacy_g_zero": 30,
+  "privacy_expected": {
+    "1": 0.7735725059254471,
+    "5": 0.9095291962939023,
+    "10": 0.9523917259211376
+  },
+  "key_epoch_minima": {
+    "qwen05": 1.0,
+    "llama1b": 0.9957,
+    "phi3": 0.9929
+  },
+  "query_curve_trials_per_budget": 10,
+  "query_curve_empirical_scope": "two heads, fixed secret configuration",
+  "query_curve_theory_scope": "one-head exact occupancy; newly calculated from b=16, no model run"
+}

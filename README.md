@@ -18,6 +18,7 @@ Use Python 3.12 and run from the repository root:
 python3 -m venv .venv-paper
 .venv-paper/bin/pip install -r requirements-paper.txt
 .venv-paper/bin/python paper/scripts/generate_assets.py
+.venv-paper/bin/python paper/scripts/generate_order_assets.py
 .venv-paper/bin/python paper/scripts/generate_supplement.py
 .venv-paper/bin/python paper/scripts/generate_supplement.py --check
 .venv-paper/bin/python paper/scripts/check_submission.py
@@ -26,7 +27,7 @@ python3 -m venv .venv-paper
 
 These commands regenerate plots and table rows from saved evidence and validate the supplied PDF and evidence hashes. They do not load a model or contact a model API.
 
-The current PDF has 16 pages: 12 pages of main content and four pages of references and appendices. Its 25 cited works include the model, architectural, and software sources used to explain the artifact. Supplemental tables expose the retained per-configuration diagnostics, all 15 model-key epochs, and per-type privacy tie statistics.
+The current PDF has 18 pages: 13 pages of main content and five pages of references and appendices. Its 25 cited works include the model, architectural, and software sources used to explain the artifact. Supplemental tables expose the retained per-configuration diagnostics, all 15 model-key epochs, and per-type privacy tie statistics.
 
 To rebuild the PDF, install Tectonic and run:
 
@@ -41,7 +42,7 @@ The main result is 263,029 / 263,904 head-token multiset matches across ten mode
 
 The original JSON and experiment scripts are retained for provenance. Historical aggregate fields and script comments may predate the frozen corrections. For privacy statistics, use the integer `strictly_higher` and `tie_group_size` fields and the corrected derivation in `paper/scripts/generate_assets.py`; the legacy `unique_first` and top-k aggregate fields in `privacy_v3.json` are superseded. Earlier defense results do not establish the security of later defense versions. Consult [frozen claim boundaries](paper/evidence/FROZEN_CLAIMS.md) and the manuscript before interpreting exploratory results.
 
-The final manuscript corrects the number of perfect main-suite configurations to six. The exploratory ordering script drops token multiplicity before beam search; its retained negative results do not establish the difficulty of order recovery. Cached model and dataset revisions are retrospective records, not contemporaneous per-run provenance. See [final validation](paper/review/final_audit.json).
+The final manuscript corrects the number of perfect main-suite configurations to six. The current ordering follow-up preserves token multiplicity and supersedes the exploratory estimates. Its 600 main records yield 22.3% mean position accuracy and 18 exact spans; duplicated inputs, nominal-length overshoots, missing raw predictions and uncontrolled blockwise boundary bags limit interpretation. See paper/review/ORDER_V2_ACCEPTANCE_20261015.md. Cached model and dataset revisions are retrospective records, not contemporaneous per-run provenance. See [final validation](paper/review/final_audit.json).
 
 The supplied requirements describe manuscript regeneration only. The historical model runs lack a complete contemporaneous dependency lock; no claim of independently reproduced or bit-identical model runs is made by the asset checks.
 
@@ -52,3 +53,9 @@ VeilKV-Plus v4 is included as a bounded defense-candidate measurement. Its evide
 ## Third-party material
 
 KV-Cloak source snapshots derive from `SiO-2/kvcloak` commit `6b40f36edb2f337557543e7e60b10022308883d4`; its Apache-2.0 license is retained in [THIRD_PARTY_KVCLOAK_LICENSE](THIRD_PARTY_KVCLOAK_LICENSE). IEEEtran files retain their original notices. No additional blanket license is asserted for third-party material or the manuscript.
+
+## Ordering delivery and figure typography
+
+The 2026-10-15 ordering delivery is frozen in paper/evidence/order_v2/. Run `paper/scripts/audit_order_v2.py` and `paper/scripts/generate_order_assets.py` in the manuscript environment; they use saved files only and do not run a language model. This package preserves the delivered retrospective protocol and all result rows, with the acceptance report taking precedence over overbroad summary claims. The 100 direction-reversal pairs share global bags but differ in their block bags, so they do not establish zero factual-direction leakage.
+
+Statistical-figure regeneration requires a locally licensed Times New Roman installation (for example the redistributable Microsoft Core Fonts package). Raw font files are not distributed. The supplied vector PDF figures embed subsets and can be compiled into the manuscript without installing the plotting font. The private/local visual-audit baseline is reduced here to numeric/table source files; no conversation history, credentials or experiment environments are packaged.

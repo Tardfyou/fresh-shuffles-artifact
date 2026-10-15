@@ -1,20 +1,56 @@
 {
-  "reference": "2026-f258-paper.pdf, Table II",
-  "black_rule_width_pt": 0.334,
-  "double_rule_gap_pt": 1.2,
-  "numeric_alignment": "center",
-  "color_rgb": {
-    "low": [0.61412, 0.85255, 0.52313],
-    "mid_low": [0.79138, 0.88196, 0.72548],
-    "mid_high": [0.95609, 0.72275, 0.72275],
-    "high": [0.91333, 0.53333, 0.53333]
+  "reference": "2026-f258-paper.pdf Table II",
+  "date": "2026-10-12",
+  "status": "pass",
+  "rule_bp": 0.33432,
+  "double_rule_edge_gap_bp": 1.67412,
+  "font_full_width_bp": 8.369,
+  "font_column_bp": 7.97,
+  "full_width_tables_bp": [
+    496.74,
+    497.16,
+    497.43
+  ],
+  "source_table_II_width_bp": 496.56,
+  "palette_source_rgb": {
+    "low": [
+      0.61412,
+      0.85255,
+      0.52313
+    ],
+    "mid_low": [
+      0.79138,
+      0.88196,
+      0.72548
+    ],
+    "mid_high": [
+      0.95609,
+      0.72275,
+      0.72275
+    ],
+    "high": [
+      0.91333,
+      0.53333,
+      0.53333
+    ]
   },
-  "privacy_color_boundaries_percent": [0, 25, 50, 75, 100],
-  "dot_semantics": "recovery/control legend only",
-  "unchanged_data_rows_verified": {
-    "app_privacy": 6,
-    "app_diagnostics": 12,
-    "app_epochs": 15
+  "percent_bands": [
+    0,
+    25,
+    50,
+    75,
+    100
+  ],
+  "unknown_and_noncomparable_metrics": "white",
+  "grouped_models_and_rules": true,
+  "visible_rows_unchanged": {
+    "app_epochs.tex": 15,
+    "app_diagnostics.tex": 12,
+    "app_privacy.tex": 6,
+    "breadth": 12
   },
-  "status": "pass"
+  "numbering": "Roman",
+  "citation_color": "#76529A",
+  "reference_color": "#9B3A55",
+  "output_color_precision": "Tectonic rounds RGB to 3 decimal places"
 }

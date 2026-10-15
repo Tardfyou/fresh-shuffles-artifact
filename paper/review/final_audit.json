@@ -1,5 +1,11 @@
 {
   "scope": "Arithmetic, source/prose reconciliation, references, and compiled PDF; no model reruns",
+  "ordering_audit": "review/order_v2_audit.json",
+  "ordering_main_macro_pa": 0.22293333333333334,
+  "ordering_main_exact_records": 18,
+  "ordering_main_unique_spans": 581,
+  "ordering_nominal_overshoots": 109,
+  "ordering_blockwise_identical_pairs": 0,
   "head_token_counts": [
     263029,
     263904
@@ -76,25 +82,46 @@
     "transformers"
   ],
   "all_citations_resolve": true,
+  "arithmetic_spectral_counts": {
+    "Qwen2.5-0.5B": {
+      "blocks": 100,
+      "gram": 23,
+      "wht": 18,
+      "pro": 13,
+      "rnd": 0
+    },
+    "Llama-3.2-1B": {
+      "blocks": 100,
+      "gram": 38,
+      "wht": 6,
+      "pro": 0,
+      "rnd": 2
+    }
+  },
+  "defense_baseline_ratios": {
+    "kvcloak_to_tee_protect_p50": 1.9309749784296808,
+    "kvcloak_to_tee_recover_p50": 4.196555217831814,
+    "tee_protect_overhead_vs_nosharing_percent": 6.232813932172321
+  },
   "fusion_dependency_matches_snapshot": true,
-  "pdf_pages": 16,
+  "pdf_pages": 18,
   "page1_fonts": {
-    "NimbusRomNo9L-Medi": 1426,
+    "NimbusRomNo9L-Medi": 1587,
     "NimbusRomNo9L-MediItal": 8,
     "CMMI9": 2,
     "CMR9": 1,
-    "NimbusRomNo9L-Regu": 3141,
+    "NimbusRomNo9L-Regu": 2972,
     "CMMI10": 3,
     "CMR10": 2
   },
   "anonymous_artifact_hyperlink_present": true,
-  "pdf_sha256": "9ba5efe24050218526e7334bbd241eeafd829687a6d10142846475e7f5c095f6",
+  "pdf_sha256": "6fc505eef5617d88677592690daf5a082a16726f3bf70d7f59a3f108c8ebd4d4",
   "limitations_retained": [
     "Head-token observations are correlated; no population prevalence estimate",
     "Privacy study is single-model/single-key with incomplete retained traces",
     "S/a refresh lacks validated full functional correctness and general security",
     "Model and dataset revisions are retrospective, not per-run provenance",
-    "Exploratory ordering implementation loses multiplicity"
+    "Ordering lacks raw predictions; nominal groups overshoot and paired inputs differ blockwise"
   ],
   "status": "pass"
 }

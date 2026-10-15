@@ -49,7 +49,7 @@ The Qwen3 and OLMo~2 reports provide the generation-specific background for thos
 The distinction between query heads and KV heads follows the multi-head and grouped-query attention setting~\cite{attention,gqa}. Our denominators use the recorded KV-head count, since those are the Value representations being scored. The normalization operator in Equation~\eqref{eq:dictionary} is taken from the loaded model, including RMSNorm where applicable~\cite{rmsnorm}. Applying the raw embedding table without the relevant normalization and projection would evaluate a different dictionary.
 
 \subsection{Regeneration contract}
-From the repository root, install \path{requirements-paper.txt} in a Python 3.12 environment. Run \path{paper/scripts/generate_assets.py} to regenerate the four figures and audited main-table rows. Run \path{paper/scripts/generate_supplement.py} to regenerate the appendix tables; its \texttt{--check} mode compares the checked-in tables with freshly derived text. Both commands consume saved JSON only.
+From the repository root, install \path{requirements-paper.txt} in a Python 3.12 environment. Run \path{paper/scripts/generate_assets.py} to regenerate the principal figures and audited main-table rows; \path{paper/scripts/generate\_order\_assets.py} generates the ordering diagnostics. Run \path{paper/scripts/generate_supplement.py} to regenerate the appendix tables; its \texttt{--check} mode compares the checked-in tables with freshly derived text. These commands consume saved JSON/JSONL only.
 
 Compile \path{paper/main.tex} with Tectonic, placing output in \path{paper/build/}. The checks in \path{paper/scripts/check_submission.py} verify the result-copy hashes, page dimensions, appendix marker, and main-table rows. The separate \path{paper/scripts/audit_final.py} recomputes main counts and privacy expectations, checks the text-level breakdown, and inspects the PDF's actual fonts and artifact hyperlink. All table generators use deterministic ordering. PDF binary hashes may nevertheless differ after rebuilding because compilation metadata can change.
 
@@ -139,7 +139,19 @@ A complete-row permutation preserves each row as a vector. Sorting every feature
 \]
 have identical independently sorted columns and identical row-norm multisets, but different row-vector multisets. Neither diagnostic establishes a row permutation. For attention, corresponding K and V rows must additionally share the same permutation, with mask and position semantics handled consistently. This is why the retained S/a check does not establish full functional equivalence.
 
-\section{Additional Scope Notes}
-The official implementation applies the same row permutation to the corresponding K and V blocks, but the present attack and primary metric target first-layer V. An exploratory position-calibration experiment records marker/position labels for 60/64 blocks per head in one setting. The separate language-model ordering records contain no exact block recovery, but the multiplicity defect described in Section~\ref{sec:evaluation} limits their interpretation. These observations do not establish ordered reconstruction.
+\section{Ordering Follow-up and Scope}
+\label{app:ordering}
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{order_recovery.pdf}
+\caption{Recorded mean position accuracy in the ordering follow-up. Main contains 600 synthetic records (581 distinct evaluated spans); random IDs contains 100 records. These are descriptive per-record means, not independent token trials or direction-identification rates.}
+\label{fig:ordering}
+\end{figure}
 
-Theorem~\ref{thm:identification} recovers unordered columns of $S$, sufficient for multiset decoding. Original positions and attention semantics would additionally require recovering column labels and jointly validating K and V.
+The delivered metrics contain 600 main and 300 boundary IDs, each with four conditions. Main prediction/cost streams contain 612 rows because of resumed duplicates; boundary prediction summaries retain 200 earlier short-input skips before 300 completed records. We analyze the unique metric IDs and preserve all physical rows. The files named predictions contain lengths and IDs, not output tokens; recovered counters were also not saved. Hashes freeze the delivered files and current source retrospectively. The separately supplied protocol is explicitly retrospective and is not a pre-run registration.
+
+In \texttt{evaluate}, conservation compares the predicted sequence with recovered bags pooled over all blocks. The oracle condition orders truth bags but is scored against those recovered bags. Its unit conservation and equal lengths indirectly imply whole-span bag agreement under the inspected implementation; they cannot establish which block each token came from. Identical end-to-end/oracle metric vectors (600/600 main and 300/300 boundary) likewise do not certify identical sequences. Random-order means use the saved shuffled outputs; resumed RNG streams and the source's whole-span analytic reference prevent presenting that field as an exact blockwise null. No confidence interval treats repeated templates as independent observations.
+
+A retrospective offline-tokenizer audit agrees with all 900 recorded lengths. It finds 109 nominal-length overshoots and 581 distinct main spans. The 100 boundary pairs comprise 68 distinct unordered token-sequence pairs. All 100 share a global bag, but zero share every block bag: tokens move between blocks, leaving the blockwise-content control required for an indistinguishability test absent. The reported 19.0\%/18.5\% values group position scores by input direction; there is no retained factual-direction classifier. Across both directions, randomized ordering gives 7.12\%; the delivered derived file's 6.69\% selects direction-a only. No exact boundary span is recorded (0/200), which does not establish absence of factual leakage.
+
+The follow-up replaces the earlier multiplicity-losing exploratory estimates. Theorem~\ref{thm:identification} still identifies unordered columns of $S$; sequence estimates from language priors do not recover those original column labels or validate joint K/V attention semantics.

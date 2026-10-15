@@ -35,7 +35,8 @@
 | 完整性、重放和跨租户替换 | ✅ | 同上 | 12/12 检测；nonce 重启后拒绝 |
 | 私有字典与攻击电池 | ✅ 有限边界证据 | 同上及 run1 archive | 双模型 0/100 私有字典；arithmetic 谱泄露疑点仍排除 |
 | TEE 性能 | ✅ | 同上 | protect/recover 中位数约0.116/0.100 s/1k；attestation 延迟未测 |
-| arithmetic profile | ❌ falsified/limited | run1 inherited evidence | 约11.4 s/1k，且存在低功效 Llama Gram/whitening 命中，不作机密性声明 |
+| arithmetic profile | ❌ falsified/limited | `arithmetic_optimized_summary.json`、`arithmetic_spectrum_blocks.jsonl`、`arithmetic_optimized_perf.jsonl` | 双模型各100块：Gram 23/100、38/100；whitening 18/100、6/100；随机对照0/100、2/100；永久退出机密性声明。最终464-token基准均值protect/recover 0.7325/0.5789 s/1k；旧约11.4值为短基准，不混比 |
+| TEE 与 no-sharing AEAD 基线 | ✅ 有限成本证据 | `veilkv_plus_v4.json` 的继承性能记录 | protect p50 0.1159 vs 0.1091 s/1k（约多6.2%）；未保存no-sharing recover指标；优势是已测公开前缀工件复用与私有尾部完整性集成，不声称唯一或比认证加密更快 |
 
 ## 隐私任务冻结措辞（修正后）
 
@@ -61,3 +62,18 @@
 - 功能正确性（K/V 对应关系或注意力输出等价未验证）
 - 完整安全修复
 - "全部权重必须重融合"（仅 M 融合进权重，S/a 不在权重中）
+
+## 2026-10-15 顺序恢复补充（回溯验收，不替换主实验分母）
+
+- 交付：main 600指标ID、boundary 300指标ID，四条件；逐token预测与恢复Counter未保存。物理prediction/cost行存在续跑重复与旧skip，全部保留，指标不重复计数。
+- main：每记录位置准确率22.2933%，random_order 7.4017%，no_cross 18.8958%；日志整段精确18/600、块精确108/2360。
+- 3×4×50为标称最低生成块数组，不是严格16/32/64/128-token桶；109条实际长度超出标签。实际评估span唯一数581，不宣称600独立/唯一文本。
+- main与boundary所有逐记录指标向量end2end/oracle相同。oracle输出来自真值词袋，而conservation与合并后的恢复词袋比较，单位conservation给出整体词袋相符的间接证据；不等于独立逐块100%审计，也不替换主实验99.668%。
+- 随机token100条：位置准确率5.4584%，random_order 7.1250%，支持语言先验作用，不证明所有位置相关信息都不存在。
+- 方向对：a/b组位置准确率18.9684%/18.4683%，并非方向分类准确率。全局词袋相同100/100，但逐块词袋相同0/100，不能宣称方向零泄露。整段精确0/200也不证明事实无法识别。双方向random为7.1244%，交付派生文件6.69%仅选a组。
+- 独立运行前协议不存在；RETROSPECTIVE_PROTOCOL明确回溯性质。按当前源码、交付文件和离线tokenizer做回溯验收；不重跑模型、不承诺确定性再生。
+- 正式依据：evidence/order_v2/*与review/order_v2_audit.json。旧探索65–100%、9.1%/15.9%和dev调试最高值不用于正式顺序恢复结论。
+
+## 性能对照补充
+
+Figure中的KV-Cloak计时脚本设置fused=False；保护/恢复1.93×/4.20×是对该未融合路径，不能宣称超过NDSS论文的融合版或真实服务。

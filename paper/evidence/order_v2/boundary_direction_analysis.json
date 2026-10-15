@@ -1,0 +1,1020 @@
+{
+ "source_files": [
+  "metrics_boundary.jsonl",
+  "samples_boundary.jsonl"
+ ],
+ "derivation": "deterministic join on pair_id/direction; no rerun",
+ "n_pairs": 100,
+ "direction_bias": {
+  "pa_dir_a": 0.1897,
+  "pa_dir_b": 0.1847,
+  "diff": 0.005,
+  "random_order": 0.0669
+ },
+ "exact_match": {
+  "any_exact": 0,
+  "both_directions_exact": 0
+ },
+ "per_pair": [
+  {
+   "pair_id": 0,
+   "id_a": "ba_000_a",
+   "id_b": "ba_000_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.2812,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 1,
+   "id_a": "ba_001_a",
+   "id_b": "ba_001_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 2,
+   "id_a": "ba_002_a",
+   "id_b": "ba_002_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 3,
+   "id_a": "ba_003_a",
+   "id_b": "ba_003_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 4,
+   "id_a": "ba_004_a",
+   "id_b": "ba_004_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 5,
+   "id_a": "ba_005_a",
+   "id_b": "ba_005_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.0938,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 6,
+   "id_a": "ba_006_a",
+   "id_b": "ba_006_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 7,
+   "id_a": "ba_007_a",
+   "id_b": "ba_007_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 8,
+   "id_a": "ba_008_a",
+   "id_b": "ba_008_b",
+   "pa_a": 0.0938,
+   "pa_b": 0.125,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 9,
+   "id_a": "ba_009_a",
+   "id_b": "ba_009_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 10,
+   "id_a": "ba_010_a",
+   "id_b": "ba_010_b",
+   "pa_a": 0.0938,
+   "pa_b": 0.125,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 11,
+   "id_a": "ba_011_a",
+   "id_b": "ba_011_b",
+   "pa_a": 0.3125,
+   "pa_b": 0.2188,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 12,
+   "id_a": "ba_012_a",
+   "id_b": "ba_012_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.25,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 13,
+   "id_a": "ba_013_a",
+   "id_b": "ba_013_b",
+   "pa_a": 0.0938,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 14,
+   "id_a": "ba_014_a",
+   "id_b": "ba_014_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 15,
+   "id_a": "ba_015_a",
+   "id_b": "ba_015_b",
+   "pa_a": 0.2812,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 16,
+   "id_a": "ba_016_a",
+   "id_b": "ba_016_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.2812,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 17,
+   "id_a": "ba_017_a",
+   "id_b": "ba_017_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 18,
+   "id_a": "ba_018_a",
+   "id_b": "ba_018_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.2188,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 19,
+   "id_a": "ba_019_a",
+   "id_b": "ba_019_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 20,
+   "id_a": "ba_020_a",
+   "id_b": "ba_020_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.3125,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 21,
+   "id_a": "ba_021_a",
+   "id_b": "ba_021_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.2812,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 22,
+   "id_a": "ba_022_a",
+   "id_b": "ba_022_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.2188,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 23,
+   "id_a": "ba_023_a",
+   "id_b": "ba_023_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 24,
+   "id_a": "ba_024_a",
+   "id_b": "ba_024_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 25,
+   "id_a": "ba_025_a",
+   "id_b": "ba_025_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 26,
+   "id_a": "ba_026_a",
+   "id_b": "ba_026_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.125,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 27,
+   "id_a": "ba_027_a",
+   "id_b": "ba_027_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 28,
+   "id_a": "ba_028_a",
+   "id_b": "ba_028_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 29,
+   "id_a": "ba_029_a",
+   "id_b": "ba_029_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 30,
+   "id_a": "ba_030_a",
+   "id_b": "ba_030_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.3125,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 31,
+   "id_a": "ba_031_a",
+   "id_b": "ba_031_b",
+   "pa_a": 0.3125,
+   "pa_b": 0.2812,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 32,
+   "id_a": "ba_032_a",
+   "id_b": "ba_032_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 33,
+   "id_a": "ba_033_a",
+   "id_b": "ba_033_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.2188,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 34,
+   "id_a": "ba_034_a",
+   "id_b": "ba_034_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 35,
+   "id_a": "ba_035_a",
+   "id_b": "ba_035_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.0938,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 36,
+   "id_a": "ba_036_a",
+   "id_b": "ba_036_b",
+   "pa_a": 0.3438,
+   "pa_b": 0.3125,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 37,
+   "id_a": "ba_037_a",
+   "id_b": "ba_037_b",
+   "pa_a": 0.2812,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 38,
+   "id_a": "ba_038_a",
+   "id_b": "ba_038_b",
+   "pa_a": 0.125,
+   "pa_b": 0.2188,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 39,
+   "id_a": "ba_039_a",
+   "id_b": "ba_039_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 40,
+   "id_a": "ba_040_a",
+   "id_b": "ba_040_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 41,
+   "id_a": "ba_041_a",
+   "id_b": "ba_041_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 42,
+   "id_a": "ba_042_a",
+   "id_b": "ba_042_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.2188,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 43,
+   "id_a": "ba_043_a",
+   "id_b": "ba_043_b",
+   "pa_a": 0.0938,
+   "pa_b": 0.125,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 44,
+   "id_a": "ba_044_a",
+   "id_b": "ba_044_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 45,
+   "id_a": "ba_045_a",
+   "id_b": "ba_045_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 46,
+   "id_a": "ba_046_a",
+   "id_b": "ba_046_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 47,
+   "id_a": "ba_047_a",
+   "id_b": "ba_047_b",
+   "pa_a": 0.125,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 48,
+   "id_a": "ba_048_a",
+   "id_b": "ba_048_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 49,
+   "id_a": "ba_049_a",
+   "id_b": "ba_049_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.0938,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 50,
+   "id_a": "ba_050_a",
+   "id_b": "ba_050_b",
+   "pa_a": 0.3125,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 51,
+   "id_a": "ba_051_a",
+   "id_b": "ba_051_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 52,
+   "id_a": "ba_052_a",
+   "id_b": "ba_052_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.2188,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 53,
+   "id_a": "ba_053_a",
+   "id_b": "ba_053_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.2812,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 54,
+   "id_a": "ba_054_a",
+   "id_b": "ba_054_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.2188,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 55,
+   "id_a": "ba_055_a",
+   "id_b": "ba_055_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.2188,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 56,
+   "id_a": "ba_056_a",
+   "id_b": "ba_056_b",
+   "pa_a": 0.375,
+   "pa_b": 0.25,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 57,
+   "id_a": "ba_057_a",
+   "id_b": "ba_057_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.0938,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 58,
+   "id_a": "ba_058_a",
+   "id_b": "ba_058_b",
+   "pa_a": 0.25,
+   "pa_b": 0.2812,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 59,
+   "id_a": "ba_059_a",
+   "id_b": "ba_059_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 60,
+   "id_a": "ba_060_a",
+   "id_b": "ba_060_b",
+   "pa_a": 0.0938,
+   "pa_b": 0.2188,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 61,
+   "id_a": "ba_061_a",
+   "id_b": "ba_061_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 62,
+   "id_a": "ba_062_a",
+   "id_b": "ba_062_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.0938,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 63,
+   "id_a": "ba_063_a",
+   "id_b": "ba_063_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.2188,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 64,
+   "id_a": "ba_064_a",
+   "id_b": "ba_064_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 65,
+   "id_a": "ba_065_a",
+   "id_b": "ba_065_b",
+   "pa_a": 0.0938,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 66,
+   "id_a": "ba_066_a",
+   "id_b": "ba_066_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 67,
+   "id_a": "ba_067_a",
+   "id_b": "ba_067_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 68,
+   "id_a": "ba_068_a",
+   "id_b": "ba_068_b",
+   "pa_a": 0.125,
+   "pa_b": 0.2188,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 69,
+   "id_a": "ba_069_a",
+   "id_b": "ba_069_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 70,
+   "id_a": "ba_070_a",
+   "id_b": "ba_070_b",
+   "pa_a": 0.25,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 71,
+   "id_a": "ba_071_a",
+   "id_b": "ba_071_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 72,
+   "id_a": "ba_072_a",
+   "id_b": "ba_072_b",
+   "pa_a": 0.2812,
+   "pa_b": 0.3125,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 73,
+   "id_a": "ba_073_a",
+   "id_b": "ba_073_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.0938,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 74,
+   "id_a": "ba_074_a",
+   "id_b": "ba_074_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 75,
+   "id_a": "ba_075_a",
+   "id_b": "ba_075_b",
+   "pa_a": 0.3125,
+   "pa_b": 0.2188,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 76,
+   "id_a": "ba_076_a",
+   "id_b": "ba_076_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 77,
+   "id_a": "ba_077_a",
+   "id_b": "ba_077_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 78,
+   "id_a": "ba_078_a",
+   "id_b": "ba_078_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.2188,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 79,
+   "id_a": "ba_079_a",
+   "id_b": "ba_079_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 80,
+   "id_a": "ba_080_a",
+   "id_b": "ba_080_b",
+   "pa_a": 0.2812,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 81,
+   "id_a": "ba_081_a",
+   "id_b": "ba_081_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.125,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 82,
+   "id_a": "ba_082_a",
+   "id_b": "ba_082_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.125,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 83,
+   "id_a": "ba_083_a",
+   "id_b": "ba_083_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 84,
+   "id_a": "ba_084_a",
+   "id_b": "ba_084_b",
+   "pa_a": 0.2812,
+   "pa_b": 0.25,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 85,
+   "id_a": "ba_085_a",
+   "id_b": "ba_085_b",
+   "pa_a": 0.0938,
+   "pa_b": 0.2188,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 86,
+   "id_a": "ba_086_a",
+   "id_b": "ba_086_b",
+   "pa_a": 0.125,
+   "pa_b": 0.0938,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 87,
+   "id_a": "ba_087_a",
+   "id_b": "ba_087_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.0938,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 88,
+   "id_a": "ba_088_a",
+   "id_b": "ba_088_b",
+   "pa_a": 0.0938,
+   "pa_b": 0.2188,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 89,
+   "id_a": "ba_089_a",
+   "id_b": "ba_089_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 90,
+   "id_a": "ba_090_a",
+   "id_b": "ba_090_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 91,
+   "id_a": "ba_091_a",
+   "id_b": "ba_091_b",
+   "pa_a": 0.1875,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 92,
+   "id_a": "ba_092_a",
+   "id_b": "ba_092_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.125,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 93,
+   "id_a": "ba_093_a",
+   "id_b": "ba_093_b",
+   "pa_a": 0.1562,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 94,
+   "id_a": "ba_094_a",
+   "id_b": "ba_094_b",
+   "pa_a": 0.0938,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 95,
+   "id_a": "ba_095_a",
+   "id_b": "ba_095_b",
+   "pa_a": 0.2812,
+   "pa_b": 0.1562,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 96,
+   "id_a": "ba_096_a",
+   "id_b": "ba_096_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.1875,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 97,
+   "id_a": "ba_097_a",
+   "id_b": "ba_097_b",
+   "pa_a": 0.2812,
+   "pa_b": 0.2188,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 98,
+   "id_a": "ba_098_a",
+   "id_b": "ba_098_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.3125,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  },
+  {
+   "pair_id": 99,
+   "id_a": "ba_099_a",
+   "id_b": "ba_099_b",
+   "pa_a": 0.2188,
+   "pa_b": 0.0938,
+   "exact_a": false,
+   "exact_b": false,
+   "both_exact": false
+  }
+ ]
+}

@@ -22,12 +22,57 @@ The prefix result is now defined at the artifact-manager boundary. A public pref
 
 The v4 integrity battery detected all 12 tested manipulations, including replay after epoch changes, block substitution, block swapping, truncation, AAD changes, and cross-tenant replacement. Private closed-set dictionary attempts produced $0/100$ hits for both evaluated models, while the public-prefix equality oracle remains an intentional policy-bound leakage. The persistent nonce store rejected reuse after a simulated service restart. Attestation remains a stub, so the result establishes the cache protocol and its failure handling rather than the security of a particular hardware TEE.
 
-The TEE profile had protect/recover medians of approximately 0.116/0.100 seconds per 1,000 tokens in the v4 CPU benchmark, compared with 0.224/0.414 seconds for the KV-Cloak comparison. The arithmetic profile remains falsified for its deployment budget at roughly 11.4 seconds per 1,000 tokens and is excluded from confidentiality claims. Its inherited arithmetic battery also contains a low-power Llama Gram/whitening hit; we retain that observation rather than treating the geometry layer as cryptographically secure. The master key is simulated and static across requests, and the attestation protocol is unimplemented. These boundaries support a strong defense candidate under the simulated TEE profile, not a complete secure-system claim.
+The TEE profile had protect/recover medians of 0.1159/0.0987 seconds per 1,000 tokens in the CPU benchmark inherited by v4, compared with 0.2238/0.4142 seconds for the KV-Cloak comparison. These are approximately $1.93\times$ and $4.20\times$ reductions in the measured operation time against the benchmark's \texttt{fused=False} baseline, not the published weight-fused serving path. The benchmark measures cache protection and recovery; it excludes hardware attestation and does not establish an end-to-end serving speedup.
+
+\subsection{Baseline comparison and supported advantages}
+\label{sec:defense-comparison}
+Table~\ref{tab:defense-comparison} separates the intervention suggested by the attack from the engineering properties tested by the defense prototype. Request-specific $S,a$ refresh interrupts the measured cross-request transfer, but does not supply the integrity, replay handling, or prefix-to-tail integration evaluated in VeilKV-Plus. The TEE profile addresses these additional gaps by combining standard byte protection with authenticated cache-object metadata, persistent nonce freshness, and an explicit distinction between public prefix artifacts and private tails. The cryptographic primitives are established tools; the prototype's evidence concerns their cache-protocol integration under the simulated trust boundary.
+
+\begin{table*}[t]
+\centering
+\caption{Scope of the measured interventions. Unmeasured properties are left explicit. Public prefix reuse permits equality leakage; the TEE boundary is simulated.}
+\label{tab:defense-comparison}
+\fontsize{8.4}{10.5}\selectfont
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{>{\raggedright\arraybackslash}p{.16\textwidth}|>{\raggedright\arraybackslash}p{.25\textwidth}|>{\raggedright\arraybackslash}p{.25\textwidth}|>{\raggedright\arraybackslash}p{.24\textwidth}}
+\TableTop
+\textbf{Property} & \textbf{KV-Cloak comparison} & \textbf{Request-specific $S,a$} & \textbf{VeilKV-Plus TEE profile} \\
+\TableHeadRule
+Secret scope & Reused structural secrets in the tested configuration & Refresh $S,a$; retain $M$ & Derived material scoped to cache metadata and private principal/nonce \\
+\hline
+Confidentiality evidence & First-layer Value multiset recovery in the tested implementation & Measured transfer falls to 0\%; general security unestablished & Private dictionary: 0/100 per model; hardware key release unimplemented \\
+\hline
+Integrity and replay & Not evaluated as a guarantee in this comparison & Not evaluated & 12/12 tested manipulations detected; nonce replay rejected after restart \\
+\hline
+Prefix and tail integration & No corresponding chain-aware repair test & Not evaluated & Stored public prefix reused; tail linked to its terminal tag; wrong joins rejected \\
+\hline
+Functional boundary & Official cache-output recovery evaluated & Full K/V correctness unvalidated & FP32 checks and no error beyond the unprotected BF16 storage baseline \\
+\TableBottom
+\end{tabular}
+\end{table*}
+
+A no-sharing authenticated-encryption baseline provides a closer comparison for the cost of this integration. Its median protection time is 0.1091 seconds per 1,000 tokens, versus 0.1159 for the TEE profile: the latter pays approximately 6.2\% more for protection in this benchmark. The saved record does not provide a corresponding no-sharing recovery measurement. Thus the supported advantage over that baseline is the demonstrated reuse of one policy-public prefix artifact with an authenticated private continuation, rather than faster encryption or stronger cryptographic primitives. This does not establish that other encryption-based systems cannot support sharing. Our reuse test comprises one cross-request artifact pair and a paged harness, not a production hit-rate or throughput study.
+
+The public/private distinction is essential to this advantage. A public prefix's equality remains observable by design, and its reuse cannot be advertised as confidentiality for arbitrary low-entropy private prefixes. Private-tail dictionary attempts instead exercise principal- and nonce-scoped protection under the simulated TEE assumption. The stored-artifact test also differs from independently recomputing a prefix: deeper-layer floating-point reductions can change with request shape. Those differences are a reproducibility constraint, not a security guarantee.
+
+\subsection{Negative result for the arithmetic profile}
+The subsequent optimization study resolves the earlier low-power spectral-leakage concern. Its retained per-block records contain 100 blocks per model and 100 candidates per identification task. Gram-based top-1 identification succeeds on 23/100 Qwen2.5-0.5B blocks and 38/100 Llama-3.2-1B blocks; the recorded 95\% Wilson intervals are [15.84\%,32.15\%] and [29.10\%,47.79\%]. Whitening succeeds on 18/100 and 6/100, respectively. The uniform candidate baseline is 1\%, while the sampled random controls obtain 0/100 and 2/100. These observations support a closed-set identification leak in the arithmetic profile; they do not measure exact prompt reconstruction or deployment-wide leakage rates.
+
+Optimization improves arithmetic protection/recovery means to 0.7325/0.5789 seconds per 1,000 tokens in the final longer-input benchmark (464 actual tokens). The earlier approximately 11.4-second figure came from a short-input benchmark and cannot serve as the same-input baseline for a speedup claim. In the final benchmark, the recorded KV-Cloak means are 0.0596/0.0969 seconds per 1,000 tokens. Performance therefore remains unfavorable, and the identification result independently excludes the arithmetic profile from confidentiality claims. Improving numerical reversibility or runtime does not remove its observed leakage. The TEE-profile evidence remains scoped to byte protection under a simulated, static master key and an unimplemented hardware attestation protocol.
+
+Figure~\ref{fig:defense-latency} reports the full latency percentiles for the two byte-oriented profiles. It makes the operational tradeoff visible without combining latency with the separate integrity and confidentiality tests.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{defense_latency.pdf}
+\caption{Latency percentiles from the frozen VeilKV-Plus v4 CPU benchmark. The TEE profile remains below the unfused KV-Cloak comparison for both protection and recovery; the plot reports the measured profile only and does not encode a security guarantee.}
+\label{fig:defense-latency}
+\end{figure}
 
 \subsection{Limitations and external validity}
 Our attacker begins after protected-cache observation is available. We do not show a remote API path to another tenant's cache, measure the prevalence of shared secret epochs, or bypass access control. The study concerns the first Value layer and the tested public implementation. Deeper states, Key recovery, architectures with position-dependent Value inputs, arbitrary orthogonal $M$, and marker patterns outside the analyzed orbit require separate arguments.
 
-The output is unordered within a block. A multiset can expose rare values or keywords, but it is weaker than a verbatim prompt. The synthetic value study uses one model, one secret configuration, 30 cases, and an artificial candidate set. Its incomplete retained traces rule out post-hoc analyses that would require all scores or recovered blocks. The official-entry and multi-epoch studies reuse public conversations; neither supports a claim about an unseen deployment distribution.
+The direct output is unordered within a block. Language-prior sorting gives partial sequence estimates, while the direction-pair diagnostic does not control blockwise bags. Neither observation establishes zero factual leakage or general verbatim reconstruction. The synthetic value study uses one model, one secret configuration, 30 cases, and an artificial candidate set. Its incomplete retained traces rule out post-hoc analyses that would require all scores or recovered blocks. The official-entry and multi-epoch studies reuse public conversations; neither supports a claim about an unseen deployment distribution.
 
 The main 99.668\% total weights models with more KV heads and texts with more complete blocks more heavily. It is an audit total, not an estimate over a defined population of users. The model and checkpoint breadth nevertheless tests whether the mechanism is tied to one tokenizer or hidden dimension. Claims about prevalence, per-user harm probability, and production cost remain outside the evidence.
 
