@@ -1,6 +1,5 @@
 #!/usr/bin/env python3
 """Validate final prose against frozen counts, citations, PDF fonts, and links."""
-import hashlib
 import json
 import re
 from collections import Counter
@@ -131,7 +130,6 @@ out = {
     "pdf_pages": page_count,
     "page1_fonts": dict(fonts),
     "anonymous_artifact_hyperlink_present": True,
-    "pdf_sha256": hashlib.sha256((root / "build/main.pdf").read_bytes()).hexdigest(),
     "limitations_retained": [
         "Head-token observations are correlated; no population prevalence estimate",
         "Privacy study is single-model/single-key with incomplete retained traces",

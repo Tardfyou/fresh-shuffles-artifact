@@ -1,7 +1,7 @@
 """VeilKV-Plus v2: clean rerun with strict reproducibility. See design/threat docs.
 
 New in v2 (per task spec 2026-10-08):
-- Fixation preamble: code/model/crypto/python/CPU hashes + seeds + old-result hashes
+- Fixation preamble: code files, model revisions, software/CPU details, seeds and prior results
 - Fresh output tree (no appending into old runs); per-stage JSONL; end-written manifest
 - Threat model SPLIT: every attack record tagged observer=O3|O4 (never mixed)
 - TEE battery: key/nonce uniqueness, nonce reuse, epoch rotation, key-service restart,
@@ -76,14 +76,6 @@ def replay(rec):
 def cost(rec):
     with open(os.path.join(COSTD, "veilkv_plus_v2_costs.jsonl"), "a") as f:
         f.write(json.dumps(rec, ensure_ascii=False, default=str) + "\n")
-
-
-def sha256_file(p):
-    h = hashlib.sha256()
-    with open(p, "rb") as f:
-        for chunk in iter(lambda: f.read(1 << 20), b""):
-            h.update(chunk)
-    return h.hexdigest()
 
 
 def bugfix(note):
@@ -213,15 +205,11 @@ def stage_fixation(_t0=None):
     except Exception:
         r["cpu"] = platform.processor() or "unknown"
     r["seeds"] = SEEDS
-    r["code_hashes"] = {
-        "exp_veilkv_plus.py": sha256_file("exp_veilkv_plus.py"),
-        "exp_veilkv_plus_v2.py": sha256_file("exp_veilkv_plus_v2.py"),
-    }
+    r["code_files"] = ["exp_veilkv_plus.py", "exp_veilkv_plus_v2.py"]
     r["stage_list_fixed"] = STAGES_FIXED
-    # old results hashes (v1 run)
+    # Previous result files (v1 run)
     old = "/mnt/hdd/yichengzhi/kvcloak_results/veilkv_plus/results/veilkv_plus.json"
-    r["old_results_sha256"] = {p: sha256_file(p) for p in
-                               [old] if os.path.exists(p)}
+    r["previous_results"] = [old] if os.path.exists(old) else []
     # model revisions from local HF cache snapshot dirs
     revs = {}
     import glob
@@ -1105,25 +1093,19 @@ def main():
         print(f"\n{'='*66}\n### STAGE {st}\n{'='*66}", flush=True)
         t0 = time.perf_counter()
         globals()[f"stage_{st}"](t0)
-    # final manifest from ACTUAL executed stages
+    # Final inventory from actual executed stages.
     manifest = {
         "run": "veilkv_plus_v2",
         "stages_executed": _res.get("stages_done", []),
         "stages_fixed_upfront": STAGES_FIXED,
-        "code_hashes": {p: sha256_file(p) for p in
-                        ("exp_veilkv_plus.py", "exp_veilkv_plus_v2.py")},
-        "outputs_sha256": {},
+        "code_files": ["exp_veilkv_plus.py", "exp_veilkv_plus_v2.py"],
+        "outputs": [os.path.join(root, fn) for root in (OUTD, COSTD)
+                    for fn in sorted(os.listdir(root))],
         "seeds": SEEDS,
         "verdict": _res.get("adjudication", {}).get("verdict"),
     }
-    for root in (OUTD, COSTD):
-        for fn in sorted(os.listdir(root)):
-            manifest["outputs_sha256"][os.path.join(root, fn)] = sha256_file(
-                os.path.join(root, fn))
-    manifest["manifest_sha256"] = hashlib.sha256(json.dumps(
-        manifest, sort_keys=True).encode()).hexdigest()
     json.dump(manifest, open(MANIFEST_PATH, "w"), indent=1, ensure_ascii=False)
-    print(f"\nmanifest -> {MANIFEST_PATH}\nhash {manifest['manifest_sha256']}", flush=True)
+    print(f"\nmanifest -> {MANIFEST_PATH}", flush=True)
 
 
 if __name__ == "__main__":

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Regenerate manuscript figures/tables from frozen records; no model calls."""
-import json, math, hashlib
+import json, math
 from pathlib import Path
 from collections import Counter
 import matplotlib

@@ -11,7 +11,6 @@ Steps:
    protected files their pipeline wrote; score token multiset accuracy.
 """
 import glob
-import hashlib
 import json
 import os
 import subprocess
@@ -46,7 +45,7 @@ for r in ds:
     text = r["conversation"][0]["content"].strip()
     if len(text) < 400:
         continue
-    convs.append({"hash": hashlib.sha256(text.encode()).hexdigest()[:32], "text": text})
+    convs.append({"sample_id": f"case{len(convs)+1:03d}", "text": text})
     if len(convs) >= 16:
         break
 print(f"fetched {len(convs)} conversations", flush=True)
@@ -62,10 +61,10 @@ for c in convs:
     with torch.no_grad():
         pv = model(input_ids=ids, use_cache=True).past_key_values
     legacy = tuple((k.to(torch.bfloat16), v.to(torch.bfloat16)) for k, v in pv.to_legacy_cache())
-    d = os.path.join(cache_root, c["hash"], "origin")
+    d = os.path.join(cache_root, c["sample_id"], "origin")
     os.makedirs(d, exist_ok=True)
     torch.save(legacy, os.path.join(d, "past_key_values.pt"))
-    truth[c["hash"]] = ids
+    truth[c["sample_id"]] = ids
 print(f"wrote {len(truth)} origin caches", flush=True)
 
 # ---------- 3. theta json + THEIR config generation ----------
@@ -88,6 +87,7 @@ cmd = [sys.executable, "../kvcloak.py", "--device", "cpu", "--model-name", MODEL
 p = subprocess.run(cmd, capture_output=True, text=True, cwd=os.getcwd())
 print("their obfuscation rc:", p.returncode, (p.stdout[-300:] if p.returncode else "ok"), p.stderr[-400:] if p.returncode else "", flush=True)
 protected_files = sorted(glob.glob(f"{cache_root}/*/kvcloak/past_key_values.pt"))
+protected_files = [pf for pf in protected_files if pf.split("/")[-3] in truth]
 print(f"protected files produced: {len(protected_files)}", flush=True)
 
 # ---------- 5. attack ----------
@@ -111,8 +111,8 @@ Dn = torch.nn.functional.normalize(DICT, dim=-1)
 
 accs = {}
 for pf in protected_files:
-    hsh = pf.split("/")[-3]
-    ids = truth[hsh]
+    sample_id = pf.split("/")[-3]
+    ids = truth[sample_id]
     nb = ids.shape[1] // B
     kv = torch.load(pf, weights_only=True)
     cor = tot = 0
@@ -124,7 +124,7 @@ for pf in protected_files:
             pred = attack_block(C, sec["s"], sec["a_hat"], sec["M"], Dn[:, h])
             cor += sum((Counter(pred) & Counter(ids[0, k * B:(k + 1) * B].tolist())).values())
             tot += B
-    accs[hsh[:8]] = round(cor / tot, 4)
+    accs[sample_id] = round(cor / tot, 4)
 print("attack on THEIR pipeline output:", accs, flush=True)
 vals = list(accs.values())
 res = {"files": len(protected_files), "accs": accs,

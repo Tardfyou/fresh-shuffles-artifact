@@ -1,7 +1,7 @@
 {
   "status": "pass",
   "plotted_values_unchanged": true,
-  "frozen_evidence_unchanged": true,
+  "evidence_source_copies_match": true,
   "visible_table_rows_unchanged": {
     "app_epochs.tex": 15,
     "app_diagnostics.tex": 12,

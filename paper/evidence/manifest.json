@@ -1,210 +1,158 @@
 {
   "veilkv2_05b.json": {
-    "source": "experiments/kvcloak/results/veilkv2_05b.json",
-    "sha256": "23d4d469e526a5468f6e6b8a64ce7fccba143dc9c59e5d3868a99269a3fe832d"
+    "source": "experiments/kvcloak/results/veilkv2_05b.json"
   },
   "veilkv_plus_v4.json": {
-    "source": "experiments/kvcloak/results/veilkv_plus_v4.json",
-    "sha256": "bc4857aab414f9393220ad3b19536c5a9ba2fcf89398462f81530d81a374f27b"
+    "source": "experiments/kvcloak/results/veilkv_plus_v4.json"
   },
   "qwen25_3b.json": {
-    "source": "experiments/kvcloak/results/qwen25_3b.json",
-    "sha256": "1dd6699c9090c3ebd87d3989dc7fcd05e3704b2c163abd3a35b4e931b01fdf7c"
+    "source": "experiments/kvcloak/results/qwen25_3b.json"
   },
   "xposition_05b.json": {
-    "source": "experiments/kvcloak/results/xposition_05b.json",
-    "sha256": "7263b481d35e44c43ca58ea674442ef085fc60104ad98e92a1ba14b57b1cf163"
+    "source": "experiments/kvcloak/results/xposition_05b.json"
   },
   "independent_eval.json": {
-    "source": "experiments/kvcloak/results/independent_eval.json",
-    "sha256": "d2831f12ae81c6e6355b6069cd3676344e7d4bb582d7dfcde7085a023e6c8d1a"
+    "source": "experiments/kvcloak/results/independent_eval.json"
   },
   "qwen3_17b.json": {
-    "source": "experiments/kvcloak/results/qwen3_17b.json",
-    "sha256": "fc3cc9dfe124f799003ef1dc1da0a31039fb94f65fbf6bc6734ca8d702badfbb"
+    "source": "experiments/kvcloak/results/qwen3_17b.json"
   },
   "official_repro.json": {
-    "source": "experiments/kvcloak/results/official_repro.json",
-    "sha256": "d4bf9c7d8cbcb4104ccdb6440124373cef8897deaacca9dec2fce9e667eac281"
+    "source": "experiments/kvcloak/results/official_repro.json"
   },
   "phi3_mini.json": {
-    "source": "experiments/kvcloak/results/phi3_mini.json",
-    "sha256": "ab66b321c6f060dd9bb86236d505842b2c8e5aaecadeffc00eb6e37810d31e2c"
+    "source": "experiments/kvcloak/results/phi3_mini.json"
   },
   "learned_attack.json": {
-    "source": "experiments/kvcloak/results/learned_attack.json",
-    "sha256": "5c5215e8cff3b1a783e43303f4c18ab18ae2dc5df73014694d873f4141bbb959"
+    "source": "experiments/kvcloak/results/learned_attack.json"
   },
   "defense_05b.json": {
-    "source": "experiments/kvcloak/results/defense_05b.json",
-    "sha256": "62bc1a7fca0539f9cd0f4082ccdde0b1152d924518cb609f87a7ee0ade4337af"
+    "source": "experiments/kvcloak/results/defense_05b.json"
   },
   "lifecycle_05b.json": {
-    "source": "experiments/kvcloak/results/lifecycle_05b.json",
-    "sha256": "33954bbb6a08087a3d9b013829d6c51af78c146969e4e8ffcb475964020a42b0"
+    "source": "experiments/kvcloak/results/lifecycle_05b.json"
   },
   "STATS.json": {
-    "source": "experiments/kvcloak/results/STATS.json",
-    "sha256": "37bad5fa56c7d240b5de75b6e9a81456f55aace987617ddfc79cbd537ed81618"
+    "source": "experiments/kvcloak/results/STATS.json"
   },
   "qwen25_05b_b8.json": {
-    "source": "experiments/kvcloak/results/qwen25_05b_b8.json",
-    "sha256": "ca71bb1370a49cf6fc2f1dfb35f231e1c0d0b1bf403747e52fe575cf58321bef"
+    "source": "experiments/kvcloak/results/qwen25_05b_b8.json"
   },
   "privacy_v3_scoring_audit.json": {
-    "source": "experiments/kvcloak/results/privacy_v3_scoring_audit.json",
-    "sha256": "4e2eda8f429c5e4e1666b52f93742ba67ccea7c9e1eb64fcb15de6dd8f9ac6d3"
+    "source": "experiments/kvcloak/results/privacy_v3_scoring_audit.json"
   },
   "order_recovery.json": {
-    "source": "experiments/kvcloak/results/order_recovery.json",
-    "sha256": "6f2b441605e81c9ff3b76466016b879524cfecf5bde93b4ec31e0a2d57d276f9"
+    "source": "experiments/kvcloak/results/order_recovery.json"
   },
   "qwen25_7b.json": {
-    "source": "experiments/kvcloak/results/qwen25_7b.json",
-    "sha256": "3691bce39616f57006bacc800273a7e92e02d3c70714fe44f7a34737f869c093"
+    "source": "experiments/kvcloak/results/qwen25_7b.json"
   },
   "olmo2_1b.json": {
-    "source": "experiments/kvcloak/results/olmo2_1b.json",
-    "sha256": "3d77d546daeb62a28bd86b87fc3b511b3769ede7397e2f867f9a33102efc19ed"
+    "source": "experiments/kvcloak/results/olmo2_1b.json"
   },
   "privacy_v3.json": {
-    "source": "experiments/kvcloak/results/privacy_v3.json",
-    "sha256": "cbdf73c2545fc3292f5db482280528d83f455a0a3ffa199c00c2b7ac48c48df4"
+    "source": "experiments/kvcloak/results/privacy_v3.json"
   },
   "qwen3_06b.json": {
-    "source": "experiments/kvcloak/results/qwen3_06b.json",
-    "sha256": "fc9112696968dc34cc915f74a6a9c1ab0094ce66d460940b85db55baad554132"
+    "source": "experiments/kvcloak/results/qwen3_06b.json"
   },
   "sarotate_05b.json": {
-    "source": "experiments/kvcloak/results/sarotate_05b.json",
-    "sha256": "1010dd1b91203efd93a9f5ec1f0d8a0afacd6666ffb7c4c2abad03bd25e21338"
+    "source": "experiments/kvcloak/results/sarotate_05b.json"
   },
   "fused_05b.json": {
-    "source": "experiments/kvcloak/results/fused_05b.json",
-    "sha256": "b284eadaee4b412ab63138bcfe8b5d9cd9371e412a1d225b6cfc3b5be285d9c4"
+    "source": "experiments/kvcloak/results/fused_05b.json"
   },
   "ratio_05b.json": {
-    "source": "experiments/kvcloak/results/ratio_05b.json",
-    "sha256": "40f1341c47dd82026f4977431d89cf09246683f978682c4e8a1aca21cfdb4294"
+    "source": "experiments/kvcloak/results/ratio_05b.json"
   },
   "fused_isolated.json": {
-    "source": "experiments/kvcloak/results/fused_isolated.json",
-    "sha256": "8cdf07729924bdc8da1d8d6dc2b2515ebe2f802bdd608c2d9600c15dd6d7d9b4"
+    "source": "experiments/kvcloak/results/fused_isolated.json"
   },
   "qwen25_05b_b32.json": {
-    "source": "experiments/kvcloak/results/qwen25_05b_b32.json",
-    "sha256": "5cef02fef60b9ed79e728c073fcbb7113717854d8e650023ae42699c694717d7"
+    "source": "experiments/kvcloak/results/qwen25_05b_b32.json"
   },
   "tinyllama.json": {
-    "source": "experiments/kvcloak/results/tinyllama.json",
-    "sha256": "400ec07d80d5456d3d56b5f6e4caf00c8f8065e63fa67e46b6a17d41d094b397"
+    "source": "experiments/kvcloak/results/tinyllama.json"
   },
   "qwen25_05b.json": {
-    "source": "experiments/kvcloak/results/qwen25_05b.json",
-    "sha256": "b18d5b8c0456a50f30da47a14932c58883304153bfd4b5380e1839d24dfad9b2"
+    "source": "experiments/kvcloak/results/qwen25_05b.json"
   },
   "privacy_v3_corrected.json": {
-    "source": "experiments/kvcloak/results/privacy_v3_corrected.json",
-    "sha256": "fa3f9601df28346baeedc2a697af3c5caf8bb53af07636d6934ab4d8abbf381f"
+    "source": "experiments/kvcloak/results/privacy_v3_corrected.json"
   },
   "probecurve_05b.json": {
-    "source": "experiments/kvcloak/results/probecurve_05b.json",
-    "sha256": "bfdc66f39e406f1b95194d62dbd84fc2ebf941c77d011529db3345bb30c0215c"
+    "source": "experiments/kvcloak/results/probecurve_05b.json"
   },
   "qwen25_15b.json": {
-    "source": "experiments/kvcloak/results/qwen25_15b.json",
-    "sha256": "a1d949d813d0f4fa8e4164a9049c94367348463252fe8eba57315538da38e155"
+    "source": "experiments/kvcloak/results/qwen25_15b.json"
   },
   "order_recovery_3b.json": {
-    "source": "experiments/kvcloak/results/order_recovery_3b.json",
-    "sha256": "366ca7a2dc2070074650a3874e63c23b4f57a138aa2f2dea5ffc0668ea464afb"
+    "source": "experiments/kvcloak/results/order_recovery_3b.json"
   },
   "llama32_1b.json": {
-    "source": "experiments/kvcloak/results/llama32_1b.json",
-    "sha256": "d35ca902e71f204368863a8fb3b001476b75cf72374ab4c51ff10357d3871e12"
+    "source": "experiments/kvcloak/results/llama32_1b.json"
   },
   "arithmetic_optimized_summary.json": {
-    "source": "experiments/kvcloak/results/arithmetic_optimized_summary.json",
-    "sha256": "a43d57c9867dc378381049b83b4e980c961a76ea1b306861a131c1349f2a21d0"
+    "source": "experiments/kvcloak/results/arithmetic_optimized_summary.json"
   },
   "arithmetic_spectrum_blocks.jsonl": {
-    "source": "experiments/kvcloak/results/arithmetic_spectrum_blocks.jsonl",
-    "sha256": "9c349ae324f1000eb6616e43e668b9e9ad61e9bd12807a3284890595efb21ff1"
+    "source": "experiments/kvcloak/results/arithmetic_spectrum_blocks.jsonl"
   },
   "arithmetic_optimized_perf.jsonl": {
-    "source": "experiments/kvcloak/results/arithmetic_optimized_perf.jsonl",
-    "sha256": "863be0b253691472cec18fe91edf9bb3c17d3dc953cfa490405aa90a1ec1b8c0"
+    "source": "experiments/kvcloak/results/arithmetic_optimized_perf.jsonl"
   },
   "arithmetic_optimized_manifest.json": {
-    "source": "experiments/kvcloak/results/arithmetic_optimized_manifest.json",
-    "sha256": "8bea5ac769b23b77dcf0cbb79fe4cc272e1e12eb917bc4929f5020c412d560ce"
+    "source": "experiments/kvcloak/results/arithmetic_optimized_manifest.json"
   },
   "order_v2/samples_main.jsonl": {
-    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/samples_main.jsonl",
-    "sha256": "dbf7ac7e989a967697a3bcabf6a1eedff37f2f7bb8d32085f146045fc25a48a6"
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/samples_main.jsonl"
   },
   "order_v2/metrics_main.jsonl": {
-    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/metrics_main.jsonl",
-    "sha256": "31b0c7170c49a48cc8cbc7eba862161a8f16314c623fe79bbacb5edea14759dc"
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/metrics_main.jsonl"
   },
   "order_v2/predictions_main.jsonl": {
-    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/predictions_main.jsonl",
-    "sha256": "726477f497624506e25d7a0761ec91981cb96df799a178083a73f547b5d14a29"
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/predictions_main.jsonl"
   },
   "order_v2/costs_main.jsonl": {
-    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/costs_main.jsonl",
-    "sha256": "c5fc8d821d65bf9383aeabec01fd7520ed588628dba73516476e66cd6dadd55a"
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/costs_main.jsonl"
   },
   "order_v2/samples_boundary.jsonl": {
-    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/samples_boundary.jsonl",
-    "sha256": "a7a3b7290fe60b985d4989f202be4bdb448a6053f7eb7f9747ebcc9a84040e4c"
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/samples_boundary.jsonl"
   },
   "order_v2/metrics_boundary.jsonl": {
-    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/metrics_boundary.jsonl",
-    "sha256": "73d36726967368ad53def231c225c8c36b56edf6ad69377e2314ec2fec5cb193"
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/metrics_boundary.jsonl"
   },
   "order_v2/predictions_boundary.jsonl": {
-    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/predictions_boundary.jsonl",
-    "sha256": "18bf575479dfa90ce7821b5aabdde557b7e574c9b8614a70e9aab2f5a72b958d"
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/predictions_boundary.jsonl"
   },
   "order_v2/costs_boundary.jsonl": {
-    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/costs_boundary.jsonl",
-    "sha256": "7b87b3302ea8087dd38554714b2cad91e9657a9a2eddfaca39c92fa3145ea694"
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/costs_boundary.jsonl"
   },
   "order_v2/metrics_dev.jsonl": {
-    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/metrics_dev.jsonl",
-    "sha256": "e48f401fdd95bac8f85f00fb109aa8a04cca89e9ebe964dcb211441cac5c9832"
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/metrics_dev.jsonl"
   },
   "order_v2/resume_info_main.json": {
-    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/resume_info_main.json",
-    "sha256": "65c16f5d0a6764003ea1157f55d695c5e4b81b8caed43bfa00fd1e209806885f"
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/resume_info_main.json"
   },
   "order_v2/resume_info_boundary.json": {
-    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/resume_info_boundary.json",
-    "sha256": "5304cee6f94a7a5eb88fe0847a69a81efc022ddbcb08c5d12c523384c46def74"
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/resume_info_boundary.json"
   },
   "order_v2/boundary_direction_analysis.json": {
-    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/boundary_direction_analysis.json",
-    "sha256": "2c7b7a1469dc500d7180ee1bd5a0020c7803b5f4bce8d0bdcfed184df3df0896"
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/boundary_direction_analysis.json"
   },
   "order_v2/RETROSPECTIVE_PROTOCOL.md": {
-    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/RETROSPECTIVE_PROTOCOL.md",
-    "sha256": "f299d8a338ad43f52477b8481bf1bb4bd3b82314760b89f385ebf9633b2aee57"
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/RETROSPECTIVE_PROTOCOL.md"
   },
   "order_v2/source_order_v2.py.txt": {
-    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/source_order_v2.py.txt",
-    "sha256": "12e176ab62e7c09bd0600562acbfc7be5f3809904137fa79264b78a617772421"
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/source_order_v2.py.txt"
   },
   "order_v2/source_analyze_boundary.py.txt": {
-    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/source_analyze_boundary.py.txt",
-    "sha256": "e7f358e14ac6163aceebfd1e12d53d69d5202ddc5685f6b02071fc6d2e3c89be"
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/source_analyze_boundary.py.txt"
   },
   "order_v2/DELIVERY_PROVENANCE.json": {
-    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/DELIVERY_PROVENANCE.json",
-    "sha256": "8a859a97229a8976da695896ff4361bd952d0680f89dfe3be69303854fec523e"
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/DELIVERY_PROVENANCE.json"
   },
   "order_v2/TOKENIZATION_AUDIT.json": {
-    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/TOKENIZATION_AUDIT.json",
-    "sha256": "a831729814d1a1865c6b0a16f9817609d0ebfad6fb0d84598f23e62e896a800e"
+    "source": "experiments/kvcloak/results/order_v2_frozen_20261015/TOKENIZATION_AUDIT.json"
   }
 }

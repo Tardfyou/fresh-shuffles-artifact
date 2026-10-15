@@ -29,7 +29,7 @@
   仅在 dev 期验证（60/60 oracle≡end2end），main 期为聚合一等价
 - random_order 基线在 resume 分段后使用续跑时的 rng 状态（记录于 bugfix 过程）
 
-## 5. 运行事故与处置（固化载体：resume_info_*.json、代码 git 无—以文件哈希为准）
+## 5. 运行事故与处置（固化载体：resume_info_*.json、代码未由独立运行前版本记录绑定，以保留的源文件为准）
 - 2026-10-07 磁盘满丢全量 → 改增量写盘重跑；输出迁移机械盘
 - 三进程并发同写 → 种子一致内容一致，按样本 ID 去重（600 唯一/0 坏行）
 - pair 样本首跑全 skip（<16 token）→ 共享 wrap 修复 + --resume 补跑

@@ -1,21 +1,7 @@
 {
- "run": "veilkv_plus_arith_opt",
- "files": {
-  "exp_veilkv_plus.py": "df5cb31b168418f0501b423f6b6d0b9c5bdb75ed3a90629098b12746bcc34eec",
-  "veilkv_arith_fast.py": "6ad932cbf88d427a2e6439a48d3fc2dc677b35391fd7c42decfc97b2eebc5178",
-  "exp_arith_opt.py": "114c011244ee31a0d2a816375cfb148a2e342677b3df80ecc4a9caabfb4a1b8f"
- },
- "before_hashes": {
-  "exp_veilkv_plus.py": "547b8f4def2cc1ed7fc3b5dd2c070ea753f89d1219ece2089da491cb07ad6157",
-  "exp_veilkv_plus_v2.py": "a06540cddbfa9ca262bda6807d1738cf33174e3711e9024e97499d9f2317fad4"
- },
- "seed": 0,
- "date": "2026-10-08 23:31:29",
- "claim_boundary": "arithmetic prototype performance improved only; confidentiality claims NOT restored regardless of outcome",
- "outputs_sha256": {
-  "results.json": "a43d57c9867dc378381049b83b4e980c961a76ea1b306861a131c1349f2a21d0",
-  "perf.jsonl": "863be0b253691472cec18fe91edf9bb3c17d3dc953cfa490405aa90a1ec1b8c0",
-  "correctness.jsonl": "cc97b23a08734c79bda4a131126d56dafc50230ce689b1d42dc179e45f99d91d",
-  "spectrum_blocks.jsonl": "9c349ae324f1000eb6616e43e668b9e9ad61e9bd12807a3284890595efb21ff1"
- }
+  "run": "veilkv_plus_arith_opt",
+  "files": {},
+  "seed": 0,
+  "date": "2026-10-08 23:31:29",
+  "claim_boundary": "arithmetic prototype performance improved only; confidentiality claims NOT restored regardless of outcome"
 }

@@ -115,7 +115,6 @@
     "CMR10": 2
   },
   "anonymous_artifact_hyperlink_present": true,
-  "pdf_sha256": "6fc505eef5617d88677592690daf5a082a16726f3bf70d7f59a3f108c8ebd4d4",
   "limitations_retained": [
     "Head-token observations are correlated; no population prevalence estimate",
     "Privacy study is single-model/single-key with incomplete retained traces",

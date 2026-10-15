@@ -1,6 +1,6 @@
 {
   "evidence_manifest_entries": 52,
-  "evidence_hashes_ok": true,
+  "evidence_source_copies_match": true,
   "pages_total": 18,
   "letter_page_points": [
     612.0,
@@ -20,7 +20,6 @@
   "placeholder_count": 0,
   "anonymous_source_ok": true,
   "generated_table_rows_match_source": true,
-  "paper_sha256": "6fc505eef5617d88677592690daf5a082a16726f3bf70d7f59a3f108c8ebd4d4",
   "status": "pass",
   "failures": []
 }

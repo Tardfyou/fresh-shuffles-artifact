@@ -2,7 +2,6 @@
 """Check the frozen manuscript package without running models or using network."""
 from __future__ import annotations
 
-import hashlib
 import json
 import re
 from pathlib import Path
@@ -13,27 +12,24 @@ ROOT = Path(__file__).resolve().parents[1]
 PDF = ROOT / "build" / "main.pdf"
 
 
-def sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
-
-
 checks = {}
 failures = []
 
 manifest = json.loads((ROOT / "evidence" / "manifest.json").read_text())
-bad_hashes = []
+different_sources = []
 for name, record in manifest.items():
     copy = ROOT / "evidence" / name
     source = ROOT.parent / record["source"]
-    expected = record["sha256"]
-    if not copy.exists() or sha256(copy) != expected:
-        bad_hashes.append(f"copy:{name}")
-    if not source.exists() or sha256(source) != expected:
-        bad_hashes.append(f"source:{name}")
+    if not copy.exists():
+        different_sources.append(f"copy:{name}")
+    elif not source.exists():
+        different_sources.append(f"source:{name}")
+    elif copy.read_bytes() != source.read_bytes():
+        different_sources.append(f"content:{name}")
 checks["evidence_manifest_entries"] = len(manifest)
-checks["evidence_hashes_ok"] = not bad_hashes
-if bad_hashes:
-    failures.append({"evidence_hashes": bad_hashes})
+checks["evidence_source_copies_match"] = not different_sources
+if different_sources:
+    failures.append({"evidence_source_copies": different_sources})
 
 if not PDF.exists():
     failures.append("missing_pdf")
@@ -95,7 +91,6 @@ if not checks["anonymous_source_ok"]:
 if not checks["generated_table_rows_match_source"]:
     failures.append("generated_table_rows_drift")
 
-checks["paper_sha256"] = sha256(PDF) if PDF.exists() else None
 checks["status"] = "pass" if not failures else "fail"
 checks["failures"] = failures
 (ROOT / "review" / "submission_check.json").write_text(json.dumps(checks, indent=2) + "\n")

@@ -3,70 +3,53 @@
   "kind": "retrospective delivery snapshot; no model reruns",
   "files": {
     "samples_main.jsonl": {
-      "sha256": "dbf7ac7e989a967697a3bcabf6a1eedff37f2f7bb8d32085f146045fc25a48a6",
       "bytes": 275294
     },
     "metrics_main.jsonl": {
-      "sha256": "31b0c7170c49a48cc8cbc7eba862161a8f16314c623fe79bbacb5edea14759dc",
       "bytes": 798325
     },
     "predictions_main.jsonl": {
-      "sha256": "726477f497624506e25d7a0761ec91981cb96df799a178083a73f547b5d14a29",
       "bytes": 49935
     },
     "costs_main.jsonl": {
-      "sha256": "c5fc8d821d65bf9383aeabec01fd7520ed588628dba73516476e66cd6dadd55a",
       "bytes": 97271
     },
     "samples_boundary.jsonl": {
-      "sha256": "a7a3b7290fe60b985d4989f202be4bdb448a6053f7eb7f9747ebcc9a84040e4c",
       "bytes": 93778
     },
     "metrics_boundary.jsonl": {
-      "sha256": "73d36726967368ad53def231c225c8c36b56edf6ad69377e2314ec2fec5cb193",
       "bytes": 378640
     },
     "predictions_boundary.jsonl": {
-      "sha256": "18bf575479dfa90ce7821b5aabdde557b7e574c9b8614a70e9aab2f5a72b958d",
       "bytes": 32000
     },
     "costs_boundary.jsonl": {
-      "sha256": "7b87b3302ea8087dd38554714b2cad91e9657a9a2eddfaca39c92fa3145ea694",
       "bytes": 44785
     },
     "metrics_dev.jsonl": {
-      "sha256": "e48f401fdd95bac8f85f00fb109aa8a04cca89e9ebe964dcb211441cac5c9832",
       "bytes": 79680
     },
     "resume_info_main.json": {
-      "sha256": "65c16f5d0a6764003ea1157f55d695c5e4b81b8caed43bfa00fd1e209806885f",
       "bytes": 50
     },
     "resume_info_boundary.json": {
-      "sha256": "5304cee6f94a7a5eb88fe0847a69a81efc022ddbcb08c5d12c523384c46def74",
       "bytes": 50
     },
     "boundary_direction_analysis.json": {
-      "sha256": "2c7b7a1469dc500d7180ee1bd5a0020c7803b5f4bce8d0bdcfed184df3df0896",
       "bytes": 17931
     },
     "RETROSPECTIVE_PROTOCOL.md": {
-      "sha256": "f299d8a338ad43f52477b8481bf1bb4bd3b82314760b89f385ebf9633b2aee57",
       "bytes": 2563
     },
     "source_order_v2.py.txt": {
-      "sha256": "36ad94f04fad4d416503994fa821bf2ac2290b2aa5cd1004656d854142c7973e",
       "bytes": 31283,
       "scope": "current source snapshot; not a contemporaneous run manifest",
-      "anonymized_source_sha256": "12e176ab62e7c09bd0600562acbfc7be5f3809904137fa79264b78a617772421",
-      "anonymization": "Only the local output-directory username was replaced; experiment logic is unchanged. Original source hash retained above."
+      "anonymization": "Only the local output-directory username was replaced; experiment logic is unchanged."
     },
     "source_analyze_boundary.py.txt": {
-      "sha256": "20e81df1ed0a150d4934d69f300710e6587276db49773cd5618f74150c40d884",
       "bytes": 2382,
       "scope": "current source snapshot; not a contemporaneous run manifest",
-      "anonymized_source_sha256": "e7f358e14ac6163aceebfd1e12d53d69d5202ddc5685f6b02071fc6d2e3c89be",
-      "anonymization": "Only the local output-directory username was replaced; experiment logic is unchanged. Original source hash retained above."
+      "anonymization": "Only the local output-directory username was replaced; experiment logic is unchanged."
     }
   },
   "config_observed": {

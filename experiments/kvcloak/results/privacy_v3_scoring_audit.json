@@ -1,7 +1,6 @@
 {
   "scope": "Arithmetic recalculation from recorded g,m; no model execution and no verification of unsaved candidate scores",
   "source": "results/privacy_v3.json",
-  "source_sha256": "cbdf73c2545fc3292f5db482280528d83f455a0a3ffa199c00c2b7ac48c48df4",
   "all": {
     "n": 30,
     "tied_or_unique_first_count": 30,

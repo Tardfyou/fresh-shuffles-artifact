@@ -6,7 +6,7 @@ Anonymous review entry: https://anonymous.4open.science/r/fresh-shuffles-artifac
 
 - [Paper (PDF)](paper/build/main.pdf)
 - [Manuscript source](paper/main.tex)
-- [Frozen evidence and hash manifest](paper/evidence/manifest.json)
+- [Frozen evidence and source inventory](paper/evidence/manifest.json)
 - [Validation record](paper/review/submission_check.json)
 - [Experiment source and saved results](experiments/kvcloak/)
 
@@ -25,7 +25,7 @@ python3 -m venv .venv-paper
 .venv-paper/bin/python paper/scripts/audit_final.py
 ```
 
-These commands regenerate plots and table rows from saved evidence and validate the supplied PDF and evidence hashes. They do not load a model or contact a model API.
+These commands regenerate plots and table rows from saved evidence and validate the supplied PDF and compare evidence copies with their source files. They do not load a model or contact a model API.
 
 The current PDF has 18 pages: 13 pages of main content and five pages of references and appendices. Its 25 cited works include the model, architectural, and software sources used to explain the artifact. Supplemental tables expose the retained per-configuration diagnostics, all 15 model-key epochs, and per-type privacy tie statistics.
 
@@ -40,7 +40,7 @@ tectonic -o paper/build paper/main.tex
 
 The main result is 263,029 / 263,904 head-token multiset matches across ten models and twelve configurations. This is a descriptive count with correlated observations, not a count of independent requests. The privacy study is limited to one model, one secret configuration, and 30 synthetic closed-set cases. Per-request refresh is a mitigation candidate whose complete functional correctness and general security are not established.
 
-The original JSON and experiment scripts are retained for provenance. Historical aggregate fields and script comments may predate the frozen corrections. For privacy statistics, use the integer `strictly_higher` and `tie_group_size` fields and the corrected derivation in `paper/scripts/generate_assets.py`; the legacy `unique_first` and top-k aggregate fields in `privacy_v3.json` are superseded. Earlier defense results do not establish the security of later defense versions. Consult [frozen claim boundaries](paper/evidence/FROZEN_CLAIMS.md) and the manuscript before interpreting exploratory results.
+The measurement records and experiment sources are retained for review. Historical aggregate fields and script comments may predate the frozen corrections. For privacy statistics, use the integer `strictly_higher` and `tie_group_size` fields and the corrected derivation in `paper/scripts/generate_assets.py`; the legacy `unique_first` and top-k aggregate fields in `privacy_v3.json` are superseded. Earlier defense results do not establish the security of later defense versions. Consult [frozen claim boundaries](paper/evidence/FROZEN_CLAIMS.md) and the manuscript before interpreting exploratory results.
 
 The final manuscript corrects the number of perfect main-suite configurations to six. The current ordering follow-up preserves token multiplicity and supersedes the exploratory estimates. Its 600 main records yield 22.3% mean position accuracy and 18 exact spans; duplicated inputs, nominal-length overshoots, missing raw predictions and uncontrolled blockwise boundary bags limit interpretation. See paper/review/ORDER_V2_ACCEPTANCE_20261015.md. Cached model and dataset revisions are retrospective records, not contemporaneous per-run provenance. See [final validation](paper/review/final_audit.json).
 

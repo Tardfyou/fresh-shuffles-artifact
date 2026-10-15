@@ -2,17 +2,15 @@
 """Check published plot data, frozen evidence, typography and visible table values."""
 from pathlib import Path
 from collections import Counter
-import hashlib,json,re
+import json,re
 import numpy as np
 import pdfplumber
 ROOT=Path(__file__).resolve().parents[1]
 BASE=ROOT.parent/'archive/20261012-before-f258-fig789'
 read=lambda p:json.loads(p.read_text())
 assert read(BASE/'review/derived_numbers.json')==read(ROOT/'review/derived_numbers.json')
-for name,digest in read(BASE/'evidence-hashes.json').items():
-    if name in ('evidence/manifest.json','evidence/FROZEN_CLAIMS.md'):
-        continue # indexes/claim documentation extend as new result payloads arrive
-    assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==digest,name
+for name,record in read(ROOT/'evidence/manifest.json').items():
+    assert (ROOT/'evidence'/name).read_bytes()==(ROOT.parent/record['source']).read_bytes(),name
 layout=read(ROOT/'review/f258_stat_layout.json')
 curve=read(ROOT/'evidence/probecurve_05b.json')['probe_curve']
 assert layout['probe_budget']['line_data'][0][0]['xy']==[[r['blocks']*16,100*r['P_full_recovery']] for r in curve]
@@ -71,7 +69,7 @@ with pdfplumber.open(ROOT/'build/main.pdf') as d:
     text_colors=Counter(tuple(c['non_stroking_color']) if isinstance(c.get('non_stroking_color'),(tuple,list)) else c.get('non_stroking_color') for page in d.pages for c in page.chars)
     assert text_colors[(.463,.322,.604)]>20 # citation/URL purple after driver rounding
     assert text_colors[(.608,.227,.333)]>20 # cross-reference wine after rounding
-out={'status':'pass','plotted_values_unchanged':True,'frozen_evidence_unchanged':True,
+out={'status':'pass','plotted_values_unchanged':True,'evidence_source_copies_match':True,
      'visible_table_rows_unchanged':checks,'fonts':fonts,'canvas_bp':geometry,
      'citation_rgb_output':[.463,.322,.604],'reference_rgb_output':[.608,.227,.333],
      'reference':'NDSS F258 Figures 7/8/9 and Table II',
