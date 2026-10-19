@@ -113,7 +113,7 @@ The counters cannot attribute misses to numerical error, marker selection, or di
 
 \paragraph{Language-prior ordering follow-up}
 \label{sec:ordering}
-The algebraic decoder returns block multisets. A separate Qwen2.5-0.5B follow-up orders these using public-model beam search (width 16), preserving token multiplicity and conditioning on at most 96 tokens of its own reconstructed context, starting from a model start token rather than a victim prefix. It contains 600 synthetic records in three categories and four nominal length groups, 50 per cell. The groups are generation minima: 109 records exceed their labels, and the 600 records contain 581 distinct evaluated token spans. Table~\ref{tab:ordering} therefore reports descriptive means by nominal minimum, not an exact-length benchmark.
+The algebraic decoder returns block multisets. Following language-model approaches to word ordering~\cite{wordorder,ibis}, a separate Qwen2.5-0.5B follow-up orders these using public-model beam search (width 16), preserving token multiplicity and conditioning on at most 96 tokens of its own reconstructed context, starting from a model start token rather than a victim prefix. It contains 600 synthetic records in three categories and four nominal length groups, 50 per cell. The groups are generation minima: 109 records exceed their labels, and the 600 records contain 581 distinct evaluated token spans. Table~\ref{tab:ordering} therefore reports descriptive means by nominal minimum, not an exact-length benchmark.
 
 \begin{table}[t]
 \centering
