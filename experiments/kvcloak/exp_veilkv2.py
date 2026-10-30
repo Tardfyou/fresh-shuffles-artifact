@@ -37,7 +37,7 @@ from kvcloak import KVCloak
 torch.manual_seed(42)
 torch.set_num_threads(16)
 B = 16
-OUT = "/mnt/hdd/yichengzhi/kvcloak_results/veilkv2_05b.json"
+OUT = "results/veilkv2_05b.json"
 res = {"defense": "VeilKV v2 (keymat-free decode, padded tail, measured leak boundaries)",
        "notes": {"sliding_window_warning": "transformers config warning, benign",
                   "master_key": "K_MASTER is cross-request static by design (TEE-held; "
@@ -510,7 +510,7 @@ print(f"salted dictionary via best-derivable (chain) keys: {hits}/7 candidate hi
       f"(0 expected; salt is 128-bit TEE-held)", flush=True)
 
 import os
-os.makedirs("/mnt/hdd/yichengzhi/kvcloak_results", exist_ok=True)
+os.makedirs("results", exist_ok=True)
 with open(OUT, "w") as f:
     json.dump(res, f, indent=1, ensure_ascii=False)
 print(f"\nsaved {OUT}", flush=True)

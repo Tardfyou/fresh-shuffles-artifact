@@ -1,7 +1,0 @@
-{
-  "run": "veilkv_plus_arith_opt",
-  "files": {},
-  "seed": 0,
-  "date": "2026-10-08 23:31:29",
-  "claim_boundary": "arithmetic prototype performance improved only; confidentiality claims NOT restored regardless of outcome"
-}

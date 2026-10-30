@@ -35,7 +35,7 @@ import torch
 import exp_veilkv_plus as V          # validated core: HKDF/AES/HMAC, protect/recover, mixing
 
 B = 16
-OUT_ROOT = "/mnt/hdd/yichengzhi/kvcloak_results/veilkv_plus_v2"
+OUT_ROOT = "results/veilkv_plus_v2"
 OUTD = os.path.join(OUT_ROOT, "results")
 COSTD = os.path.join(OUT_ROOT, "costs")
 for d in (OUTD, COSTD):
@@ -208,7 +208,7 @@ def stage_fixation(_t0=None):
     r["code_files"] = ["exp_veilkv_plus.py", "exp_veilkv_plus_v2.py"]
     r["stage_list_fixed"] = STAGES_FIXED
     # Previous result files (v1 run)
-    old = "/mnt/hdd/yichengzhi/kvcloak_results/veilkv_plus/results/veilkv_plus.json"
+    old = "results/veilkv_plus/results/veilkv_plus.json"
     r["previous_results"] = [old] if os.path.exists(old) else []
     # model revisions from local HF cache snapshot dirs
     revs = {}
@@ -217,7 +217,7 @@ def stage_fixation(_t0=None):
         base = name.replace("/", "--")
         snaps = glob.glob(os.path.expanduser(
             f"~/.cache/huggingface/hub/models--{base}/snapshots/*/")) + glob.glob(
-            f"/mnt/hdd/yichengzhi/hf_cache/hub/models--{base}/snapshots/*/")
+            f"hf_cache/hub/models--{base}/snapshots/*/")
         revs[name] = os.path.basename(os.path.normpath(snaps[0])) if snaps else "not-found"
     r["model_revisions"] = revs
     _res["fixation"] = r
