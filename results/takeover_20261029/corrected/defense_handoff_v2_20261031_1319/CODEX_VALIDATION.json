@@ -1,0 +1,49 @@
+{
+  "record_integrity_pass": true,
+  "measurement_protocol_accepted": true,
+  "accepted_for_paper": true,
+  "expected_records": 12000,
+  "measured": 12000,
+  "error": 0,
+  "not_run": 0,
+  "source_prompts": 100,
+  "fixture_arrays_independently_reconstructed": 1000,
+  "full_configurations_regenerated": 200,
+  "independent_request_pairs": 2000,
+  "paired_shuffles_verified": 2000,
+  "segment_pairs": 6000,
+  "functional_pass": 4597,
+  "functional_fail": 7403,
+  "pass_by_condition": {
+    "original": 2306,
+    "S_a_refresh": 2291
+  },
+  "discordant_pass_pairs": 63,
+  "original_pass_refresh_fail": 39,
+  "original_fail_refresh_pass": 24,
+  "fp32_alignment": {
+    "unmixed": {
+      "records": 4584,
+      "passed": 4541,
+      "min_error": 3.8623809814453125e-05,
+      "max_error": 0.004482746124267578
+    },
+    "mixed": {
+      "records": 1416,
+      "passed": 0,
+      "min_error": 0.3854036331176758,
+      "max_error": 20.15479278564453
+    }
+  },
+  "max_plain_full_fp32": 0.00013256072998046875,
+  "fp32_plain_full_argmax_disagreements": 0,
+  "source_review": "Matched full/plain-cached/protected paths, supplied masks/positions, sequential branches, fixed M and recorded configuration/permutation controls inspected in measured source.",
+  "reporting_corrections": [
+    "4,000 directed permutation comparisons represent 2,000 independent request pairs.",
+    "Original and refresh cells are not completely symmetric; report the paired disagreements.",
+    "The saved FP32 full/cached maximum differs from the handoff summary; use the recomputed value.",
+    "Mixed-mask association and native-bf16 failures are observations, not standalone causal proofs or unconditional rotation-equivalence claims."
+  ],
+  "scope": "One protection/recovery of prefill followed by three consumer segments; no repeated encryption, serving scheduler, device transfer or hardware-attestation validation.",
+  "new_model_or_API_requests": false
+}

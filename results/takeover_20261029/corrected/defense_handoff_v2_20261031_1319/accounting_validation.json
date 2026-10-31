@@ -1,0 +1,28 @@
+{
+ "generated": "2026-10-31T14:24:35+08:00",
+ "planned": 12000,
+ "records": 12000,
+ "expected_set_equal": true,
+ "missing": [],
+ "n_missing": 0,
+ "unexpected": [],
+ "n_unexpected": 0,
+ "duplicate_key_lines": 0,
+ "by_status": {
+  "measured": 12000
+ },
+ "functional_pass": 4597,
+ "functional_fail": 7403,
+ "measured": 12000,
+ "error": 0,
+ "not_run": 0,
+ "requests_measured": 4000,
+ "requests_total": 4000,
+ "perm_pairs_equal": 4000,
+ "perm_pairs_unequal": [],
+ "m_fixed_violations": [],
+ "refresh_equals_baseline": [],
+ "input_identity_violations": [],
+ "sanity_nonzero": 0,
+ "plain_baseline_pollution": 0
+}

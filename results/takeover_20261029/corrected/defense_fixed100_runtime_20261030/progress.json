@@ -1,0 +1,72 @@
+{
+  "expected": 1800,
+  "observations": 1800,
+  "complete": true,
+  "passed": 1800,
+  "statuses": {
+    "measured": 1800
+  },
+  "cells": [
+    {
+      "model": "Qwen/Qwen2.5-0.5B",
+      "dtype": "bfloat16",
+      "condition": "left_padding",
+      "observations": 300,
+      "unique_ids": 100,
+      "passed": 300,
+      "max_codec_logit_error": 0.0,
+      "max_fresh_vs_cached_error": 0.40625
+    },
+    {
+      "model": "Qwen/Qwen2.5-0.5B",
+      "dtype": "bfloat16",
+      "condition": "right_padding",
+      "observations": 300,
+      "unique_ids": 100,
+      "passed": 300,
+      "max_codec_logit_error": 0.0,
+      "max_fresh_vs_cached_error": 0.40625
+    },
+    {
+      "model": "Qwen/Qwen2.5-0.5B",
+      "dtype": "bfloat16",
+      "condition": "unpadded",
+      "observations": 300,
+      "unique_ids": 100,
+      "passed": 300,
+      "max_codec_logit_error": 0.0,
+      "max_fresh_vs_cached_error": 0.4375
+    },
+    {
+      "model": "unsloth/Llama-3.2-1B",
+      "dtype": "bfloat16",
+      "condition": "left_padding",
+      "observations": 300,
+      "unique_ids": 100,
+      "passed": 300,
+      "max_codec_logit_error": 0.0,
+      "max_fresh_vs_cached_error": 0.39453125
+    },
+    {
+      "model": "unsloth/Llama-3.2-1B",
+      "dtype": "bfloat16",
+      "condition": "right_padding",
+      "observations": 300,
+      "unique_ids": 100,
+      "passed": 300,
+      "max_codec_logit_error": 0.0,
+      "max_fresh_vs_cached_error": 0.39453125
+    },
+    {
+      "model": "unsloth/Llama-3.2-1B",
+      "dtype": "bfloat16",
+      "condition": "unpadded",
+      "observations": 300,
+      "unique_ids": 100,
+      "passed": 300,
+      "max_codec_logit_error": 0.0,
+      "max_fresh_vs_cached_error": 0.3125
+    }
+  ],
+  "scope": "Known-key, native-model/native-cache dtype byte-profile checks with trusted caller masks and positions. Not a bf16-storage-vs-FP32 accuracy comparison, scheduler integration, attack evaluation or hardware-attestation test."
+}

@@ -1,0 +1,132 @@
+{
+ "created": "2026-10-31T13:19:42+08:00",
+ "task_source": "presentation/sa-handoff-review-20261031/CLAUDE_REWORK_ZH.md",
+ "supersedes": "defense_handoff_20261030_1600 (rejected; preserved untouched)",
+ "scope": "known-key S/a rotation functional verification, legal consumer path",
+ "mode": "full_100",
+ "input_spec": {
+  "manifest": "results/takeover_20261029/defense_handoff_20261030_1600/inputs.jsonl",
+  "subset": "lifecycle",
+  "n_ids": 100,
+  "ids_frozen": true,
+  "resample": false,
+  "smoke_uses_first": 5
+ },
+ "models": [
+  "Qwen/Qwen2.5-0.5B",
+  "unsloth/Llama-3.2-1B"
+ ],
+ "matrix": {
+  "dtypes": [
+   "float32",
+   "bfloat16"
+  ],
+  "model_dtype_and_cache_dtype_matched": true,
+  "config_conditions": [
+   "original",
+   "S_a_refresh"
+  ],
+  "masks": [
+   "no_pad",
+   "left8",
+   "right8",
+   "left16",
+   "right16"
+  ],
+  "mask_semantics": {
+   "pad_token": "tokenizer.pad_token_id (recorded per model)",
+   "left": "prefix, pad*, body; mask 0 on pads; pos=cumsum(mask)-1",
+   "right": "prefix, body, pad*; pos=arange; pads stay inside history; continuation positions continue after padded history",
+   "continuation": "6 reserved real body tokens consumed as 2,3,1; always appended after the history, never padded"
+  },
+  "segments": [
+   {
+    "name": "seg1",
+    "index": 1,
+    "len": 2,
+    "offset": 0
+   },
+   {
+    "name": "seg2",
+    "index": 2,
+    "len": 3,
+    "offset": 2
+   },
+   {
+    "name": "seg3",
+    "index": 3,
+    "len": 1,
+    "offset": 5
+   }
+  ],
+  "prefix": {
+   "text": "The following is a public system prompt used for testing purposes. It provides general instructions.",
+   "exact_tokens": 16,
+   "rule": "tokenizer default call (add_special_tokens=True), truncated to exactly 16, asserted per model; full pre-truncation ids recorded per model"
+  },
+  "body": {
+   "max_tokens": 134,
+   "min_tokens": 10,
+   "shorter": "error/not_run retained, never replaced"
+  },
+  "planned_keys_per_id": 120,
+  "planned_total": 12000,
+  "keys_are_not_independent_requests": true
+ },
+ "official_interface": {
+  "modules": [
+   "kvcloak.KVCloak",
+   "get_kvcloak_config.get_kvcloak_config"
+  ],
+  "constructor": "KVCloak(cfg, dtype=model dtype, fused=False, need_ratio=False, add_a=True)",
+  "note": "fused=False means M is applied inside the operator; this is NOT the weight-fused experiment and must not be described as such",
+  "theta": "build_theta(model fp32, run_suite.NATURAL, 4 threads), computed once in prepare-fixtures, stored, hash-bound, loaded by workers"
+ },
+ "rng_control": {
+  "base_config_seed": 42,
+  "request_seed": "int(sha256(sid|model_short)[:16],16); shared by all dtype and mask variants of the same (model, sid) (declared); no Python hash",
+  "m_fix": "S_a_refresh regenerates under request_seed then restores M_angles/M_ratios/M_ratio/theta from baseline per layer/head/K,V branch and asserts equality; S and a asserted changed; S_ratios is the constant all-ones vector under S_ratio=1.0 (need_ratio=False), verified constant and recorded; checks saved per request",
+  "prep_seed": 20261031,
+  "prep_rule": "both cloak instances finish device-tensor initialization (A-matrix row draws) under prep_seed BEFORE the shuffle seed is set",
+  "shuffle_seed": 1234,
+  "shuffle_rule": "seed set immediately before each obfuscate; per-block row permutations recorded via declared torch.rand recorder (values unmodified) and fingerprint-compared across the two conditions"
+ },
+ "comparison": {
+  "primary": "protected_cached vs plain_cached, same model+input+mask+position+dtype, whole [seg_len, vocab] logits",
+  "secondary": "plain_cached vs full_forward (timestep-aligned: cached segment position j vs full logits[cont_start+seg_off+j])",
+  "sanity": "two independent plain-cache copies must agree exactly (sanity_max == 0) to exclude indexing/state pollution",
+  "diffs_computed_in": "float32",
+  "config_lifetime": "one config per request-key; its three segments share one protect/consume lifecycle"
+ },
+ "thresholds": {
+  "functional_pass_per_segment": {
+   "float32": {
+    "prot_vs_plain_max<=": 0.001
+   },
+   "bfloat16": {
+    "prot_vs_plain_max<=": 0.6
+   }
+  },
+  "plus": [
+   "prot_vs_plain_argmax_all",
+   "shape_match",
+   "finite"
+  ],
+  "negative_results": "valid functional failures are retained, never retried away; thresholds never tuned per sample"
+ },
+ "workers_default": {
+  "processes": 4,
+  "threads": 4,
+  "note": "default 4 processes x 4 threads; the launcher may shard each (model, dtype, condition) job over further ID ranges (--workers > 8) to use more cores; actual process/thread counts and shard layout recorded in launcher_run.json and environment.json; deviations from the default documented in HANDOFF_FOR_CODEX.md"
+ },
+ "deliverables": [
+  "PROTOCOL.json (this file, written before measurement)",
+  "inputs.jsonl",
+  "environment*.json",
+  "fixtures/",
+  "workers/*/checks.jsonl+requests.jsonl+log.txt",
+  "accounting_validation.json",
+  "summary.json",
+  "source/exp_sa_rotation_verify_v2.py"
+ ]
+}

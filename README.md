@@ -20,3 +20,12 @@ the ordering study; other later corrected studies are maintained separately.
 Machine-local author paths are replaced with relative paths in distribution
 copies. Original source worktrees and raw records remain unchanged.
 The upstream KV-Cloak license is retained in `THIRD_PARTY_KVCLOAK_LICENSE`.
+
+
+The defensive supplement is now included: see `DEFENSE_SUPPLEMENT.md`,
+`defense_runtime/`, and the accepted byte-cache and row-secret continuation
+records under `results/takeover_20261029/corrected/`. It retains both successful
+and failed functional checks. Independent accounting and reporting corrections
+are in `VALIDATION_STATUS.json`. Use `requirements-defense.txt` for this part.
+The new supplement exports defensive components and known-key tests; it does
+not replace the historical mixed experiment runners.

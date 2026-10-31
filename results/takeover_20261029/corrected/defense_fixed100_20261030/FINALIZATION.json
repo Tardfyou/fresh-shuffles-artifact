@@ -1,0 +1,12 @@
+{
+  "status": "complete local code/data package rebuilt",
+  "complete": true,
+  "packaging_exitcode": 0,
+  "passed": 1800,
+  "expected": 3600,
+  "finished_at": "2026-10-30T04:37:04.405806+00:00",
+  "github_pushed": false,
+  "external_messages_sent": false,
+  "archive": "repeat-to-reveal-anonymous-local.zip",
+  "stage": "stage-aodzuaav"
+}

@@ -1,0 +1,268 @@
+{
+ "n_seg_records": 12000,
+ "groups": [
+  {
+   "dtype": "float32",
+   "mask": "no_pad",
+   "mixed_block_class": false,
+   "n": 1200,
+   "pass": 1199,
+   "fail": 1,
+   "pp_median": 0.00010061264038085938,
+   "pp_max": 0.0010874271392822266,
+   "mods_seen": [
+    0,
+    6,
+    7,
+    10,
+    11,
+    12,
+    13,
+    14
+   ]
+  },
+  {
+   "dtype": "float32",
+   "mask": "left8",
+   "mixed_block_class": true,
+   "n": 1200,
+   "pass": 0,
+   "fail": 1200,
+   "pp_median": 2.5160975456237793,
+   "pp_max": 18.325122833251953,
+   "mods_seen": [
+    0,
+    6,
+    7,
+    10,
+    11,
+    12,
+    13,
+    14
+   ]
+  },
+  {
+   "dtype": "float32",
+   "mask": "right8",
+   "mixed_block_class": false,
+   "n": 1092,
+   "pass": 1065,
+   "fail": 27,
+   "pp_median": 0.00011873245239257812,
+   "pp_max": 0.004069805145263672,
+   "mods_seen": [
+    0
+   ]
+  },
+  {
+   "dtype": "float32",
+   "mask": "right8",
+   "mixed_block_class": true,
+   "n": 108,
+   "pass": 0,
+   "fail": 108,
+   "pp_median": 7.118716239929199,
+   "pp_max": 19.897153854370117,
+   "mods_seen": [
+    6,
+    7,
+    10,
+    11,
+    12,
+    13,
+    14
+   ]
+  },
+  {
+   "dtype": "float32",
+   "mask": "left16",
+   "mixed_block_class": false,
+   "n": 1200,
+   "pass": 1197,
+   "fail": 3,
+   "pp_median": 9.632110595703125e-05,
+   "pp_max": 0.0016546249389648438,
+   "mods_seen": [
+    0,
+    6,
+    7,
+    10,
+    11,
+    12,
+    13,
+    14
+   ]
+  },
+  {
+   "dtype": "float32",
+   "mask": "right16",
+   "mixed_block_class": false,
+   "n": 1092,
+   "pass": 1080,
+   "fail": 12,
+   "pp_median": 0.00012791156768798828,
+   "pp_max": 0.004482746124267578,
+   "mods_seen": [
+    0
+   ]
+  },
+  {
+   "dtype": "float32",
+   "mask": "right16",
+   "mixed_block_class": true,
+   "n": 108,
+   "pass": 0,
+   "fail": 108,
+   "pp_median": 7.336690902709961,
+   "pp_max": 20.15479278564453,
+   "mods_seen": [
+    6,
+    7,
+    10,
+    11,
+    12,
+    13,
+    14
+   ]
+  },
+  {
+   "dtype": "bfloat16",
+   "mask": "no_pad",
+   "mixed_block_class": false,
+   "n": 1200,
+   "pass": 35,
+   "fail": 1165,
+   "pp_median": 1.4609375,
+   "pp_max": 29.21435546875,
+   "mods_seen": [
+    0,
+    6,
+    7,
+    10,
+    11,
+    12,
+    13,
+    14
+   ]
+  },
+  {
+   "dtype": "bfloat16",
+   "mask": "left8",
+   "mixed_block_class": true,
+   "n": 1200,
+   "pass": 0,
+   "fail": 1200,
+   "pp_median": 4.57110595703125,
+   "pp_max": 29.3671875,
+   "mods_seen": [
+    0,
+    6,
+    7,
+    10,
+    11,
+    12,
+    13,
+    14
+   ]
+  },
+  {
+   "dtype": "bfloat16",
+   "mask": "right8",
+   "mixed_block_class": false,
+   "n": 1092,
+   "pass": 4,
+   "fail": 1088,
+   "pp_median": 1.8798828125,
+   "pp_max": 27.96875,
+   "mods_seen": [
+    0
+   ]
+  },
+  {
+   "dtype": "bfloat16",
+   "mask": "right8",
+   "mixed_block_class": true,
+   "n": 108,
+   "pass": 0,
+   "fail": 108,
+   "pp_median": 7.7265625,
+   "pp_max": 19.8125,
+   "mods_seen": [
+    6,
+    7,
+    10,
+    11,
+    12,
+    13,
+    14
+   ]
+  },
+  {
+   "dtype": "bfloat16",
+   "mask": "left16",
+   "mixed_block_class": false,
+   "n": 1200,
+   "pass": 13,
+   "fail": 1187,
+   "pp_median": 1.5625,
+   "pp_max": 26.234375,
+   "mods_seen": [
+    0,
+    6,
+    7,
+    10,
+    11,
+    12,
+    13,
+    14
+   ]
+  },
+  {
+   "dtype": "bfloat16",
+   "mask": "right16",
+   "mixed_block_class": false,
+   "n": 1092,
+   "pass": 4,
+   "fail": 1088,
+   "pp_median": 1.984375,
+   "pp_max": 29.3359375,
+   "mods_seen": [
+    0
+   ]
+  },
+  {
+   "dtype": "bfloat16",
+   "mask": "right16",
+   "mixed_block_class": true,
+   "n": 108,
+   "pass": 0,
+   "fail": 108,
+   "pp_median": 8.09375,
+   "pp_max": 20.5,
+   "mods_seen": [
+    6,
+    7,
+    10,
+    11,
+    12,
+    13,
+    14
+   ]
+  }
+ ],
+ "fp32_failure_concentration": {
+  "fail_and_mixed": 1416,
+  "fail_and_clean": 43,
+  "mixed_class_all_fail": true,
+  "clean_fail_range": [
+   0.0010061264038085938,
+   0.004482746124267578
+  ],
+  "mixed_fail_range": [
+   0.3854036331176758,
+   20.15479278564453
+  ],
+  "clean_fail_nature": "all marginal threshold exceedances within 4.5e-3 (pre-declared 1e-3), no mixed-class magnitude",
+  "note": "classifier v2: right pads mixed iff real_len%16 != 0 (pads start inside the block holding real rows)"
+ }
+}

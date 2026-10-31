@@ -1,0 +1,166 @@
+{
+  "local_paths_normalized_in_copies": true,
+  "originals_unchanged": true,
+  "run_headers": [
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Llama-3.2-1B_bfloat16_S_a_refresh_s0of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Llama-3.2-1B_bfloat16_S_a_refresh_s1of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Llama-3.2-1B_bfloat16_S_a_refresh_s2of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Llama-3.2-1B_bfloat16_S_a_refresh_s3of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Llama-3.2-1B_bfloat16_original_s0of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Llama-3.2-1B_bfloat16_original_s1of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Llama-3.2-1B_bfloat16_original_s2of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Llama-3.2-1B_bfloat16_original_s3of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Llama-3.2-1B_float32_S_a_refresh_s0of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Llama-3.2-1B_float32_S_a_refresh_s1of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Llama-3.2-1B_float32_S_a_refresh_s2of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Llama-3.2-1B_float32_S_a_refresh_s3of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Llama-3.2-1B_float32_original_s0of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Llama-3.2-1B_float32_original_s1of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Llama-3.2-1B_float32_original_s2of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Llama-3.2-1B_float32_original_s3of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Qwen2.5-0.5B_bfloat16_S_a_refresh_s0of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Qwen2.5-0.5B_bfloat16_S_a_refresh_s1of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Qwen2.5-0.5B_bfloat16_S_a_refresh_s2of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Qwen2.5-0.5B_bfloat16_S_a_refresh_s3of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Qwen2.5-0.5B_bfloat16_original_s0of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Qwen2.5-0.5B_bfloat16_original_s1of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Qwen2.5-0.5B_bfloat16_original_s2of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Qwen2.5-0.5B_bfloat16_original_s3of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Qwen2.5-0.5B_float32_S_a_refresh_s0of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Qwen2.5-0.5B_float32_S_a_refresh_s1of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Qwen2.5-0.5B_float32_S_a_refresh_s2of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Qwen2.5-0.5B_float32_S_a_refresh_s3of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Qwen2.5-0.5B_float32_original_s0of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Qwen2.5-0.5B_float32_original_s1of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Qwen2.5-0.5B_float32_original_s2of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    },
+    {
+      "file": "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319/workers/Qwen2.5-0.5B_float32_original_s3of4/checks.jsonl",
+      "run_headers_preserved": 1,
+      "numeric_records_unchanged": true
+    }
+  ]
+}
