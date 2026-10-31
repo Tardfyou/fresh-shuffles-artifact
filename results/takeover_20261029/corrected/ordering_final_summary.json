@@ -1,0 +1,234 @@
+{
+  "n": 602,
+  "distinct_evaluated_spans": 574,
+  "span_balanced_percent": {
+    "end2end": 28.25828738728755,
+    "oracle_ms": 28.25828738728755,
+    "no_cross_block": 11.463186766930226,
+    "random_order": 7.548123323248694
+  },
+  "conditions": {
+    "end2end": {
+      "macro_percent": 27.775996557803662,
+      "correct": 60701,
+      "total": 179968,
+      "exact_spans": 1,
+      "exact_blocks": 2020,
+      "seconds": 101352.87557033263
+    },
+    "oracle_ms": {
+      "macro_percent": 27.775996557803662,
+      "correct": 60701,
+      "total": 179968,
+      "exact_spans": 1,
+      "exact_blocks": 2020,
+      "seconds": 46.73560243588872
+    },
+    "no_cross_block": {
+      "macro_percent": 11.282507969218788,
+      "correct": 18784,
+      "total": 179968,
+      "exact_spans": 0,
+      "exact_blocks": 115,
+      "seconds": 67455.16550751333
+    },
+    "random_order": {
+      "macro_percent": 7.504589106333352,
+      "correct": 13640,
+      "total": 179968,
+      "exact_spans": 0,
+      "exact_blocks": 3,
+      "seconds": 0.0
+    }
+  },
+  "length_bins": {
+    "[32,64)": {
+      "n": 101,
+      "conditions": {
+        "end2end": {
+          "macro_percent": 19.4513201320132,
+          "correct": 787,
+          "total": 3936,
+          "exact_spans": 1,
+          "exact_blocks": 16,
+          "seconds": 1653.9269209173508
+        },
+        "oracle_ms": {
+          "macro_percent": 19.4513201320132,
+          "correct": 787,
+          "total": 3936,
+          "exact_spans": 1,
+          "exact_blocks": 16,
+          "seconds": 0.0061586457304656506
+        },
+        "no_cross_block": {
+          "macro_percent": 14.583333333333332,
+          "correct": 567,
+          "total": 3936,
+          "exact_spans": 0,
+          "exact_blocks": 5,
+          "seconds": 900.7259756794665
+        },
+        "random_order": {
+          "macro_percent": 7.827970297029703,
+          "correct": 307,
+          "total": 3936,
+          "exact_spans": 0,
+          "exact_blocks": 0,
+          "seconds": 0.0
+        }
+      }
+    },
+    "[64,128)": {
+      "n": 112,
+      "conditions": {
+        "end2end": {
+          "macro_percent": 22.613865858843536,
+          "correct": 2263,
+          "total": 9840,
+          "exact_spans": 0,
+          "exact_blocks": 57,
+          "seconds": 4056.2629689737223
+        },
+        "oracle_ms": {
+          "macro_percent": 22.613865858843536,
+          "correct": 2263,
+          "total": 9840,
+          "exact_spans": 0,
+          "exact_blocks": 57,
+          "seconds": 0.016270896652713418
+        },
+        "no_cross_block": {
+          "macro_percent": 9.8507918792517,
+          "correct": 964,
+          "total": 9840,
+          "exact_spans": 0,
+          "exact_blocks": 5,
+          "seconds": 2609.3570384210907
+        },
+        "random_order": {
+          "macro_percent": 6.738546981292517,
+          "correct": 669,
+          "total": 9840,
+          "exact_spans": 0,
+          "exact_blocks": 0,
+          "seconds": 0.0
+        }
+      }
+    },
+    "[128,256)": {
+      "n": 119,
+      "conditions": {
+        "end2end": {
+          "macro_percent": 24.613440510236728,
+          "correct": 5202,
+          "total": 20800,
+          "exact_spans": 0,
+          "exact_blocks": 129,
+          "seconds": 13783.446805884829
+        },
+        "oracle_ms": {
+          "macro_percent": 24.613440510236728,
+          "correct": 5202,
+          "total": 20800,
+          "exact_spans": 0,
+          "exact_blocks": 129,
+          "seconds": 46.465304642915726
+        },
+        "no_cross_block": {
+          "macro_percent": 11.875208562445957,
+          "correct": 2433,
+          "total": 20800,
+          "exact_spans": 0,
+          "exact_blocks": 25,
+          "seconds": 9830.137661947636
+        },
+        "random_order": {
+          "macro_percent": 7.882068182750956,
+          "correct": 1645,
+          "total": 20800,
+          "exact_spans": 0,
+          "exact_blocks": 3,
+          "seconds": 0.0
+        }
+      }
+    },
+    "[256,512)": {
+      "n": 104,
+      "conditions": {
+        "end2end": {
+          "macro_percent": 29.828428111175736,
+          "correct": 11595,
+          "total": 39120,
+          "exact_spans": 0,
+          "exact_blocks": 346,
+          "seconds": 24011.48085443466
+        },
+        "oracle_ms": {
+          "macro_percent": 29.828428111175736,
+          "correct": 11595,
+          "total": 39120,
+          "exact_spans": 0,
+          "exact_blocks": 346,
+          "seconds": 0.06749006593599916
+        },
+        "no_cross_block": {
+          "macro_percent": 11.019489010911721,
+          "correct": 4353,
+          "total": 39120,
+          "exact_spans": 0,
+          "exact_blocks": 39,
+          "seconds": 16841.708008068847
+        },
+        "random_order": {
+          "macro_percent": 7.370599408991675,
+          "correct": 2891,
+          "total": 39120,
+          "exact_spans": 0,
+          "exact_blocks": 0,
+          "seconds": 0.0
+        }
+      }
+    },
+    "[512,768)": {
+      "n": 166,
+      "conditions": {
+        "end2end": {
+          "macro_percent": 37.305166710804485,
+          "correct": 40854,
+          "total": 106272,
+          "exact_spans": 0,
+          "exact_blocks": 1472,
+          "seconds": 57847.75802012207
+        },
+        "oracle_ms": {
+          "macro_percent": 37.305166710804485,
+          "correct": 40854,
+          "total": 106272,
+          "exact_spans": 0,
+          "exact_blocks": 1472,
+          "seconds": 0.1803781846538186
+        },
+        "no_cross_block": {
+          "macro_percent": 9.980046772656419,
+          "correct": 10467,
+          "total": 106272,
+          "exact_spans": 0,
+          "exact_blocks": 41,
+          "seconds": 37273.23682339629
+        },
+        "random_order": {
+          "macro_percent": 7.6380236615989014,
+          "correct": 8128,
+          "total": 106272,
+          "exact_spans": 0,
+          "exact_blocks": 0,
+          "seconds": 0.0
+        }
+      }
+    }
+  },
+  "exact_oracle_output_matches": 601,
+  "exact_recovered_bag_spans": 601,
+  "blocks": 11248
+}

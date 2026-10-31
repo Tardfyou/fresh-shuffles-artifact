@@ -1,0 +1,58 @@
+{
+  "complete": true,
+  "expected_prompts": 602,
+  "expected_model_outputs": 1204,
+  "cohort": "gpt-only-fixed602",
+  "models": {
+    "gpt-6.1-sol": {
+      "status": "completed",
+      "prompts": 602,
+      "macro_position_percent": 8.240897530553832,
+      "position_correct": 6016,
+      "tokens": 179968,
+      "macro_multiset_recall_percent": 85.65557014022184,
+      "macro_multiset_precision_percent": 84.79769957597023,
+      "mean_embedding_cosine": 0.902169506019136,
+      "exact_spans": 4,
+      "conserved_supplied_multisets": 47,
+      "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+      "encoder_max_tokens": 256,
+      "settings": [
+        {
+          "max_tokens": 4096,
+          "temperature": 0.0,
+          "reasoning_effort": "medium"
+        }
+      ]
+    },
+    "gpt-6-luna": {
+      "status": "completed",
+      "prompts": 602,
+      "macro_position_percent": 3.361353606005627,
+      "position_correct": 2253,
+      "tokens": 179968,
+      "macro_multiset_recall_percent": 54.770411291210245,
+      "macro_multiset_precision_percent": 57.47997604893335,
+      "mean_embedding_cosine": 0.7711623311537841,
+      "exact_spans": 0,
+      "conserved_supplied_multisets": 0,
+      "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+      "encoder_max_tokens": 256,
+      "settings": [
+        {
+          "max_tokens": 4096,
+          "temperature": 0.0,
+          "reasoning_effort": "high"
+        },
+        {
+          "max_tokens": 4096,
+          "temperature": 0.0,
+          "reasoning_effort": "high",
+          "stream": false
+        }
+      ]
+    }
+  },
+  "inputs": "api_ready/precomputed_multisets.jsonl",
+  "scoring": "All 602 complete responses per GPT model count, including incorrect, budget-limited and empty outputs. No response filtering or new requests."
+}

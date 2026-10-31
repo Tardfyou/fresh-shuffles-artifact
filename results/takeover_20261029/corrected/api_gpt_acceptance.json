@@ -1,0 +1,23 @@
+{
+  "passed": true,
+  "models": {
+    "gpt-6.1-sol": {
+      "complete_ids": 602,
+      "raw_predictions_and_counters_verified": true,
+      "empty_outputs_retained": 0,
+      "budget_limited_outputs_retained": 0,
+      "raw_and_score_bytes_unchanged": true
+    },
+    "gpt-6-luna": {
+      "complete_ids": 602,
+      "raw_predictions_and_counters_verified": true,
+      "empty_outputs_retained": 0,
+      "budget_limited_outputs_retained": 0,
+      "raw_and_score_bytes_unchanged": true
+    }
+  },
+  "expected_model_outputs": 1204,
+  "all_model_prompts_match": true,
+  "new_model_or_API_requests": false,
+  "embeddings": "Existing stored per-prompt cosine values checked for bounds, empty-output handling and aggregation; no new encoder inference."
+}

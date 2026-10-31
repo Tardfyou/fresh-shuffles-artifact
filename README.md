@@ -9,11 +9,13 @@ excluded. Model weights and credentials are not included.
 - `experiments/kvcloak/`: retained experiment sources and saved results.
 - `sources/`: retained third-party source snapshots.
 
-This checkout contains the historical experiment snapshot. Its records are not
-the later corrected fixed-WildChat cohorts. Historical results keep their
-original sample scopes and measured outcomes; they should not be mixed with
-later cohorts. The current corrected code-and-data package is maintained
-separately until it is synchronized here.
+The corrected fixed-cohort ordering study is now included under
+`results/takeover_20261029/corrected/`, with its fixed manifest under
+`results/main_public/`. See `ORDERING_STUDY.md` for the two completed GPT
+comparisons, four local ordering conditions, semantic scores and offline
+verification. Older records in `experiments/kvcloak/results/` keep their original
+scopes and must not be mixed with these corrected cohorts. This update covers
+the ordering study; other later corrected studies are maintained separately.
 
 Machine-local author paths are replaced with relative paths in distribution
 copies. Original source worktrees and raw records remain unchanged.

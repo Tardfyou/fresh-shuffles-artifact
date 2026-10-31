@@ -1,0 +1,1 @@
+{"sid": "wc25_128_0335", "model": "gpt-6-luna", "status": "error", "error": "HTTPConnectionPool(host='localhost', port=8080): Read timed out. (read timeout=300)", "seconds": 915.1475016209297}

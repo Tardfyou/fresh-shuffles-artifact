@@ -1,0 +1,13 @@
+{
+  "n": 553,
+  "targets": 1106,
+  "block_accuracy_percent": 97.73960216998192,
+  "global_accuracy_percent": 85.35262206148282,
+  "equal_global_pairs": 162,
+  "equal_block_pairs": 25,
+  "identical_token_pairs": 2,
+  "different_length_pairs": 8,
+  "length_only_accuracy_percent": 50.723327305605785,
+  "truth_global_bag_oracle_percent": 85.35262206148282,
+  "truth_block_bag_oracle_percent": 97.73960216998192
+}

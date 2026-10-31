@@ -1,0 +1,30 @@
+{
+ "n": 3000,
+ "qwen_tokens": 802528,
+ "scanned": 595312,
+ "kept": 43606,
+ "seed": 20261021,
+ "buckets": {
+  "(32, 64)": 4381,
+  "(64, 128)": 6046,
+  "(128, 256)": 5888,
+  "(256, 512)": 11738,
+  "(512, 768)": 15553
+ },
+ "categories": {
+  "general": 2290,
+  "code": 291,
+  "math": 10,
+  "creative": 197,
+  "qa": 212
+ },
+ "or_categories": {
+  "general": 134,
+  "code": 70,
+  "math": 10,
+  "creative": 43,
+  "qa": 43
+ },
+ "ts_min": "2025-01-01",
+ "source": "allenai/WildChat-4.8M tail shards (first user turn, English, non-toxic, non-redacted, deduped, 2025 traffic)"
+}

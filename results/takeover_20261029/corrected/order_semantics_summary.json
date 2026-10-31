@@ -1,0 +1,38 @@
+{
+  "complete": true,
+  "prompts": 602,
+  "encoder": "sentence-transformers/all-MiniLM-L6-v2",
+  "encoder_max_tokens": 256,
+  "conditions": {
+    "end2end": {
+      "n": 602,
+      "mean": 0.9448757626091523,
+      "median": 0.9653641879558563,
+      "p25": 0.9317962527275085,
+      "p75": 0.9742667824029922
+    },
+    "oracle_ms": {
+      "n": 602,
+      "mean": 0.9448779390697859,
+      "median": 0.9653641879558563,
+      "p25": 0.9317962527275085,
+      "p75": 0.9742667824029922
+    },
+    "no_cross_block": {
+      "n": 602,
+      "mean": 0.9293233859182592,
+      "median": 0.9430020153522491,
+      "p25": 0.9157300442457199,
+      "p75": 0.9588387757539749
+    },
+    "random_order": {
+      "n": 602,
+      "mean": 0.8180395260304708,
+      "median": 0.8285611867904663,
+      "p25": 0.7905935794115067,
+      "p75": 0.8603239804506302
+    }
+  },
+  "scope": "Cosine of independently encoded decoded complete spans; encoder truncates at 256 encoder tokens.",
+  "source": "Retained fixed-cohort predictions; no ordering rerun and no sample exclusions."
+}

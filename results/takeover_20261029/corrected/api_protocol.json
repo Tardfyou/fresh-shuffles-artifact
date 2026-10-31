@@ -1,0 +1,27 @@
+{
+  "cohort": "gpt-only-fixed602",
+  "models": [
+    "gpt-6.1-sol",
+    "gpt-6-luna"
+  ],
+  "fixed_prompts": 602,
+  "expected_model_outputs": 1204,
+  "inputs": "api_ready/precomputed_multisets.jsonl",
+  "model_settings": {
+    "gpt-6.1-sol": {
+      "reasoning_effort": "medium",
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "stream": false
+    },
+    "gpt-6-luna": {
+      "reasoning_effort": "high",
+      "max_tokens": 4096,
+      "temperature": 0.0,
+      "stream": false
+    }
+  },
+  "prompt_policy": "Original prompt retained; every complete response is scored, including wrong, empty and budget-limited outputs.",
+  "scope_decision": "User limits the final comparison to the two completed GPT cohorts on 2026-10-31. No within-cohort sample exclusions or new requests.",
+  "collection_required": false
+}
