@@ -1,0 +1,1 @@
+{"key": "device|probe", "condition": "device", "status": "not_available", "gpu_available": false, "cuda_available": false, "detail": "nvidia-smi unavailable: [Errno 2] No such file or directory: 'nvidia-smi'", "note": "no simulated GPU results are produced"}

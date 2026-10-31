@@ -1,0 +1,17 @@
+{
+  "scope": "Saved-record descriptive audit; not algorithm-equivalence acceptance or a new experiment.",
+  "counters_and_decode_times": "Every nonsanity sample/seed retained for the two tags.",
+  "block_export": "All failed blocks only. Complete-block margins and chosen-marker histograms for all blocks remain aggregate fields in SAVED_RECORD_AUDIT.json.",
+  "provenance": "Raw private measurements unchanged; original interpretations superseded by corrected saved-record summaries.",
+  "accounting": {
+    "qwen25_05b": {
+      "samples": 3000,
+      "failed_blocks": 6
+    },
+    "llama32_1b": {
+      "samples": 3000,
+      "failed_blocks": 37454
+    }
+  },
+  "new_recovery_or_inference_code_included": false
+}

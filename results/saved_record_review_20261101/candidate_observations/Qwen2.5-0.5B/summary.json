@@ -1,0 +1,103 @@
+{
+ "generated": "2026-10-31T18:15:04+08:00",
+ "model": "Qwen/Qwen2.5-0.5B",
+ "n_targets": 100,
+ "hits": {
+  "main": {
+   "true": 200
+  },
+  "b1_direct": {
+   "false": 192,
+   "true": 8
+  },
+  "b3_wrongkey": {
+   "false": 182,
+   "true": 18
+  }
+ },
+ "control_hits": {
+  "false": 247,
+  "true": 53
+ },
+ "time_mean_s": {
+  "main": 0.13782,
+  "b1": 0.00617,
+  "b3": 0.125652,
+  "control": 0.047288,
+  "protect": 0.017569
+ },
+ "time_total_s": {
+  "main": 27.564,
+  "b1": 1.234,
+  "b3": 25.13,
+  "control": 4.729,
+  "protect": 3.514
+ },
+ "calibration_diag": {
+  "0": {
+   "states": 16,
+   "separation": 1472.0,
+   "sign_gap_pos": 2.453071877360344,
+   "sign_gap_neg": 0.00021022558212280273,
+   "sign_gap_rel": 0.0009002677766991326,
+   "chosen_sign": "-",
+   "chosen_sign_gap": 0.00021022558212280273,
+   "v_norm": 0.23351450264453888,
+   "pair_norm_min": 0.0031920751508311036,
+   "pair_norm_median": 0.0291952911102043,
+   "pair_norm_below_1e8": 0,
+   "angle_pairs_used": 32,
+   "angle_pairs_total": 32,
+   "projection_residual_mean": 0.12617799639701843,
+   "projection_residual_max": 0.9917777180671692,
+   "pos_frac": 1.0,
+   "alpha": 21.54151626996744
+  },
+  "1": {
+   "states": 16,
+   "separation": 1050.0,
+   "sign_gap_pos": 5.583465099334717e-05,
+   "sign_gap_neg": 1.4996158331632614,
+   "sign_gap_rel": 0.0002645303738688891,
+   "chosen_sign": "+",
+   "chosen_sign_gap": 5.583465099334717e-05,
+   "v_norm": 0.21107085049152374,
+   "pair_norm_min": 0.005701292826887613,
+   "pair_norm_median": 0.028500603531777493,
+   "pair_norm_below_1e8": 0,
+   "angle_pairs_used": 32,
+   "angle_pairs_total": 32,
+   "projection_residual_mean": 0.09410004317760468,
+   "projection_residual_max": 1.0448039770126343,
+   "pos_frac": 1.0,
+   "alpha": 13.617092674540597
+  }
+ },
+ "probe_events": [
+  {
+   "head": 0,
+   "reason": "degeneracy_margin",
+   "min_pair": 0.0031920751508311036,
+   "sign_gap_rel": 0.0009002677766991326,
+   "pairs_used": 32,
+   "action": "recorded"
+  },
+  {
+   "head": 1,
+   "reason": "degeneracy_margin",
+   "min_pair": 0.005701292826887613,
+   "sign_gap_rel": 0.0002645303738688891,
+   "pairs_used": 32,
+   "action": "recorded"
+  }
+ ],
+ "t_phase": {
+  "load_s": 17.769682759884745,
+  "theta_s": 4.096953562926501,
+  "dict_build_s": 3.7615264039486647,
+  "calibrate_s": 0.07559379003942013
+ },
+ "vocab": 151936,
+ "threads": 4,
+ "rss_peak_mb": 4293.5
+}

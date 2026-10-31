@@ -1,0 +1,49 @@
+{
+  "snapshot_date": "2026-11-01",
+  "distribution_scope": "Code and experimental data; no manuscript or slides.",
+  "historical_main_counters": {
+    "configurations": 12,
+    "sample_rows": 36000,
+    "seed_records": 72000,
+    "correct": 153274758,
+    "head_token_opportunities": 153791424,
+    "historical_run_bound_revisions_available": false
+  },
+  "ordering": {
+    "models": [
+      "gpt-6.1-sol",
+      "gpt-6-luna"
+    ],
+    "responses_per_model": 602,
+    "all_returned_outcomes_retained": true
+  },
+  "saved_record_followup": {
+    "models": 2,
+    "sample_model_rows": 6000,
+    "seed_records": 12000,
+    "covered_main_misses": 37466,
+    "total_main_misses": 516666,
+    "counter_identity_verified": true,
+    "historical_per_block_identity_proven": false,
+    "algorithm_equivalence_accepted": false,
+    "descriptive_cost_and_diagnostic_records_exported": true
+  },
+  "byte_cache_deployment": {
+    "requests": 400,
+    "segments": 1200,
+    "shared_prefix_cases": 200,
+    "single_reprotection_cases": 200,
+    "ledger_scenarios": 9,
+    "known_key_functional_scope_only": true
+  },
+  "unmeasured": [
+    "historical per-run checkpoint/tokenizer binding",
+    "complete retry-policy cost",
+    "same-transform closest-method head-to-head",
+    "general scaling-fit guarantee",
+    "real serving scheduler integration",
+    "GPU transfer",
+    "hardware rollback resistance",
+    "within-request exposure security"
+  ]
+}

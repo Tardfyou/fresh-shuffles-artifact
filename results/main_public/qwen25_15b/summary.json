@@ -1,0 +1,25 @@
+{
+ "tag": "qwen25_15b",
+ "model": "Qwen/Qwen2.5-1.5B",
+ "b": 16,
+ "n_samples": 3000,
+ "correct": 3109215,
+ "total": 3121856,
+ "acc": 0.995951,
+ "ci95_wilson": [
+  0.99588,
+  0.996021
+ ],
+ "states_info": {
+  "0": {
+   "states": 16,
+   "separation": 873.7
+  },
+  "1": {
+   "states": 16,
+   "separation": 689.8
+  }
+ },
+ "heads_with_secrets": "2/2",
+ "total_time_s": 15304.9
+}

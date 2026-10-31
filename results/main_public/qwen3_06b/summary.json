@@ -1,0 +1,49 @@
+{
+ "tag": "qwen3_06b",
+ "model": "Qwen/Qwen3-0.6B",
+ "b": 16,
+ "n_samples": 3000,
+ "correct": 12480000,
+ "total": 12480000,
+ "acc": 1.0,
+ "ci95_wilson": [
+  1.0,
+  1.0
+ ],
+ "states_info": {
+  "0": {
+   "states": 16,
+   "separation": 542.2
+  },
+  "1": {
+   "states": 16,
+   "separation": 968.1
+  },
+  "2": {
+   "states": 16,
+   "separation": 739.9
+  },
+  "3": {
+   "states": 16,
+   "separation": 887.8
+  },
+  "4": {
+   "states": 16,
+   "separation": 614.0
+  },
+  "5": {
+   "states": 16,
+   "separation": 996.0
+  },
+  "6": {
+   "states": 16,
+   "separation": 861.0
+  },
+  "7": {
+   "states": 16,
+   "separation": 962.3
+  }
+ },
+ "heads_with_secrets": "8/8",
+ "total_time_s": 57882.6
+}

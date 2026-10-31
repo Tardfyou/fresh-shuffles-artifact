@@ -1,0 +1,1 @@
+{"key": "scheduler|search", "condition": "scheduler", "status": "not_implemented", "searched": ["experiments/kvcloak", "results/takeover_20261029/release/defense-stage-v2pyknb7"], "serving_class_hits": [], "note": "no real serving adapter found; toy PageManager not substituted"}

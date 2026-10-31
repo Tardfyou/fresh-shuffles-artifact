@@ -1,0 +1,33 @@
+{
+ "tag": "qwen25_7b",
+ "model": "Qwen/Qwen2.5-7B",
+ "b": 16,
+ "n_samples": 3000,
+ "correct": 6229884,
+ "total": 6243712,
+ "acc": 0.997785,
+ "ci95_wilson": [
+  0.997748,
+  0.997822
+ ],
+ "states_info": {
+  "0": {
+   "states": 16,
+   "separation": 524.2
+  },
+  "1": {
+   "states": 16,
+   "separation": 795.2
+  },
+  "2": {
+   "states": 16,
+   "separation": 875.5
+  },
+  "3": {
+   "states": 16,
+   "separation": 818.1
+  }
+ },
+ "heads_with_secrets": "4/4",
+ "total_time_s": 37979.6
+}

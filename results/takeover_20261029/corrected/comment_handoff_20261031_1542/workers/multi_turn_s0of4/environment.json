@@ -1,0 +1,19 @@
+{
+ "condition": "multi_turn",
+ "pid": 521873,
+ "started": "2026-10-31T15:59:26+08:00",
+ "torch": "2.14.0+cpu",
+ "transformers": "4.51.3",
+ "threads": 4,
+ "run_token": "20261031T155919",
+ "shard": "0/4",
+ "model": "Qwen/Qwen2.5-0.5B",
+ "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+ "dtype": "float32",
+ "finished": "2026-10-31T16:11:58+08:00",
+ "counts": {
+  "measured": 300,
+  "error": 0,
+  "not_run": 0
+ }
+}

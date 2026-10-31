@@ -1,0 +1,147 @@
+{
+  "scope": "Known-key defensive saved-record/source audit, no inference rerun.",
+  "accounting": {
+    "multi_turn": {
+      "expected": 1200,
+      "actual": 1200,
+      "exact_set": true,
+      "all_measured": true
+    },
+    "multi_turn_req": {
+      "expected": 400,
+      "actual": 400,
+      "exact_set": true,
+      "all_measured": true
+    },
+    "shared_prefix": {
+      "expected": 200,
+      "actual": 200,
+      "exact_set": true,
+      "all_measured": true
+    },
+    "reencode": {
+      "expected": 200,
+      "actual": 200,
+      "exact_set": true,
+      "all_measured": true
+    }
+  },
+  "checks": {
+    "fixture_segment_tokens": 1200,
+    "absolute_timestep": 1200,
+    "exact_protected_plain_logits": 1200,
+    "duplicate_plain_sanity": 1200,
+    "pass_recomputed": 1200,
+    "clean_plain_request": 400,
+    "exact_recovered_cache_request": 400,
+    "both_chains_advanced_six": 400,
+    "shared_prefix_pass_recomputed": 200,
+    "reencode_pass_recomputed": 200
+  },
+  "issues": [],
+  "source_files_byte_equal_to_delivered_runtime": {
+    "kvcloak.py": true,
+    "fusion.py": true,
+    "run_suite.py": true,
+    "veilkv_runtime.py": true,
+    "exp_veilkv_plus.py": true,
+    "get_kvcloak_config.py": true,
+    "veilkv_arith_fast.py": true,
+    "attack_lib.py": true,
+    "corrected/__init__.py": true,
+    "corrected/perf_isolation.py": true,
+    "corrected/freshness.py": true
+  },
+  "plain_full_max_by_model_dtype": {
+    "Qwen2.5-0.5B|float32": 6.580352783203125e-05,
+    "Qwen2.5-0.5B|bfloat16": 0.625,
+    "Llama-3.2-1B|float32": 4.3839216232299805e-05,
+    "Llama-3.2-1B|bfloat16": 0.296875
+  },
+  "ledger": {
+    "ledger|scenarios": {
+      "key": "ledger|scenarios",
+      "condition": "ledger",
+      "status": "measured",
+      "events": [
+        {
+          "event": "claim_first",
+          "ok": true,
+          "detail": "registered"
+        },
+        {
+          "event": "claim_duplicate",
+          "ok": true,
+          "detail": "rejected: private request nonce already used"
+        },
+        {
+          "event": "claim_after_restart",
+          "ok": true,
+          "detail": "persistent reject: private request nonce already used"
+        },
+        {
+          "event": "public_store",
+          "ok": true,
+          "detail": "stored"
+        },
+        {
+          "event": "public_idempotent",
+          "ok": true,
+          "detail": "same content accepted"
+        },
+        {
+          "event": "public_conflict",
+          "ok": true,
+          "detail": "rejected: public artifact content changed for the same identity"
+        },
+        {
+          "event": "public_after_restart",
+          "ok": true,
+          "detail": "consistent"
+        },
+        {
+          "event": "concurrent_distinct",
+          "ok": true,
+          "detail": "['ok', 'ok']"
+        },
+        {
+          "event": "concurrent_same_nonce_exactly_one",
+          "ok": true,
+          "detail": "['ok', 'reject']"
+        }
+      ],
+      "all_expected": true,
+      "note": "software ledger; not hardware rollback resistance"
+    }
+  },
+  "device": {
+    "device|probe": {
+      "key": "device|probe",
+      "condition": "device",
+      "status": "not_available",
+      "gpu_available": false,
+      "cuda_available": false,
+      "detail": "nvidia-smi unavailable: [Errno 2] No such file or directory: 'nvidia-smi'",
+      "note": "no simulated GPU results are produced"
+    }
+  },
+  "scheduler": {
+    "scheduler|search": {
+      "key": "scheduler|search",
+      "condition": "scheduler",
+      "status": "not_implemented",
+      "searched": [
+        "experiments/kvcloak",
+        "results/takeover_20261029/release/defense-stage-v2pyknb7"
+      ],
+      "serving_class_hits": [],
+      "note": "no real serving adapter found; toy PageManager not substituted"
+    }
+  },
+  "limitations": [
+    "One prefill protection followed by three consumer segments; not a serving scheduler integration.",
+    "One additional FP32 re-protection after consuming two tokens.",
+    "Shared-prefix test uses equal-length fp32 tails.",
+    "No GPU available; no hardware rollback or within-request exposure validation."
+  ]
+}

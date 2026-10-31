@@ -29,3 +29,19 @@ and failed functional checks. Independent accounting and reporting corrections
 are in `VALIDATION_STATUS.json`. Use `requirements-defense.txt` for this part.
 The new supplement exports defensive components and known-key tests; it does
 not replace the historical mixed experiment runners.
+
+## Saved-record follow-up (2026-11-01)
+
+Historical main counters are supplied for all twelve configurations. The separate
+saved-record follow-up includes every sample/seed counter and decode timing for
+two configurations, all their failed-block diagnostics, final-worker phase
+records and fixed-candidate observations. It corrects the decoding denominator
+from head-token opportunities to target-token positions across seed runs.
+`EXPORT_STATUS.json` specifies the exported scope and omitted all-correct-block
+observations; aggregate audit fields are retained for those blocks.
+
+Run `python tools/inspect_saved_review.py` from this directory for an independent
+offline count, unit and diagnostic-subset check. No model or API is called.
+`AUDIT_STATUS.json` distinguishes accepted saved evidence from unmeasured
+properties. The defensive supplement also includes known-key shared-prefix,
+segmented-continuation and single-reprotection measurements.

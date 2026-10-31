@@ -1,0 +1,33 @@
+{
+ "tag": "tinyllama",
+ "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+ "b": 16,
+ "n_samples": 3000,
+ "correct": 7782903,
+ "total": 7791872,
+ "acc": 0.998849,
+ "ci95_wilson": [
+  0.998825,
+  0.998872
+ ],
+ "states_info": {
+  "0": {
+   "states": 16,
+   "separation": 1099.8
+  },
+  "1": {
+   "states": 16,
+   "separation": 1115.5
+  },
+  "2": {
+   "states": 16,
+   "separation": 1230.8
+  },
+  "3": {
+   "states": 16,
+   "separation": 1048.0
+  }
+ },
+ "heads_with_secrets": "4/4",
+ "total_time_s": 6180.2
+}

@@ -1,0 +1,77 @@
+{
+ "tag": "qwen25_05b",
+ "model": "Qwen/Qwen2.5-0.5B",
+ "shard": [
+  3,
+  4
+ ],
+ "n_done": 539,
+ "calibration_diag": {
+  "0": {
+   "states": 16,
+   "separation": 1031.7,
+   "sign_gap_pos": 2.453071877360344,
+   "sign_gap_neg": 0.00021022558212280273,
+   "sign_gap_rel": 0.0009002677766991326,
+   "chosen_sign": "-",
+   "chosen_sign_gap": 0.00021022558212280273,
+   "v_norm": 0.23351450264453888,
+   "pair_norm_min": 0.0031920751508311036,
+   "pair_norm_median": 0.0291952911102043,
+   "pair_norm_below_1e8": 0,
+   "angle_pairs_used": 32,
+   "angle_pairs_total": 32,
+   "projection_residual_mean": 0.12617799639701843,
+   "projection_residual_max": 0.9917777180671692,
+   "pos_frac": 1.0,
+   "alpha": 21.54151626996744
+  },
+  "1": {
+   "states": 16,
+   "separation": 1050.0,
+   "sign_gap_pos": 5.583465099334717e-05,
+   "sign_gap_neg": 1.4996158331632614,
+   "sign_gap_rel": 0.0002645303738688891,
+   "chosen_sign": "+",
+   "chosen_sign_gap": 5.583465099334717e-05,
+   "v_norm": 0.21107085049152374,
+   "pair_norm_min": 0.005701292826887613,
+   "pair_norm_median": 0.028500603531777493,
+   "pair_norm_below_1e8": 0,
+   "angle_pairs_used": 32,
+   "angle_pairs_total": 32,
+   "projection_residual_mean": 0.09410004317760468,
+   "projection_residual_max": 1.0448039770126343,
+   "pos_frac": 1.0,
+   "alpha": 13.617092674540597
+  }
+ },
+ "probe_events": [
+  {
+   "head": 0,
+   "reason": "degeneracy_margin",
+   "min_pair": 0.0031920751508311036,
+   "sign_gap_rel": 0.0009002677766991326,
+   "pairs_used": 32,
+   "action": "recorded"
+  },
+  {
+   "head": 1,
+   "reason": "degeneracy_margin",
+   "min_pair": 0.005701292826887613,
+   "sign_gap_rel": 0.0002645303738688891,
+   "pairs_used": 32,
+   "action": "recorded"
+  }
+ ],
+ "t_phase": {
+  "load_s": 3.6197064279112965,
+  "theta_s": 11.603645696071908,
+  "dict_build_s": 1.950634007109329,
+  "calibrate_s": 0.09057430713437498
+ },
+ "vocab": 151936,
+ "threads": 8,
+ "rss_peak_mb": 4561.6,
+ "finished": "2026-10-31T22:15:59+08:00"
+}

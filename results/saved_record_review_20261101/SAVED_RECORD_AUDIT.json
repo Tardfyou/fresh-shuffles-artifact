@@ -1,0 +1,965 @@
+{
+  "scope": "Saved-record audit, not execution or algorithm-correctness acceptance.",
+  "attribution": {
+    "qwen25_05b": {
+      "counts": {
+        "rows": 3000,
+        "historical_or_subset_mismatch": 706,
+        "seed_records": 6000,
+        "correct": 3121850,
+        "total": 3121856,
+        "miss": 6,
+        "block_records": 195116,
+        "full_blocks": 195110,
+        "decode_microseconds": 67809543600,
+        "miss_blocks": 6,
+        "rows_in_miss_blocks": 96,
+        "exact_tie_rows_in_miss_blocks": 0,
+        "near_tie_rows_in_miss_blocks": 6
+      },
+      "missing_sids": [],
+      "seed_mismatch_examples": [],
+      "marker_histogram": {
+        "6": 16865,
+        "11": 18144,
+        "10": 15492,
+        "14": 14643,
+        "12": 9848,
+        "9": 11914,
+        "1": 11430,
+        "3": 7869,
+        "13": 13408,
+        "4": 10084,
+        "15": 21454,
+        "5": 11722,
+        "0": 10071,
+        "2": 8998,
+        "7": 7148,
+        "8": 6026
+      },
+      "margins": {
+        "miss": {
+          "n": 6,
+          "min": 1.2537,
+          "median": 1.2547000000000001,
+          "max": 1.2613
+        },
+        "full": {
+          "n": 195110,
+          "min": 1.0234,
+          "median": 1.1522999999999999,
+          "max": 1.3383
+        }
+      },
+      "gaps": {
+        "all_gold_in_miss_blocks": {
+          "n": 83,
+          "min": 0.0,
+          "median": 0.0,
+          "max": 0.0007
+        },
+        "absent_distinct_gold_in_miss_blocks": {
+          "n": 5,
+          "min": 0.0001,
+          "median": 0.0005,
+          "max": 0.0007
+        },
+        "present_distinct_gold_in_miss_blocks": {
+          "n": 78,
+          "min": 0.0,
+          "median": 0.0,
+          "max": 0.0
+        }
+      },
+      "gap_zero_counts": {
+        "all_gold_in_miss_blocks": 78,
+        "absent_distinct_gold_in_miss_blocks": 0,
+        "present_distinct_gold_in_miss_blocks": 78
+      },
+      "absent_gold_examples": [
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s0of4.jsonl",
+          "line": 21,
+          "sid": "wc25_256_0288",
+          "seed": "seed5001",
+          "head": 0,
+          "block": 16,
+          "correct": 15,
+          "absent_gold": {
+            "tok": 35,
+            "best_sim": 0.9399,
+            "row": 3,
+            "row_top1": 0.9406,
+            "gap": 0.0007
+          }
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s1of4.jsonl",
+          "line": 63,
+          "sid": "wc25_256_0469",
+          "seed": "seed5001",
+          "head": 0,
+          "block": 4,
+          "correct": 15,
+          "absent_gold": {
+            "tok": 35,
+            "best_sim": 0.9475,
+            "row": 10,
+            "row_top1": 0.9478,
+            "gap": 0.0002
+          }
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s1of4.jsonl",
+          "line": 96,
+          "sid": "wc25_32_0001",
+          "seed": "seed5002",
+          "head": 0,
+          "block": 1,
+          "correct": 15,
+          "absent_gold": {
+            "tok": 35,
+            "best_sim": 0.9405,
+            "row": 15,
+            "row_top1": 0.9406,
+            "gap": 0.0001
+          }
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s1of4.jsonl",
+          "line": 270,
+          "sid": "wc25_512_0097",
+          "seed": "seed5002",
+          "head": 0,
+          "block": 32,
+          "correct": 15,
+          "absent_gold": {
+            "tok": 35,
+            "best_sim": 0.9452,
+            "row": 8,
+            "row_top1": 0.9458,
+            "gap": 0.0006
+          }
+        }
+      ],
+      "files": [
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s0of16.jsonl",
+          "rows": 41
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s0of32.jsonl",
+          "rows": 0
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s0of4.jsonl",
+          "rows": 548
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s0of8.jsonl",
+          "rows": 16
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s10of16.jsonl",
+          "rows": 43
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s10of32.jsonl",
+          "rows": 0
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s11of16.jsonl",
+          "rows": 45
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s11of32.jsonl",
+          "rows": 0
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s12of16.jsonl",
+          "rows": 42
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s13of16.jsonl",
+          "rows": 41
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s14of16.jsonl",
+          "rows": 40
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s15of16.jsonl",
+          "rows": 45
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s17of32.jsonl",
+          "rows": 0
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s18of32.jsonl",
+          "rows": 0
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s1of16.jsonl",
+          "rows": 44
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s1of32.jsonl",
+          "rows": 0
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s1of4.jsonl",
+          "rows": 545
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s1of8.jsonl",
+          "rows": 17
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s25of32.jsonl",
+          "rows": 0
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s26of32.jsonl",
+          "rows": 0
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s29of32.jsonl",
+          "rows": 0
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s2of16.jsonl",
+          "rows": 42
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s2of32.jsonl",
+          "rows": 0
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s2of4.jsonl",
+          "rows": 551
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s2of8.jsonl",
+          "rows": 17
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s3of16.jsonl",
+          "rows": 44
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s3of4.jsonl",
+          "rows": 539
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s3of8.jsonl",
+          "rows": 16
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s4of16.jsonl",
+          "rows": 45
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s4of8.jsonl",
+          "rows": 16
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s5of16.jsonl",
+          "rows": 44
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s5of8.jsonl",
+          "rows": 18
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s6of16.jsonl",
+          "rows": 41
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s6of32.jsonl",
+          "rows": 0
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s6of8.jsonl",
+          "rows": 16
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s7of16.jsonl",
+          "rows": 44
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s7of8.jsonl",
+          "rows": 17
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s8of16.jsonl",
+          "rows": 42
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s8of32.jsonl",
+          "rows": 0
+        },
+        {
+          "file": "attribution/qwen25_05b/per_sample_instr_s9of16.jsonl",
+          "rows": 41
+        }
+      ],
+      "meta_records": 4,
+      "distinct_calibration_diagnostic_sets": 1,
+      "phases": {
+        "theta_s": {
+          "n": 4,
+          "min": 10.469370286911726,
+          "median": 11.09362655133009,
+          "max": 11.603645696071908
+        },
+        "load_s": {
+          "n": 4,
+          "min": 3.6197064279112965,
+          "median": 3.7802467165747657,
+          "max": 4.089182288153097
+        },
+        "calibrate_s": {
+          "n": 4,
+          "min": 0.09057430713437498,
+          "median": 0.107058733003214,
+          "max": 0.12846500286832452
+        },
+        "dict_build_s": {
+          "n": 4,
+          "min": 1.950634007109329,
+          "median": 2.120599839487113,
+          "max": 2.698598711984232
+        }
+      },
+      "decode_seconds_per_1000_head_token": 21.72090692203612,
+      "decode_seconds_per_1000_target_token": 43.44181384407224,
+      "target_token_seed_denominator": 1560928
+    },
+    "llama32_1b": {
+      "counts": {
+        "rows": 3000,
+        "seed_records": 6000,
+        "correct": 12270252,
+        "total": 12307712,
+        "miss": 37460,
+        "block_records": 769232,
+        "full_blocks": 731778,
+        "miss_blocks": 37454,
+        "rows_in_miss_blocks": 599264,
+        "exact_tie_rows_in_miss_blocks": 0,
+        "near_tie_rows_in_miss_blocks": 23146,
+        "decode_microseconds": 184638662300,
+        "historical_or_subset_mismatch": 706
+      },
+      "missing_sids": [],
+      "seed_mismatch_examples": [],
+      "marker_histogram": {
+        "6": 61958,
+        "2": 51849,
+        "1": 41292,
+        "10": 41049,
+        "8": 65237,
+        "5": 33136,
+        "4": 40585,
+        "15": 44968,
+        "9": 54412,
+        "14": 61637,
+        "11": 57048,
+        "13": 61011,
+        "7": 38616,
+        "3": 35129,
+        "12": 48786,
+        "0": 32519
+      },
+      "margins": {
+        "miss": {
+          "n": 37454,
+          "min": 0.019,
+          "median": 0.6775,
+          "max": 1.3832
+        },
+        "full": {
+          "n": 731778,
+          "min": 0.1187,
+          "median": 1.0515,
+          "max": 1.8332
+        }
+      },
+      "gaps": {
+        "all_gold_in_miss_blocks": {
+          "n": 553381,
+          "min": 0.0,
+          "median": 0.0,
+          "max": 0.9922
+        },
+        "absent_distinct_gold_in_miss_blocks": {
+          "n": 27931,
+          "min": 0.0,
+          "median": 0.1611,
+          "max": 0.9922
+        },
+        "present_distinct_gold_in_miss_blocks": {
+          "n": 525450,
+          "min": 0.0,
+          "median": 0.0,
+          "max": 0.2891
+        }
+      },
+      "gap_zero_counts": {
+        "all_gold_in_miss_blocks": 525442,
+        "absent_distinct_gold_in_miss_blocks": 5,
+        "present_distinct_gold_in_miss_blocks": 525437
+      },
+      "absent_gold_examples": [
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s0of12.jsonl",
+          "line": 1,
+          "sid": "wc25_128_0312",
+          "seed": "seed5001",
+          "head": 0,
+          "block": 11,
+          "correct": 15,
+          "absent_gold": {
+            "tok": 382,
+            "best_sim": 0.931,
+            "row": 1,
+            "row_top1": 0.9391,
+            "gap": 0.0082
+          }
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s0of12.jsonl",
+          "line": 1,
+          "sid": "wc25_128_0312",
+          "seed": "seed5001",
+          "head": 1,
+          "block": 0,
+          "correct": 15,
+          "absent_gold": {
+            "tok": 315,
+            "best_sim": 0.7062,
+            "row": 2,
+            "row_top1": 0.986,
+            "gap": 0.2797
+          }
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s0of12.jsonl",
+          "line": 1,
+          "sid": "wc25_128_0312",
+          "seed": "seed5001",
+          "head": 3,
+          "block": 12,
+          "correct": 15,
+          "absent_gold": {
+            "tok": 220,
+            "best_sim": 0.4486,
+            "row": 10,
+            "row_top1": 0.5156,
+            "gap": 0.0669
+          }
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s0of12.jsonl",
+          "line": 1,
+          "sid": "wc25_128_0312",
+          "seed": "seed5001",
+          "head": 7,
+          "block": 6,
+          "correct": 15,
+          "absent_gold": {
+            "tok": 459,
+            "best_sim": 0.6799,
+            "row": 1,
+            "row_top1": 0.9842,
+            "gap": 0.3043
+          }
+        }
+      ],
+      "files": [
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s0of12.jsonl",
+          "rows": 223
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s0of16.jsonl",
+          "rows": 20
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s10of12.jsonl",
+          "rows": 226
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s10of16.jsonl",
+          "rows": 20
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s11of12.jsonl",
+          "rows": 223
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s11of16.jsonl",
+          "rows": 23
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s12of16.jsonl",
+          "rows": 20
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s13of16.jsonl",
+          "rows": 16
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s14of16.jsonl",
+          "rows": 19
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s15of16.jsonl",
+          "rows": 19
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s1of12.jsonl",
+          "rows": 227
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s1of16.jsonl",
+          "rows": 18
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s2of12.jsonl",
+          "rows": 225
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s2of16.jsonl",
+          "rows": 17
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s3of12.jsonl",
+          "rows": 221
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s3of16.jsonl",
+          "rows": 22
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s4of12.jsonl",
+          "rows": 222
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s4of16.jsonl",
+          "rows": 22
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s5of12.jsonl",
+          "rows": 227
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s5of16.jsonl",
+          "rows": 19
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s6of12.jsonl",
+          "rows": 226
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s6of16.jsonl",
+          "rows": 17
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s7of12.jsonl",
+          "rows": 223
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s7of16.jsonl",
+          "rows": 19
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s8of12.jsonl",
+          "rows": 225
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s8of16.jsonl",
+          "rows": 18
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s9of12.jsonl",
+          "rows": 227
+        },
+        {
+          "file": "attribution/llama32_1b/per_sample_instr_s9of16.jsonl",
+          "rows": 16
+        }
+      ],
+      "meta_records": 12,
+      "distinct_calibration_diagnostic_sets": 1,
+      "phases": {
+        "theta_s": {
+          "n": 12,
+          "min": 17.161953017115593,
+          "median": 30.14361884596292,
+          "max": 33.144535046070814
+        },
+        "load_s": {
+          "n": 12,
+          "min": 5.102624644059688,
+          "median": 7.582513511413708,
+          "max": 10.58113956800662
+        },
+        "calibrate_s": {
+          "n": 12,
+          "min": 0.3084255119320005,
+          "median": 0.42677869100589305,
+          "max": 0.6869593630544841
+        },
+        "dict_build_s": {
+          "n": 12,
+          "min": 6.397103850031272,
+          "median": 11.105420807609335,
+          "max": 13.08753684302792
+        }
+      },
+      "decode_seconds_per_1000_head_token": 15.001867308887306,
+      "decode_seconds_per_1000_target_token": 120.01493847109845,
+      "target_token_seed_denominator": 1538464
+    }
+  },
+  "matched": {
+    "Llama-3.2-1B": {
+      "rows": 100,
+      "unique_sids": 100,
+      "counters": {
+        "main_hits": 200,
+        "main_targets_with_any_hit": 100,
+        "main_same_choice_across_seeds": 100,
+        "hit_flag_mismatch": 0,
+        "b1_hits": 1,
+        "b1_targets_with_any_hit": 1,
+        "b1_same_choice_across_seeds": 64,
+        "b3_hits": 3,
+        "b3_targets_with_any_hit": 3,
+        "b3_same_choice_across_seeds": 64
+      },
+      "control_hits_per_metric": {
+        "gram": 74,
+        "sorted_row_norm": 37,
+        "procrustes": 3
+      },
+      "raw_per_target_timing_present": false,
+      "summary": {
+        "n_targets": 100,
+        "time_mean_s": {
+          "main": 0.560415,
+          "b1": 0.006811,
+          "b3": 0.514766,
+          "control": 0.093195,
+          "protect": 0.018136
+        },
+        "time_total_s": {
+          "main": 112.083,
+          "b1": 1.362,
+          "b3": 102.953,
+          "control": 9.32,
+          "protect": 3.627
+        },
+        "t_phase": {
+          "load_s": 40.05843429500237,
+          "theta_s": 38.229350878158584,
+          "dict_build_s": 19.309448017040268,
+          "calibrate_s": 0.6123434118926525
+        },
+        "threads": 4
+      }
+    },
+    "Qwen2.5-0.5B": {
+      "rows": 100,
+      "unique_sids": 100,
+      "counters": {
+        "main_hits": 200,
+        "main_targets_with_any_hit": 100,
+        "main_same_choice_across_seeds": 100,
+        "hit_flag_mismatch": 0,
+        "b1_hits": 8,
+        "b1_targets_with_any_hit": 6,
+        "b1_same_choice_across_seeds": 66,
+        "b3_hits": 18,
+        "b3_targets_with_any_hit": 10,
+        "b3_same_choice_across_seeds": 68
+      },
+      "control_hits_per_metric": {
+        "gram": 41,
+        "sorted_row_norm": 3,
+        "procrustes": 9
+      },
+      "raw_per_target_timing_present": false,
+      "summary": {
+        "n_targets": 100,
+        "time_mean_s": {
+          "main": 0.13782,
+          "b1": 0.00617,
+          "b3": 0.125652,
+          "control": 0.047288,
+          "protect": 0.017569
+        },
+        "time_total_s": {
+          "main": 27.564,
+          "b1": 1.234,
+          "b3": 25.13,
+          "control": 4.729,
+          "protect": 3.514
+        },
+        "t_phase": {
+          "load_s": 17.769682759884745,
+          "theta_s": 4.096953562926501,
+          "dict_build_s": 3.7615264039486647,
+          "calibrate_s": 0.07559379003942013
+        },
+        "threads": 4
+      }
+    }
+  },
+  "probes": {
+    "Qwen2.5-0.5B": {
+      "rows": 6,
+      "requested": [
+        "abxyz1e0(default)",
+        "a",
+        "z",
+        "x",
+        "y",
+        "w"
+      ],
+      "used": [
+        "a",
+        "a",
+        "z",
+        "x",
+        "y",
+        "w"
+      ],
+      "unique_actual_probes": [
+        "a",
+        "w",
+        "x",
+        "y",
+        "z"
+      ],
+      "logged_margin_events": 12,
+      "calibrate_seconds": {
+        "n": 6,
+        "min": 0.201,
+        "median": 0.2395,
+        "max": 0.318
+      },
+      "harness_seconds": {
+        "n": 6,
+        "min": 62.6,
+        "median": 71.0,
+        "max": 99.2
+      },
+      "head_counts": [
+        "2/2",
+        "2/2",
+        "2/2",
+        "2/2",
+        "2/2",
+        "2/2"
+      ]
+    },
+    "Llama-3.2-1B": {
+      "rows": 6,
+      "requested": [
+        "abxyz1e0(default)",
+        "a",
+        "z",
+        "x",
+        "y",
+        "w"
+      ],
+      "used": [
+        "a",
+        "a",
+        "z",
+        "x",
+        "y",
+        "w"
+      ],
+      "unique_actual_probes": [
+        "a",
+        "w",
+        "x",
+        "y",
+        "z"
+      ],
+      "logged_margin_events": 32,
+      "calibrate_seconds": {
+        "n": 6,
+        "min": 0.919,
+        "median": 0.9969999999999999,
+        "max": 1.242
+      },
+      "harness_seconds": {
+        "n": 6,
+        "min": 127.0,
+        "median": 145.75,
+        "max": 197.4
+      },
+      "head_counts": [
+        "8/8",
+        "8/8",
+        "8/8",
+        "8/8",
+        "8/8",
+        "8/8"
+      ]
+    }
+  },
+  "deployment": {
+    "device": {
+      "rows": 1,
+      "key_duplicates": 0,
+      "conditions": {
+        "device": 1
+      },
+      "statuses": {
+        "not_available": 1
+      },
+      "functional_pass": 0,
+      "plain_vs_full_max": 0
+    },
+    "ledger": {
+      "rows": 1,
+      "key_duplicates": 0,
+      "conditions": {
+        "ledger": 1
+      },
+      "statuses": {
+        "measured": 1
+      },
+      "functional_pass": 0,
+      "plain_vs_full_max": 0
+    },
+    "multi_turn_s0of4": {
+      "rows": 400,
+      "key_duplicates": 0,
+      "conditions": {
+        "multi_turn": 300,
+        "multi_turn_req": 100
+      },
+      "statuses": {
+        "measured": 400
+      },
+      "functional_pass": 300,
+      "plain_vs_full_max": 6.580352783203125e-05
+    },
+    "multi_turn_s1of4": {
+      "rows": 400,
+      "key_duplicates": 0,
+      "conditions": {
+        "multi_turn": 300,
+        "multi_turn_req": 100
+      },
+      "statuses": {
+        "measured": 400
+      },
+      "functional_pass": 300,
+      "plain_vs_full_max": 0.625
+    },
+    "multi_turn_s2of4": {
+      "rows": 400,
+      "key_duplicates": 0,
+      "conditions": {
+        "multi_turn": 300,
+        "multi_turn_req": 100
+      },
+      "statuses": {
+        "measured": 400
+      },
+      "functional_pass": 300,
+      "plain_vs_full_max": 4.3839216232299805e-05
+    },
+    "multi_turn_s3of4": {
+      "rows": 400,
+      "key_duplicates": 0,
+      "conditions": {
+        "multi_turn": 300,
+        "multi_turn_req": 100
+      },
+      "statuses": {
+        "measured": 400
+      },
+      "functional_pass": 300,
+      "plain_vs_full_max": 0.296875
+    },
+    "reencode_s0of2": {
+      "rows": 100,
+      "key_duplicates": 0,
+      "conditions": {
+        "reencode": 100
+      },
+      "statuses": {
+        "measured": 100
+      },
+      "functional_pass": 100,
+      "plain_vs_full_max": 0
+    },
+    "reencode_s1of2": {
+      "rows": 100,
+      "key_duplicates": 0,
+      "conditions": {
+        "reencode": 100
+      },
+      "statuses": {
+        "measured": 100
+      },
+      "functional_pass": 100,
+      "plain_vs_full_max": 0
+    },
+    "scheduler": {
+      "rows": 1,
+      "key_duplicates": 0,
+      "conditions": {
+        "scheduler": 1
+      },
+      "statuses": {
+        "not_implemented": 1
+      },
+      "functional_pass": 0,
+      "plain_vs_full_max": 0
+    },
+    "shared_prefix_s0of2": {
+      "rows": 100,
+      "key_duplicates": 0,
+      "conditions": {
+        "shared_prefix": 100
+      },
+      "statuses": {
+        "measured": 100
+      },
+      "functional_pass": 100,
+      "plain_vs_full_max": 0
+    },
+    "shared_prefix_s1of2": {
+      "rows": 100,
+      "key_duplicates": 0,
+      "conditions": {
+        "shared_prefix": 100
+      },
+      "statuses": {
+        "measured": 100
+      },
+      "functional_pass": 100,
+      "plain_vs_full_max": 0
+    }
+  },
+  "reported_probe_events": {
+    "total": 68,
+    "unique_records": 7,
+    "policy": "cluster_incomplete => probe change executed (<=2 alternates, cost recorded); degeneracy margins below thresholds => recorded as would-trigger; sensitivity quantified in probe_sensitivity section"
+  },
+  "coverage": {
+    "main_total_misses": 516666,
+    "rerun_misses": 37466,
+    "fraction": 0.07251493227733197
+  }
+}

@@ -1,0 +1,89 @@
+{
+ "created": "2026-10-31T15:42:00+08:00",
+ "task_source": "presentation/cleanup-and-comments-20261031/CLAUDE_REMAINING_TASKS_ZH.md",
+ "scope": "8 remaining review comments: read-only evidence indexing (tasks 1-6,8) plus legitimate known-key defense deployment semantics measurement (task 7)",
+ "rules_binding": [
+  "paper/comment files are not modified; no emails; no anonymous-mirror operations",
+  "no new key-recovery/attack-reproduction/attack-optimization runs; attack-side comments only index existing evidence, gaps stay open",
+  "no resampling: frozen main_public 3,000 list and lifecycle 100 IDs are reused; paired conditions do not add independent prompt denominators",
+  "GLM and all completed queues are not restarted",
+  "S/a v2 is accepted as-is (4,597 pass / 7,403 fail retained; original 2,306/6,000 vs refresh 2,291/6,000, 63 discordant pairs); it is not rerun and 'fully symmetric' phrasing is banned",
+  "valid negative results, errors and not_run are retained; acceptance = correct measurement + complete records",
+  "deleted materials are not restored from old paths; v1 dir inputs.jsonl remains the frozen text source"
+ ],
+ "evidence_tasks_read_only": {
+  "1_numeric_stability": {
+   "deliverable": "numeric_evidence_index.json",
+   "question": "sign-test norm gap, smallest coordinate-pair norm, projection residual, probe-change events, failed attempts/retries in retained records",
+   "sources": ["corrected/probe.jsonl", "corrected/probe_multikey.jsonl", "corrected/need_ratio.jsonl", "corrected/order/", "corrected/logs/", "main_public per_sample/logs"],
+   "rule": "quantities not saved are marked not_recorded; cosine/state-separation/w-error do not substitute"
+  },
+  "2_version_binding": {
+   "deliverable": "historical_version_binding.json",
+   "question": "12 main-table configurations: run-bound checkpoint/tokenizer revision",
+   "sources": ["corrected/main_run_record_audit_20261030.json (reused)", "corrected/logs/mp_*.log", "overleaf appendix tab:revisions"],
+   "rule": "current HF cache listings and today's loads are not historical bindings; no model reruns"
+  },
+  "3_timing_comparability": {
+   "deliverable": "timing_comparability.json",
+   "question": "spectrum-control vs main-method wall-clock comparability",
+   "sources": ["corrected/spectrum_*_summary.json", "corrected/review_perf_20261030/", "corrected/battery_perf512/", "main_public per_sample timing fields"],
+   "rule": "512-token defense operation times never fill attack-cost cells; mixed total_time_s is not decomposed"
+  },
+  "4_miss_attribution": {
+   "deliverable": "miss_distribution.json + attribution_evidence_index.json",
+   "question": "descriptive distribution of the 516,666 misses; per-block candidate/gap/collision diagnostics if saved",
+   "sources": ["main_public per_sample.jsonl (recomputed offline)", "corrected/probe*.jsonl"],
+   "rule": "totals must still sum to 516,666; descriptive distribution is not mechanism attribution; missing per-block records stay mechanism_unidentified"
+  },
+  "5_component_costs": {
+   "deliverable": "component_cost_evidence.json",
+   "question": "calibration time, dictionary construction time/memory, decoding time per 1,000 target tokens, hardware, threads, vocabulary",
+   "sources": ["corrected/logs/", "main_public per_sample", "experiments/kvcloak/bench_costs.py records"],
+   "rule": "offline-load / one-time / per-target costs separated where recorded; no back-filling from mixed totals"
+  },
+  "6_scaling_claims": {
+   "deliverable": "scaling_claim_evidence.md",
+   "question": "orthogonality assumption, ratio=1.25 point results, fixed-ratio results vs manuscript claims",
+   "sources": ["overleaf sections/attack.tex:42 context", "corrected/ratio_fit.json", "corrected/need_ratio.jsonl"],
+   "rule": "claim/evidence/scope/gap listed per item; unproven generalization suggestions flagged for the author"
+  },
+  "8_baseline_matrix": {
+   "deliverable": "baseline_evidence_matrix.json",
+   "question": "matched baselines on the full protected-cache transform: input access, visible objects, metrics, task boundaries, measured failure conditions",
+   "sources": ["overleaf sections/related.tex + tab:neighbors", "references/classics-12 catalog", "arithmetic-profile control records"],
+   "rule": "mechanism comparison is not head-to-head; no new baseline implementations or runs"
+  }
+ },
+ "task7_deployment_measurement": {
+   "system_under_test": "VeilKV defense codec (defense_runtime copy from release/defense-stage-v2pyknb7: exp_veilkv_plus.py, corrected/freshness.py, veilkv_runtime.py) run from this handoff directory; release stage itself is not modified",
+   "inputs": {
+    "ids": "lifecycle 100 IDs from defense_handoff_20261030_1600/inputs.jsonl (frozen texts)",
+    "prefix": "policy-public 16-token prefix (v2 convention, exact-16 asserted)",
+    "body": "tokenizer(text)[:134]; continuation = last 6 real tokens consumed 2/3/1",
+    "sanity_first": "first 5 IDs, separate sanity directory, all gates must pass before the full set"
+   },
+   "conditions": {
+    "multi_turn": "100 IDs x 2 models x 2 dtypes x 3 segments = 1,200 segment keys (400 request keys): one VeilKV protect at prefill (TEE profile, epoch 3, per-request principal/nonce derived reproducibly), authenticated recovery, then the same 2/3/1 continuation through plain and protected branches; same-timestep whole-tensor logits compare vs plain cached and full forward; plain baseline independently cloned, all-layer K/V pollution checked",
+    "shared_prefix": "100 IDs x 2 models (fp32) = 200 keys: same policy-public prefix, two principals (A = this ID tail, B = next-ID tail, declared pairing); checks: public artifact_id equality, freshness-service public object identity/reuse, per-principal recovery equals its own plain cache (bytes/dtype), cross-principal nonce/tail binding rejected (TamperError), wrong-concatenation rejected",
+    "reencode": "100 IDs x 2 models (fp32) = 200 keys: recover -> re-protect under a fresh nonce and epoch 4 -> recover; cache-level equality vs plain, dtype/shape/format checks, old-epoch material rejected under new epoch, duplicate-nonce reuse rejected by the freshness service; the source interface's support for re-protection is declared",
+    "ledger": "scripted scenarios on a dedicated test freshness DB: restart persistence of nonce registration, public-object consistency, concurrent same-nonce and distinct-nonce writes, event order and exit codes; software ledger explicitly not hardware rollback resistance",
+    "device": "actual hardware probed (GPU present/absent); no GPU -> not_available with evidence; no simulated GPU passes",
+    "scheduler": "repo/release searched for a real serving adapter; none found -> not_implemented; toy PageManager not substituted"
+   },
+   "expected_key_sets": {
+    "multi_turn_segments": 1200,
+    "multi_turn_requests": 400,
+    "shared_prefix": 200,
+    "reencode": 200,
+    "ledger_scenarios": "declared scenario list",
+    "device": 1,
+    "scheduler": 1
+   },
+   "allowed_behaviors": "test program holds every configuration/key legally; only protect/recover/state interfaces called",
+   "forbidden_behaviors": "no attacker-visibility claims; no freshness bypass to force passes; no mixing of plain state into protected branches; functional failures retained",
+   "environment": "experiments/kvcloak/.venv (python 3.12.3, torch 2.14.0+cpu, transformers 4.51.3); HF_HUB_OFFLINE=1; model revision via AutoConfig._commit_hash at load; dedicated VEILKV_NONCE_DB under this directory",
+   "workers": "multi_turn sharded 4 shards x (model,dtype) = 16 processes x 4 threads; codec conditions single process; actual counts recorded in launcher_run.json"
+ },
+ "deliverables_final": ["per-task JSON/MD deliverables", "task7 sanity + full outputs with PROTOCOL-first discipline", "comment_status.json", "HANDOFF_FOR_CODEX.md"]
+}

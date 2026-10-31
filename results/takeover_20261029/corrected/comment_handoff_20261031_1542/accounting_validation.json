@@ -1,0 +1,118 @@
+{
+ "generated": "2026-10-31T16:27:50+08:00",
+ "sanity": false,
+ "multi_turn": {
+  "expected_total": 1200,
+  "records": 1200,
+  "set_complete": true,
+  "measured": 1200,
+  "error": 0,
+  "not_run": 0,
+  "functional_pass": 1200,
+  "bitexact": 1200,
+  "sanity_nonzero": 0,
+  "plain_vs_full_max": 0.625
+ },
+ "multi_turn_requests": {
+  "expected_total": 400,
+  "records": 400,
+  "plain_pollution": 0,
+  "recovered_bitexact": 400
+ },
+ "shared_prefix": {
+  "expected_total": 200,
+  "records": 200,
+  "measured": 200,
+  "error": 0,
+  "not_run": 0,
+  "functional_pass": 200
+ },
+ "reencode": {
+  "expected_total": 200,
+  "records": 200,
+  "measured": 200,
+  "error": 0,
+  "not_run": 0,
+  "functional_pass": 200
+ },
+ "ledger": [
+  {
+   "key": "ledger|scenarios",
+   "condition": "ledger",
+   "status": "measured",
+   "events": [
+    {
+     "event": "claim_first",
+     "ok": true,
+     "detail": "registered"
+    },
+    {
+     "event": "claim_duplicate",
+     "ok": true,
+     "detail": "rejected: private request nonce already used"
+    },
+    {
+     "event": "claim_after_restart",
+     "ok": true,
+     "detail": "persistent reject: private request nonce already used"
+    },
+    {
+     "event": "public_store",
+     "ok": true,
+     "detail": "stored"
+    },
+    {
+     "event": "public_idempotent",
+     "ok": true,
+     "detail": "same content accepted"
+    },
+    {
+     "event": "public_conflict",
+     "ok": true,
+     "detail": "rejected: public artifact content changed for the same identity"
+    },
+    {
+     "event": "public_after_restart",
+     "ok": true,
+     "detail": "consistent"
+    },
+    {
+     "event": "concurrent_distinct",
+     "ok": true,
+     "detail": "['ok', 'ok']"
+    },
+    {
+     "event": "concurrent_same_nonce_exactly_one",
+     "ok": true,
+     "detail": "['ok', 'reject']"
+    }
+   ],
+   "all_expected": true,
+   "note": "software ledger; not hardware rollback resistance"
+  }
+ ],
+ "device": [
+  {
+   "key": "device|probe",
+   "condition": "device",
+   "status": "not_available",
+   "gpu_available": false,
+   "cuda_available": false,
+   "detail": "nvidia-smi unavailable: [Errno 2] No such file or directory: 'nvidia-smi'",
+   "note": "no simulated GPU results are produced"
+  }
+ ],
+ "scheduler": [
+  {
+   "key": "scheduler|search",
+   "condition": "scheduler",
+   "status": "not_implemented",
+   "searched": [
+    "experiments/kvcloak",
+    "results/takeover_20261029/release/defense-stage-v2pyknb7"
+   ],
+   "serving_class_hits": [],
+   "note": "no real serving adapter found; toy PageManager not substituted"
+  }
+ ]
+}

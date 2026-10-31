@@ -1,0 +1,81 @@
+{
+ "tag": "olmo2_1b",
+ "model": "allenai/OLMo-2-0425-1B",
+ "b": 16,
+ "n_samples": 3000,
+ "correct": 24739295,
+ "total": 24748544,
+ "acc": 0.999626,
+ "ci95_wilson": [
+  0.999619,
+  0.999634
+ ],
+ "states_info": {
+  "0": {
+   "states": 16,
+   "separation": 518.7
+  },
+  "1": {
+   "states": 16,
+   "separation": 602.1
+  },
+  "2": {
+   "states": 16,
+   "separation": 822.4
+  },
+  "3": {
+   "states": 16,
+   "separation": 722.3
+  },
+  "4": {
+   "states": 16,
+   "separation": 810.0
+  },
+  "5": {
+   "states": 16,
+   "separation": 611.7
+  },
+  "6": {
+   "states": 16,
+   "separation": 684.3
+  },
+  "7": {
+   "states": 16,
+   "separation": 792.0
+  },
+  "8": {
+   "states": 16,
+   "separation": 602.4
+  },
+  "9": {
+   "states": 16,
+   "separation": 886.3
+  },
+  "10": {
+   "states": 16,
+   "separation": 759.4
+  },
+  "11": {
+   "states": 16,
+   "separation": 719.2
+  },
+  "12": {
+   "states": 16,
+   "separation": 825.5
+  },
+  "13": {
+   "states": 16,
+   "separation": 984.5
+  },
+  "14": {
+   "states": 16,
+   "separation": 548.6
+  },
+  "15": {
+   "states": 16,
+   "separation": 556.2
+  }
+ },
+ "heads_with_secrets": "16/16",
+ "total_time_s": 65845.9
+}

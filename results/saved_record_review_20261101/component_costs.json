@@ -1,0 +1,33 @@
+{
+  "models": {
+    "qwen25_05b": {
+      "heads": 2,
+      "vocabulary": 151936,
+      "relative_chosen_residual_median": 0.0005823990752840108,
+      "coordinate_pair_norm_min": 0.0031920751508311036,
+      "projection_mean_residual_median": 0.11013901978731155,
+      "projection_worst_row_residual": 1.0448039770126343,
+      "dictionary_seconds_median": 2.120599839487113,
+      "calibration_stage_seconds_median": 0.107058733003214,
+      "process_peak_reported_mb": 4561.6,
+      "decode_seconds_per_1000_target_token": 43.44181384407224,
+      "target_token_seed_positions": 1560928,
+      "head_token_opportunities": 3121856
+    },
+    "llama32_1b": {
+      "heads": 8,
+      "vocabulary": 128256,
+      "relative_chosen_residual_median": 0.0009117631792081252,
+      "coordinate_pair_norm_min": 0.0035807991760495707,
+      "projection_mean_residual_median": 0.0685751885175705,
+      "projection_worst_row_residual": 1.0531086921691895,
+      "dictionary_seconds_median": 11.105420807609335,
+      "calibration_stage_seconds_median": 0.42677869100589305,
+      "process_peak_reported_mb": 7588.1,
+      "decode_seconds_per_1000_target_token": 120.01493847109845,
+      "target_token_seed_positions": 1538464,
+      "head_token_opportunities": 12307712
+    }
+  },
+  "scope": "Instrumented saved CPU calls, not serving throughput; repeated workers share one configuration per model."
+}

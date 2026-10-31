@@ -1,0 +1,145 @@
+{
+ "tag": "phi3_mini",
+ "model": "microsoft/Phi-3-mini-4k-instruct",
+ "b": 16,
+ "n_samples": 3000,
+ "correct": 61746079,
+ "total": 62180352,
+ "acc": 0.993016,
+ "ci95_wilson": [
+  0.992995,
+  0.993037
+ ],
+ "states_info": {
+  "0": {
+   "states": 16,
+   "separation": 1340.4
+  },
+  "1": {
+   "states": 16,
+   "separation": 1301.8
+  },
+  "2": {
+   "states": 16,
+   "separation": 986.4
+  },
+  "3": {
+   "states": 16,
+   "separation": 1285.2
+  },
+  "4": {
+   "states": 16,
+   "separation": 826.8
+  },
+  "5": {
+   "states": 16,
+   "separation": 1137.1
+  },
+  "6": {
+   "states": 16,
+   "separation": 1375.6
+  },
+  "7": {
+   "states": 16,
+   "separation": 1000.3
+  },
+  "8": {
+   "states": 16,
+   "separation": 1216.1
+  },
+  "9": {
+   "states": 16,
+   "separation": 1132.3
+  },
+  "10": {
+   "states": 16,
+   "separation": 894.9
+  },
+  "11": {
+   "states": 16,
+   "separation": 894.8
+  },
+  "12": {
+   "states": 16,
+   "separation": 1016.5
+  },
+  "13": {
+   "states": 16,
+   "separation": 851.9
+  },
+  "14": {
+   "states": 16,
+   "separation": 1365.5
+  },
+  "15": {
+   "states": 16,
+   "separation": 1038.3
+  },
+  "16": {
+   "states": 16,
+   "separation": 1232.1
+  },
+  "17": {
+   "states": 16,
+   "separation": 1069.0
+  },
+  "18": {
+   "states": 16,
+   "separation": 1531.0
+  },
+  "19": {
+   "states": 16,
+   "separation": 935.2
+  },
+  "20": {
+   "states": 16,
+   "separation": 1120.2
+  },
+  "21": {
+   "states": 16,
+   "separation": 1177.4
+  },
+  "22": {
+   "states": 16,
+   "separation": 1081.2
+  },
+  "23": {
+   "states": 16,
+   "separation": 941.8
+  },
+  "24": {
+   "states": 16,
+   "separation": 978.7
+  },
+  "25": {
+   "states": 16,
+   "separation": 990.2
+  },
+  "26": {
+   "states": 16,
+   "separation": 1332.7
+  },
+  "27": {
+   "states": 16,
+   "separation": 1185.4
+  },
+  "28": {
+   "states": 16,
+   "separation": 1081.8
+  },
+  "29": {
+   "states": 16,
+   "separation": 1195.1
+  },
+  "30": {
+   "states": 16,
+   "separation": 837.1
+  },
+  "31": {
+   "states": 16,
+   "separation": 1149.8
+  }
+ },
+ "heads_with_secrets": "32/32",
+ "total_time_s": 43910.5
+}

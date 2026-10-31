@@ -21,10 +21,13 @@ Original and refreshed configurations pass 2,306/6,000 and 2,291/6,000 segments;
 or unconditional functional equivalence are not established. The stored
 VALIDATION_STATUS.json contains independent recomputed counts and scope.
 
-Only one prefill protection/recovery is followed by three continuation segments.
-The test does not establish repeated encryption, shared-prefix scheduler,
-hardware-attestation or device-transfer correctness. The current observations
-are retained as functional results, including all valid negative outcomes.
+The row-secret study uses one prefill protection/recovery followed by three
+continuation segments. A separate known-key byte-profile study includes 1,200
+continuation segments, 200 equal-length shared-prefix cases and 200 single
+re-protection cases, plus nine software-ledger scenarios. Its validation record
+states the exact functional scope. Neither study establishes real serving
+scheduler integration, hardware attestation, device-transfer correctness or
+security against within-request observations. All valid negative outcomes remain.
 
 ## Offline inspection
 

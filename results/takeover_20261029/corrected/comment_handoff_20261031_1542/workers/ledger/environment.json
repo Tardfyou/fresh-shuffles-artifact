@@ -1,0 +1,17 @@
+{
+ "condition": "ledger",
+ "pid": 521913,
+ "started": "2026-10-31T15:59:26+08:00",
+ "torch": "2.14.0+cpu",
+ "transformers": "4.51.3",
+ "threads": 4,
+ "run_token": "20261031T155919",
+ "shard": null,
+ "db": "results/takeover_20261029/corrected/comment_handoff_20261031_1542/ledger_test.sqlite",
+ "finished": "2026-10-31T15:59:26+08:00",
+ "counts": {
+  "measured": 1,
+  "error": 0,
+  "not_run": 0
+ }
+}
