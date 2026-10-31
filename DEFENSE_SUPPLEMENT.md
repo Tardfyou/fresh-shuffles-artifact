@@ -42,8 +42,8 @@ Measurements can be inspected without repeating the experiment. Their actual
 measurement source copies remain next to the original data, with known machine
 paths replaced only in distribution copies. The source test's historical input
 path is supplied with the same 100 fixed texts; rejected v1 measurements are not
-included or pooled. Earlier harness failures remain in the private provenance
-archive and are not counted as functional outcomes of this corrected condition.
+included or pooled. Discarded harness attempts were permanently removed at the owner's request.
+All accepted positive and negative functional outcomes remain available.
 
 Worker files originally contain #run headers. In these copies only, those
 headers are moved into separate run_events.json sidecars, leaving strict JSONL
