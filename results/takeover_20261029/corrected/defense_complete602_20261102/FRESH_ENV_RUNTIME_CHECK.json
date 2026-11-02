@@ -1,0 +1,174 @@
+{
+  "unit_cases": 16,
+  "passed": 16,
+  "all_pass": true,
+  "scope": "Synthetic finite-tensor codec/runtime unit checks only; not additional WildChat prompts or serving/GPU evidence.",
+  "dependencies": {
+    "torch": "2.14.0+cpu",
+    "transformers": "4.51.3",
+    "numpy": "2.5.3",
+    "cryptography": "50.0.1"
+  },
+  "cases": [
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "length": 48,
+      "public_blocks": 0,
+      "cache_bits_exact": true,
+      "source_unmodified": true,
+      "principal_only_rejected": true,
+      "pass": true
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "length": 48,
+      "public_blocks": 1,
+      "cache_bits_exact": true,
+      "source_unmodified": true,
+      "principal_only_rejected": true,
+      "pass": true
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "length": 51,
+      "public_blocks": 0,
+      "cache_bits_exact": true,
+      "source_unmodified": true,
+      "principal_only_rejected": true,
+      "pass": true
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 1,
+      "length": 51,
+      "public_blocks": 1,
+      "cache_bits_exact": true,
+      "source_unmodified": true,
+      "principal_only_rejected": true,
+      "pass": true
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "length": 48,
+      "public_blocks": 0,
+      "cache_bits_exact": true,
+      "source_unmodified": true,
+      "principal_only_rejected": true,
+      "pass": true
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "length": 48,
+      "public_blocks": 1,
+      "cache_bits_exact": true,
+      "source_unmodified": true,
+      "principal_only_rejected": true,
+      "pass": true
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "length": 51,
+      "public_blocks": 0,
+      "cache_bits_exact": true,
+      "source_unmodified": true,
+      "principal_only_rejected": true,
+      "pass": true
+    },
+    {
+      "dtype": "torch.float32",
+      "batch": 2,
+      "length": 51,
+      "public_blocks": 1,
+      "cache_bits_exact": true,
+      "source_unmodified": true,
+      "principal_only_rejected": true,
+      "pass": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "length": 48,
+      "public_blocks": 0,
+      "cache_bits_exact": true,
+      "source_unmodified": true,
+      "principal_only_rejected": true,
+      "pass": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "length": 48,
+      "public_blocks": 1,
+      "cache_bits_exact": true,
+      "source_unmodified": true,
+      "principal_only_rejected": true,
+      "pass": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "length": 51,
+      "public_blocks": 0,
+      "cache_bits_exact": true,
+      "source_unmodified": true,
+      "principal_only_rejected": true,
+      "pass": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 1,
+      "length": 51,
+      "public_blocks": 1,
+      "cache_bits_exact": true,
+      "source_unmodified": true,
+      "principal_only_rejected": true,
+      "pass": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "length": 48,
+      "public_blocks": 0,
+      "cache_bits_exact": true,
+      "source_unmodified": true,
+      "principal_only_rejected": true,
+      "pass": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "length": 48,
+      "public_blocks": 1,
+      "cache_bits_exact": true,
+      "source_unmodified": true,
+      "principal_only_rejected": true,
+      "pass": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "length": 51,
+      "public_blocks": 0,
+      "cache_bits_exact": true,
+      "source_unmodified": true,
+      "principal_only_rejected": true,
+      "pass": true
+    },
+    {
+      "dtype": "torch.bfloat16",
+      "batch": 2,
+      "length": 51,
+      "public_blocks": 1,
+      "cache_bits_exact": true,
+      "source_unmodified": true,
+      "principal_only_rejected": true,
+      "pass": true
+    }
+  ]
+}

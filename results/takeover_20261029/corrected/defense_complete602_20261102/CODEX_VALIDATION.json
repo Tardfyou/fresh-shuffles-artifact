@@ -1,0 +1,663 @@
+{
+  "complete": true,
+  "record_integrity_pass": true,
+  "measurement_protocol_accepted": true,
+  "accepted_for_paper": true,
+  "expected_requests": 48160,
+  "counts": {
+    "records": 48160,
+    "functional_pass": 48160,
+    "consumer_comparisons": 96320,
+    "consumer_comparisons_passed": 96320,
+    "rejection_observations": 445480,
+    "rejections_recorded": 445480
+  },
+  "missing_keys_count": 0,
+  "issues": [],
+  "functional_failures": [],
+  "cells": {
+    "Llama-3.2-1B|bfloat16|no_pad|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|no_pad|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|no_pad|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|no_pad|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|left8|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|left8|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|left8|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|left8|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|right8|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|right8|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|right8|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|right8|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|left16|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|left16|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|left16|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|left16|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|right16|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|right16|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|right16|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|bfloat16|right16|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|no_pad|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|no_pad|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|no_pad|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|no_pad|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|left8|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|left8|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|left8|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|left8|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|right8|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|right8|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|right8|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|right8|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|left16|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|left16|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|left16|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|left16|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|right16|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|right16|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|right16|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Llama-3.2-1B|float32|right16|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|no_pad|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|no_pad|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|no_pad|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|no_pad|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|left8|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|left8|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|left8|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|left8|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|right8|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|right8|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|right8|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|right8|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|left16|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|left16|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|left16|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|left16|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|right16|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|right16|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|right16|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|bfloat16|right16|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|no_pad|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|no_pad|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|no_pad|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|no_pad|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|left8|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|left8|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|left8|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|left8|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|right8|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|right8|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|right8|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|right8|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|left16|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|left16|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|left16|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|left16|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|right16|chained_reencode": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|right16|identity_epoch": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|right16|mid_session": {
+      "records": 602,
+      "functional_pass": 602
+    },
+    "Qwen2.5-0.5B|float32|right16|shared_prefix": {
+      "records": 602,
+      "functional_pass": 602
+    }
+  },
+  "shape_fixtures": 6020,
+  "overlapping_old_fixtures_equal": 1000,
+  "baseline_full_vs_cached_maxima": {
+    "Llama-3.2-1B|bfloat16|no_pad": 0.3251953125,
+    "Llama-3.2-1B|bfloat16|left8": 0.65625,
+    "Llama-3.2-1B|bfloat16|right8": 0.53125,
+    "Llama-3.2-1B|bfloat16|left16": 0.34375,
+    "Llama-3.2-1B|bfloat16|right16": 0.5,
+    "Llama-3.2-1B|float32|no_pad": 5.53131103515625e-05,
+    "Llama-3.2-1B|float32|left8": 5.7220458984375e-05,
+    "Llama-3.2-1B|float32|right8": 8.64565372467041e-05,
+    "Llama-3.2-1B|float32|left16": 5.53131103515625e-05,
+    "Llama-3.2-1B|float32|right16": 8.0108642578125e-05,
+    "Qwen2.5-0.5B|bfloat16|no_pad": 0.625,
+    "Qwen2.5-0.5B|bfloat16|left8": 0.6875,
+    "Qwen2.5-0.5B|bfloat16|right8": 1.046875,
+    "Qwen2.5-0.5B|bfloat16|left16": 0.765625,
+    "Qwen2.5-0.5B|bfloat16|right16": 0.861328125,
+    "Qwen2.5-0.5B|float32|no_pad": 0.00021445751190185547,
+    "Qwen2.5-0.5B|float32|left8": 0.00022834539413452148,
+    "Qwen2.5-0.5B|float32|right8": 0.00020360946655273438,
+    "Qwen2.5-0.5B|float32|left16": 0.00021445751190185547,
+    "Qwen2.5-0.5B|float32|right16": 0.00042617321014404297
+  },
+  "unchanged_runtime_source_except_freshness_resource_fix": {
+    "kvcloak.py": true,
+    "fusion.py": true,
+    "run_suite.py": true,
+    "veilkv_runtime.py": true,
+    "exp_veilkv_plus.py": true,
+    "get_kvcloak_config.py": true,
+    "veilkv_arith_fast.py": true,
+    "attack_lib.py": true,
+    "corrected/__init__.py": true,
+    "corrected/perf_isolation.py": true
+  },
+  "ledger": {
+    "rounds": 100,
+    "concurrent_workers": 8,
+    "concurrent_operations": 3200,
+    "rounds_passed": 100,
+    "rollback_control_passed": true,
+    "handle_count_before": 4,
+    "handle_count_after": 4,
+    "resource_calls": 1000,
+    "pass": true,
+    "scope": "Software SQLite state only; no hardware anti-rollback or remote-service claim."
+  },
+  "ledger_process_restart": {
+    "fresh_process": true,
+    "replayed_registered_scopes": 100,
+    "rejected": 100,
+    "passed": true
+  },
+  "ledger_actual_overlap": {
+    "rounds": 100,
+    "rounds_with_overlapping_claims": 100,
+    "peak_inflight_min": 8,
+    "peak_inflight_max": 8
+  },
+  "fresh_environment_unit_checks": {
+    "unit_cases": 16,
+    "passed": 16,
+    "all_pass": true,
+    "scope": "Synthetic finite-tensor codec/runtime unit checks only; not additional WildChat prompts or serving/GPU evidence.",
+    "dependencies": {
+      "torch": "2.14.0+cpu",
+      "transformers": "4.51.3",
+      "numpy": "2.5.3",
+      "cryptography": "50.0.1"
+    },
+    "cases": [
+      {
+        "dtype": "torch.float32",
+        "batch": 1,
+        "length": 48,
+        "public_blocks": 0,
+        "cache_bits_exact": true,
+        "source_unmodified": true,
+        "principal_only_rejected": true,
+        "pass": true
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 1,
+        "length": 48,
+        "public_blocks": 1,
+        "cache_bits_exact": true,
+        "source_unmodified": true,
+        "principal_only_rejected": true,
+        "pass": true
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 1,
+        "length": 51,
+        "public_blocks": 0,
+        "cache_bits_exact": true,
+        "source_unmodified": true,
+        "principal_only_rejected": true,
+        "pass": true
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 1,
+        "length": 51,
+        "public_blocks": 1,
+        "cache_bits_exact": true,
+        "source_unmodified": true,
+        "principal_only_rejected": true,
+        "pass": true
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 2,
+        "length": 48,
+        "public_blocks": 0,
+        "cache_bits_exact": true,
+        "source_unmodified": true,
+        "principal_only_rejected": true,
+        "pass": true
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 2,
+        "length": 48,
+        "public_blocks": 1,
+        "cache_bits_exact": true,
+        "source_unmodified": true,
+        "principal_only_rejected": true,
+        "pass": true
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 2,
+        "length": 51,
+        "public_blocks": 0,
+        "cache_bits_exact": true,
+        "source_unmodified": true,
+        "principal_only_rejected": true,
+        "pass": true
+      },
+      {
+        "dtype": "torch.float32",
+        "batch": 2,
+        "length": 51,
+        "public_blocks": 1,
+        "cache_bits_exact": true,
+        "source_unmodified": true,
+        "principal_only_rejected": true,
+        "pass": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 1,
+        "length": 48,
+        "public_blocks": 0,
+        "cache_bits_exact": true,
+        "source_unmodified": true,
+        "principal_only_rejected": true,
+        "pass": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 1,
+        "length": 48,
+        "public_blocks": 1,
+        "cache_bits_exact": true,
+        "source_unmodified": true,
+        "principal_only_rejected": true,
+        "pass": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 1,
+        "length": 51,
+        "public_blocks": 0,
+        "cache_bits_exact": true,
+        "source_unmodified": true,
+        "principal_only_rejected": true,
+        "pass": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 1,
+        "length": 51,
+        "public_blocks": 1,
+        "cache_bits_exact": true,
+        "source_unmodified": true,
+        "principal_only_rejected": true,
+        "pass": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 2,
+        "length": 48,
+        "public_blocks": 0,
+        "cache_bits_exact": true,
+        "source_unmodified": true,
+        "principal_only_rejected": true,
+        "pass": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 2,
+        "length": 48,
+        "public_blocks": 1,
+        "cache_bits_exact": true,
+        "source_unmodified": true,
+        "principal_only_rejected": true,
+        "pass": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 2,
+        "length": 51,
+        "public_blocks": 0,
+        "cache_bits_exact": true,
+        "source_unmodified": true,
+        "principal_only_rejected": true,
+        "pass": true
+      },
+      {
+        "dtype": "torch.bfloat16",
+        "batch": 2,
+        "length": 51,
+        "public_blocks": 1,
+        "cache_bits_exact": true,
+        "source_unmodified": true,
+        "principal_only_rejected": true,
+        "pass": true
+      }
+    ]
+  },
+  "resource_control": {
+    "completed_records_retained_before_reshard": 5024,
+    "retired_workers": 8,
+    "remaining_requests_reassigned": 7016,
+    "duplicate_complete_keys": 0,
+    "reschedule_measurement_helper_source": {
+      "measurement_function_bodies_unchanged": {
+        "clone": true,
+        "cache_diff": true,
+        "logits_diff": true,
+        "forward": true,
+        "consume": true,
+        "baseline": true,
+        "context": true,
+        "nonce": true,
+        "protect": true,
+        "reject": true,
+        "negatives": true,
+        "segment_record": true,
+        "trial": true
+      },
+      "change": "Resume control reads complete-key snapshot only; IDs, masks, dtypes, nonce derivation, all measurements and pass criteria unchanged."
+    },
+    "initial_worker_exit_codes": {
+      "Qwen2.5-0.5B_float32_0of8": 0,
+      "Qwen2.5-0.5B_float32_1of8": 0,
+      "Qwen2.5-0.5B_float32_2of8": 0,
+      "Qwen2.5-0.5B_float32_3of8": 0,
+      "Qwen2.5-0.5B_float32_4of8": 0,
+      "Qwen2.5-0.5B_float32_5of8": 0,
+      "Qwen2.5-0.5B_float32_6of8": 0,
+      "Qwen2.5-0.5B_float32_7of8": 0,
+      "Qwen2.5-0.5B_bfloat16_0of8": 0,
+      "Qwen2.5-0.5B_bfloat16_1of8": 0,
+      "Qwen2.5-0.5B_bfloat16_2of8": 0,
+      "Qwen2.5-0.5B_bfloat16_3of8": 0,
+      "Qwen2.5-0.5B_bfloat16_4of8": 0,
+      "Qwen2.5-0.5B_bfloat16_5of8": 0,
+      "Qwen2.5-0.5B_bfloat16_6of8": 0,
+      "Qwen2.5-0.5B_bfloat16_7of8": 0,
+      "Llama-3.2-1B_float32_0of8": -15,
+      "Llama-3.2-1B_float32_1of8": -15,
+      "Llama-3.2-1B_float32_2of8": -15,
+      "Llama-3.2-1B_float32_3of8": -15,
+      "Llama-3.2-1B_float32_4of8": -15,
+      "Llama-3.2-1B_float32_5of8": -15,
+      "Llama-3.2-1B_float32_6of8": -15,
+      "Llama-3.2-1B_float32_7of8": -15,
+      "Llama-3.2-1B_bfloat16_0of8": 0,
+      "Llama-3.2-1B_bfloat16_1of8": 0,
+      "Llama-3.2-1B_bfloat16_2of8": 0,
+      "Llama-3.2-1B_bfloat16_3of8": 0,
+      "Llama-3.2-1B_bfloat16_4of8": 0,
+      "Llama-3.2-1B_bfloat16_5of8": 0,
+      "Llama-3.2-1B_bfloat16_6of8": 0,
+      "Llama-3.2-1B_bfloat16_7of8": 0
+    },
+    "resumed_worker_exit_codes": {
+      "Llama-3.2-1B_float32_0of28": 0,
+      "Llama-3.2-1B_float32_1of28": 0,
+      "Llama-3.2-1B_float32_2of28": 0,
+      "Llama-3.2-1B_float32_3of28": 0,
+      "Llama-3.2-1B_float32_4of28": 0,
+      "Llama-3.2-1B_float32_5of28": 0,
+      "Llama-3.2-1B_float32_6of28": 0,
+      "Llama-3.2-1B_float32_7of28": 0,
+      "Llama-3.2-1B_float32_8of28": 0,
+      "Llama-3.2-1B_float32_9of28": 0,
+      "Llama-3.2-1B_float32_10of28": 0,
+      "Llama-3.2-1B_float32_11of28": 0,
+      "Llama-3.2-1B_float32_12of28": 0,
+      "Llama-3.2-1B_float32_13of28": 0,
+      "Llama-3.2-1B_float32_14of28": 0,
+      "Llama-3.2-1B_float32_15of28": 0,
+      "Llama-3.2-1B_float32_16of28": 0,
+      "Llama-3.2-1B_float32_17of28": 0,
+      "Llama-3.2-1B_float32_18of28": 0,
+      "Llama-3.2-1B_float32_19of28": 0,
+      "Llama-3.2-1B_float32_20of28": 0,
+      "Llama-3.2-1B_float32_21of28": 0,
+      "Llama-3.2-1B_float32_22of28": 0,
+      "Llama-3.2-1B_float32_23of28": 0,
+      "Llama-3.2-1B_float32_24of28": 0,
+      "Llama-3.2-1B_float32_25of28": 0,
+      "Llama-3.2-1B_float32_26of28": 0,
+      "Llama-3.2-1B_float32_27of28": 0
+    }
+  },
+  "acceptance_scope": "Known-key CPU software byte-cache functions on the frozen OR602 cohort. Does not establish a real serving scheduler, GPU, hardware trust boundary or within-request attack security."
+}

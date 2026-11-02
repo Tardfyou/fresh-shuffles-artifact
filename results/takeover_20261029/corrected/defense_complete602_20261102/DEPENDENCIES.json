@@ -1,0 +1,21 @@
+{
+  "python": "3.12.3",
+  "packages": {
+    "torch": "2.14.0+cpu",
+    "transformers": "4.51.3",
+    "tokenizers": "0.21.4",
+    "numpy": "2.5.3",
+    "cryptography": "50.0.1",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "0.36.2",
+    "packaging": "26.3",
+    "sentencepiece": null,
+    "protobuf": null
+  },
+  "torch_runtime_version": "2.14.0+cpu",
+  "platform": "Linux-6.8.0-71-generic-x86_64-with-glibc2.39",
+  "machine": "x86_64",
+  "model_forward_device": "cpu",
+  "cuda_available": false,
+  "note": "Input IDs/masks/positions/continuations are frozen in fixtures; package inventory is separate from original historical-main provenance."
+}

@@ -1,5 +1,5 @@
 {
-  "snapshot_date": "2026-11-01",
+  "snapshot_date": "2026-11-02",
   "distribution_scope": "Code and experimental data; no manuscript or slides.",
   "historical_main_counters": {
     "configurations": 12,
@@ -45,5 +45,27 @@
     "GPU transfer",
     "hardware rollback resistance",
     "within-request exposure security"
-  ]
+  ],
+  "expanded_byte_cache_defense": {
+    "cohort": "existing OR602, containing lifecycle100",
+    "prompt_ids": 602,
+    "model_dtype_shape_fixtures": 6020,
+    "condition_requests": 48160,
+    "functional_passes": 48160,
+    "consumer_comparisons": 96320,
+    "single_field_or_artifact_rejection_observations": 445480,
+    "all_expected_keys_complete": true,
+    "duplicate_keys": 0,
+    "known_key_cpu_software_scope_only": true,
+    "fresh_public_dependencies_and_unpacked_checks_pass": true
+  },
+  "matched_defense_timing": {
+    "input": "one existing OR602 WildChat prompt",
+    "tokens": 512,
+    "threads": 4,
+    "operations": 8,
+    "repetitions_per_operation": 100,
+    "all_raw_timings_retained": true,
+    "byte_recovery_includes_consumer_dtype_restoration": true
+  }
 }

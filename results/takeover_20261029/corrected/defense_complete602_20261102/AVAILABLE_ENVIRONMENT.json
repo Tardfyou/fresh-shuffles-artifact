@@ -1,0 +1,11 @@
+{
+  "accessible_devices": {
+    "nvidia_smi_executable": false,
+    "nvidia_device_files": [],
+    "sgx_device_files": [],
+    "sev_device_present": true
+  },
+  "serving_adapter_filename_candidates": [],
+  "own_python_files_checked": 141,
+  "scope": "Accessible local CPU software environment. No GPU/TEE/production adapter measurement is reported; this record is not a substitute for such a measurement."
+}

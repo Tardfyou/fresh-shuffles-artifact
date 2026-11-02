@@ -1,0 +1,18 @@
+{
+  "measurement_function_bodies_unchanged": {
+    "clone": true,
+    "cache_diff": true,
+    "logits_diff": true,
+    "forward": true,
+    "consume": true,
+    "baseline": true,
+    "context": true,
+    "nonce": true,
+    "protect": true,
+    "reject": true,
+    "negatives": true,
+    "segment_record": true,
+    "trial": true
+  },
+  "change": "Resume control reads complete-key snapshot only; IDs, masks, dtypes, nonce derivation, all measurements and pass criteria unchanged."
+}

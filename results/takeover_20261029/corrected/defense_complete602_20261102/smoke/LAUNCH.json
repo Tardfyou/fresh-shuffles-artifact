@@ -1,0 +1,10 @@
+{
+  "created": "2026-11-02T10:41:13.217179+08:00",
+  "workers": {
+    "Qwen2.5-0.5B_float32_0of1": 3917004,
+    "Qwen2.5-0.5B_bfloat16_0of1": 3917005,
+    "Llama-3.2-1B_float32_0of1": 3917006,
+    "Llama-3.2-1B_bfloat16_0of1": 3917008
+  },
+  "threads": 4
+}

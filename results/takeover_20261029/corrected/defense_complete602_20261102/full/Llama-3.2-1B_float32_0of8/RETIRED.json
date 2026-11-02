@@ -1,0 +1,7 @@
+{
+  "created": "2026-11-02T12:53:18.037071+08:00",
+  "worker": "Llama-3.2-1B_float32_0of8",
+  "pid": 4084402,
+  "complete_records_retained": 463,
+  "reason": "Planned rescheduling of unfinished requests onto released CPU capacity; full existing records untouched. A partly computed request without an output row will be re-executed under a fresh invocation nonce."
+}

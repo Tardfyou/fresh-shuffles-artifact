@@ -1,0 +1,53 @@
+{
+  "created_date": "2026-11-02 Asia/Shanghai",
+  "scope": "Known-key byte-cache functionality and software state validation only. No recovery attack or API collection.",
+  "cohort": "All 602 pre-existing OR IDs from the frozen 3000 WildChat manifest; all prior 100 lifecycle IDs are contained; no resampling.",
+  "models": [
+    "Qwen/Qwen2.5-0.5B",
+    "unsloth/Llama-3.2-1B"
+  ],
+  "dtypes": [
+    "float32",
+    "bfloat16"
+  ],
+  "shapes": [
+    "no_pad",
+    "left8",
+    "right8",
+    "left16",
+    "right16"
+  ],
+  "conditions": [
+    "chained_reencode",
+    "identity_epoch",
+    "mid_session",
+    "shared_prefix"
+  ],
+  "expected_requests_per_condition": 12040,
+  "expected_total_requests": 48160,
+  "input_rule": "Same public 16-token prefix as the accepted fixture; tokenizer(text)[:134], last six real tokens are continuation; same five padding/position conventions as accepted v2; every overlapping fixture compared field by field.",
+  "controls": "Independent cloned plain/duplicate-plain/protected branches; all-layer K/V byte equality and no-mutation snapshots; explicit masks/positions and segment lengths; single-field context changes for principal/epoch/nonce/profile/dtype/policy/length/prefix; no joint-field confounding.",
+  "timesteps": "Actual historical positions retained; continuation starts at pos[-1]+1, matching accepted right-padding physical-position convention; complete forward control uses the identical positions.",
+  "pass": "Every required exact-cache/logit/sanity and rejection assertion passes. Errors/not_run/functional failures retained. Cached/full differences are recorded separately and do not substitute for protected/plain delta.",
+  "resource_fix": "Only freshness connection lifecycle changed to deterministic close after commit/rollback; cryptographic functions and key scopes unchanged.",
+  "sanity": "Separate first two lifecycle IDs in all models/dtypes/shapes/conditions, 160 requests; broad mutation/ledger controls separately; no full run before sanity gates.",
+  "parallelism": "16 workers total (four ID shards per model/dtype), each initially four threads, independent trial ledgers; separate shared-ledger multiprocess test for actual concurrency semantics.",
+  "hardware": "Probe real availability; absent GPU/TEE or serving adapter not recorded as a pass.",
+  "expected_consumer_comparisons_per_condition": {
+    "chained_reencode": 36120,
+    "identity_epoch": 24080,
+    "mid_session": 24080,
+    "shared_prefix": 12040
+  },
+  "expected_total_consumer_comparisons": 96320,
+  "shared_prefix_scope": "Actual stored prefix-block objects reused in a second protected cache, with all-layer identity/payload/recovery checks and distinct real WildChat tails; no serving-throughput claim.",
+  "full_parallelism": "32 workers: eight ID shards per model/dtype, four physical cores/threads each, CPU affinity captured before checkpoint load; total memory kept below available RAM.",
+  "ledger_validation": {
+    "rounds": 100,
+    "processes": 8,
+    "concurrent_operations": 3200,
+    "restart_checks": 100,
+    "resource_calls": 1000,
+    "scope": "Software ledger only; no hardware anti-rollback claim."
+  }
+}

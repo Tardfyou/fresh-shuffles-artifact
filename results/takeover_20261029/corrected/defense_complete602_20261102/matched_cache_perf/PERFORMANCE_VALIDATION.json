@@ -1,0 +1,10 @@
+{
+  "raw_timing_cells": 800,
+  "operations": 8,
+  "repetitions_per_operation": 100,
+  "duplicate_cells": 0,
+  "all_statistics_recomputed": true,
+  "input_sid": "wc25_512_0000",
+  "typed_bytes_exact": true,
+  "scope": "Known-key CPU cache operations, 512 real tokens, authenticated byte recovery plus trusted dtype restoration; no serving/inference throughput claim."
+}

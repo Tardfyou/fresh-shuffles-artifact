@@ -1,0 +1,18 @@
+{
+  "created": "2026-11-02T10:48:55.142273+08:00",
+  "invocation": "5c23084386cb4225b682968ca6fd59d8",
+  "model": "Qwen/Qwen2.5-0.5B",
+  "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+  "tokenizer_class": "Qwen2TokenizerFast",
+  "dtype": "float32",
+  "torch": "2.14.0+cpu",
+  "transformers": "4.51.3",
+  "threads": 4,
+  "cpu_affinity": [
+    24,
+    25,
+    26,
+    27
+  ],
+  "logit_filter_argument": "logits_to_keep"
+}

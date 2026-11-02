@@ -45,3 +45,19 @@ offline count, unit and diagnostic-subset check. No model or API is called.
 `AUDIT_STATUS.json` distinguishes accepted saved evidence from unmeasured
 properties. The defensive supplement also includes known-key shared-prefix,
 segmented-continuation and single-reprotection measurements.
+
+## Expanded defensive validation (2026-11-02)
+
+The accepted CPU study reuses the existing OR602 cohort (including lifecycle100):
+48,160 condition requests, 96,320 protected/plain consumer comparisons, five mask
+shapes and two native dtypes on two models. It includes repeated protection,
+identity/epoch transition, non-prefill boundary protection and stored-prefix reuse.
+Single-field rejection tests isolate identity and epoch. Every valid old outcome
+is retained separately. See DEFENSE_SUPPLEMENT.md and EXPANDED_DEFENSE_VALIDATION.json.
+
+The dependency lock was installed from public indexes in a new environment.
+Unpacked data/runtime checks passed; plotting sources use saved timing arrays.
+The 512-token cache timing fixture is an existing WildChat prompt, and all 800
+observations are supplied. No manuscript, slides, logs, databases or model weights
+are included. GPU/production serving/hardware guarantees are not inferred from
+these known-key CPU interface checks.

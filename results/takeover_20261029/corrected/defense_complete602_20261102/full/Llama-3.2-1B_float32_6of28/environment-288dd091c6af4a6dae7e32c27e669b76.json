@@ -1,0 +1,20 @@
+{
+  "created": "2026-11-02T12:53:53.532127+08:00",
+  "invocation": "288dd091c6af4a6dae7e32c27e669b76",
+  "model": "unsloth/Llama-3.2-1B",
+  "model_revision": "9535bd9b1d1dea6acafbdc4813b728796aeb28da",
+  "tokenizer_class": "PreTrainedTokenizerFast",
+  "dtype": "float32",
+  "torch": "2.14.0+cpu",
+  "transformers": "4.51.3",
+  "threads": 4,
+  "cpu_affinity": [
+    40,
+    41,
+    42,
+    43
+  ],
+  "logit_filter_argument": "logits_to_keep",
+  "expected_new_records": 260,
+  "resumed_completed_records": 5024
+}

@@ -1,0 +1,6 @@
+{
+  "rounds": 100,
+  "rounds_with_overlapping_claims": 100,
+  "peak_inflight_min": 8,
+  "peak_inflight_max": 8
+}

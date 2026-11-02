@@ -1,0 +1,12 @@
+{
+  "rounds": 100,
+  "concurrent_workers": 8,
+  "concurrent_operations": 3200,
+  "rounds_passed": 100,
+  "rollback_control_passed": true,
+  "handle_count_before": 4,
+  "handle_count_after": 4,
+  "resource_calls": 1000,
+  "pass": true,
+  "scope": "Software SQLite state only; no hardware anti-rollback or remote-service claim."
+}

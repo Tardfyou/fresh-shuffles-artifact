@@ -53,3 +53,52 @@ headers are moved into separate run_events.json sidecars, leaving strict JSONL
 with every experimental record unchanged. NORMALIZATION.json records the
 conversion. The raw private files remain untouched. Data licenses and the
 upstream KV-Cloak license are retained.
+
+## Expanded OR602 software validation
+
+The expanded known-key CPU study reuses all 602 existing ordering-cohort IDs,
+including all prior lifecycle100 IDs. Two models, two dtypes, five mask shapes
+and four conditions yield 48,160 request keys and 96,320 protected/plain consumer
+comparisons. Input arrays are frozen; all 1,000 overlapping older fixtures agree.
+The source and data include every condition outcome. Software ledger tests use
+100 rounds with eight processes (3,200 competing operations), an additional
+fresh-process restart check and 1,000 sequential resource calls. SQLite handles
+are closed explicitly after transaction completion; crypto/key scopes are unchanged.
+
+The original FP32 scheduling workers were intentionally retired after preserving
+their complete records. A frozen completed-key list and separate resumed worker
+records retain all outcomes without duplicate keys. Resource scheduling and exit
+metadata are included; nonzero retired-worker exits are not silently erased.
+
+Use requirements-defensive-20261102.lock for the separately installed public
+dependency environment. From the artifact root, inspect the expanded records:
+
+```
+python tools/audit_defense602.py --root results/takeover_20261029/corrected/defense_complete602_20261102 --complete
+python tools/check_defense_runtime.py --runtime defense_runtime --report /tmp/defense-runtime-units.json
+```
+
+The first command reads records and sources only. The second runs 16 small
+finite-tensor codec units, not model inference or extra WildChat observations.
+Full model measurement sources are supplied separately and require cached public
+checkpoints. GPU, production serving adapters, hardware trust/rollback and
+within-request security are not established by these CPU functional checks.
+
+To repeat model measurements, create a new sibling directory under
+results/takeover_20261029/corrected/. Copy defense_runtime into its source/
+directory and copy the original study's inputs.jsonl and PROTOCOL.json there.
+Use that new directory with tools/defense_complete602.py prepare --root NEW_ROOT,
+then launch --smoke --shards 1 --root NEW_ROOT and, only after the smoke gate,
+launch --shards 8 --threads 4 --root NEW_ROOT. Keep the published measurement
+directory intact. Shared lifecycle inputs and prior fixtures are already supplied
+at their referenced sibling paths. All model/tokenizer loads are offline.
+
+Latency panels can be regenerated from the saved eight-condition timing record:
+
+```
+python tools/plot_defense_cache_perf.py --result results/takeover_20261029/corrected/defense_complete602_20261102/matched_cache_perf/result.json --out /tmp/defense-latency
+```
+
+Plotting uses the locked Matplotlib dependency and an installed Arial font for
+the approved appearance. Font files are not distributed. The command writes
+plots outside this code/data snapshot and never runs models or requests an API.

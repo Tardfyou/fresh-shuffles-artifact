@@ -1,0 +1,21 @@
+{
+  "created": "2026-11-02T10:46:33.384714+08:00",
+  "smoke": true,
+  "expected": 160,
+  "records": 160,
+  "missing": [],
+  "unexpected": [],
+  "duplicates": [],
+  "counts": {
+    "measured": 160,
+    "functional_pass": 160
+  },
+  "segment_comparisons": {
+    "chained_reencode": 120,
+    "identity_epoch": 80,
+    "mid_session": 80,
+    "shared_prefix": 40
+  },
+  "failures": [],
+  "complete": true
+}
