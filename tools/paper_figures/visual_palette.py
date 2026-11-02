@@ -5,8 +5,8 @@ BLUE = '#387ED1'
 PURPLE = '#8066BA'
 GOLD = '#D89A33'
 GREY = '#E7EBEF'
-PALETTE = ('00B887', '33C69F', '66D4B7', '99E3CF', 'BFEDE1', 'E5F8F3',
-           'FFF0EF', 'FFD6D8', 'FFBDC0', 'FF9DA2', 'FF7C81', 'FF5B61')
+# Keep every tier saturated: avoid the former near-white pink/green appearance.
+PALETTE = ('00B887', '0DBC8D', '1ABF93', '26C399', '33C69F', '47CCA9', 'FF898D', 'FF7C81', 'FF7479', 'FF6B71', 'FF6369', 'FF5B61')
 
 
 def tint(color, strength):
