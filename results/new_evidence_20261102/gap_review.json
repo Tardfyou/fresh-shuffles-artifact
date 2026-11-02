@@ -1,0 +1,71 @@
+{
+  "results": {
+    "qwen25_05b": {
+      "failed_blocks": 6,
+      "missed_head_token_opportunities": 6,
+      "distributions": {
+        "gap_fully_missed_tokens": {
+          "n_distinct_token_block_entries": 5,
+          "stored_gap_lt_0.01": 5,
+          "median": 0.0005,
+          "stored_zero_entries": 0
+        },
+        "gap_tokens_present_in_pred": {
+          "n_distinct_token_block_entries": 78,
+          "stored_gap_lt_0.01": 78,
+          "median": 0.0,
+          "stored_zero_entries": 78
+        }
+      },
+      "absent_distinct_entries_with_stored_gap_ge_0.0101": 0,
+      "lower_bound_fraction_of_missed_opportunities_with_that_property": 0.0,
+      "correct_block_comparator_in_new_aggregate": 0,
+      "unique_causal_error_mechanism_established": false
+    },
+    "llama32_1b": {
+      "failed_blocks": 37454,
+      "missed_head_token_opportunities": 37460,
+      "distributions": {
+        "gap_fully_missed_tokens": {
+          "n_distinct_token_block_entries": 27931,
+          "stored_gap_lt_0.01": 2833,
+          "median": 0.1611,
+          "stored_zero_entries": 5
+        },
+        "gap_tokens_present_in_pred": {
+          "n_distinct_token_block_entries": 525450,
+          "stored_gap_lt_0.01": 525438,
+          "median": 0.0,
+          "stored_zero_entries": 525437
+        }
+      },
+      "absent_distinct_entries_with_stored_gap_ge_0.0101": 25083,
+      "lower_bound_fraction_of_missed_opportunities_with_that_property": 0.6695942338494394,
+      "correct_block_comparator_in_new_aggregate": 0,
+      "unique_causal_error_mechanism_established": false
+    },
+    "phi3_mini": {
+      "failed_blocks": 434273,
+      "missed_head_token_opportunities": 434273,
+      "distributions": {
+        "gap_fully_missed_tokens": {
+          "n_distinct_token_block_entries": 359548,
+          "stored_gap_lt_0.01": 32503,
+          "median": 0.1314,
+          "stored_zero_entries": 113
+        },
+        "gap_tokens_present_in_pred": {
+          "n_distinct_token_block_entries": 5921565,
+          "stored_gap_lt_0.01": 5921565,
+          "median": 0.0,
+          "stored_zero_entries": 5921565
+        }
+      },
+      "absent_distinct_entries_with_stored_gap_ge_0.0101": 326853,
+      "lower_bound_fraction_of_missed_opportunities_with_that_property": 0.7526440741192753,
+      "correct_block_comparator_in_new_aggregate": 0,
+      "unique_causal_error_mechanism_established": false
+    }
+  },
+  "scope": "Distinct token/block entries are not occurrence counts. The far-gap count supplies a lower bound of one missed occurrence per absent type; it does not identify the physical source of the decoding error. No new model/recovery execution."
+}

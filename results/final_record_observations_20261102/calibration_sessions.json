@@ -1,0 +1,255 @@
+{
+  "generated": "2026-11-01T13:15:05+08:00",
+  "models": {
+    "Qwen2.5-0.5B": {
+      "repetitions": [
+        {
+          "model_load_s": 4.187259847996756,
+          "theta_s": 3.7241022230591625,
+          "config_s": 0.011525684967637062,
+          "probe_construction_s": 0.020111706107854843,
+          "probe_prefill_s": 15.857797652948648,
+          "probe_protect_s": 0.09953038487583399,
+          "calibrate_s": 0.04857176402583718,
+          "dictionary_s": 1.2788257449865341,
+          "heads_calibrated": "2/2",
+          "probe_char": "a",
+          "rss_mb": 4484.1,
+          "repetition": 0
+        },
+        {
+          "model_load_s": 1.2292474629357457,
+          "theta_s": 3.4380194800905883,
+          "config_s": 0.0061459229327738285,
+          "probe_construction_s": 0.01833510398864746,
+          "probe_prefill_s": 14.045679030008614,
+          "probe_protect_s": 0.11946791014634073,
+          "calibrate_s": 0.043556550052016973,
+          "dictionary_s": 1.2010186580009758,
+          "heads_calibrated": "2/2",
+          "probe_char": "a",
+          "rss_mb": 5505.7,
+          "repetition": 1
+        },
+        {
+          "model_load_s": 1.3670565439388156,
+          "theta_s": 3.223562597995624,
+          "config_s": 0.006732512963935733,
+          "probe_construction_s": 0.018706083996221423,
+          "probe_prefill_s": 13.095811770064756,
+          "probe_protect_s": 0.096460826927796,
+          "calibrate_s": 0.05507559096440673,
+          "dictionary_s": 1.314730394165963,
+          "heads_calibrated": "2/2",
+          "probe_char": "a",
+          "rss_mb": 5505.7,
+          "repetition": 2
+        },
+        {
+          "model_load_s": 1.3989404779858887,
+          "theta_s": 3.41482060495764,
+          "config_s": 0.006931884912773967,
+          "probe_construction_s": 0.01888291910290718,
+          "probe_prefill_s": 12.743176104966551,
+          "probe_protect_s": 0.10364639898762107,
+          "calibrate_s": 0.04338439414277673,
+          "dictionary_s": 1.2734323251061141,
+          "heads_calibrated": "2/2",
+          "probe_char": "a",
+          "rss_mb": 5505.7,
+          "repetition": 3
+        },
+        {
+          "model_load_s": 1.070371116977185,
+          "theta_s": 3.4868983270134777,
+          "config_s": 0.006470814114436507,
+          "probe_construction_s": 0.017706749960780144,
+          "probe_prefill_s": 12.780616326024756,
+          "probe_protect_s": 0.08577390294522047,
+          "calibrate_s": 0.048183360835537314,
+          "dictionary_s": 1.3980322149582207,
+          "heads_calibrated": "2/2",
+          "probe_char": "a",
+          "rss_mb": 5505.7,
+          "repetition": 4
+        }
+      ],
+      "session_total_s_excl_load_dict": [
+        16.026,
+        14.227,
+        13.266,
+        12.909,
+        12.932
+      ],
+      "session_note": "probe construction + probe prefill + probe protect + calibration; model/tokenizer load, theta, config and the one-time public dictionary build are timed separately and excluded from the session total",
+      "threads": 8
+    },
+    "Llama-3.2-1B": {
+      "repetitions": [
+        {
+          "model_load_s": 2.544864300172776,
+          "theta_s": 7.807511278893799,
+          "config_s": 0.01765773189254105,
+          "probe_construction_s": 0.018731763120740652,
+          "probe_prefill_s": 32.96035668998957,
+          "probe_protect_s": 0.2154191229492426,
+          "calibrate_s": 0.20211425004526973,
+          "dictionary_s": 4.2104337678756565,
+          "heads_calibrated": "8/8",
+          "probe_char": "a",
+          "rss_mb": 8420.6,
+          "repetition": 0
+        },
+        {
+          "model_load_s": 2.661811033030972,
+          "theta_s": 8.338531140936539,
+          "config_s": 0.016407207120209932,
+          "probe_construction_s": 0.01549028605222702,
+          "probe_prefill_s": 31.71226182207465,
+          "probe_protect_s": 0.20491364714689553,
+          "calibrate_s": 0.17214924492873251,
+          "dictionary_s": 3.2352587517816573,
+          "heads_calibrated": "8/8",
+          "probe_char": "a",
+          "rss_mb": 8420.6,
+          "repetition": 1
+        },
+        {
+          "model_load_s": 2.4185011968947947,
+          "theta_s": 6.8561795491259545,
+          "config_s": 0.016382674919441342,
+          "probe_construction_s": 0.017711320891976357,
+          "probe_prefill_s": 31.955567002063617,
+          "probe_protect_s": 0.21946209599263966,
+          "calibrate_s": 0.1817069910466671,
+          "dictionary_s": 3.3598537761718035,
+          "heads_calibrated": "8/8",
+          "probe_char": "a",
+          "rss_mb": 8420.6,
+          "repetition": 2
+        },
+        {
+          "model_load_s": 2.3298227700870484,
+          "theta_s": 7.620301867136732,
+          "config_s": 0.016502652084454894,
+          "probe_construction_s": 0.015215289080515504,
+          "probe_prefill_s": 30.2573454559315,
+          "probe_protect_s": 0.179335025139153,
+          "calibrate_s": 0.1687241110485047,
+          "dictionary_s": 3.7468805930111557,
+          "heads_calibrated": "8/8",
+          "probe_char": "a",
+          "rss_mb": 8420.6,
+          "repetition": 3
+        },
+        {
+          "model_load_s": 2.5237899431958795,
+          "theta_s": 7.396590232150629,
+          "config_s": 0.014893857995048165,
+          "probe_construction_s": 0.015171829843893647,
+          "probe_prefill_s": 31.155922397971153,
+          "probe_protect_s": 0.2438372711185366,
+          "calibrate_s": 0.19004327710717916,
+          "dictionary_s": 3.5113218899350613,
+          "heads_calibrated": "8/8",
+          "probe_char": "a",
+          "rss_mb": 8420.6,
+          "repetition": 4
+        }
+      ],
+      "session_total_s_excl_load_dict": [
+        33.397,
+        32.105,
+        32.374,
+        30.621,
+        31.605
+      ],
+      "session_note": "probe construction + probe prefill + probe protect + calibration; model/tokenizer load, theta, config and the one-time public dictionary build are timed separately and excluded from the session total",
+      "threads": 8
+    },
+    "phi3_mini": {
+      "repetitions": [
+        {
+          "model_load_s": 102.21325447014533,
+          "theta_s": 24.051998304901645,
+          "config_s": 0.7562633440829813,
+          "probe_construction_s": 0.020449728006497025,
+          "probe_prefill_s": 131.78264518408105,
+          "probe_protect_s": 6.7457893958780915,
+          "calibrate_s": 0.9334340740460902,
+          "dictionary_s": 7.121131025021896,
+          "heads_calibrated": "32/32",
+          "probe_char": "1",
+          "rss_mb": 26735.0,
+          "repetition": 0
+        },
+        {
+          "model_load_s": 4.103960657026619,
+          "theta_s": 27.72100804396905,
+          "config_s": 0.1357057278510183,
+          "probe_construction_s": 0.015736592933535576,
+          "probe_prefill_s": 134.72319278819486,
+          "probe_protect_s": 6.502897788072005,
+          "calibrate_s": 0.7899395399726927,
+          "dictionary_s": 6.615704335970804,
+          "heads_calibrated": "32/32",
+          "probe_char": "1",
+          "rss_mb": 26735.0,
+          "repetition": 1
+        },
+        {
+          "model_load_s": 3.997698148014024,
+          "theta_s": 24.565978471189737,
+          "config_s": 0.13106560008600354,
+          "probe_construction_s": 0.021091498900204897,
+          "probe_prefill_s": 128.38106983085163,
+          "probe_protect_s": 7.24945351597853,
+          "calibrate_s": 0.810213107150048,
+          "dictionary_s": 6.794252369087189,
+          "heads_calibrated": "32/32",
+          "probe_char": "1",
+          "rss_mb": 26735.0,
+          "repetition": 2
+        },
+        {
+          "model_load_s": 3.771230661077425,
+          "theta_s": 24.58159444993362,
+          "config_s": 0.14179675583727658,
+          "probe_construction_s": 0.021551382029429078,
+          "probe_prefill_s": 133.33495764387771,
+          "probe_protect_s": 6.056639311136678,
+          "calibrate_s": 0.8236442019697279,
+          "dictionary_s": 5.268120684893802,
+          "heads_calibrated": "32/32",
+          "probe_char": "1",
+          "rss_mb": 26750.6,
+          "repetition": 3
+        },
+        {
+          "model_load_s": 3.3789976111147553,
+          "theta_s": 23.77325871400535,
+          "config_s": 0.1284595790784806,
+          "probe_construction_s": 0.01776969898492098,
+          "probe_prefill_s": 131.4632072870154,
+          "probe_protect_s": 6.523723627906293,
+          "calibrate_s": 0.7921049299184233,
+          "dictionary_s": 6.687914334004745,
+          "heads_calibrated": "32/32",
+          "probe_char": "1",
+          "rss_mb": 26750.6,
+          "repetition": 4
+        }
+      ],
+      "session_total_s_excl_load_dict": [
+        139.482,
+        142.032,
+        136.462,
+        140.237,
+        138.797
+      ],
+      "session_note": "probe construction + probe prefill + probe protect + calibration; model/tokenizer load, theta, config and the one-time public dictionary build are timed separately and excluded from the session total",
+      "threads": 8
+    }
+  },
+  "no_epoch_claim": "no epoch duration is defined in any record; feasibility statements are limited to the measured session cost"
+}

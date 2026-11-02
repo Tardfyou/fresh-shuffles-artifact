@@ -14,8 +14,7 @@ The corrected fixed-cohort ordering study is now included under
 `results/main_public/`. See `ORDERING_STUDY.md` for the two completed GPT
 comparisons, four local ordering conditions, semantic scores and offline
 verification. Older records in `experiments/kvcloak/results/` keep their original
-scopes and must not be mixed with these corrected cohorts. This update covers
-the ordering study; other later corrected studies are maintained separately.
+scopes and must not be mixed with these corrected cohorts. The sections below describe the additional retained studies.
 
 Machine-local author paths are replaced with relative paths in distribution
 copies. Original source worktrees and raw records remain unchanged.
@@ -61,3 +60,62 @@ The 512-token cache timing fixture is an existing WildChat prompt, and all 800
 observations are supplied. No manuscript, slides, logs, databases or model weights
 are included. GPU/production serving/hardware guarantees are not inferred from
 these known-key CPU interface checks.
+
+## Reviewed follow-up observations (2026-11-02)
+
+`results/final_record_observations_20261102/` contains complete-session timings,
+legacy attempt-label accounting, fixed-candidate scores, and the Phi seed-counter
+follow-up. Its three configurations cover 471,739/516,666 main-table misses.
+`results/new_evidence_20261102/` adds fully logged probe-session observations,
+supplementary rotation-angle diagnostics, first/all-head identification counts,
+306 blocks with nine complete prediction arrays each, reproducible rounded-gap
+histograms, and six fixed scaling settings. All positive and negative outcomes
+remain, including the two-hit Qwen regression and per-prompt regressions at
+settings with positive aggregate gains. No new recovery implementation is added.
+
+Inspect these records without model loading or API calls:
+
+```
+python tools/inspect_final_observations.py --root .
+python tools/inspect_new_evidence_records.py --root .
+```
+
+The a/S predicate and supplementary M diagnostic have separate scopes. Numerical
+path stability is measured on the selected Qwen/Llama blocks. The scaling grid
+contains four Qwen and two Llama settings; it is not a general scaling guarantee.
+GPU, real TEE and production-service experiments are outside this study.
+
+## Visual summaries
+
+The final figures are generated from `results/visual_summary_20261102/data.json`.
+This includes all 602 cosine scores per condition, all 100 synthetic privacy
+cases, all 800 operation timings, every scaling setting and both seed scores in
+the head-budget comparison. These are frozen selections of accepted records,
+not additional experiments. Exact main and per-key counts remain in their data.
+
+```
+python tools/plot_paper_gallery.py --data results/visual_summary_20261102/data.json --out /tmp/paper-panels
+```
+
+Tables and the key matrix use the author-selected teal/coral endpoints. Other
+panels directly follow USENIX Security Approximate Caches Figures 11/22 (frequency
+histograms and lavender/grey paired bars) and NDSS PROMPTPEEK Figures 10/11/13
+(light-blue boxes, red medians, a pale background with white grids, and horizontal
+stacks). These panels use their source figures' palettes.
+Numpy/matplotlib/scipy and installed Arial are required for plotting.
+
+## Accepted fixed-cohort records
+
+The corrected result directory also includes the frozen probe/key-budget records,
+paired-calibrator diagnostics, 300-prompt fused study, 100-prompt scaling/lifecycle/
+row-rotation records, all 1,500 cross-key prompt/configuration records, 100 synthetic
+privacy cases with candidates and matched controls, integrity checks, the two
+100-candidate arithmetic-profile studies, and the completed seven-stage prototype
+battery. `FIXED_COHORT_EXPORT.json` lists the exported files. Numeric values,
+experimental text and predictions are preserved; only local-path metadata is
+normalized. No new measurement or recovery implementation is added.
+
+```
+python tools/inspect_fixed_cohorts.py --root .
+python tools/inspect_visual_summary.py --root .
+```

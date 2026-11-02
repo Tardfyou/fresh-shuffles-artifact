@@ -1,6 +1,48 @@
-"""Saved defensive latency panels only."""
+"""Compact matrix and distribution views of retained measurements only."""
 import numpy as np
+from matplotlib.colors import LinearSegmentedColormap
 from .acl835_plot_style import setup_acl, save_stat, BAR_BLUE, BAR_PINK
+
+
+def plot_epochs(data, out_dir):
+    import matplotlib.pyplot as plt
+    from .acl835_plot_style import detail_caption,audit_details
+    setup_acl('bar')
+    names = ['Qwen2.5-0.5B', 'Llama-3.2-1B', 'Phi-3-mini']
+    models = list(data)
+    values = [np.array([[v[key] for v in data[m]['by_key'].values()] for m in models])
+              for key in ('percent', 'minimum_prompt_percent')]
+    low = float(np.floor(min(x.min() for x in values)))
+    from .visual_palette import PALETTE
+    cmap = LinearSegmentedColormap.from_list('teal_coral_recovery', ['#'+c for c in PALETTE])
+    fig = plt.figure(figsize=(3.375, 3.0))
+    axes = [fig.add_axes([.28, .695, .68, .255]), fig.add_axes([.28, .34, .68, .255])]
+    for ax, matrix in zip(axes, values):
+        image = ax.imshow(matrix, vmin=low, vmax=100., cmap=cmap, aspect='auto', interpolation='nearest')
+        ax.set(yticks=range(3), yticklabels=names, xticks=range(5), xticklabels=range(1, 6))
+        ax.tick_params(axis='both', length=0, pad=3, labelsize=6.2)
+        for label in ax.get_xticklabels():label.set_fontsize(7.02);label.set_fontweight('bold');label.set_color('black')
+        for label in ax.get_yticklabels():label.set_color('black')
+        ax.set_xticks(np.arange(-.5, 5, 1), minor=True)
+        ax.set_yticks(np.arange(-.5, 3, 1), minor=True)
+        ax.grid(which='minor', color='white', linewidth=.85)
+        ax.tick_params(which='minor', length=0)
+        for spine in ax.spines.values():spine.set_visible(True);spine.set_color('.8');spine.set_linewidth(.4567)
+        for i in range(3):
+            for j in range(5):
+                ax.text(j, i, f'{matrix[i, j]:.3f}', ha='center', va='center', fontsize=6., color='black')
+    axes[0].tick_params(labelbottom=False)
+    detail_caption(fig,.62,.65,'(a) Count-weighted recovery')
+    fig.text(.62,.245,'Secret configuration',ha='center',va='center',fontsize=7.02,weight='bold',color='black')
+    detail_caption(fig,.62,.185,'(b) Weakest of 100 fixed prompts')
+    cax = fig.add_axes([.41, .07, .42, .025])
+    bar = fig.colorbar(image, cax=cax, orientation='horizontal', ticks=[low, (low+100)/2, 100])
+    bar.ax.tick_params(length=2, width=.4567, pad=2, labelsize=5.515)
+    bar.outline.set_visible(True);bar.outline.set_edgecolor('.8');bar.outline.set_linewidth(.4567)
+    fig.text(.38,.0825,'Recovery (%)',ha='right',va='center',fontsize=6.,color='black')
+    audit_details(fig,'key_epochs',out_dir,dict(models=models,values=[v.tolist() for v in values],shared_scale=[low,100]))
+    save_stat(fig, 'key_epochs', 'ACL835 Arial, shared thin frames, bold group labels, black scalar values and lower serif captions; retained matrix geometry and shared scale', out_dir)
+
 
 def plot_latency(perf, out_dir):
     import matplotlib.pyplot as plt
@@ -18,7 +60,7 @@ def plot_latency(perf, out_dir):
            [0,40,80,120] if limits[1]<=140 else [0,60,120,180]]
     for ax, operation, limit, ticks in zip(axes, ['protect', 'recover'], limits,ticks):
         for offset, name, color, label in zip([-.165, .165], ['kvcloak', 'tee'], [BAR_BLUE, BAR_PINK],
-                                            ['KV-Cloak (unfused)', 'VeilKV TEE profile']):
+                                            ['KV-Cloak (unfused)', 'VeilKV byte profile']):
             item = perf[operation+'_'+name]
             assert len(item['samples_seconds_per_1000_tokens']) == 100
             values = [1000*item[q] for q in quantiles]

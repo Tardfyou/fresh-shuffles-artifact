@@ -1,0 +1,172 @@
+{
+  "original_delivery": "attack_final_newevidence_20261102",
+  "source_records": [
+    {
+      "file": "e1_a5_full_ladder_Qwen2.5-0.5B.json",
+      "source_filename": "e1_a5_full_ladder_Qwen2.5-0.5B.json",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e1_m_true_error_Qwen2.5-0.5B.json",
+      "source_filename": "e1_m_true_error_Qwen2.5-0.5B.json",
+      "supplemental_reconstruction": true,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e1_a5_full_ladder_Llama-3.2-1B.json",
+      "source_filename": "e1_a5_full_ladder_Llama-3.2-1B.json",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e1_m_true_error_Llama-3.2-1B.json",
+      "source_filename": "e1_m_true_error_Llama-3.2-1B.json",
+      "supplemental_reconstruction": true,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e1_a5_full_ladder_phi3_mini.json",
+      "source_filename": "e1_a5_full_ladder_phi3_mini.json",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e1_m_true_error_phi3_mini.json",
+      "source_filename": "e1_m_true_error_phi3_mini.json",
+      "supplemental_reconstruction": true,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e2_a6_budget_cross_Qwen2.5-0.5B.jsonl",
+      "source_filename": "e2_a6_budget_cross_Qwen2.5-0.5B.jsonl",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e2_gate_Qwen2.5-0.5B.json",
+      "source_filename": "e2_gate_Qwen2.5-0.5B.json",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e3b_flip_qwen25_05b_v2.jsonl",
+      "source_filename": "e3b_flip_qwen25_05b_v2.jsonl",
+      "supplemental_reconstruction": true,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e3b_flip_qwen25_05b_summary_v2.json",
+      "source_filename": "e3b_flip_qwen25_05b_summary_v2.json",
+      "supplemental_reconstruction": true,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e2_a6_budget_cross_Llama-3.2-1B.jsonl",
+      "source_filename": "e2_a6_budget_cross_Llama-3.2-1B.jsonl",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e2_gate_Llama-3.2-1B.json",
+      "source_filename": "e2_gate_Llama-3.2-1B.json",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e3b_flip_llama32_1b_v2.jsonl",
+      "source_filename": "e3b_flip_llama32_1b_v2.jsonl",
+      "supplemental_reconstruction": true,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e3b_flip_llama32_1b_summary_v2.json",
+      "source_filename": "e3b_flip_llama32_1b_summary_v2.json",
+      "supplemental_reconstruction": true,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e4_Qwen2.5-0.5B_r1.1.jsonl",
+      "source_filename": "e4_Qwen2.5-0.5B_r1.1.jsonl",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e4_fit_Qwen2.5-0.5B_r1.1.json",
+      "source_filename": "e4_fit_Qwen2.5-0.5B_r1.1.json",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e4_Qwen2.5-0.5B_r1.25.jsonl",
+      "source_filename": "e4_Qwen2.5-0.5B_r1.25.jsonl",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e4_fit_Qwen2.5-0.5B_r1.25.json",
+      "source_filename": "e4_fit_Qwen2.5-0.5B_r1.25.json",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e4_Qwen2.5-0.5B_r1.5.jsonl",
+      "source_filename": "e4_Qwen2.5-0.5B_r1.5.jsonl",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e4_fit_Qwen2.5-0.5B_r1.5.json",
+      "source_filename": "e4_fit_Qwen2.5-0.5B_r1.5.json",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e4_Qwen2.5-0.5B_r2.0.jsonl",
+      "source_filename": "e4_Qwen2.5-0.5B_r2.0.jsonl",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e4_fit_Qwen2.5-0.5B_r2.0.json",
+      "source_filename": "e4_fit_Qwen2.5-0.5B_r2.0.json",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e4_Llama-3.2-1B_r1.25.jsonl",
+      "source_filename": "e4_Llama-3.2-1B_r1.25.jsonl",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e4_fit_Llama-3.2-1B_r1.25.json",
+      "source_filename": "e4_fit_Llama-3.2-1B_r1.25.json",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e4_Llama-3.2-1B_r1.5.jsonl",
+      "source_filename": "e4_Llama-3.2-1B_r1.5.jsonl",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e4_fit_Llama-3.2-1B_r1.5.json",
+      "source_filename": "e4_fit_Llama-3.2-1B_r1.5.json",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    },
+    {
+      "file": "e3a_gold_gap_analysis.json",
+      "source_filename": "e3a_gold_gap_analysis.json",
+      "supplemental_reconstruction": false,
+      "decoded_record_unchanged": true
+    }
+  ],
+  "gap_histograms": "Counts aggregated from saved failing-block diagnostics for Qwen/Llama/Phi; retain all original rounded gaps and present/absent classifications. They allow distribution recomputation without inference or the large private worker records.",
+  "cohorts": "Existing frozen spectrum100 and need_ratio100 IDs; no new prompt sampling.",
+  "historical_records_backfilled": false,
+  "measurement_implementation_added": false,
+  "all_measured_positive_and_negative_outcomes_retained": true
+}

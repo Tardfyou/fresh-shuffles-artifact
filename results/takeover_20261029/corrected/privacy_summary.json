@@ -1,0 +1,39 @@
+{
+  "n": 100,
+  "unique_texts": 100,
+  "candidates_per_case": 100,
+  "source": "synthetic closed-set identification; not WildChat",
+  "scoring": "mean per-head full-context truncated-token multiset Dice overlap",
+  "unique_top1": 95,
+  "topk_expected": {
+    "1": 0.975,
+    "5": 1.0,
+    "10": 1.0
+  },
+  "by_type": {
+    "password": {
+      "n": 17,
+      "top1": 0.8823529411764706
+    },
+    "address": {
+      "n": 16,
+      "top1": 0.96875
+    },
+    "credit": {
+      "n": 17,
+      "top1": 1.0
+    },
+    "name": {
+      "n": 16,
+      "top1": 1.0
+    },
+    "mrn": {
+      "n": 17,
+      "top1": 1.0
+    },
+    "ssn": {
+      "n": 17,
+      "top1": 1.0
+    }
+  }
+}

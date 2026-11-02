@@ -1,0 +1,49 @@
+{
+  "n": 1200,
+  "rounds": 100,
+  "types": 12,
+  "legitimate_roundtrip_max_error": 0.0,
+  "full_layers": 24,
+  "detected": 1200,
+  "errors": 0,
+  "silent_accept": 0,
+  "by_type": {
+    "bitflip": {
+      "detected": 100
+    },
+    "blockswap": {
+      "detected": 100
+    },
+    "truncation": {
+      "detected": 100
+    },
+    "wrongtag": {
+      "detected": 100
+    },
+    "xprincipal": {
+      "detected": 100
+    },
+    "wrongprincipal": {
+      "detected": 100
+    },
+    "oldepoch": {
+      "detected": 100
+    },
+    "dtypeforge": {
+      "detected": 100
+    },
+    "epochforge": {
+      "detected": 100
+    },
+    "policyforge": {
+      "detected": 100
+    },
+    "layerswap": {
+      "detected": 100
+    },
+    "kvswap": {
+      "detected": 100
+    }
+  },
+  "note": "100 repeated rounds on one protected request; not 1200 independent requests"
+}

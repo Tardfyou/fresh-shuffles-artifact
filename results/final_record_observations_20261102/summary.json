@@ -1,0 +1,193 @@
+{
+  "session_costs": {
+    "Qwen2.5-0.5B": {
+      "repetitions_one_configuration": 5,
+      "threads": 8,
+      "session_median_s": 13.26605427195318,
+      "session_range_s": [
+        12.909089817199856,
+        16.026011507958174
+      ],
+      "excluded_setup_phases": [
+        "model/tokenizer load",
+        "theta",
+        "config",
+        "public dictionary"
+      ],
+      "epoch_duration_recorded": false
+    },
+    "Llama-3.2-1B": {
+      "repetitions_one_configuration": 5,
+      "threads": 8,
+      "session_median_s": 32.10481500020251,
+      "session_range_s": [
+        30.620619881199673,
+        33.39662182610482
+      ],
+      "excluded_setup_phases": [
+        "model/tokenizer load",
+        "theta",
+        "config",
+        "public dictionary"
+      ],
+      "epoch_duration_recorded": false
+    },
+    "phi3_mini": {
+      "repetitions_one_configuration": 5,
+      "threads": 8,
+      "session_median_s": 139.48231838201173,
+      "session_range_s": [
+        136.4618279528804,
+        142.0317667091731
+      ],
+      "excluded_setup_phases": [
+        "model/tokenizer load",
+        "theta",
+        "config",
+        "public dictionary"
+      ],
+      "epoch_duration_recorded": false
+    }
+  },
+  "attempt_label_accounting": {
+    "Qwen2.5-0.5B": {
+      "attempt_rows": 4,
+      "same_requested_label": 2,
+      "different_requested_label": 2,
+      "reported_threshold_cleared_heads": 0,
+      "triggered_heads": 2
+    },
+    "Llama-3.2-1B": {
+      "attempt_rows": 10,
+      "same_requested_label": 5,
+      "different_requested_label": 5,
+      "reported_threshold_cleared_heads": 2,
+      "triggered_heads": 5
+    },
+    "phi3_mini": {
+      "attempt_rows": 30,
+      "same_requested_label": 0,
+      "different_requested_label": 30,
+      "reported_threshold_cleared_heads": 11,
+      "triggered_heads": 18
+    }
+  },
+  "candidate_identification": {
+    "Qwen2.5-0.5B": {
+      "target_ids": 100,
+      "same_target_ids_repeated_across_seeds": true,
+      "rules": {
+        "main": {
+          "hits_per_100_by_seed": [
+            100,
+            100
+          ],
+          "effective_heads_used": 2
+        },
+        "gram": {
+          "hits_per_100_by_seed": [
+            0,
+            0
+          ],
+          "effective_heads_used": 1
+        },
+        "sorted_row_norm": {
+          "hits_per_100_by_seed": [
+            2,
+            2
+          ],
+          "effective_heads_used": 1
+        },
+        "procrustes": {
+          "hits_per_100_by_seed": [
+            1,
+            2
+          ],
+          "effective_heads_used": 1
+        },
+        "b1": {
+          "hits_per_100_by_seed": [
+            6,
+            2
+          ],
+          "effective_heads_used": 1
+        }
+      },
+      "saved_input_object_binding": false
+    },
+    "Llama-3.2-1B": {
+      "target_ids": 100,
+      "same_target_ids_repeated_across_seeds": true,
+      "rules": {
+        "main": {
+          "hits_per_100_by_seed": [
+            100,
+            100
+          ],
+          "effective_heads_used": 8
+        },
+        "gram": {
+          "hits_per_100_by_seed": [
+            46,
+            46
+          ],
+          "effective_heads_used": 1
+        },
+        "sorted_row_norm": {
+          "hits_per_100_by_seed": [
+            69,
+            72
+          ],
+          "effective_heads_used": 1
+        },
+        "procrustes": {
+          "hits_per_100_by_seed": [
+            3,
+            4
+          ],
+          "effective_heads_used": 1
+        },
+        "b1": {
+          "hits_per_100_by_seed": [
+            1,
+            0
+          ],
+          "effective_heads_used": 1
+        }
+      },
+      "saved_input_object_binding": false
+    }
+  },
+  "phi_counter_audit": {
+    "sample_ids": 3000,
+    "seed_records": 6000,
+    "correct": 61746079,
+    "total": 62180352,
+    "historical_differing_cells": 6,
+    "net_correct_difference": 0
+  },
+  "miss_coverage": {
+    "covered": 471739,
+    "total": 516666,
+    "fraction": 0.9130444039282631
+  },
+  "scope": "Saved descriptive observations and offline numeric checks only. No new recovery execution, method implementation, causal mechanism or general scaling guarantee.",
+  "exported_phi_fields": "Seed counters and six-cell comparison only; per-block Phi diagnostics are not distributed in this extension.",
+  "scaling_point": {
+    "ratio": 1.25,
+    "model": "Qwen2.5-0.5B",
+    "heads": 2,
+    "sample_ids": 100,
+    "scores": {
+      "same_epoch": {
+        "correct": 41318,
+        "total": 41344
+      },
+      "adapted": {
+        "correct": 41341,
+        "total": 41344
+      }
+    },
+    "general_method_validity_accepted": false
+  }
+}

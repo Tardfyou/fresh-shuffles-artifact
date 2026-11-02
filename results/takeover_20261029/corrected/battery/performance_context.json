@@ -1,0 +1,11 @@
+{
+  "own_experiment_workers": 0,
+  "system_load_average": [
+    15.18115234375,
+    62.228515625,
+    92.28076171875
+  ],
+  "logical_cpus": 256,
+  "torch_threads": 4,
+  "scope": "Other users and system services are outside this project; shared-host load is recorded"
+}

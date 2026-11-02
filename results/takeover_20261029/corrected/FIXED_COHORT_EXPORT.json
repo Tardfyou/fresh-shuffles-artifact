@@ -1,0 +1,277 @@
+{
+  "scope": "Accepted fixed-cohort records only; no measurement implementation, live logs or discontinued API data.",
+  "files": [
+    {
+      "file": "probe.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "probe_multikey.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "calibrator_comparison.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "fused.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "need_ratio.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "ratio_fit.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "lifecycle.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "sa_rotation.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "cross_key_summary.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "privacy.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "privacy_cases.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "privacy_summary.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "privacy_controls.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "privacy_controls_summary.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "integrity.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "integrity_summary.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "matched_control_per_prompt.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "matched_control_summary.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "battery_exitcodes.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "cross_key_Qwen2.5-0.5B.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "cross_key_Qwen2.5-0.5B_summary.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "cross_key_Llama-3.2-1B.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "cross_key_Llama-3.2-1B_summary.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "cross_key_Phi-3-mini-4k-instruct.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "cross_key_Phi-3-mini-4k-instruct_summary.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "spectrum_Qwen2.5-0.5B.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "spectrum_Qwen2.5-0.5B_summary.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "spectrum_Llama-3.2-1B.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "spectrum_Llama-3.2-1B_summary.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "battery/RUN_MANIFEST.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": true
+    },
+    {
+      "file": "battery/costs/veilkv_plus_v2_costs.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "battery/performance_context.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "battery/results/keyservice_state.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "battery/results/page_manager_replay.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "battery/results/stage_attacks_samples.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "battery/results/stage_functional_samples.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "battery/results/stage_tee_battery_samples.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "battery/results/veilkv_plus_v2.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": true
+    },
+    {
+      "file": "battery_perf512/INPUT_SCOPE.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "battery_perf512/RUN_MANIFEST.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": true
+    },
+    {
+      "file": "battery_perf512/costs/veilkv_plus_v2_costs.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "battery_perf512/exitcodes.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "battery_perf512/performance_context.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "battery_perf512/results/page_manager_replay.jsonl",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": false
+    },
+    {
+      "file": "battery_perf512/results/veilkv_plus_v2.json",
+      "numeric_values_and_shapes_preserved": true,
+      "experimental_text_and_predictions_preserved": true,
+      "local_path_metadata_normalized": true
+    }
+  ],
+  "originals_modified": false,
+  "valid_outcomes_filtered": false
+}

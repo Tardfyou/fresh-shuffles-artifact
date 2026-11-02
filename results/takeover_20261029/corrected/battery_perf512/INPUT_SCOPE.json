@@ -1,0 +1,16 @@
+{
+  "reason": "Historical measured cache had 32 tokens and no private tail; preserve it and rerun timing at 512 tokens",
+  "reused_stages": [
+    "fixation",
+    "functional",
+    "tee_battery",
+    "paged_harness",
+    "attacks"
+  ],
+  "new_stages": [
+    "perf",
+    "adjudicate"
+  ],
+  "public_prefix_tokens": 32,
+  "private_tail_tokens": 480
+}

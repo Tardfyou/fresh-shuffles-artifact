@@ -1,0 +1,8 @@
+{"stage": "functional", "model": "Qwen2.5-0.5B", "test": "sys+secret_tee_float32", "roundtrip_K": 0.0, "roundtrip_V": 0.0, "greedy20_equal": true}
+{"stage": "functional", "model": "Qwen2.5-0.5B", "test": "sys+secret_tee_bfloat16", "roundtrip_K": 0.498565673828125, "roundtrip_V": 0.031015396118164062, "zero_error_beyond_bf16": true, "greedy20_equal": true}
+{"stage": "functional", "model": "Qwen2.5-0.5B", "test": "unaligned_tee_float32", "roundtrip_K": 0.0, "roundtrip_V": 0.0, "greedy20_equal": true}
+{"stage": "functional", "model": "Qwen2.5-0.5B", "test": "unaligned_tee_bfloat16", "roundtrip_K": 0.488677978515625, "roundtrip_V": 0.0299224853515625, "zero_error_beyond_bf16": true, "greedy20_equal": false}
+{"stage": "functional", "model": "Llama-3.2-1B", "test": "sys+secret_tee_float32", "roundtrip_K": 0.0, "roundtrip_V": 0.0, "greedy20_equal": true}
+{"stage": "functional", "model": "Llama-3.2-1B", "test": "sys+secret_tee_bfloat16", "roundtrip_K": 0.06167030334472656, "roundtrip_V": 0.010156631469726562, "zero_error_beyond_bf16": true, "greedy20_equal": true}
+{"stage": "functional", "model": "Llama-3.2-1B", "test": "unaligned_tee_float32", "roundtrip_K": 0.0, "roundtrip_V": 0.0, "greedy20_equal": true}
+{"stage": "functional", "model": "Llama-3.2-1B", "test": "unaligned_tee_bfloat16", "roundtrip_K": 0.06207275390625, "roundtrip_V": 0.007752895355224609, "zero_error_beyond_bf16": true, "greedy20_equal": true}

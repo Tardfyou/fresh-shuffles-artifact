@@ -1,0 +1,69 @@
+{
+ "model": "Qwen2.5-0.5B",
+ "ratio": 1.5,
+ "heads": {
+  "0": {
+   "candidates": [
+    {
+     "q": -138.357536,
+     "loss": 0.75208807,
+     "orth_error": 0.0029655,
+     "scale_spread": 2.115143
+    },
+    {
+     "q": -138.408298,
+     "loss": 0.75279126,
+     "orth_error": 0.00296129,
+     "scale_spread": 2.11664
+    },
+    {
+     "q": 138.408298,
+     "loss": 3.82774431,
+     "orth_error": 0.26358357,
+     "scale_spread": 35.309807
+    }
+   ],
+   "loss_separation_top1_top2": 0.00070319,
+   "chosen_orth_error": 0.0029655,
+   "chosen_scale_spread": 2.115143,
+   "true_S_spread": 2.140952,
+   "true_M_spread": 2.127874,
+   "spread_dev_vs_true_M": 0.005983
+  },
+  "1": {
+   "candidates": [
+    {
+     "q": 96.210575,
+     "loss": 0.73927884,
+     "orth_error": 0.00293102,
+     "scale_spread": 2.088295
+    },
+    {
+     "q": 96.283871,
+     "loss": 0.74392634,
+     "orth_error": 0.00291294,
+     "scale_spread": 2.098061
+    },
+    {
+     "q": -96.283871,
+     "loss": 2.97530389,
+     "orth_error": 0.26416925,
+     "scale_spread": 15.046338
+    }
+   ],
+   "loss_separation_top1_top2": 0.0046475,
+   "chosen_orth_error": 0.00293102,
+   "chosen_scale_spread": 2.088295,
+   "true_S_spread": 1.917413,
+   "true_M_spread": 2.129403,
+   "spread_dev_vs_true_M": 0.019305
+  }
+ },
+ "harness": {
+  "model": "Qwen/Qwen2.5-0.5B",
+  "key_seed": 42,
+  "obf_seed": 1234,
+  "protect_seed": "crc32 protocol seed (common.seed)"
+ },
+ "generated": "2026-11-02T17:29:26+08:00"
+}

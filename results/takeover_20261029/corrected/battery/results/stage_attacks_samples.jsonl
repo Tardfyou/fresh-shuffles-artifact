@@ -1,0 +1,68 @@
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 3, "block": 1, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 3, "block": 2, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 3, "block": 3, "blind_mean": 0.0417, "blind_max": 0.0625, "cosine_selected": 0.0625, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 4, "block": 1, "blind_mean": 0.0417, "blind_max": 0.125, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 4, "block": 2, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 4, "block": 3, "blind_mean": 0.0417, "blind_max": 0.0625, "cosine_selected": 0.0, "random_selected": 0.0625}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 5, "block": 1, "blind_mean": 0.125, "blind_max": 0.1875, "cosine_selected": 0.1875, "random_selected": 0.0625}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 5, "block": 2, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 5, "block": 3, "blind_mean": 0.0417, "blind_max": 0.0625, "cosine_selected": 0.0625, "random_selected": 0.0625}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 3, "block": 1, "blind_mean": 0.0417, "blind_max": 0.0625, "cosine_selected": 0.0625, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 3, "block": 2, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 3, "block": 3, "blind_mean": 0.0208, "blind_max": 0.0625, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 4, "block": 1, "blind_mean": 0.0417, "blind_max": 0.125, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 4, "block": 2, "blind_mean": 0.0208, "blind_max": 0.0625, "cosine_selected": 0.0, "random_selected": 0.0625}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 4, "block": 3, "blind_mean": 0.0625, "blind_max": 0.0625, "cosine_selected": 0.0625, "random_selected": 0.0625}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 5, "block": 1, "blind_mean": 0.0417, "blind_max": 0.0625, "cosine_selected": 0.0625, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 5, "block": 2, "blind_mean": 0.0208, "blind_max": 0.0625, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 5, "block": 3, "blind_mean": 0.0417, "blind_max": 0.0625, "cosine_selected": 0.0625, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 3, "block": 1, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 3, "block": 2, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 3, "block": 3, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 4, "block": 1, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 4, "block": 2, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 4, "block": 3, "blind_mean": 0.0208, "blind_max": 0.0625, "cosine_selected": 0.0625, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 5, "block": 1, "blind_mean": 0.0625, "blind_max": 0.125, "cosine_selected": 0.125, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 5, "block": 2, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "principal": "76696374", "epoch": 5, "block": 3, "blind_mean": 0.0417, "blind_max": 0.125, "cosine_selected": 0.0, "random_selected": 0.125}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "block": 1, "learned_acc": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "block": 2, "learned_acc": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "block": 3, "learned_acc": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "block": 1, "gram": false, "whitening": false, "procrustes": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "block": 2, "gram": true, "whitening": false, "procrustes": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "multiblock_avg": 0.0}
+{"stage": "attacks", "model": "Qwen2.5-0.5B", "dict_hits": 0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 3, "block": 1, "blind_mean": 0.0208, "blind_max": 0.0625, "cosine_selected": 0.0, "random_selected": 0.0625}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 3, "block": 2, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 3, "block": 3, "blind_mean": 0.0208, "blind_max": 0.0625, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 4, "block": 1, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 4, "block": 2, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 4, "block": 3, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 5, "block": 1, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 5, "block": 2, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 5, "block": 3, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 3, "block": 1, "blind_mean": 0.0208, "blind_max": 0.0625, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 3, "block": 2, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 3, "block": 3, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 4, "block": 1, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 4, "block": 2, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 4, "block": 3, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 5, "block": 1, "blind_mean": 0.0208, "blind_max": 0.0625, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 5, "block": 2, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 5, "block": 3, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 3, "block": 1, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 3, "block": 2, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 3, "block": 3, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 4, "block": 1, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 4, "block": 2, "blind_mean": 0.0208, "blind_max": 0.0625, "cosine_selected": 0.0, "random_selected": 0.0625}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 4, "block": 3, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 5, "block": 1, "blind_mean": 0.0208, "blind_max": 0.0625, "cosine_selected": 0.0625, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 5, "block": 2, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "principal": "76696374", "epoch": 5, "block": 3, "blind_mean": 0.0, "blind_max": 0.0, "cosine_selected": 0.0, "random_selected": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "block": 1, "learned_acc": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "block": 2, "learned_acc": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "block": 3, "learned_acc": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "block": 1, "gram": true, "whitening": true, "procrustes": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "block": 2, "gram": false, "whitening": false, "procrustes": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "multiblock_avg": 0.0}
+{"stage": "attacks", "model": "Llama-3.2-1B", "dict_hits": 0}

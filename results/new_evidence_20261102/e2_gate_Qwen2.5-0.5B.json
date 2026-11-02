@@ -1,0 +1,7 @@
+{
+ "model": "Qwen2.5-0.5B",
+ "n_targets": 100,
+ "reproduction_mismatches": [],
+ "gate_pass": true,
+ "elapsed_s": 94.3
+}

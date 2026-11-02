@@ -1,0 +1,74 @@
+{
+ "generated": "2026-11-02T17:21:55+08:00",
+ "models": {
+  "qwen25_05b": {
+   "error_blocks": 6,
+   "correct_blocks": 0,
+   "gap_fully_missed_tokens": {
+    "n": 5,
+    "frac_lt_0.001": 1.0,
+    "frac_lt_0.01": 1.0,
+    "frac_lt_0.05": 1.0,
+    "median": 0.0005,
+    "p90": 0.0007,
+    "p99": 0.0007
+   },
+   "gap_tokens_present_in_pred": {
+    "n": 78,
+    "frac_lt_0.001": 1.0,
+    "frac_lt_0.01": 1.0,
+    "frac_lt_0.05": 1.0,
+    "median": 0.0,
+    "p90": 0.0,
+    "p99": 0.0
+   },
+   "definition": "fully missed = true token absent from the prediction multiset; gap = (top-1 similarity of the token's best row) - (best similarity of the token); 0 = the token ties the winner in its own best row (a near-tie miss)"
+  },
+  "llama32_1b": {
+   "error_blocks": 37454,
+   "correct_blocks": 0,
+   "gap_fully_missed_tokens": {
+    "n": 27931,
+    "frac_lt_0.001": 0.02363,
+    "frac_lt_0.01": 0.101429,
+    "frac_lt_0.05": 0.248648,
+    "median": 0.1611,
+    "p90": 0.5795,
+    "p99": 0.786
+   },
+   "gap_tokens_present_in_pred": {
+    "n": 525450,
+    "frac_lt_0.001": 0.999977,
+    "frac_lt_0.01": 0.999977,
+    "frac_lt_0.05": 0.999977,
+    "median": 0.0,
+    "p90": 0.0,
+    "p99": 0.0
+   },
+   "definition": "fully missed = true token absent from the prediction multiset; gap = (top-1 similarity of the token's best row) - (best similarity of the token); 0 = the token ties the winner in its own best row (a near-tie miss)"
+  },
+  "phi3_mini": {
+   "error_blocks": 434273,
+   "correct_blocks": 0,
+   "gap_fully_missed_tokens": {
+    "n": 359548,
+    "frac_lt_0.001": 0.010658,
+    "frac_lt_0.01": 0.0904,
+    "frac_lt_0.05": 0.28206,
+    "median": 0.1314,
+    "p90": 0.6113,
+    "p99": 0.7972
+   },
+   "gap_tokens_present_in_pred": {
+    "n": 5921565,
+    "frac_lt_0.001": 1.0,
+    "frac_lt_0.01": 1.0,
+    "frac_lt_0.05": 1.0,
+    "median": 0.0,
+    "p90": 0.0,
+    "p99": 0.0
+   },
+   "definition": "fully missed = true token absent from the prediction multiset; gap = (top-1 similarity of the token's best row) - (best similarity of the token); 0 = the token ties the winner in its own best row (a near-tie miss)"
+  }
+ }
+}

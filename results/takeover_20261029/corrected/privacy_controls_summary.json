@@ -1,0 +1,32 @@
+{
+  "n": 100,
+  "same_frozen_cases": true,
+  "definitions": {
+    "no_cache": "no cache content or cache-length observation: uniform prior on 100 shuffled candidates",
+    "context_only": "known common request scaffold and field type only; no value or cache observation: all 100 candidates tie",
+    "length_only": "known scaffold plus observed number of complete cache tokens: uniform among same-length candidate requests",
+    "wrong_key": "independent cfg seed 9999 protects victim; original seed42 calibration decoder and same candidate Dice scorer"
+  },
+  "topk_expected": {
+    "no_cache": {
+      "1": 0.01,
+      "5": 0.05,
+      "10": 0.1
+    },
+    "context_only": {
+      "1": 0.01,
+      "5": 0.05,
+      "10": 0.1
+    },
+    "length_only": {
+      "1": 0.01,
+      "5": 0.05,
+      "10": 0.1
+    },
+    "wrong_key": {
+      "1": 0.010038533834586466,
+      "5": 0.05019266917293233,
+      "10": 0.10038533834586466
+    }
+  }
+}

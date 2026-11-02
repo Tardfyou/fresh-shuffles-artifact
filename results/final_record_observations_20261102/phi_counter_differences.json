@@ -1,0 +1,62 @@
+[
+  {
+    "sid": "wc25_512_0110",
+    "seed": "seed5002",
+    "new_correct": 21362,
+    "historical_correct": 21361,
+    "delta_correct": 1,
+    "new_total": 21504,
+    "historical_total": 21504,
+    "near_tie_rows_anywhere_in_current_failed_blocks": 120
+  },
+  {
+    "sid": "wc25_32_0072",
+    "seed": "seed5001",
+    "new_correct": 1526,
+    "historical_correct": 1527,
+    "delta_correct": -1,
+    "new_total": 1536,
+    "historical_total": 1536,
+    "near_tie_rows_anywhere_in_current_failed_blocks": 10
+  },
+  {
+    "sid": "wc25_256_0135",
+    "seed": "seed5002",
+    "new_correct": 22375,
+    "historical_correct": 22374,
+    "delta_correct": 1,
+    "new_total": 22528,
+    "historical_total": 22528,
+    "near_tie_rows_anywhere_in_current_failed_blocks": 95
+  },
+  {
+    "sid": "wc25_256_0177",
+    "seed": "seed5002",
+    "new_correct": 12205,
+    "historical_correct": 12206,
+    "delta_correct": -1,
+    "new_total": 12288,
+    "historical_total": 12288,
+    "near_tie_rows_anywhere_in_current_failed_blocks": 67
+  },
+  {
+    "sid": "wc25_256_0379",
+    "seed": "seed5002",
+    "new_correct": 15248,
+    "historical_correct": 15249,
+    "delta_correct": -1,
+    "new_total": 15360,
+    "historical_total": 15360,
+    "near_tie_rows_anywhere_in_current_failed_blocks": 95
+  },
+  {
+    "sid": "wc25_512_0068",
+    "seed": "seed5001",
+    "new_correct": 29986,
+    "historical_correct": 29985,
+    "delta_correct": 1,
+    "new_total": 30208,
+    "historical_total": 30208,
+    "near_tie_rows_anywhere_in_current_failed_blocks": 144
+  }
+]

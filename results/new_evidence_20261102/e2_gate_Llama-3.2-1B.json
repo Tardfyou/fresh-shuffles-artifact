@@ -1,0 +1,7 @@
+{
+ "model": "Llama-3.2-1B",
+ "n_targets": 100,
+ "reproduction_mismatches": [],
+ "gate_pass": true,
+ "elapsed_s": 247.9
+}

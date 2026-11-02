@@ -26,7 +26,8 @@
     "counter_identity_verified": true,
     "historical_per_block_identity_proven": false,
     "algorithm_equivalence_accepted": false,
-    "descriptive_cost_and_diagnostic_records_exported": true
+    "descriptive_cost_and_diagnostic_records_exported": true,
+    "original_two_model_scope": true
   },
   "byte_cache_deployment": {
     "requests": 400,
@@ -37,14 +38,10 @@
     "known_key_functional_scope_only": true
   },
   "unmeasured": [
-    "historical per-run checkpoint/tokenizer binding",
-    "complete retry-policy cost",
-    "same-transform closest-method head-to-head",
     "general scaling-fit guarantee",
-    "real serving scheduler integration",
-    "GPU transfer",
-    "hardware rollback resistance",
-    "within-request exposure security"
+    "unique physical explanation of content misses",
+    "within-request exposure security",
+    "deployment secret-epoch duration"
   ],
   "expanded_byte_cache_defense": {
     "cohort": "existing OR602, containing lifecycle100",
@@ -67,5 +64,68 @@
     "repetitions_per_operation": 100,
     "all_raw_timings_retained": true,
     "byte_recovery_includes_consumer_dtype_restoration": true
+  },
+  "expanded_saved_record_followup": {
+    "configurations": 3,
+    "prompt_configuration_records": 9000,
+    "seed_records": 18000,
+    "covered_main_misses": 471739,
+    "total_main_misses": 516666,
+    "phi_seed_counter_differences": 6,
+    "phi_net_counter_difference": 0,
+    "historical_per_block_identity_proven": false
+  },
+  "new_evidence_followup": {
+    "source": "results/new_evidence_20261102",
+    "new_input_records_verified": true,
+    "session_head_observations": 126,
+    "unique_input_head_observations": 116,
+    "a_S_predicate_passes": 126,
+    "predicate_checks_M_u_w": false,
+    "content_correct": 10020,
+    "content_head_tokens": 10080,
+    "budget_matched_candidate_targets_per_model": 100,
+    "candidate_permutation_seeds": 2,
+    "numerical_path_blocks": 306,
+    "numerical_prediction_arrays": 2754,
+    "numerical_nonbaseline_comparisons": 2448,
+    "numerical_prediction_changes": 0,
+    "scaling_points": 6,
+    "scaling_settings_with_positive_aggregate_gain": 5,
+    "scaling_settings_with_negative_aggregate_gain": 1,
+    "general_scaling_guarantee": false,
+    "unique_causal_error_mechanism_established": false,
+    "all_valid_negative_outcomes_retained": true
+  },
+  "historical_unavailable": [
+    "contemporaneous main-run checkpoint/tokenizer bindings",
+    "historical per-block predictions",
+    "actual inputs in the earlier attempt log"
+  ],
+  "out_of_scope": [
+    "GPU experiments",
+    "real TEE or attestation",
+    "production-service or serving-framework integration"
+  ],
+  "visual_summary": {
+    "source": "results/visual_summary_20261102/data.json",
+    "privacy_cases": 100,
+    "semantic_scores_per_condition": 602,
+    "semantic_conditions": 6,
+    "timed_calls": 800,
+    "new_experiments": false,
+    "all_observations_retained": true,
+    "table_and_key_matrix_palette": [
+      "#00B887",
+      "#FF5B61"
+    ],
+    "other_statistical_panels": "Original forms and palettes of USENIX Security Approximate Caches Fig11/22 and NDSS PROMPTPEEK Fig10/11/13"
+  },
+  "accepted_fixed_cohort_export": {
+    "manifest": "results/takeover_20261029/corrected/FIXED_COHORT_EXPORT.json",
+    "source_files": 45,
+    "experimental_text_predictions_and_numbers_preserved": true,
+    "only_local_path_metadata_normalized": true,
+    "new_measurement_code_added": false
   }
 }

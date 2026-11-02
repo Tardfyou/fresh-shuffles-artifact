@@ -1,0 +1,12 @@
+{"stage": "tee_battery", "check": "layer substitution", "verdict": "DETECTED"}
+{"stage": "tee_battery", "check": "layer/kv_type substitution", "verdict": "DETECTED"}
+{"stage": "tee_battery", "check": "aad.dtype forgery", "verdict": "DETECTED"}
+{"stage": "tee_battery", "check": "aad.true_length", "verdict": "DETECTED"}
+{"stage": "tee_battery", "check": "aad.policy_class", "verdict": "DETECTED"}
+{"stage": "tee_battery", "check": "aad.epoch", "verdict": "DETECTED"}
+{"stage": "tee_battery", "check": "prot.epoch forgery", "verdict": "DETECTED"}
+{"stage": "tee_battery", "check": "bit_flip", "verdict": "DETECTED"}
+{"stage": "tee_battery", "check": "block_swap", "verdict": "DETECTED"}
+{"stage": "tee_battery", "check": "truncate", "verdict": "DETECTED"}
+{"stage": "tee_battery", "check": "cross_tenant_substitution", "verdict": "DETECTED"}
+{"stage": "tee_battery", "check": "old_epoch_replay", "verdict": "DETECTED"}

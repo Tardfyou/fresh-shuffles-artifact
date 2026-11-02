@@ -1,0 +1,14 @@
+{
+  "n": 100,
+  "candidates": 100,
+  "theoretical_null": 0.01,
+  "source": "100 distinct WildChat prompts, one complete block per prompt",
+  "rates": {
+    "gram": 0.72,
+    "sorted_row_norm": 0.35,
+    "procrustes": 0.02
+  },
+  "note": "No arithmetic-defense modification; diagnostic on existing profile.",
+  "distinct_first_token_blocks": 78,
+  "largest_block_multiplicity": 6
+}

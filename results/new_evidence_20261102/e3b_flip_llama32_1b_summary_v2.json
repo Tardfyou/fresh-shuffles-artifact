@@ -1,0 +1,15 @@
+{
+ "tag": "llama32_1b",
+ "n_replayed": 240,
+ "any_pred_changed": {
+  "threads1": 0,
+  "threads2": 0,
+  "threads4": 0,
+  "threads16": 0,
+  "threads32": 0,
+  "chunk16": 0,
+  "ksplit4": 0,
+  "fp64": 0
+ },
+ "note": "pred_changed compares the full 16-token prediction list to the same-block baseline (threads=8, chunk=8)"
+}

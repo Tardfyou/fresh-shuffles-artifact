@@ -1,0 +1,40 @@
+{
+ "run": "veilkv_plus_v2",
+ "stages_executed": [
+  "fixation",
+  "functional",
+  "tee_battery",
+  "paged_harness",
+  "attacks",
+  "perf",
+  "adjudicate"
+ ],
+ "stages_fixed_upfront": [
+  "fixation",
+  "functional",
+  "tee_battery",
+  "paged_harness",
+  "attacks",
+  "perf",
+  "adjudicate"
+ ],
+ "code_files": [
+  "exp_veilkv_plus.py",
+  "exp_veilkv_plus_v2.py"
+ ],
+ "outputs": [
+  "results/takeover_20261029/corrected/battery/results/keyservice_state.json",
+  "results/takeover_20261029/corrected/battery/results/page_manager_replay.jsonl",
+  "results/takeover_20261029/corrected/battery/results/stage_attacks_samples.jsonl",
+  "results/takeover_20261029/corrected/battery/results/stage_functional_samples.jsonl",
+  "results/takeover_20261029/corrected/battery/results/stage_tee_battery_samples.jsonl",
+  "results/takeover_20261029/corrected/battery/results/veilkv_plus_v2.json",
+  "results/takeover_20261029/corrected/battery/costs/veilkv_plus_v2_costs.jsonl"
+ ],
+ "seeds": {
+  "torch": 0,
+  "epoch_base": 3,
+  "k_master": "sha3-256 constant (simulated TEE)"
+ },
+ "verdict": "bounded local checks completed; hardware boundary unvalidated"
+}
