@@ -119,3 +119,10 @@ normalized. No new measurement or recovery implementation is added.
 python tools/inspect_fixed_cohorts.py --root .
 python tools/inspect_visual_summary.py --root .
 ```
+
+## Supplementary technical details
+
+See [SUPPLEMENTARY_DETAILS.md](SUPPLEMENTARY_DETAILS.md) for implementation,
+measurement-accounting and historical version details. The retrospective model
+revision inventory and twelve calibration rows are retained in
+`results/supplementary_reporting_values.json`; all underlying results remain.
