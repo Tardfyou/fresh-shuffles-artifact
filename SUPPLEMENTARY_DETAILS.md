@@ -156,3 +156,46 @@ paired permutations, masks and positions.
 See EXPERIMENTS.md, DEFENSE_SUPPLEMENT.md and the retained offline inspectors
 for the data inventory and validation entry points. No manuscript files or
 private correspondence accompany this documentation.
+
+## Complete supplementary tables
+
+These tables preserve the previously reported values and measurement scope.
+They add no samples or experiments. Machine-readable cells are retained in
+`results/supplementary_reporting_values.json` under `additional_tables`.
+
+### Intervention comparison
+
+Measured intervention properties. A dash is unmeasured. Public-prefix equality is visible by policy; the trusted boundary is simulated. The first-layer entry describes the transfer-study check; separate full-model continuation outcomes are retained in DEFENSE_SUPPLEMENT.md.
+
+| Property | KV-Cloak comparison | Request-specific S,a | VeilKV byte profile |
+| --- | --- | --- | --- |
+| Secret scope | Reused structural secrets in the tested configuration | Refresh S,a; retain M | Derived material scoped to cache metadata and private principal/nonce |
+| Confidentiality evidence | First-layer Value multiset recovery in the tested implementation | Stale-demixer recovery 1.769% | --- |
+| Integrity and replay | --- | --- | 12/12 mutation classes detected; nonce replay rejected after restart |
+| Prefix and tail integration | --- | --- | Stored public prefix reused; tail linked to its terminal tag; wrong joins rejected |
+| Functional boundary | --- | First-layer joint K/V attention check | 48,160/48,160 requests; FP32/bf16; five mask shapes |
+
+### Closed-set privacy cases by type
+
+One fixed key, 100 synthetic cases, 100 same-type candidates per case. Unique counts strict first-place truths; max m is the largest truth tie group. Top-k entries are percentages under uniform tie-breaking.
+
+| Type | Unique | Max. m | Top-1 | Top-5 | Top-10 |
+| --- | --- | --- | --- | --- | --- |
+| SSN-like | 17/17 | 1 | 100.00 | 100.00 | 100.00 |
+| Card-like | 17/17 | 1 | 100.00 | 100.00 | 100.00 |
+| Password | 13/17 | 2 | 88.24 | 100.00 | 100.00 |
+| MRN | 17/17 | 1 | 100.00 | 100.00 | 100.00 |
+| Name | 16/16 | 1 | 100.00 | 100.00 | 100.00 |
+| Address | 15/16 | 2 | 96.88 | 100.00 | 100.00 |
+
+### Saved CPU phase costs
+
+Saved CPU measurements. Setup phases are medians across 4/12 final workers with eight threads each. Decode includes earlier scheduling conditions and diagnostic overhead. Peak RSS is the process peak in reported MB, not dictionary-only allocation.
+
+| Saved quantity | Qwen 0.5B | Llama 1B |
+| --- | --- | --- |
+| Vocabulary | 151,936 | 128,256 |
+| Dictionary (s) | 2.121 | 11.105 |
+| Calibration stage (s) | 0.107 | 0.427 |
+| Decode (s/1k tokens) | 43.4 | 120.0 |
+| Peak RSS (reported MB) | 4,561.6 | 7,588.1 |
