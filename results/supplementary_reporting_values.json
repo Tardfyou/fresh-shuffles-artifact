@@ -291,5 +291,110 @@
       ],
       "scope": "Saved CPU measurements. Setup phases are medians across 4/12 final workers with eight threads each. Decode includes earlier scheduling conditions and diagnostic overhead. Peak RSS is the process peak in reported MB, not dictionary-only allocation."
     }
+  },
+  "evaluation_protocol_details": {
+    "scope": "Retained reporting and protocol metadata; no new samples, measurements or model/API calls.",
+    "main_setup": {
+      "official_revision": "6b40f36",
+      "configuration_seed": 42,
+      "target_permutation_seeds": [
+        5001,
+        5002
+      ],
+      "one_configuration_per_model_block_size_cell": true,
+      "defender_threshold_sentences": 8,
+      "threshold_sentences_separate_from_targets": true,
+      "prompt_is_resampling_unit": true,
+      "all_main_heads_calibrated_and_included": true,
+      "ground_truth_used_for_diagnostics_only": true,
+      "probe_token_lengths_are_actual_tokenizer_outputs": true,
+      "probe_search_can_overshoot_nominal_budget": true,
+      "prefix_lengths": {
+        "Llama-3.2-1B": 1,
+        "Phi-3-mini": 1,
+        "TinyLlama-1.1B": 2,
+        "other_main_configurations": 0
+      },
+      "prefix_tokens_remain_in_model_input": true,
+      "calibration_excludes_prefix_containing_and_incomplete_blocks": true,
+      "targets_exclude_trailing_incomplete_block": true
+    },
+    "probe_budget": {
+      "independent_configurations": 100,
+      "budgets_tokens": [
+        16,
+        32,
+        64,
+        128,
+        256,
+        512,
+        1024,
+        2048
+      ],
+      "same_keys_reused_across_budgets": true,
+      "reported_wilson95_percent": {
+        "1024": [
+          57.3,
+          75.4
+        ],
+        "2048": [
+          96.3,
+          100.0
+        ]
+      },
+      "coverage_and_calibration_agree_in_recorded_trials": true,
+      "head_independence_not_assumed": true
+    },
+    "entity_swap": {
+      "pairs": 553,
+      "target_observations": 1106,
+      "head": 0,
+      "equal_global_bag_pairs": 162,
+      "equal_block_bag_pairs": 25,
+      "identical_evaluated_token_sequence_pairs": 2,
+      "different_complete_token_length_pairs": 8,
+      "length_only_expected_percent": 50.723,
+      "block_bag_expected_percent": 97.74,
+      "global_bag_expected_percent": 85.353,
+      "tie_credit": 0.5,
+      "both_candidates_shuffled_per_pair": true,
+      "inputs_include_arbitrary_words_and_code_identifiers": true,
+      "task": "Compatibility with two supplied candidates."
+    },
+    "privacy": {
+      "cases": 100,
+      "candidate_pool_per_type": 100,
+      "case_counts_per_type": {
+        "SSN-like": 17,
+        "Card-like": 17,
+        "Password": 17,
+        "MRN": 17,
+        "Name": 16,
+        "Address": 16
+      },
+      "truth_selection_seed": 20261028,
+      "truth_indices_sampled_without_replacement": true,
+      "candidate_presentation_independently_shuffled_per_case": true,
+      "candidate_context_tokenization_retained": true,
+      "raw_fields_retained": [
+        "candidate strings",
+        "contextual tokens",
+        "headwise recovered blocks",
+        "scores",
+        "truth positions",
+        "control scores",
+        "tie groups",
+        "wrong-key recovered blocks"
+      ],
+      "wrong_configuration_expected_percent": {
+        "top1": 1.004,
+        "top5": 5.019,
+        "top10": 10.039
+      },
+      "no_cache_and_template_controls": "Explicit uniform priors, not learned-model predictions.",
+      "length_only_control": "All candidates in a case have the same evaluated complete-block length.",
+      "metric_scope": "Known-template identification among supplied candidates.",
+      "distinct_synthetic_cases": true
+    }
   }
 }

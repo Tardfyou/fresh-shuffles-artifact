@@ -199,3 +199,48 @@ Saved CPU measurements. Setup phases are medians across 4/12 final workers with 
 | Calibration stage (s) | 0.107 | 0.427 |
 | Decode (s/1k tokens) | 43.4 | 120.0 |
 | Peak RSS (reported MB) | 4,561.6 | 7,588.1 |
+
+## Evaluation setup and diagnostic accounting
+
+`results/supplementary_reporting_values.json` now retains these protocol details
+under `evaluation_protocol_details`. They describe the existing accepted studies
+and add no samples or measurements.
+
+The main runner generates one complete secret configuration per model/block-size
+cell with seed 42. Seeds 5001 and 5002 change target-block permutations while
+sharing that configuration. Eight fixed sentences, separate from the targets,
+set defender magnitude thresholds. All configured main-suite heads calibrated
+and enter the reported counts; whole prompts are the bootstrap units.
+
+Probe lengths are complete tokenizer-output lengths. Searching repeated text can
+overshoot a nominal budget. Recorded prefix lengths are one token for Llama and
+Phi, two for TinyLlama and zero for the other main configurations. Prefixes stay
+in the model input; only full blocks inside the constant run enter calibration.
+Target scoring excludes the final incomplete block. Ground-truth secrets serve
+only evaluation diagnostics.
+
+The 100-key budget study reuses the same independently generated configurations
+at eight budgets from 16 to 2,048 tokens. Reported 95% Wilson endpoints are
+57.3–75.4% for 67/100 at 1,024 tokens and 96.3–100% for 100/100 at 2,048.
+Intervals are pointwise, not a simultaneous band. The two-head coverage band
+does not assume independence between heads; exact occupancy calculations use
+independent uniform permutations across blocks.
+
+The entity-swap diagnostic retains all 553 pairs and both targets (1,106 head-0
+observations), including 162 equal-global-bag pairs, 25 equal-block-bag pairs,
+two identical evaluated token-sequence pairs and eight pairs with different
+complete-token lengths. The length-only expected accuracy is 50.723%; block/global
+bag candidate matching gives 97.740%/85.353% with half credit for ties. Both
+candidate presentations are shuffled per pair. The inputs include arbitrary
+words and code identifiers; the task is compatibility with the two supplied
+candidates.
+
+The 100 synthetic privacy cases use 100 generated candidates per value type.
+Truth indices are sampled without replacement using seed 20261028 and candidate
+presentation is independently shuffled per case. Contextual tokens, recovered
+blocks, scores, truth positions, control scores and tie groups are retained.
+No-cache and template-only controls explicitly assign uniform priors; equal
+complete-block candidate lengths make length-only scoring equivalent. Fresh
+independent target configurations with the original demixer and Dice scoring
+yield expected top-1/top-5/top-10 rates of 1.004%/5.019%/10.039%. All original
+cases and outcomes remain in their existing result files.
