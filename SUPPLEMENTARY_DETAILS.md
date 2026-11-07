@@ -244,3 +244,31 @@ complete-block candidate lengths make length-only scoring equivalent. Fresh
 independent target configurations with the original demixer and Dice scoring
 yield expected top-1/top-5/top-10 rates of 1.004%/5.019%/10.039%. All original
 cases and outcomes remain in their existing result files.
+
+## Sampling and local ordering settings
+
+The existing fixed-cohort preparation and secondary ordering summaries are
+retained in `sampling_and_ordering_details` in the reporting-values JSON.
+Preparation scans shards 70–85, selects the first user turn of conversations
+from January 2025 onward, and requires English language annotations with toxic
+and redacted flags false. These are annotation filters, not a guarantee of
+monolingual text. Surrounding whitespace is stripped; 120–4,000 characters are
+retained and duplicates removed. Qwen2.5-0.5B length bins are [32,64), [64,128),
+[128,256), [256,512) and [512,768), with 600 prompts per bin and seed 20261021.
+The saved manifest has 802,528 Qwen tokens. Its observed conversation timestamps
+span April 22–July 31, 2025. All text and timestamp/model metadata match source
+shards; no texts coincide under NFKC, case folding and whitespace normalization.
+
+Local ordering uses all 602 IDs, representing 574 distinct complete-block spans.
+The corrected decoder supplies head-0 bags. The Qwen2.5-0.5B prior uses bf16,
+beam width 16 and a model start token. At most 80 reconstructed context tokens
+and 16 steps per block keep inputs within 96 tokens. Reordered KV caches reuse
+identical prefixes. Cached and uncached execution were compared at three context
+lengths; timing may reuse common prefixes across conditions.
+
+All four local conditions remain. Per-prompt position accuracy is 27.776% E2E,
+27.776% oracle, 11.283% without reconstructed context and 7.505% for random order.
+E2E matches 1/602 complete spans and 2,020/11,248 blocks. Bags are exact across
+all blocks in 601/602 IDs, and E2E/oracle output sequences agree in 601/602 IDs.
+Equal weighting of distinct spans instead gives 28.258% E2E and 7.548% random
+position accuracy. No original prediction, sample ID or measured outcome changed.

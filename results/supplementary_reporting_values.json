@@ -396,5 +396,93 @@
       "metric_scope": "Known-template identification among supplied candidates.",
       "distinct_synthetic_cases": true
     }
+  },
+  "sampling_and_ordering_details": {
+    "scope": "Existing fixed-cohort protocol and secondary summaries; no new experiment.",
+    "sampling": {
+      "dataset": "allenai/WildChat-4.8M",
+      "first_user_turn_only": true,
+      "assistant_responses_excluded": true,
+      "conversation_timestamp_filter": "January 2025 onward",
+      "language_annotation": "English",
+      "toxic_flag": false,
+      "redacted_flag": false,
+      "language_filter_does_not_guarantee_monolingual_text": true,
+      "strip_surrounding_whitespace": true,
+      "characters_min_max": [
+        120,
+        4000
+      ],
+      "stratification_tokenizer": "Qwen2.5-0.5B",
+      "length_bins": [
+        [
+          32,
+          64
+        ],
+        [
+          64,
+          128
+        ],
+        [
+          128,
+          256
+        ],
+        [
+          256,
+          512
+        ],
+        [
+          512,
+          768
+        ]
+      ],
+      "samples_per_bin": 600,
+      "sampling_seed": 20261021,
+      "manifest_qwen_tokens": 802528,
+      "observed_conversation_timestamps": [
+        "2025-04-22",
+        "2025-07-31"
+      ],
+      "all_text_and_metadata_matched_to_source": true,
+      "dedup_checks": [
+        "Unicode NFKC",
+        "case folding",
+        "whitespace normalization"
+      ],
+      "fixed_ordering_subset_ids": 602,
+      "source_shard_inclusive_range": [
+        70,
+        85
+      ]
+    },
+    "ordering": {
+      "prompt_ids": 602,
+      "distinct_complete_block_spans": 574,
+      "head": 0,
+      "prior_model": "Qwen2.5-0.5B",
+      "beam_width": 16,
+      "inference_dtype": "bf16",
+      "start_token_used": true,
+      "reconstructed_context_tokens_max": 80,
+      "steps_within_block_max": 16,
+      "total_context_tokens_max": 96,
+      "cached_uncached_compared_at_context_lengths": 3,
+      "cache_prefix_reuse_for_timing": true,
+      "per_prompt_position_percent": {
+        "e2e": 27.776,
+        "oracle": 27.776,
+        "no_context": 11.283,
+        "random": 7.505
+      },
+      "exact_e2e_spans": 1,
+      "exact_e2e_blocks": 2020,
+      "evaluated_blocks": 11248,
+      "all_block_bags_exact_prompt_ids": 601,
+      "e2e_oracle_sequence_agreement_prompt_ids": 601,
+      "distinct_span_equal_weight_position_percent": {
+        "e2e": 28.258,
+        "random": 7.548
+      }
+    }
   }
 }
