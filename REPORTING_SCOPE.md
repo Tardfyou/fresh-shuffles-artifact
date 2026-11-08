@@ -26,10 +26,11 @@ files retain every failing block from these two follow-ups, its row predictions,
 marker-cancellation row and recorded scores. Exact one-error blocks with one
 out-of-bag prediction at that row number 33,619/37,454 for Llama and 6/6 for
 Qwen. Llama has 37,448 one-error blocks and six two-error blocks in total.
-The pattern is consistent with residual perturbations after estimated-marker subtraction from bf16-protected values. The selected row is in recovered S coordinates. It is not a stored ground-truth
-marker label, so these observations locate the error without establishing
-whether the cause is hypothesis selection, residual cancellation or another
-upstream estimation error. The 306-block nine-path numerical comparison
+The pattern is consistent with residual perturbations after estimated-marker subtraction from bf16-protected values. The selected row is in recovered S coordinates. It is not a stored historical marker label. The later seeded-layout audit in
+results/marker_numerical_diagnostics_20261109/ reconstructs the marker positions
+and confirms hypothesis selection in every saved failing Qwen/Llama block.
+Known-key arithmetic controls demonstrate BF16 marker-scale precision loss;
+parameter-estimation effects are not individually decomposed. The 306-block nine-path numerical comparison
 retains identical predictions and does not support a blanket scheduling-noise
 explanation. Remaining model rows have no corresponding full block diagnostics.
 

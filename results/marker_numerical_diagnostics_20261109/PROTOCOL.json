@@ -1,0 +1,42 @@
+{
+  "study": "Known-key numerical fidelity, without calibration or secret recovery",
+  "models": [
+    "Qwen/Qwen2.5-0.5B",
+    "unsloth/Llama-3.2-1B"
+  ],
+  "input_cohort": "All existing E3b v2 blocks plus one lexically first (seed,block) failing observation from each of the first20 distinct prompt IDs per Llama failing head; exact observation keys deduplicated. Same frozen3000 manifest, no new text sampling.",
+  "public_inputs": "Existing 16-token true arrays and fixed candidate sets = union of recorded true and base predicted token IDs.",
+  "known_parameters": "Official config generator, seed42, original eight natural threshold sentences, unit S/M ratios and theta ratio2; first-layer preparation seed1234. Parameters are directly known, never recovered.",
+  "conditions": [
+    "FP64 known-key sanity",
+    "FP32 forward, exact inverse of stored matrices",
+    "official BF16 arithmetic, exact inverse of stored matrices",
+    "official BF16 arithmetic with no additive marker, same stored matrices/permutation",
+    "BF16 V@M then marker addition/subtraction without row mixing",
+    "BF16 V@M without marker or row mixing"
+  ],
+  "outcomes": "Per-token relative vector error, fixed-candidate cosine rank/margin; separate true marker row and other rows; match to surplus token types in original saved predictions. No open-vocabulary recovery or marker-hypothesis search.",
+  "claim_boundary": "New controlled numerical experiment on known public inputs and parameters; cannot recreate unsaved historical caches or parameter estimates.",
+  "all_outcomes_retained": true,
+  "transport_or_measurement_failures": "Record exceptions; never replace normal negative outcomes.",
+  "manuscript_and_public_artifact_update": "Only after validation of complete results.",
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "platform": "Linux-6.8.0-71-generic-x86_64-with-glibc2.39",
+  "phase": "Same frozen all-head fixtures; direct official forward equivalence check appended. Previous arithmetic observations remain separately saved.",
+  "trace_extension": "Save true marker-row V, post-M vector, stored marker, and rounded addition. Count nonzero coordinates swallowed by addition; recompute rounding ULP. Existing v1 rows and outcomes remain unchanged.",
+  "fixtures_file": "fixtures.jsonl",
+  "expected_by_tag": {
+    "qwen25_05b": 66,
+    "llama32_1b": 380
+  },
+  "additional_distinct_prompt_observations_by_head": {
+    "0": 20,
+    "1": 20,
+    "2": 20,
+    "3": 20,
+    "4": 20,
+    "6": 20,
+    "7": 20
+  },
+  "validate_official_forward": true
+}

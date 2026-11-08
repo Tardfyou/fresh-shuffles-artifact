@@ -149,3 +149,14 @@ See [SUPPLEMENTARY_DETAILS.md](SUPPLEMENTARY_DETAILS.md) for implementation,
 measurement-accounting and historical version details. The retrospective model
 revision inventory and twelve calibration rows are retained in
 `results/supplementary_reporting_values.json`; all underlying results remain.
+
+## Marker numerical diagnostics (2026-11-09)
+
+`results/marker_numerical_diagnostics_20261109/` contains the seeded-layout audit
+and 446 known-key arithmetic checks on reused Qwen/Llama inputs. All selected
+marker positions agree with the reconstructed layout in the saved failing blocks.
+BF16 marker insertion and mixing can lose small Value components; fixed-candidate
+misrankings in these controls disappear when the marker is omitted or forward
+arithmetic uses FP32. Inputs, coordinate traces, six conditions, environment,
+summary and code are retained. See the directory README for scope and commands.
+These checks do not replace the main recovery counts or the earlier valid results.

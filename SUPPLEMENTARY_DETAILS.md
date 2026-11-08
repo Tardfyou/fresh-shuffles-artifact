@@ -125,8 +125,9 @@ gaps 0.0005/0.1611. Rounded zeros do not establish exact ties. Gaps at least
 0.0101 yield the conservative missed-token lower bound 25,083/37,460 for Llama.
 All 37,454 saved failing Llama head-blocks were inspected: 33,619 have one error
 and one out-of-bag prediction at the selected marker-cancellation row. All six
-Qwen failures share that pattern. This localizes the error to a decoder row;
-it does not distinguish a wrong marker hypothesis from cancellation residuals.
+Qwen failures share that pattern. The later source-and-seed layout reconstruction confirms the selected marker
+position in every saved failing Qwen/Llama block. The new labels are an offline
+reconstruction, not a replacement of historical logs.
 The 306-block numerical comparison keeps all 2,754 prediction arrays and
 2,448 nonbaseline comparisons; none changes.
 
@@ -277,3 +278,17 @@ E2E matches 1/602 complete spans and 2,020/11,248 blocks. Bags are exact across
 all blocks in 601/602 IDs, and E2E/oracle output sequences agree in 601/602 IDs.
 Equal weighting of distinct spans instead gives 28.258% E2E and 7.548% random
 position accuracy. No original prediction, sample ID or measured outcome changed.
+
+## Marker precision controls
+
+The complete numerical record is in results/marker_numerical_diagnostics_20261109/.
+Its 446 known-key head-block checks reuse existing inputs, retaining 266 saved
+failures and 180 correct blocks. The 140 added Llama observations cover every
+head with misses. The candidate sets contain only the token IDs in each saved
+truth/baseline pair. All BF16 forward objects match the official implementation
+bitwise. BF16 yields 40 positional candidate misrankings; omitting the marker
+or using FP32 forward arithmetic yields zero. For sampled Llama failures, the
+median marked-row relative vector error is 76.75%, versus 1.219% without a marker.
+The median marker/Value norm ratio is 407.9, and 87.5% of the nonzero components
+at the marked row are absorbed in marker addition. These targeted known-key
+comparisons diagnose numerical behavior and retain their own denominators.

@@ -1,0 +1,33 @@
+{
+  "records": 446,
+  "official_forward_bitwise_matches": 446,
+  "all_prior_numerical_records_unchanged": true,
+  "selection_keys_and_inputs_match_frozen_fixtures": true,
+  "coordinate_rounding_and_absorption_independently_recomputed": true,
+  "fp64_sanity_all_rows_correct": true,
+  "fp32_fixed_candidate_comparisons_all_correct": true,
+  "bf16_without_marker_fixed_candidate_comparisons_all_correct": true,
+  "full_vocabulary_recovery_test": false,
+  "secret_recovery_or_calibration_run": false,
+  "original_main_counts_changed": false,
+  "swallowed_coordinate_examples": [
+    {
+      "value_component": 0.01104736328125,
+      "marker_component": 5.03125,
+      "bf16_sum": 5.03125,
+      "after_exact_subtraction": 0.0
+    },
+    {
+      "value_component": 0.01104736328125,
+      "marker_component": 5.03125,
+      "bf16_sum": 5.03125,
+      "after_exact_subtraction": 0.0
+    },
+    {
+      "value_component": 0.01104736328125,
+      "marker_component": 5.03125,
+      "bf16_sum": 5.03125,
+      "after_exact_subtraction": 0.0
+    }
+  ]
+}

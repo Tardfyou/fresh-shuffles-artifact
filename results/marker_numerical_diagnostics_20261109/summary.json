@@ -1,0 +1,196 @@
+{
+  "qwen25_05b": {
+    "previously_failed": {
+      "blocks": 6,
+      "heads": [
+        0
+      ],
+      "fp64_sanity": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 2.20830541955311e-14
+      },
+      "fp32_forward": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 6.225387940867156e-06
+      },
+      "bf16_known_key": {
+        "wrong_marker_rows": 4,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 4,
+        "median_relative_error_at_marker": 0.2674840782240002
+      },
+      "bf16_no_marker": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 0.003117817758816893
+      },
+      "bf16_marker_before_row_mixing": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 0.25364768232526536
+      },
+      "bf16_no_marker_before_row_mixing": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 0.0025167903059480816
+      },
+      "median_marker_to_value_norm_ratio": 142.43896922825002,
+      "median_swallowed_nonzero_coordinate_fraction": 0.484375
+    },
+    "previously_correct": {
+      "blocks": 60,
+      "heads": [
+        0,
+        1
+      ],
+      "fp64_sanity": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 1.8925214576299168e-14
+      },
+      "fp32_forward": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 5.053396952758286e-06
+      },
+      "bf16_known_key": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 0.20427651148690879
+      },
+      "bf16_no_marker": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 0.0029622933549070638
+      },
+      "bf16_marker_before_row_mixing": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 0.19312155645114132
+      },
+      "bf16_no_marker_before_row_mixing": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 0.0023107946034840493
+      },
+      "median_marker_to_value_norm_ratio": 117.27543637938498,
+      "median_swallowed_nonzero_coordinate_fraction": 0.3046875
+    }
+  },
+  "llama32_1b": {
+    "previously_failed": {
+      "blocks": 260,
+      "heads": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        6,
+        7
+      ],
+      "fp64_sanity": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 5.3897629297172657e-14
+      },
+      "fp32_forward": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 1.6085856432880952e-05
+      },
+      "bf16_known_key": {
+        "wrong_marker_rows": 30,
+        "wrong_other_rows": 6,
+        "same_recorded_surplus_type_at_marker": 18,
+        "median_relative_error_at_marker": 0.7674578771978238
+      },
+      "bf16_no_marker": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 0.012191509830894846
+      },
+      "bf16_marker_before_row_mixing": {
+        "wrong_marker_rows": 19,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 8,
+        "median_relative_error_at_marker": 0.7951904027729196
+      },
+      "bf16_no_marker_before_row_mixing": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 0.0018971948662897355
+      },
+      "median_marker_to_value_norm_ratio": 407.9146423193249,
+      "median_swallowed_nonzero_coordinate_fraction": 0.875
+    },
+    "previously_correct": {
+      "blocks": 120,
+      "heads": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "fp64_sanity": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 3.2795775150246296e-14
+      },
+      "fp32_forward": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 9.5380545339948e-06
+      },
+      "bf16_known_key": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 0.4824492458853863
+      },
+      "bf16_no_marker": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 0.005497948824117284
+      },
+      "bf16_marker_before_row_mixing": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 0.41922992145594373
+      },
+      "bf16_no_marker_before_row_mixing": {
+        "wrong_marker_rows": 0,
+        "wrong_other_rows": 0,
+        "same_recorded_surplus_type_at_marker": 0,
+        "median_relative_error_at_marker": 0.002436142972247732
+      },
+      "median_marker_to_value_norm_ratio": 258.61225937756797,
+      "median_swallowed_nonzero_coordinate_fraction": 0.625
+    }
+  }
+}

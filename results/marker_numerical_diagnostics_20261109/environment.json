@@ -1,0 +1,65 @@
+{
+  "torch": "2.14.0+cpu",
+  "threads": 8,
+  "models": {
+    "qwen25_05b": {
+      "checkpoint": "Qwen/Qwen2.5-0.5B",
+      "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+      "heads": 2,
+      "dimension": 64,
+      "marker_rows": [
+        3,
+        5
+      ],
+      "threshold_value_max": [
+        0.2710880637168884,
+        0.17080378532409668
+      ],
+      "marker_norms": [
+        21.5350255216647,
+        13.616221548499146
+      ],
+      "projection": "FP32 first-layer input RMSNorm and public Value projection from selected checkpoint tensors; no full model or calibrator run.",
+      "implementation": "Official KVCloak prepares BF16 S/M/A; all diagnostic inverse matrices use those stored values in FP64."
+    },
+    "llama32_1b": {
+      "checkpoint": "unsloth/Llama-3.2-1B",
+      "revision": "9535bd9b1d1dea6acafbdc4813b728796aeb28da",
+      "heads": 8,
+      "dimension": 64,
+      "marker_rows": [
+        3,
+        5,
+        4,
+        9,
+        1,
+        9,
+        14,
+        14
+      ],
+      "threshold_value_max": [
+        0.6654195189476013,
+        0.48213404417037964,
+        0.6550703048706055,
+        0.4766296148300171,
+        0.9009734988212585,
+        0.4897887110710144,
+        0.6530500650405884,
+        1.0741151571273804
+      ],
+      "marker_norms": [
+        52.87154613423935,
+        38.430817508543846,
+        51.96206924887615,
+        38.010727823701295,
+        72.66859438144513,
+        38.68794173818892,
+        52.9577053381989,
+        85.35337848468565
+      ],
+      "projection": "FP32 first-layer input RMSNorm and public Value projection from selected checkpoint tensors; no full model or calibrator run.",
+      "implementation": "Official KVCloak prepares BF16 S/M/A; all diagnostic inverse matrices use those stored values in FP64."
+    }
+  },
+  "elapsed_s": 2.062751587945968
+}
