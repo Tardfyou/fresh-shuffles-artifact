@@ -8,27 +8,29 @@ def plot_epochs(data, out_dir):
     import matplotlib.pyplot as plt
     from .acl835_plot_style import detail_caption,audit_details
     setup_acl('bar')
-    names = ['Qwen2.5-0.5B', 'Llama-3.2-1B', 'Phi-3-mini']
     models = list(data)
+    names = [m.replace('Phi-3-mini-4k-instruct', 'Phi-3-mini') for m in models]
+    rows = len(models)
+    assert rows > 0
     values = [np.array([[v[key] for v in data[m]['by_key'].values()] for m in models])
               for key in ('percent', 'minimum_prompt_percent')]
     low = float(np.floor(min(x.min() for x in values)))
     from .visual_palette import PALETTE
     cmap = LinearSegmentedColormap.from_list('teal_coral_recovery', ['#'+c for c in PALETTE])
-    fig = plt.figure(figsize=(3.375, 3.0))
+    fig = plt.figure(figsize=(3.375, 2.65 if rows == 2 else 3.0))
     axes = [fig.add_axes([.28, .695, .68, .255]), fig.add_axes([.28, .34, .68, .255])]
     for ax, matrix in zip(axes, values):
         image = ax.imshow(matrix, vmin=low, vmax=100., cmap=cmap, aspect='auto', interpolation='nearest')
-        ax.set(yticks=range(3), yticklabels=names, xticks=range(5), xticklabels=range(1, 6))
+        ax.set(yticks=range(rows), yticklabels=names, xticks=range(5), xticklabels=range(1, 6))
         ax.tick_params(axis='both', length=0, pad=3, labelsize=6.2)
         for label in ax.get_xticklabels():label.set_fontsize(7.02);label.set_fontweight('bold');label.set_color('black')
         for label in ax.get_yticklabels():label.set_color('black')
         ax.set_xticks(np.arange(-.5, 5, 1), minor=True)
-        ax.set_yticks(np.arange(-.5, 3, 1), minor=True)
+        ax.set_yticks(np.arange(-.5, rows, 1), minor=True)
         ax.grid(which='minor', color='white', linewidth=.85)
         ax.tick_params(which='minor', length=0)
         for spine in ax.spines.values():spine.set_visible(True);spine.set_color('.8');spine.set_linewidth(.4567)
-        for i in range(3):
+        for i in range(rows):
             for j in range(5):
                 ax.text(j, i, f'{matrix[i, j]:.3f}', ha='center', va='center', fontsize=6., color='black')
     axes[0].tick_params(labelbottom=False)

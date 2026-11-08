@@ -15779,49 +15779,6 @@
         "total": 685440,
         "percent": 99.64008520074697
       }
-    },
-    "Phi-3-mini-4k-instruct": {
-      "n": 500,
-      "heads": 32,
-      "by_key": {
-        "42": {
-          "correct": 680760,
-          "total": 685568,
-          "percent": 99.29868371919343,
-          "minimum_prompt_percent": 98.36647727272727
-        },
-        "1234": {
-          "correct": 680804,
-          "total": 685568,
-          "percent": 99.30510175504108,
-          "minimum_prompt_percent": 98.22443181818183
-        },
-        "5678": {
-          "correct": 680790,
-          "total": 685568,
-          "percent": 99.30305965272592,
-          "minimum_prompt_percent": 98.40198863636364
-        },
-        "9012": {
-          "correct": 680988,
-          "total": 685568,
-          "percent": 99.33194081404032,
-          "minimum_prompt_percent": 98.36647727272727
-        },
-        "34567": {
-          "correct": 680654,
-          "total": 685568,
-          "percent": 99.28322208737865,
-          "minimum_prompt_percent": 98.36647727272727
-        }
-      },
-      "minimum_prompt_percent": 98.22443181818183,
-      "macro_prompt_percent": 99.30110986341197,
-      "pooled": {
-        "correct": 3403996,
-        "total": 3427840,
-        "percent": 99.30440160567588
-      }
     }
   },
   "budget_comparison": {
@@ -17036,5 +16993,6 @@
     "actual_tokens": 512,
     "threads": 4,
     "repetitions": 100
-  }
+  },
+  "reporting_scope": "Current manuscript selection: results/reporting_scope_20261108/summary.json. Original cross-key records are retained separately."
 }

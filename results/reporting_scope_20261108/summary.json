@@ -1,0 +1,484 @@
+{
+  "date": "2026-11-08",
+  "scope": "Nine models, eleven configurations; fixed 3000 prompts, all heads and both permutation seeds.",
+  "scope_change": {
+    "excluded_model": "Phi-3-mini",
+    "reason": "Author-selected reduction of the extended-model evaluation scope.",
+    "original_records_retained": true,
+    "exclusion_is_not_a_data_quality_finding": true
+  },
+  "model_count": 9,
+  "configuration_count": 11,
+  "configurations": {
+    "llama32_1b": {
+      "model": "unsloth/Llama-3.2-1B",
+      "block_size": 16,
+      "heads": 8,
+      "prompts": 3000,
+      "correct": 12270252,
+      "total": 12307712,
+      "misses": 37460,
+      "recovery_percent": 99.69563798697922
+    },
+    "olmo2_1b": {
+      "model": "allenai/OLMo-2-0425-1B",
+      "block_size": 16,
+      "heads": 16,
+      "prompts": 3000,
+      "correct": 24739295,
+      "total": 24748544,
+      "misses": 9249,
+      "recovery_percent": 99.96262810450587
+    },
+    "qwen25_05b": {
+      "model": "Qwen/Qwen2.5-0.5B",
+      "block_size": 16,
+      "heads": 2,
+      "prompts": 3000,
+      "correct": 3121850,
+      "total": 3121856,
+      "misses": 6,
+      "recovery_percent": 99.9998078066381
+    },
+    "qwen25_05b_b32": {
+      "model": "Qwen/Qwen2.5-0.5B",
+      "block_size": 32,
+      "heads": 2,
+      "prompts": 3000,
+      "correct": 3025819,
+      "total": 3025920,
+      "misses": 101,
+      "recovery_percent": 99.99666217216583
+    },
+    "qwen25_05b_b8": {
+      "model": "Qwen/Qwen2.5-0.5B",
+      "block_size": 8,
+      "heads": 2,
+      "prompts": 3000,
+      "correct": 3167737,
+      "total": 3167744,
+      "misses": 7,
+      "recovery_percent": 99.99977902254727
+    },
+    "qwen25_15b": {
+      "model": "Qwen/Qwen2.5-1.5B",
+      "block_size": 16,
+      "heads": 2,
+      "prompts": 3000,
+      "correct": 3109215,
+      "total": 3121856,
+      "misses": 12641,
+      "recovery_percent": 99.59508061870888
+    },
+    "qwen25_3b": {
+      "model": "Qwen/Qwen2.5-3B",
+      "block_size": 16,
+      "heads": 2,
+      "prompts": 3000,
+      "correct": 3121856,
+      "total": 3121856,
+      "misses": 0,
+      "recovery_percent": 100.0
+    },
+    "qwen25_7b": {
+      "model": "Qwen/Qwen2.5-7B",
+      "block_size": 16,
+      "heads": 4,
+      "prompts": 3000,
+      "correct": 6229884,
+      "total": 6243712,
+      "misses": 13828,
+      "recovery_percent": 99.77852918264007
+    },
+    "qwen3_06b": {
+      "model": "Qwen/Qwen3-0.6B",
+      "block_size": 16,
+      "heads": 8,
+      "prompts": 3000,
+      "correct": 12480000,
+      "total": 12480000,
+      "misses": 0,
+      "recovery_percent": 100.0
+    },
+    "qwen3_17b": {
+      "model": "Qwen/Qwen3-1.7B",
+      "block_size": 16,
+      "heads": 8,
+      "prompts": 3000,
+      "correct": 12479868,
+      "total": 12480000,
+      "misses": 132,
+      "recovery_percent": 99.9989423076923
+    },
+    "tinyllama": {
+      "model": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+      "block_size": 16,
+      "heads": 4,
+      "prompts": 3000,
+      "correct": 7782903,
+      "total": 7791872,
+      "misses": 8969,
+      "recovery_percent": 99.88489287298354
+    }
+  },
+  "correct": 91528679,
+  "total": 91611072,
+  "misses": 82393,
+  "recovery_percent": 99.91006218113024,
+  "prompt_stratified_bootstrap_95_percent": [
+    99.90895441447148,
+    99.91116044614465
+  ],
+  "bootstrap": {
+    "replicates": 2000,
+    "seed": 20261029,
+    "unit": "Whole prompt, paired across configurations, heads and permutation seeds; fixed keys."
+  },
+  "error_followup": {
+    "configurations": [
+      "qwen25_05b",
+      "llama32_1b"
+    ],
+    "covered_misses": 37466,
+    "total_misses": 82393,
+    "coverage_percent": 45.47230954085905,
+    "row_localization": {
+      "qwen25_05b": {
+        "failed_blocks": 6,
+        "missed_head_tokens": 6,
+        "single_miss_blocks": 6,
+        "novel_prediction_rows": 6,
+        "novel_prediction_rows_at_selected_marker": 6,
+        "blocks_with_one_novel_prediction_at_selected_marker": 6,
+        "single_error_blocks_with_one_novel_prediction_at_selected_marker": 6,
+        "absent_gold_types": 5,
+        "absent_gold_best_row_at_selected_marker": 5
+      },
+      "llama32_1b": {
+        "failed_blocks": 37454,
+        "missed_head_tokens": 37460,
+        "single_miss_blocks": 37448,
+        "novel_prediction_rows": 35086,
+        "novel_prediction_rows_at_selected_marker": 33625,
+        "blocks_with_one_novel_prediction_at_selected_marker": 33619,
+        "single_error_blocks_with_one_novel_prediction_at_selected_marker": 33619,
+        "absent_gold_types": 27931,
+        "absent_gold_best_row_at_selected_marker": 11286
+      }
+    },
+    "limitation": "Selected marker-cancellation row is not the recorded true marker row; localization does not establish a unique physical cause."
+  },
+  "E1": {
+    "Qwen2.5-0.5B": {
+      "sessions": {
+        "primary": {
+          "requested_label": "abxyz1e0",
+          "used_character_label": "a",
+          "input_tokens": 3200,
+          "prefix_tokens": 0,
+          "reported_parameter_criterion_passes": 2,
+          "head_observations": 2,
+          "content_target_ids": 5,
+          "content_correct": 160,
+          "content_head_token_opportunities": 160,
+          "content_fraction": 1.0,
+          "per_head_correct": {
+            "0": 80,
+            "1": 80
+          }
+        },
+        "a": {
+          "requested_label": "a",
+          "used_character_label": "a",
+          "input_tokens": 3200,
+          "prefix_tokens": 0,
+          "reported_parameter_criterion_passes": 2,
+          "head_observations": 2,
+          "content_target_ids": 5,
+          "content_correct": 160,
+          "content_head_token_opportunities": 160,
+          "content_fraction": 1.0,
+          "per_head_correct": {
+            "0": 80,
+            "1": 80
+          }
+        },
+        "z": {
+          "requested_label": "z",
+          "used_character_label": "z",
+          "input_tokens": 5120,
+          "prefix_tokens": 0,
+          "reported_parameter_criterion_passes": 2,
+          "head_observations": 2,
+          "content_target_ids": 5,
+          "content_correct": 160,
+          "content_head_token_opportunities": 160,
+          "content_fraction": 1.0,
+          "per_head_correct": {
+            "0": 80,
+            "1": 80
+          }
+        }
+      },
+      "unique_actual_input_arrays": 2,
+      "session_head_observations": 6,
+      "unique_input_head_observations": 4,
+      "secret_configurations_per_model_declared": 1,
+      "cached_attempt_rows": 4,
+      "same_as_primary_input_event_rows": 2,
+      "different_from_primary_input_event_rows": 2,
+      "reported_threshold_cleared_heads": 0,
+      "triggered_heads": 2,
+      "ground_truth_metric_ranges": {
+        "cos_a": [
+          0.9999969,
+          0.99999863
+        ],
+        "a_norm_relerr": [
+          7.253e-05,
+          0.00030158
+        ],
+        "cos_u": [
+          0.99999791,
+          0.99999869
+        ],
+        "w_relerr": [
+          0.00423759,
+          0.00878402
+        ],
+        "S_min_signed_cos": [
+          0.99999702,
+          0.99999774
+        ]
+      },
+      "M_angle_error_in_ground_truth_record": false,
+      "all_session_head_content_fraction_range": [
+        1.0,
+        1.0
+      ],
+      "triggered_event_head_content_fraction_range": [
+        1.0,
+        1.0
+      ],
+      "event_content_fraction_field_is": "Session mean across all heads, not the individual event head"
+    },
+    "Llama-3.2-1B": {
+      "sessions": {
+        "primary": {
+          "requested_label": "abxyz1e0",
+          "used_character_label": "a",
+          "input_tokens": 3201,
+          "prefix_tokens": 1,
+          "reported_parameter_criterion_passes": 8,
+          "head_observations": 8,
+          "content_target_ids": 5,
+          "content_correct": 639,
+          "content_head_token_opportunities": 640,
+          "content_fraction": 0.9984375,
+          "per_head_correct": {
+            "0": 80,
+            "1": 79,
+            "2": 80,
+            "3": 80,
+            "4": 80,
+            "5": 80,
+            "6": 80,
+            "7": 80
+          }
+        },
+        "a": {
+          "requested_label": "a",
+          "used_character_label": "a",
+          "input_tokens": 3201,
+          "prefix_tokens": 1,
+          "reported_parameter_criterion_passes": 8,
+          "head_observations": 8,
+          "content_target_ids": 5,
+          "content_correct": 639,
+          "content_head_token_opportunities": 640,
+          "content_fraction": 0.9984375,
+          "per_head_correct": {
+            "0": 80,
+            "1": 79,
+            "2": 80,
+            "3": 80,
+            "4": 80,
+            "5": 80,
+            "6": 80,
+            "7": 80
+          }
+        },
+        "z": {
+          "requested_label": "z",
+          "used_character_label": "z",
+          "input_tokens": 5121,
+          "prefix_tokens": 1,
+          "reported_parameter_criterion_passes": 8,
+          "head_observations": 8,
+          "content_target_ids": 5,
+          "content_correct": 638,
+          "content_head_token_opportunities": 640,
+          "content_fraction": 0.996875,
+          "per_head_correct": {
+            "0": 80,
+            "1": 79,
+            "2": 80,
+            "3": 80,
+            "4": 80,
+            "5": 80,
+            "6": 79,
+            "7": 80
+          }
+        }
+      },
+      "unique_actual_input_arrays": 2,
+      "session_head_observations": 24,
+      "unique_input_head_observations": 16,
+      "secret_configurations_per_model_declared": 1,
+      "cached_attempt_rows": 10,
+      "same_as_primary_input_event_rows": 5,
+      "different_from_primary_input_event_rows": 5,
+      "reported_threshold_cleared_heads": 2,
+      "triggered_heads": 5,
+      "ground_truth_metric_ranges": {
+        "cos_a": [
+          0.99999547,
+          0.99999863
+        ],
+        "a_norm_relerr": [
+          4.417e-05,
+          0.00059147
+        ],
+        "cos_u": [
+          0.99999636,
+          0.99999887
+        ],
+        "w_relerr": [
+          0.00573959,
+          0.01100927
+        ],
+        "S_min_signed_cos": [
+          0.9999972,
+          0.99999833
+        ]
+      },
+      "M_angle_error_in_ground_truth_record": false,
+      "all_session_head_content_fraction_range": [
+        0.9875,
+        1.0
+      ],
+      "triggered_event_head_content_fraction_range": [
+        0.9875,
+        1.0
+      ],
+      "event_content_fraction_field_is": "Session mean across all heads, not the individual event head"
+    }
+  },
+  "E1_totals": {
+    "session_head_observations": 30,
+    "unique_input_head_observations": 20,
+    "cached_event_rows": 14,
+    "same_input_events": 7,
+    "different_input_events": 7,
+    "content_correct": 2396,
+    "content_total": 2400
+  },
+  "epochs": {
+    "Qwen2.5-0.5B": {
+      "n": 500,
+      "heads": 2,
+      "by_key": {
+        "42": {
+          "correct": 34784,
+          "total": 34784,
+          "percent": 100.0,
+          "minimum_prompt_percent": 100.0
+        },
+        "1234": {
+          "correct": 34784,
+          "total": 34784,
+          "percent": 100.0,
+          "minimum_prompt_percent": 100.0
+        },
+        "5678": {
+          "correct": 34784,
+          "total": 34784,
+          "percent": 100.0,
+          "minimum_prompt_percent": 100.0
+        },
+        "9012": {
+          "correct": 34783,
+          "total": 34784,
+          "percent": 99.9971251149954,
+          "minimum_prompt_percent": 99.6875
+        },
+        "34567": {
+          "correct": 34784,
+          "total": 34784,
+          "percent": 100.0,
+          "minimum_prompt_percent": 100.0
+        }
+      },
+      "minimum_prompt_percent": 99.6875,
+      "macro_prompt_percent": 99.999375,
+      "pooled": {
+        "correct": 173919,
+        "total": 173920,
+        "percent": 99.99942502299908
+      }
+    },
+    "Llama-3.2-1B": {
+      "n": 500,
+      "heads": 8,
+      "by_key": {
+        "42": {
+          "correct": 136609,
+          "total": 137088,
+          "percent": 99.65058940242764,
+          "minimum_prompt_percent": 99.21875
+        },
+        "1234": {
+          "correct": 136554,
+          "total": 137088,
+          "percent": 99.61046918767506,
+          "minimum_prompt_percent": 99.21875
+        },
+        "5678": {
+          "correct": 136591,
+          "total": 137088,
+          "percent": 99.63745915032679,
+          "minimum_prompt_percent": 99.21875
+        },
+        "9012": {
+          "correct": 136588,
+          "total": 137088,
+          "percent": 99.63527077497666,
+          "minimum_prompt_percent": 99.21875
+        },
+        "34567": {
+          "correct": 136631,
+          "total": 137088,
+          "percent": 99.66663748832866,
+          "minimum_prompt_percent": 99.12109375
+        }
+      },
+      "minimum_prompt_percent": 99.12109375,
+      "macro_prompt_percent": 99.63224952564796,
+      "pooled": {
+        "correct": 682973,
+        "total": 685440,
+        "percent": 99.64008520074697
+      }
+    }
+  },
+  "calibration_extrema": {
+    "minimum_state_separation": 500.2,
+    "minimum_matched_S_cosine": 0.999997,
+    "maximum_w_relative_error": 0.011496
+  },
+  "original_full_scope_counts": {
+    "correct": 153274758,
+    "total": 153791424
+  },
+  "new_model_or_decoder_execution": false
+}

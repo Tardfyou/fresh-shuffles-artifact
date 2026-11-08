@@ -2,14 +2,17 @@
 
 This document accompanies the retained code and data. No new experiments are
 introduced here. Every original record and outcome keeps its original scope.
-`results/supplementary_reporting_values.json` retains the ten checkpoint
-identifiers and twelve configuration-level diagnostic rows.
+`results/supplementary_reporting_values.json` retains the nine current checkpoint
+identifiers and eleven configuration-level diagnostic rows. Current aggregate
+statistics are in results/reporting_scope_20261108/summary.json; original
+full-scope measurements remain separately available.
 
 ## Environment and historical version scope
 
 The main runs used Python 3.12.3, PyTorch 2.14.0 CPU, Transformers 4.51.3,
-AMD EPYC 9554 and Linux 6.8.0. Their 36,000 prompt records, 72,000 seed
-counters and 1,440 progress checkpoints reconcile. The checkpoint inventory
+AMD EPYC 9554 and Linux 6.8.0. The original full-scope 36,000 prompt records, 72,000 seed
+counters and 1,440 progress checkpoints reconcile. The current manuscript
+selection uses 33,000 prompt/configuration records and 66,000 seed counters. The checkpoint inventory
 was observed during later preparation. Historical run-bound model/tokenizer
 revisions and a contemporaneous dependency lock are unavailable; the inventory
 must not be treated as their reconstruction.
@@ -98,32 +101,34 @@ has its own workload and does not supply a matched reconstruction-cost ranking.
 
 The two-model diagnostic follow-up retains median relative sign residuals
 0.00058/0.00091, minimum pair norms 0.00319/0.00358 and median head-mean
-projection residuals 0.110/0.069 (worst-row 1.045/1.053). The twelve configuration
+projection residuals 0.110/0.069 (worst-row 1.045/1.053). The eleven current configuration
 extrema in the JSON are not per-error attribution.
 
 Earlier logs have 68 worker events on seven head identities and 44 later
 attempt rows. The initial low-margin policy logged but did not execute the
 change rule; the older later-attempt rows lack submitted arrays. A separate fully
-logged execution contains three sessions per model, 126 session-head observations
-and 116 distinct input-head observations. Seven of its 44 event inputs equal
-primary and 37 differ. Threshold-clear counts are 0/2, 2/5 and 11/18.
+logged execution for the current two-model selection contains three sessions per
+model, 30 session-head observations and 20 distinct input-head observations.
+Seven of its 14 event inputs equal primary and seven differ. Threshold-clear
+counts are 0/2 and 2/5 for Qwen/Llama.
 
 The a/S predicate checks cosines at least 0.999 and bijective column matching;
-it does not test M. Five target blocks per session give 10,020/10,080 head-token
-hits. Individual-head recovery ranges are Qwen 100%, Llama 98.75–100% and
-Phi 93.75–100%. Supplementary M reconstruction reports maximum matrix-relative
-errors 1.022%, 1.080% and 11.413%, with 32/32/48 coordinate pairs and no skipped
-pairs. In the Phi primary session, four of the five largest-angle-error heads
-have misses, while head 17 recovers all five blocks. This is partial overlap,
-not a demonstrated causal explanation.
+it does not test M. Five target blocks per session give 2,396/2,400 head-token
+hits. Individual-head recovery ranges are Qwen 100% and Llama 98.75–100%.
+Supplementary M reconstruction reports maximum matrix-relative errors 1.022%
+and 1.080%, with 32 coordinate pairs per head and no skipped pairs.
 
-Three configurations cover 471,739/516,666 misses. All Qwen/Llama historical
-seed counts match; six Phi counts differ by one with zero net change. Historical
-per-block predictions were not saved. Absent gold-token-type counts are
-5/27,931/359,548 with median recorded gaps 0.0005/0.1611/0.1314. Rounded zeros
-do not establish exact ties. Gaps at least 0.0101 yield conservative missed-token
-lower bounds 25,083/37,460 and 326,853/434,273. The 306-block numerical comparison
-keeps all 2,754 prediction arrays and 2,448 nonbaseline comparisons; none changes.
+The current two-configuration follow-up covers 37,466/82,393 misses (45.47%).
+All corresponding historical seed counts match. Historical per-block predictions
+were not saved. Absent gold-token-type counts are 5/27,931 with median recorded
+gaps 0.0005/0.1611. Rounded zeros do not establish exact ties. Gaps at least
+0.0101 yield the conservative missed-token lower bound 25,083/37,460 for Llama.
+All 37,454 saved failing Llama head-blocks were inspected: 33,619 have one error
+and one out-of-bag prediction at the selected marker-cancellation row. All six
+Qwen failures share that pattern. This localizes the error to a decoder row;
+it does not distinguish a wrong marker hypothesis from cancellation residuals.
+The 306-block numerical comparison keeps all 2,754 prediction arrays and
+2,448 nonbaseline comparisons; none changes.
 
 Earlier cross-transform candidate controls retain 8/200 and 1/200 direct
 no-probe hits, and 18/200 and 3/200 wrong-configuration hits. The paired seeds
@@ -213,8 +218,8 @@ set defender magnitude thresholds. All configured main-suite heads calibrated
 and enter the reported counts; whole prompts are the bootstrap units.
 
 Probe lengths are complete tokenizer-output lengths. Searching repeated text can
-overshoot a nominal budget. Recorded prefix lengths are one token for Llama and
-Phi, two for TinyLlama and zero for the other main configurations. Prefixes stay
+overshoot a nominal budget. Recorded prefix lengths are one token for Llama,
+two for TinyLlama and zero for the other main configurations. Prefixes stay
 in the model input; only full blocks inside the constant run enter calibration.
 Target scoring excludes the final incomplete block. Ground-truth secrets serve
 only evaluation diagnostics.

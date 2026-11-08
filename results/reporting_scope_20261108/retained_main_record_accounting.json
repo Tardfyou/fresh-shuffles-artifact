@@ -1,0 +1,96 @@
+{
+  "scope": "Current eleven-configuration selection from the existing saved main-run record audit.",
+  "per_sample_rows": 33000,
+  "seed_records": 66000,
+  "verified_log_checkpoints": 1320,
+  "configurations": [
+    {
+      "tag": "llama32_1b",
+      "samples": 3000,
+      "seed_records": 6000,
+      "log_checkpoints_verified": 120,
+      "correct": 12270252,
+      "total": 12307712
+    },
+    {
+      "tag": "olmo2_1b",
+      "samples": 3000,
+      "seed_records": 6000,
+      "log_checkpoints_verified": 120,
+      "correct": 24739295,
+      "total": 24748544
+    },
+    {
+      "tag": "qwen25_05b",
+      "samples": 3000,
+      "seed_records": 6000,
+      "log_checkpoints_verified": 120,
+      "correct": 3121850,
+      "total": 3121856
+    },
+    {
+      "tag": "qwen25_05b_b32",
+      "samples": 3000,
+      "seed_records": 6000,
+      "log_checkpoints_verified": 120,
+      "correct": 3025819,
+      "total": 3025920
+    },
+    {
+      "tag": "qwen25_05b_b8",
+      "samples": 3000,
+      "seed_records": 6000,
+      "log_checkpoints_verified": 120,
+      "correct": 3167737,
+      "total": 3167744
+    },
+    {
+      "tag": "qwen25_15b",
+      "samples": 3000,
+      "seed_records": 6000,
+      "log_checkpoints_verified": 120,
+      "correct": 3109215,
+      "total": 3121856
+    },
+    {
+      "tag": "qwen25_3b",
+      "samples": 3000,
+      "seed_records": 6000,
+      "log_checkpoints_verified": 120,
+      "correct": 3121856,
+      "total": 3121856
+    },
+    {
+      "tag": "qwen25_7b",
+      "samples": 3000,
+      "seed_records": 6000,
+      "log_checkpoints_verified": 120,
+      "correct": 6229884,
+      "total": 6243712
+    },
+    {
+      "tag": "qwen3_06b",
+      "samples": 3000,
+      "seed_records": 6000,
+      "log_checkpoints_verified": 120,
+      "correct": 12480000,
+      "total": 12480000
+    },
+    {
+      "tag": "qwen3_17b",
+      "samples": 3000,
+      "seed_records": 6000,
+      "log_checkpoints_verified": 120,
+      "correct": 12479868,
+      "total": 12480000
+    },
+    {
+      "tag": "tinyllama",
+      "samples": 3000,
+      "seed_records": 6000,
+      "log_checkpoints_verified": 120,
+      "correct": 7782903,
+      "total": 7791872
+    }
+  ]
+}

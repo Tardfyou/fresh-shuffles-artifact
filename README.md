@@ -61,7 +61,30 @@ observations are supplied. No manuscript, slides, logs, databases or model weigh
 are included. GPU/production serving/hardware guarantees are not inferred from
 these known-key CPU interface checks.
 
-## Reviewed follow-up observations (2026-11-02)
+## Current manuscript scope (2026-11-08)
+
+The manuscript reports nine models and eleven configurations, retaining all
+3,000 fixed prompts, all configured heads and both target-permutation seeds.
+The author selected a narrower extended-model scope, omitting Phi-3-mini from
+all manuscript results. This is a scope change, not rejection of invalid data.
+Original full-scope records remain available with all positive and negative
+outcomes. Historical twelve-configuration totals are not the current paper total.
+
+`results/reporting_scope_20261108/summary.json` is the current reporting summary:
+91,528,679/91,611,072 hits (99.910062%), with a prompt-stratified bootstrap 95%
+interval of [99.908954%, 99.911160%]. Recompute it without inference or APIs:
+
+```
+python tools/summarize_reporting_scope.py --root .
+```
+
+Saved diagnostic rows locate one out-of-bag prediction at the selected
+marker-cancellation row in 33,619/37,454 failing Llama head-blocks, each with
+one missed token, and in all six Qwen failures. These are new offline counts
+of existing observations, not a new recovery experiment. The selected row is
+not a saved ground-truth marker label. See REPORTING_SCOPE.md for the interpretation.
+
+## Historical full-scope follow-up observations (2026-11-02)
 
 `results/final_record_observations_20261102/` contains complete-session timings,
 legacy attempt-label accounting, fixed-candidate scores, and the Phi seed-counter
