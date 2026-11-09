@@ -1,0 +1,230 @@
+{
+  "catalog_version": 1,
+  "paths_relative_to": "repository_root",
+  "fixed_manifest": "results/main_public/samples_main_public.jsonl",
+  "fixed_subsets": "results/main_public/experiment_subsets.json",
+  "dataset_source_records": [
+    "results/main_public/prepare_summary.json",
+    "data_sources/WildChat_README.md"
+  ],
+  "studies": [
+    {
+      "id": "main",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "3,000 WildChat IDs; current 9 models/11 configurations;2 seeds",
+      "paths": [
+        "results/main_public",
+        "results/reporting_scope_20261108/summary.json"
+      ],
+      "documentation": "docs/EXPERIMENTS.md"
+    },
+    {
+      "id": "probe",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "100 independent configurations x 8 budgets",
+      "paths": [
+        "results/takeover_20261029/corrected/probe_multikey.jsonl"
+      ],
+      "documentation": "docs/EXPERIMENTS.md"
+    },
+    {
+      "id": "fused",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "300 reused WildChat IDs",
+      "paths": [
+        "results/takeover_20261029/corrected/fused.jsonl"
+      ],
+      "documentation": "docs/EXPERIMENTS.md"
+    },
+    {
+      "id": "scaling",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "100 reused IDs x 6 settings",
+      "paths": [
+        "results/new_evidence_20261102",
+        "results/takeover_20261029/corrected/need_ratio.jsonl",
+        "results/takeover_20261029/corrected/ratio_fit.json"
+      ],
+      "documentation": "docs/EXPERIMENTS.md"
+    },
+    {
+      "id": "lifecycle",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "100 reused IDs;3 paired conditions",
+      "paths": [
+        "results/takeover_20261029/corrected/lifecycle.jsonl"
+      ],
+      "documentation": "docs/EXPERIMENTS.md"
+    },
+    {
+      "id": "cross_key",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "100 reused IDs x 2 current models x 5 epochs",
+      "paths": [
+        "results/takeover_20261029/corrected/cross_key_Qwen2.5-0.5B.jsonl",
+        "results/takeover_20261029/corrected/cross_key_Llama-3.2-1B.jsonl"
+      ],
+      "documentation": "docs/EXPERIMENTS.md"
+    },
+    {
+      "id": "privacy",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "100 synthetic cases x 100 candidates",
+      "paths": [
+        "results/takeover_20261029/corrected/privacy.jsonl",
+        "results/takeover_20261029/corrected/privacy_cases.json",
+        "results/takeover_20261029/corrected/privacy_controls.jsonl"
+      ],
+      "documentation": "docs/EXPERIMENTS.md"
+    },
+    {
+      "id": "row_rotation",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "100 reused IDs",
+      "paths": [
+        "results/takeover_20261029/corrected/sa_rotation.jsonl"
+      ],
+      "documentation": "docs/EXPERIMENTS.md"
+    },
+    {
+      "id": "sa_functional",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "12,000 continuation segments on 100 reused IDs",
+      "paths": [
+        "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319"
+      ],
+      "documentation": "docs/DEFENSE_SUPPLEMENT.md"
+    },
+    {
+      "id": "byte_defense",
+      "measurement_scope": "accepted_cpu_codec_v1",
+      "sample_scale": "48,160 requests; OR 602 reused",
+      "paths": [
+        "results/takeover_20261029/corrected/defense_complete602_20261102",
+        "metadata/audit/EXPANDED_DEFENSE_VALIDATION.json"
+      ],
+      "documentation": "docs/DEFENSE_SUPPLEMENT.md"
+    },
+    {
+      "id": "integrity_ledger",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "1,200 mutation checks;3,200 contention operations plus saved supplementary rejections",
+      "paths": [
+        "results/takeover_20261029/corrected/integrity.jsonl",
+        "results/takeover_20261029/corrected/defense_fixed100_20261030",
+        "results/takeover_20261029/corrected/defense_complete602_20261102"
+      ],
+      "documentation": "docs/DEFENSE_SUPPLEMENT.md"
+    },
+    {
+      "id": "arithmetic",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "2 models x 100 targets x 100 candidates",
+      "paths": [
+        "results/takeover_20261029/corrected/spectrum_Qwen2.5-0.5B.jsonl",
+        "results/takeover_20261029/corrected/spectrum_Llama-3.2-1B.jsonl"
+      ],
+      "documentation": "docs/EXPERIMENTS.md"
+    },
+    {
+      "id": "matched_candidates",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "2 models x 100 targets x 100 candidates x 2 seeds;first/all-head groups",
+      "paths": [
+        "results/new_evidence_20261102"
+      ],
+      "documentation": "docs/EXPERIMENTS.md"
+    },
+    {
+      "id": "local_order",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "602 fixed IDs;4 conditions",
+      "paths": [
+        "results/takeover_20261029/corrected/order",
+        "results/takeover_20261029/corrected/ordering_final_summary.json"
+      ],
+      "documentation": "docs/ORDERING_STUDY.md"
+    },
+    {
+      "id": "gpt_order",
+      "measurement_scope": "accepted_external_api",
+      "sample_scale": "602 responses per model;2 models",
+      "paths": [
+        "results/takeover_20261029/corrected/api_ready",
+        "results/takeover_20261029/corrected/api_summary.json",
+        "results/takeover_20261029/corrected/api_protocol.json"
+      ],
+      "documentation": "docs/ORDERING_STUDY.md"
+    },
+    {
+      "id": "semantic",
+      "measurement_scope": "derived_from_accepted_outputs",
+      "sample_scale": "602 outputs per condition;6 conditions",
+      "paths": [
+        "results/takeover_20261029/corrected/order_semantics_per_prompt.jsonl",
+        "results/takeover_20261029/corrected/order_semantics_summary.json"
+      ],
+      "documentation": "docs/ORDERING_STUDY.md"
+    },
+    {
+      "id": "direction",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "553 pairs;1,106 targets",
+      "paths": [
+        "results/takeover_20261029/corrected/direction",
+        "results/takeover_20261029/corrected/direction_final_summary.json"
+      ],
+      "documentation": "docs/EXPERIMENTS.md"
+    },
+    {
+      "id": "numerics",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "Saved failure rows;306 blocks x 9 paths;446 known-key blocks",
+      "paths": [
+        "results/saved_record_review_20261101",
+        "results/new_evidence_20261102",
+        "results/marker_numerical_diagnostics_20261109"
+      ],
+      "documentation": "docs/EXPERIMENTS.md"
+    },
+    {
+      "id": "calibration_cost",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "5 complete sessions per reported model;separate saved phase observations",
+      "paths": [
+        "results/final_record_observations_20261102",
+        "results/saved_record_review_20261101"
+      ],
+      "documentation": "docs/EXPERIMENTS.md"
+    },
+    {
+      "id": "latency",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "512-token reused fixture;8 operations x 100 repetitions",
+      "paths": [
+        "results/takeover_20261029/corrected/battery_perf512",
+        "results/visual_summary_20261102/data.json"
+      ],
+      "documentation": "docs/DEFENSE_SUPPLEMENT.md"
+    },
+    {
+      "id": "prototype",
+      "measurement_scope": "accepted_cpu",
+      "sample_scale": "2 models;7 completed original stages",
+      "paths": [
+        "results/takeover_20261029/corrected/battery",
+        "results/takeover_20261029/corrected/battery_exitcodes.json"
+      ],
+      "documentation": "docs/EXPERIMENTS.md"
+    }
+  ],
+  "gpu": {
+    "status": "awaiting_results",
+    "index": "results/gpu/index.json",
+    "guide": "docs/GPU_RESULTS.md",
+    "expected_jobs": "metadata/gpu/protocol/jobs.json",
+    "source_version": "gpu80g-20261109-v2-fp32-protection"
+  },
+  "historical_validation": "metadata/audit/",
+  "all_normal_negative_outcomes_retained": true
+}

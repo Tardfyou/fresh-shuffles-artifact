@@ -19,7 +19,7 @@ must not be treated as their reconstruction.
 
 The fixed manifest is in `results/main_public/`. Focused records are under
 `results/takeover_20261029/corrected/`; acceptance and scope are recorded in
-`AUDIT_STATUS.json`. The frozen 602-ID ordering selection supersedes the old
+`metadata/audit/AUDIT_STATUS.json`. The frozen 602-ID ordering selection supersedes the old
 300-ID annotations without rewriting the original rows. Model-dependent paths
 use the corresponding input normalization and projection; the grouped-query
 head layout does not increase the number of independent prompts.

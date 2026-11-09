@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Accepted GPU run index entry",
+  "type": "object",
+  "required": ["run_id", "status", "source_version", "device", "profiles", "raw_path", "summary_path", "validation_path"],
+  "properties": {
+    "run_id": {"type": "string", "pattern": "^[a-z0-9][a-z0-9._-]+$"},
+    "status": {"const": "accepted"},
+    "source_version": {"type": "string", "minLength": 1},
+    "device": {"type": "object", "required": ["name", "memory_bytes", "gpu_count"], "properties": {"name": {"type": "string"}, "memory_bytes": {"type": "integer", "minimum": 1}, "gpu_count": {"const": 1}}},
+    "profiles": {"type": "array", "minItems": 1, "items": {"type": "object", "required": ["model", "revision", "model_dtype", "protection_dtype", "calibrator", "block_size", "forward_scope", "codec_version"]}},
+    "raw_path": {"type": "string", "pattern": "^results/gpu/accepted/"},
+    "summary_path": {"type": "string", "pattern": "^results/gpu/summaries/"},
+    "validation_path": {"type": "string", "pattern": "^results/gpu/accepted/"}
+  }
+}

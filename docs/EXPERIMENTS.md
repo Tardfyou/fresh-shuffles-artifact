@@ -7,12 +7,12 @@ Repeated heads, seeds, sessions and analyses do not add independent users.
 
 | Study | Recorded scale | Evidence target |
 |---|---|---|
-| Main recovery | 3,000 prompts, 12 configurations, two permutation seeds | Content-multiset recovery across ten public models |
+| Main recovery | 3,000 prompts, current 11 configurations; historical 12 retained; two seeds | Content-multiset recovery across the current nine-model scope |
 | Probe budget | 100 independent configurations at eight lengths | State coverage and calibration budget |
 | Fused path | 300 prompts, two KV heads | Fused/public-model separation |
 | Scaling | Same 100 prompts at four Qwen and two Llama ratios | Six empirical unchanged/fitted comparisons, retaining regressions |
 | Lifecycle | 100 prompts, three paired conditions | Same-epoch, stale-secret and recalibrated behavior |
-| Cross-key | 100 prompts, three models, five configurations | Sensitivity to independently generated secrets |
+| Cross-key | 100 prompts, current two-model scope; historical three retained; five configurations | Sensitivity to independently generated secrets |
 | Privacy identification | 100 synthetic cases, 100 candidates each, six value types | Template-conditioned candidate identification and matched controls |
 | Row-secret refresh | 100 prompts, fixed column transform | Stale-demixer transfer after S/a refresh |
 | Integrity battery | 12 mutation classes, 100 rounds each | Selected authentication and context rejection checks |
@@ -36,7 +36,7 @@ fixture. Cosine distributions reuse the already recorded 602 outputs in each of
 six conditions; they are derived metrics, not new user samples.
 
 The fixed-cohort raw records, older accepted outcomes and follow-up files remain
-separate. See `AUDIT_STATUS.json`, the export manifests and the offline inspectors
+separate. See `metadata/audit/AUDIT_STATUS.json`, the export manifests and the offline inspectors
 listed in the README. Model, head and candidate-access differences are recorded
-with each study. GPU, real TEE and production-service experiments are outside the
-study. No generalized scaling or unique error-cause guarantee is asserted.
+with each study. These retained measurements use CPU or external APIs. GPU runs are cataloged
+separately after acceptance; see `docs/GPU_RESULTS.md`. No generalized scaling or unique error-cause guarantee is asserted.

@@ -19,7 +19,7 @@ There are 2,000 independent paired request conditions and 6,000 paired segments.
 Original and refreshed configurations pass 2,306/6,000 and 2,291/6,000 segments;
 63 pairs disagree (39 original-only passes; 24 refresh-only passes). Equal rates
 or unconditional functional equivalence are not established. The stored
-VALIDATION_STATUS.json contains independent recomputed counts and scope.
+metadata/audit/VALIDATION_STATUS.json contains independent recomputed counts and scope.
 
 The row-secret study uses one prefill protection/recovery followed by three
 continuation segments. A separate known-key byte-profile study includes 1,200
@@ -32,7 +32,7 @@ security against within-request observations. All valid negative outcomes remain
 ## Offline inspection
 
 Use Python 3.12 with the listed dependencies and cached public model tokenizers
-and configurations. From this directory set PYTHONPATH to defense_runtime and
+and configurations. From the repository root set PYTHONPATH to defense_runtime and
 HF_HUB_OFFLINE=1 / TRANSFORMERS_OFFLINE=1, then run:
 
 ```
@@ -50,7 +50,7 @@ All accepted positive and negative functional outcomes remain available.
 
 Worker files originally contain #run headers. In these copies only, those
 headers are moved into separate run_events.json sidecars, leaving strict JSONL
-with every experimental record unchanged. NORMALIZATION.json records the
+with every experimental record unchanged. metadata/audit/NORMALIZATION.json records the
 conversion. The raw private files remain untouched. Data licenses and the
 upstream KV-Cloak license are retained.
 
@@ -70,7 +70,7 @@ their complete records. A frozen completed-key list and separate resumed worker
 records retain all outcomes without duplicate keys. Resource scheduling and exit
 metadata are included; nonzero retired-worker exits are not silently erased.
 
-Use requirements-defensive-20261102.lock for the separately installed public
+Use requirements/requirements-defensive-20261102.lock for the separately installed public
 dependency environment. From the artifact root, inspect the expanded records:
 
 ```

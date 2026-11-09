@@ -42,7 +42,7 @@ metadata paths are normalized only in these distribution copies.
 
 ## Offline verification
 
-Use Python 3.12 with `requirements-ordering.txt` and the cached public Qwen2.5-0.5B
+Use Python 3.12 with `requirements/requirements-ordering.txt` and the cached public Qwen2.5-0.5B
 tokenizer (no model weights are loaded by this verification). From the root:
 
 ```sh

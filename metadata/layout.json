@@ -1,0 +1,25 @@
+{
+  "layout_version": 1,
+  "existing_scientific_result_paths_preserved": true,
+  "relocated_files": {
+    "DEFENSE_SUPPLEMENT.md": "docs/DEFENSE_SUPPLEMENT.md",
+    "EXPERIMENTS.md": "docs/EXPERIMENTS.md",
+    "ORDERING_STUDY.md": "docs/ORDERING_STUDY.md",
+    "REPORTING_SCOPE.md": "docs/REPORTING_SCOPE.md",
+    "SUPPLEMENTARY_DETAILS.md": "docs/SUPPLEMENTARY_DETAILS.md",
+    "AUDIT_STATUS.json": "metadata/audit/AUDIT_STATUS.json",
+    "DEPLOYMENT_VALIDATION.json": "metadata/audit/DEPLOYMENT_VALIDATION.json",
+    "EXPANDED_DEFENSE_VALIDATION.json": "metadata/audit/EXPANDED_DEFENSE_VALIDATION.json",
+    "NORMALIZATION.json": "metadata/audit/NORMALIZATION.json",
+    "VALIDATION_STATUS.json": "metadata/audit/VALIDATION_STATUS.json",
+    "requirements-defense.txt": "requirements/requirements-defense.txt",
+    "requirements-defensive-20261102.lock": "requirements/requirements-defensive-20261102.lock",
+    "requirements-ordering.txt": "requirements/requirements-ordering.txt"
+  },
+  "cpu_results": "results/",
+  "gpu_results": "results/gpu/",
+  "catalog": "metadata/studies.json",
+  "gpu_execution_bundle": "veilkv-gpu-80g-experiments-20261109.zip",
+  "gpu_execution_version": "gpu80g-20261109-v2-fp32-protection",
+  "previous_git_snapshot": "d88e129"
+}
