@@ -27,6 +27,20 @@
         "vllm-V0-bf16-byte-defense",
         "vllm-fp32-protected-value-attack"
       ]
+    },
+    {
+      "run_id": "vllm-repeat-diagnosis-20261110-01",
+      "status": "accepted",
+      "raw_path": "results/gpu/accepted/vllm-repeat-diagnosis-20261110-01",
+      "summary_path": "results/gpu/summaries/vllm-repeat-diagnosis-20261110-01",
+      "validation_path": "results/gpu/summaries/vllm-repeat-diagnosis-20261110-01/ACCEPTANCE.json",
+      "source_version": "vllm085post1-repeat-diagnosis-20261110",
+      "profiles": [
+        "unprotected-BF16-cache-on-off-repeats",
+        "FP32-diagnostic-control",
+        "B-reclassified-as-C-repeat"
+      ],
+      "condition_reclassification": "B did not reset between calls; not accepted as cold-cold evidence"
     }
   ]
 }

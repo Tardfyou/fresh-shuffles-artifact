@@ -1,0 +1,1221 @@
+{
+ "variant": "C0",
+ "block": 16,
+ "dtype": "bfloat16",
+ "caching": true,
+ "capacity_blocks": 72,
+ "num_gpu_blocks_override": 72,
+ "model_revision": "060db6499f32faf8b98477b0a26969ef7d8b9987",
+ "vllm": "0.8.5.post1",
+ "samples": [
+  {
+   "sid": "wc25_128_0001",
+   "in_len": 195,
+   "variant": "C0",
+   "block": 16,
+   "dtype": "bfloat16",
+   "a": {
+    "token_ids": [
+     151643
+    ],
+    "finish": "stop",
+    "seconds": 0.024360284907743335,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292916.1700826,
+     "finished_time": 1794292916.19417,
+     "first_scheduled_time": 1794292916.1715593,
+     "first_token_time": 1794292916.193781,
+     "last_token_time": 1794292916.193781,
+     "scheduler_time": 0.00061274494510144,
+     "time_in_queue": 0.0014767646789550781
+    },
+    "logprobs": null
+   },
+   "b": {
+    "token_ids": [
+     151643
+    ],
+    "finish": "stop",
+    "seconds": 0.03671591402962804,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292916.194368,
+     "finished_time": 1794292916.2309399,
+     "first_scheduled_time": 1794292916.1949267,
+     "first_token_time": 1794292916.2306662,
+     "last_token_time": 1794292916.2306662,
+     "scheduler_time": 0.0004441040800884366,
+     "time_in_queue": 0.0005588531494140625
+    },
+    "logprobs": null
+   },
+   "equal": true,
+   "first_div": null,
+   "reset": {
+    "tag": "wc25_128_0001:pair",
+    "reset_return": true,
+    "free_blocks_after": 72,
+    "capacity": 72,
+    "reset_verified": true
+   },
+   "original_divergent": false
+  },
+  {
+   "sid": "wc25_128_0011",
+   "in_len": 232,
+   "variant": "C0",
+   "block": 16,
+   "dtype": "bfloat16",
+   "a": {
+    "token_ids": [
+     151643
+    ],
+    "finish": "stop",
+    "seconds": 0.014358686050400138,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292916.2378607,
+     "finished_time": 1794292916.2521055,
+     "first_scheduled_time": 1794292916.2385476,
+     "first_token_time": 1794292916.251867,
+     "last_token_time": 1794292916.251867,
+     "scheduler_time": 0.0005652649560943246,
+     "time_in_queue": 0.0006868839263916016
+    },
+    "logprobs": null
+   },
+   "b": {
+    "token_ids": [
+     151643
+    ],
+    "finish": "stop",
+    "seconds": 0.013417779002338648,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292916.252245,
+     "finished_time": 1794292916.2655656,
+     "first_scheduled_time": 1794292916.2526956,
+     "first_token_time": 1794292916.2653532,
+     "last_token_time": 1794292916.2653532,
+     "scheduler_time": 0.0003438530256971717,
+     "time_in_queue": 0.0004506111145019531
+    },
+    "logprobs": null
+   },
+   "equal": true,
+   "first_div": null,
+   "reset": {
+    "tag": "wc25_128_0011:pair",
+    "reset_return": true,
+    "free_blocks_after": 72,
+    "capacity": 72,
+    "reset_verified": true
+   },
+   "original_divergent": false
+  },
+  {
+   "sid": "wc25_128_0012",
+   "in_len": 130,
+   "variant": "C0",
+   "block": 16,
+   "dtype": "bfloat16",
+   "a": {
+    "token_ids": [
+     271,
+     334,
+     9117,
+     39,
+     3256,
+     78504,
+     35768,
+     66963,
+     13515,
+     3667,
+     448,
+     2021,
+     351,
+     151643
+    ],
+    "finish": "stop",
+    "seconds": 0.19076465198304504,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292916.2722685,
+     "finished_time": 1794292916.4629023,
+     "first_scheduled_time": 1794292916.272736,
+     "first_token_time": 1794292916.285314,
+     "last_token_time": 1794292916.462739,
+     "scheduler_time": 0.0019730881322175264,
+     "time_in_queue": 0.00046753883361816406
+    },
+    "logprobs": null
+   },
+   "b": {
+    "token_ids": [
+     271,
+     334,
+     9117,
+     39,
+     3256,
+     78504,
+     35768,
+     66963,
+     13515,
+     3667,
+     448,
+     2021,
+     351,
+     151643
+    ],
+    "finish": "stop",
+    "seconds": 0.1741537048947066,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292916.4630966,
+     "finished_time": 1794292916.637113,
+     "first_scheduled_time": 1794292916.4634984,
+     "first_token_time": 1794292916.476224,
+     "last_token_time": 1794292916.6369424,
+     "scheduler_time": 0.001782496110536158,
+     "time_in_queue": 0.0004017353057861328
+    },
+    "logprobs": null
+   },
+   "equal": true,
+   "first_div": null,
+   "reset": {
+    "tag": "wc25_128_0012:pair",
+    "reset_return": true,
+    "free_blocks_after": 72,
+    "capacity": 72,
+    "reset_verified": true
+   },
+   "original_divergent": false
+  },
+  {
+   "sid": "wc25_128_0015",
+   "in_len": 216,
+   "variant": "C0",
+   "block": 16,
+   "dtype": "bfloat16",
+   "a": {
+    "token_ids": [
+     576,
+     31728,
+     2033,
+     1265,
+     387,
+     220,
+     16,
+     15,
+     15,
+     4,
+     4024,
+     323,
+     537,
+     21774,
+     504,
+     894
+    ],
+    "finish": "length",
+    "seconds": 0.20221959194168448,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292916.6440098,
+     "finished_time": 1794292916.8460727,
+     "first_scheduled_time": 1794292916.6446235,
+     "first_token_time": 1794292916.6573324,
+     "last_token_time": 1794292916.845822,
+     "scheduler_time": 0.0023101490223780274,
+     "time_in_queue": 0.0006136894226074219
+    },
+    "logprobs": null
+   },
+   "b": {
+    "token_ids": [
+     576,
+     31728,
+     2033,
+     1265,
+     387,
+     220,
+     16,
+     15,
+     15,
+     4,
+     4024,
+     323,
+     537,
+     21774,
+     504,
+     894
+    ],
+    "finish": "length",
+    "seconds": 0.20347854297142476,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292916.8462796,
+     "finished_time": 1794292917.0496187,
+     "first_scheduled_time": 1794292916.8467958,
+     "first_token_time": 1794292916.8591516,
+     "last_token_time": 1794292917.0493984,
+     "scheduler_time": 0.002165589132346213,
+     "time_in_queue": 0.0005161762237548828
+    },
+    "logprobs": null
+   },
+   "equal": true,
+   "first_div": null,
+   "reset": {
+    "tag": "wc25_128_0015:pair",
+    "reset_return": true,
+    "free_blocks_after": 72,
+    "capacity": 72,
+    "reset_verified": true
+   },
+   "original_divergent": false
+  },
+  {
+   "sid": "wc25_128_0016",
+   "in_len": 139,
+   "variant": "C0",
+   "block": 16,
+   "dtype": "bfloat16",
+   "a": {
+    "token_ids": [
+     358,
+     2776,
+     14589,
+     369,
+     279,
+     21340,
+     11,
+     714,
+     358,
+     2776,
+     537,
+     2704,
+     421,
+     1052,
+     594,
+     264
+    ],
+    "finish": "length",
+    "seconds": 0.19763360905926675,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292917.0565429,
+     "finished_time": 1794292917.2540407,
+     "first_scheduled_time": 1794292917.0570152,
+     "first_token_time": 1794292917.0694525,
+     "last_token_time": 1794292917.2538524,
+     "scheduler_time": 0.002026656176894903,
+     "time_in_queue": 0.0004723072052001953
+    },
+    "logprobs": null
+   },
+   "b": {
+    "token_ids": [
+     358,
+     2776,
+     14589,
+     369,
+     279,
+     21340,
+     11,
+     714,
+     358,
+     2776,
+     537,
+     2704,
+     421,
+     1052,
+     594,
+     264
+    ],
+    "finish": "length",
+    "seconds": 0.19549381104297936,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292917.2542224,
+     "finished_time": 1794292917.449581,
+     "first_scheduled_time": 1794292917.2546146,
+     "first_token_time": 1794292917.2673798,
+     "last_token_time": 1794292917.4493856,
+     "scheduler_time": 0.001976929255761206,
+     "time_in_queue": 0.0003921985626220703
+    },
+    "logprobs": null
+   },
+   "equal": true,
+   "first_div": null,
+   "reset": {
+    "tag": "wc25_128_0016:pair",
+    "reset_return": true,
+    "free_blocks_after": 72,
+    "capacity": 72,
+    "reset_verified": true
+   },
+   "original_divergent": false
+  },
+  {
+   "sid": "wc25_128_0068",
+   "in_len": 142,
+   "variant": "C0",
+   "block": 16,
+   "dtype": "bfloat16",
+   "a": {
+    "token_ids": [
+     576,
+     8593,
+     11821,
+     3668,
+     374,
+     264,
+     7988,
+     323,
+     25530,
+     37390,
+     448,
+     264,
+     4911,
+     20334,
+     315,
+     8170
+    ],
+    "finish": "length",
+    "seconds": 0.1952975490130484,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292917.456493,
+     "finished_time": 1794292917.651655,
+     "first_scheduled_time": 1794292917.4569604,
+     "first_token_time": 1794292917.4695692,
+     "last_token_time": 1794292917.6514738,
+     "scheduler_time": 0.002034176141023636,
+     "time_in_queue": 0.00046753883361816406
+    },
+    "logprobs": null
+   },
+   "b": {
+    "token_ids": [
+     576,
+     3668,
+     374,
+     264,
+     8593,
+     37390,
+     448,
+     264,
+     4911,
+     5726,
+     311,
+     2524,
+     279,
+     5424,
+     13,
+     1260
+    ],
+    "finish": "length",
+    "seconds": 0.19685641198884696,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292917.6518283,
+     "finished_time": 1794292917.848549,
+     "first_scheduled_time": 1794292917.6522052,
+     "first_token_time": 1794292917.6647356,
+     "last_token_time": 1794292917.8483465,
+     "scheduler_time": 0.0021595018915832043,
+     "time_in_queue": 0.0003769397735595703
+    },
+    "logprobs": null
+   },
+   "equal": false,
+   "first_div": 1,
+   "reset": {
+    "tag": "wc25_128_0068:pair",
+    "reset_return": true,
+    "free_blocks_after": 72,
+    "capacity": 72,
+    "reset_verified": true
+   },
+   "original_divergent": true
+  },
+  {
+   "sid": "wc25_128_0072",
+   "in_len": 170,
+   "variant": "C0",
+   "block": 16,
+   "dtype": "bfloat16",
+   "a": {
+    "token_ids": [
+     256,
+     576,
+     3364,
+     374,
+     264,
+     2699,
+     315,
+     264,
+     22531,
+     11,
+     323,
+     279,
+     7089,
+     374,
+     264,
+     2699
+    ],
+    "finish": "length",
+    "seconds": 0.19560217100661248,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292917.8555217,
+     "finished_time": 1794292918.050989,
+     "first_scheduled_time": 1794292917.856041,
+     "first_token_time": 1794292917.868485,
+     "last_token_time": 1794292918.0508087,
+     "scheduler_time": 0.002059637801721692,
+     "time_in_queue": 0.0005192756652832031
+    },
+    "logprobs": null
+   },
+   "b": {
+    "token_ids": [
+     256,
+     576,
+     3364,
+     374,
+     264,
+     2699,
+     315,
+     264,
+     22531,
+     11,
+     323,
+     279,
+     7089,
+     374,
+     264,
+     2699
+    ],
+    "finish": "length",
+    "seconds": 0.19954224303364754,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292918.0511615,
+     "finished_time": 1794292918.2505648,
+     "first_scheduled_time": 1794292918.0515609,
+     "first_token_time": 1794292918.0639348,
+     "last_token_time": 1794292918.250348,
+     "scheduler_time": 0.002081390703096986,
+     "time_in_queue": 0.0003993511199951172
+    },
+    "logprobs": null
+   },
+   "equal": true,
+   "first_div": null,
+   "reset": {
+    "tag": "wc25_128_0072:pair",
+    "reset_return": true,
+    "free_blocks_after": 72,
+    "capacity": 72,
+    "reset_verified": true
+   },
+   "original_divergent": true
+  },
+  {
+   "sid": "wc25_128_0119",
+   "in_len": 131,
+   "variant": "C0",
+   "block": 16,
+   "dtype": "bfloat16",
+   "a": {
+    "token_ids": [
+     11,
+     128330,
+     45310,
+     141688,
+     16104,
+     1478,
+     11916,
+     11,
+     47389,
+     67879,
+     18658,
+     136845,
+     72126,
+     66502,
+     47050,
+     125975
+    ],
+    "finish": "length",
+    "seconds": 0.18843262596055865,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292918.2575145,
+     "finished_time": 1794292918.4458077,
+     "first_scheduled_time": 1794292918.2579982,
+     "first_token_time": 1794292918.2716327,
+     "last_token_time": 1794292918.4456153,
+     "scheduler_time": 0.0019926070235669613,
+     "time_in_queue": 0.0004837512969970703
+    },
+    "logprobs": null
+   },
+   "b": {
+    "token_ids": [
+     11,
+     128330,
+     45310,
+     141688,
+     16104,
+     1478,
+     11916,
+     11,
+     47389,
+     45310,
+     18658,
+     139572,
+     47340,
+     130976,
+     17787,
+     43993
+    ],
+    "finish": "length",
+    "seconds": 0.18854862602893263,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292918.445988,
+     "finished_time": 1794292918.6343956,
+     "first_scheduled_time": 1794292918.4463665,
+     "first_token_time": 1794292918.4576626,
+     "last_token_time": 1794292918.6342204,
+     "scheduler_time": 0.0019158091163262725,
+     "time_in_queue": 0.00037860870361328125
+    },
+    "logprobs": null
+   },
+   "equal": false,
+   "first_div": 9,
+   "reset": {
+    "tag": "wc25_128_0119:pair",
+    "reset_return": true,
+    "free_blocks_after": 72,
+    "capacity": 72,
+    "reset_verified": true
+   },
+   "original_divergent": true
+  },
+  {
+   "sid": "wc25_128_0180",
+   "in_len": 243,
+   "variant": "C0",
+   "block": 16,
+   "dtype": "bfloat16",
+   "a": {
+    "token_ids": [
+     358,
+     2776,
+     3330,
+     369,
+     264,
+     220,
+     18,
+     15,
+     1308,
+     6438,
+     311,
+     4263,
+     279,
+     1482,
+     2639,
+     315
+    ],
+    "finish": "length",
+    "seconds": 0.20120233797933906,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292918.6412938,
+     "finished_time": 1794292918.8423343,
+     "first_scheduled_time": 1794292918.641987,
+     "first_token_time": 1794292918.6546865,
+     "last_token_time": 1794292918.8420682,
+     "scheduler_time": 0.002401200821623206,
+     "time_in_queue": 0.0006933212280273438
+    },
+    "logprobs": null
+   },
+   "b": {
+    "token_ids": [
+     1205,
+     614,
+     264,
+     2421,
+     6708,
+     389,
+     1246,
+     311,
+     653,
+     419,
+     11,
+     714,
+     358,
+     2776,
+     537,
+     2704
+    ],
+    "finish": "length",
+    "seconds": 0.19959499291144311,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292918.8425477,
+     "finished_time": 1794292919.0420027,
+     "first_scheduled_time": 1794292918.8430405,
+     "first_token_time": 1794292918.8558035,
+     "last_token_time": 1794292919.0417802,
+     "scheduler_time": 0.0022138968342915177,
+     "time_in_queue": 0.0004928112030029297
+    },
+    "logprobs": null
+   },
+   "equal": false,
+   "first_div": 0,
+   "reset": {
+    "tag": "wc25_128_0180:pair",
+    "reset_return": true,
+    "free_blocks_after": 72,
+    "capacity": 72,
+    "reset_verified": true
+   },
+   "original_divergent": true
+  },
+  {
+   "sid": "wc25_128_0187",
+   "in_len": 181,
+   "variant": "C0",
+   "block": 16,
+   "dtype": "bfloat16",
+   "a": {
+    "token_ids": [
+     12243,
+     279,
+     3364,
+     387,
+     911,
+     23644,
+     594,
+     11618,
+     311,
+     3635,
+     264,
+     3743,
+     13,
+     12243,
+     279,
+     3364
+    ],
+    "finish": "length",
+    "seconds": 0.1952816239790991,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292919.0489485,
+     "finished_time": 1794292919.2440917,
+     "first_scheduled_time": 1794292919.0494962,
+     "first_token_time": 1794292919.0620406,
+     "last_token_time": 1794292919.2439013,
+     "scheduler_time": 0.002131942776031792,
+     "time_in_queue": 0.0005476474761962891
+    },
+    "logprobs": null
+   },
+   "b": {
+    "token_ids": [
+     358,
+     2776,
+     14589,
+     11,
+     714,
+     358,
+     4157,
+     20423,
+     419,
+     1681,
+     438,
+     432,
+     5780,
+     2348,
+     279,
+     17501
+    ],
+    "finish": "length",
+    "seconds": 0.2374145039357245,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292919.2442691,
+     "finished_time": 1794292919.4815276,
+     "first_scheduled_time": 1794292919.2446897,
+     "first_token_time": 1794292919.257107,
+     "last_token_time": 1794292919.48125,
+     "scheduler_time": 0.0025904220528900623,
+     "time_in_queue": 0.00042057037353515625
+    },
+    "logprobs": null
+   },
+   "equal": false,
+   "first_div": 0,
+   "reset": {
+    "tag": "wc25_128_0187:pair",
+    "reset_return": true,
+    "free_blocks_after": 72,
+    "capacity": 72,
+    "reset_verified": true
+   },
+   "original_divergent": true
+  },
+  {
+   "sid": "wc25_128_0242",
+   "in_len": 140,
+   "variant": "C0",
+   "block": 16,
+   "dtype": "bfloat16",
+   "a": {
+    "token_ids": [
+     220,
+     576,
+     9104,
+     304,
+     56133,
+     11,
+     14867,
+     374,
+     5023,
+     220,
+     17,
+     20,
+     30937,
+     320,
+     22,
+     22
+    ],
+    "finish": "length",
+    "seconds": 0.2132353219203651,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292919.492378,
+     "finished_time": 1794292919.705466,
+     "first_scheduled_time": 1794292919.4930327,
+     "first_token_time": 1794292919.5076268,
+     "last_token_time": 1794292919.7052693,
+     "scheduler_time": 0.0022881999611854553,
+     "time_in_queue": 0.0006546974182128906
+    },
+    "logprobs": null
+   },
+   "b": {
+    "token_ids": [
+     220,
+     576,
+     9104,
+     304,
+     56133,
+     11,
+     14867,
+     374,
+     5023,
+     220,
+     17,
+     20,
+     30937,
+     320,
+     22,
+     22
+    ],
+    "finish": "length",
+    "seconds": 0.2282323930412531,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292919.705666,
+     "finished_time": 1794292919.9337413,
+     "first_scheduled_time": 1794292919.706159,
+     "first_token_time": 1794292919.7272143,
+     "last_token_time": 1794292919.9335036,
+     "scheduler_time": 0.0027468418702483177,
+     "time_in_queue": 0.0004930496215820312
+    },
+    "logprobs": null
+   },
+   "equal": true,
+   "first_div": null,
+   "reset": {
+    "tag": "wc25_128_0242:pair",
+    "reset_return": true,
+    "free_blocks_after": 72,
+    "capacity": 72,
+    "reset_verified": true
+   },
+   "original_divergent": true
+  },
+  {
+   "sid": "wc25_128_0273",
+   "in_len": 150,
+   "variant": "C0",
+   "block": 16,
+   "dtype": "bfloat16",
+   "a": {
+    "token_ids": [
+     220,
+     358,
+     2776,
+     537,
+     2704,
+     421,
+     419,
+     374,
+     264,
+     1661,
+     4522,
+     11,
+     714,
+     358,
+     2776,
+     4460
+    ],
+    "finish": "length",
+    "seconds": 0.22370023105759174,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292919.941827,
+     "finished_time": 1794292920.165346,
+     "first_scheduled_time": 1794292919.9424944,
+     "first_token_time": 1794292919.9568167,
+     "last_token_time": 1794292920.1651022,
+     "scheduler_time": 0.002927896799519658,
+     "time_in_queue": 0.0006673336029052734
+    },
+    "logprobs": null
+   },
+   "b": {
+    "token_ids": [
+     220,
+     358,
+     2776,
+     537,
+     2704,
+     421,
+     419,
+     374,
+     264,
+     1661,
+     4522,
+     11,
+     714,
+     358,
+     2776,
+     4460
+    ],
+    "finish": "length",
+    "seconds": 0.20815283409319818,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292920.165568,
+     "finished_time": 1794292920.3735812,
+     "first_scheduled_time": 1794292920.1660013,
+     "first_token_time": 1794292920.1800802,
+     "last_token_time": 1794292920.3733892,
+     "scheduler_time": 0.002421329729259014,
+     "time_in_queue": 0.00043320655822753906
+    },
+    "logprobs": null
+   },
+   "equal": true,
+   "first_div": null,
+   "reset": {
+    "tag": "wc25_128_0273:pair",
+    "reset_return": true,
+    "free_blocks_after": 72,
+    "capacity": 72,
+    "reset_verified": true
+   },
+   "original_divergent": true
+  },
+  {
+   "sid": "wc25_128_0298",
+   "in_len": 243,
+   "variant": "C0",
+   "block": 16,
+   "dtype": "bfloat16",
+   "a": {
+    "token_ids": [
+     576,
+     31728,
+     2033,
+     1265,
+     387,
+     220,
+     16,
+     15,
+     15,
+     4244,
+     1293,
+     13,
+     576,
+     31728,
+     2033,
+     1265
+    ],
+    "finish": "length",
+    "seconds": 0.20045083691366017,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292920.3822477,
+     "finished_time": 1794292920.5825486,
+     "first_scheduled_time": 1794292920.3830345,
+     "first_token_time": 1794292920.3975804,
+     "last_token_time": 1794292920.5823185,
+     "scheduler_time": 0.002269524266012013,
+     "time_in_queue": 0.0007867813110351562
+    },
+    "logprobs": null
+   },
+   "b": {
+    "token_ids": [
+     576,
+     31728,
+     2033,
+     1265,
+     387,
+     220,
+     16,
+     15,
+     15,
+     4244,
+     476,
+     803,
+     13,
+     576,
+     31728,
+     2033
+    ],
+    "finish": "length",
+    "seconds": 0.19846090907230973,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292920.582737,
+     "finished_time": 1794292920.7810597,
+     "first_scheduled_time": 1794292920.5832098,
+     "first_token_time": 1794292920.5958855,
+     "last_token_time": 1794292920.7808502,
+     "scheduler_time": 0.0020302290795370936,
+     "time_in_queue": 0.00047278404235839844
+    },
+    "logprobs": null
+   },
+   "equal": false,
+   "first_div": 10,
+   "reset": {
+    "tag": "wc25_128_0298:pair",
+    "reset_return": true,
+    "free_blocks_after": 72,
+    "capacity": 72,
+    "reset_verified": true
+   },
+   "original_divergent": true
+  },
+  {
+   "sid": "wc25_128_0307",
+   "in_len": 130,
+   "variant": "C0",
+   "block": 16,
+   "dtype": "bfloat16",
+   "a": {
+    "token_ids": [
+     271,
+     334,
+     9117,
+     39,
+     3256,
+     78504,
+     35768,
+     66963,
+     256,
+     3063,
+     264,
+     13551,
+     10550,
+     55728,
+     151643
+    ],
+    "finish": "stop",
+    "seconds": 0.18468266900163144,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292920.787939,
+     "finished_time": 1794292920.9724972,
+     "first_scheduled_time": 1794292920.7884011,
+     "first_token_time": 1794292920.8011808,
+     "last_token_time": 1794292920.9723322,
+     "scheduler_time": 0.001820785808376968,
+     "time_in_queue": 0.0004620552062988281
+    },
+    "logprobs": null
+   },
+   "b": {
+    "token_ids": [
+     271,
+     334,
+     9117,
+     39,
+     3256,
+     78504,
+     35768,
+     66963,
+     220,
+     3063,
+     264,
+     13551,
+     10550,
+     55728,
+     151643
+    ],
+    "finish": "stop",
+    "seconds": 0.19703398388810456,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292920.9726615,
+     "finished_time": 1794292921.1695487,
+     "first_scheduled_time": 1794292920.9730287,
+     "first_token_time": 1794292920.9856489,
+     "last_token_time": 1794292921.169314,
+     "scheduler_time": 0.0019841091707348824,
+     "time_in_queue": 0.00036716461181640625
+    },
+    "logprobs": null
+   },
+   "equal": false,
+   "first_div": 8,
+   "reset": {
+    "tag": "wc25_128_0307:pair",
+    "reset_return": true,
+    "free_blocks_after": 72,
+    "capacity": 72,
+    "reset_verified": true
+   },
+   "original_divergent": true
+  },
+  {
+   "sid": "wc25_128_0346",
+   "in_len": 168,
+   "variant": "C0",
+   "block": 16,
+   "dtype": "bfloat16",
+   "a": {
+    "token_ids": [
+     1446,
+     686,
+     1083,
+     4263,
+     279,
+     15276,
+     323,
+     862,
+     4650,
+     5421,
+     448,
+     279,
+     2943,
+     311,
+     5978,
+     429
+    ],
+    "finish": "length",
+    "seconds": 0.2125991500215605,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292921.176571,
+     "finished_time": 1794292921.3890257,
+     "first_scheduled_time": 1794292921.17714,
+     "first_token_time": 1794292921.1919408,
+     "last_token_time": 1794292921.38884,
+     "scheduler_time": 0.0023716018768027425,
+     "time_in_queue": 0.0005691051483154297
+    },
+    "logprobs": null
+   },
+   "b": {
+    "token_ids": [
+     1446,
+     686,
+     1083,
+     4263,
+     279,
+     15276,
+     448,
+     279,
+     2943,
+     311,
+     5978,
+     429,
+     807,
+     3535,
+     279,
+     4650
+    ],
+    "finish": "length",
+    "seconds": 0.19770639901980758,
+    "free_before": 72,
+    "free_after": 72,
+    "metrics": {
+     "arrival_time": 1794292921.3892076,
+     "finished_time": 1794292921.586774,
+     "first_scheduled_time": 1794292921.3896244,
+     "first_token_time": 1794292921.4022095,
+     "last_token_time": 1794292921.586567,
+     "scheduler_time": 0.0020197960548102856,
+     "time_in_queue": 0.00041675567626953125
+    },
+    "logprobs": null
+   },
+   "equal": false,
+   "first_div": 6,
+   "reset": {
+    "tag": "wc25_128_0346:pair",
+    "reset_return": true,
+    "free_blocks_after": 72,
+    "capacity": 72,
+    "reset_verified": true
+   },
+   "original_divergent": true
+  }
+ ]
+}

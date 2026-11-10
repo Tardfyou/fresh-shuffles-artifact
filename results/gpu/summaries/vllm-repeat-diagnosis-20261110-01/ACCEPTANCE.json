@@ -1,0 +1,201 @@
+{
+  "record_integrity_pass": true,
+  "stage2_pairs": 1200,
+  "all_recorded_pairs": 1375,
+  "stage2": [
+    {
+      "block": 16,
+      "variant": "A",
+      "round": 1,
+      "equal": 100,
+      "total": 100
+    },
+    {
+      "block": 16,
+      "variant": "A",
+      "round": 2,
+      "equal": 100,
+      "total": 100
+    },
+    {
+      "block": 16,
+      "variant": "A",
+      "round": 3,
+      "equal": 100,
+      "total": 100
+    },
+    {
+      "block": 16,
+      "variant": "C",
+      "round": 1,
+      "equal": 93,
+      "total": 100
+    },
+    {
+      "block": 16,
+      "variant": "C",
+      "round": 2,
+      "equal": 93,
+      "total": 100
+    },
+    {
+      "block": 16,
+      "variant": "C",
+      "round": 3,
+      "equal": 93,
+      "total": 100
+    },
+    {
+      "block": 32,
+      "variant": "A",
+      "round": 1,
+      "equal": 100,
+      "total": 100
+    },
+    {
+      "block": 32,
+      "variant": "A",
+      "round": 2,
+      "equal": 100,
+      "total": 100
+    },
+    {
+      "block": 32,
+      "variant": "A",
+      "round": 3,
+      "equal": 100,
+      "total": 100
+    },
+    {
+      "block": 32,
+      "variant": "C",
+      "round": 1,
+      "equal": 92,
+      "total": 100
+    },
+    {
+      "block": 32,
+      "variant": "C",
+      "round": 2,
+      "equal": 92,
+      "total": 100
+    },
+    {
+      "block": 32,
+      "variant": "C",
+      "round": 3,
+      "equal": 92,
+      "total": 100
+    }
+  ],
+  "stage1": [
+    {
+      "file": "stage1_A_b16.json",
+      "variant_label": "A",
+      "executed_condition": "A",
+      "exact_outputs": 15,
+      "total": 15
+    },
+    {
+      "file": "stage1_A_b32.json",
+      "variant_label": "A",
+      "executed_condition": "A",
+      "exact_outputs": 15,
+      "total": 15
+    },
+    {
+      "file": "stage1_B_b16.json",
+      "variant_label": "B",
+      "executed_condition": "C: reset once before pair",
+      "exact_outputs": 8,
+      "total": 15
+    },
+    {
+      "file": "stage1_B_b32.json",
+      "variant_label": "B",
+      "executed_condition": "C: reset once before pair",
+      "exact_outputs": 7,
+      "total": 15
+    },
+    {
+      "file": "stage1_C0_b16.json",
+      "variant_label": "C0",
+      "executed_condition": "C0",
+      "exact_outputs": 8,
+      "total": 15
+    },
+    {
+      "file": "stage1_C_b16.json",
+      "variant_label": "C",
+      "executed_condition": "C",
+      "exact_outputs": 8,
+      "total": 15
+    },
+    {
+      "file": "stage1_C_b32.json",
+      "variant_label": "C",
+      "executed_condition": "C",
+      "exact_outputs": 7,
+      "total": 15
+    },
+    {
+      "file": "stage1_D_b16.json",
+      "variant_label": "D",
+      "executed_condition": "D",
+      "exact_outputs": 15,
+      "total": 15
+    },
+    {
+      "file": "stage1_D_b32.json",
+      "variant_label": "D",
+      "executed_condition": "D",
+      "exact_outputs": 15,
+      "total": 15
+    },
+    {
+      "file": "stage1_E_b16.json",
+      "variant_label": "E",
+      "executed_condition": "E",
+      "exact_outputs": 10,
+      "total": 10
+    },
+    {
+      "file": "stage1_E_b32.json",
+      "variant_label": "E",
+      "executed_condition": "E",
+      "exact_outputs": 10,
+      "total": 10
+    },
+    {
+      "file": "stage1_F_b16.json",
+      "variant_label": "F",
+      "executed_condition": "F",
+      "exact_outputs": 10,
+      "total": 10
+    },
+    {
+      "file": "stage1_F_b32.json",
+      "variant_label": "F",
+      "executed_condition": "F",
+      "exact_outputs": 10,
+      "total": 10
+    }
+  ],
+  "near_tie_first_divergences": 15,
+  "strict_first_two_list_entries_contain_both_winners": 14,
+  "remaining_event_has_tied_second_score_group": true,
+  "observed_top2_logprob_gaps": [
+    0.0,
+    0.0625,
+    0.125
+  ],
+  "stage2_full_transcripts_exact_to_original": true,
+  "cache_disabled_all_full_cohort_pairs_equal": true,
+  "stage1_B_label_valid": false,
+  "stage1_B_actual_condition": "Reset once before pair; same branch as C, not a cold-cold intervention",
+  "cold_cold_effect_not_tested": true,
+  "original_baseline_requires_replacement": false,
+  "reason_scope": "Repeatable prefix-cache-associated BF16 greedy near-tie sensitivity on this cohort; exact internal computation not isolated",
+  "no_relaxation_of_live_defense_correctness": true,
+  "concurrency_increases_pinned_failure_probability": "not established by these records"
+}

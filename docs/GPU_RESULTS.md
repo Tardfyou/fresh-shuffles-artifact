@@ -6,7 +6,7 @@ is A100-SXM4-80GB, with PyTorch2.6.0+cu124 and Transformers4.51.3.
 
 ## Navigation
 
-- `results/gpu/index.json`: the two accepted runs.
+- `results/gpu/index.json`: accepted runs.
 - `results/gpu/accepted/a100-80g-20261110-01/<job>/`: main/focused native
   studies, byte validation, block-size controls, utility and timings.
 - `results/gpu/accepted/vllm-live-a100-20261110-01/<job>/`: actual engine
@@ -56,9 +56,14 @@ from real protected Value pages. Official KV-Cloak obfuscation and storage use
 FP32. Its defender-side ordered restore additionally holds the permutation and
 actual-matrix inverse; neither enters the attacker. Its six-token output agrees
 with plain inference on90/100 targets, and its logits differ. This functional
-result is separate from100% content recovery. The older unprotected repeat-output
-baseline is separately retained and under investigation; it is not a protected
-integration correctness test.
+result is separate from100% content recovery. The unprotected repeat-output baseline is retained. Three full-cohort reruns
+per block reproduce93/100 and92/100 agreement; disabling prefix caching
+yields100/100 in all six runs. FP32 eliminates differences on the10 diagnostic
+inputs at both blocks. All15 first-divergence events involve near-tied leading
+score groups (gaps0–0.125). This supports prefix-cache-associated BF16 greedy
+sensitivity. See `results/gpu/accepted/vllm-repeat-diagnosis-20261110-01/README.md`
+for the B-to-C condition correction. It is not a protected-integration correctness
+test and does not relax the exact paired VeilKV checks.
 
 ## Timings
 
