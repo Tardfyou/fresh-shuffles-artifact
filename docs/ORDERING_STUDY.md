@@ -1,5 +1,9 @@
 # Fixed-cohort ordering results
 
+The current manuscript uses accepted GPU measurements as primary; see
+[GPU results](GPU_RESULTS.md). The following retained sections document the
+auxiliary CPU studies and their original outcomes.
+
 The final API comparison contains GPT-6.1-Sol and GPT-6-Luna, each with all
 602 fixed WildChat sample IDs. The original prompt and every returned response
 are retained. Sol uses medium reasoning and Luna high reasoning; both have a

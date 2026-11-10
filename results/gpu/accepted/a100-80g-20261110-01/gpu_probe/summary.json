@@ -1,0 +1,8 @@
+{
+  "job_id": "gpu_probe",
+  "complete": true,
+  "expected": 800,
+  "measured": 800,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

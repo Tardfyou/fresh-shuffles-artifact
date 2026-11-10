@@ -1,0 +1,28 @@
+{
+  "id": "smoke_gpu_main_qwen3_32b_bf16_full",
+  "kind": "main",
+  "model": {
+    "tag": "qwen3_32b",
+    "repo": "Qwen/Qwen3-32B",
+    "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+    "parameters": 32762123264
+  },
+  "dtype": "bfloat16",
+  "block": 16,
+  "strategy": "full",
+  "device_class": "cuda",
+  "minimum_free_gib": 72,
+  "configuration_layers": null,
+  "calibrator": "corrected",
+  "cloak_dtype": "float32",
+  "regime": "full_native_bf16_model_fp32_protection",
+  "phase": "core",
+  "priority": 0,
+  "cache_forward": "full_model",
+  "exclusive": true,
+  "smoke": true,
+  "shards": 1,
+  "shard": 0,
+  "expected_observations": 2,
+  "numerical_profile": "BF16 model weights/cache; official FP32 protection; FP32 dictionary and decode; CPU FP32 calibration; TF32 and reduced-precision BF16 reductions disabled"
+}

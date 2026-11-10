@@ -1,0 +1,36 @@
+{
+  "record_integrity_pass": true,
+  "source_baseline_exact_to_issued": true,
+  "formal_cases": 780,
+  "smoke_cases": 50,
+  "formal_kinds": {
+    "attack": 100,
+    "functional": 400,
+    "shared": 80,
+    "isolation": 40,
+    "tamper": 160
+  },
+  "functional_passes": 520,
+  "rejections": 160,
+  "attack_correct": 41344,
+  "attack_total": 41344,
+  "checks": {
+    "plain_duplicate": 520,
+    "output_tokens_equal": 520,
+    "logits_exact": 520,
+    "all_protected_roundtrips_exact": 520,
+    "gpu_pages_zeroed_between_calls": 520,
+    "actual_restored_objects": 520,
+    "actual_model_execution": 520,
+    "real_epoch_transition": 40,
+    "public_physical_pages_shared": 120,
+    "private_physical_pages_disjoint": 120,
+    "stored_prefix_reused": 120,
+    "public_cipher_object_equal": 120,
+    "private_cipher_objects_differ": 120
+  },
+  "worst_defense_logit_error": 0.0,
+  "worst_attack_adapter_logit_error": 22.0234375,
+  "attack_adapter_output_equal": 90,
+  "attack_adapter_trials": 100
+}

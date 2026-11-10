@@ -1,0 +1,70 @@
+{
+  "version": "vllm-live-085post1-20261110-v2",
+  "upstream_vllm_revision": "3015d5634e74d59704e2b39bab0dbe2e6f86a38a",
+  "models": [
+    {
+      "tag": "qwen25_05b",
+      "repo": "Qwen/Qwen2.5-0.5B",
+      "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+    },
+    {
+      "tag": "llama32_1b",
+      "repo": "unsloth/Llama-3.2-1B",
+      "revision": "9535bd9b1d1dea6acafbdc4813b728796aeb28da"
+    }
+  ],
+  "engine": "vLLM0.8.5.post1 V0 UniProc FlashAttention eager; CUDA only",
+  "tensor_parallel_size": 1,
+  "physical_block_sizes": [
+    16,
+    32
+  ],
+  "codec_block_size": 16,
+  "dtype": "bfloat16",
+  "kvcloak_operation_and_storage_dtype": "float32",
+  "defense_cases_per_cell": {
+    "functional": 100,
+    "shared_prefix_pairs": 20,
+    "private_isolation_pairs": 10,
+    "tamper": 40
+  },
+  "tamper_types": [
+    "ciphertext",
+    "tag",
+    "principal",
+    "nonce",
+    "epoch",
+    "model",
+    "prefix",
+    "replay"
+  ],
+  "tamper_source_ids": 5,
+  "new_tokens": 6,
+  "plain_duplicate_control": true,
+  "attack": {
+    "model": "qwen25_05b",
+    "physical_block": 16,
+    "targets": 100,
+    "heads": 2,
+    "block": 16,
+    "calibrator": "corrected",
+    "source": "Real first-layer KV captured in the live KV-Cloak offload/restore adapter; attacker gets protected Value only",
+    "own_probe_dictionary_relative_error_gate": 0.02
+  },
+  "offload": "Protected objects in host storage; referenced GPU KV pages zeroed between engine calls; authenticated restoration before actual model execution",
+  "prefix_policy": "Only the declared32-token public prefix shares cache identity; principal and request scope salt all private block hashes",
+  "restore_adapter": "VeilKV codec v2; KV-Cloak official obfuscation plus defender-held permutation and actual-matrix inverse for ordered-page restoration",
+  "not_exercised": [
+    "multi-GPU",
+    "beam n>1/COW",
+    "CPU swap",
+    "production service",
+    "real TEE"
+  ],
+  "outcomes": "All normal wrong predictions and functional failures retained; incomplete infrastructure attempts resumed on the same keys",
+  "gpu_primary_reporting": "Accepted CUDA results become primary; CPU observations remain auxiliary and are never silently pooled across precision profiles",
+  "legitimate_epoch_transition": "First10 functional inputs rotate epoch3 to4 after two real engine steps",
+  "formal_cases": 780,
+  "smoke_cases": 50,
+  "package_revision_reason": "API source guard fix: compare complete-file AST method nodes instead of dedented fragments; original measurement protocol unchanged"
+}

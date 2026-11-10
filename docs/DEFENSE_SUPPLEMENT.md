@@ -1,5 +1,9 @@
 # VeilKV defensive implementation and evidence supplement
 
+The current manuscript uses accepted GPU measurements as primary; see
+[GPU results](GPU_RESULTS.md). The following retained sections document the
+auxiliary CPU studies and their original outcomes.
+
 This code/data supplement contains the defensive cache codec, authenticated
 runtime dtype adapter, arithmetic operations, freshness ledger, official known-key
 cache transform, and accepted known-key validation records. Manuscripts, PDFs,

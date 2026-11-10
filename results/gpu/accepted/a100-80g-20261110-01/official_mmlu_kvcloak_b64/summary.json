@@ -1,0 +1,8 @@
+{
+  "job_id": "official_mmlu_kvcloak_b64",
+  "complete": true,
+  "expected": 14042,
+  "measured": 14042,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

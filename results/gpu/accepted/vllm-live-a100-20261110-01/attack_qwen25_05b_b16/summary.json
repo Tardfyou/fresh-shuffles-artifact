@@ -1,0 +1,7 @@
+{
+  "job": "attack_qwen25_05b_b16",
+  "complete": true,
+  "expected": 100,
+  "measured": 100,
+  "normal_negative_outcomes_retained": true
+}

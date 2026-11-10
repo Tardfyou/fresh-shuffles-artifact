@@ -1,0 +1,21 @@
+{
+  "id": "gpu_matched_latency_b64",
+  "kind": "latency",
+  "model": {
+    "tag": "llama31_8b",
+    "repo": "unsloth/Meta-Llama-3.1-8B",
+    "revision": "e9a141a2091ea561b96483212645a2a05e6f99fc"
+  },
+  "dtype": "float32",
+  "block": 64,
+  "strategy": "full",
+  "device_class": "cuda",
+  "minimum_free_gib": 38,
+  "configuration_layers": null,
+  "exclusive": true,
+  "byte_format_block_size": 16,
+  "phase": "performance",
+  "priority": 3,
+  "source_sid": "wc25_512_0000",
+  "expected_observations": 900
+}

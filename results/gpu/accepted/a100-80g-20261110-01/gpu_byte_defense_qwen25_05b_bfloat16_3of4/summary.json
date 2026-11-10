@@ -1,0 +1,8 @@
+{
+  "job_id": "gpu_byte_defense_qwen25_05b_bfloat16_3of4",
+  "complete": true,
+  "expected": 3000,
+  "measured": 3000,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

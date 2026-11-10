@@ -1,0 +1,56 @@
+{
+  "native_full_vs_early_stop_exact": true,
+  "partial_checkpoint_vs_full_exact": false,
+  "inputs": [
+    [
+      791,
+      3925,
+      315,
+      279,
+      13041,
+      21080,
+      45395,
+      24552,
+      315,
+      5054,
+      18475,
+      13
+    ],
+    [
+      22333,
+      6975,
+      6067,
+      1397,
+      16994,
+      16865,
+      315,
+      4967,
+      828,
+      4367,
+      13
+    ],
+    [
+      644,
+      220,
+      5162,
+      24,
+      11,
+      12966,
+      1176,
+      15203,
+      389,
+      279,
+      7479,
+      315,
+      279,
+      18266,
+      2391,
+      36250
+    ]
+  ],
+  "native_backbone_cache_exact": true,
+  "model_dtype": "torch.float32",
+  "device": "cuda:0",
+  "gate_inputs": 3,
+  "revision": "a1847dff35000b4271fa70afc5db10fd29fedbdf"
+}

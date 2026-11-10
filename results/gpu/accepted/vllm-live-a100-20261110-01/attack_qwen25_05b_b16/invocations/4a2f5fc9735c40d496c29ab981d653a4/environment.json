@@ -1,0 +1,215 @@
+{
+  "spec": {
+    "tag": "qwen25_05b",
+    "repo": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+  },
+  "torch": "2.6.0+cu124",
+  "cuda_runtime": "12.4",
+  "transformers": "4.51.3",
+  "vllm": "0.8.5.post1",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "total_gpu_memory": 85094825984,
+  "model_dtype": "bfloat16",
+  "protected_byte_dtype": "bfloat16",
+  "kvcloak_operation_and_storage_dtype": "float32",
+  "physical_layout": {
+    "layers": 24,
+    "pages": 512,
+    "physical_block": 16,
+    "heads": 2,
+    "head_dim": 64,
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0",
+    "strides": [
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ],
+      [
+        1048576,
+        2048,
+        128,
+        64,
+        1
+      ]
+    ]
+  },
+  "engine": "V0 UniProc FlashAttention eager",
+  "prefix_scope_policy_installed": true,
+  "identity_algorithm": "pinned repo/revision/tokenizer/RoPE labels",
+  "gpu_memory_utilization": 0.2,
+  "upstream_api": {
+    "upstream_api_pass": true,
+    "compared_functions": [
+      "Scheduler.add_seq_group",
+      "Sequence.extra_hash",
+      "PrefixCachingBlock.hash_block_tokens",
+      "LocalOrDistributedWorkerBase.execute_model",
+      "CacheEngine._allocate_kv_cache",
+      "FlashAttentionBackend.get_kv_cache_shape"
+    ],
+    "comparison": "Complete-module AST nodes; docstrings and executable string constants preserved"
+  },
+  "scope_domain": "d3819b9a469e43eb84f46f7ce5d5f4c5",
+  "visible_devices": "0",
+  "invocation": "4a2f5fc9735c40d496c29ab981d653a4",
+  "science_version": "vllm-live-085post1-20261110-v2"
+}

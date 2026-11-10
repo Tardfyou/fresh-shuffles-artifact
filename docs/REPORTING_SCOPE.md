@@ -1,4 +1,11 @@
-# Current reporting selection
+# GPU-primary reporting
+
+The accepted A100 measurements are now primary. The nine-model/eleven-configuration FP32-protection suite records91,611,072/91,611,072 hits; Qwen3-14B and32B extensions each record12,480,000/12,480,000. The32B FP32 profile is native first-layer execution; both large models also have full-model BF16/FP32-protection profiles.
+
+GPU protection precision and calibrator differ from the historical CPU suite. BF16-protection/legacy GPU bridges remain separate. Live vLLM attack recovery is41,344/41,344; byte-defense functionality is520/520 and rejection160/160. The KV-Cloak ordered restore adapter preserves outputs on90/100 targets; this is distinct from recovery accuracy. See `GPU_RESULTS.md` and `../results/gpu/index.json`.
+
+## Auxiliary CPU reporting history
+
 
 The 2026-11-08 manuscript uses nine models and eleven model/block-size
 configurations on the same 3,000 frozen WildChat prompts. The author requested

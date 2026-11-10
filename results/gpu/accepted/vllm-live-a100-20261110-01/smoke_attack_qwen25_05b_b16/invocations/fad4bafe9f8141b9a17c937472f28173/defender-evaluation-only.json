@@ -1,0 +1,259 @@
+{
+  "threshold_texts": [
+    "The history of the Roman Empire spans centuries of political transformation.",
+    "Machine learning systems require careful evaluation of training data quality.",
+    "In 1969, humans first walked on the surface of the moon during Apollo 11.",
+    "Photosynthesis converts light energy into chemical energy stored in glucose.",
+    "The stock market reacted strongly to the central bank interest rate decision.",
+    "Python is widely used for data analysis, web development, and automation.",
+    "Ocean currents regulate global climate by redistributing heat across basins.",
+    "A good textbook explains complex ideas through clear examples and exercises."
+  ],
+  "theta": {
+    "layer_0": {
+      "key_max_values": [
+        130.0,
+        125.5
+      ],
+      "value_max_values": [
+        0.271484375,
+        0.1708984375
+      ]
+    },
+    "layer_1": {
+      "key_max_values": [
+        16.125,
+        148.0
+      ],
+      "value_max_values": [
+        1.2578125,
+        2.734375
+      ]
+    },
+    "layer_2": {
+      "key_max_values": [
+        41.75,
+        63.0
+      ],
+      "value_max_values": [
+        2.359375,
+        1.796875
+      ]
+    },
+    "layer_3": {
+      "key_max_values": [
+        13.125,
+        24.375
+      ],
+      "value_max_values": [
+        2.6875,
+        3.375
+      ]
+    },
+    "layer_4": {
+      "key_max_values": [
+        14.25,
+        19.25
+      ],
+      "value_max_values": [
+        1.96875,
+        3.734375
+      ]
+    },
+    "layer_5": {
+      "key_max_values": [
+        10.1875,
+        9.125
+      ],
+      "value_max_values": [
+        2.53125,
+        2.890625
+      ]
+    },
+    "layer_6": {
+      "key_max_values": [
+        6.9375,
+        9.8125
+      ],
+      "value_max_values": [
+        2.71875,
+        3.21875
+      ]
+    },
+    "layer_7": {
+      "key_max_values": [
+        12.625,
+        8.0
+      ],
+      "value_max_values": [
+        3.71875,
+        3.296875
+      ]
+    },
+    "layer_8": {
+      "key_max_values": [
+        220.0,
+        7.40625
+      ],
+      "value_max_values": [
+        2.359375,
+        2.75
+      ]
+    },
+    "layer_9": {
+      "key_max_values": [
+        12.5,
+        11.125
+      ],
+      "value_max_values": [
+        4.40625,
+        4.125
+      ]
+    },
+    "layer_10": {
+      "key_max_values": [
+        9.5625,
+        13.125
+      ],
+      "value_max_values": [
+        3.046875,
+        3.4375
+      ]
+    },
+    "layer_11": {
+      "key_max_values": [
+        10.0,
+        10.6875
+      ],
+      "value_max_values": [
+        3.40625,
+        4.625
+      ]
+    },
+    "layer_12": {
+      "key_max_values": [
+        9.4375,
+        9.4375
+      ],
+      "value_max_values": [
+        2.78125,
+        2.765625
+      ]
+    },
+    "layer_13": {
+      "key_max_values": [
+        9.1875,
+        7.625
+      ],
+      "value_max_values": [
+        2.59375,
+        3.328125
+      ]
+    },
+    "layer_14": {
+      "key_max_values": [
+        11.25,
+        10.25
+      ],
+      "value_max_values": [
+        2.546875,
+        3.484375
+      ]
+    },
+    "layer_15": {
+      "key_max_values": [
+        10.5,
+        7.9375
+      ],
+      "value_max_values": [
+        3.546875,
+        3.390625
+      ]
+    },
+    "layer_16": {
+      "key_max_values": [
+        10.0,
+        8.8125
+      ],
+      "value_max_values": [
+        3.421875,
+        4.40625
+      ]
+    },
+    "layer_17": {
+      "key_max_values": [
+        8.6875,
+        11.125
+      ],
+      "value_max_values": [
+        4.09375,
+        4.9375
+      ]
+    },
+    "layer_18": {
+      "key_max_values": [
+        7.75,
+        10.75
+      ],
+      "value_max_values": [
+        5.0,
+        3.640625
+      ]
+    },
+    "layer_19": {
+      "key_max_values": [
+        11.375,
+        10.5
+      ],
+      "value_max_values": [
+        5.90625,
+        3.21875
+      ]
+    },
+    "layer_20": {
+      "key_max_values": [
+        12.8125,
+        11.0
+      ],
+      "value_max_values": [
+        4.625,
+        8.625
+      ]
+    },
+    "layer_21": {
+      "key_max_values": [
+        10.5,
+        8.625
+      ],
+      "value_max_values": [
+        11.125,
+        8.4375
+      ]
+    },
+    "layer_22": {
+      "key_max_values": [
+        8.6875,
+        8.375
+      ],
+      "value_max_values": [
+        12.5,
+        10.75
+      ]
+    },
+    "layer_23": {
+      "key_max_values": [
+        12.25,
+        8.375
+      ],
+      "value_max_values": [
+        9.0,
+        8.75
+      ]
+    }
+  },
+  "configuration_seed": 42,
+  "device_preparation_seed": 1234,
+  "official_obfuscation_dtype": "float32",
+  "protected_storage_dtype": "float32",
+  "legal_restore": "Recorded one-time permutations and actual matrix inverses, withholding both from the attacker"
+}

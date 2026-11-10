@@ -1,0 +1,50 @@
+{
+  "model": {
+    "tag": "llama31_8b",
+    "repo": "unsloth/Meta-Llama-3.1-8B",
+    "revision": "e9a141a2091ea561b96483212645a2a05e6f99fc"
+  },
+  "device": "cuda:0",
+  "hardware": {
+    "type": "cuda",
+    "name": "NVIDIA A100-SXM4-80GB",
+    "total_memory_bytes": 85094825984,
+    "compute_capability": [
+      8,
+      0
+    ],
+    "visible_devices": "0",
+    "driver_version": "580.82.07"
+  },
+  "model_dtype": "torch.float32",
+  "torch": "2.6.0+cu124",
+  "transformers": "4.51.3",
+  "attention_implementation": "eager",
+  "tf32": false,
+  "logit_filter_argument": "logits_to_keep",
+  "bf16_reduced_precision_reduction": false,
+  "float32_matmul_precision": "highest",
+  "cache_layers": 32,
+  "heads": 8,
+  "head_dimension": 128,
+  "codec_format_version": 2,
+  "identity_derivation": "pinned_checkpoint_and_tokenizer_configuration_v1",
+  "trusted_crypto_device": "cpu",
+  "consumer_device": "cuda:0",
+  "transfers_included_in_end_to_end_timing": true,
+  "prefill_execution": "native_full_prefill",
+  "source_sid": "wc25_512_0000",
+  "tokens": 512,
+  "cache_bytes": 134217728,
+  "block_size": 64,
+  "repetitions": 100,
+  "warmups": 20,
+  "timing": "Wall clock with CUDA synchronization on both boundaries; includes CPU encryption and D2H/H2D copies.",
+  "preparation_outside_timing": [
+    "fresh input cloning",
+    "nonce construction",
+    "recover-input protection"
+  ],
+  "fused_input": "VM precomputed outside timing; does not measure fused-model prefill",
+  "nonce_namespace": "8a2a952ca5db4056b1163bbd7b4555e8"
+}

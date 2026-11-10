@@ -1,5 +1,9 @@
 # Experiment inventory
 
+The current manuscript uses accepted GPU measurements as primary; see
+[GPU results](GPU_RESULTS.md). The following retained sections document the
+auxiliary CPU studies and their original outcomes.
+
 The primary input manifest has 3,000 distinct WildChat prompt texts. Focused
 studies reuse saved IDs, including the 602-ID ordering cohort. Privacy-value
 identification uses a separate 100-case synthetic candidate distribution.

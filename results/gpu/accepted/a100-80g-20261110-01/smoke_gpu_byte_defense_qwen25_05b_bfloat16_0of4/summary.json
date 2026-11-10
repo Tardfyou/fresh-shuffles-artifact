@@ -1,0 +1,8 @@
+{
+  "job_id": "smoke_gpu_byte_defense_qwen25_05b_bfloat16_0of4",
+  "complete": true,
+  "expected": 40,
+  "measured": 40,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

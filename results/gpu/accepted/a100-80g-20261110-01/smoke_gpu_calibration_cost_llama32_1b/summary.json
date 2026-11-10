@@ -1,0 +1,8 @@
+{
+  "job_id": "smoke_gpu_calibration_cost_llama32_1b",
+  "complete": true,
+  "expected": 5,
+  "measured": 5,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

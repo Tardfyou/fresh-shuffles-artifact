@@ -1,0 +1,8 @@
+{
+  "job_id": "gpu_sa_functional_qwen25_05b_bfloat16_1of4",
+  "complete": true,
+  "expected": 250,
+  "measured": 250,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

@@ -1,72 +1,88 @@
-# GPU results and handoff
+# Accepted GPU results
 
-The single-80GiB GPU execution bundle is
-`veilkv-gpu-80g-experiments-20261109.zip`, science version
-`gpu80g-20261109-v2-fp32-protection`. The expected jobs, pinned model revisions,
-precision profiles and codec version are mirrored in `metadata/gpu/protocol/`.
-There are currently no accepted GPU measurements in this repository.
+GPU measurements are primary; CPU measurements remain auxiliary. The same
+3,000-prompt WildChat manifest and frozen focused subsets are reused. Hardware
+is A100-SXM4-80GB, with PyTorch2.6.0+cu124 and Transformers4.51.3.
 
-## Returned run
+## Navigation
 
-The execution bundle exports `gpu-results-private-handoff.zip`. Its original
-records, logs, invocation metadata and interrupted attempts go to the private
-intake workspace. The received archive remains unchanged there. Each distinct
-execution gets a run ID, for example `a100-80g-20261109-01`.
+- `results/gpu/index.json`: the two accepted runs.
+- `results/gpu/accepted/a100-80g-20261110-01/<job>/`: main/focused native
+  studies, byte validation, block-size controls, utility and timings.
+- `results/gpu/accepted/vllm-live-a100-20261110-01/<job>/`: actual engine
+  integration, protected-page consumption and content recovery.
+- `results/gpu/summaries/<run>/`: acceptance, recounts and plot inputs.
+- `sources/gpu-native/` and `sources/vllm-live/`: executable runners,
+  dependencies, source interfaces and frozen inputs.
 
-After review, the portable release uses this layout:
+Read each job's numbered `records-*.jsonl.gz` parts in sorted order. Parts
+cap expanded size at48MiB, except any individual larger observation. Compression
+and machine-path normalization preserve all input tokens, predictions, counts
+and valid negative outcomes. Startup jobs are `smoke_*`, separate from formal
+counts. Logs, databases and private failure traces stay outside the artifact.
 
-```text
-results/gpu/
-  index.json
-  accepted/<run_id>/
-    protocol/                 # Frozen jobs, model revisions and source version
-    environment/              # Portable hardware/software and invocation records
-    source/                   # Scientific code used by this run
-    raw/<job_id>/             # All measured outputs, including normal failures
-    validation/               # ID accounting and independent prediction checks
-  summaries/<run_id>/
-    by_profile.json           # Recomputed counts and prompt-level intervals
-    comparisons.json          # Explicitly matched comparisons
+## Profiles
+
+The nine-model/eleven-configuration FP32-protection suite records
+91,611,072/91,611,072 hits. Qwen3-14B/32B each record12,480,000/12,480,000.
+The14B FP32 run is full-model;32B FP32 uses native first-layer execution.
+Both also have full-model BF16 inference with FP32 protection. Corrected
+calibration runs on CPU; model cache generation and target decoding run on GPU.
+
+Separate BF16-protection/legacy GPU bridges reach99.999744% on Qwen0.5B,
+99.708467% on Llama1B,100% on14B and99.983558% on32B. Precision and
+calibrator differ from primary results. All93 formal and60 startup jobs are
+complete; the hardware change alone does not explain the difference from CPU.
+
+Native byte validation passes48,160/48,160 requests and96,320 consumer
+comparisons. Each large model adds100 successful byte consumers. Known-key
+S/a validation passes4,588/12,000 segments:2,296 original and2,292 refreshed;
+functional failures occur in both conditions.
+
+## Actual vLLM integration
+
+vLLM0.8.5.post1 uses V0 UniProc, FlashAttention, eager execution and BF16
+engine caches. Four cells cross Qwen0.5B/Llama1B with physical blocks16/32.
+Each has100 functional inputs,20 shared pairs,10 isolation pairs and40 tamper
+cases. All520 functional cases preserve logits and six generated tokens exactly;
+all160 tamper cases reject before model execution. Actual GPU pages are zeroed
+between calls, then authenticated and restored for consumption. A32-token public
+prefix shares physical pages; private cache identity is scoped before scheduling.
+Forty functional cases also transition epochs. Formal cases total780;50 startup
+cases are separate.
+
+The Qwen0.5B/b16 attack recovers41,344/41,344 head–tokens on100 targets
+from real protected Value pages. Official KV-Cloak obfuscation and storage use
+FP32. Its defender-side ordered restore additionally holds the permutation and
+actual-matrix inverse; neither enters the attacker. Its six-token output agrees
+with plain inference on90/100 targets, and its logits differ. This functional
+result is separate from100% content recovery. The older unprotected repeat-output
+baseline is separately retained and under investigation; it is not a protected
+integration correctness test.
+
+## Timings
+
+Llama3.1-8B/FP32/512tokens has128MiB of KV data. Median protect/recover
+latencies are445.39/327.29ms for VeilKV,32.74/44.33ms for unfused KV-Cloak
+and21.63/32.71ms fused; plain prefill is499.92ms. VeilKV includes CPU crypto
+and GPU–CPU transfers; KV-Cloak keeps resident GPU caches. Added latency is
+non-negligible. All100 repetitions and20 warm-ups are defined in the protocol.
+These are latency measurements, not power measurements.
+
+## Inspection
+
+```bash
+python tools/check_artifact_catalog.py
+python tools/summarize_gpu_results.py \
+  --results results/gpu/accepted/a100-80g-20261110-01 \
+  --output /tmp/gpu-recount.json
+python tools/inspect_gpu_results.py --root .
 ```
 
-`index.json` lists accepted runs and their raw/summary locations. The accepted
-raw records are kept once; analysis and figures refer to those locations.
-
-## Acceptance
-
-A run must supply its exact source version, declared model/tokenizer revisions,
-actual device and dtype, calibration profile, cache scope, block size, fixed
-sample IDs and completed observation keys. The execution bundle's source lock,
-CUDA startup suite, ID accounting, prediction recounts and plain controls must
-pass. Incomplete transport or runtime observations resume on the same IDs;
-normal incorrect predictions and functional failures remain measured outcomes.
-
-Raw environment paths are normalized in distribution copies. Runtime logs,
-local databases and original transport fragments stay in private intake.
-Reported environments, seeds, numeric results, token arrays and predictions
-remain intact.
-
-## Precision and comparison groups
-
-New primary GPU measurements use FP32 protection, calibration and matching.
-Qwen3-14B/32B full-model BF16 weights are paired with FP32 protection. The 32B
-FP32 first-layer profile and full-model BF16 profile retain distinct scopes.
-Historical BF16-protection bridges, S/a consumer conditions and numerical
-controls retain their declared precision. Each summary groups by model/revision,
-model dtype, protection dtype, calibrator, block size, forward scope and codec
-version.
-
-Native HF block-size compatibility and unprotected vLLM baselines have separate
-study entries. CPU format-v1 observations remain separate from GPU format-v2
-observations. MMLU and SQuAD retain their frozen complete evaluation cohorts.
-
-## Where to find the current plan
-
-- `metadata/gpu/protocol/jobs.json`: 93 formal execution units, including shards.
-- `metadata/gpu/protocol/smoke_jobs.json`: 60 required CUDA startup jobs.
-- `metadata/gpu/protocol/models.json`: pinned model repositories and revisions.
-- `metadata/gpu/protocol/NUMERICAL_PRECISION.json`: arithmetic profiles.
-- `metadata/gpu/protocol/DEFENSE_BINDING_VERSION.json`: codec-format change.
-
-Run `python tools/check_artifact_catalog.py` to check the index and directory
-references. New measurement counts enter the GPU index only after acceptance.
+Source trees include setup guides and pinned requirements. Native rerun source
+incorporates the authorized78GiB resource policy; actual record headers retain
+the original science version. The author confirmed no other native source edits.
+The returned live43-file baseline exactly matches issuedv2. Source versions and
+actual record versions remain distinct. Multi-GPU, beam/COW, production service
+and real TEE were not exercised. Native block-size/utility controls and live
+engine integration are distinct studies.

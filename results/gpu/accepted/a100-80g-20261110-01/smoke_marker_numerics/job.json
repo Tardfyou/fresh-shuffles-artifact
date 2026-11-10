@@ -1,0 +1,21 @@
+{
+  "id": "smoke_marker_numerics",
+  "kind": "marker_numerics",
+  "model": {
+    "tag": "qwen25_05b",
+    "repo": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+  },
+  "dtype": "float32",
+  "block": 16,
+  "strategy": "full",
+  "device_class": "cuda",
+  "minimum_free_gib": 10,
+  "configuration_layers": 1,
+  "calibrator": "legacy",
+  "smoke": true,
+  "shard": 0,
+  "shards": 1,
+  "cloak_dtype": "bfloat16",
+  "expected_observations": 2
+}

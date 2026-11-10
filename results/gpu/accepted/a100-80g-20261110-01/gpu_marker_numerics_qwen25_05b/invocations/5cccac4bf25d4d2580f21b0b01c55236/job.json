@@ -1,0 +1,19 @@
+{
+  "id": "gpu_marker_numerics_qwen25_05b",
+  "kind": "marker_numerics",
+  "model": {
+    "tag": "qwen25_05b",
+    "repo": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+  },
+  "dtype": "float32",
+  "cloak_dtype": "bfloat16",
+  "block": 16,
+  "strategy": "full",
+  "configuration_layers": 1,
+  "device_class": "cuda",
+  "minimum_free_gib": 12,
+  "phase": "core",
+  "priority": 2,
+  "expected_observations": 66
+}

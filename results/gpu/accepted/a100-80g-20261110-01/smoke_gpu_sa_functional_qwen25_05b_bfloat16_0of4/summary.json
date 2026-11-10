@@ -1,0 +1,8 @@
+{
+  "job_id": "smoke_gpu_sa_functional_qwen25_05b_bfloat16_0of4",
+  "complete": true,
+  "expected": 20,
+  "measured": 20,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

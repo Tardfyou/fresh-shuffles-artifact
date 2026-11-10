@@ -1,0 +1,159 @@
+{
+  "spec": {
+    "tag": "llama32_1b",
+    "repo": "unsloth/Llama-3.2-1B",
+    "revision": "9535bd9b1d1dea6acafbdc4813b728796aeb28da"
+  },
+  "torch": "2.6.0+cu124",
+  "cuda_runtime": "12.4",
+  "transformers": "4.51.3",
+  "vllm": "0.8.5.post1",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "total_gpu_memory": 85094825984,
+  "model_dtype": "bfloat16",
+  "protected_byte_dtype": "bfloat16",
+  "kvcloak_operation_and_storage_dtype": "float32",
+  "physical_layout": {
+    "layers": 16,
+    "pages": 512,
+    "physical_block": 16,
+    "heads": 8,
+    "head_dim": 64,
+    "dtype": "torch.bfloat16",
+    "device": "cuda:0",
+    "strides": [
+      [
+        4194304,
+        8192,
+        512,
+        64,
+        1
+      ],
+      [
+        4194304,
+        8192,
+        512,
+        64,
+        1
+      ],
+      [
+        4194304,
+        8192,
+        512,
+        64,
+        1
+      ],
+      [
+        4194304,
+        8192,
+        512,
+        64,
+        1
+      ],
+      [
+        4194304,
+        8192,
+        512,
+        64,
+        1
+      ],
+      [
+        4194304,
+        8192,
+        512,
+        64,
+        1
+      ],
+      [
+        4194304,
+        8192,
+        512,
+        64,
+        1
+      ],
+      [
+        4194304,
+        8192,
+        512,
+        64,
+        1
+      ],
+      [
+        4194304,
+        8192,
+        512,
+        64,
+        1
+      ],
+      [
+        4194304,
+        8192,
+        512,
+        64,
+        1
+      ],
+      [
+        4194304,
+        8192,
+        512,
+        64,
+        1
+      ],
+      [
+        4194304,
+        8192,
+        512,
+        64,
+        1
+      ],
+      [
+        4194304,
+        8192,
+        512,
+        64,
+        1
+      ],
+      [
+        4194304,
+        8192,
+        512,
+        64,
+        1
+      ],
+      [
+        4194304,
+        8192,
+        512,
+        64,
+        1
+      ],
+      [
+        4194304,
+        8192,
+        512,
+        64,
+        1
+      ]
+    ]
+  },
+  "engine": "V0 UniProc FlashAttention eager",
+  "prefix_scope_policy_installed": true,
+  "identity_algorithm": "pinned repo/revision/tokenizer/RoPE labels",
+  "gpu_memory_utilization": 0.2,
+  "upstream_api": {
+    "upstream_api_pass": true,
+    "compared_functions": [
+      "Scheduler.add_seq_group",
+      "Sequence.extra_hash",
+      "PrefixCachingBlock.hash_block_tokens",
+      "LocalOrDistributedWorkerBase.execute_model",
+      "CacheEngine._allocate_kv_cache",
+      "FlashAttentionBackend.get_kv_cache_shape"
+    ],
+    "comparison": "Complete-module AST nodes; docstrings and executable string constants preserved"
+  },
+  "scope_domain": "5b63039d27674f7fabe6f1d7a92ea2c4",
+  "visible_devices": "0",
+  "invocation": "6165c01f86ba4d9ba32b1afbffa4d619",
+  "science_version": "vllm-live-085post1-20261110-v2"
+}

@@ -127,5 +127,15 @@
     "experimental_text_predictions_and_numbers_preserved": true,
     "only_local_path_metadata_normalized": true,
     "new_measurement_code_added": false
+  },
+  "gpu_primary": {
+    "index": "results/gpu/index.json",
+    "main_correct": 91611072,
+    "main_total": 91611072,
+    "live_defense_functional_pass": 520,
+    "live_authentication_rejections": 160,
+    "live_attack_correct": 41344,
+    "live_attack_total": 41344,
+    "cpu_results_role": "auxiliary"
   }
 }

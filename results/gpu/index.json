@@ -1,5 +1,32 @@
 {
-  "status": "awaiting_results",
-  "execution_version": "gpu80g-20261109-v2-fp32-protection",
-  "runs": []
+  "status": "accepted_gpu_primary_cpu_auxiliary",
+  "runs": [
+    {
+      "run_id": "a100-80g-20261110-01",
+      "status": "accepted",
+      "raw_path": "results/gpu/accepted/a100-80g-20261110-01",
+      "summary_path": "results/gpu/summaries/a100-80g-20261110-01",
+      "validation_path": "results/gpu/summaries/a100-80g-20261110-01/ACCEPTANCE.json",
+      "source_version": "gpu80g-20261109-v2-fp32-protection",
+      "profiles": [
+        "fp32-primary",
+        "bf16-legacy-bridge",
+        "full-bf16-large",
+        "native-block-utility",
+        "byte-defense"
+      ]
+    },
+    {
+      "run_id": "vllm-live-a100-20261110-01",
+      "status": "accepted",
+      "raw_path": "results/gpu/accepted/vllm-live-a100-20261110-01",
+      "summary_path": "results/gpu/summaries/vllm-live-a100-20261110-01",
+      "validation_path": "results/gpu/summaries/vllm-live-a100-20261110-01/ACCEPTANCE.json",
+      "source_version": "vllm-live-085post1-20261110-v2",
+      "profiles": [
+        "vllm-V0-bf16-byte-defense",
+        "vllm-fp32-protected-value-attack"
+      ]
+    }
+  ]
 }

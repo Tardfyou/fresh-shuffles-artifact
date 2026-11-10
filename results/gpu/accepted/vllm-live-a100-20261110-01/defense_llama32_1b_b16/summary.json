@@ -1,0 +1,7 @@
+{
+  "job": "defense_llama32_1b_b16",
+  "complete": true,
+  "expected": 170,
+  "measured": 170,
+  "normal_negative_outcomes_retained": true
+}

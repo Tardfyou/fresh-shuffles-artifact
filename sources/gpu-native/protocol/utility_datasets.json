@@ -1,0 +1,10 @@
+[
+  {
+    "repo": "cais/mmlu",
+    "revision": "c30699e8356da336a370243923dbaf21066bb9fe"
+  },
+  {
+    "repo": "rajpurkar/squad",
+    "revision": "7b6d24c440a36b6815f21b70d25016731768db1f"
+  }
+]

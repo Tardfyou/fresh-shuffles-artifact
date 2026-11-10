@@ -1,0 +1,8 @@
+{
+  "job_id": "smoke_vllm_baseline_b16",
+  "complete": true,
+  "expected": 2,
+  "measured": 2,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

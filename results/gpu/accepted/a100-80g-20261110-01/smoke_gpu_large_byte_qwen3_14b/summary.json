@@ -1,0 +1,8 @@
+{
+  "job_id": "smoke_gpu_large_byte_qwen3_14b",
+  "complete": true,
+  "expected": 2,
+  "measured": 2,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

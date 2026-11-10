@@ -1,0 +1,8 @@
+{
+  "job_id": "gpu_large_byte_qwen3_14b",
+  "complete": true,
+  "expected": 100,
+  "measured": 100,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

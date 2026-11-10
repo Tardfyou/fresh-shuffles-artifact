@@ -1,0 +1,7 @@
+{
+  "job": "smoke_defense_qwen25_05b_b16",
+  "complete": true,
+  "expected": 12,
+  "measured": 12,
+  "normal_negative_outcomes_retained": true
+}

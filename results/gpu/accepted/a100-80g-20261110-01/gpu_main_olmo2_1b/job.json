@@ -1,0 +1,22 @@
+{
+  "id": "gpu_main_olmo2_1b",
+  "kind": "main",
+  "model": {
+    "tag": "olmo2_1b",
+    "repo": "allenai/OLMo-2-0425-1B",
+    "revision": "a1847dff35000b4271fa70afc5db10fd29fedbdf"
+  },
+  "dtype": "float32",
+  "block": 16,
+  "strategy": "full",
+  "device_class": "cuda",
+  "minimum_free_gib": 10,
+  "configuration_layers": 1,
+  "calibrator": "corrected",
+  "cloak_dtype": "float32",
+  "regime": "official_fp32",
+  "phase": "core",
+  "priority": 1,
+  "cache_forward": "full_model",
+  "expected_observations": 3000
+}

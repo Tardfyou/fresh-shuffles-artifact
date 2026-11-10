@@ -1,0 +1,8 @@
+{
+  "job_id": "gpu_byte_defense_llama32_1b_bfloat16_1of4",
+  "complete": true,
+  "expected": 3020,
+  "measured": 3020,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

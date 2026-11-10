@@ -1,0 +1,25 @@
+{
+  "id": "gpu_main_qwen3_32b_fp32_first",
+  "kind": "main",
+  "model": {
+    "tag": "qwen3_32b",
+    "repo": "Qwen/Qwen3-32B",
+    "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+    "parameters": 32762123264
+  },
+  "dtype": "float32",
+  "block": 16,
+  "strategy": "first_layer",
+  "device_class": "cuda",
+  "minimum_free_gib": 24,
+  "configuration_layers": null,
+  "calibrator": "corrected",
+  "external_gate": "reference/native_cpu_gates/qwen3_32b.json",
+  "cloak_dtype": "float32",
+  "regime": "official_fp32",
+  "phase": "core",
+  "priority": 0,
+  "cache_forward": "first_layer",
+  "exclusive": true,
+  "expected_observations": 3000
+}

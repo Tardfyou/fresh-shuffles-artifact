@@ -1,0 +1,22 @@
+{
+  "id": "gpu_main_qwen25_05b",
+  "kind": "main",
+  "model": {
+    "tag": "qwen25_05b",
+    "repo": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+  },
+  "dtype": "float32",
+  "block": 16,
+  "strategy": "full",
+  "device_class": "cuda",
+  "minimum_free_gib": 10,
+  "configuration_layers": 1,
+  "calibrator": "corrected",
+  "cloak_dtype": "float32",
+  "regime": "official_fp32",
+  "phase": "core",
+  "priority": 0,
+  "cache_forward": "full_model",
+  "expected_observations": 3000
+}

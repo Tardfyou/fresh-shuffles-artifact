@@ -1,0 +1,8 @@
+{
+  "job_id": "smoke_matched_latency",
+  "complete": true,
+  "expected": 18,
+  "measured": 18,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "job": "attack_qwen25_05b_b16",
+    "complete": true,
+    "measured": 100,
+    "expected": 100,
+    "predictions_and_scope_recounted": true,
+    "functional_passes": 0,
+    "authentication_rejections_before_model_execution": 0,
+    "attack_correct": 41344,
+    "attack_total": 41344,
+    "cuda_only": true
+  },
+  {
+    "job": "defense_llama32_1b_b16",
+    "complete": true,
+    "measured": 170,
+    "expected": 170,
+    "predictions_and_scope_recounted": true,
+    "functional_passes": 130,
+    "authentication_rejections_before_model_execution": 40,
+    "attack_correct": 0,
+    "attack_total": 0,
+    "cuda_only": true
+  },
+  {
+    "job": "defense_llama32_1b_b32",
+    "complete": true,
+    "measured": 170,
+    "expected": 170,
+    "predictions_and_scope_recounted": true,
+    "functional_passes": 130,
+    "authentication_rejections_before_model_execution": 40,
+    "attack_correct": 0,
+    "attack_total": 0,
+    "cuda_only": true
+  },
+  {
+    "job": "defense_qwen25_05b_b16",
+    "complete": true,
+    "measured": 170,
+    "expected": 170,
+    "predictions_and_scope_recounted": true,
+    "functional_passes": 130,
+    "authentication_rejections_before_model_execution": 40,
+    "attack_correct": 0,
+    "attack_total": 0,
+    "cuda_only": true
+  },
+  {
+    "job": "defense_qwen25_05b_b32",
+    "complete": true,
+    "measured": 170,
+    "expected": 170,
+    "predictions_and_scope_recounted": true,
+    "functional_passes": 130,
+    "authentication_rejections_before_model_execution": 40,
+    "attack_correct": 0,
+    "attack_total": 0,
+    "cuda_only": true
+  },
+  {
+    "job": "smoke_attack_qwen25_05b_b16",
+    "complete": true,
+    "measured": 2,
+    "expected": 2,
+    "predictions_and_scope_recounted": true,
+    "functional_passes": 0,
+    "authentication_rejections_before_model_execution": 0,
+    "attack_correct": 704,
+    "attack_total": 704,
+    "cuda_only": true
+  },
+  {
+    "job": "smoke_defense_llama32_1b_b16",
+    "complete": true,
+    "measured": 12,
+    "expected": 12,
+    "predictions_and_scope_recounted": true,
+    "functional_passes": 4,
+    "authentication_rejections_before_model_execution": 8,
+    "attack_correct": 0,
+    "attack_total": 0,
+    "cuda_only": true
+  },
+  {
+    "job": "smoke_defense_llama32_1b_b32",
+    "complete": true,
+    "measured": 12,
+    "expected": 12,
+    "predictions_and_scope_recounted": true,
+    "functional_passes": 4,
+    "authentication_rejections_before_model_execution": 8,
+    "attack_correct": 0,
+    "attack_total": 0,
+    "cuda_only": true
+  },
+  {
+    "job": "smoke_defense_qwen25_05b_b16",
+    "complete": true,
+    "measured": 12,
+    "expected": 12,
+    "predictions_and_scope_recounted": true,
+    "functional_passes": 4,
+    "authentication_rejections_before_model_execution": 8,
+    "attack_correct": 0,
+    "attack_total": 0,
+    "cuda_only": true
+  },
+  {
+    "job": "smoke_defense_qwen25_05b_b32",
+    "complete": true,
+    "measured": 12,
+    "expected": 12,
+    "predictions_and_scope_recounted": true,
+    "functional_passes": 4,
+    "authentication_rejections_before_model_execution": 8,
+    "attack_correct": 0,
+    "attack_total": 0,
+    "cuda_only": true
+  }
+]

@@ -1,0 +1,47 @@
+{
+  "complete": true,
+  "record_integrity_pass": true,
+  "measurement_protocol_accepted": true,
+  "acceptance_basis": "All returned raw records independently checked against frozen inputs and issued protocol; source edit scope confirmed by the author",
+  "formal_jobs": 93,
+  "startup_jobs": 60,
+  "formal_measured_rows": 216919,
+  "startup_measured_rows": 368,
+  "main_profiles_independently_retokenized_and_bootstrapped": 19,
+  "focused_and_utility_input_bindings_checked": 28,
+  "missing_or_duplicate_measured_ids": 0,
+  "incorrect_saved_prediction_counts": 0,
+  "primary_fp32_correct": 91611072,
+  "primary_fp32_total": 91611072,
+  "primary_fp32_recovery_percent": 100,
+  "byte_defense_requests": 48160,
+  "byte_defense_passes": 48160,
+  "byte_defense_consumer_comparisons": 96320,
+  "large_byte_models": [
+    "Qwen3-14B",
+    "Qwen3-32B"
+  ],
+  "large_byte_passes_per_model": 100,
+  "source_scope": {
+    "author_confirmation": "User confirmed no source changes other than the authorized GPU allocator-cap adjustment",
+    "confirmed_allocator_cap_gib": 78,
+    "actual_server_source_included": false,
+    "actual_server_source_byte_comparison_claimed": false,
+    "job_and_smoke_manifests_exact_to_issued_package": true,
+    "record_science_version": "gpu80g-20261109-v2-fp32-protection",
+    "environment_versions_independently_checked": true
+  },
+  "normal_negative_results_retained": true,
+  "vllm_repeat_differences": {
+    "block16": 7,
+    "block32": 8,
+    "out_of": 100
+  },
+  "sa_functional_pass_segments": 4588,
+  "sa_functional_total_segments": 12000,
+  "retained_infrastructure_failures": 8,
+  "requires_measurement_rerun_for_missing_or_dirty_data": false,
+  "paper_modified": false,
+  "artifact_published": false,
+  "real_vllm_protected_integration_results_in_this_package": false
+}

@@ -1,0 +1,21 @@
+{
+  "blocks": 446,
+  "official_forward_bit_equal": 446,
+  "positional_misrankings": {
+    "fp64_sanity": 0,
+    "fp32_forward": 0,
+    "bf16_known_key": 28,
+    "bf16_no_marker": 0,
+    "bf16_marker_before_row_mixing": 19,
+    "bf16_no_marker_before_row_mixing": 0
+  },
+  "llama_marker_row_median_vector_error": {
+    "fp64_sanity": 6.177130533829296e-14,
+    "fp32_forward": 1.4170487972355697e-05,
+    "bf16_known_key": 0.7761506483818028,
+    "bf16_no_marker": 0.01025023353996951,
+    "bf16_marker_before_row_mixing": 0.7053743568104276,
+    "bf16_no_marker_before_row_mixing": 0.0021551235947247093
+  },
+  "scope": "Fixed candidates on reused enriched fixtures; not open-vocabulary recovery rate"
+}

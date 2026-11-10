@@ -1,0 +1,22 @@
+{
+  "id": "gpu_matched_latency_cpu_shape_bridge",
+  "kind": "latency",
+  "model": {
+    "tag": "qwen25_05b",
+    "repo": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+  },
+  "dtype": "bfloat16",
+  "block": 16,
+  "strategy": "full",
+  "device_class": "cuda",
+  "minimum_free_gib": 12,
+  "configuration_layers": null,
+  "exclusive": true,
+  "byte_format_block_size": 16,
+  "phase": "performance",
+  "priority": 3,
+  "regime": "original_cpu_shape_dtype_bridge",
+  "source_sid": "wc25_512_0000",
+  "expected_observations": 900
+}

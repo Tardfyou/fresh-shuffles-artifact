@@ -9,7 +9,7 @@ and counts, and offline analysis for Repeat to Reveal and VeilKV.
 
 - [Experiment inventory](docs/EXPERIMENTS.md): studies, cohorts and evidence.
 - [Dataset and result catalog](metadata/studies.json): one index of all studies.
-- [Current reporting scope](docs/REPORTING_SCOPE.md): nine models, eleven
+- [Current reporting scope](docs/REPORTING_SCOPE.md): GPU primary/CPU auxiliary, nine models, eleven
   configurations, and the original 3,000-prompt manifest.
 - [Defensive implementation and validation](docs/DEFENSE_SUPPLEMENT.md).
 - [Ordering study](docs/ORDERING_STUDY.md).
@@ -31,7 +31,9 @@ and counts, and offline analysis for Repeat to Reveal and VeilKV.
 | `results/` | Retained CPU measurements at their recorded paths |
 | `results/gpu/` | Accepted GPU runs, profile summaries and their index |
 
-GPU result directories are prepared and currently contain no measurements.
+Accepted GPU results are the primary measurements; CPU results remain auxiliary.
+The main A100 suite and live vLLM attack/defense integration are indexed in
+`results/gpu/index.json`. Compressed record parts retain every observation.
 The separately issued `veilkv-gpu-80g-experiments-20261109.zip` defines the
 single-80GiB execution plan; its job specifications are mirrored in
 `metadata/gpu/protocol/`. Each returned run is checked before its portable
@@ -73,7 +75,7 @@ listed in [the documentation index](docs/README.md).
 
 Accepted CPU byte-cache results use codec format v1. The GPU execution bundle
 uses format v2, which adds model/tokenizer/RoPE binding for private-only caches.
-Returned v2 measurements will be cataloged with that version.
+Accepted v2 measurements are cataloged with that version.
 
 Manuscript files, slides, credentials, model weights, runtime logs and machine
 local paths are excluded from this artifact. Dataset terms remain applicable;

@@ -1,0 +1,8 @@
+{
+  "job_id": "official_squad_kvcloak_b32",
+  "complete": true,
+  "expected": 10570,
+  "measured": 10570,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

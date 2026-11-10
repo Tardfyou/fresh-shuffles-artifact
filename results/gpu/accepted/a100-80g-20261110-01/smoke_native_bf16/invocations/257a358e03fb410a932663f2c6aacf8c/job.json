@@ -1,0 +1,22 @@
+{
+  "id": "smoke_native_bf16",
+  "kind": "main",
+  "model": {
+    "tag": "qwen25_05b",
+    "repo": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+  },
+  "dtype": "bfloat16",
+  "block": 16,
+  "strategy": "full",
+  "device_class": "cuda",
+  "minimum_free_gib": 10,
+  "configuration_layers": 1,
+  "calibrator": "corrected",
+  "smoke": true,
+  "shard": 0,
+  "shards": 1,
+  "cloak_dtype": "bfloat16",
+  "cache_forward": "full_model",
+  "expected_observations": 2
+}

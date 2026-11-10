@@ -1,0 +1,107 @@
+{
+  "model": {
+    "tag": "tinyllama",
+    "repo": "TinyLlama/TinyLlama-1.1B-Chat-v1.0",
+    "revision": "fe8a4ea1ffedaf415f4da2f062534de366a451e6"
+  },
+  "device": "cuda:0",
+  "hardware": {
+    "type": "cuda",
+    "name": "NVIDIA A100-SXM4-80GB",
+    "total_memory_bytes": 85094825984,
+    "compute_capability": [
+      8,
+      0
+    ],
+    "visible_devices": "0",
+    "driver_version": "580.82.07"
+  },
+  "model_dtype": "torch.float32",
+  "cloak_dtype": "torch.float32",
+  "source_layers": 22,
+  "configuration_layers": 1,
+  "resident_layers": 22,
+  "strategy": "full",
+  "attention_implementation": "eager",
+  "calibrator": "corrected",
+  "block_size": 16,
+  "heads": 4,
+  "head_dimension": 64,
+  "torch": "2.6.0+cu124",
+  "transformers": "4.51.3",
+  "tf32": false,
+  "torch_threads": 16,
+  "gate": {
+    "native_full_vs_early_stop_exact": true,
+    "partial_checkpoint_vs_full_exact": false,
+    "inputs": [
+      [
+        1,
+        450,
+        4955,
+        310,
+        278,
+        5917,
+        13378,
+        805,
+        550,
+        21726,
+        310,
+        8604,
+        13852,
+        29889
+      ],
+      [
+        1,
+        6189,
+        6509,
+        6757,
+        1996,
+        16010,
+        17983,
+        310,
+        6694,
+        848,
+        11029,
+        29889
+      ],
+      [
+        1,
+        512,
+        29871,
+        29896,
+        29929,
+        29953,
+        29929,
+        29892,
+        25618,
+        937,
+        17096,
+        373,
+        278,
+        7101,
+        310,
+        278
+      ]
+    ],
+    "native_backbone_cache_exact": true,
+    "model_dtype": "torch.float32",
+    "device": "cuda:0",
+    "gate_inputs": 3
+  },
+  "dictionary_validation": {
+    "relative_vector_error": 3.056016169011855e-07,
+    "tokens": 14,
+    "input_normalization": "input_layernorm",
+    "normalization_input_error": 0.0
+  },
+  "protected_layers": 1,
+  "cache_extraction": "native_cache_update_before_unused_attention",
+  "decoder": "reference_equation_block_batch4_hypothesis_batch4",
+  "recovery_dtype": "float32",
+  "calibration_device": "cpu",
+  "target_decode_device": "cuda:0",
+  "cache_forward": "full_model",
+  "calibration_executed": true,
+  "bf16_reduced_precision_reduction": false
+}

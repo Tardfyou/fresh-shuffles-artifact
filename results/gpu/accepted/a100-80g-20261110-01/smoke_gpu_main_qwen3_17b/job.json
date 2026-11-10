@@ -1,0 +1,25 @@
+{
+  "id": "smoke_gpu_main_qwen3_17b",
+  "kind": "main",
+  "model": {
+    "tag": "qwen3_17b",
+    "repo": "Qwen/Qwen3-1.7B",
+    "revision": "70d244cc86ccca08cf5af4e1e306ecf908b1ad5e"
+  },
+  "dtype": "float32",
+  "block": 16,
+  "strategy": "full",
+  "device_class": "cuda",
+  "minimum_free_gib": 10,
+  "configuration_layers": 1,
+  "calibrator": "corrected",
+  "cloak_dtype": "float32",
+  "regime": "official_fp32",
+  "phase": "core",
+  "priority": 1,
+  "cache_forward": "full_model",
+  "smoke": true,
+  "shards": 1,
+  "shard": 0,
+  "expected_observations": 2
+}

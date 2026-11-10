@@ -26,7 +26,30 @@
         "prompts_per_model": 3000,
         "scope": "CPU first-layer content recovery; separate from main-suite pooled total",
         "path": "results/cpu_large_models_20261110"
-      }
+      },
+      "primary_gpu_jobs": [
+        "gpu_main_qwen25_15b",
+        "gpu_main_tinyllama",
+        "gpu_main_qwen3_32b_bf16_full",
+        "gpu_main_qwen25_05b",
+        "gpu_main_llama32_1b_cpu_bridge",
+        "gpu_main_qwen3_14b_fp32_full",
+        "gpu_main_qwen3_14b_fp32_first_cpu_bridge",
+        "gpu_main_qwen3_14b_bf16_full",
+        "gpu_main_qwen25_3b",
+        "gpu_main_llama32_1b",
+        "gpu_main_qwen25_05b_cpu_bridge",
+        "gpu_main_qwen25_05b_b32",
+        "gpu_main_qwen25_05b_b8",
+        "gpu_main_qwen3_06b",
+        "gpu_main_qwen3_17b",
+        "gpu_main_olmo2_1b",
+        "gpu_main_qwen3_32b_fp32_first",
+        "gpu_main_qwen25_7b",
+        "gpu_main_qwen3_32b_fp32_first_cpu_bridge"
+      ],
+      "primary_gpu_run": "a100-80g-20261110-01",
+      "cpu_measurement_role": "auxiliary"
     },
     {
       "id": "probe",
@@ -35,7 +58,12 @@
       "paths": [
         "results/takeover_20261029/corrected/probe_multikey.jsonl"
       ],
-      "documentation": "docs/EXPERIMENTS.md"
+      "documentation": "docs/EXPERIMENTS.md",
+      "primary_gpu_jobs": [
+        "gpu_probe"
+      ],
+      "primary_gpu_run": "a100-80g-20261110-01",
+      "cpu_measurement_role": "auxiliary"
     },
     {
       "id": "fused",
@@ -44,7 +72,12 @@
       "paths": [
         "results/takeover_20261029/corrected/fused.jsonl"
       ],
-      "documentation": "docs/EXPERIMENTS.md"
+      "documentation": "docs/EXPERIMENTS.md",
+      "primary_gpu_jobs": [
+        "gpu_fused"
+      ],
+      "primary_gpu_run": "a100-80g-20261110-01",
+      "cpu_measurement_role": "auxiliary"
     },
     {
       "id": "scaling",
@@ -55,7 +88,17 @@
         "results/takeover_20261029/corrected/need_ratio.jsonl",
         "results/takeover_20261029/corrected/ratio_fit.json"
       ],
-      "documentation": "docs/EXPERIMENTS.md"
+      "documentation": "docs/EXPERIMENTS.md",
+      "primary_gpu_jobs": [
+        "gpu_ratio_qwen25_05b_1.5",
+        "gpu_ratio_qwen25_05b_1.25",
+        "gpu_ratio_llama32_1b_1.5",
+        "gpu_ratio_qwen25_05b_2.0",
+        "gpu_ratio_qwen25_05b_1.1",
+        "gpu_ratio_llama32_1b_1.25"
+      ],
+      "primary_gpu_run": "a100-80g-20261110-01",
+      "cpu_measurement_role": "auxiliary"
     },
     {
       "id": "lifecycle",
@@ -64,7 +107,12 @@
       "paths": [
         "results/takeover_20261029/corrected/lifecycle.jsonl"
       ],
-      "documentation": "docs/EXPERIMENTS.md"
+      "documentation": "docs/EXPERIMENTS.md",
+      "primary_gpu_jobs": [
+        "gpu_lifecycle"
+      ],
+      "primary_gpu_run": "a100-80g-20261110-01",
+      "cpu_measurement_role": "auxiliary"
     },
     {
       "id": "cross_key",
@@ -74,7 +122,13 @@
         "results/takeover_20261029/corrected/cross_key_Qwen2.5-0.5B.jsonl",
         "results/takeover_20261029/corrected/cross_key_Llama-3.2-1B.jsonl"
       ],
-      "documentation": "docs/EXPERIMENTS.md"
+      "documentation": "docs/EXPERIMENTS.md",
+      "primary_gpu_jobs": [
+        "gpu_cross_key_llama32_1b",
+        "gpu_cross_key_qwen25_05b"
+      ],
+      "primary_gpu_run": "a100-80g-20261110-01",
+      "cpu_measurement_role": "auxiliary"
     },
     {
       "id": "privacy",
@@ -85,7 +139,12 @@
         "results/takeover_20261029/corrected/privacy_cases.json",
         "results/takeover_20261029/corrected/privacy_controls.jsonl"
       ],
-      "documentation": "docs/EXPERIMENTS.md"
+      "documentation": "docs/EXPERIMENTS.md",
+      "primary_gpu_jobs": [
+        "gpu_privacy"
+      ],
+      "primary_gpu_run": "a100-80g-20261110-01",
+      "cpu_measurement_role": "auxiliary"
     },
     {
       "id": "row_rotation",
@@ -94,7 +153,12 @@
       "paths": [
         "results/takeover_20261029/corrected/sa_rotation.jsonl"
       ],
-      "documentation": "docs/EXPERIMENTS.md"
+      "documentation": "docs/EXPERIMENTS.md",
+      "primary_gpu_jobs": [
+        "gpu_sa_rotation"
+      ],
+      "primary_gpu_run": "a100-80g-20261110-01",
+      "cpu_measurement_role": "auxiliary"
     },
     {
       "id": "sa_functional",
@@ -103,7 +167,27 @@
       "paths": [
         "results/takeover_20261029/corrected/defense_handoff_v2_20261031_1319"
       ],
-      "documentation": "docs/DEFENSE_SUPPLEMENT.md"
+      "documentation": "docs/DEFENSE_SUPPLEMENT.md",
+      "primary_gpu_jobs": [
+        "gpu_sa_functional_qwen25_05b_bfloat16_0of4",
+        "gpu_sa_functional_llama32_1b_float32_2of4",
+        "gpu_sa_functional_llama32_1b_float32_1of4",
+        "gpu_sa_functional_llama32_1b_bfloat16_0of4",
+        "gpu_sa_functional_llama32_1b_float32_3of4",
+        "gpu_sa_functional_llama32_1b_bfloat16_3of4",
+        "gpu_sa_functional_qwen25_05b_bfloat16_1of4",
+        "gpu_sa_functional_llama32_1b_float32_0of4",
+        "gpu_sa_functional_llama32_1b_bfloat16_2of4",
+        "gpu_sa_functional_qwen25_05b_bfloat16_2of4",
+        "gpu_sa_functional_qwen25_05b_float32_0of4",
+        "gpu_sa_functional_qwen25_05b_bfloat16_3of4",
+        "gpu_sa_functional_qwen25_05b_float32_1of4",
+        "gpu_sa_functional_qwen25_05b_float32_2of4",
+        "gpu_sa_functional_qwen25_05b_float32_3of4",
+        "gpu_sa_functional_llama32_1b_bfloat16_1of4"
+      ],
+      "primary_gpu_run": "a100-80g-20261110-01",
+      "cpu_measurement_role": "auxiliary"
     },
     {
       "id": "byte_defense",
@@ -113,7 +197,29 @@
         "results/takeover_20261029/corrected/defense_complete602_20261102",
         "metadata/audit/EXPANDED_DEFENSE_VALIDATION.json"
       ],
-      "documentation": "docs/DEFENSE_SUPPLEMENT.md"
+      "documentation": "docs/DEFENSE_SUPPLEMENT.md",
+      "primary_gpu_jobs": [
+        "gpu_byte_defense_qwen25_05b_bfloat16_2of4",
+        "gpu_byte_defense_qwen25_05b_bfloat16_0of4",
+        "gpu_byte_defense_qwen25_05b_bfloat16_3of4",
+        "gpu_large_byte_qwen3_32b",
+        "gpu_byte_defense_qwen25_05b_float32_2of4",
+        "gpu_byte_defense_qwen25_05b_bfloat16_1of4",
+        "gpu_byte_defense_qwen25_05b_float32_3of4",
+        "gpu_large_byte_qwen3_14b",
+        "gpu_byte_defense_llama32_1b_bfloat16_0of4",
+        "gpu_byte_defense_llama32_1b_float32_1of4",
+        "gpu_byte_defense_llama32_1b_bfloat16_2of4",
+        "gpu_byte_defense_llama32_1b_bfloat16_1of4",
+        "gpu_byte_defense_qwen25_05b_float32_1of4",
+        "gpu_byte_defense_llama32_1b_float32_3of4",
+        "gpu_byte_defense_llama32_1b_bfloat16_3of4",
+        "gpu_byte_defense_llama32_1b_float32_2of4",
+        "gpu_byte_defense_llama32_1b_float32_0of4",
+        "gpu_byte_defense_qwen25_05b_float32_0of4"
+      ],
+      "primary_gpu_run": "a100-80g-20261110-01",
+      "cpu_measurement_role": "auxiliary"
     },
     {
       "id": "integrity_ledger",
@@ -134,7 +240,13 @@
         "results/takeover_20261029/corrected/spectrum_Qwen2.5-0.5B.jsonl",
         "results/takeover_20261029/corrected/spectrum_Llama-3.2-1B.jsonl"
       ],
-      "documentation": "docs/EXPERIMENTS.md"
+      "documentation": "docs/EXPERIMENTS.md",
+      "primary_gpu_jobs": [
+        "gpu_spectrum_qwen25_05b",
+        "gpu_spectrum_llama32_1b"
+      ],
+      "primary_gpu_run": "a100-80g-20261110-01",
+      "cpu_measurement_role": "auxiliary"
     },
     {
       "id": "matched_candidates",
@@ -143,7 +255,13 @@
       "paths": [
         "results/new_evidence_20261102"
       ],
-      "documentation": "docs/EXPERIMENTS.md"
+      "documentation": "docs/EXPERIMENTS.md",
+      "primary_gpu_jobs": [
+        "gpu_matched_llama32_1b",
+        "gpu_matched_qwen25_05b"
+      ],
+      "primary_gpu_run": "a100-80g-20261110-01",
+      "cpu_measurement_role": "auxiliary"
     },
     {
       "id": "local_order",
@@ -153,7 +271,12 @@
         "results/takeover_20261029/corrected/order",
         "results/takeover_20261029/corrected/ordering_final_summary.json"
       ],
-      "documentation": "docs/ORDERING_STUDY.md"
+      "documentation": "docs/ORDERING_STUDY.md",
+      "primary_gpu_jobs": [
+        "gpu_ordering"
+      ],
+      "primary_gpu_run": "a100-80g-20261110-01",
+      "cpu_measurement_role": "auxiliary"
     },
     {
       "id": "gpt_order",
@@ -184,7 +307,12 @@
         "results/takeover_20261029/corrected/direction",
         "results/takeover_20261029/corrected/direction_final_summary.json"
       ],
-      "documentation": "docs/EXPERIMENTS.md"
+      "documentation": "docs/EXPERIMENTS.md",
+      "primary_gpu_jobs": [
+        "gpu_direction"
+      ],
+      "primary_gpu_run": "a100-80g-20261110-01",
+      "cpu_measurement_role": "auxiliary"
     },
     {
       "id": "numerics",
@@ -195,7 +323,13 @@
         "results/new_evidence_20261102",
         "results/marker_numerical_diagnostics_20261109"
       ],
-      "documentation": "docs/EXPERIMENTS.md"
+      "documentation": "docs/EXPERIMENTS.md",
+      "primary_gpu_jobs": [
+        "gpu_marker_numerics_llama32_1b",
+        "gpu_marker_numerics_qwen25_05b"
+      ],
+      "primary_gpu_run": "a100-80g-20261110-01",
+      "cpu_measurement_role": "auxiliary"
     },
     {
       "id": "calibration_cost",
@@ -205,7 +339,13 @@
         "results/final_record_observations_20261102",
         "results/saved_record_review_20261101"
       ],
-      "documentation": "docs/EXPERIMENTS.md"
+      "documentation": "docs/EXPERIMENTS.md",
+      "primary_gpu_jobs": [
+        "gpu_calibration_cost_llama32_1b",
+        "gpu_calibration_cost_qwen25_05b"
+      ],
+      "primary_gpu_run": "a100-80g-20261110-01",
+      "cpu_measurement_role": "auxiliary"
     },
     {
       "id": "latency",
@@ -215,7 +355,15 @@
         "results/takeover_20261029/corrected/battery_perf512",
         "results/visual_summary_20261102/data.json"
       ],
-      "documentation": "docs/DEFENSE_SUPPLEMENT.md"
+      "documentation": "docs/DEFENSE_SUPPLEMENT.md",
+      "primary_gpu_jobs": [
+        "gpu_matched_latency_b16",
+        "gpu_matched_latency_b64",
+        "gpu_matched_latency_b32",
+        "gpu_matched_latency_cpu_shape_bridge"
+      ],
+      "primary_gpu_run": "a100-80g-20261110-01",
+      "cpu_measurement_role": "auxiliary"
     },
     {
       "id": "prototype",
@@ -229,12 +377,22 @@
     }
   ],
   "gpu": {
-    "status": "awaiting_results",
+    "status": "accepted",
     "index": "results/gpu/index.json",
     "guide": "docs/GPU_RESULTS.md",
     "expected_jobs": "metadata/gpu/protocol/jobs.json",
-    "source_version": "gpu80g-20261109-v2-fp32-protection"
+    "source_version": "gpu80g-20261109-v2-fp32-protection",
+    "live_integration_index": "results/gpu/index.json"
   },
   "historical_validation": "metadata/audit/",
-  "all_normal_negative_outcomes_retained": true
+  "all_normal_negative_outcomes_retained": true,
+  "reporting_policy": "Accepted GPU measurements are primary; all CPU observations remain auxiliary, with precision profiles kept separate.",
+  "live_vllm": {
+    "run": "vllm-live-a100-20261110-01",
+    "formal_cases": 780,
+    "functional_passes": 520,
+    "rejections": 160,
+    "attack_correct": 41344,
+    "attack_total": 41344
+  }
 }

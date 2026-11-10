@@ -1,0 +1,25 @@
+{
+  "id": "smoke_gpu_main_qwen25_15b",
+  "kind": "main",
+  "model": {
+    "tag": "qwen25_15b",
+    "repo": "Qwen/Qwen2.5-1.5B",
+    "revision": "8faed761d45a263340a0528343f099c05c9a4323"
+  },
+  "dtype": "float32",
+  "block": 16,
+  "strategy": "full",
+  "device_class": "cuda",
+  "minimum_free_gib": 12,
+  "configuration_layers": 1,
+  "calibrator": "corrected",
+  "cloak_dtype": "float32",
+  "regime": "official_fp32",
+  "phase": "core",
+  "priority": 1,
+  "cache_forward": "full_model",
+  "smoke": true,
+  "shards": 1,
+  "shard": 0,
+  "expected_observations": 2
+}

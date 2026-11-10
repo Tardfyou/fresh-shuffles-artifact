@@ -1,0 +1,24 @@
+{
+  "id": "gpu_main_qwen3_14b_fp32_full",
+  "kind": "main",
+  "model": {
+    "tag": "qwen3_14b",
+    "repo": "Qwen/Qwen3-14B",
+    "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+    "parameters": 14768307200
+  },
+  "dtype": "float32",
+  "block": 16,
+  "strategy": "full",
+  "device_class": "cuda",
+  "minimum_free_gib": 70,
+  "configuration_layers": null,
+  "calibrator": "corrected",
+  "cloak_dtype": "float32",
+  "regime": "official_fp32",
+  "phase": "core",
+  "priority": 0,
+  "cache_forward": "full_model",
+  "exclusive": true,
+  "expected_observations": 3000
+}
