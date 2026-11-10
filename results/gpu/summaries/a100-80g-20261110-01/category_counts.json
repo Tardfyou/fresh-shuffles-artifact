@@ -1,0 +1,39 @@
+{
+  "model": "Qwen2.5-0.5B",
+  "cohort": 3000,
+  "heads": 2,
+  "seeds": [
+    5001,
+    5002
+  ],
+  "sampling": "length-stratified",
+  "categories": {
+    "General": {
+      "correct": 2035072,
+      "total": 2035072,
+      "misses": 0
+    },
+    "Code": {
+      "correct": 491008,
+      "total": 491008,
+      "misses": 0
+    },
+    "Creative writing": {
+      "correct": 375872,
+      "total": 375872,
+      "misses": 0
+    },
+    "Question answering": {
+      "correct": 152640,
+      "total": 152640,
+      "misses": 0
+    },
+    "Mathematics": {
+      "correct": 67264,
+      "total": 67264,
+      "misses": 0
+    }
+  },
+  "correct": 3121856,
+  "total": 3121856
+}

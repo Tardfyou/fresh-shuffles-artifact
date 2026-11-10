@@ -34,3 +34,5 @@ The original CPU source entry points and corrected cohorts are documented in
 `ORDERING_STUDY.md` and `DEFENSE_SUPPLEMENT.md`. The fixed input manifest defines
 the cohort; retain its IDs, token arrays and normal incorrect outcomes when
 resuming a run.
+
+- [Extended experiment details](EXTENDED_EXPERIMENT_DETAILS.md): category counts, historical probe/error/timing diagnostics, and native/live-engine controls retained outside the compact paper.
