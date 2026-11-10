@@ -1,0 +1,56 @@
+{
+  "qwen3_14b": [
+    {
+      "origin": "initial",
+      "record_count": 48,
+      "metadata": "provenance/qwen3_14b/initial"
+    },
+    {
+      "origin": "shard0of4",
+      "record_count": 738,
+      "metadata": "provenance/qwen3_14b/shard0of4"
+    },
+    {
+      "origin": "shard1of4",
+      "record_count": 738,
+      "metadata": "provenance/qwen3_14b/shard1of4"
+    },
+    {
+      "origin": "shard2of4",
+      "record_count": 738,
+      "metadata": "provenance/qwen3_14b/shard2of4"
+    },
+    {
+      "origin": "shard3of4",
+      "record_count": 738,
+      "metadata": "provenance/qwen3_14b/shard3of4"
+    }
+  ],
+  "qwen3_32b": [
+    {
+      "origin": "initial",
+      "record_count": 42,
+      "metadata": "provenance/qwen3_32b/initial"
+    },
+    {
+      "origin": "shard0of4",
+      "record_count": 739,
+      "metadata": "provenance/qwen3_32b/shard0of4"
+    },
+    {
+      "origin": "shard1of4",
+      "record_count": 739,
+      "metadata": "provenance/qwen3_32b/shard1of4"
+    },
+    {
+      "origin": "shard2of4",
+      "record_count": 740,
+      "metadata": "provenance/qwen3_32b/shard2of4"
+    },
+    {
+      "origin": "shard3of4",
+      "record_count": 740,
+      "metadata": "provenance/qwen3_32b/shard3of4"
+    }
+  ]
+}

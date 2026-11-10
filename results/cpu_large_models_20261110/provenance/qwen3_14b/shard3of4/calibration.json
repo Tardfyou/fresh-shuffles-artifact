@@ -1,0 +1,127 @@
+{
+  "actual_probe_tokens": 3200,
+  "prefix_tokens": 0,
+  "repeat_character": "a",
+  "heads": [
+    {
+      "head": 0,
+      "states": 16,
+      "complete": true,
+      "intra": 0.055242717266082764,
+      "inter": 39.631805419921875,
+      "diagnostics": {
+        "cos_a": 0.9999961853027344,
+        "a_norm_relerr": 0.00014540925840258515,
+        "cos_u": 0.9999988079071045,
+        "w_relerr": 0.006233752823906504,
+        "S_min_signed_cos": 0.9999974966049194,
+        "S_bijection": true
+      }
+    },
+    {
+      "head": 1,
+      "states": 16,
+      "complete": true,
+      "intra": 0.047199398279190063,
+      "inter": 32.59307861328125,
+      "diagnostics": {
+        "cos_a": 0.9999971389770508,
+        "a_norm_relerr": 2.0664613651076843e-05,
+        "cos_u": 0.9999987483024597,
+        "w_relerr": 0.005798555600149208,
+        "S_min_signed_cos": 0.9999970197677612,
+        "S_bijection": true
+      }
+    },
+    {
+      "head": 2,
+      "states": 16,
+      "complete": true,
+      "intra": 0.048159483820199966,
+      "inter": 42.42723846435547,
+      "diagnostics": {
+        "cos_a": 0.999997079372406,
+        "a_norm_relerr": 4.507405063415698e-05,
+        "cos_u": 0.9999987483024597,
+        "w_relerr": 0.006896804694653649,
+        "S_min_signed_cos": 0.9999974370002747,
+        "S_bijection": true
+      }
+    },
+    {
+      "head": 3,
+      "states": 16,
+      "complete": true,
+      "intra": 0.09882117807865143,
+      "inter": 65.2566909790039,
+      "diagnostics": {
+        "cos_a": 0.9999967813491821,
+        "a_norm_relerr": 0.00034368539633659455,
+        "cos_u": 0.999998927116394,
+        "w_relerr": 0.01084817669216048,
+        "S_min_signed_cos": 0.9999977946281433,
+        "S_bijection": true
+      }
+    },
+    {
+      "head": 4,
+      "states": 16,
+      "complete": true,
+      "intra": 0.07890237867832184,
+      "inter": 49.09064483642578,
+      "diagnostics": {
+        "cos_a": 0.9999975562095642,
+        "a_norm_relerr": 0.00029280242884390466,
+        "cos_u": 0.9999979138374329,
+        "w_relerr": 0.00784046843230415,
+        "S_min_signed_cos": 0.9999977946281433,
+        "S_bijection": true
+      }
+    },
+    {
+      "head": 5,
+      "states": 16,
+      "complete": true,
+      "intra": 0.09177609533071518,
+      "inter": 65.08758544921875,
+      "diagnostics": {
+        "cos_a": 0.9999972581863403,
+        "a_norm_relerr": 0.00020903987390079244,
+        "cos_u": 0.9999987483024597,
+        "w_relerr": 0.006105672786091797,
+        "S_min_signed_cos": 0.9999974370002747,
+        "S_bijection": true
+      }
+    },
+    {
+      "head": 6,
+      "states": 16,
+      "complete": true,
+      "intra": 0.10126157850027084,
+      "inter": 65.37940216064453,
+      "diagnostics": {
+        "cos_a": 0.9999967813491821,
+        "a_norm_relerr": 0.0004428409968397818,
+        "cos_u": 0.9999988079071045,
+        "w_relerr": 0.007014461504540857,
+        "S_min_signed_cos": 0.9999975562095642,
+        "S_bijection": true
+      }
+    },
+    {
+      "head": 7,
+      "states": 16,
+      "complete": true,
+      "intra": 0.05846339836716652,
+      "inter": 48.68114471435547,
+      "diagnostics": {
+        "cos_a": 0.9999983310699463,
+        "a_norm_relerr": 0.00015378718378133123,
+        "cos_u": 0.9999986290931702,
+        "w_relerr": 0.007832176630272554,
+        "S_min_signed_cos": 0.9999977946281433,
+        "S_bijection": true
+      }
+    }
+  ]
+}

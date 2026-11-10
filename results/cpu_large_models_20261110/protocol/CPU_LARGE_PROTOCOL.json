@@ -1,0 +1,29 @@
+{
+  "created": "2026-11-09",
+  "cohort": "All existing3000 fixed WildChat IDs; all configured Value heads; complete blocks; target seeds5001/5002; configuration42; prep1234; b16",
+  "models": [
+    {
+      "tag": "qwen3_14b",
+      "repo": "Qwen/Qwen3-14B",
+      "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+      "parameters": 14768307200
+    },
+    {
+      "tag": "qwen3_32b",
+      "repo": "Qwen/Qwen3-32B",
+      "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+      "parameters": 32762123264
+    }
+  ],
+  "model_dtype": "float32",
+  "cloak_dtype": "bfloat16",
+  "calibrators": [
+    "legacy"
+  ],
+  "inference": "Native HF eager first-layer execution; exact same-model full-forward cache gate required before acceptance; checkpoint-resident first layer may be used after validation. No throughput claim for full32B inference from truncated runs.",
+  "preserve_all_outcomes": true,
+  "no_sample_filtering": true,
+  "failure_handling": "Infrastructure failures retained and resumed on same IDs; normal calibration/recovery/functional negatives never replaced.",
+  "historical_results_untouched": true,
+  "official_commit": "6b40f36edb2f337557543e7e60b10022308883d4"
+}

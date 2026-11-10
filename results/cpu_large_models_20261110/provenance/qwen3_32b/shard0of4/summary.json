@@ -1,0 +1,8 @@
+{
+  "job_id": "cpu_main_qwen3_32b_shard0of4",
+  "complete": true,
+  "expected": 739,
+  "measured": 739,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

@@ -1,0 +1,77 @@
+{
+  "checked_local": "2026-11-10T10:09:51.429981+08:00",
+  "pass_acceptance": true,
+  "models": {
+    "qwen3_14b": {
+      "pass_acceptance": true,
+      "prompts": 3000,
+      "configured_heads": 8,
+      "seeds": 2,
+      "correct": 12480000,
+      "total": 12480000,
+      "misses": 0,
+      "recovery_percent": 100.0,
+      "bootstrap95_percent": [
+        100.0,
+        100.0
+      ],
+      "nonperfect_prompt_ids": 0,
+      "misses_by_head": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0
+      },
+      "raw_and_accepted_records_exactly_equal": true,
+      "all_tokenizations_predictions_and_denominators_checked": true,
+      "last_measured_local": "2026-11-10T04:21:46.766163+08:00",
+      "profile": {
+        "model_dtype": "float32",
+        "protection_dtype": "bfloat16",
+        "calibrator": "legacy",
+        "device": "cpu",
+        "scope": "Native-gated first-layer extraction"
+      }
+    },
+    "qwen3_32b": {
+      "pass_acceptance": true,
+      "prompts": 3000,
+      "configured_heads": 8,
+      "seeds": 2,
+      "correct": 12477685,
+      "total": 12480000,
+      "misses": 2315,
+      "recovery_percent": 99.98145032051282,
+      "bootstrap95_percent": [
+        99.98066403228466,
+        99.98221669865484
+      ],
+      "nonperfect_prompt_ids": 1333,
+      "misses_by_head": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 1826,
+        "6": 489,
+        "7": 0
+      },
+      "raw_and_accepted_records_exactly_equal": true,
+      "all_tokenizations_predictions_and_denominators_checked": true,
+      "last_measured_local": "2026-11-10T03:30:28.763906+08:00",
+      "profile": {
+        "model_dtype": "float32",
+        "protection_dtype": "bfloat16",
+        "calibrator": "legacy",
+        "device": "cpu",
+        "scope": "Native-gated first-layer extraction"
+      }
+    }
+  },
+  "paper_modified": false
+}

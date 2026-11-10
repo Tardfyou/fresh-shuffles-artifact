@@ -1,0 +1,25 @@
+{
+  "model": {
+    "tag": "qwen3_32b",
+    "repo": "Qwen/Qwen3-32B",
+    "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+    "parameters": 32762123264
+  },
+  "prompts": 3000,
+  "correct": 12477685,
+  "total": 12480000,
+  "recovery_percent": 99.98145032051282,
+  "bootstrap95_percent": [
+    99.98066403228466,
+    99.98221669865484
+  ],
+  "bootstrap_repetitions": 2000,
+  "bootstrap_seed": 20261029,
+  "all_prediction_multisets_and_denominators_recomputed": true,
+  "model_dtype": "float32",
+  "cloak_dtype": "bfloat16",
+  "calibrator": "legacy",
+  "device": "cpu",
+  "scope": "First-layer extraction after exact native-full checkpoint gate; not full-model inference throughput.",
+  "normal_errors_retained": true
+}

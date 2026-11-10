@@ -1,0 +1,20 @@
+{
+  "id": "cpu_main_qwen3_14b",
+  "kind": "main",
+  "model": {
+    "tag": "qwen3_14b",
+    "repo": "Qwen/Qwen3-14B",
+    "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+    "parameters": 14768307200
+  },
+  "dtype": "float32",
+  "block": 16,
+  "strategy": "first_layer",
+  "calibrator": "legacy",
+  "device_class": "cpu",
+  "expected_prompts": 3000,
+  "permutation_seeds": [
+    5001,
+    5002
+  ]
+}

@@ -1,0 +1,127 @@
+{
+  "actual_probe_tokens": 3200,
+  "prefix_tokens": 0,
+  "repeat_character": "a",
+  "heads": [
+    {
+      "head": 0,
+      "states": 16,
+      "complete": true,
+      "intra": 0.08414319902658463,
+      "inter": 49.41429138183594,
+      "diagnostics": {
+        "cos_a": 0.9999979138374329,
+        "a_norm_relerr": 0.0004093695142577242,
+        "cos_u": 0.9999986290931702,
+        "w_relerr": 0.005922956690148662,
+        "S_min_signed_cos": 0.999997079372406,
+        "S_bijection": true
+      }
+    },
+    {
+      "head": 1,
+      "states": 16,
+      "complete": true,
+      "intra": 0.06629125773906708,
+      "inter": 47.71582794189453,
+      "diagnostics": {
+        "cos_a": 0.9999979734420776,
+        "a_norm_relerr": 0.0004134531790256784,
+        "cos_u": 0.9999991059303284,
+        "w_relerr": 0.007981734877942782,
+        "S_min_signed_cos": 0.9999967813491821,
+        "S_bijection": true
+      }
+    },
+    {
+      "head": 2,
+      "states": 16,
+      "complete": true,
+      "intra": 0.09243874996900558,
+      "inter": 68.07807922363281,
+      "diagnostics": {
+        "cos_a": 0.9999963045120239,
+        "a_norm_relerr": 0.0003012184273518042,
+        "cos_u": 0.9999986290931702,
+        "w_relerr": 0.006721253246225006,
+        "S_min_signed_cos": 0.9999972581863403,
+        "S_bijection": true
+      }
+    },
+    {
+      "head": 3,
+      "states": 16,
+      "complete": true,
+      "intra": 0.09631896764039993,
+      "inter": 92.50455474853516,
+      "diagnostics": {
+        "cos_a": 0.9999973773956299,
+        "a_norm_relerr": 0.00029173480222525,
+        "cos_u": 0.9999991655349731,
+        "w_relerr": 0.01186819142947213,
+        "S_min_signed_cos": 0.9999979138374329,
+        "S_bijection": true
+      }
+    },
+    {
+      "head": 4,
+      "states": 16,
+      "complete": true,
+      "intra": 0.08558165282011032,
+      "inter": 53.867191314697266,
+      "diagnostics": {
+        "cos_a": 0.999998152256012,
+        "a_norm_relerr": 6.351775321202276e-05,
+        "cos_u": 0.9999982118606567,
+        "w_relerr": 0.008141389546943212,
+        "S_min_signed_cos": 0.9999978542327881,
+        "S_bijection": true
+      }
+    },
+    {
+      "head": 5,
+      "states": 16,
+      "complete": true,
+      "intra": 0.1767766922712326,
+      "inter": 117.20706176757812,
+      "diagnostics": {
+        "cos_a": 0.9999977946281433,
+        "a_norm_relerr": 0.00025616209076796236,
+        "cos_u": 0.9999974370002747,
+        "w_relerr": 0.008459760521225108,
+        "S_min_signed_cos": 0.9999974370002747,
+        "S_bijection": true
+      }
+    },
+    {
+      "head": 6,
+      "states": 16,
+      "complete": true,
+      "intra": 0.16828639805316925,
+      "inter": 118.97913360595703,
+      "diagnostics": {
+        "cos_a": 0.9999973773956299,
+        "a_norm_relerr": 0.00034683782162302896,
+        "cos_u": 0.9999989867210388,
+        "w_relerr": 0.007433157522953547,
+        "S_min_signed_cos": 0.9999977350234985,
+        "S_bijection": true
+      }
+    },
+    {
+      "head": 7,
+      "states": 16,
+      "complete": true,
+      "intra": 0.09943688660860062,
+      "inter": 79.7015380859375,
+      "diagnostics": {
+        "cos_a": 0.9999964833259583,
+        "a_norm_relerr": 0.0001410598708538051,
+        "cos_u": 0.9999982714653015,
+        "w_relerr": 0.0059674747700107994,
+        "S_min_signed_cos": 0.9999973177909851,
+        "S_bijection": true
+      }
+    }
+  ]
+}

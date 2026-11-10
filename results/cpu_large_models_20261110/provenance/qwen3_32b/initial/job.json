@@ -1,0 +1,20 @@
+{
+  "id": "cpu_main_qwen3_32b",
+  "kind": "main",
+  "model": {
+    "tag": "qwen3_32b",
+    "repo": "Qwen/Qwen3-32B",
+    "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+    "parameters": 32762123264
+  },
+  "dtype": "float32",
+  "block": 16,
+  "strategy": "first_layer",
+  "calibrator": "legacy",
+  "device_class": "cpu",
+  "expected_prompts": 3000,
+  "permutation_seeds": [
+    5001,
+    5002
+  ]
+}

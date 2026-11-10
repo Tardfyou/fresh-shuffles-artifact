@@ -1,0 +1,14 @@
+[
+  {
+    "tag": "qwen3_14b",
+    "repo": "Qwen/Qwen3-14B",
+    "revision": "40c069824f4251a91eefaf281ebe4c544efd3e18",
+    "parameters": 14768307200
+  },
+  {
+    "tag": "qwen3_32b",
+    "repo": "Qwen/Qwen3-32B",
+    "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+    "parameters": 32762123264
+  }
+]

@@ -14,9 +14,19 @@
       "sample_scale": "3,000 WildChat IDs; current 9 models/11 configurations;2 seeds",
       "paths": [
         "results/main_public",
-        "results/reporting_scope_20261108/summary.json"
+        "results/reporting_scope_20261108/summary.json",
+        "results/cpu_large_models_20261110"
       ],
-      "documentation": "docs/EXPERIMENTS.md"
+      "documentation": "docs/EXPERIMENTS.md",
+      "large_model_extension": {
+        "models": [
+          "Qwen3-14B",
+          "Qwen3-32B"
+        ],
+        "prompts_per_model": 3000,
+        "scope": "CPU first-layer content recovery; separate from main-suite pooled total",
+        "path": "results/cpu_large_models_20261110"
+      }
     },
     {
       "id": "probe",

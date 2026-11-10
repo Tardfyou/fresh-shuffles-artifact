@@ -1,0 +1,16 @@
+{
+  "method": "Compare normalized Python code objects of saved source and launch-time cached modules; filenames/line tables excluded.",
+  "checks": {
+    "core.first_cache": true,
+    "core.load_first_layer": true,
+    "core.Harness._dictionary": true,
+    "core.Harness.calibrate": true,
+    "core.Harness.reset_key": false,
+    "core.Harness.protect": true,
+    "core.Harness.decode_block": true,
+    "core.Harness.score": true,
+    "worker.score_main": true
+  },
+  "reset_key_difference": "The launch module generalizes source-layer count L to configuration_layers; both are equal in every retained run environment.",
+  "measurement_reference_scope": "Pre-sharding source snapshot; the actual per-origin configuration and calibration records are retained separately."
+}

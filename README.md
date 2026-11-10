@@ -59,6 +59,11 @@ its saved IDs; private-value cases are synthetic. All recorded positive and
 negative outcomes remain. Historical twelve-configuration totals and the
 current eleven-configuration reporting summary have separate scopes.
 
+The accepted CPU large-model extension is in
+`results/cpu_large_models_20261110/`: Qwen3-14B and Qwen3-32B each reuse all3,000
+fixed IDs, eight KV heads and both seeds. Inspect it with
+`python tools/inspect_cpu_large_models.py --root .`.
+
 ## Dependencies and source versions
 
 CPU defensive checks use `requirements/requirements-defense.txt`; ordering

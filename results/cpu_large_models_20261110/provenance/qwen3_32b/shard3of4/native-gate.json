@@ -1,0 +1,59 @@
+{
+  "external_native_cpu_gate": {
+    "native_full_vs_early_stop_exact": true,
+    "partial_checkpoint_vs_full_exact": true,
+    "inputs": [
+      [
+        785,
+        3840,
+        315,
+        279,
+        12751,
+        20448,
+        44295,
+        23631,
+        315,
+        4948,
+        17991,
+        13
+      ],
+      [
+        21605,
+        6832,
+        5942,
+        1373,
+        16585,
+        16460,
+        315,
+        4862,
+        821,
+        4271,
+        13
+      ],
+      [
+        641,
+        220,
+        16,
+        24,
+        21,
+        24,
+        11,
+        12677,
+        1156,
+        14858,
+        389,
+        279,
+        7329,
+        315,
+        279,
+        17788
+      ]
+    ],
+    "model_dtype": "torch.float32",
+    "device": "cpu",
+    "gate_inputs": 3,
+    "revision": "9216db5781bf21249d130ec9da846c4624c16137"
+  },
+  "resident_layers": 1,
+  "revision": "9216db5781bf21249d130ec9da846c4624c16137"
+}
