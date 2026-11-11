@@ -1,0 +1,23 @@
+{
+  "cells": 720,
+  "record_parts": [
+    "checks-0000.jsonl.gz",
+    "checks-0001.jsonl.gz",
+    "checks-0002.jsonl.gz",
+    "checks-0003.jsonl.gz",
+    "checks-0004.jsonl.gz",
+    "checks-0005.jsonl.gz",
+    "checks-0006.jsonl.gz",
+    "checks-0007.jsonl.gz",
+    "checks-0008.jsonl.gz",
+    "checks-0009.jsonl.gz",
+    "checks-0010.jsonl.gz",
+    "checks-0011.jsonl.gz",
+    "checks-0012.jsonl.gz",
+    "checks-0013.jsonl.gz",
+    "checks-0014.jsonl.gz"
+  ],
+  "observations": 307200,
+  "operator_only": true,
+  "model_forward_calls": 0
+}

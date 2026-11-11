@@ -36,3 +36,5 @@ the cohort; retain its IDs, token arrays and normal incorrect outcomes when
 resuming a run.
 
 - [Extended experiment details](EXTENDED_EXPERIMENT_DETAILS.md): category counts, historical probe/error/timing diagnostics, and native/live-engine controls retained outside the compact paper.
+
+- [Public permutation-orbit verification](ORBIT_VERIFICATION.md): exact operator-level repetition controls, separate from GPU recovery experiments.

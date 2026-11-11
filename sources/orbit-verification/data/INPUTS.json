@@ -1,0 +1,71 @@
+{
+  "fixtures": 120,
+  "anchors": [
+    {
+      "word": "import",
+      "token": 1179,
+      "source_sid": "wc25_128_0001",
+      "category": "code"
+    },
+    {
+      "word": "CONFIG",
+      "token": 13504,
+      "source_sid": "wc25_128_0001",
+      "category": "code"
+    },
+    {
+      "word": "BEGIN",
+      "token": 22994,
+      "source_sid": "wc25_128_0015",
+      "category": "creative"
+    },
+    {
+      "word": "RESPONSE",
+      "token": 77273,
+      "source_sid": "wc25_128_0015",
+      "category": "creative"
+    },
+    {
+      "word": "checking",
+      "token": 13598,
+      "source_sid": "wc25_128_0012",
+      "category": "general"
+    },
+    {
+      "word": "generate",
+      "token": 7068,
+      "source_sid": "wc25_128_0012",
+      "category": "general"
+    },
+    {
+      "word": "Equivalent",
+      "token": 92328,
+      "source_sid": "wc25_128_0011",
+      "category": "math"
+    },
+    {
+      "word": "expressions",
+      "token": 24282,
+      "source_sid": "wc25_128_0011",
+      "category": "math"
+    },
+    {
+      "word": "METHOD",
+      "token": 33497,
+      "source_sid": "wc25_128_0033",
+      "category": "qa"
+    },
+    {
+      "word": "cycle",
+      "token": 11008,
+      "source_sid": "wc25_128_0033",
+      "category": "qa"
+    }
+  ],
+  "lexical_pool_size": 2641,
+  "source_cohort": "Existing lifecycle100, five heuristic categories",
+  "manifest_rows": 3000,
+  "bos_token_id": 128000,
+  "preparation_only_tokenization": true,
+  "model_forward_calls": 0
+}

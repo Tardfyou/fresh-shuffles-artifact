@@ -1,0 +1,43 @@
+{
+  "accounting_pass": true,
+  "cells": 720,
+  "trials": 307200,
+  "independent_output_partition_recount_pass": true,
+  "b4_all_24_permutations_observed": true,
+  "repeated_cells": 80,
+  "repeated_observed_counts_by_block": {
+    "4": [
+      4
+    ],
+    "8": [
+      8
+    ],
+    "16": [
+      16
+    ],
+    "32": [
+      32
+    ]
+  },
+  "b4_control_counts": {
+    "one_repeated_unit": [
+      4
+    ],
+    "two_repeated_units": [
+      12
+    ],
+    "all_distinct_units": [
+      24
+    ]
+  },
+  "fresh_column_counts": {
+    "D": [
+      128
+    ],
+    "SD": [
+      128
+    ]
+  },
+  "model_forward_calls": 0,
+  "scope": "Exact public-operator verification at layer0; not identification/recovery or a default GELO/STIP break"
+}

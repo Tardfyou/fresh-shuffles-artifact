@@ -1,0 +1,46 @@
+{
+  "study": "Chosen-input orbit verification of the sequence-permutation profile implemented by Hidden No More",
+  "created_before_measurements": "2026-11-11T01:53:42.309144+00:00",
+  "scope": "Layer0 public Llama3.2-1B embeddings passed through unchanged upstream protection/permutation function; no matching attack, key estimation, victim recovery, or full-model inference",
+  "model": {
+    "repo": "unsloth/Llama-3.2-1B",
+    "revision": "9535bd9b1d1dea6acafbdc4813b728796aeb28da"
+  },
+  "sample_source": "Existing WildChat3000 manifest; deterministic English lexical units drawn from lifecycle100, not a new corpus or an independent100-prompt recovery study",
+  "blocks": [
+    4,
+    8,
+    16,
+    32
+  ],
+  "anchor_units": 10,
+  "anchor_selection": "Two distinct eligible one-token leading-space lexical units per existing heuristic category; scan frozen lifecycle IDs in order and words in text order",
+  "conditions": [
+    "one_repeated_unit",
+    "two_repeated_units",
+    "all_distinct_units"
+  ],
+  "nominal_row_group": "b!",
+  "expected_exact_orbit": "b!/product(token-multiplicity factorials); BOS is a real distinguished token, no added recovery marker",
+  "primary_profile": "S (sequence rows only)",
+  "negative_profiles": [
+    "D (fresh hidden-coordinate permutation)",
+    "SD (both fresh permutations)"
+  ],
+  "dtype_profiles": [
+    "float32",
+    "bfloat16"
+  ],
+  "primary_observations_per_cell": 1024,
+  "negative_observations_per_cell": 128,
+  "comparison": "Exact tensor bytes define distinct output states; no tolerance-based cluster merging",
+  "control": "Registered multiplicity controls; native no-permutation None sanity; identical RNG seeded across dtype/lexical conditions; all original wrong/negative outcomes retained",
+  "accounting": "Every registered anchor\u00d7b\u00d7condition\u00d7dtype\u00d7profile must be present exactly once; retain unique tensors and every trial permutation",
+  "exclusions": [
+    "No claim that the SD full randomization collapses to b when its column permutation is refreshed",
+    "No claim that post-attention hidden states have identical repeated-token rows",
+    "No new break of GELO default or STIP column permutation",
+    "No implication that orbit counts establish key recovery or content recovery"
+  ],
+  "paper_decision": "Accept raw/operator integrity first; report the actual orbit and controls without changing existing formal arguments"
+}

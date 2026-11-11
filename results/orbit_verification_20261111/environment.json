@@ -1,0 +1,12 @@
+{
+  "torch": "2.14.0+cpu",
+  "python": "3.12.3",
+  "device": "cpu",
+  "hardware": "x86_64",
+  "stage": "Layer0 public embedding lookup, before contextual attention",
+  "model_forward_calls": 0,
+  "source_revision": "82ed23ce17d9501880922320f243e4d4e741bd5f",
+  "recorder_equivalence_checks": 32,
+  "protocol_created": "2026-11-11T01:53:42.309144+00:00",
+  "started_utc": "2026-11-11T01:58:41.665247+00:00"
+}

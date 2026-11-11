@@ -374,6 +374,16 @@
         "results/takeover_20261029/corrected/battery_exitcodes.json"
       ],
       "documentation": "docs/EXPERIMENTS.md"
+    },
+    {
+      "id": "external_orbit_verification",
+      "measurement_scope": "accepted_cpu_operator_only",
+      "sample_scale": "120 structured legal probes from10 corpus-derived lexical anchors;720 cells;307200 exact-permutation observations; no model forward calls",
+      "paths": [
+        "results/orbit_verification_20261111",
+        "sources/orbit-verification"
+      ],
+      "documentation": "docs/ORBIT_VERIFICATION.md"
     }
   ],
   "gpu": {
