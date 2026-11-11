@@ -1,0 +1,43 @@
+{
+  "accounting_pass": true,
+  "all_registered_cells": 280,
+  "operator_cells": 240,
+  "operator_observations": 122880,
+  "native_three_party_cells": 40,
+  "native_three_party_observations": 1280,
+  "native_signature_stable": 1280,
+  "native_layernorm_functional": 1280,
+  "independent_all_output_partitions_replayed": true,
+  "raw_repeated_states": [
+    512
+  ],
+  "public_sorted_repeated_states": {
+    "4": [
+      4
+    ],
+    "8": [
+      8
+    ],
+    "16": [
+      16
+    ],
+    "32": [
+      32
+    ]
+  },
+  "b4_sorted_controls": {
+    "one_repeated_unit": [
+      4
+    ],
+    "two_repeated_units": [
+      12
+    ],
+    "all_distinct_units": [
+      24
+    ]
+  },
+  "max_native_row_error": 7.868603283766169e-06,
+  "max_native_layernorm_error": 7.47358426451683e-05,
+  "new_model_forward_calls": 0,
+  "scope": "Native2D permutation + full generic nonlinear protocol; public signature orbit, not raw-ciphertext orbit or full ChatGLM inference"
+}

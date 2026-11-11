@@ -38,3 +38,5 @@ resuming a run.
 - [Extended experiment details](EXTENDED_EXPERIMENT_DETAILS.md): category counts, historical probe/error/timing diagnostics, and native/live-engine controls retained outside the compact paper.
 
 - [Public permutation-orbit verification](ORBIT_VERIFICATION.md): exact operator-level repetition controls, separate from GPU recovery experiments.
+
+- [PermLLM native-protocol signature checks](PERMLLM_ORBIT_VERIFICATION.md): independent per-row coordinate permutations, raw diversity, public invariants, and complete three-party-flow records.

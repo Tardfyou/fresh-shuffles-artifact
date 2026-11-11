@@ -1,0 +1,52 @@
+{
+  "study": "PermLLM native factorized permutation and randomized nonlinear-outsourcing protocol orbit signatures",
+  "registered_utc": "2026-11-11T05:00:28.918938+00:00",
+  "upstream": {
+    "repository": "https://github.com/zfscgy/PermLLM",
+    "revision": "1b120aeb65f18744a1cd73dd419dc15f39a73971",
+    "permutation": "perm_llm/common/torch_utils.py:permute_2d_with_seed",
+    "online_protocol": "perm_llm/protocols/element_wise.py:SS_ElementWise__RandPerm",
+    "native_caller": "perm_llm/glm6b/secure_inference.py:GLM_FeedForwardProtocol.layernorm_in_protocol"
+  },
+  "input_source": "Exact120 legal BOS-prefixed fixtures and public Llama1B layer0 input representations already frozen in first orbit study; no new cohort or model forwards",
+  "blocks": [
+    4,
+    8,
+    16,
+    32
+  ],
+  "conditions": [
+    "one_repeated_unit",
+    "two_repeated_units",
+    "all_distinct_units"
+  ],
+  "dtype_profiles": [
+    "float32",
+    "bfloat16"
+  ],
+  "operator_trials_per_cell": 512,
+  "operator_cells": 240,
+  "full_raw_outputs": "Count exact distinct protected tensors; do not expect only b raw states with fresh independent column permutations",
+  "public_observable": "Sort coordinates within every row; compare exact sorted-row matrices for direct operator",
+  "nominal_full_group": "b! * (d!)^b; retain log2 size, never claim full group has only b outputs",
+  "expected_observable": "Row-multiplicity orbit b!/product(n_i!); repeated BOS case b",
+  "protocol_cells": 40,
+  "protocol_cell_definition": "10anchors x4blocks, repeated-input condition only, nativefloat32 share/mask arithmetic",
+  "protocol_trials_per_cell": 32,
+  "protocol_mask_scale": {
+    "x": 10.0,
+    "z": 10.0
+  },
+  "protocol_nonlinearity": "torch.nn.functional.layer_norm over actual input width2048; same generic upstream protocol/callback type used by native LayerNorm entry, not a full ChatGLM run",
+  "observer": "Record n1 plaintext input handed to layer_norm in native online_execute via a transparent callback",
+  "noise_gate": "Nearest known own-probe sorted-row prototype; require each row distance < 1/4 minimum distinct sorted-input-row distance, fixed from frozen inputs before observing ciphertexts",
+  "protocol_output_gate": "max absolute layer_norm recovery error <=0.001; all normal failures retained",
+  "checks": [
+    "Exact seed/direct-permutation equality",
+    "All raw and public-signature state partitions retained",
+    "Native inverse-permutation equality",
+    "All native three-party transcript messages/functional gates checked",
+    "No matching of unknown victim tokens or key recovery"
+  ],
+  "scope": "Protection-operator and native generic nonlinear protocol only; no ChatGLM model inference, network service, MPC security break or new content recovery"
+}

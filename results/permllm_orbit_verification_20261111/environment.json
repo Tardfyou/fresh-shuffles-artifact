@@ -1,0 +1,11 @@
+{
+  "device": "cpu",
+  "torch": "2.14.0+cpu",
+  "python": "3.12.3",
+  "source_revision": "1b120aeb65f18744a1cd73dd419dc15f39a73971",
+  "model_forward_calls": 0,
+  "width": 2048,
+  "recorded_utc": "2026-11-11T05:02:14.728684+00:00",
+  "protocol_registered": "2026-11-11T05:00:28.918938+00:00",
+  "native_three_party_protocol": true
+}

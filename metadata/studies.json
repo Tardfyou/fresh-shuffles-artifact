@@ -384,6 +384,16 @@
         "sources/orbit-verification"
       ],
       "documentation": "docs/ORBIT_VERIFICATION.md"
+    },
+    {
+      "id": "permllm_orbit_verification",
+      "measurement_scope": "accepted_cpu_operator_and_native_three_party_protocol",
+      "sample_scale": "Same120structured probes;240operator cells/122880draws plus40native protocol cells/1280flows; zero model forwards",
+      "paths": [
+        "results/permllm_orbit_verification_20261111",
+        "sources/permllm-orbit"
+      ],
+      "documentation": "docs/PERMLLM_ORBIT_VERIFICATION.md"
     }
   ],
   "gpu": {
