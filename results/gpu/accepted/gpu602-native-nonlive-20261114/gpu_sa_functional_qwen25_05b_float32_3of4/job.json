@@ -1,0 +1,22 @@
+{
+  "id": "gpu_sa_functional_qwen25_05b_float32_3of4",
+  "kind": "sa_functional",
+  "model": {
+    "tag": "qwen25_05b",
+    "repo": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+  },
+  "dtype": "float32",
+  "block": 16,
+  "strategy": "full",
+  "device_class": "cuda",
+  "minimum_free_gib": 12,
+  "configuration_layers": 1,
+  "shard": 3,
+  "shards": 4,
+  "phase": "core",
+  "priority": 2,
+  "expected_observations": 1500,
+  "subset": "ordering602",
+  "cohort_prompts": 602
+}

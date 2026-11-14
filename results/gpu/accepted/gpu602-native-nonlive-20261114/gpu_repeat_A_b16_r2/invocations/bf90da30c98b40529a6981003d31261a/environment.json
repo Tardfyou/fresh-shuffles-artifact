@@ -1,0 +1,34 @@
+{
+  "engine": "vLLM",
+  "version": "0.8.5.post1",
+  "device": "cuda:0",
+  "model_dtype": "torch.bfloat16",
+  "model": {
+    "tag": "qwen25_05b",
+    "repo": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+  },
+  "hardware": {
+    "type": "cuda",
+    "name": "NVIDIA A100-SXM4-80GB",
+    "total_memory_bytes": 85094825984,
+    "compute_capability": [
+      8,
+      0
+    ],
+    "visible_devices": "0",
+    "driver_version": "580.82.07"
+  },
+  "torch": "2.6.0+cu124",
+  "transformers": "4.51.3",
+  "variant": "A",
+  "round": 2,
+  "block_size": 16,
+  "max_model_len": 1024,
+  "allocated_cache_blocks": 72,
+  "protocol": "Original diag_stage2 A/C, three independent engine rounds",
+  "prefix_cache_enabled": false,
+  "reset_before_pair": false,
+  "temperature": 0.0,
+  "max_tokens": 16
+}

@@ -1,0 +1,23 @@
+{
+  "complete": true,
+  "record_integrity_pass": true,
+  "measurement_protocol_accepted": true,
+  "acceptance_basis": "Frozen issued selectors and inputs, all returned predictions and functional decisions independently checked; supplied supervisor statement attests unchanged scientific code",
+  "formal_jobs": 50,
+  "startup_jobs": 10,
+  "formal_measured_rows": 49364,
+  "startup_measured_rows": 38,
+  "all_expected_keys_complete": true,
+  "missing_or_duplicate_measured_ids": 0,
+  "normal_negative_outcomes_retained": true,
+  "source_scope": {
+    "actual_server_source_included": false,
+    "source_byte_comparison_claimed": false,
+    "supervisor_attests_scientific_files_unchanged": true,
+    "issued_job_and_target_manifests_exact": true
+  },
+  "live_protected_engine_jobs_in_this_package": 0,
+  "live602_update_pending": true,
+  "environment_adaptation": "Live runtime CPU threads8 to32 is outside this returned nonlive measurement set; no native scientific changes reported",
+  "publication_authorized_by_user": true
+}

@@ -1,0 +1,24 @@
+{
+  "id": "smoke_gpu_ratio_qwen25_05b_2.0",
+  "kind": "ratio",
+  "model": {
+    "tag": "qwen25_05b",
+    "repo": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+  },
+  "dtype": "float32",
+  "block": 16,
+  "strategy": "full",
+  "device_class": "cuda",
+  "minimum_free_gib": 12,
+  "configuration_layers": 1,
+  "subset": "ordering602",
+  "ratio": 2.0,
+  "phase": "smoke",
+  "priority": 2,
+  "expected_observations": 2,
+  "cloak_dtype": "float32",
+  "regime": "native_fp32_protection",
+  "cohort_prompts": 602,
+  "smoke": true
+}

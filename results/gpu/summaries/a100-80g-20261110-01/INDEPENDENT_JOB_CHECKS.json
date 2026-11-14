@@ -167,102 +167,6 @@
       "predictions_and_denominators_checked": true
     }
   },
-  "gpu_fused": {
-    "passed": true,
-    "seconds": 0.19896793365478516,
-    "validation": {
-      "job_id": "gpu_fused",
-      "complete": true,
-      "expected": 300,
-      "measured": 300,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_ratio_qwen25_05b_1.1": {
-    "passed": true,
-    "seconds": 0.0838472843170166,
-    "validation": {
-      "job_id": "gpu_ratio_qwen25_05b_1.1",
-      "complete": true,
-      "expected": 100,
-      "measured": 100,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_ratio_qwen25_05b_1.25": {
-    "passed": true,
-    "seconds": 0.08400416374206543,
-    "validation": {
-      "job_id": "gpu_ratio_qwen25_05b_1.25",
-      "complete": true,
-      "expected": 100,
-      "measured": 100,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_ratio_qwen25_05b_1.5": {
-    "passed": true,
-    "seconds": 0.08355069160461426,
-    "validation": {
-      "job_id": "gpu_ratio_qwen25_05b_1.5",
-      "complete": true,
-      "expected": 100,
-      "measured": 100,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_ratio_qwen25_05b_2.0": {
-    "passed": true,
-    "seconds": 0.37600231170654297,
-    "validation": {
-      "job_id": "gpu_ratio_qwen25_05b_2.0",
-      "complete": true,
-      "expected": 100,
-      "measured": 100,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_ratio_llama32_1b_1.25": {
-    "passed": true,
-    "seconds": 0.23128080368041992,
-    "validation": {
-      "job_id": "gpu_ratio_llama32_1b_1.25",
-      "complete": true,
-      "expected": 100,
-      "measured": 100,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_ratio_llama32_1b_1.5": {
-    "passed": true,
-    "seconds": 0.8634977340698242,
-    "validation": {
-      "job_id": "gpu_ratio_llama32_1b_1.5",
-      "complete": true,
-      "expected": 100,
-      "measured": 100,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_lifecycle": {
-    "passed": true,
-    "seconds": 2.2438080310821533,
-    "validation": {
-      "job_id": "gpu_lifecycle",
-      "complete": true,
-      "expected": 100,
-      "measured": 100,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
   "gpu_main_qwen3_32b_fp32_first": {
     "passed": true,
     "seconds": 7.423163890838623,
@@ -283,90 +187,6 @@
       "complete": true,
       "expected": 3000,
       "measured": 3000,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_cross_key_qwen25_05b": {
-    "passed": true,
-    "seconds": 0.2134695053100586,
-    "validation": {
-      "job_id": "gpu_cross_key_qwen25_05b",
-      "complete": true,
-      "expected": 500,
-      "measured": 500,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_spectrum_qwen25_05b": {
-    "passed": true,
-    "seconds": 0.0964517593383789,
-    "validation": {
-      "job_id": "gpu_spectrum_qwen25_05b",
-      "complete": true,
-      "expected": 100,
-      "measured": 100,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_matched_qwen25_05b": {
-    "passed": true,
-    "seconds": 0.1537792682647705,
-    "validation": {
-      "job_id": "gpu_matched_qwen25_05b",
-      "complete": true,
-      "expected": 100,
-      "measured": 100,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_spectrum_llama32_1b": {
-    "passed": true,
-    "seconds": 0.06676459312438965,
-    "validation": {
-      "job_id": "gpu_spectrum_llama32_1b",
-      "complete": true,
-      "expected": 100,
-      "measured": 100,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_matched_llama32_1b": {
-    "passed": true,
-    "seconds": 0.14475250244140625,
-    "validation": {
-      "job_id": "gpu_matched_llama32_1b",
-      "complete": true,
-      "expected": 100,
-      "measured": 100,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_sa_rotation": {
-    "passed": true,
-    "seconds": 3.127063751220703,
-    "validation": {
-      "job_id": "gpu_sa_rotation",
-      "complete": true,
-      "expected": 100,
-      "measured": 100,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_cross_key_llama32_1b": {
-    "passed": true,
-    "seconds": 0.4529259204864502,
-    "validation": {
-      "job_id": "gpu_cross_key_llama32_1b",
-      "complete": true,
-      "expected": 500,
-      "measured": 500,
       "normal_negative_outcomes": 0,
       "predictions_and_denominators_checked": true
     }
@@ -443,54 +263,6 @@
       "predictions_and_denominators_checked": true
     }
   },
-  "gpu_sa_functional_qwen25_05b_float32_0of4": {
-    "passed": true,
-    "seconds": 0.1587831974029541,
-    "validation": {
-      "job_id": "gpu_sa_functional_qwen25_05b_float32_0of4",
-      "complete": true,
-      "expected": 250,
-      "measured": 250,
-      "normal_negative_outcomes": 63,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_sa_functional_qwen25_05b_float32_1of4": {
-    "passed": true,
-    "seconds": 0.1962599754333496,
-    "validation": {
-      "job_id": "gpu_sa_functional_qwen25_05b_float32_1of4",
-      "complete": true,
-      "expected": 250,
-      "measured": 250,
-      "normal_negative_outcomes": 63,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_sa_functional_qwen25_05b_float32_2of4": {
-    "passed": true,
-    "seconds": 0.16564488410949707,
-    "validation": {
-      "job_id": "gpu_sa_functional_qwen25_05b_float32_2of4",
-      "complete": true,
-      "expected": 250,
-      "measured": 250,
-      "normal_negative_outcomes": 74,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_sa_functional_qwen25_05b_float32_3of4": {
-    "passed": true,
-    "seconds": 0.11603522300720215,
-    "validation": {
-      "job_id": "gpu_sa_functional_qwen25_05b_float32_3of4",
-      "complete": true,
-      "expected": 250,
-      "measured": 250,
-      "normal_negative_outcomes": 52,
-      "predictions_and_denominators_checked": true
-    }
-  },
   "gpu_byte_defense_qwen25_05b_float32_3of4": {
     "passed": true,
     "seconds": 0.6500875949859619,
@@ -527,18 +299,6 @@
       "predictions_and_denominators_checked": true
     }
   },
-  "gpu_sa_functional_qwen25_05b_bfloat16_0of4": {
-    "passed": true,
-    "seconds": 0.11340689659118652,
-    "validation": {
-      "job_id": "gpu_sa_functional_qwen25_05b_bfloat16_0of4",
-      "complete": true,
-      "expected": 250,
-      "measured": 250,
-      "normal_negative_outcomes": 250,
-      "predictions_and_denominators_checked": true
-    }
-  },
   "gpu_byte_defense_qwen25_05b_bfloat16_2of4": {
     "passed": true,
     "seconds": 0.6058259010314941,
@@ -551,30 +311,6 @@
       "predictions_and_denominators_checked": true
     }
   },
-  "gpu_sa_functional_qwen25_05b_bfloat16_1of4": {
-    "passed": true,
-    "seconds": 0.18141484260559082,
-    "validation": {
-      "job_id": "gpu_sa_functional_qwen25_05b_bfloat16_1of4",
-      "complete": true,
-      "expected": 250,
-      "measured": 250,
-      "normal_negative_outcomes": 250,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_sa_functional_qwen25_05b_bfloat16_2of4": {
-    "passed": true,
-    "seconds": 0.15872406959533691,
-    "validation": {
-      "job_id": "gpu_sa_functional_qwen25_05b_bfloat16_2of4",
-      "complete": true,
-      "expected": 250,
-      "measured": 250,
-      "normal_negative_outcomes": 250,
-      "predictions_and_denominators_checked": true
-    }
-  },
   "gpu_byte_defense_qwen25_05b_bfloat16_3of4": {
     "passed": true,
     "seconds": 0.6023848056793213,
@@ -584,18 +320,6 @@
       "expected": 3000,
       "measured": 3000,
       "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_sa_functional_qwen25_05b_bfloat16_3of4": {
-    "passed": true,
-    "seconds": 0.17815399169921875,
-    "validation": {
-      "job_id": "gpu_sa_functional_qwen25_05b_bfloat16_3of4",
-      "complete": true,
-      "expected": 250,
-      "measured": 250,
-      "normal_negative_outcomes": 250,
       "predictions_and_denominators_checked": true
     }
   },
@@ -635,54 +359,6 @@
       "predictions_and_denominators_checked": true
     }
   },
-  "gpu_sa_functional_llama32_1b_float32_1of4": {
-    "passed": true,
-    "seconds": 0.14501476287841797,
-    "validation": {
-      "job_id": "gpu_sa_functional_llama32_1b_float32_1of4",
-      "complete": true,
-      "expected": 250,
-      "measured": 250,
-      "normal_negative_outcomes": 54,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_sa_functional_llama32_1b_float32_0of4": {
-    "passed": true,
-    "seconds": 0.16881585121154785,
-    "validation": {
-      "job_id": "gpu_sa_functional_llama32_1b_float32_0of4",
-      "complete": true,
-      "expected": 250,
-      "measured": 250,
-      "normal_negative_outcomes": 62,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_sa_functional_llama32_1b_float32_2of4": {
-    "passed": true,
-    "seconds": 0.08946585655212402,
-    "validation": {
-      "job_id": "gpu_sa_functional_llama32_1b_float32_2of4",
-      "complete": true,
-      "expected": 250,
-      "measured": 250,
-      "normal_negative_outcomes": 78,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_sa_functional_llama32_1b_float32_3of4": {
-    "passed": true,
-    "seconds": 0.09102058410644531,
-    "validation": {
-      "job_id": "gpu_sa_functional_llama32_1b_float32_3of4",
-      "complete": true,
-      "expected": 250,
-      "measured": 250,
-      "normal_negative_outcomes": 51,
-      "predictions_and_denominators_checked": true
-    }
-  },
   "gpu_byte_defense_llama32_1b_float32_3of4": {
     "passed": true,
     "seconds": 0.5910258293151855,
@@ -719,30 +395,6 @@
       "predictions_and_denominators_checked": true
     }
   },
-  "gpu_sa_functional_llama32_1b_bfloat16_0of4": {
-    "passed": true,
-    "seconds": 0.09278440475463867,
-    "validation": {
-      "job_id": "gpu_sa_functional_llama32_1b_bfloat16_0of4",
-      "complete": true,
-      "expected": 250,
-      "measured": 250,
-      "normal_negative_outcomes": 250,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_sa_functional_llama32_1b_bfloat16_1of4": {
-    "passed": true,
-    "seconds": 0.1453089714050293,
-    "validation": {
-      "job_id": "gpu_sa_functional_llama32_1b_bfloat16_1of4",
-      "complete": true,
-      "expected": 250,
-      "measured": 250,
-      "normal_negative_outcomes": 250,
-      "predictions_and_denominators_checked": true
-    }
-  },
   "gpu_byte_defense_llama32_1b_bfloat16_2of4": {
     "passed": true,
     "seconds": 0.6326360702514648,
@@ -751,54 +403,6 @@
       "complete": true,
       "expected": 3000,
       "measured": 3000,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_sa_functional_llama32_1b_bfloat16_2of4": {
-    "passed": true,
-    "seconds": 0.08814072608947754,
-    "validation": {
-      "job_id": "gpu_sa_functional_llama32_1b_bfloat16_2of4",
-      "complete": true,
-      "expected": 250,
-      "measured": 250,
-      "normal_negative_outcomes": 250,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_paged_compat_b16": {
-    "passed": true,
-    "seconds": 0.04601335525512695,
-    "validation": {
-      "job_id": "gpu_paged_compat_b16",
-      "complete": true,
-      "expected": 100,
-      "measured": 100,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_sa_functional_llama32_1b_bfloat16_3of4": {
-    "passed": true,
-    "seconds": 0.09524869918823242,
-    "validation": {
-      "job_id": "gpu_sa_functional_llama32_1b_bfloat16_3of4",
-      "complete": true,
-      "expected": 250,
-      "measured": 250,
-      "normal_negative_outcomes": 250,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_paged_compat_b32": {
-    "passed": true,
-    "seconds": 0.04550457000732422,
-    "validation": {
-      "job_id": "gpu_paged_compat_b32",
-      "complete": true,
-      "expected": 100,
-      "measured": 100,
       "normal_negative_outcomes": 0,
       "predictions_and_denominators_checked": true
     }
@@ -835,18 +439,6 @@
       "complete": true,
       "expected": 900,
       "measured": 900,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_paged_compat_b64": {
-    "passed": true,
-    "seconds": 0.045104026794433594,
-    "validation": {
-      "job_id": "gpu_paged_compat_b64",
-      "complete": true,
-      "expected": 100,
-      "measured": 100,
       "normal_negative_outcomes": 0,
       "predictions_and_denominators_checked": true
     }
@@ -1067,30 +659,6 @@
       "predictions_and_denominators_checked": true
     }
   },
-  "gpu_large_byte_qwen3_14b": {
-    "passed": true,
-    "seconds": 0.04498457908630371,
-    "validation": {
-      "job_id": "gpu_large_byte_qwen3_14b",
-      "complete": true,
-      "expected": 100,
-      "measured": 100,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_large_byte_qwen3_32b": {
-    "passed": true,
-    "seconds": 0.04356980323791504,
-    "validation": {
-      "job_id": "gpu_large_byte_qwen3_32b",
-      "complete": true,
-      "expected": 100,
-      "measured": 100,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
   "smoke_gpu_main_qwen25_05b": {
     "passed": true,
     "seconds": 0.0214083194732666,
@@ -1108,138 +676,6 @@
     "seconds": 0.023366212844848633,
     "validation": {
       "job_id": "smoke_gpu_main_llama32_1b",
-      "complete": true,
-      "expected": 2,
-      "measured": 2,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_fused": {
-    "passed": true,
-    "seconds": 0.023719310760498047,
-    "validation": {
-      "job_id": "smoke_gpu_fused",
-      "complete": true,
-      "expected": 2,
-      "measured": 2,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_ratio_qwen25_05b_1.1": {
-    "passed": true,
-    "seconds": 0.024008989334106445,
-    "validation": {
-      "job_id": "smoke_gpu_ratio_qwen25_05b_1.1",
-      "complete": true,
-      "expected": 2,
-      "measured": 2,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_ratio_qwen25_05b_1.25": {
-    "passed": true,
-    "seconds": 0.02417755126953125,
-    "validation": {
-      "job_id": "smoke_gpu_ratio_qwen25_05b_1.25",
-      "complete": true,
-      "expected": 2,
-      "measured": 2,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_ratio_qwen25_05b_1.5": {
-    "passed": true,
-    "seconds": 0.024057626724243164,
-    "validation": {
-      "job_id": "smoke_gpu_ratio_qwen25_05b_1.5",
-      "complete": true,
-      "expected": 2,
-      "measured": 2,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_ratio_qwen25_05b_2.0": {
-    "passed": true,
-    "seconds": 0.035280704498291016,
-    "validation": {
-      "job_id": "smoke_gpu_ratio_qwen25_05b_2.0",
-      "complete": true,
-      "expected": 2,
-      "measured": 2,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_ratio_llama32_1b_1.25": {
-    "passed": true,
-    "seconds": 0.025963306427001953,
-    "validation": {
-      "job_id": "smoke_gpu_ratio_llama32_1b_1.25",
-      "complete": true,
-      "expected": 2,
-      "measured": 2,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_ratio_llama32_1b_1.5": {
-    "passed": true,
-    "seconds": 0.0335080623626709,
-    "validation": {
-      "job_id": "smoke_gpu_ratio_llama32_1b_1.5",
-      "complete": true,
-      "expected": 2,
-      "measured": 2,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_spectrum_qwen25_05b": {
-    "passed": true,
-    "seconds": 0.02586817741394043,
-    "validation": {
-      "job_id": "smoke_gpu_spectrum_qwen25_05b",
-      "complete": true,
-      "expected": 2,
-      "measured": 2,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_matched_qwen25_05b": {
-    "passed": true,
-    "seconds": 0.025733232498168945,
-    "validation": {
-      "job_id": "smoke_gpu_matched_qwen25_05b",
-      "complete": true,
-      "expected": 2,
-      "measured": 2,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_spectrum_llama32_1b": {
-    "passed": true,
-    "seconds": 0.024739503860473633,
-    "validation": {
-      "job_id": "smoke_gpu_spectrum_llama32_1b",
-      "complete": true,
-      "expected": 2,
-      "measured": 2,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_matched_llama32_1b": {
-    "passed": true,
-    "seconds": 0.02590489387512207,
-    "validation": {
-      "job_id": "smoke_gpu_matched_llama32_1b",
       "complete": true,
       "expected": 2,
       "measured": 2,
@@ -1295,18 +731,6 @@
       "predictions_and_denominators_checked": true
     }
   },
-  "smoke_gpu_sa_functional_qwen25_05b_float32_0of4": {
-    "passed": true,
-    "seconds": 0.014334440231323242,
-    "validation": {
-      "job_id": "smoke_gpu_sa_functional_qwen25_05b_float32_0of4",
-      "complete": true,
-      "expected": 20,
-      "measured": 20,
-      "normal_negative_outcomes": 4,
-      "predictions_and_denominators_checked": true
-    }
-  },
   "smoke_gpu_byte_defense_qwen25_05b_bfloat16_0of4": {
     "passed": true,
     "seconds": 0.011249303817749023,
@@ -1316,18 +740,6 @@
       "expected": 40,
       "measured": 40,
       "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_sa_functional_qwen25_05b_bfloat16_0of4": {
-    "passed": true,
-    "seconds": 0.014209508895874023,
-    "validation": {
-      "job_id": "smoke_gpu_sa_functional_qwen25_05b_bfloat16_0of4",
-      "complete": true,
-      "expected": 20,
-      "measured": 20,
-      "normal_negative_outcomes": 20,
       "predictions_and_denominators_checked": true
     }
   },
@@ -1343,18 +755,6 @@
       "predictions_and_denominators_checked": true
     }
   },
-  "smoke_gpu_sa_functional_llama32_1b_float32_0of4": {
-    "passed": true,
-    "seconds": 0.012579917907714844,
-    "validation": {
-      "job_id": "smoke_gpu_sa_functional_llama32_1b_float32_0of4",
-      "complete": true,
-      "expected": 20,
-      "measured": 20,
-      "normal_negative_outcomes": 4,
-      "predictions_and_denominators_checked": true
-    }
-  },
   "smoke_gpu_byte_defense_llama32_1b_bfloat16_0of4": {
     "passed": true,
     "seconds": 0.011262893676757812,
@@ -1363,54 +763,6 @@
       "complete": true,
       "expected": 40,
       "measured": 40,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_sa_functional_llama32_1b_bfloat16_0of4": {
-    "passed": true,
-    "seconds": 0.012615680694580078,
-    "validation": {
-      "job_id": "smoke_gpu_sa_functional_llama32_1b_bfloat16_0of4",
-      "complete": true,
-      "expected": 20,
-      "measured": 20,
-      "normal_negative_outcomes": 20,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_paged_compat_b16": {
-    "passed": true,
-    "seconds": 0.023873329162597656,
-    "validation": {
-      "job_id": "smoke_gpu_paged_compat_b16",
-      "complete": true,
-      "expected": 2,
-      "measured": 2,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_paged_compat_b32": {
-    "passed": true,
-    "seconds": 0.023239850997924805,
-    "validation": {
-      "job_id": "smoke_gpu_paged_compat_b32",
-      "complete": true,
-      "expected": 2,
-      "measured": 2,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_paged_compat_b64": {
-    "passed": true,
-    "seconds": 0.02318429946899414,
-    "validation": {
-      "job_id": "smoke_gpu_paged_compat_b64",
-      "complete": true,
-      "expected": 2,
-      "measured": 2,
       "normal_negative_outcomes": 0,
       "predictions_and_denominators_checked": true
     }
@@ -1792,30 +1144,6 @@
     "seconds": 0.02482438087463379,
     "validation": {
       "job_id": "smoke_gpu_main_qwen3_32b_fp32_first_cpu_bridge",
-      "complete": true,
-      "expected": 2,
-      "measured": 2,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_large_byte_qwen3_14b": {
-    "passed": true,
-    "seconds": 0.02357792854309082,
-    "validation": {
-      "job_id": "smoke_gpu_large_byte_qwen3_14b",
-      "complete": true,
-      "expected": 2,
-      "measured": 2,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_gpu_large_byte_qwen3_32b": {
-    "passed": true,
-    "seconds": 0.023437976837158203,
-    "validation": {
-      "job_id": "smoke_gpu_large_byte_qwen3_32b",
       "complete": true,
       "expected": 2,
       "measured": 2,

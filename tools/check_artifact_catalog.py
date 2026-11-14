@@ -33,6 +33,13 @@ def check(root):
             assert (root/p).exists(), 'Missing accepted run reference'
         assert run['source_version'] and run['profiles']
     assert len(run_ids)==len(set(run_ids)), 'Duplicate GPU run IDs'
+    for study in catalog['studies']:
+        for job in study.get('primary_gpu_jobs', []):
+            run=study.get('primary_gpu_job_runs', {}).get(job, study.get('primary_gpu_run'))
+            assert run in run_ids, 'Missing study run: '+study['id']
+            assert (root/'results/gpu/accepted'/run/job).is_dir(), 'Missing primary job: '+job
+    for job,run in index.get('primary_job_overrides', {}).items():
+        assert run in run_ids and (root/'results/gpu/accepted'/run/job).is_dir()
     return dict(catalog_pass=True,studies=len(ids),checked_references=len(references),expected_gpu_execution_units=len(expected),accepted_gpu_runs=len(run_ids),existing_scientific_paths_preserved=layout['existing_scientific_result_paths_preserved'],model_or_api_calls=0)
 
 

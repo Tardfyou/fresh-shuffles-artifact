@@ -1,8 +1,0 @@
-{
-  "job_id": "gpu_ratio_qwen25_05b_1.25",
-  "complete": true,
-  "expected": 100,
-  "measured": 100,
-  "errors_retained": 0,
-  "normal_negative_outcomes_retained": true
-}

@@ -1,0 +1,531 @@
+[
+  {
+    "job": "gpu_cross_key_llama32_1b",
+    "rows": 3010,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_cross_key_qwen25_05b",
+    "rows": 3010,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_fused",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_large_byte_qwen3_14b",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_large_byte_qwen3_32b",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_lifecycle",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz",
+      "records-0001.jsonl.gz",
+      "records-0002.jsonl.gz",
+      "records-0003.jsonl.gz",
+      "records-0004.jsonl.gz",
+      "records-0005.jsonl.gz",
+      "records-0006.jsonl.gz",
+      "records-0007.jsonl.gz",
+      "records-0008.jsonl.gz",
+      "records-0009.jsonl.gz",
+      "records-0010.jsonl.gz",
+      "records-0011.jsonl.gz",
+      "records-0012.jsonl.gz",
+      "records-0013.jsonl.gz",
+      "records-0014.jsonl.gz",
+      "records-0015.jsonl.gz",
+      "records-0016.jsonl.gz",
+      "records-0017.jsonl.gz",
+      "records-0018.jsonl.gz",
+      "records-0019.jsonl.gz",
+      "records-0020.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_matched_llama32_1b",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_matched_qwen25_05b",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_paged_compat_b16",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_paged_compat_b32",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_paged_compat_b64",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_ratio_llama32_1b_1.25",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_ratio_llama32_1b_1.5",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz",
+      "records-0001.jsonl.gz",
+      "records-0002.jsonl.gz",
+      "records-0003.jsonl.gz",
+      "records-0004.jsonl.gz",
+      "records-0005.jsonl.gz",
+      "records-0006.jsonl.gz",
+      "records-0007.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_ratio_qwen25_05b_1.1",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_ratio_qwen25_05b_1.25",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_ratio_qwen25_05b_1.5",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_ratio_qwen25_05b_2.0",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz",
+      "records-0001.jsonl.gz",
+      "records-0002.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_repeat_A_b16_r1",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_repeat_A_b16_r2",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_repeat_A_b16_r3",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_repeat_A_b32_r1",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_repeat_A_b32_r2",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_repeat_A_b32_r3",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_repeat_C_b16_r1",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_repeat_C_b16_r2",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_repeat_C_b16_r3",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_repeat_C_b32_r1",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_repeat_C_b32_r2",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_repeat_C_b32_r3",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_sa_functional_llama32_1b_bfloat16_0of4",
+    "rows": 1510,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_sa_functional_llama32_1b_bfloat16_1of4",
+    "rows": 1510,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_sa_functional_llama32_1b_bfloat16_2of4",
+    "rows": 1500,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_sa_functional_llama32_1b_bfloat16_3of4",
+    "rows": 1500,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_sa_functional_llama32_1b_float32_0of4",
+    "rows": 1510,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_sa_functional_llama32_1b_float32_1of4",
+    "rows": 1510,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_sa_functional_llama32_1b_float32_2of4",
+    "rows": 1500,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_sa_functional_llama32_1b_float32_3of4",
+    "rows": 1500,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_sa_functional_qwen25_05b_bfloat16_0of4",
+    "rows": 1510,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_sa_functional_qwen25_05b_bfloat16_1of4",
+    "rows": 1510,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_sa_functional_qwen25_05b_bfloat16_2of4",
+    "rows": 1500,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_sa_functional_qwen25_05b_bfloat16_3of4",
+    "rows": 1500,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_sa_functional_qwen25_05b_float32_0of4",
+    "rows": 1510,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_sa_functional_qwen25_05b_float32_1of4",
+    "rows": 1510,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_sa_functional_qwen25_05b_float32_2of4",
+    "rows": 1500,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_sa_functional_qwen25_05b_float32_3of4",
+    "rows": 1500,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_sa_rotation",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz",
+      "records-0001.jsonl.gz",
+      "records-0002.jsonl.gz",
+      "records-0003.jsonl.gz",
+      "records-0004.jsonl.gz",
+      "records-0005.jsonl.gz",
+      "records-0006.jsonl.gz",
+      "records-0007.jsonl.gz",
+      "records-0008.jsonl.gz",
+      "records-0009.jsonl.gz",
+      "records-0010.jsonl.gz",
+      "records-0011.jsonl.gz",
+      "records-0012.jsonl.gz",
+      "records-0013.jsonl.gz",
+      "records-0014.jsonl.gz",
+      "records-0015.jsonl.gz",
+      "records-0016.jsonl.gz",
+      "records-0017.jsonl.gz",
+      "records-0018.jsonl.gz",
+      "records-0019.jsonl.gz",
+      "records-0020.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_spectrum_llama32_1b",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "gpu_spectrum_qwen25_05b",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "smoke_gpu_cross_key_qwen25_05b",
+    "rows": 2,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_gpu_fused",
+    "rows": 2,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_gpu_lifecycle",
+    "rows": 2,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_gpu_matched_qwen25_05b",
+    "rows": 2,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_gpu_paged_compat_b16",
+    "rows": 2,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_gpu_ratio_llama32_1b_1.5",
+    "rows": 2,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_gpu_ratio_qwen25_05b_2.0",
+    "rows": 2,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_gpu_repeat_C_b16_r1",
+    "rows": 2,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_gpu_sa_functional_qwen25_05b_bfloat16_0of4",
+    "rows": 20,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_gpu_spectrum_llama32_1b",
+    "rows": 2,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "vllm_baseline_b16",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "vllm_baseline_b32",
+    "rows": 602,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  }
+]

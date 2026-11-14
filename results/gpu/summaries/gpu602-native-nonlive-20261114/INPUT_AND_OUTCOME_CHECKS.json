@@ -1,0 +1,920 @@
+{
+  "jobs": [
+    {
+      "job": "gpu_fused",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_ratio_qwen25_05b_1.1",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_ratio_qwen25_05b_1.25",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_ratio_qwen25_05b_1.5",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_ratio_qwen25_05b_2.0",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_ratio_llama32_1b_1.25",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_ratio_llama32_1b_1.5",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_lifecycle",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_sa_rotation",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_cross_key_qwen25_05b",
+      "measured": 3010,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_spectrum_qwen25_05b",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_matched_qwen25_05b",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_cross_key_llama32_1b",
+      "measured": 3010,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_spectrum_llama32_1b",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_matched_llama32_1b",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_sa_functional_qwen25_05b_float32_0of4",
+      "measured": 1510,
+      "unique_prompt_ids": 151,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_sa_functional_qwen25_05b_float32_1of4",
+      "measured": 1510,
+      "unique_prompt_ids": 151,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_sa_functional_qwen25_05b_float32_2of4",
+      "measured": 1500,
+      "unique_prompt_ids": 150,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_sa_functional_qwen25_05b_float32_3of4",
+      "measured": 1500,
+      "unique_prompt_ids": 150,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_sa_functional_qwen25_05b_bfloat16_0of4",
+      "measured": 1510,
+      "unique_prompt_ids": 151,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_sa_functional_qwen25_05b_bfloat16_1of4",
+      "measured": 1510,
+      "unique_prompt_ids": 151,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_sa_functional_qwen25_05b_bfloat16_2of4",
+      "measured": 1500,
+      "unique_prompt_ids": 150,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_sa_functional_qwen25_05b_bfloat16_3of4",
+      "measured": 1500,
+      "unique_prompt_ids": 150,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_sa_functional_llama32_1b_float32_0of4",
+      "measured": 1510,
+      "unique_prompt_ids": 151,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_sa_functional_llama32_1b_float32_1of4",
+      "measured": 1510,
+      "unique_prompt_ids": 151,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_sa_functional_llama32_1b_float32_2of4",
+      "measured": 1500,
+      "unique_prompt_ids": 150,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_sa_functional_llama32_1b_float32_3of4",
+      "measured": 1500,
+      "unique_prompt_ids": 150,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_sa_functional_llama32_1b_bfloat16_0of4",
+      "measured": 1510,
+      "unique_prompt_ids": 151,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_sa_functional_llama32_1b_bfloat16_1of4",
+      "measured": 1510,
+      "unique_prompt_ids": 151,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_sa_functional_llama32_1b_bfloat16_2of4",
+      "measured": 1500,
+      "unique_prompt_ids": 150,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_sa_functional_llama32_1b_bfloat16_3of4",
+      "measured": 1500,
+      "unique_prompt_ids": 150,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_paged_compat_b16",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_paged_compat_b32",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_paged_compat_b64",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "vllm_baseline_b16",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "vllm_baseline_b32",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_large_byte_qwen3_14b",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_large_byte_qwen3_32b",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_repeat_A_b16_r1",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_repeat_A_b16_r2",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_repeat_A_b16_r3",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_repeat_C_b16_r1",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_repeat_C_b16_r2",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_repeat_C_b16_r3",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_repeat_A_b32_r1",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_repeat_A_b32_r2",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_repeat_A_b32_r3",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_repeat_C_b32_r1",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_repeat_C_b32_r2",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    },
+    {
+      "job": "gpu_repeat_C_b32_r3",
+      "measured": 602,
+      "unique_prompt_ids": 602,
+      "input_binding": true,
+      "invocation_environment_binding": true,
+      "retained_error_rows": 0
+    }
+  ],
+  "target_ids": 602,
+  "formal_records": 49364,
+  "records_by_kind": {
+    "fused": 602,
+    "ratio": 3612,
+    "lifecycle": 602,
+    "sa_rotation": 602,
+    "cross_key": 6020,
+    "spectrum": 1204,
+    "matched": 1204,
+    "sa_functional": 24080,
+    "paged_compat": 1806,
+    "vllm_baseline": 1204,
+    "large_byte": 1204,
+    "repeat_reference": 7224
+  },
+  "immutable_invocation_job_files": 52,
+  "retained_error_rows": 0,
+  "sa": {
+    "float32|original": {
+      "total": 18060,
+      "passes": 11780,
+      "mutated_source_segments": 7122,
+      "mixed_total": 6168,
+      "mixed_pass": 0
+    },
+    "float32|refresh": {
+      "total": 18060,
+      "passes": 11764,
+      "mutated_source_segments": 7122,
+      "mixed_total": 6168,
+      "mixed_pass": 0
+    },
+    "bfloat16|original": {
+      "total": 18060,
+      "passes": 172,
+      "mutated_source_segments": 7122,
+      "mixed_total": 0,
+      "mixed_pass": 0
+    },
+    "bfloat16|refresh": {
+      "total": 18060,
+      "passes": 183,
+      "mutated_source_segments": 7122,
+      "mixed_total": 0,
+      "mixed_pass": 0
+    }
+  },
+  "paired_segments": 36120,
+  "original_only_pass": 206,
+  "refresh_only_pass": 201,
+  "max_fp32_full_cached_error": 0.0003819465637207031,
+  "fp32_full_cached_argmax_equal": true,
+  "repeat_reference": {
+    "vllm_baseline_b16": {
+      "n": 602,
+      "equal": 558
+    },
+    "vllm_baseline_b32": {
+      "n": 602,
+      "equal": 541
+    },
+    "gpu_repeat_A_b16_r1": {
+      "n": 602,
+      "equal": 602,
+      "changed_ids": []
+    },
+    "gpu_repeat_A_b16_r2": {
+      "n": 602,
+      "equal": 602,
+      "changed_ids": []
+    },
+    "gpu_repeat_A_b16_r3": {
+      "n": 602,
+      "equal": 602,
+      "changed_ids": []
+    },
+    "gpu_repeat_C_b16_r1": {
+      "n": 602,
+      "equal": 555,
+      "changed_ids": [
+        "wc25_128_0068",
+        "wc25_128_0119",
+        "wc25_128_0180",
+        "wc25_128_0187",
+        "wc25_128_0298",
+        "wc25_128_0307",
+        "wc25_128_0346",
+        "wc25_128_0495",
+        "wc25_128_0514",
+        "wc25_256_0041",
+        "wc25_256_0132",
+        "wc25_256_0139",
+        "wc25_256_0152",
+        "wc25_256_0415",
+        "wc25_32_0088",
+        "wc25_32_0113",
+        "wc25_32_0126",
+        "wc25_32_0138",
+        "wc25_32_0139",
+        "wc25_32_0248",
+        "wc25_32_0260",
+        "wc25_32_0273",
+        "wc25_32_0342",
+        "wc25_32_0361",
+        "wc25_32_0417",
+        "wc25_32_0491",
+        "wc25_32_0588",
+        "wc25_512_0192",
+        "wc25_512_0238",
+        "wc25_512_0282",
+        "wc25_512_0537",
+        "wc25_64_0016",
+        "wc25_64_0018",
+        "wc25_64_0019",
+        "wc25_64_0081",
+        "wc25_64_0092",
+        "wc25_64_0127",
+        "wc25_64_0179",
+        "wc25_64_0207",
+        "wc25_64_0239",
+        "wc25_64_0329",
+        "wc25_64_0389",
+        "wc25_64_0403",
+        "wc25_64_0423",
+        "wc25_64_0463",
+        "wc25_64_0511",
+        "wc25_64_0513"
+      ]
+    },
+    "gpu_repeat_C_b16_r2": {
+      "n": 602,
+      "equal": 555,
+      "changed_ids": [
+        "wc25_128_0068",
+        "wc25_128_0119",
+        "wc25_128_0180",
+        "wc25_128_0187",
+        "wc25_128_0298",
+        "wc25_128_0307",
+        "wc25_128_0346",
+        "wc25_128_0495",
+        "wc25_128_0514",
+        "wc25_256_0041",
+        "wc25_256_0132",
+        "wc25_256_0139",
+        "wc25_256_0152",
+        "wc25_256_0415",
+        "wc25_32_0088",
+        "wc25_32_0113",
+        "wc25_32_0126",
+        "wc25_32_0138",
+        "wc25_32_0139",
+        "wc25_32_0248",
+        "wc25_32_0260",
+        "wc25_32_0273",
+        "wc25_32_0342",
+        "wc25_32_0361",
+        "wc25_32_0417",
+        "wc25_32_0491",
+        "wc25_32_0588",
+        "wc25_512_0192",
+        "wc25_512_0238",
+        "wc25_512_0282",
+        "wc25_512_0537",
+        "wc25_64_0016",
+        "wc25_64_0018",
+        "wc25_64_0019",
+        "wc25_64_0081",
+        "wc25_64_0092",
+        "wc25_64_0127",
+        "wc25_64_0179",
+        "wc25_64_0207",
+        "wc25_64_0239",
+        "wc25_64_0329",
+        "wc25_64_0389",
+        "wc25_64_0403",
+        "wc25_64_0423",
+        "wc25_64_0463",
+        "wc25_64_0511",
+        "wc25_64_0513"
+      ]
+    },
+    "gpu_repeat_C_b16_r3": {
+      "n": 602,
+      "equal": 555,
+      "changed_ids": [
+        "wc25_128_0068",
+        "wc25_128_0119",
+        "wc25_128_0180",
+        "wc25_128_0187",
+        "wc25_128_0298",
+        "wc25_128_0307",
+        "wc25_128_0346",
+        "wc25_128_0495",
+        "wc25_128_0514",
+        "wc25_256_0041",
+        "wc25_256_0132",
+        "wc25_256_0139",
+        "wc25_256_0152",
+        "wc25_256_0415",
+        "wc25_32_0088",
+        "wc25_32_0113",
+        "wc25_32_0126",
+        "wc25_32_0138",
+        "wc25_32_0139",
+        "wc25_32_0248",
+        "wc25_32_0260",
+        "wc25_32_0273",
+        "wc25_32_0342",
+        "wc25_32_0361",
+        "wc25_32_0417",
+        "wc25_32_0491",
+        "wc25_32_0588",
+        "wc25_512_0192",
+        "wc25_512_0238",
+        "wc25_512_0282",
+        "wc25_512_0537",
+        "wc25_64_0016",
+        "wc25_64_0018",
+        "wc25_64_0019",
+        "wc25_64_0081",
+        "wc25_64_0092",
+        "wc25_64_0127",
+        "wc25_64_0179",
+        "wc25_64_0207",
+        "wc25_64_0239",
+        "wc25_64_0329",
+        "wc25_64_0389",
+        "wc25_64_0403",
+        "wc25_64_0423",
+        "wc25_64_0463",
+        "wc25_64_0511",
+        "wc25_64_0513"
+      ]
+    },
+    "gpu_repeat_A_b32_r1": {
+      "n": 602,
+      "equal": 602,
+      "changed_ids": []
+    },
+    "gpu_repeat_A_b32_r2": {
+      "n": 602,
+      "equal": 602,
+      "changed_ids": []
+    },
+    "gpu_repeat_A_b32_r3": {
+      "n": 602,
+      "equal": 602,
+      "changed_ids": []
+    },
+    "gpu_repeat_C_b32_r1": {
+      "n": 602,
+      "equal": 539,
+      "changed_ids": [
+        "wc25_128_0068",
+        "wc25_128_0072",
+        "wc25_128_0119",
+        "wc25_128_0180",
+        "wc25_128_0242",
+        "wc25_128_0273",
+        "wc25_128_0307",
+        "wc25_128_0346",
+        "wc25_128_0514",
+        "wc25_128_0542",
+        "wc25_256_0041",
+        "wc25_256_0132",
+        "wc25_256_0152",
+        "wc25_256_0159",
+        "wc25_256_0231",
+        "wc25_256_0255",
+        "wc25_256_0395",
+        "wc25_256_0412",
+        "wc25_32_0032",
+        "wc25_32_0052",
+        "wc25_32_0088",
+        "wc25_32_0101",
+        "wc25_32_0113",
+        "wc25_32_0126",
+        "wc25_32_0138",
+        "wc25_32_0139",
+        "wc25_32_0248",
+        "wc25_32_0260",
+        "wc25_32_0273",
+        "wc25_32_0301",
+        "wc25_32_0304",
+        "wc25_32_0342",
+        "wc25_32_0361",
+        "wc25_32_0404",
+        "wc25_32_0405",
+        "wc25_32_0417",
+        "wc25_32_0438",
+        "wc25_32_0527",
+        "wc25_32_0575",
+        "wc25_32_0588",
+        "wc25_512_0192",
+        "wc25_512_0202",
+        "wc25_512_0238",
+        "wc25_512_0282",
+        "wc25_512_0287",
+        "wc25_512_0537",
+        "wc25_64_0016",
+        "wc25_64_0018",
+        "wc25_64_0019",
+        "wc25_64_0081",
+        "wc25_64_0165",
+        "wc25_64_0179",
+        "wc25_64_0182",
+        "wc25_64_0207",
+        "wc25_64_0239",
+        "wc25_64_0261",
+        "wc25_64_0276",
+        "wc25_64_0293",
+        "wc25_64_0425",
+        "wc25_64_0469",
+        "wc25_64_0511",
+        "wc25_64_0513",
+        "wc25_64_0597"
+      ]
+    },
+    "gpu_repeat_C_b32_r2": {
+      "n": 602,
+      "equal": 539,
+      "changed_ids": [
+        "wc25_128_0068",
+        "wc25_128_0072",
+        "wc25_128_0119",
+        "wc25_128_0180",
+        "wc25_128_0242",
+        "wc25_128_0273",
+        "wc25_128_0307",
+        "wc25_128_0346",
+        "wc25_128_0514",
+        "wc25_128_0542",
+        "wc25_256_0041",
+        "wc25_256_0132",
+        "wc25_256_0152",
+        "wc25_256_0159",
+        "wc25_256_0231",
+        "wc25_256_0255",
+        "wc25_256_0395",
+        "wc25_256_0412",
+        "wc25_32_0032",
+        "wc25_32_0052",
+        "wc25_32_0088",
+        "wc25_32_0101",
+        "wc25_32_0113",
+        "wc25_32_0126",
+        "wc25_32_0138",
+        "wc25_32_0139",
+        "wc25_32_0248",
+        "wc25_32_0260",
+        "wc25_32_0273",
+        "wc25_32_0301",
+        "wc25_32_0304",
+        "wc25_32_0342",
+        "wc25_32_0361",
+        "wc25_32_0404",
+        "wc25_32_0405",
+        "wc25_32_0417",
+        "wc25_32_0438",
+        "wc25_32_0527",
+        "wc25_32_0575",
+        "wc25_32_0588",
+        "wc25_512_0192",
+        "wc25_512_0202",
+        "wc25_512_0238",
+        "wc25_512_0282",
+        "wc25_512_0287",
+        "wc25_512_0537",
+        "wc25_64_0016",
+        "wc25_64_0018",
+        "wc25_64_0019",
+        "wc25_64_0081",
+        "wc25_64_0165",
+        "wc25_64_0179",
+        "wc25_64_0182",
+        "wc25_64_0207",
+        "wc25_64_0239",
+        "wc25_64_0261",
+        "wc25_64_0276",
+        "wc25_64_0293",
+        "wc25_64_0425",
+        "wc25_64_0469",
+        "wc25_64_0511",
+        "wc25_64_0513",
+        "wc25_64_0597"
+      ]
+    },
+    "gpu_repeat_C_b32_r3": {
+      "n": 602,
+      "equal": 539,
+      "changed_ids": [
+        "wc25_128_0068",
+        "wc25_128_0072",
+        "wc25_128_0119",
+        "wc25_128_0180",
+        "wc25_128_0242",
+        "wc25_128_0273",
+        "wc25_128_0307",
+        "wc25_128_0346",
+        "wc25_128_0514",
+        "wc25_128_0542",
+        "wc25_256_0041",
+        "wc25_256_0132",
+        "wc25_256_0152",
+        "wc25_256_0159",
+        "wc25_256_0231",
+        "wc25_256_0255",
+        "wc25_256_0395",
+        "wc25_256_0412",
+        "wc25_32_0032",
+        "wc25_32_0052",
+        "wc25_32_0088",
+        "wc25_32_0101",
+        "wc25_32_0113",
+        "wc25_32_0126",
+        "wc25_32_0138",
+        "wc25_32_0139",
+        "wc25_32_0248",
+        "wc25_32_0260",
+        "wc25_32_0273",
+        "wc25_32_0301",
+        "wc25_32_0304",
+        "wc25_32_0342",
+        "wc25_32_0361",
+        "wc25_32_0404",
+        "wc25_32_0405",
+        "wc25_32_0417",
+        "wc25_32_0438",
+        "wc25_32_0527",
+        "wc25_32_0575",
+        "wc25_32_0588",
+        "wc25_512_0192",
+        "wc25_512_0202",
+        "wc25_512_0238",
+        "wc25_512_0282",
+        "wc25_512_0287",
+        "wc25_512_0537",
+        "wc25_64_0016",
+        "wc25_64_0018",
+        "wc25_64_0019",
+        "wc25_64_0081",
+        "wc25_64_0165",
+        "wc25_64_0179",
+        "wc25_64_0182",
+        "wc25_64_0207",
+        "wc25_64_0239",
+        "wc25_64_0261",
+        "wc25_64_0276",
+        "wc25_64_0293",
+        "wc25_64_0425",
+        "wc25_64_0469",
+        "wc25_64_0511",
+        "wc25_64_0513",
+        "wc25_64_0597"
+      ]
+    }
+  },
+  "paged": {
+    "gpu_paged_compat_b16": {
+      "requests": 602,
+      "segments": 3612,
+      "argmax_equal": 3612,
+      "max_logit_error": 0.00064849853515625
+    },
+    "gpu_paged_compat_b32": {
+      "requests": 602,
+      "segments": 3612,
+      "argmax_equal": 3612,
+      "max_logit_error": 0.000568389892578125
+    },
+    "gpu_paged_compat_b64": {
+      "requests": 602,
+      "segments": 3612,
+      "argmax_equal": 3612,
+      "max_logit_error": 0.0007489919662475586
+    }
+  },
+  "large_byte": {
+    "gpu_large_byte_qwen3_14b": {
+      "n": 602,
+      "passes": 602
+    },
+    "gpu_large_byte_qwen3_32b": {
+      "n": 602,
+      "passes": 602
+    }
+  },
+  "spectrum": {
+    "qwen25_05b": {
+      "n": 602,
+      "distinct_truths": 291,
+      "hits": {
+        "gram_first": 258,
+        "sorted_row_norm_first": 30,
+        "procrustes_first": 75
+      }
+    },
+    "llama32_1b": {
+      "n": 602,
+      "distinct_truths": 283,
+      "hits": {
+        "gram_first": 402,
+        "sorted_row_norm_first": 176,
+        "procrustes_first": 13
+      }
+    }
+  },
+  "source_scope": {
+    "actual_server_source_included": false,
+    "source_byte_comparison_claimed": false,
+    "supervisor_attests_scientific_files_unchanged": true,
+    "issued_job_and_target_manifests_exact": true
+  },
+  "new_model_or_api_calls": 0
+}

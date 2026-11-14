@@ -1,0 +1,118 @@
+{
+  "scaling": [
+    {
+      "same_epoch": {
+        "correct": 359936,
+        "total": 359936,
+        "percent": 100.0
+      },
+      "adapted": {
+        "correct": 359936,
+        "total": 359936,
+        "percent": 100.0
+      },
+      "model": "Qwen2.5-0.5B",
+      "ratio": 1.1,
+      "net_head_token_gain": 0,
+      "gain_percentage_points": 0.0,
+      "sample_ids_improved": 0,
+      "sample_ids_unchanged": 602,
+      "sample_ids_degraded": 0
+    },
+    {
+      "same_epoch": {
+        "correct": 359936,
+        "total": 359936,
+        "percent": 100.0
+      },
+      "adapted": {
+        "correct": 359936,
+        "total": 359936,
+        "percent": 100.0
+      },
+      "model": "Qwen2.5-0.5B",
+      "ratio": 1.25,
+      "net_head_token_gain": 0,
+      "gain_percentage_points": 0.0,
+      "sample_ids_improved": 0,
+      "sample_ids_unchanged": 602,
+      "sample_ids_degraded": 0
+    },
+    {
+      "same_epoch": {
+        "correct": 359935,
+        "total": 359936,
+        "percent": 99.99972217283073
+      },
+      "adapted": {
+        "correct": 359936,
+        "total": 359936,
+        "percent": 100.0
+      },
+      "model": "Qwen2.5-0.5B",
+      "ratio": 1.5,
+      "net_head_token_gain": 1,
+      "gain_percentage_points": 0.0002778271692704948,
+      "sample_ids_improved": 1,
+      "sample_ids_unchanged": 601,
+      "sample_ids_degraded": 0
+    },
+    {
+      "same_epoch": {
+        "correct": 355638,
+        "total": 359936,
+        "percent": 98.80589882645803
+      },
+      "adapted": {
+        "correct": 359936,
+        "total": 359936,
+        "percent": 100.0
+      },
+      "model": "Qwen2.5-0.5B",
+      "ratio": 2.0,
+      "net_head_token_gain": 4298,
+      "gain_percentage_points": 1.1941011735419664,
+      "sample_ids_improved": 424,
+      "sample_ids_unchanged": 178,
+      "sample_ids_degraded": 0
+    },
+    {
+      "same_epoch": {
+        "correct": 1428782,
+        "total": 1429120,
+        "percent": 99.97634908195253
+      },
+      "adapted": {
+        "correct": 1429120,
+        "total": 1429120,
+        "percent": 100.0
+      },
+      "model": "Llama-3.2-1B",
+      "ratio": 1.25,
+      "net_head_token_gain": 338,
+      "gain_percentage_points": 0.023650918047465552,
+      "sample_ids_improved": 128,
+      "sample_ids_unchanged": 474,
+      "sample_ids_degraded": 0
+    },
+    {
+      "same_epoch": {
+        "correct": 1417992,
+        "total": 1429120,
+        "percent": 99.22133900582176
+      },
+      "adapted": {
+        "correct": 1429120,
+        "total": 1429120,
+        "percent": 100.0
+      },
+      "model": "Llama-3.2-1B",
+      "ratio": 1.5,
+      "net_head_token_gain": 11128,
+      "gain_percentage_points": 0.7786609941782388,
+      "sample_ids_improved": 602,
+      "sample_ids_unchanged": 0,
+      "sample_ids_degraded": 0
+    }
+  ]
+}

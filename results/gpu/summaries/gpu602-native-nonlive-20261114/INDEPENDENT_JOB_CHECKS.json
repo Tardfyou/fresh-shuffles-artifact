@@ -1,0 +1,722 @@
+{
+  "gpu_fused": {
+    "passed": true,
+    "seconds": 2.5095105171203613,
+    "validation": {
+      "job_id": "gpu_fused",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_ratio_qwen25_05b_1.25": {
+    "passed": true,
+    "seconds": 2.6653852462768555,
+    "validation": {
+      "job_id": "gpu_ratio_qwen25_05b_1.25",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_ratio_qwen25_05b_1.1": {
+    "passed": true,
+    "seconds": 2.696600914001465,
+    "validation": {
+      "job_id": "gpu_ratio_qwen25_05b_1.1",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_ratio_qwen25_05b_1.5": {
+    "passed": true,
+    "seconds": 0.529334306716919,
+    "validation": {
+      "job_id": "gpu_ratio_qwen25_05b_1.5",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_ratio_llama32_1b_1.25": {
+    "passed": true,
+    "seconds": 2.0398049354553223,
+    "validation": {
+      "job_id": "gpu_ratio_llama32_1b_1.25",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_ratio_qwen25_05b_2.0": {
+    "passed": true,
+    "seconds": 2.9174933433532715,
+    "validation": {
+      "job_id": "gpu_ratio_qwen25_05b_2.0",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_ratio_llama32_1b_1.5": {
+    "passed": true,
+    "seconds": 8.505738496780396,
+    "validation": {
+      "job_id": "gpu_ratio_llama32_1b_1.5",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_cross_key_qwen25_05b": {
+    "passed": true,
+    "seconds": 1.5263950824737549,
+    "validation": {
+      "job_id": "gpu_cross_key_qwen25_05b",
+      "complete": true,
+      "expected": 3010,
+      "measured": 3010,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_spectrum_qwen25_05b": {
+    "passed": true,
+    "seconds": 0.5178353786468506,
+    "validation": {
+      "job_id": "gpu_spectrum_qwen25_05b",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_matched_qwen25_05b": {
+    "passed": true,
+    "seconds": 0.9293999671936035,
+    "validation": {
+      "job_id": "gpu_matched_qwen25_05b",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_cross_key_llama32_1b": {
+    "passed": true,
+    "seconds": 4.710006952285767,
+    "validation": {
+      "job_id": "gpu_cross_key_llama32_1b",
+      "complete": true,
+      "expected": 3010,
+      "measured": 3010,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_spectrum_llama32_1b": {
+    "passed": true,
+    "seconds": 0.35253214836120605,
+    "validation": {
+      "job_id": "gpu_spectrum_llama32_1b",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_matched_llama32_1b": {
+    "passed": true,
+    "seconds": 0.8637120723724365,
+    "validation": {
+      "job_id": "gpu_matched_llama32_1b",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_sa_functional_qwen25_05b_float32_0of4": {
+    "passed": true,
+    "seconds": 0.9466049671173096,
+    "validation": {
+      "job_id": "gpu_sa_functional_qwen25_05b_float32_0of4",
+      "complete": true,
+      "expected": 1510,
+      "measured": 1510,
+      "normal_negative_outcomes": 566,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_sa_functional_qwen25_05b_float32_1of4": {
+    "passed": true,
+    "seconds": 0.885329008102417,
+    "validation": {
+      "job_id": "gpu_sa_functional_qwen25_05b_float32_1of4",
+      "complete": true,
+      "expected": 1510,
+      "measured": 1510,
+      "normal_negative_outcomes": 571,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_sa_functional_qwen25_05b_float32_2of4": {
+    "passed": true,
+    "seconds": 0.8979651927947998,
+    "validation": {
+      "job_id": "gpu_sa_functional_qwen25_05b_float32_2of4",
+      "complete": true,
+      "expected": 1500,
+      "measured": 1500,
+      "normal_negative_outcomes": 563,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_sa_functional_qwen25_05b_float32_3of4": {
+    "passed": true,
+    "seconds": 0.8454279899597168,
+    "validation": {
+      "job_id": "gpu_sa_functional_qwen25_05b_float32_3of4",
+      "complete": true,
+      "expected": 1500,
+      "measured": 1500,
+      "normal_negative_outcomes": 545,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_lifecycle": {
+    "passed": true,
+    "seconds": 19.939592361450195,
+    "validation": {
+      "job_id": "gpu_lifecycle",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_sa_functional_qwen25_05b_bfloat16_0of4": {
+    "passed": true,
+    "seconds": 0.9633638858795166,
+    "validation": {
+      "job_id": "gpu_sa_functional_qwen25_05b_bfloat16_0of4",
+      "complete": true,
+      "expected": 1510,
+      "measured": 1510,
+      "normal_negative_outcomes": 1510,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_sa_rotation": {
+    "passed": true,
+    "seconds": 19.73943281173706,
+    "validation": {
+      "job_id": "gpu_sa_rotation",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_sa_functional_qwen25_05b_bfloat16_1of4": {
+    "passed": true,
+    "seconds": 0.7147998809814453,
+    "validation": {
+      "job_id": "gpu_sa_functional_qwen25_05b_bfloat16_1of4",
+      "complete": true,
+      "expected": 1510,
+      "measured": 1510,
+      "normal_negative_outcomes": 1510,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_sa_functional_qwen25_05b_bfloat16_2of4": {
+    "passed": true,
+    "seconds": 0.8954110145568848,
+    "validation": {
+      "job_id": "gpu_sa_functional_qwen25_05b_bfloat16_2of4",
+      "complete": true,
+      "expected": 1500,
+      "measured": 1500,
+      "normal_negative_outcomes": 1500,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_sa_functional_llama32_1b_float32_0of4": {
+    "passed": true,
+    "seconds": 0.764589786529541,
+    "validation": {
+      "job_id": "gpu_sa_functional_llama32_1b_float32_0of4",
+      "complete": true,
+      "expected": 1510,
+      "measured": 1510,
+      "normal_negative_outcomes": 518,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_sa_functional_qwen25_05b_bfloat16_3of4": {
+    "passed": true,
+    "seconds": 0.8467051982879639,
+    "validation": {
+      "job_id": "gpu_sa_functional_qwen25_05b_bfloat16_3of4",
+      "complete": true,
+      "expected": 1500,
+      "measured": 1500,
+      "normal_negative_outcomes": 1500,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_sa_functional_llama32_1b_float32_1of4": {
+    "passed": true,
+    "seconds": 0.66937255859375,
+    "validation": {
+      "job_id": "gpu_sa_functional_llama32_1b_float32_1of4",
+      "complete": true,
+      "expected": 1510,
+      "measured": 1510,
+      "normal_negative_outcomes": 499,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_sa_functional_llama32_1b_float32_2of4": {
+    "passed": true,
+    "seconds": 0.6687357425689697,
+    "validation": {
+      "job_id": "gpu_sa_functional_llama32_1b_float32_2of4",
+      "complete": true,
+      "expected": 1500,
+      "measured": 1500,
+      "normal_negative_outcomes": 524,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_sa_functional_llama32_1b_float32_3of4": {
+    "passed": true,
+    "seconds": 0.7356870174407959,
+    "validation": {
+      "job_id": "gpu_sa_functional_llama32_1b_float32_3of4",
+      "complete": true,
+      "expected": 1500,
+      "measured": 1500,
+      "normal_negative_outcomes": 508,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_sa_functional_llama32_1b_bfloat16_0of4": {
+    "passed": true,
+    "seconds": 0.7446994781494141,
+    "validation": {
+      "job_id": "gpu_sa_functional_llama32_1b_bfloat16_0of4",
+      "complete": true,
+      "expected": 1510,
+      "measured": 1510,
+      "normal_negative_outcomes": 1510,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_sa_functional_llama32_1b_bfloat16_1of4": {
+    "passed": true,
+    "seconds": 0.7388508319854736,
+    "validation": {
+      "job_id": "gpu_sa_functional_llama32_1b_bfloat16_1of4",
+      "complete": true,
+      "expected": 1510,
+      "measured": 1510,
+      "normal_negative_outcomes": 1510,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_sa_functional_llama32_1b_bfloat16_2of4": {
+    "passed": true,
+    "seconds": 0.6929876804351807,
+    "validation": {
+      "job_id": "gpu_sa_functional_llama32_1b_bfloat16_2of4",
+      "complete": true,
+      "expected": 1500,
+      "measured": 1500,
+      "normal_negative_outcomes": 1500,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_paged_compat_b16": {
+    "passed": true,
+    "seconds": 0.1671772003173828,
+    "validation": {
+      "job_id": "gpu_paged_compat_b16",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_paged_compat_b32": {
+    "passed": true,
+    "seconds": 0.15976953506469727,
+    "validation": {
+      "job_id": "gpu_paged_compat_b32",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_paged_compat_b64": {
+    "passed": true,
+    "seconds": 0.16184520721435547,
+    "validation": {
+      "job_id": "gpu_paged_compat_b64",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "vllm_baseline_b16": {
+    "passed": true,
+    "seconds": 0.1511843204498291,
+    "validation": {
+      "job_id": "vllm_baseline_b16",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_sa_functional_llama32_1b_bfloat16_3of4": {
+    "passed": true,
+    "seconds": 0.6936697959899902,
+    "validation": {
+      "job_id": "gpu_sa_functional_llama32_1b_bfloat16_3of4",
+      "complete": true,
+      "expected": 1500,
+      "measured": 1500,
+      "normal_negative_outcomes": 1498,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "vllm_baseline_b32": {
+    "passed": true,
+    "seconds": 0.1449892520904541,
+    "validation": {
+      "job_id": "vllm_baseline_b32",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_large_byte_qwen3_14b": {
+    "passed": true,
+    "seconds": 0.14751505851745605,
+    "validation": {
+      "job_id": "gpu_large_byte_qwen3_14b",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_large_byte_qwen3_32b": {
+    "passed": true,
+    "seconds": 0.15851521492004395,
+    "validation": {
+      "job_id": "gpu_large_byte_qwen3_32b",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_repeat_A_b16_r1": {
+    "passed": true,
+    "seconds": 0.1431436538696289,
+    "validation": {
+      "job_id": "gpu_repeat_A_b16_r1",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_repeat_A_b16_r2": {
+    "passed": true,
+    "seconds": 0.1439070701599121,
+    "validation": {
+      "job_id": "gpu_repeat_A_b16_r2",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_repeat_A_b16_r3": {
+    "passed": true,
+    "seconds": 0.14560580253601074,
+    "validation": {
+      "job_id": "gpu_repeat_A_b16_r3",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_repeat_C_b16_r1": {
+    "passed": true,
+    "seconds": 0.16457009315490723,
+    "validation": {
+      "job_id": "gpu_repeat_C_b16_r1",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_repeat_C_b16_r2": {
+    "passed": true,
+    "seconds": 0.15403294563293457,
+    "validation": {
+      "job_id": "gpu_repeat_C_b16_r2",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_repeat_C_b16_r3": {
+    "passed": true,
+    "seconds": 0.14233136177062988,
+    "validation": {
+      "job_id": "gpu_repeat_C_b16_r3",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_repeat_A_b32_r1": {
+    "passed": true,
+    "seconds": 0.1527233123779297,
+    "validation": {
+      "job_id": "gpu_repeat_A_b32_r1",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_repeat_A_b32_r2": {
+    "passed": true,
+    "seconds": 0.15397119522094727,
+    "validation": {
+      "job_id": "gpu_repeat_A_b32_r2",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_repeat_A_b32_r3": {
+    "passed": true,
+    "seconds": 0.1433699131011963,
+    "validation": {
+      "job_id": "gpu_repeat_A_b32_r3",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_repeat_C_b32_r1": {
+    "passed": true,
+    "seconds": 0.1452317237854004,
+    "validation": {
+      "job_id": "gpu_repeat_C_b32_r1",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_repeat_C_b32_r2": {
+    "passed": true,
+    "seconds": 0.14491915702819824,
+    "validation": {
+      "job_id": "gpu_repeat_C_b32_r2",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "smoke_gpu_fused": {
+    "passed": true,
+    "seconds": 0.030881166458129883,
+    "validation": {
+      "job_id": "smoke_gpu_fused",
+      "complete": true,
+      "expected": 2,
+      "measured": 2,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "smoke_gpu_ratio_qwen25_05b_2.0": {
+    "passed": true,
+    "seconds": 0.04206061363220215,
+    "validation": {
+      "job_id": "smoke_gpu_ratio_qwen25_05b_2.0",
+      "complete": true,
+      "expected": 2,
+      "measured": 2,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "smoke_gpu_ratio_llama32_1b_1.5": {
+    "passed": true,
+    "seconds": 0.03945612907409668,
+    "validation": {
+      "job_id": "smoke_gpu_ratio_llama32_1b_1.5",
+      "complete": true,
+      "expected": 2,
+      "measured": 2,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "gpu_repeat_C_b32_r3": {
+    "passed": true,
+    "seconds": 0.1425950527191162,
+    "validation": {
+      "job_id": "gpu_repeat_C_b32_r3",
+      "complete": true,
+      "expected": 602,
+      "measured": 602,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "smoke_gpu_sa_functional_qwen25_05b_bfloat16_0of4": {
+    "passed": true,
+    "seconds": 0.02005910873413086,
+    "validation": {
+      "job_id": "smoke_gpu_sa_functional_qwen25_05b_bfloat16_0of4",
+      "complete": true,
+      "expected": 20,
+      "measured": 20,
+      "normal_negative_outcomes": 20,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "smoke_gpu_cross_key_qwen25_05b": {
+    "passed": true,
+    "seconds": 0.029768943786621094,
+    "validation": {
+      "job_id": "smoke_gpu_cross_key_qwen25_05b",
+      "complete": true,
+      "expected": 2,
+      "measured": 2,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "smoke_gpu_lifecycle": {
+    "passed": true,
+    "seconds": 0.0681908130645752,
+    "validation": {
+      "job_id": "smoke_gpu_lifecycle",
+      "complete": true,
+      "expected": 2,
+      "measured": 2,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "smoke_gpu_paged_compat_b16": {
+    "passed": true,
+    "seconds": 0.029293537139892578,
+    "validation": {
+      "job_id": "smoke_gpu_paged_compat_b16",
+      "complete": true,
+      "expected": 2,
+      "measured": 2,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "smoke_gpu_repeat_C_b16_r1": {
+    "passed": true,
+    "seconds": 0.029189586639404297,
+    "validation": {
+      "job_id": "smoke_gpu_repeat_C_b16_r1",
+      "complete": true,
+      "expected": 2,
+      "measured": 2,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "smoke_gpu_spectrum_llama32_1b": {
+    "passed": true,
+    "seconds": 0.13569092750549316,
+    "validation": {
+      "job_id": "smoke_gpu_spectrum_llama32_1b",
+      "complete": true,
+      "expected": 2,
+      "measured": 2,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  },
+  "smoke_gpu_matched_qwen25_05b": {
+    "passed": true,
+    "seconds": 0.13592267036437988,
+    "validation": {
+      "job_id": "smoke_gpu_matched_qwen25_05b",
+      "complete": true,
+      "expected": 2,
+      "measured": 2,
+      "normal_negative_outcomes": 0,
+      "predictions_and_denominators_checked": true
+    }
+  }
+}

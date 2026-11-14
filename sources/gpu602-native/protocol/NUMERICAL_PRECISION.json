@@ -1,0 +1,12 @@
+{
+  "created": "2026-11-09",
+  "scope": "New GPU measurements only; historical CPU records unchanged",
+  "main": "FP32 native model and FP32 official protection for models that fit single80GiB",
+  "large_full": "14B/32B full BF16 model with FP32 official protection; FP32 retained for dictionary, calibration and matching",
+  "large_fp32": "14B full native FP32;32B actual first layer in FP32 after independently saved full-checkpoint native equivalence gate",
+  "bridges": "Legacy calibrator and BF16 cloak profiles kept separate; never overwrite or pool them into FP32 profiles",
+  "arithmetic": "Unmodified official transform; TF32 disabled, highest float32 matmul precision, BF16 reduced-precision reductions disabled; no threshold relaxation or removal of wrong outputs",
+  "motivation": "Prevent avoidable BF16 marker-addition loss before demixing; BF16 model quantization remains part of the recorded large-model input representation",
+  "verification": "GPU smoke checks exact native-cache gates, official configuration, complete predictions and denominators; known-key marker controls use fixed446 fixtures",
+  "focused_studies": "Probe/fused/ratio/lifecycle/cross-key/privacy/direction/matched/ordering/calibration use FP32 protection, explicitly fixed per job. Intentional BF16 numerical and S/a consumer controls retain their declared dtype."
+}

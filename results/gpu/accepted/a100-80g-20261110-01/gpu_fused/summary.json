@@ -1,8 +1,0 @@
-{
-  "job_id": "gpu_fused",
-  "complete": true,
-  "expected": 300,
-  "measured": 300,
-  "errors_retained": 0,
-  "normal_negative_outcomes_retained": true
-}

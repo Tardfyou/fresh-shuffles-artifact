@@ -1,0 +1,8 @@
+{
+  "dataset": "mmlu",
+  "rows": 14042,
+  "source": "Official prompt/metric definitions; every test item retained.",
+  "python_example_seed": 42,
+  "example_selection_frozen_across_conditions": true,
+  "original_unseeded_squad_choice_replaced_with_declared_seed": false
+}

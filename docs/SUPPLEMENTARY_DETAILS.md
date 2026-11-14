@@ -45,11 +45,9 @@ protection is a trusted assumption; hardware key release is simulated.
 
 ## Matched control and display conventions
 
-The lifecycle control uses 100 fixed targets and both heads. The token-frequency
-prior is fitted on 501 other OR prompts after excluding the evaluated IDs and
-identical complete-block spans. Its exact expected multiset overlap sums
-E[min(X_t,n_t)] over tokens, where X_t is Binomial(16,p_t), n_t is the target
-multiplicity and p_t the fitted frequency. No target is excluded.
+The current lifecycle control uses all602 frozen targets and both heads.
+The obsolete100-target frequency-prior control is retired with that smaller
+cohort; it is not reported as a result on602 inputs. See GPU602_NATIVE.md.
 
 The percentage color-bin cuts are 0.01, 0.1, 1, 5, 25, 50, 75, 95, 99, 99.9
 and 99.99. Fractional-error/cosine cells use the same magnitude scale after

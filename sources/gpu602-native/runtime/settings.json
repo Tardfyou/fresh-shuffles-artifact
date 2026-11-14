@@ -1,0 +1,19 @@
+{
+  "gpu_ids": [
+    0
+  ],
+  "max_concurrent_jobs": 1,
+  "cpu_threads_per_job": 8,
+  "cache_dir": "model_cache/hub",
+  "output_dir": "results",
+  "poll_seconds": 10,
+  "reserved_gpu_gib": 2,
+  "maximum_gpu_allocation_gib": 78,
+  "idle_utilization_threshold": 10,
+  "allow_external_gpu_processes": false,
+  "environment_python": {
+    "native": ".venv-native/bin/python",
+    "vllm": ".venv-vllm/bin/python"
+  },
+  "environment_only_edits_allowed": true
+}

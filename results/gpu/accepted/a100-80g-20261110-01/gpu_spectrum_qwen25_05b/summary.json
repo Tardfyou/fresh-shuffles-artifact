@@ -1,8 +1,0 @@
-{
-  "job_id": "gpu_spectrum_qwen25_05b",
-  "complete": true,
-  "expected": 100,
-  "measured": 100,
-  "errors_retained": 0,
-  "normal_negative_outcomes_retained": true
-}

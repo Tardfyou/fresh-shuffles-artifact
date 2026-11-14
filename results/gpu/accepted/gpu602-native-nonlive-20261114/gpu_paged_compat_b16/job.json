@@ -1,0 +1,21 @@
+{
+  "id": "gpu_paged_compat_b16",
+  "kind": "paged_compat",
+  "model": {
+    "tag": "llama32_1b",
+    "repo": "unsloth/Llama-3.2-1B",
+    "revision": "9535bd9b1d1dea6acafbdc4813b728796aeb28da"
+  },
+  "dtype": "float32",
+  "block": 16,
+  "strategy": "full",
+  "device_class": "cuda",
+  "minimum_free_gib": 12,
+  "configuration_layers": null,
+  "subset": "ordering602",
+  "cloak_dtype": "float32",
+  "phase": "core",
+  "priority": 2,
+  "expected_observations": 602,
+  "cohort_prompts": 602
+}

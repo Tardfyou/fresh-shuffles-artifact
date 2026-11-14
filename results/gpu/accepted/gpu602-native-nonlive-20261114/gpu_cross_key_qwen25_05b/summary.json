@@ -1,0 +1,8 @@
+{
+  "job_id": "gpu_cross_key_qwen25_05b",
+  "complete": true,
+  "expected": 3010,
+  "measured": 3010,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

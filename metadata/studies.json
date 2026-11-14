@@ -76,8 +76,16 @@
       "primary_gpu_jobs": [
         "gpu_fused"
       ],
-      "primary_gpu_run": "a100-80g-20261110-01",
-      "cpu_measurement_role": "auxiliary"
+      "primary_gpu_run": "gpu602-native-nonlive-20261114",
+      "cpu_measurement_role": "auxiliary",
+      "primary_gpu_job_runs": {
+        "gpu_fused": "gpu602-native-nonlive-20261114"
+      },
+      "primary_gpu_runs": [
+        "gpu602-native-nonlive-20261114"
+      ],
+      "gpu602_prompts": 602,
+      "gpu602_complete_rerun": true
     },
     {
       "id": "scaling",
@@ -97,8 +105,21 @@
         "gpu_ratio_qwen25_05b_1.1",
         "gpu_ratio_llama32_1b_1.25"
       ],
-      "primary_gpu_run": "a100-80g-20261110-01",
-      "cpu_measurement_role": "auxiliary"
+      "primary_gpu_run": "gpu602-native-nonlive-20261114",
+      "cpu_measurement_role": "auxiliary",
+      "primary_gpu_job_runs": {
+        "gpu_ratio_qwen25_05b_1.5": "gpu602-native-nonlive-20261114",
+        "gpu_ratio_qwen25_05b_1.25": "gpu602-native-nonlive-20261114",
+        "gpu_ratio_llama32_1b_1.5": "gpu602-native-nonlive-20261114",
+        "gpu_ratio_qwen25_05b_2.0": "gpu602-native-nonlive-20261114",
+        "gpu_ratio_qwen25_05b_1.1": "gpu602-native-nonlive-20261114",
+        "gpu_ratio_llama32_1b_1.25": "gpu602-native-nonlive-20261114"
+      },
+      "primary_gpu_runs": [
+        "gpu602-native-nonlive-20261114"
+      ],
+      "gpu602_prompts": 602,
+      "gpu602_complete_rerun": true
     },
     {
       "id": "lifecycle",
@@ -111,8 +132,16 @@
       "primary_gpu_jobs": [
         "gpu_lifecycle"
       ],
-      "primary_gpu_run": "a100-80g-20261110-01",
-      "cpu_measurement_role": "auxiliary"
+      "primary_gpu_run": "gpu602-native-nonlive-20261114",
+      "cpu_measurement_role": "auxiliary",
+      "primary_gpu_job_runs": {
+        "gpu_lifecycle": "gpu602-native-nonlive-20261114"
+      },
+      "primary_gpu_runs": [
+        "gpu602-native-nonlive-20261114"
+      ],
+      "gpu602_prompts": 602,
+      "gpu602_complete_rerun": true
     },
     {
       "id": "cross_key",
@@ -127,8 +156,17 @@
         "gpu_cross_key_llama32_1b",
         "gpu_cross_key_qwen25_05b"
       ],
-      "primary_gpu_run": "a100-80g-20261110-01",
-      "cpu_measurement_role": "auxiliary"
+      "primary_gpu_run": "gpu602-native-nonlive-20261114",
+      "cpu_measurement_role": "auxiliary",
+      "primary_gpu_job_runs": {
+        "gpu_cross_key_llama32_1b": "gpu602-native-nonlive-20261114",
+        "gpu_cross_key_qwen25_05b": "gpu602-native-nonlive-20261114"
+      },
+      "primary_gpu_runs": [
+        "gpu602-native-nonlive-20261114"
+      ],
+      "gpu602_prompts": 602,
+      "gpu602_complete_rerun": true
     },
     {
       "id": "privacy",
@@ -157,8 +195,16 @@
       "primary_gpu_jobs": [
         "gpu_sa_rotation"
       ],
-      "primary_gpu_run": "a100-80g-20261110-01",
-      "cpu_measurement_role": "auxiliary"
+      "primary_gpu_run": "gpu602-native-nonlive-20261114",
+      "cpu_measurement_role": "auxiliary",
+      "primary_gpu_job_runs": {
+        "gpu_sa_rotation": "gpu602-native-nonlive-20261114"
+      },
+      "primary_gpu_runs": [
+        "gpu602-native-nonlive-20261114"
+      ],
+      "gpu602_prompts": 602,
+      "gpu602_complete_rerun": true
     },
     {
       "id": "sa_functional",
@@ -186,8 +232,31 @@
         "gpu_sa_functional_qwen25_05b_float32_3of4",
         "gpu_sa_functional_llama32_1b_bfloat16_1of4"
       ],
-      "primary_gpu_run": "a100-80g-20261110-01",
-      "cpu_measurement_role": "auxiliary"
+      "primary_gpu_run": "gpu602-native-nonlive-20261114",
+      "cpu_measurement_role": "auxiliary",
+      "primary_gpu_job_runs": {
+        "gpu_sa_functional_qwen25_05b_bfloat16_0of4": "gpu602-native-nonlive-20261114",
+        "gpu_sa_functional_llama32_1b_float32_2of4": "gpu602-native-nonlive-20261114",
+        "gpu_sa_functional_llama32_1b_float32_1of4": "gpu602-native-nonlive-20261114",
+        "gpu_sa_functional_llama32_1b_bfloat16_0of4": "gpu602-native-nonlive-20261114",
+        "gpu_sa_functional_llama32_1b_float32_3of4": "gpu602-native-nonlive-20261114",
+        "gpu_sa_functional_llama32_1b_bfloat16_3of4": "gpu602-native-nonlive-20261114",
+        "gpu_sa_functional_qwen25_05b_bfloat16_1of4": "gpu602-native-nonlive-20261114",
+        "gpu_sa_functional_llama32_1b_float32_0of4": "gpu602-native-nonlive-20261114",
+        "gpu_sa_functional_llama32_1b_bfloat16_2of4": "gpu602-native-nonlive-20261114",
+        "gpu_sa_functional_qwen25_05b_bfloat16_2of4": "gpu602-native-nonlive-20261114",
+        "gpu_sa_functional_qwen25_05b_float32_0of4": "gpu602-native-nonlive-20261114",
+        "gpu_sa_functional_qwen25_05b_bfloat16_3of4": "gpu602-native-nonlive-20261114",
+        "gpu_sa_functional_qwen25_05b_float32_1of4": "gpu602-native-nonlive-20261114",
+        "gpu_sa_functional_qwen25_05b_float32_2of4": "gpu602-native-nonlive-20261114",
+        "gpu_sa_functional_qwen25_05b_float32_3of4": "gpu602-native-nonlive-20261114",
+        "gpu_sa_functional_llama32_1b_bfloat16_1of4": "gpu602-native-nonlive-20261114"
+      },
+      "primary_gpu_runs": [
+        "gpu602-native-nonlive-20261114"
+      ],
+      "gpu602_prompts": 602,
+      "gpu602_complete_rerun": true
     },
     {
       "id": "byte_defense",
@@ -218,8 +287,33 @@
         "gpu_byte_defense_llama32_1b_float32_0of4",
         "gpu_byte_defense_qwen25_05b_float32_0of4"
       ],
-      "primary_gpu_run": "a100-80g-20261110-01",
-      "cpu_measurement_role": "auxiliary"
+      "cpu_measurement_role": "auxiliary",
+      "primary_gpu_job_runs": {
+        "gpu_byte_defense_qwen25_05b_bfloat16_2of4": "a100-80g-20261110-01",
+        "gpu_byte_defense_qwen25_05b_bfloat16_0of4": "a100-80g-20261110-01",
+        "gpu_byte_defense_qwen25_05b_bfloat16_3of4": "a100-80g-20261110-01",
+        "gpu_large_byte_qwen3_32b": "gpu602-native-nonlive-20261114",
+        "gpu_byte_defense_qwen25_05b_float32_2of4": "a100-80g-20261110-01",
+        "gpu_byte_defense_qwen25_05b_bfloat16_1of4": "a100-80g-20261110-01",
+        "gpu_byte_defense_qwen25_05b_float32_3of4": "a100-80g-20261110-01",
+        "gpu_large_byte_qwen3_14b": "gpu602-native-nonlive-20261114",
+        "gpu_byte_defense_llama32_1b_bfloat16_0of4": "a100-80g-20261110-01",
+        "gpu_byte_defense_llama32_1b_float32_1of4": "a100-80g-20261110-01",
+        "gpu_byte_defense_llama32_1b_bfloat16_2of4": "a100-80g-20261110-01",
+        "gpu_byte_defense_llama32_1b_bfloat16_1of4": "a100-80g-20261110-01",
+        "gpu_byte_defense_qwen25_05b_float32_1of4": "a100-80g-20261110-01",
+        "gpu_byte_defense_llama32_1b_float32_3of4": "a100-80g-20261110-01",
+        "gpu_byte_defense_llama32_1b_bfloat16_3of4": "a100-80g-20261110-01",
+        "gpu_byte_defense_llama32_1b_float32_2of4": "a100-80g-20261110-01",
+        "gpu_byte_defense_llama32_1b_float32_0of4": "a100-80g-20261110-01",
+        "gpu_byte_defense_qwen25_05b_float32_0of4": "a100-80g-20261110-01"
+      },
+      "primary_gpu_runs": [
+        "a100-80g-20261110-01",
+        "gpu602-native-nonlive-20261114"
+      ],
+      "gpu602_prompts": 602,
+      "gpu602_complete_rerun": true
     },
     {
       "id": "integrity_ledger",
@@ -245,8 +339,17 @@
         "gpu_spectrum_qwen25_05b",
         "gpu_spectrum_llama32_1b"
       ],
-      "primary_gpu_run": "a100-80g-20261110-01",
-      "cpu_measurement_role": "auxiliary"
+      "primary_gpu_run": "gpu602-native-nonlive-20261114",
+      "cpu_measurement_role": "auxiliary",
+      "primary_gpu_job_runs": {
+        "gpu_spectrum_qwen25_05b": "gpu602-native-nonlive-20261114",
+        "gpu_spectrum_llama32_1b": "gpu602-native-nonlive-20261114"
+      },
+      "primary_gpu_runs": [
+        "gpu602-native-nonlive-20261114"
+      ],
+      "gpu602_prompts": 602,
+      "gpu602_complete_rerun": true
     },
     {
       "id": "matched_candidates",
@@ -260,8 +363,17 @@
         "gpu_matched_llama32_1b",
         "gpu_matched_qwen25_05b"
       ],
-      "primary_gpu_run": "a100-80g-20261110-01",
-      "cpu_measurement_role": "auxiliary"
+      "primary_gpu_run": "gpu602-native-nonlive-20261114",
+      "cpu_measurement_role": "auxiliary",
+      "primary_gpu_job_runs": {
+        "gpu_matched_llama32_1b": "gpu602-native-nonlive-20261114",
+        "gpu_matched_qwen25_05b": "gpu602-native-nonlive-20261114"
+      },
+      "primary_gpu_runs": [
+        "gpu602-native-nonlive-20261114"
+      ],
+      "gpu602_prompts": 602,
+      "gpu602_complete_rerun": true
     },
     {
       "id": "local_order",
@@ -394,6 +506,62 @@
         "sources/permllm-orbit"
       ],
       "documentation": "docs/PERMLLM_ORBIT_VERIFICATION.md"
+    },
+    {
+      "id": "native_block_compatibility",
+      "measurement_scope": "accepted_gpu",
+      "sample_scale": "602 frozen WildChat prompts per condition",
+      "paths": [
+        "results/gpu/accepted/gpu602-native-nonlive-20261114/gpu_paged_compat_b16",
+        "results/gpu/accepted/gpu602-native-nonlive-20261114/gpu_paged_compat_b32",
+        "results/gpu/accepted/gpu602-native-nonlive-20261114/gpu_paged_compat_b64"
+      ],
+      "documentation": "docs/GPU602_NATIVE.md",
+      "primary_gpu_run": "gpu602-native-nonlive-20261114",
+      "primary_gpu_jobs": [
+        "gpu_paged_compat_b16",
+        "gpu_paged_compat_b32",
+        "gpu_paged_compat_b64"
+      ]
+    },
+    {
+      "id": "unprotected_engine_reference602",
+      "measurement_scope": "accepted_gpu",
+      "sample_scale": "602 frozen WildChat prompts per condition",
+      "paths": [
+        "results/gpu/accepted/gpu602-native-nonlive-20261114/vllm_baseline_b16",
+        "results/gpu/accepted/gpu602-native-nonlive-20261114/vllm_baseline_b32",
+        "results/gpu/accepted/gpu602-native-nonlive-20261114/gpu_repeat_A_b16_r1",
+        "results/gpu/accepted/gpu602-native-nonlive-20261114/gpu_repeat_A_b16_r2",
+        "results/gpu/accepted/gpu602-native-nonlive-20261114/gpu_repeat_A_b16_r3",
+        "results/gpu/accepted/gpu602-native-nonlive-20261114/gpu_repeat_C_b16_r1",
+        "results/gpu/accepted/gpu602-native-nonlive-20261114/gpu_repeat_C_b16_r2",
+        "results/gpu/accepted/gpu602-native-nonlive-20261114/gpu_repeat_C_b16_r3",
+        "results/gpu/accepted/gpu602-native-nonlive-20261114/gpu_repeat_A_b32_r1",
+        "results/gpu/accepted/gpu602-native-nonlive-20261114/gpu_repeat_A_b32_r2",
+        "results/gpu/accepted/gpu602-native-nonlive-20261114/gpu_repeat_A_b32_r3",
+        "results/gpu/accepted/gpu602-native-nonlive-20261114/gpu_repeat_C_b32_r1",
+        "results/gpu/accepted/gpu602-native-nonlive-20261114/gpu_repeat_C_b32_r2",
+        "results/gpu/accepted/gpu602-native-nonlive-20261114/gpu_repeat_C_b32_r3"
+      ],
+      "documentation": "docs/GPU602_NATIVE.md",
+      "primary_gpu_run": "gpu602-native-nonlive-20261114",
+      "primary_gpu_jobs": [
+        "vllm_baseline_b16",
+        "vllm_baseline_b32",
+        "gpu_repeat_A_b16_r1",
+        "gpu_repeat_A_b16_r2",
+        "gpu_repeat_A_b16_r3",
+        "gpu_repeat_C_b16_r1",
+        "gpu_repeat_C_b16_r2",
+        "gpu_repeat_C_b16_r3",
+        "gpu_repeat_A_b32_r1",
+        "gpu_repeat_A_b32_r2",
+        "gpu_repeat_A_b32_r3",
+        "gpu_repeat_C_b32_r1",
+        "gpu_repeat_C_b32_r2",
+        "gpu_repeat_C_b32_r3"
+      ]
     }
   ],
   "gpu": {
@@ -402,7 +570,8 @@
     "guide": "docs/GPU_RESULTS.md",
     "expected_jobs": "metadata/gpu/protocol/jobs.json",
     "source_version": "gpu80g-20261109-v2-fp32-protection",
-    "live_integration_index": "results/gpu/index.json"
+    "live_integration_index": "results/gpu/index.json",
+    "latest_native602_run": "gpu602-native-nonlive-20261114"
   },
   "historical_validation": "metadata/audit/",
   "all_normal_negative_outcomes_retained": true,

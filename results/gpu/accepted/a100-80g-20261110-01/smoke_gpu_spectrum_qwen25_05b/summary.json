@@ -1,8 +1,0 @@
-{
-  "job_id": "smoke_gpu_spectrum_qwen25_05b",
-  "complete": true,
-  "expected": 2,
-  "measured": 2,
-  "errors_retained": 0,
-  "normal_negative_outcomes_retained": true
-}

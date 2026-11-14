@@ -1,0 +1,8 @@
+{
+  "job_id": "gpu_repeat_A_b32_r3",
+  "complete": true,
+  "expected": 602,
+  "measured": 602,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

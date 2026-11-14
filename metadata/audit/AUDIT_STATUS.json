@@ -137,5 +137,21 @@
     "live_attack_correct": 41344,
     "live_attack_total": 41344,
     "cpu_results_role": "auxiliary"
+  },
+  "gpu602_native": {
+    "run": "gpu602-native-nonlive-20261114",
+    "formal_jobs": 50,
+    "formal_rows": 49364,
+    "startup_jobs": 10,
+    "startup_rows": 38,
+    "unique_targets": 602,
+    "all_expected_keys_complete": true,
+    "live_protected_engine602": "pending",
+    "source_scope": {
+      "actual_server_source_included": false,
+      "source_byte_comparison_claimed": false,
+      "supervisor_attests_scientific_files_unchanged": true,
+      "issued_job_and_target_manifests_exact": true
+    }
   }
 }

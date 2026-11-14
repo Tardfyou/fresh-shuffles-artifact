@@ -1,5 +1,5 @@
 {
-  "provenance": "Accepted A100 GPU records; cloud API outputs unchanged; auxiliary CPU figures retained in their historical snapshot.",
+  "provenance": "Unchanged accepted main/ordering/privacy/timing observations; current focused GPU data from gpu602-native-nonlive-20261114",
   "privacy_cases": [
     {
       "sid": "privacy-000",
@@ -15073,32 +15073,32 @@
     "Qwen2.5-0.5B": {
       "by_key": {
         "42": {
-          "correct": 34784,
-          "total": 34784,
+          "correct": 359936,
+          "total": 359936,
           "percent": 100.0,
           "minimum_prompt_percent": 100.0
         },
         "1234": {
-          "correct": 34784,
-          "total": 34784,
+          "correct": 359936,
+          "total": 359936,
           "percent": 100.0,
           "minimum_prompt_percent": 100.0
         },
         "5678": {
-          "correct": 34784,
-          "total": 34784,
+          "correct": 359936,
+          "total": 359936,
           "percent": 100.0,
           "minimum_prompt_percent": 100.0
         },
         "9012": {
-          "correct": 34784,
-          "total": 34784,
+          "correct": 359936,
+          "total": 359936,
           "percent": 100.0,
           "minimum_prompt_percent": 100.0
         },
         "34567": {
-          "correct": 34784,
-          "total": 34784,
+          "correct": 359936,
+          "total": 359936,
           "percent": 100.0,
           "minimum_prompt_percent": 100.0
         }
@@ -15107,32 +15107,32 @@
     "Llama-3.2-1B": {
       "by_key": {
         "42": {
-          "correct": 137088,
-          "total": 137088,
+          "correct": 1429120,
+          "total": 1429120,
           "percent": 100.0,
           "minimum_prompt_percent": 100.0
         },
         "1234": {
-          "correct": 137088,
-          "total": 137088,
+          "correct": 1429120,
+          "total": 1429120,
           "percent": 100.0,
           "minimum_prompt_percent": 100.0
         },
         "5678": {
-          "correct": 137088,
-          "total": 137088,
+          "correct": 1429120,
+          "total": 1429120,
           "percent": 100.0,
           "minimum_prompt_percent": 100.0
         },
         "9012": {
-          "correct": 137088,
-          "total": 137088,
+          "correct": 1429120,
+          "total": 1429120,
           "percent": 100.0,
           "minimum_prompt_percent": 100.0
         },
         "34567": {
-          "correct": 137088,
-          "total": 137088,
+          "correct": 1429120,
+          "total": 1429120,
           "percent": 100.0,
           "minimum_prompt_percent": 100.0
         }
@@ -15143,88 +15143,88 @@
     "Qwen2.5-0.5B": {
       "hits_by_seed": {
         "main_first": {
-          "seed5001": 100,
-          "seed5002": 100
+          "seed5001": 602,
+          "seed5002": 602
         },
         "main_all": {
-          "seed5001": 100,
-          "seed5002": 100
+          "seed5001": 602,
+          "seed5002": 602
         },
         "gram_first": {
-          "seed5001": 0,
-          "seed5002": 0
-        },
-        "gram_all": {
-          "seed5001": 0,
-          "seed5002": 0
-        },
-        "sorted_row_norm_first": {
           "seed5001": 2,
           "seed5002": 2
         },
+        "gram_all": {
+          "seed5001": 2,
+          "seed5002": 2
+        },
+        "sorted_row_norm_first": {
+          "seed5001": 8,
+          "seed5002": 7
+        },
         "sorted_row_norm_all": {
           "seed5001": 0,
-          "seed5002": 0
+          "seed5002": 1
         },
         "procrustes_first": {
-          "seed5001": 58,
-          "seed5002": 0
+          "seed5001": 326,
+          "seed5002": 4
         },
         "procrustes_all": {
-          "seed5001": 50,
-          "seed5002": 0
+          "seed5001": 243,
+          "seed5002": 2
         },
         "b1_first": {
-          "seed5001": 7,
-          "seed5002": 0
+          "seed5001": 108,
+          "seed5002": 31
         },
         "b1_all": {
-          "seed5001": 9,
-          "seed5002": 1
+          "seed5001": 78,
+          "seed5002": 15
         }
       }
     },
     "Llama-3.2-1B": {
       "hits_by_seed": {
         "main_first": {
-          "seed5001": 100,
-          "seed5002": 100
+          "seed5001": 602,
+          "seed5002": 602
         },
         "main_all": {
-          "seed5001": 100,
-          "seed5002": 100
+          "seed5001": 602,
+          "seed5002": 602
         },
         "gram_first": {
-          "seed5001": 46,
-          "seed5002": 46
+          "seed5001": 230,
+          "seed5002": 230
         },
         "gram_all": {
-          "seed5001": 0,
-          "seed5002": 0
+          "seed5001": 6,
+          "seed5002": 6
         },
         "sorted_row_norm_first": {
-          "seed5001": 65,
-          "seed5002": 65
+          "seed5001": 362,
+          "seed5002": 376
         },
         "sorted_row_norm_all": {
-          "seed5001": 19,
-          "seed5002": 12
+          "seed5001": 145,
+          "seed5002": 104
         },
         "procrustes_first": {
-          "seed5001": 0,
-          "seed5002": 20
+          "seed5001": 5,
+          "seed5002": 95
         },
         "procrustes_all": {
-          "seed5001": 7,
-          "seed5002": 2
+          "seed5001": 26,
+          "seed5002": 9
         },
         "b1_first": {
           "seed5001": 0,
-          "seed5002": 1
+          "seed5002": 3
         },
         "b1_all": {
-          "seed5001": 1,
-          "seed5002": 0
+          "seed5001": 11,
+          "seed5002": 5
         }
       }
     }
@@ -15232,13 +15232,13 @@
   "scaling": [
     {
       "same_epoch": {
-        "correct": 41344,
-        "total": 41344,
+        "correct": 359936,
+        "total": 359936,
         "percent": 100.0
       },
       "adapted": {
-        "correct": 41344,
-        "total": 41344,
+        "correct": 359936,
+        "total": 359936,
         "percent": 100.0
       },
       "model": "Qwen2.5-0.5B",
@@ -15246,18 +15246,18 @@
       "net_head_token_gain": 0,
       "gain_percentage_points": 0.0,
       "sample_ids_improved": 0,
-      "sample_ids_unchanged": 100,
+      "sample_ids_unchanged": 602,
       "sample_ids_degraded": 0
     },
     {
       "same_epoch": {
-        "correct": 41344,
-        "total": 41344,
+        "correct": 359936,
+        "total": 359936,
         "percent": 100.0
       },
       "adapted": {
-        "correct": 41344,
-        "total": 41344,
+        "correct": 359936,
+        "total": 359936,
         "percent": 100.0
       },
       "model": "Qwen2.5-0.5B",
@@ -15265,82 +15265,82 @@
       "net_head_token_gain": 0,
       "gain_percentage_points": 0.0,
       "sample_ids_improved": 0,
-      "sample_ids_unchanged": 100,
+      "sample_ids_unchanged": 602,
       "sample_ids_degraded": 0
     },
     {
       "same_epoch": {
-        "correct": 41344,
-        "total": 41344,
-        "percent": 100.0
+        "correct": 359935,
+        "total": 359936,
+        "percent": 99.99972217283073
       },
       "adapted": {
-        "correct": 41344,
-        "total": 41344,
+        "correct": 359936,
+        "total": 359936,
         "percent": 100.0
       },
       "model": "Qwen2.5-0.5B",
       "ratio": 1.5,
-      "net_head_token_gain": 0,
-      "gain_percentage_points": 0.0,
-      "sample_ids_improved": 0,
-      "sample_ids_unchanged": 100,
+      "net_head_token_gain": 1,
+      "gain_percentage_points": 0.0002778271692704948,
+      "sample_ids_improved": 1,
+      "sample_ids_unchanged": 601,
       "sample_ids_degraded": 0
     },
     {
       "same_epoch": {
-        "correct": 40980,
-        "total": 41344,
-        "percent": 99.11958204334366
+        "correct": 355638,
+        "total": 359936,
+        "percent": 98.80589882645803
       },
       "adapted": {
-        "correct": 41344,
-        "total": 41344,
+        "correct": 359936,
+        "total": 359936,
         "percent": 100.0
       },
       "model": "Qwen2.5-0.5B",
       "ratio": 2.0,
-      "net_head_token_gain": 364,
-      "gain_percentage_points": 0.8804179566563448,
-      "sample_ids_improved": 73,
-      "sample_ids_unchanged": 27,
+      "net_head_token_gain": 4298,
+      "gain_percentage_points": 1.1941011735419664,
+      "sample_ids_improved": 424,
+      "sample_ids_unchanged": 178,
       "sample_ids_degraded": 0
     },
     {
       "same_epoch": {
-        "correct": 163149,
-        "total": 163200,
-        "percent": 99.96875
+        "correct": 1428782,
+        "total": 1429120,
+        "percent": 99.97634908195253
       },
       "adapted": {
-        "correct": 163200,
-        "total": 163200,
+        "correct": 1429120,
+        "total": 1429120,
         "percent": 100.0
       },
       "model": "Llama-3.2-1B",
       "ratio": 1.25,
-      "net_head_token_gain": 51,
-      "gain_percentage_points": 0.03125,
-      "sample_ids_improved": 25,
-      "sample_ids_unchanged": 75,
+      "net_head_token_gain": 338,
+      "gain_percentage_points": 0.023650918047465552,
+      "sample_ids_improved": 128,
+      "sample_ids_unchanged": 474,
       "sample_ids_degraded": 0
     },
     {
       "same_epoch": {
-        "correct": 162057,
-        "total": 163200,
-        "percent": 99.29963235294117
+        "correct": 1417992,
+        "total": 1429120,
+        "percent": 99.22133900582176
       },
       "adapted": {
-        "correct": 163200,
-        "total": 163200,
+        "correct": 1429120,
+        "total": 1429120,
         "percent": 100.0
       },
       "model": "Llama-3.2-1B",
       "ratio": 1.5,
-      "net_head_token_gain": 1143,
-      "gain_percentage_points": 0.700367647058826,
-      "sample_ids_improved": 100,
+      "net_head_token_gain": 11128,
+      "gain_percentage_points": 0.7786609941782388,
+      "sample_ids_improved": 602,
       "sample_ids_unchanged": 0,
       "sample_ids_degraded": 0
     }
@@ -16212,5 +16212,6 @@
     "host_threads": 16,
     "includes_cpu_crypto_and_transfers": true
   },
-  "reporting_scope": "Current manuscript selection: results/reporting_scope_20261108/summary.json. Original cross-key records are retained separately."
+  "reporting_scope": "Current manuscript selection: results/reporting_scope_20261108/summary.json. Original cross-key records are retained separately.",
+  "focused_data_source_run": "gpu602-native-nonlive-20261114"
 }

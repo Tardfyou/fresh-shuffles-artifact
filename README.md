@@ -14,6 +14,7 @@ and counts, and offline analysis for Repeat to Reveal and VeilKV.
 - [Defensive implementation and validation](docs/DEFENSE_SUPPLEMENT.md).
 - [Ordering study](docs/ORDERING_STUDY.md).
 - [GPU results and handoff layout](docs/GPU_RESULTS.md).
+- [Current602-prompt native results](docs/GPU602_NATIVE.md).
 - [Technical details](docs/SUPPLEMENTARY_DETAILS.md).
 
 ## Directory layout
@@ -32,7 +33,7 @@ and counts, and offline analysis for Repeat to Reveal and VeilKV.
 | `results/gpu/` | Accepted GPU runs, profile summaries and their index |
 
 Accepted GPU results are the primary measurements; CPU results remain auxiliary.
-The main A100 suite and live vLLM attack/defense integration are indexed in
+The main A100 suite, the accepted602-prompt native rerun and the original live vLLM attack/defense integration are indexed in
 `results/gpu/index.json`. Compressed record parts retain every observation.
 The separately issued `veilkv-gpu-80g-experiments-20261109.zip` defines the
 single-80GiB execution plan; its job specifications are mirrored in
@@ -57,8 +58,9 @@ python tools/inspect_marker_numerics.py --root .
 
 The primary manifest is
 `results/main_public/samples_main_public.jsonl`. Focused WildChat studies reuse
-its saved IDs; private-value cases are synthetic. All recorded positive and
-negative outcomes remain. Historical twelve-configuration totals and the
+its saved IDs; private-value cases are synthetic. All positive and negative outcomes in current accepted cohorts remain.
+Superseded smaller GPU cohorts have been removed; selected original engine
+diagnostics and the still-current live integration are retained. Historical twelve-configuration totals and the
 current eleven-configuration reporting summary have separate scopes.
 
 The accepted CPU large-model extension is in

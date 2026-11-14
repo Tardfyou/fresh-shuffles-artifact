@@ -1,0 +1,39 @@
+{
+  "model": {
+    "tag": "qwen3_32b",
+    "repo": "Qwen/Qwen3-32B",
+    "revision": "9216db5781bf21249d130ec9da846c4624c16137",
+    "parameters": 32762123264
+  },
+  "device": "cuda:0",
+  "hardware": {
+    "type": "cuda",
+    "name": "NVIDIA A100-SXM4-80GB",
+    "total_memory_bytes": 85094825984,
+    "compute_capability": [
+      8,
+      0
+    ],
+    "visible_devices": "0",
+    "driver_version": "580.82.07"
+  },
+  "model_dtype": "torch.bfloat16",
+  "torch": "2.6.0+cu124",
+  "transformers": "4.51.3",
+  "attention_implementation": "eager",
+  "tf32": false,
+  "logit_filter_argument": "logits_to_keep",
+  "bf16_reduced_precision_reduction": false,
+  "float32_matmul_precision": "highest",
+  "cache_layers": 64,
+  "heads": 8,
+  "head_dimension": 128,
+  "codec_format_version": 2,
+  "identity_derivation": "pinned_checkpoint_and_tokenizer_configuration_v1",
+  "trusted_crypto_device": "cpu",
+  "consumer_device": "cuda:0",
+  "transfers_included_in_end_to_end_timing": true,
+  "prefill_execution": "native_full_prefill",
+  "public_prefix_tokens": 0,
+  "input_construction": "Frozen selected WildChat texts, first140 model-tokenizer tokens, last6 held out for2/3/1 continuation"
+}

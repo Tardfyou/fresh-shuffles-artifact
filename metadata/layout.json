@@ -1,6 +1,6 @@
 {
   "layout_version": 1,
-  "existing_scientific_result_paths_preserved": true,
+  "existing_scientific_result_paths_preserved": false,
   "relocated_files": {
     "DEFENSE_SUPPLEMENT.md": "docs/DEFENSE_SUPPLEMENT.md",
     "EXPERIMENTS.md": "docs/EXPERIMENTS.md",
@@ -21,5 +21,7 @@
   "catalog": "metadata/studies.json",
   "gpu_execution_bundle": "veilkv-gpu-80g-experiments-20261109.zip",
   "gpu_execution_version": "gpu80g-20261109-v2-fp32-protection",
-  "previous_git_snapshot": "d88e129"
+  "previous_git_snapshot": "d88e129",
+  "author_authorized_retired_gpu_cohorts": "metadata/gpu602/RETIRED_COHORTS.json",
+  "retained_cpu_and_main3000_ordering602_byte602_live_paths_preserved": true
 }

@@ -40,3 +40,5 @@ resuming a run.
 - [Public permutation-orbit verification](ORBIT_VERIFICATION.md): exact operator-level repetition controls, separate from GPU recovery experiments.
 
 - [PermLLM native-protocol signature checks](PERMLLM_ORBIT_VERIFICATION.md): independent per-row coordinate permutations, raw diversity, public invariants, and complete three-party-flow records.
+
+Current602-prompt native results and offline checks: [GPU602_NATIVE.md](GPU602_NATIVE.md).

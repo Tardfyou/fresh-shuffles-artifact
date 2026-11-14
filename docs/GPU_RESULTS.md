@@ -4,6 +4,12 @@ GPU measurements are primary; CPU measurements remain auxiliary. The same
 3,000-prompt WildChat manifest and frozen focused subsets are reused. Hardware
 is A100-SXM4-80GB, with PyTorch2.6.0+cu124 and Transformers4.51.3.
 
+The current focused native results supersede the old100/300-prompt GPU
+cohorts. See [GPU602_NATIVE.md](GPU602_NATIVE.md) and the per-job overrides in
+`results/gpu/index.json`. Main recovery, ordering, byte validation, synthetic
+privacy, timings and the original protected live integration retain their
+accepted inputs. The older counts below describe that original handoff.
+
 ## Navigation
 
 - `results/gpu/index.json`: accepted runs.
@@ -35,8 +41,8 @@ calibrator differ from primary results. All93 formal and60 startup jobs are
 complete; the hardware change alone does not explain the difference from CPU.
 
 Native byte validation passes48,160/48,160 requests and96,320 consumer
-comparisons. Each large model adds100 successful byte consumers. Known-key
-S/a validation passes4,588/12,000 segments:2,296 original and2,292 refreshed;
+comparisons. Each large model now adds602 successful byte consumers. Known-key
+S/a validation passes23,899/72,240 segments:11,952 original and11,947 refreshed;
 functional failures occur in both conditions.
 
 ## Actual vLLM integration
@@ -56,10 +62,9 @@ from real protected Value pages. Official KV-Cloak obfuscation and storage use
 FP32. Its defender-side ordered restore additionally holds the permutation and
 actual-matrix inverse; neither enters the attacker. Its six-token output agrees
 with plain inference on90/100 targets, and its logits differ. This functional
-result is separate from100% content recovery. The unprotected repeat-output baseline is retained. Three full-cohort reruns
-per block reproduce93/100 and92/100 agreement; disabling prefix caching
-yields100/100 in all six runs. FP32 eliminates differences on the10 diagnostic
-inputs at both blocks. All15 first-divergence events involve near-tied leading
+result is separate from100% content recovery. The unprotected repeat-output baseline is retained. Three602-prompt reruns per block give555/602 and539/602 agreement;
+disabling prefix caching yields602/602 in all six runs. FP32 eliminates differences on the10 diagnostic
+inputs at both blocks. The15 selected original diagnostic first-divergence events involve near-tied leading
 score groups (gaps0–0.125). This supports prefix-cache-associated BF16 greedy
 sensitivity. See `results/gpu/accepted/vllm-repeat-diagnosis-20261110-01/README.md`
 for the B-to-C condition correction. It is not a protected-integration correctness

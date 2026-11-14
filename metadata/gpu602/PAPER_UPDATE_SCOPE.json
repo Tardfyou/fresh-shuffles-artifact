@@ -1,0 +1,18 @@
+{
+  "apply_only_after_actual_gpu_results_are_returned_and_accepted": true,
+  "edit_now": false,
+  "allowed_after_acceptance": [
+    "Replace values at existing result locations with the newly measured values",
+    "Update corresponding sample counts, raw counts and denominators",
+    "Update data in existing tables and plots using the same metrics and presentation",
+    "Remove obsolete descriptions of constructing the old100/300 smaller WildChat subsets in5.1 and other repeated explanations"
+  ],
+  "do_not_change": [
+    "Metric definitions, weighting, aggregation or statistical interpretation",
+    "Experimental logic, algorithms, baselines or control conditions",
+    "Threat model, methodology, section structure or unrelated prose",
+    "Frozen abstract",
+    "Already accepted3000-prompt and602-prompt results"
+  ],
+  "do_not_run": "Historical whole-section or whole-paper generators"
+}

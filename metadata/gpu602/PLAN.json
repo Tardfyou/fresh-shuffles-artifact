@@ -1,0 +1,348 @@
+{
+  "version": "wildchat602-full-cohort-20261113-v1",
+  "target_count": 602,
+  "selection": "Reuse the existing or_subset flag exactly; no resampling",
+  "complete_reruns": true,
+  "historical_observations_stitched": false,
+  "native_jobs": 50,
+  "native_observations": 49364,
+  "native_smoke_observations": 38,
+  "live_formal_cases": 25886,
+  "live_smoke_cases": 50,
+  "skipped_original_jobs": [
+    {
+      "id": "gpu_main_qwen25_05b",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_main_qwen25_15b",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_main_qwen25_3b",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_main_qwen25_7b",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_main_qwen3_06b",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_main_qwen3_17b",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_main_llama32_1b",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_main_olmo2_1b",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_main_tinyllama",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_main_qwen25_05b_b8",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_main_qwen25_05b_b32",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_main_qwen3_14b_fp32_full",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_main_qwen3_14b_bf16_full",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_main_qwen3_32b_fp32_first",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_main_qwen3_32b_bf16_full",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_probe",
+      "kind": "probe",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 800
+    },
+    {
+      "id": "gpu_privacy",
+      "kind": "privacy",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 100
+    },
+    {
+      "id": "gpu_direction",
+      "kind": "direction",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 553
+    },
+    {
+      "id": "gpu_ordering",
+      "kind": "ordering",
+      "reason": "Already all 602 prompt targets",
+      "existing_observations": 602
+    },
+    {
+      "id": "gpu_byte_defense_qwen25_05b_float32_0of4",
+      "kind": "byte_defense",
+      "reason": "Already all 602 prompt targets",
+      "existing_observations": 3020
+    },
+    {
+      "id": "gpu_byte_defense_qwen25_05b_float32_1of4",
+      "kind": "byte_defense",
+      "reason": "Already all 602 prompt targets",
+      "existing_observations": 3020
+    },
+    {
+      "id": "gpu_byte_defense_qwen25_05b_float32_2of4",
+      "kind": "byte_defense",
+      "reason": "Already all 602 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_byte_defense_qwen25_05b_float32_3of4",
+      "kind": "byte_defense",
+      "reason": "Already all 602 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_byte_defense_qwen25_05b_bfloat16_0of4",
+      "kind": "byte_defense",
+      "reason": "Already all 602 prompt targets",
+      "existing_observations": 3020
+    },
+    {
+      "id": "gpu_byte_defense_qwen25_05b_bfloat16_1of4",
+      "kind": "byte_defense",
+      "reason": "Already all 602 prompt targets",
+      "existing_observations": 3020
+    },
+    {
+      "id": "gpu_byte_defense_qwen25_05b_bfloat16_2of4",
+      "kind": "byte_defense",
+      "reason": "Already all 602 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_byte_defense_qwen25_05b_bfloat16_3of4",
+      "kind": "byte_defense",
+      "reason": "Already all 602 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_byte_defense_llama32_1b_float32_0of4",
+      "kind": "byte_defense",
+      "reason": "Already all 602 prompt targets",
+      "existing_observations": 3020
+    },
+    {
+      "id": "gpu_byte_defense_llama32_1b_float32_1of4",
+      "kind": "byte_defense",
+      "reason": "Already all 602 prompt targets",
+      "existing_observations": 3020
+    },
+    {
+      "id": "gpu_byte_defense_llama32_1b_float32_2of4",
+      "kind": "byte_defense",
+      "reason": "Already all 602 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_byte_defense_llama32_1b_float32_3of4",
+      "kind": "byte_defense",
+      "reason": "Already all 602 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_byte_defense_llama32_1b_bfloat16_0of4",
+      "kind": "byte_defense",
+      "reason": "Already all 602 prompt targets",
+      "existing_observations": 3020
+    },
+    {
+      "id": "gpu_byte_defense_llama32_1b_bfloat16_1of4",
+      "kind": "byte_defense",
+      "reason": "Already all 602 prompt targets",
+      "existing_observations": 3020
+    },
+    {
+      "id": "gpu_byte_defense_llama32_1b_bfloat16_2of4",
+      "kind": "byte_defense",
+      "reason": "Already all 602 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_byte_defense_llama32_1b_bfloat16_3of4",
+      "kind": "byte_defense",
+      "reason": "Already all 602 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_matched_latency_b16",
+      "kind": "latency",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 900
+    },
+    {
+      "id": "gpu_matched_latency_b32",
+      "kind": "latency",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 900
+    },
+    {
+      "id": "gpu_matched_latency_b64",
+      "kind": "latency",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 900
+    },
+    {
+      "id": "gpu_calibration_cost_qwen25_05b",
+      "kind": "calibration_cost",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 5
+    },
+    {
+      "id": "gpu_calibration_cost_llama32_1b",
+      "kind": "calibration_cost",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 5
+    },
+    {
+      "id": "gpu_main_qwen25_05b_cpu_bridge",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_main_llama32_1b_cpu_bridge",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_main_qwen3_14b_fp32_first_cpu_bridge",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "gpu_main_qwen3_32b_fp32_first_cpu_bridge",
+      "kind": "main",
+      "reason": "Already 3000 prompt targets",
+      "existing_observations": 3000
+    },
+    {
+      "id": "official_mmlu_plain_b16",
+      "kind": "official_utility",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 14042
+    },
+    {
+      "id": "official_mmlu_kvcloak_b16",
+      "kind": "official_utility",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 14042
+    },
+    {
+      "id": "official_mmlu_kvcloak_b32",
+      "kind": "official_utility",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 14042
+    },
+    {
+      "id": "official_mmlu_kvcloak_b64",
+      "kind": "official_utility",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 14042
+    },
+    {
+      "id": "official_squad_plain_b16",
+      "kind": "official_utility",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 10570
+    },
+    {
+      "id": "official_squad_kvcloak_b16",
+      "kind": "official_utility",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 10570
+    },
+    {
+      "id": "official_squad_kvcloak_b32",
+      "kind": "official_utility",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 10570
+    },
+    {
+      "id": "official_squad_kvcloak_b64",
+      "kind": "official_utility",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 10570
+    },
+    {
+      "id": "gpu_marker_numerics_qwen25_05b",
+      "kind": "marker_numerics",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 66
+    },
+    {
+      "id": "gpu_marker_numerics_llama32_1b",
+      "kind": "marker_numerics",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 380
+    },
+    {
+      "id": "gpu_matched_latency_cpu_shape_bridge",
+      "kind": "latency",
+      "reason": "Trial/repetition count, synthetic task, paired-message task, benchmark or selected error diagnostic; not a smaller WildChat target cohort",
+      "existing_observations": 900
+    }
+  ],
+  "repeat_reference": "Same three-round A/C protocol, all602 per round; first-divergence diagnostics remain selected diagnostics",
+  "paper_now_modified": false,
+  "paper_later_scope": "Only updated results, counts, denominators, sample sizes and corresponding figure/table values; preserve author prose and frozen abstract",
+  "prior_results": "Preserved separately; no prior 100/300 observations complete a new602 job"
+}
