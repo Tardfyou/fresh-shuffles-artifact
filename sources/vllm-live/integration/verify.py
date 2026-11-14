@@ -7,12 +7,12 @@ from . import ROOT
 
 def expected(rows,attack,smoke):
     ids=[r['sid'] for r in rows]
-    if attack:return {'attack|'+s for s in ids[:2 if smoke else 100]}
+    if attack:return {'attack|'+s for s in (ids[:2] if smoke else ids)}
     variants=json.loads((ROOT/'protocol/PLAN.json').read_text())['tamper_types']
-    return ({'functional|'+s for s in ids[:2 if smoke else 100]}|
-            {f'shared|{ids[2*i]}|{ids[2*i+1]}' for i in range(1 if smoke else 20)}|
-            {'isolation|'+s for s in ids[:1 if smoke else 10]}|
-            {f'tamper|{s}|{v}' for s in ids[:1 if smoke else 5] for v in variants})
+    return ({'functional|'+s for s in (ids[:2] if smoke else ids)}|
+            {f'shared|{ids[2*i]}|{ids[2*i+1]}' for i in range(1 if smoke else len(ids)//2)}|
+            {'isolation|'+s for s in (ids[:1] if smoke else ids)}|
+            {f'tamper|{s}|{v}' for s in (ids[:1] if smoke else ids) for v in variants})
 
 
 def compare_witness(record):

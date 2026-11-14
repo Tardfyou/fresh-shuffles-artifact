@@ -562,6 +562,24 @@
         "gpu_repeat_C_b32_r2",
         "gpu_repeat_C_b32_r3"
       ]
+    },
+    {
+      "id": "live_vllm602",
+      "measurement_scope": "accepted_gpu_live_integration",
+      "sample_scale": "602 frozen targets per model/block cell;301 shared pairs,602 isolation pairs,4816 tamper cases per cell",
+      "paths": [
+        "results/gpu/accepted/gpu602-vllm-live-20261114",
+        "results/gpu/summaries/gpu602-vllm-live-20261114"
+      ],
+      "documentation": "docs/GPU602_LIVE.md",
+      "primary_gpu_run": "gpu602-vllm-live-20261114",
+      "primary_gpu_jobs": [
+        "attack_qwen25_05b_b16",
+        "defense_qwen25_05b_b16",
+        "defense_qwen25_05b_b32",
+        "defense_llama32_1b_b16",
+        "defense_llama32_1b_b32"
+      ]
     }
   ],
   "gpu": {
@@ -571,17 +589,28 @@
     "expected_jobs": "metadata/gpu/protocol/jobs.json",
     "source_version": "gpu80g-20261109-v2-fp32-protection",
     "live_integration_index": "results/gpu/index.json",
-    "latest_native602_run": "gpu602-native-nonlive-20261114"
+    "latest_native602_run": "gpu602-native-nonlive-20261114",
+    "latest_live602_run": "gpu602-vllm-live-20261114"
   },
   "historical_validation": "metadata/audit/",
   "all_normal_negative_outcomes_retained": true,
   "reporting_policy": "Accepted GPU measurements are primary; all CPU observations remain auxiliary, with precision profiles kept separate.",
   "live_vllm": {
-    "run": "vllm-live-a100-20261110-01",
-    "formal_cases": 780,
-    "functional_passes": 520,
-    "rejections": 160,
-    "attack_correct": 41344,
-    "attack_total": 41344
+    "run": "gpu602-vllm-live-20261114",
+    "formal_cases": 25886,
+    "functional_passes": 6020,
+    "rejections": 19264,
+    "attack_correct": 359936,
+    "attack_total": 359936,
+    "attack_adapter_output_equal": 562,
+    "attack_adapter_trials": 602,
+    "source_scope": {
+      "actual_server_source_snapshot_included": false,
+      "actual_server_baseline_included": false,
+      "source_byte_comparison_claimed": false,
+      "supplied_supervisor_attests_no_scientific_changes": true,
+      "smoke_declares_direct_byte_lock_pass": true,
+      "resource_adaptation": "supplied operator note: live CPU threads8 to32; runtime settings snapshot not included"
+    }
   }
 }

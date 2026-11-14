@@ -1,0 +1,50 @@
+{
+  "complete": true,
+  "record_integrity_pass": true,
+  "measurement_protocol_accepted": true,
+  "formal_cases": 25886,
+  "smoke_cases": 50,
+  "formal_kinds": {
+    "attack": 602,
+    "functional": 2408,
+    "shared": 1204,
+    "isolation": 2408,
+    "tamper": 19264
+  },
+  "functional_passes": 6020,
+  "functional_cases": 6020,
+  "rejections": 19264,
+  "attack_correct": 359936,
+  "attack_total": 359936,
+  "checks": {
+    "plain_duplicate": 6020,
+    "output_tokens_equal": 6020,
+    "logits_exact": 6020,
+    "all_protected_roundtrips_exact": 6020,
+    "gpu_pages_zeroed_between_calls": 6020,
+    "actual_restored_objects": 6020,
+    "actual_model_execution": 6020,
+    "real_epoch_transition": 40,
+    "public_physical_pages_shared": 3612,
+    "private_physical_pages_disjoint": 3612,
+    "stored_prefix_reused": 3612,
+    "public_cipher_object_equal": 3612,
+    "private_cipher_objects_differ": 3612
+  },
+  "worst_attack_adapter_logit_error": 24.8125,
+  "worst_defense_logit_error": 0.0,
+  "attack_adapter_output_equal": 562,
+  "attack_adapter_trials": 602,
+  "normal_negative_outcomes_retained": true,
+  "input_and_ground_truth_bindings_pass": true,
+  "source_scope": {
+    "actual_server_source_snapshot_included": false,
+    "actual_server_baseline_included": false,
+    "source_byte_comparison_claimed": false,
+    "supplied_supervisor_attests_no_scientific_changes": true,
+    "smoke_declares_direct_byte_lock_pass": true,
+    "resource_adaptation": "supplied operator note: live CPU threads8 to32; runtime settings snapshot not included"
+  },
+  "acceptance_basis": "Independent frozen-input, full-case, score, actual-page and consumer-witness checks, plus supplied no-scientific-change statement; actual server source bytes not supplied",
+  "outer_plan_exact_to_issued": true
+}

@@ -1,0 +1,162 @@
+{
+  "attack_qwen25_05b_b16": {
+    "passed": true,
+    "seconds": 9.874110221862793,
+    "verification": {
+      "job": "attack_qwen25_05b_b16",
+      "complete": true,
+      "measured": 602,
+      "expected": 602,
+      "predictions_and_scope_recounted": true,
+      "functional_passes": 0,
+      "authentication_rejections_before_model_execution": 0,
+      "attack_correct": 359936,
+      "attack_total": 359936,
+      "cuda_only": true
+    }
+  },
+  "defense_llama32_1b_b16": {
+    "passed": true,
+    "seconds": 2.632688283920288,
+    "verification": {
+      "job": "defense_llama32_1b_b16",
+      "complete": true,
+      "measured": 6321,
+      "expected": 6321,
+      "predictions_and_scope_recounted": true,
+      "functional_passes": 1505,
+      "authentication_rejections_before_model_execution": 4816,
+      "attack_correct": 0,
+      "attack_total": 0,
+      "cuda_only": true
+    }
+  },
+  "defense_llama32_1b_b32": {
+    "passed": true,
+    "seconds": 2.365814685821533,
+    "verification": {
+      "job": "defense_llama32_1b_b32",
+      "complete": true,
+      "measured": 6321,
+      "expected": 6321,
+      "predictions_and_scope_recounted": true,
+      "functional_passes": 1505,
+      "authentication_rejections_before_model_execution": 4816,
+      "attack_correct": 0,
+      "attack_total": 0,
+      "cuda_only": true
+    }
+  },
+  "defense_qwen25_05b_b16": {
+    "passed": true,
+    "seconds": 2.284972906112671,
+    "verification": {
+      "job": "defense_qwen25_05b_b16",
+      "complete": true,
+      "measured": 6321,
+      "expected": 6321,
+      "predictions_and_scope_recounted": true,
+      "functional_passes": 1505,
+      "authentication_rejections_before_model_execution": 4816,
+      "attack_correct": 0,
+      "attack_total": 0,
+      "cuda_only": true
+    }
+  },
+  "defense_qwen25_05b_b32": {
+    "passed": true,
+    "seconds": 2.2512338161468506,
+    "verification": {
+      "job": "defense_qwen25_05b_b32",
+      "complete": true,
+      "measured": 6321,
+      "expected": 6321,
+      "predictions_and_scope_recounted": true,
+      "functional_passes": 1505,
+      "authentication_rejections_before_model_execution": 4816,
+      "attack_correct": 0,
+      "attack_total": 0,
+      "cuda_only": true
+    }
+  },
+  "smoke_attack_qwen25_05b_b16": {
+    "passed": true,
+    "seconds": 0.04454922676086426,
+    "verification": {
+      "job": "smoke_attack_qwen25_05b_b16",
+      "complete": true,
+      "measured": 2,
+      "expected": 2,
+      "predictions_and_scope_recounted": true,
+      "functional_passes": 0,
+      "authentication_rejections_before_model_execution": 0,
+      "attack_correct": 832,
+      "attack_total": 832,
+      "cuda_only": true
+    }
+  },
+  "smoke_defense_llama32_1b_b16": {
+    "passed": true,
+    "seconds": 0.02925896644592285,
+    "verification": {
+      "job": "smoke_defense_llama32_1b_b16",
+      "complete": true,
+      "measured": 12,
+      "expected": 12,
+      "predictions_and_scope_recounted": true,
+      "functional_passes": 4,
+      "authentication_rejections_before_model_execution": 8,
+      "attack_correct": 0,
+      "attack_total": 0,
+      "cuda_only": true
+    }
+  },
+  "smoke_defense_llama32_1b_b32": {
+    "passed": true,
+    "seconds": 0.026262521743774414,
+    "verification": {
+      "job": "smoke_defense_llama32_1b_b32",
+      "complete": true,
+      "measured": 12,
+      "expected": 12,
+      "predictions_and_scope_recounted": true,
+      "functional_passes": 4,
+      "authentication_rejections_before_model_execution": 8,
+      "attack_correct": 0,
+      "attack_total": 0,
+      "cuda_only": true
+    }
+  },
+  "smoke_defense_qwen25_05b_b16": {
+    "passed": true,
+    "seconds": 0.025005817413330078,
+    "verification": {
+      "job": "smoke_defense_qwen25_05b_b16",
+      "complete": true,
+      "measured": 12,
+      "expected": 12,
+      "predictions_and_scope_recounted": true,
+      "functional_passes": 4,
+      "authentication_rejections_before_model_execution": 8,
+      "attack_correct": 0,
+      "attack_total": 0,
+      "cuda_only": true
+    }
+  },
+  "smoke_defense_qwen25_05b_b32": {
+    "passed": true,
+    "seconds": 0.024831056594848633,
+    "verification": {
+      "job": "smoke_defense_qwen25_05b_b32",
+      "complete": true,
+      "measured": 12,
+      "expected": 12,
+      "predictions_and_scope_recounted": true,
+      "functional_passes": 4,
+      "authentication_rejections_before_model_execution": 8,
+      "attack_correct": 0,
+      "attack_total": 0,
+      "cuda_only": true
+    }
+  }
+}

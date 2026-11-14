@@ -23,10 +23,10 @@ def request(job,key,label,row):return (job+'/'+key+'/'+label,'tenant-'+label,row
 
 def expected_keys(rows,smoke=False):
     ids=[r['sid'] for r in rows];types=json.loads((ROOT/'protocol/PLAN.json').read_text())['tamper_types']
-    return ([f'functional|{s}' for s in ids[:2 if smoke else 100]]+
-            [f'shared|{ids[2*i]}|{ids[2*i+1]}' for i in range(1 if smoke else 20)]+
-            [f'isolation|{s}' for s in ids[:1 if smoke else 10]]+
-            [f'tamper|{s}|{t}' for s in ids[:1 if smoke else 5] for t in types])
+    return ([f'functional|{s}' for s in (ids[:2] if smoke else ids)]+
+            [f'shared|{ids[2*i]}|{ids[2*i+1]}' for i in range(1 if smoke else len(ids)//2)]+
+            [f'isolation|{s}' for s in (ids[:1] if smoke else ids)]+
+            [f'tamper|{s}|{t}' for s in (ids[:1] if smoke else ids) for t in types])
 
 
 def shared_check(result,requests,public_tokens,physical_block):

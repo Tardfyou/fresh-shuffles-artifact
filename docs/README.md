@@ -42,3 +42,5 @@ resuming a run.
 - [PermLLM native-protocol signature checks](PERMLLM_ORBIT_VERIFICATION.md): independent per-row coordinate permutations, raw diversity, public invariants, and complete three-party-flow records.
 
 Current602-prompt native results and offline checks: [GPU602_NATIVE.md](GPU602_NATIVE.md).
+
+Current602-prompt protected engine integration: [GPU602_LIVE.md](GPU602_LIVE.md).

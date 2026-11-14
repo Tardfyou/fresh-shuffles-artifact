@@ -1,0 +1,18 @@
+{
+  "pass_saved_records": true,
+  "live_run": "gpu602-vllm-live-20261114",
+  "live_formal_cases": 25886,
+  "live_smoke_cases": 50,
+  "live_defense_functional": 6020,
+  "live_rejections": 19264,
+  "live_attack_correct": 359936,
+  "live_attack_total": 359936,
+  "live_attack_adapter_output_equal": 562,
+  "live_attack_adapter_trials": 602,
+  "epoch_transition_cases": 40,
+  "actual_physical_sharing_and_isolation_pass": true,
+  "model_or_api_calls": 0,
+  "primary_correct": 91611072,
+  "primary_total": 91611072,
+  "main_profiles": 19
+}

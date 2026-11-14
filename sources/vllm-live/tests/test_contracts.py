@@ -128,8 +128,8 @@ class Contracts(unittest.TestCase):
         from integration import ROOT
         for tag in ['qwen25_05b','llama32_1b']:
             rows=[json.loads(x) for x in (ROOT/'data'/(tag+'.jsonl')).read_text().splitlines()]
-            self.assertEqual(len(rows),100);self.assertEqual(len({r['sid'] for r in rows}),100)
-            self.assertEqual(len(expected(rows,False,False)),170);self.assertEqual(len(expected(rows,False,True)),12)
+            self.assertEqual(len(rows),602);self.assertEqual(len({r['sid'] for r in rows}),602)
+            self.assertEqual(len(expected(rows,False,False)),6321);self.assertEqual(len(expected(rows,False,True)),12)
             self.assertTrue(all(r['defense_tokens'][:32]==rows[0]['defense_tokens'][:32] for r in rows))
     def test_real_worker_wrapper_authenticates_before_delegate(self):
         import importlib.util

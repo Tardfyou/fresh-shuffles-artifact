@@ -1,0 +1,271 @@
+{
+  "record_integrity_pass": true,
+  "formal_cases": 25886,
+  "smoke_cases": 50,
+  "formal_kinds": {
+    "attack": 602,
+    "functional": 2408,
+    "shared": 1204,
+    "isolation": 2408,
+    "tamper": 19264
+  },
+  "counts": {
+    "formal_rows": 25886,
+    "attack_correct": 359936,
+    "attack_total": 359936,
+    "attack_plain_duplicate_passes": 602,
+    "functional_cases": 6020,
+    "functional_passes": 6020,
+    "tamper_rejections": 19264,
+    "attack_adapter_output_equal": 562,
+    "epoch_transition_cases": 40
+  },
+  "checks": {
+    "plain_duplicate": 6020,
+    "output_tokens_equal": 6020,
+    "logits_exact": 6020,
+    "all_protected_roundtrips_exact": 6020,
+    "gpu_pages_zeroed_between_calls": 6020,
+    "actual_restored_objects": 6020,
+    "actual_model_execution": 6020,
+    "real_epoch_transition": 40,
+    "public_physical_pages_shared": 3612,
+    "private_physical_pages_disjoint": 3612,
+    "stored_prefix_reused": 3612,
+    "public_cipher_object_equal": 3612,
+    "private_cipher_objects_differ": 3612
+  },
+  "by_job_kind": {
+    "attack_qwen25_05b_b16": {
+      "attack": 602
+    },
+    "defense_llama32_1b_b16": {
+      "functional": 602,
+      "shared": 301,
+      "isolation": 602,
+      "tamper": 4816
+    },
+    "defense_llama32_1b_b32": {
+      "functional": 602,
+      "shared": 301,
+      "isolation": 602,
+      "tamper": 4816
+    },
+    "defense_qwen25_05b_b16": {
+      "functional": 602,
+      "shared": 301,
+      "isolation": 602,
+      "tamper": 4816
+    },
+    "defense_qwen25_05b_b32": {
+      "functional": 602,
+      "shared": 301,
+      "isolation": 602,
+      "tamper": 4816
+    },
+    "smoke_attack_qwen25_05b_b16": {
+      "attack": 2
+    },
+    "smoke_defense_llama32_1b_b16": {
+      "functional": 2,
+      "shared": 1,
+      "isolation": 1,
+      "tamper": 8
+    },
+    "smoke_defense_llama32_1b_b32": {
+      "functional": 2,
+      "shared": 1,
+      "isolation": 1,
+      "tamper": 8
+    },
+    "smoke_defense_qwen25_05b_b16": {
+      "functional": 2,
+      "shared": 1,
+      "isolation": 1,
+      "tamper": 8
+    },
+    "smoke_defense_qwen25_05b_b32": {
+      "functional": 2,
+      "shared": 1,
+      "isolation": 1,
+      "tamper": 8
+    }
+  },
+  "worst_defense_logit_error": 0.0,
+  "worst_attack_adapter_logit_error": 24.8125,
+  "attack_adapter_output_equal": 562,
+  "attack_adapter_trials": 602,
+  "immutable_environments": 10,
+  "epoch_transition_ids": [
+    {
+      "job": "defense_llama32_1b_b16",
+      "sid": "wc25_128_0001"
+    },
+    {
+      "job": "defense_llama32_1b_b16",
+      "sid": "wc25_128_0011"
+    },
+    {
+      "job": "defense_llama32_1b_b16",
+      "sid": "wc25_128_0012"
+    },
+    {
+      "job": "defense_llama32_1b_b16",
+      "sid": "wc25_128_0015"
+    },
+    {
+      "job": "defense_llama32_1b_b16",
+      "sid": "wc25_128_0016"
+    },
+    {
+      "job": "defense_llama32_1b_b16",
+      "sid": "wc25_128_0018"
+    },
+    {
+      "job": "defense_llama32_1b_b16",
+      "sid": "wc25_128_0028"
+    },
+    {
+      "job": "defense_llama32_1b_b16",
+      "sid": "wc25_128_0033"
+    },
+    {
+      "job": "defense_llama32_1b_b16",
+      "sid": "wc25_128_0037"
+    },
+    {
+      "job": "defense_llama32_1b_b16",
+      "sid": "wc25_128_0039"
+    },
+    {
+      "job": "defense_llama32_1b_b32",
+      "sid": "wc25_128_0001"
+    },
+    {
+      "job": "defense_llama32_1b_b32",
+      "sid": "wc25_128_0011"
+    },
+    {
+      "job": "defense_llama32_1b_b32",
+      "sid": "wc25_128_0012"
+    },
+    {
+      "job": "defense_llama32_1b_b32",
+      "sid": "wc25_128_0015"
+    },
+    {
+      "job": "defense_llama32_1b_b32",
+      "sid": "wc25_128_0016"
+    },
+    {
+      "job": "defense_llama32_1b_b32",
+      "sid": "wc25_128_0018"
+    },
+    {
+      "job": "defense_llama32_1b_b32",
+      "sid": "wc25_128_0028"
+    },
+    {
+      "job": "defense_llama32_1b_b32",
+      "sid": "wc25_128_0033"
+    },
+    {
+      "job": "defense_llama32_1b_b32",
+      "sid": "wc25_128_0037"
+    },
+    {
+      "job": "defense_llama32_1b_b32",
+      "sid": "wc25_128_0039"
+    },
+    {
+      "job": "defense_qwen25_05b_b16",
+      "sid": "wc25_128_0001"
+    },
+    {
+      "job": "defense_qwen25_05b_b16",
+      "sid": "wc25_128_0011"
+    },
+    {
+      "job": "defense_qwen25_05b_b16",
+      "sid": "wc25_128_0012"
+    },
+    {
+      "job": "defense_qwen25_05b_b16",
+      "sid": "wc25_128_0015"
+    },
+    {
+      "job": "defense_qwen25_05b_b16",
+      "sid": "wc25_128_0016"
+    },
+    {
+      "job": "defense_qwen25_05b_b16",
+      "sid": "wc25_128_0018"
+    },
+    {
+      "job": "defense_qwen25_05b_b16",
+      "sid": "wc25_128_0028"
+    },
+    {
+      "job": "defense_qwen25_05b_b16",
+      "sid": "wc25_128_0033"
+    },
+    {
+      "job": "defense_qwen25_05b_b16",
+      "sid": "wc25_128_0037"
+    },
+    {
+      "job": "defense_qwen25_05b_b16",
+      "sid": "wc25_128_0039"
+    },
+    {
+      "job": "defense_qwen25_05b_b32",
+      "sid": "wc25_128_0001"
+    },
+    {
+      "job": "defense_qwen25_05b_b32",
+      "sid": "wc25_128_0011"
+    },
+    {
+      "job": "defense_qwen25_05b_b32",
+      "sid": "wc25_128_0012"
+    },
+    {
+      "job": "defense_qwen25_05b_b32",
+      "sid": "wc25_128_0015"
+    },
+    {
+      "job": "defense_qwen25_05b_b32",
+      "sid": "wc25_128_0016"
+    },
+    {
+      "job": "defense_qwen25_05b_b32",
+      "sid": "wc25_128_0018"
+    },
+    {
+      "job": "defense_qwen25_05b_b32",
+      "sid": "wc25_128_0028"
+    },
+    {
+      "job": "defense_qwen25_05b_b32",
+      "sid": "wc25_128_0033"
+    },
+    {
+      "job": "defense_qwen25_05b_b32",
+      "sid": "wc25_128_0037"
+    },
+    {
+      "job": "defense_qwen25_05b_b32",
+      "sid": "wc25_128_0039"
+    }
+  ],
+  "actual_physical_sharing_and_isolation_recomputed": true,
+  "source_scope": {
+    "actual_server_source_snapshot_included": false,
+    "actual_server_baseline_included": false,
+    "source_byte_comparison_claimed": false,
+    "supplied_supervisor_attests_no_scientific_changes": true,
+    "smoke_declares_direct_byte_lock_pass": true,
+    "resource_adaptation": "supplied operator note: live CPU threads8 to32; runtime settings snapshot not included"
+  },
+  "model_or_api_calls": 0
+}

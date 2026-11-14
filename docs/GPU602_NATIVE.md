@@ -31,8 +31,8 @@ A byte comparison of actual server code is therefore not claimed.
 The selected original leading-score/FP32 diagnostics remain a separate diagnostic
 study. Their original two100-input baseline jobs are retained solely to bind
 those diagnostics; the new run supplies current whole-cohort reference counts.
-Original actual protected-page vLLM results remain current while their602-prompt
-rerun is pending. This return does not replace those live measurements.
+The separate protected-page vLLM602 return is now accepted; see GPU602_LIVE.md.
+The native return itself contains only the native and unprotected-reference studies.
 Main3,000-target recovery,602-target ordering and byte validation, synthetic
 privacy, candidate-message pairs, probe-secret trials and timing repetitions
 were not rerun here. CPU auxiliary data retain their historical scope.

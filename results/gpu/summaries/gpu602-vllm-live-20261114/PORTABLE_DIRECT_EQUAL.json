@@ -1,0 +1,56 @@
+{
+  "all_record_fields_direct_equal": true,
+  "rows": 25936,
+  "jobs": [
+    {
+      "job": "attack_qwen25_05b_b16",
+      "rows": 602,
+      "all_record_fields_direct_equal": true
+    },
+    {
+      "job": "defense_llama32_1b_b16",
+      "rows": 6321,
+      "all_record_fields_direct_equal": true
+    },
+    {
+      "job": "defense_llama32_1b_b32",
+      "rows": 6321,
+      "all_record_fields_direct_equal": true
+    },
+    {
+      "job": "defense_qwen25_05b_b16",
+      "rows": 6321,
+      "all_record_fields_direct_equal": true
+    },
+    {
+      "job": "defense_qwen25_05b_b32",
+      "rows": 6321,
+      "all_record_fields_direct_equal": true
+    },
+    {
+      "job": "smoke_attack_qwen25_05b_b16",
+      "rows": 2,
+      "all_record_fields_direct_equal": true
+    },
+    {
+      "job": "smoke_defense_llama32_1b_b16",
+      "rows": 12,
+      "all_record_fields_direct_equal": true
+    },
+    {
+      "job": "smoke_defense_llama32_1b_b32",
+      "rows": 12,
+      "all_record_fields_direct_equal": true
+    },
+    {
+      "job": "smoke_defense_qwen25_05b_b16",
+      "rows": 12,
+      "all_record_fields_direct_equal": true
+    },
+    {
+      "job": "smoke_defense_qwen25_05b_b32",
+      "rows": 12,
+      "all_record_fields_direct_equal": true
+    }
+  ]
+}

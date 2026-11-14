@@ -20,7 +20,7 @@ def status():
             with path.open('rb') as f:
                 for line in f:
                     if line.endswith(b'\n'):rows.append(json.loads(line))
-        expected=(2 if name.startswith('smoke_') else 100) if 'attack_' in name else (12 if name.startswith('smoke_') else 170)
+        expected=(2 if name.startswith('smoke_') else 602) if 'attack_' in name else (12 if name.startswith('smoke_') else 6321)
         reports.append(dict(job=name,measured=len(rows),expected=expected,complete=(folder/'summary.json').exists(),seconds_since_last_record=round(time.time()-rows[-1]['recorded_unix']) if rows else None,attempt_records=sum(1 for _ in (folder/'attempts.jsonl').open()) if (folder/'attempts.jsonl').exists() else 0))
     return reports
 

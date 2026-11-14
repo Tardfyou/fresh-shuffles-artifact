@@ -1,0 +1,9 @@
+{
+  "retired_run": "vllm-live-a100-20261110-01",
+  "replacement_run": "gpu602-vllm-live-20261114",
+  "author_authorized_cleanup": true,
+  "original_live_cases": 780,
+  "new_live_cases": 25886,
+  "all_new_observations_preserved": true,
+  "original_unprotected_reference_diagnostics_still_retained": true
+}

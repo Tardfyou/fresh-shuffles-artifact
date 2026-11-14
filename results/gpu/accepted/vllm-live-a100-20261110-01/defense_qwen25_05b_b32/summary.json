@@ -1,7 +1,0 @@
-{
-  "job": "defense_qwen25_05b_b32",
-  "complete": true,
-  "expected": 170,
-  "measured": 170,
-  "normal_negative_outcomes_retained": true
-}

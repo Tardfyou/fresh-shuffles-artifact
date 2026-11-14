@@ -17,18 +17,6 @@
       ]
     },
     {
-      "run_id": "vllm-live-a100-20261110-01",
-      "status": "accepted",
-      "raw_path": "results/gpu/accepted/vllm-live-a100-20261110-01",
-      "summary_path": "results/gpu/summaries/vllm-live-a100-20261110-01",
-      "validation_path": "results/gpu/summaries/vllm-live-a100-20261110-01/ACCEPTANCE.json",
-      "source_version": "vllm-live-085post1-20261110-v2",
-      "profiles": [
-        "vllm-V0-bf16-byte-defense",
-        "vllm-fp32-protected-value-attack"
-      ]
-    },
-    {
       "run_id": "vllm-repeat-diagnosis-20261110-01",
       "status": "accepted",
       "raw_path": "results/gpu/accepted/vllm-repeat-diagnosis-20261110-01",
@@ -58,6 +46,20 @@
       "formal_jobs": 50,
       "formal_records": 49364,
       "protected_live_engine_602_results_included": false
+    },
+    {
+      "run_id": "gpu602-vllm-live-20261114",
+      "status": "accepted",
+      "raw_path": "results/gpu/accepted/gpu602-vllm-live-20261114",
+      "summary_path": "results/gpu/summaries/gpu602-vllm-live-20261114",
+      "validation_path": "results/gpu/summaries/gpu602-vllm-live-20261114/ACCEPTANCE.json",
+      "source_version": "wildchat602-full-cohort-20261113-v1-vllm",
+      "profiles": [
+        "live-V0-bf16-byte-defense-602",
+        "live-FP32-protected-Value-attack-602"
+      ],
+      "formal_cases": 25886,
+      "smoke_cases": 50
     }
   ],
   "primary_job_overrides": {
@@ -110,7 +112,22 @@
     "gpu_spectrum_llama32_1b": "gpu602-native-nonlive-20261114",
     "gpu_spectrum_qwen25_05b": "gpu602-native-nonlive-20261114",
     "vllm_baseline_b16": "gpu602-native-nonlive-20261114",
-    "vllm_baseline_b32": "gpu602-native-nonlive-20261114"
+    "vllm_baseline_b32": "gpu602-native-nonlive-20261114",
+    "attack_qwen25_05b_b16": "gpu602-vllm-live-20261114",
+    "defense_qwen25_05b_b16": "gpu602-vllm-live-20261114",
+    "defense_qwen25_05b_b32": "gpu602-vllm-live-20261114",
+    "defense_llama32_1b_b16": "gpu602-vllm-live-20261114",
+    "defense_llama32_1b_b32": "gpu602-vllm-live-20261114"
   },
-  "live602_integration_status": "pending; retain the accepted original live run"
+  "live602_integration_status": "accepted",
+  "retired_runs": [
+    {
+      "run_id": "vllm-live-a100-20261110-01",
+      "replacement_run": "gpu602-vllm-live-20261114",
+      "reason": "Complete fresh602 cohort replaces the smaller live cohort; author-authorized obsolete-data cleanup",
+      "historical_acceptance": "The prior780-case acceptance remains a historical review record"
+    }
+  ],
+  "primary_live_run": "gpu602-vllm-live-20261114",
+  "pending_latency_lengths_1k": true
 }

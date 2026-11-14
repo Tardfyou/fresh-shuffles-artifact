@@ -132,10 +132,10 @@
     "index": "results/gpu/index.json",
     "main_correct": 91611072,
     "main_total": 91611072,
-    "live_defense_functional_pass": 520,
-    "live_authentication_rejections": 160,
-    "live_attack_correct": 41344,
-    "live_attack_total": 41344,
+    "live_defense_functional_pass": 6020,
+    "live_authentication_rejections": 19264,
+    "live_attack_correct": 359936,
+    "live_attack_total": 359936,
     "cpu_results_role": "auxiliary"
   },
   "gpu602_native": {
@@ -146,12 +146,27 @@
     "startup_rows": 38,
     "unique_targets": 602,
     "all_expected_keys_complete": true,
-    "live_protected_engine602": "pending",
+    "live_protected_engine602": "accepted in separate gpu602-vllm-live-20261114",
     "source_scope": {
       "actual_server_source_included": false,
       "source_byte_comparison_claimed": false,
       "supervisor_attests_scientific_files_unchanged": true,
       "issued_job_and_target_manifests_exact": true
     }
+  },
+  "gpu602_live": {
+    "run": "gpu602-vllm-live-20261114",
+    "formal_cases": 25886,
+    "startup_cases": 50,
+    "targets_per_cell": 602,
+    "source_scope": {
+      "actual_server_source_snapshot_included": false,
+      "actual_server_baseline_included": false,
+      "source_byte_comparison_claimed": false,
+      "supplied_supervisor_attests_no_scientific_changes": true,
+      "smoke_declares_direct_byte_lock_pass": true,
+      "resource_adaptation": "supplied operator note: live CPU threads8 to32; runtime settings snapshot not included"
+    },
+    "all_cases_independently_checked": true
   }
 }

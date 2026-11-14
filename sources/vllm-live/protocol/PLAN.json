@@ -23,10 +23,10 @@
   "dtype": "bfloat16",
   "kvcloak_operation_and_storage_dtype": "float32",
   "defense_cases_per_cell": {
-    "functional": 100,
-    "shared_prefix_pairs": 20,
-    "private_isolation_pairs": 10,
-    "tamper": 40
+    "functional": 602,
+    "shared_prefix_pairs": 301,
+    "private_isolation_pairs": 602,
+    "tamper": 4816
   },
   "tamper_types": [
     "ciphertext",
@@ -38,13 +38,13 @@
     "prefix",
     "replay"
   ],
-  "tamper_source_ids": 5,
+  "tamper_source_ids": 602,
   "new_tokens": 6,
   "plain_duplicate_control": true,
   "attack": {
     "model": "qwen25_05b",
     "physical_block": 16,
-    "targets": 100,
+    "targets": 602,
     "heads": 2,
     "block": 16,
     "calibrator": "corrected",
@@ -64,7 +64,8 @@
   "outcomes": "All normal wrong predictions and functional failures retained; incomplete infrastructure attempts resumed on the same keys",
   "gpu_primary_reporting": "Accepted CUDA results become primary; CPU observations remain auxiliary and are never silently pooled across precision profiles",
   "legitimate_epoch_transition": "First10 functional inputs rotate epoch3 to4 after two real engine steps",
-  "formal_cases": 780,
+  "formal_cases": 25886,
   "smoke_cases": 50,
-  "package_revision_reason": "API source guard fix: compare complete-file AST method nodes instead of dedented fragments; original measurement protocol unchanged"
+  "package_revision_reason": "Replace smaller WildChat input selections with the same frozen602; preserve the existing inference, cache protection and validation procedures",
+  "cohort": "All frozen ordering602 prompts; fresh complete runs, no historical result stitching"
 }

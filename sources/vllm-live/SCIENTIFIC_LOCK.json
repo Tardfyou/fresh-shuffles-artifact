@@ -1,7 +1,7 @@
 {
-  "version": "vllm-live-085post1-20261110-v2",
+  "version": "wildchat602-full-cohort-20261113-v1-vllm",
   "baseline_archive": "SCIENTIFIC_BASELINE.zip",
-  "verification": "Direct source/input byte comparisons",
+  "verification": "Direct byte-for-byte comparison; no digest values",
   "files": [
     "data/llama32_1b.jsonl",
     "data/probe_qwen25_05b.json",
@@ -25,7 +25,6 @@
     "protocol/INPUTS.json",
     "protocol/PLAN.json",
     "protocol/models.json",
-    "requirements.txt",
     "science/attack_lib.py",
     "science/corrected/freshness.py",
     "science/exp_veilkv_plus.py",
@@ -45,6 +44,7 @@
     "tests/test_contracts.py",
     "vendor/kvcloak/LICENSE",
     "vendor/kvcloak/config/get_kvcloak_config.py",
-    "vendor/kvcloak/core/kvcloak.py"
+    "vendor/kvcloak/core/kvcloak.py",
+    "requirements.txt"
   ]
 }
