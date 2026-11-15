@@ -1,0 +1,67 @@
+{
+  "formal_jobs": 20,
+  "startup_jobs": 20,
+  "formal_records": 180000,
+  "startup_records": 360,
+  "all_expected_keys_complete": true,
+  "matched_sampling_across_methods_and_blocks": true,
+  "positive_finite_wall_times": true,
+  "dynamic_length_and_byte_denominators_checked": true,
+  "all_p50_p95_p99_recomputed": true,
+  "returned_summary_exact": true,
+  "immutable_invocations": 40,
+  "retained_error_rows": 0,
+  "model_or_api_calls": 0,
+  "input_statistics": {
+    "llama31_8b|[32, 64]": {
+      "unique_inputs": 492,
+      "min_tokens": 32,
+      "max_tokens": 63
+    },
+    "llama31_8b|[64, 128]": {
+      "unique_inputs": 497,
+      "min_tokens": 64,
+      "max_tokens": 127
+    },
+    "llama31_8b|[128, 256]": {
+      "unique_inputs": 491,
+      "min_tokens": 128,
+      "max_tokens": 255
+    },
+    "llama31_8b|[256, 512]": {
+      "unique_inputs": 475,
+      "min_tokens": 256,
+      "max_tokens": 511
+    },
+    "llama31_8b|[512, 768]": {
+      "unique_inputs": 497,
+      "min_tokens": 512,
+      "max_tokens": 764
+    },
+    "qwen25_05b|[32, 64]": {
+      "unique_inputs": 488,
+      "min_tokens": 32,
+      "max_tokens": 63
+    },
+    "qwen25_05b|[64, 128]": {
+      "unique_inputs": 483,
+      "min_tokens": 64,
+      "max_tokens": 127
+    },
+    "qwen25_05b|[128, 256]": {
+      "unique_inputs": 496,
+      "min_tokens": 128,
+      "max_tokens": 255
+    },
+    "qwen25_05b|[256, 512]": {
+      "unique_inputs": 488,
+      "min_tokens": 256,
+      "max_tokens": 511
+    },
+    "qwen25_05b|[512, 768]": {
+      "unique_inputs": 482,
+      "min_tokens": 512,
+      "max_tokens": 767
+    }
+  }
+}

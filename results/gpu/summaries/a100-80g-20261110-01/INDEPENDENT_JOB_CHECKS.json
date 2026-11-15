@@ -407,18 +407,6 @@
       "predictions_and_denominators_checked": true
     }
   },
-  "gpu_matched_latency_b16": {
-    "passed": true,
-    "seconds": 0.1692507266998291,
-    "validation": {
-      "job_id": "gpu_matched_latency_b16",
-      "complete": true,
-      "expected": 900,
-      "measured": 900,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
   "gpu_byte_defense_llama32_1b_bfloat16_3of4": {
     "passed": true,
     "seconds": 0.5985269546508789,
@@ -427,18 +415,6 @@
       "complete": true,
       "expected": 3000,
       "measured": 3000,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_matched_latency_b32": {
-    "passed": true,
-    "seconds": 0.1570603847503662,
-    "validation": {
-      "job_id": "gpu_matched_latency_b32",
-      "complete": true,
-      "expected": 900,
-      "measured": 900,
       "normal_negative_outcomes": 0,
       "predictions_and_denominators_checked": true
     }
@@ -487,18 +463,6 @@
       "complete": true,
       "expected": 100,
       "measured": 100,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "gpu_matched_latency_b64": {
-    "passed": true,
-    "seconds": 0.1673433780670166,
-    "validation": {
-      "job_id": "gpu_matched_latency_b64",
-      "complete": true,
-      "expected": 900,
-      "measured": 900,
       "normal_negative_outcomes": 0,
       "predictions_and_denominators_checked": true
     }
@@ -647,18 +611,6 @@
       "predictions_and_denominators_checked": true
     }
   },
-  "gpu_matched_latency_cpu_shape_bridge": {
-    "passed": true,
-    "seconds": 0.15185284614562988,
-    "validation": {
-      "job_id": "gpu_matched_latency_cpu_shape_bridge",
-      "complete": true,
-      "expected": 900,
-      "measured": 900,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
   "smoke_gpu_main_qwen25_05b": {
     "passed": true,
     "seconds": 0.0214083194732666,
@@ -763,18 +715,6 @@
       "complete": true,
       "expected": 40,
       "measured": 40,
-      "normal_negative_outcomes": 0,
-      "predictions_and_denominators_checked": true
-    }
-  },
-  "smoke_matched_latency": {
-    "passed": true,
-    "seconds": 0.0036144256591796875,
-    "validation": {
-      "job_id": "smoke_matched_latency",
-      "complete": true,
-      "expected": 18,
-      "measured": 18,
       "normal_negative_outcomes": 0,
       "predictions_and_denominators_checked": true
     }

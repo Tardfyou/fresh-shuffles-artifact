@@ -360,38 +360,6 @@
     "smoke": false
   },
   {
-    "job": "gpu_matched_latency_b16",
-    "rows": 900,
-    "record_parts": [
-      "records-0000.jsonl.gz"
-    ],
-    "smoke": false
-  },
-  {
-    "job": "gpu_matched_latency_b32",
-    "rows": 900,
-    "record_parts": [
-      "records-0000.jsonl.gz"
-    ],
-    "smoke": false
-  },
-  {
-    "job": "gpu_matched_latency_b64",
-    "rows": 900,
-    "record_parts": [
-      "records-0000.jsonl.gz"
-    ],
-    "smoke": false
-  },
-  {
-    "job": "gpu_matched_latency_cpu_shape_bridge",
-    "rows": 900,
-    "record_parts": [
-      "records-0000.jsonl.gz"
-    ],
-    "smoke": false
-  },
-  {
     "job": "gpu_ordering",
     "rows": 602,
     "record_parts": [
@@ -722,14 +690,6 @@
   {
     "job": "smoke_marker_numerics",
     "rows": 2,
-    "record_parts": [
-      "records-0000.jsonl.gz"
-    ],
-    "smoke": true
-  },
-  {
-    "job": "smoke_matched_latency",
-    "rows": 18,
     "record_parts": [
       "records-0000.jsonl.gz"
     ],

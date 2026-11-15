@@ -168,5 +168,38 @@
       "resource_adaptation": "supplied operator note: live CPU threads8 to32; runtime settings snapshot not included"
     },
     "all_cases_independently_checked": true
+  },
+  "length_stratified_latency": {
+    "run": "latency-lengths-1k-20261115",
+    "formal_jobs": 20,
+    "startup_jobs": 20,
+    "formal_records": 180000,
+    "startup_records": 360,
+    "actual_server_source_files_direct_equal": 78,
+    "host_threads": 16,
+    "length_groups": [
+      [
+        32,
+        64
+      ],
+      [
+        64,
+        128
+      ],
+      [
+        128,
+        256
+      ],
+      [
+        256,
+        512
+      ],
+      [
+        512,
+        768
+      ]
+    ],
+    "calls_per_operation_length_profile": 1000,
+    "source_snapshot_and_baseline_supplied": true
   }
 }

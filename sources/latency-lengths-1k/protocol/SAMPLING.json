@@ -1,0 +1,56 @@
+{
+  "llama31_8b": {
+    "32-63": {
+      "eligible_inputs": 583,
+      "timing_trials": 1000,
+      "unique_measured_inputs": 492
+    },
+    "64-127": {
+      "eligible_inputs": 606,
+      "timing_trials": 1000,
+      "unique_measured_inputs": 497
+    },
+    "128-255": {
+      "eligible_inputs": 620,
+      "timing_trials": 1000,
+      "unique_measured_inputs": 491
+    },
+    "256-511": {
+      "eligible_inputs": 581,
+      "timing_trials": 1000,
+      "unique_measured_inputs": 475
+    },
+    "512-767": {
+      "eligible_inputs": 600,
+      "timing_trials": 1000,
+      "unique_measured_inputs": 497
+    }
+  },
+  "qwen25_05b": {
+    "32-63": {
+      "eligible_inputs": 600,
+      "timing_trials": 1000,
+      "unique_measured_inputs": 488
+    },
+    "64-127": {
+      "eligible_inputs": 600,
+      "timing_trials": 1000,
+      "unique_measured_inputs": 483
+    },
+    "128-255": {
+      "eligible_inputs": 600,
+      "timing_trials": 1000,
+      "unique_measured_inputs": 496
+    },
+    "256-511": {
+      "eligible_inputs": 600,
+      "timing_trials": 1000,
+      "unique_measured_inputs": 488
+    },
+    "512-767": {
+      "eligible_inputs": 600,
+      "timing_trials": 1000,
+      "unique_measured_inputs": 482
+    }
+  }
+}

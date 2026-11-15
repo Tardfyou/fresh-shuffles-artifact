@@ -1,0 +1,707 @@
+[
+  {
+    "id": "smoke_latency_llama31_8b_float32_b16_l32_64",
+    "kind": "latency",
+    "model": {
+      "tag": "llama31_8b",
+      "repo": "unsloth/Meta-Llama-3.1-8B",
+      "revision": "e9a141a2091ea561b96483212645a2a05e6f99fc"
+    },
+    "dtype": "float32",
+    "block": 16,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 38,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      32,
+      64
+    ],
+    "input_schedule": "protocol/schedules/llama31_8b_32_64.json",
+    "input_file": "data/latency_inputs_llama31_8b.jsonl",
+    "cache_shape": {
+      "layers": 32,
+      "heads": 8,
+      "head_dimension": 128,
+      "element_bytes": 4
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_llama31_8b_float32_b16_l64_128",
+    "kind": "latency",
+    "model": {
+      "tag": "llama31_8b",
+      "repo": "unsloth/Meta-Llama-3.1-8B",
+      "revision": "e9a141a2091ea561b96483212645a2a05e6f99fc"
+    },
+    "dtype": "float32",
+    "block": 16,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 38,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      64,
+      128
+    ],
+    "input_schedule": "protocol/schedules/llama31_8b_64_128.json",
+    "input_file": "data/latency_inputs_llama31_8b.jsonl",
+    "cache_shape": {
+      "layers": 32,
+      "heads": 8,
+      "head_dimension": 128,
+      "element_bytes": 4
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_llama31_8b_float32_b16_l128_256",
+    "kind": "latency",
+    "model": {
+      "tag": "llama31_8b",
+      "repo": "unsloth/Meta-Llama-3.1-8B",
+      "revision": "e9a141a2091ea561b96483212645a2a05e6f99fc"
+    },
+    "dtype": "float32",
+    "block": 16,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 38,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      128,
+      256
+    ],
+    "input_schedule": "protocol/schedules/llama31_8b_128_256.json",
+    "input_file": "data/latency_inputs_llama31_8b.jsonl",
+    "cache_shape": {
+      "layers": 32,
+      "heads": 8,
+      "head_dimension": 128,
+      "element_bytes": 4
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_llama31_8b_float32_b16_l256_512",
+    "kind": "latency",
+    "model": {
+      "tag": "llama31_8b",
+      "repo": "unsloth/Meta-Llama-3.1-8B",
+      "revision": "e9a141a2091ea561b96483212645a2a05e6f99fc"
+    },
+    "dtype": "float32",
+    "block": 16,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 38,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      256,
+      512
+    ],
+    "input_schedule": "protocol/schedules/llama31_8b_256_512.json",
+    "input_file": "data/latency_inputs_llama31_8b.jsonl",
+    "cache_shape": {
+      "layers": 32,
+      "heads": 8,
+      "head_dimension": 128,
+      "element_bytes": 4
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_llama31_8b_float32_b16_l512_768",
+    "kind": "latency",
+    "model": {
+      "tag": "llama31_8b",
+      "repo": "unsloth/Meta-Llama-3.1-8B",
+      "revision": "e9a141a2091ea561b96483212645a2a05e6f99fc"
+    },
+    "dtype": "float32",
+    "block": 16,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 38,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      512,
+      768
+    ],
+    "input_schedule": "protocol/schedules/llama31_8b_512_768.json",
+    "input_file": "data/latency_inputs_llama31_8b.jsonl",
+    "cache_shape": {
+      "layers": 32,
+      "heads": 8,
+      "head_dimension": 128,
+      "element_bytes": 4
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_llama31_8b_float32_b32_l32_64",
+    "kind": "latency",
+    "model": {
+      "tag": "llama31_8b",
+      "repo": "unsloth/Meta-Llama-3.1-8B",
+      "revision": "e9a141a2091ea561b96483212645a2a05e6f99fc"
+    },
+    "dtype": "float32",
+    "block": 32,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 38,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      32,
+      64
+    ],
+    "input_schedule": "protocol/schedules/llama31_8b_32_64.json",
+    "input_file": "data/latency_inputs_llama31_8b.jsonl",
+    "cache_shape": {
+      "layers": 32,
+      "heads": 8,
+      "head_dimension": 128,
+      "element_bytes": 4
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_llama31_8b_float32_b32_l64_128",
+    "kind": "latency",
+    "model": {
+      "tag": "llama31_8b",
+      "repo": "unsloth/Meta-Llama-3.1-8B",
+      "revision": "e9a141a2091ea561b96483212645a2a05e6f99fc"
+    },
+    "dtype": "float32",
+    "block": 32,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 38,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      64,
+      128
+    ],
+    "input_schedule": "protocol/schedules/llama31_8b_64_128.json",
+    "input_file": "data/latency_inputs_llama31_8b.jsonl",
+    "cache_shape": {
+      "layers": 32,
+      "heads": 8,
+      "head_dimension": 128,
+      "element_bytes": 4
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_llama31_8b_float32_b32_l128_256",
+    "kind": "latency",
+    "model": {
+      "tag": "llama31_8b",
+      "repo": "unsloth/Meta-Llama-3.1-8B",
+      "revision": "e9a141a2091ea561b96483212645a2a05e6f99fc"
+    },
+    "dtype": "float32",
+    "block": 32,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 38,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      128,
+      256
+    ],
+    "input_schedule": "protocol/schedules/llama31_8b_128_256.json",
+    "input_file": "data/latency_inputs_llama31_8b.jsonl",
+    "cache_shape": {
+      "layers": 32,
+      "heads": 8,
+      "head_dimension": 128,
+      "element_bytes": 4
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_llama31_8b_float32_b32_l256_512",
+    "kind": "latency",
+    "model": {
+      "tag": "llama31_8b",
+      "repo": "unsloth/Meta-Llama-3.1-8B",
+      "revision": "e9a141a2091ea561b96483212645a2a05e6f99fc"
+    },
+    "dtype": "float32",
+    "block": 32,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 38,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      256,
+      512
+    ],
+    "input_schedule": "protocol/schedules/llama31_8b_256_512.json",
+    "input_file": "data/latency_inputs_llama31_8b.jsonl",
+    "cache_shape": {
+      "layers": 32,
+      "heads": 8,
+      "head_dimension": 128,
+      "element_bytes": 4
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_llama31_8b_float32_b32_l512_768",
+    "kind": "latency",
+    "model": {
+      "tag": "llama31_8b",
+      "repo": "unsloth/Meta-Llama-3.1-8B",
+      "revision": "e9a141a2091ea561b96483212645a2a05e6f99fc"
+    },
+    "dtype": "float32",
+    "block": 32,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 38,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      512,
+      768
+    ],
+    "input_schedule": "protocol/schedules/llama31_8b_512_768.json",
+    "input_file": "data/latency_inputs_llama31_8b.jsonl",
+    "cache_shape": {
+      "layers": 32,
+      "heads": 8,
+      "head_dimension": 128,
+      "element_bytes": 4
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_llama31_8b_float32_b64_l32_64",
+    "kind": "latency",
+    "model": {
+      "tag": "llama31_8b",
+      "repo": "unsloth/Meta-Llama-3.1-8B",
+      "revision": "e9a141a2091ea561b96483212645a2a05e6f99fc"
+    },
+    "dtype": "float32",
+    "block": 64,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 38,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      32,
+      64
+    ],
+    "input_schedule": "protocol/schedules/llama31_8b_32_64.json",
+    "input_file": "data/latency_inputs_llama31_8b.jsonl",
+    "cache_shape": {
+      "layers": 32,
+      "heads": 8,
+      "head_dimension": 128,
+      "element_bytes": 4
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_llama31_8b_float32_b64_l64_128",
+    "kind": "latency",
+    "model": {
+      "tag": "llama31_8b",
+      "repo": "unsloth/Meta-Llama-3.1-8B",
+      "revision": "e9a141a2091ea561b96483212645a2a05e6f99fc"
+    },
+    "dtype": "float32",
+    "block": 64,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 38,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      64,
+      128
+    ],
+    "input_schedule": "protocol/schedules/llama31_8b_64_128.json",
+    "input_file": "data/latency_inputs_llama31_8b.jsonl",
+    "cache_shape": {
+      "layers": 32,
+      "heads": 8,
+      "head_dimension": 128,
+      "element_bytes": 4
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_llama31_8b_float32_b64_l128_256",
+    "kind": "latency",
+    "model": {
+      "tag": "llama31_8b",
+      "repo": "unsloth/Meta-Llama-3.1-8B",
+      "revision": "e9a141a2091ea561b96483212645a2a05e6f99fc"
+    },
+    "dtype": "float32",
+    "block": 64,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 38,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      128,
+      256
+    ],
+    "input_schedule": "protocol/schedules/llama31_8b_128_256.json",
+    "input_file": "data/latency_inputs_llama31_8b.jsonl",
+    "cache_shape": {
+      "layers": 32,
+      "heads": 8,
+      "head_dimension": 128,
+      "element_bytes": 4
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_llama31_8b_float32_b64_l256_512",
+    "kind": "latency",
+    "model": {
+      "tag": "llama31_8b",
+      "repo": "unsloth/Meta-Llama-3.1-8B",
+      "revision": "e9a141a2091ea561b96483212645a2a05e6f99fc"
+    },
+    "dtype": "float32",
+    "block": 64,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 38,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      256,
+      512
+    ],
+    "input_schedule": "protocol/schedules/llama31_8b_256_512.json",
+    "input_file": "data/latency_inputs_llama31_8b.jsonl",
+    "cache_shape": {
+      "layers": 32,
+      "heads": 8,
+      "head_dimension": 128,
+      "element_bytes": 4
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_llama31_8b_float32_b64_l512_768",
+    "kind": "latency",
+    "model": {
+      "tag": "llama31_8b",
+      "repo": "unsloth/Meta-Llama-3.1-8B",
+      "revision": "e9a141a2091ea561b96483212645a2a05e6f99fc"
+    },
+    "dtype": "float32",
+    "block": 64,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 38,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      512,
+      768
+    ],
+    "input_schedule": "protocol/schedules/llama31_8b_512_768.json",
+    "input_file": "data/latency_inputs_llama31_8b.jsonl",
+    "cache_shape": {
+      "layers": 32,
+      "heads": 8,
+      "head_dimension": 128,
+      "element_bytes": 4
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_qwen25_05b_bfloat16_b16_l32_64",
+    "kind": "latency",
+    "model": {
+      "tag": "qwen25_05b",
+      "repo": "Qwen/Qwen2.5-0.5B",
+      "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+    },
+    "dtype": "bfloat16",
+    "block": 16,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 12,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "regime": "original_cpu_shape_dtype_bridge",
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      32,
+      64
+    ],
+    "input_schedule": "protocol/schedules/qwen25_05b_32_64.json",
+    "input_file": "data/latency_inputs_qwen25_05b.jsonl",
+    "cache_shape": {
+      "layers": 24,
+      "heads": 2,
+      "head_dimension": 64,
+      "element_bytes": 2
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_qwen25_05b_bfloat16_b16_l64_128",
+    "kind": "latency",
+    "model": {
+      "tag": "qwen25_05b",
+      "repo": "Qwen/Qwen2.5-0.5B",
+      "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+    },
+    "dtype": "bfloat16",
+    "block": 16,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 12,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "regime": "original_cpu_shape_dtype_bridge",
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      64,
+      128
+    ],
+    "input_schedule": "protocol/schedules/qwen25_05b_64_128.json",
+    "input_file": "data/latency_inputs_qwen25_05b.jsonl",
+    "cache_shape": {
+      "layers": 24,
+      "heads": 2,
+      "head_dimension": 64,
+      "element_bytes": 2
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_qwen25_05b_bfloat16_b16_l128_256",
+    "kind": "latency",
+    "model": {
+      "tag": "qwen25_05b",
+      "repo": "Qwen/Qwen2.5-0.5B",
+      "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+    },
+    "dtype": "bfloat16",
+    "block": 16,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 12,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "regime": "original_cpu_shape_dtype_bridge",
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      128,
+      256
+    ],
+    "input_schedule": "protocol/schedules/qwen25_05b_128_256.json",
+    "input_file": "data/latency_inputs_qwen25_05b.jsonl",
+    "cache_shape": {
+      "layers": 24,
+      "heads": 2,
+      "head_dimension": 64,
+      "element_bytes": 2
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_qwen25_05b_bfloat16_b16_l256_512",
+    "kind": "latency",
+    "model": {
+      "tag": "qwen25_05b",
+      "repo": "Qwen/Qwen2.5-0.5B",
+      "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+    },
+    "dtype": "bfloat16",
+    "block": 16,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 12,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "regime": "original_cpu_shape_dtype_bridge",
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      256,
+      512
+    ],
+    "input_schedule": "protocol/schedules/qwen25_05b_256_512.json",
+    "input_file": "data/latency_inputs_qwen25_05b.jsonl",
+    "cache_shape": {
+      "layers": 24,
+      "heads": 2,
+      "head_dimension": 64,
+      "element_bytes": 2
+    },
+    "smoke": true
+  },
+  {
+    "id": "smoke_latency_qwen25_05b_bfloat16_b16_l512_768",
+    "kind": "latency",
+    "model": {
+      "tag": "qwen25_05b",
+      "repo": "Qwen/Qwen2.5-0.5B",
+      "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+    },
+    "dtype": "bfloat16",
+    "block": 16,
+    "strategy": "full",
+    "device_class": "cuda",
+    "minimum_free_gib": 12,
+    "configuration_layers": null,
+    "exclusive": true,
+    "byte_format_block_size": 16,
+    "phase": "smoke",
+    "priority": 3,
+    "regime": "original_cpu_shape_dtype_bridge",
+    "expected_observations": 18,
+    "repetitions": 2,
+    "warmups": 1,
+    "length_group": [
+      512,
+      768
+    ],
+    "input_schedule": "protocol/schedules/qwen25_05b_512_768.json",
+    "input_file": "data/latency_inputs_qwen25_05b.jsonl",
+    "cache_shape": {
+      "layers": 24,
+      "heads": 2,
+      "head_dimension": 64,
+      "element_bytes": 2
+    },
+    "smoke": true
+  }
+]

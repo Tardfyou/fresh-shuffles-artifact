@@ -32,8 +32,8 @@ source byte comparison is not claimed. `sources/vllm-live/` retains the issued
 Original live measurements and their old archive were removed under the
 author's cleanup instruction once this complete replacement was accepted.
 Selected original unprotected-engine numerical diagnostics remain separate,
-alongside the newer602-target reference results. The pending multi-length
-1k performance supplement is not part of this return.
+alongside the newer602-target reference results. The separate multi-length1k performance return is now accepted;
+see LATENCY_LENGTHS_1K.md. It is independent of this live integration return.
 
 ```bash
 python tools/inspect_gpu_live602.py --root .

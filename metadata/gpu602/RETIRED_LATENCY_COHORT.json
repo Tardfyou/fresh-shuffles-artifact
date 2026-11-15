@@ -1,0 +1,13 @@
+{
+  "retired_run": "a100-80g-20261110-01",
+  "retired_jobs": [
+    "gpu_matched_latency_b16",
+    "gpu_matched_latency_b32",
+    "gpu_matched_latency_b64",
+    "gpu_matched_latency_cpu_shape_bridge",
+    "smoke_matched_latency"
+  ],
+  "replacement_run": "latency-lengths-1k-20261115",
+  "user_authorized_cleanup": true,
+  "unrelated_main_and_native_records_preserved": true
+}

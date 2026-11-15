@@ -60,6 +60,22 @@
       ],
       "formal_cases": 25886,
       "smoke_cases": 50
+    },
+    {
+      "run_id": "latency-lengths-1k-20261115",
+      "status": "accepted",
+      "raw_path": "results/gpu/accepted/latency-lengths-1k-20261115",
+      "summary_path": "results/gpu/summaries/latency-lengths-1k-20261115",
+      "validation_path": "results/gpu/summaries/latency-lengths-1k-20261115/ACCEPTANCE.json",
+      "source_version": "latency-lengths-1k-20261114-v1",
+      "profiles": [
+        "Llama3.1-8B-FP32-b16-b32-b64",
+        "Qwen2.5-0.5B-bf16-b16",
+        "five-length-strata-1k-per-operation"
+      ],
+      "formal_jobs": 20,
+      "formal_records": 180000,
+      "startup_records": 360
     }
   ],
   "primary_job_overrides": {
@@ -117,7 +133,27 @@
     "defense_qwen25_05b_b16": "gpu602-vllm-live-20261114",
     "defense_qwen25_05b_b32": "gpu602-vllm-live-20261114",
     "defense_llama32_1b_b16": "gpu602-vllm-live-20261114",
-    "defense_llama32_1b_b32": "gpu602-vllm-live-20261114"
+    "defense_llama32_1b_b32": "gpu602-vllm-live-20261114",
+    "latency_llama31_8b_float32_b16_l32_64": "latency-lengths-1k-20261115",
+    "latency_llama31_8b_float32_b16_l64_128": "latency-lengths-1k-20261115",
+    "latency_llama31_8b_float32_b16_l128_256": "latency-lengths-1k-20261115",
+    "latency_llama31_8b_float32_b16_l256_512": "latency-lengths-1k-20261115",
+    "latency_llama31_8b_float32_b16_l512_768": "latency-lengths-1k-20261115",
+    "latency_llama31_8b_float32_b32_l32_64": "latency-lengths-1k-20261115",
+    "latency_llama31_8b_float32_b32_l64_128": "latency-lengths-1k-20261115",
+    "latency_llama31_8b_float32_b32_l128_256": "latency-lengths-1k-20261115",
+    "latency_llama31_8b_float32_b32_l256_512": "latency-lengths-1k-20261115",
+    "latency_llama31_8b_float32_b32_l512_768": "latency-lengths-1k-20261115",
+    "latency_llama31_8b_float32_b64_l32_64": "latency-lengths-1k-20261115",
+    "latency_llama31_8b_float32_b64_l64_128": "latency-lengths-1k-20261115",
+    "latency_llama31_8b_float32_b64_l128_256": "latency-lengths-1k-20261115",
+    "latency_llama31_8b_float32_b64_l256_512": "latency-lengths-1k-20261115",
+    "latency_llama31_8b_float32_b64_l512_768": "latency-lengths-1k-20261115",
+    "latency_qwen25_05b_bfloat16_b16_l32_64": "latency-lengths-1k-20261115",
+    "latency_qwen25_05b_bfloat16_b16_l64_128": "latency-lengths-1k-20261115",
+    "latency_qwen25_05b_bfloat16_b16_l128_256": "latency-lengths-1k-20261115",
+    "latency_qwen25_05b_bfloat16_b16_l256_512": "latency-lengths-1k-20261115",
+    "latency_qwen25_05b_bfloat16_b16_l512_768": "latency-lengths-1k-20261115"
   },
   "live602_integration_status": "accepted",
   "retired_runs": [
@@ -129,5 +165,6 @@
     }
   ],
   "primary_live_run": "gpu602-vllm-live-20261114",
-  "pending_latency_lengths_1k": true
+  "pending_latency_lengths_1k": false,
+  "primary_latency_run": "latency-lengths-1k-20261115"
 }

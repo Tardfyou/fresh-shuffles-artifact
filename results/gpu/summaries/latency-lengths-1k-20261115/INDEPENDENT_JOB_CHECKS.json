@@ -1,0 +1,282 @@
+[
+  {
+    "job": "latency_llama31_8b_float32_b16_l32_64",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 5.560680866241455
+  },
+  {
+    "job": "latency_llama31_8b_float32_b16_l64_128",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.9664921760559082
+  },
+  {
+    "job": "latency_llama31_8b_float32_b16_l128_256",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.8783445358276367
+  },
+  {
+    "job": "latency_llama31_8b_float32_b16_l256_512",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.9532794952392578
+  },
+  {
+    "job": "latency_llama31_8b_float32_b16_l512_768",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.8666341304779053
+  },
+  {
+    "job": "latency_llama31_8b_float32_b32_l32_64",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.8852441310882568
+  },
+  {
+    "job": "latency_llama31_8b_float32_b32_l64_128",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.7708687782287598
+  },
+  {
+    "job": "latency_llama31_8b_float32_b32_l128_256",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.8243842124938965
+  },
+  {
+    "job": "latency_llama31_8b_float32_b32_l256_512",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.7632730007171631
+  },
+  {
+    "job": "latency_llama31_8b_float32_b32_l512_768",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.8772377967834473
+  },
+  {
+    "job": "latency_llama31_8b_float32_b64_l32_64",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.7723913192749023
+  },
+  {
+    "job": "latency_llama31_8b_float32_b64_l64_128",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.7553520202636719
+  },
+  {
+    "job": "latency_llama31_8b_float32_b64_l128_256",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.824505090713501
+  },
+  {
+    "job": "latency_llama31_8b_float32_b64_l256_512",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.7678000926971436
+  },
+  {
+    "job": "latency_llama31_8b_float32_b64_l512_768",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.8859155178070068
+  },
+  {
+    "job": "latency_qwen25_05b_bfloat16_b16_l32_64",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.8824729919433594
+  },
+  {
+    "job": "latency_qwen25_05b_bfloat16_b16_l64_128",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.9581530094146729
+  },
+  {
+    "job": "latency_qwen25_05b_bfloat16_b16_l128_256",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.9227650165557861
+  },
+  {
+    "job": "latency_qwen25_05b_bfloat16_b16_l256_512",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.8612384796142578
+  },
+  {
+    "job": "latency_qwen25_05b_bfloat16_b16_l512_768",
+    "complete": true,
+    "measured": 9000,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.9380121231079102
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b16_l32_64",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.006945133209228516
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b16_l64_128",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.0018401145935058594
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b16_l128_256",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.0017702579498291016
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b16_l256_512",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.00174713134765625
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b16_l512_768",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.0017342567443847656
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b32_l32_64",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.001743316650390625
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b32_l64_128",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.0017590522766113281
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b32_l128_256",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.0017423629760742188
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b32_l256_512",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.0017497539520263672
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b32_l512_768",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.00176239013671875
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b64_l32_64",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.0017321109771728516
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b64_l64_128",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.0017473697662353516
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b64_l128_256",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.0017421245574951172
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b64_l256_512",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.001734018325805664
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b64_l512_768",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.0017478466033935547
+  },
+  {
+    "job": "smoke_latency_qwen25_05b_bfloat16_b16_l32_64",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.0017364025115966797
+  },
+  {
+    "job": "smoke_latency_qwen25_05b_bfloat16_b16_l64_128",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.0017495155334472656
+  },
+  {
+    "job": "smoke_latency_qwen25_05b_bfloat16_b16_l128_256",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.0017399787902832031
+  },
+  {
+    "job": "smoke_latency_qwen25_05b_bfloat16_b16_l256_512",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.0017364025115966797
+  },
+  {
+    "job": "smoke_latency_qwen25_05b_bfloat16_b16_l512_768",
+    "complete": true,
+    "measured": 18,
+    "source_input_environment_and_summary_checked": true,
+    "seconds": 0.0017170906066894531
+  }
+]

@@ -1,0 +1,8 @@
+{
+  "job_id": "latency_qwen25_05b_bfloat16_b16_l128_256",
+  "complete": true,
+  "expected": 9000,
+  "measured": 9000,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

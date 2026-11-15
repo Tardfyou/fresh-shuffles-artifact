@@ -16,6 +16,7 @@ and counts, and offline analysis for Repeat to Reveal and VeilKV.
 - [GPU results and handoff layout](docs/GPU_RESULTS.md).
 - [Current602-prompt native results](docs/GPU602_NATIVE.md).
 - [Current602-prompt live integration](docs/GPU602_LIVE.md).
+- [Length-stratified1k performance measurements](docs/LATENCY_LENGTHS_1K.md).
 - [Technical details](docs/SUPPLEMENTARY_DETAILS.md).
 
 ## Directory layout

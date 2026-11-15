@@ -7,8 +7,8 @@ is A100-SXM4-80GB, with PyTorch2.6.0+cu124 and Transformers4.51.3.
 The current focused native results supersede the old100/300-prompt GPU
 cohorts. See [GPU602_NATIVE.md](GPU602_NATIVE.md) and the per-job overrides in
 `results/gpu/index.json`. Main recovery, ordering, byte validation, synthetic
-privacy and timings retain their accepted inputs. The separate live602
-integration is also accepted; see GPU602_LIVE.md. The older counts below describe that original handoff.
+privacy retains its accepted inputs. The separate live602
+integration is also accepted; see GPU602_LIVE.md. The original single-fixture GPU timings are replaced by the accepted stratified study below.
 
 ## Navigation
 
@@ -72,12 +72,20 @@ test and does not relax the exact paired VeilKV checks.
 
 ## Timings
 
-Llama3.1-8B/FP32/512tokens has128MiB of KV data. Median protect/recover
-latencies are445.39/327.29ms for VeilKV,32.74/44.33ms for unfused KV-Cloak
-and21.63/32.71ms fused; plain prefill is499.92ms. VeilKV includes CPU crypto
-and GPU–CPU transfers; KV-Cloak keeps resident GPU caches. Added latency is
-non-negligible. All100 repetitions and20 warm-ups are defined in the protocol.
-These are latency measurements, not power measurements.
+Current timings use the original3000 texts, sampled uniformly with replacement
+within five actual-token length groups for each pinned model tokenizer. Four
+profiles cover Llama3.1-8B/FP32 at blocks16/32/64 and Qwen0.5B/bf16 at block16.
+Each method/operation/group has1000 timed calls, plus20 warm-ups. The full
+return has180000 formal and360 startup observations; all are retained.
+
+On the primary Llama/block16 profile, median VeilKV protection/recovery rises
+from103.17/37.05ms in the32–63-token group to554.69/494.02ms in the512–767
+group. Unfused KV-Cloak medians span32.44–33.05/50.38–52.06ms across groups.
+Times are raw milliseconds per call; normalized times use actual lengths, with
+no pooling across models, precisions, block sizes or length groups.
+CPU cryptography and GPU–CPU transfers remain inside byte-profile timings.
+See [LATENCY_LENGTHS_1K.md](LATENCY_LENGTHS_1K.md) for the paired-input rules,
+timing boundaries, per-profile data and offline inspection.
 
 ## Inspection
 

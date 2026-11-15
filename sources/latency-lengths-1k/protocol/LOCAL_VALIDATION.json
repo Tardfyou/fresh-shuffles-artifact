@@ -1,0 +1,15 @@
+{
+  "local_tests": 9,
+  "local_cpu_tests_pass": true,
+  "model_or_gpu_inference_here": false,
+  "downloaded_only_tokenizer_metadata": true,
+  "original_measurement_primitives_unchanged": true,
+  "formal_jobs": 20,
+  "formal_observations": 180000,
+  "startup_observations": 360,
+  "actual_selector_keys_checked": true,
+  "source_snapshot_export_checked": true,
+  "paper_changed": false,
+  "anonymous_results_changed": false,
+  "canonical_prefix_with_length_dependent_rounding_regression_pass": true
+}

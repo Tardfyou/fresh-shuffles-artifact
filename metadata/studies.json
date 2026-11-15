@@ -462,20 +462,39 @@
     {
       "id": "latency",
       "measurement_scope": "accepted_cpu",
-      "sample_scale": "512-token reused fixture;8 operations x 100 repetitions",
+      "sample_scale": "Five actual-token length groups;1000 calls per method/operation/group;four profiles;180000 formal timings",
       "paths": [
         "results/takeover_20261029/corrected/battery_perf512",
         "results/visual_summary_20261102/data.json"
       ],
-      "documentation": "docs/DEFENSE_SUPPLEMENT.md",
+      "documentation": "docs/LATENCY_LENGTHS_1K.md",
       "primary_gpu_jobs": [
-        "gpu_matched_latency_b16",
-        "gpu_matched_latency_b64",
-        "gpu_matched_latency_b32",
-        "gpu_matched_latency_cpu_shape_bridge"
+        "latency_llama31_8b_float32_b16_l32_64",
+        "latency_llama31_8b_float32_b16_l64_128",
+        "latency_llama31_8b_float32_b16_l128_256",
+        "latency_llama31_8b_float32_b16_l256_512",
+        "latency_llama31_8b_float32_b16_l512_768",
+        "latency_llama31_8b_float32_b32_l32_64",
+        "latency_llama31_8b_float32_b32_l64_128",
+        "latency_llama31_8b_float32_b32_l128_256",
+        "latency_llama31_8b_float32_b32_l256_512",
+        "latency_llama31_8b_float32_b32_l512_768",
+        "latency_llama31_8b_float32_b64_l32_64",
+        "latency_llama31_8b_float32_b64_l64_128",
+        "latency_llama31_8b_float32_b64_l128_256",
+        "latency_llama31_8b_float32_b64_l256_512",
+        "latency_llama31_8b_float32_b64_l512_768",
+        "latency_qwen25_05b_bfloat16_b16_l32_64",
+        "latency_qwen25_05b_bfloat16_b16_l64_128",
+        "latency_qwen25_05b_bfloat16_b16_l128_256",
+        "latency_qwen25_05b_bfloat16_b16_l256_512",
+        "latency_qwen25_05b_bfloat16_b16_l512_768"
       ],
-      "primary_gpu_run": "a100-80g-20261110-01",
-      "cpu_measurement_role": "auxiliary"
+      "primary_gpu_run": "latency-lengths-1k-20261115",
+      "cpu_measurement_role": "auxiliary",
+      "historical_cpu_sample_scale": "512-token reused fixture;8 operations x 100 repetitions",
+      "primary_latency_scope": "Current GPU timings supersede the original single512-token GPU fixture;CPU histories remain auxiliary",
+      "primary_gpu_result_path": "results/gpu/accepted/latency-lengths-1k-20261115"
     },
     {
       "id": "prototype",
@@ -590,7 +609,8 @@
     "source_version": "gpu80g-20261109-v2-fp32-protection",
     "live_integration_index": "results/gpu/index.json",
     "latest_native602_run": "gpu602-native-nonlive-20261114",
-    "latest_live602_run": "gpu602-vllm-live-20261114"
+    "latest_live602_run": "gpu602-vllm-live-20261114",
+    "latest_latency_run": "latency-lengths-1k-20261115"
   },
   "historical_validation": "metadata/audit/",
   "all_normal_negative_outcomes_retained": true,

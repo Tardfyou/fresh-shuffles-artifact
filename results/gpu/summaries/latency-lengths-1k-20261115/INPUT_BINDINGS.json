@@ -1,0 +1,122 @@
+[
+  {
+    "model": "llama31_8b",
+    "length_group": [
+      128,
+      256
+    ],
+    "eligible_inputs": 620,
+    "formal_draws": 1000,
+    "distinct_inputs": 491,
+    "uniform_seeded_sampling_with_replacement_exact": true,
+    "complete_text_tokenization_exact": true
+  },
+  {
+    "model": "llama31_8b",
+    "length_group": [
+      256,
+      512
+    ],
+    "eligible_inputs": 581,
+    "formal_draws": 1000,
+    "distinct_inputs": 475,
+    "uniform_seeded_sampling_with_replacement_exact": true,
+    "complete_text_tokenization_exact": true
+  },
+  {
+    "model": "llama31_8b",
+    "length_group": [
+      32,
+      64
+    ],
+    "eligible_inputs": 583,
+    "formal_draws": 1000,
+    "distinct_inputs": 492,
+    "uniform_seeded_sampling_with_replacement_exact": true,
+    "complete_text_tokenization_exact": true
+  },
+  {
+    "model": "llama31_8b",
+    "length_group": [
+      512,
+      768
+    ],
+    "eligible_inputs": 600,
+    "formal_draws": 1000,
+    "distinct_inputs": 497,
+    "uniform_seeded_sampling_with_replacement_exact": true,
+    "complete_text_tokenization_exact": true
+  },
+  {
+    "model": "llama31_8b",
+    "length_group": [
+      64,
+      128
+    ],
+    "eligible_inputs": 606,
+    "formal_draws": 1000,
+    "distinct_inputs": 497,
+    "uniform_seeded_sampling_with_replacement_exact": true,
+    "complete_text_tokenization_exact": true
+  },
+  {
+    "model": "qwen25_05b",
+    "length_group": [
+      128,
+      256
+    ],
+    "eligible_inputs": 600,
+    "formal_draws": 1000,
+    "distinct_inputs": 496,
+    "uniform_seeded_sampling_with_replacement_exact": true,
+    "complete_text_tokenization_exact": true
+  },
+  {
+    "model": "qwen25_05b",
+    "length_group": [
+      256,
+      512
+    ],
+    "eligible_inputs": 600,
+    "formal_draws": 1000,
+    "distinct_inputs": 488,
+    "uniform_seeded_sampling_with_replacement_exact": true,
+    "complete_text_tokenization_exact": true
+  },
+  {
+    "model": "qwen25_05b",
+    "length_group": [
+      32,
+      64
+    ],
+    "eligible_inputs": 600,
+    "formal_draws": 1000,
+    "distinct_inputs": 488,
+    "uniform_seeded_sampling_with_replacement_exact": true,
+    "complete_text_tokenization_exact": true
+  },
+  {
+    "model": "qwen25_05b",
+    "length_group": [
+      512,
+      768
+    ],
+    "eligible_inputs": 600,
+    "formal_draws": 1000,
+    "distinct_inputs": 482,
+    "uniform_seeded_sampling_with_replacement_exact": true,
+    "complete_text_tokenization_exact": true
+  },
+  {
+    "model": "qwen25_05b",
+    "length_group": [
+      64,
+      128
+    ],
+    "eligible_inputs": 600,
+    "formal_draws": 1000,
+    "distinct_inputs": 483,
+    "uniform_seeded_sampling_with_replacement_exact": true,
+    "complete_text_tokenization_exact": true
+  }
+]

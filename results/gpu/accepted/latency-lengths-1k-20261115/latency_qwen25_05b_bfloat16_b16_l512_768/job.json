@@ -1,0 +1,35 @@
+{
+  "id": "latency_qwen25_05b_bfloat16_b16_l512_768",
+  "kind": "latency",
+  "model": {
+    "tag": "qwen25_05b",
+    "repo": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+  },
+  "dtype": "bfloat16",
+  "block": 16,
+  "strategy": "full",
+  "device_class": "cuda",
+  "minimum_free_gib": 12,
+  "configuration_layers": null,
+  "exclusive": true,
+  "byte_format_block_size": 16,
+  "phase": "performance",
+  "priority": 3,
+  "regime": "original_cpu_shape_dtype_bridge",
+  "expected_observations": 9000,
+  "repetitions": 1000,
+  "warmups": 20,
+  "length_group": [
+    512,
+    768
+  ],
+  "input_schedule": "protocol/schedules/qwen25_05b_512_768.json",
+  "input_file": "data/latency_inputs_qwen25_05b.jsonl",
+  "cache_shape": {
+    "layers": 24,
+    "heads": 2,
+    "head_dimension": 64,
+    "element_bytes": 2
+  }
+}

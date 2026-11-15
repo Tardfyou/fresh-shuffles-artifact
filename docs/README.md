@@ -44,3 +44,5 @@ resuming a run.
 Current602-prompt native results and offline checks: [GPU602_NATIVE.md](GPU602_NATIVE.md).
 
 Current602-prompt protected engine integration: [GPU602_LIVE.md](GPU602_LIVE.md).
+
+CurrentGPU performance: [LATENCY_LENGTHS_1K.md](LATENCY_LENGTHS_1K.md).

@@ -1,0 +1,8 @@
+{
+  "job_id": "smoke_latency_llama31_8b_float32_b32_l32_64",
+  "complete": true,
+  "expected": 18,
+  "measured": 18,
+  "errors_retained": 0,
+  "normal_negative_outcomes_retained": true
+}

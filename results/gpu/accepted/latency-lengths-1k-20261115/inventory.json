@@ -1,0 +1,322 @@
+[
+  {
+    "job": "latency_llama31_8b_float32_b16_l128_256",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_llama31_8b_float32_b16_l256_512",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_llama31_8b_float32_b16_l32_64",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_llama31_8b_float32_b16_l512_768",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_llama31_8b_float32_b16_l64_128",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_llama31_8b_float32_b32_l128_256",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_llama31_8b_float32_b32_l256_512",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_llama31_8b_float32_b32_l32_64",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_llama31_8b_float32_b32_l512_768",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_llama31_8b_float32_b32_l64_128",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_llama31_8b_float32_b64_l128_256",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_llama31_8b_float32_b64_l256_512",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_llama31_8b_float32_b64_l32_64",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_llama31_8b_float32_b64_l512_768",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_llama31_8b_float32_b64_l64_128",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_qwen25_05b_bfloat16_b16_l128_256",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_qwen25_05b_bfloat16_b16_l256_512",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_qwen25_05b_bfloat16_b16_l32_64",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_qwen25_05b_bfloat16_b16_l512_768",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "latency_qwen25_05b_bfloat16_b16_l64_128",
+    "rows": 9000,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": false
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b16_l128_256",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b16_l256_512",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b16_l32_64",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b16_l512_768",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b16_l64_128",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b32_l128_256",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b32_l256_512",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b32_l32_64",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b32_l512_768",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b32_l64_128",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b64_l128_256",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b64_l256_512",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b64_l32_64",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b64_l512_768",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_llama31_8b_float32_b64_l64_128",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_qwen25_05b_bfloat16_b16_l128_256",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_qwen25_05b_bfloat16_b16_l256_512",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_qwen25_05b_bfloat16_b16_l32_64",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_qwen25_05b_bfloat16_b16_l512_768",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  },
+  {
+    "job": "smoke_latency_qwen25_05b_bfloat16_b16_l64_128",
+    "rows": 18,
+    "record_parts": [
+      "records-0000.jsonl.gz"
+    ],
+    "smoke": true
+  }
+]

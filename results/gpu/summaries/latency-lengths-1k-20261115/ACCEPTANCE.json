@@ -1,0 +1,51 @@
+{
+  "complete": true,
+  "record_integrity_pass": true,
+  "measurement_protocol_accepted": true,
+  "formal_jobs": 20,
+  "startup_jobs": 20,
+  "formal_records": 180000,
+  "startup_records": 360,
+  "measurement_repetitions_per_operation_length_profile": 1000,
+  "length_groups": [
+    [
+      32,
+      64
+    ],
+    [
+      64,
+      128
+    ],
+    [
+      128,
+      256
+    ],
+    [
+      256,
+      512
+    ],
+    [
+      512,
+      768
+    ]
+  ],
+  "input_corpus": "Unchanged3000 main WildChat texts",
+  "sampling": "Uniform with replacement inside each model-tokenizer length bin; same draw schedule for all methods and same-model blocks",
+  "profiles": 4,
+  "host_threads": 16,
+  "hardware": "NVIDIA A100-SXM4-80GB",
+  "source_scope": {
+    "pass_": true,
+    "actual_source_files": 78,
+    "actual_server_source_snapshot_included": true,
+    "actual_source_and_returned_baseline_and_issued_source_direct_equal": true,
+    "issued_lock_exact": true
+  },
+  "all_expected_keys_complete": true,
+  "all_raw_timing_values_retained": true,
+  "normal_failed_or_extreme_timings_not_excluded": true,
+  "input_tokenization_and_schedule_independently_checked": true,
+  "p50_p95_p99_from_raw_recount_exact": true,
+  "all_environment_and_invocation_bindings_pass": true,
+  "model_or_api_calls_here": 0
+}

@@ -84,5 +84,13 @@
     "gpu_spectrum_llama32_1b",
     "gpu_spectrum_qwen25_05b"
   ],
-  "replacement_run": "gpu602-native-nonlive-20261114"
+  "replacement_run": "gpu602-native-nonlive-20261114",
+  "original_single_fixture_gpu_timings_replaced_by": "latency-lengths-1k-20261115",
+  "retired_latency_jobs": [
+    "gpu_matched_latency_b16",
+    "gpu_matched_latency_b32",
+    "gpu_matched_latency_b64",
+    "gpu_matched_latency_cpu_shape_bridge",
+    "smoke_matched_latency"
+  ]
 }

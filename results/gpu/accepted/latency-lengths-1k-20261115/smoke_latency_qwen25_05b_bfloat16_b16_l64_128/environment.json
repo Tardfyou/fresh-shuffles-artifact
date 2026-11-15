@@ -1,0 +1,60 @@
+{
+  "model": {
+    "tag": "qwen25_05b",
+    "repo": "Qwen/Qwen2.5-0.5B",
+    "revision": "060db6499f32faf8b98477b0a26969ef7d8b9987"
+  },
+  "device": "cuda:0",
+  "hardware": {
+    "type": "cuda",
+    "name": "NVIDIA A100-SXM4-80GB",
+    "total_memory_bytes": 85094825984,
+    "compute_capability": [
+      8,
+      0
+    ],
+    "visible_devices": "0",
+    "driver_version": "580.82.07"
+  },
+  "model_dtype": "torch.bfloat16",
+  "torch": "2.6.0+cu124",
+  "transformers": "4.51.3",
+  "attention_implementation": "eager",
+  "tf32": false,
+  "logit_filter_argument": "logits_to_keep",
+  "bf16_reduced_precision_reduction": false,
+  "float32_matmul_precision": "highest",
+  "cache_layers": 24,
+  "heads": 2,
+  "head_dimension": 64,
+  "codec_format_version": 2,
+  "identity_derivation": "pinned_checkpoint_and_tokenizer_configuration_v1",
+  "trusted_crypto_device": "cpu",
+  "consumer_device": "cuda:0",
+  "transfers_included_in_end_to_end_timing": true,
+  "prefill_execution": "native_full_prefill",
+  "length_group": [
+    64,
+    128
+  ],
+  "repetitions": 2,
+  "warmups": 1,
+  "host_threads": 16,
+  "sampling": "Uniform draws with replacement from main3000, stratified by this model tokenizer; no truncation",
+  "input_schedule": "protocol/schedules/qwen25_05b_64_128.json",
+  "tokens": "Per-record actual length",
+  "block_size": 16,
+  "timing": "CUDA synchronization at both boundaries; byte profile includes CPU crypto and D2H/H2D copies",
+  "preparation_outside_timing": [
+    "input tokenization",
+    "canonical public-prefix then private-tail cache construction",
+    "threshold/configuration preparation",
+    "fresh input cloning",
+    "nonce construction",
+    "recover-input protection",
+    "fused VM preparation"
+  ],
+  "shared_prefix": "Up to2 complete16-token blocks; actual public/private sizes recorded",
+  "prefill": "Separate native full-prefill timing on the same input schedule",
+  "nonce_namespace": "beb7ac02b2d947f9b2e3dbdcc9225e77"
+}

@@ -1,0 +1,215 @@
+{
+  "pass_saved_records": true,
+  "formal_jobs": 20,
+  "startup_jobs": 20,
+  "formal_records": 180000,
+  "startup_records": 360,
+  "operation_series_checked": 180,
+  "actual_source_lock_files": 78,
+  "length_and_byte_denominators_checked": true,
+  "all_percentiles_recomputed": true,
+  "paired_inputs_across_methods_verified": true,
+  "model_or_api_calls": 0,
+  "jobs": [
+    {
+      "job": "latency_llama31_8b_float32_b16_l32_64",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_llama31_8b_float32_b16_l64_128",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_llama31_8b_float32_b16_l128_256",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_llama31_8b_float32_b16_l256_512",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_llama31_8b_float32_b16_l512_768",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_llama31_8b_float32_b32_l32_64",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_llama31_8b_float32_b32_l64_128",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_llama31_8b_float32_b32_l128_256",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_llama31_8b_float32_b32_l256_512",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_llama31_8b_float32_b32_l512_768",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_llama31_8b_float32_b64_l32_64",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_llama31_8b_float32_b64_l64_128",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_llama31_8b_float32_b64_l128_256",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_llama31_8b_float32_b64_l256_512",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_llama31_8b_float32_b64_l512_768",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_qwen25_05b_bfloat16_b16_l32_64",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_qwen25_05b_bfloat16_b16_l64_128",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_qwen25_05b_bfloat16_b16_l128_256",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_qwen25_05b_bfloat16_b16_l256_512",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "latency_qwen25_05b_bfloat16_b16_l512_768",
+      "rows": 9000,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_llama31_8b_float32_b16_l32_64",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_llama31_8b_float32_b16_l64_128",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_llama31_8b_float32_b16_l128_256",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_llama31_8b_float32_b16_l256_512",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_llama31_8b_float32_b16_l512_768",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_llama31_8b_float32_b32_l32_64",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_llama31_8b_float32_b32_l64_128",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_llama31_8b_float32_b32_l128_256",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_llama31_8b_float32_b32_l256_512",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_llama31_8b_float32_b32_l512_768",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_llama31_8b_float32_b64_l32_64",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_llama31_8b_float32_b64_l64_128",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_llama31_8b_float32_b64_l128_256",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_llama31_8b_float32_b64_l256_512",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_llama31_8b_float32_b64_l512_768",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_qwen25_05b_bfloat16_b16_l32_64",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_qwen25_05b_bfloat16_b16_l64_128",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_qwen25_05b_bfloat16_b16_l128_256",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_qwen25_05b_bfloat16_b16_l256_512",
+      "rows": 18,
+      "pass_": true
+    },
+    {
+      "job": "smoke_latency_qwen25_05b_bfloat16_b16_l512_768",
+      "rows": 18,
+      "pass_": true
+    }
+  ]
+}

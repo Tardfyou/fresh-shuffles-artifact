@@ -1,0 +1,42 @@
+{
+  "version": "latency-lengths-1k-20261114-v1",
+  "source_corpus": "Existing main3000, unchanged original text and tokenizer prefixes",
+  "length_groups": [
+    [
+      32,
+      64
+    ],
+    [
+      64,
+      128
+    ],
+    [
+      128,
+      256
+    ],
+    [
+      256,
+      512
+    ],
+    [
+      512,
+      768
+    ]
+  ],
+  "length_measured_by": "Each pinned model tokenizer; no text truncation",
+  "sampling": "Fixed seeded uniform draws with replacement within each length group; same draws for every method and block size for a given model",
+  "formal_jobs": 20,
+  "profiles": 4,
+  "formal_measurements": 180000,
+  "repetitions_per_operation_per_length_per_profile": 1000,
+  "cache_operations_per_job": 8,
+  "additional_plain_prefill_series_per_job": 1,
+  "warmups_per_series": 20,
+  "startup_jobs": 20,
+  "startup_measurements": 360,
+  "resource": "One80GiB GPU;78GiB allocation cap; serial;16CPU threads by default",
+  "actual_server_source_snapshot_required_on_return": true,
+  "paper_changed": false,
+  "anonymous_results_changed": false,
+  "local_cuda_measurements": false
+}
