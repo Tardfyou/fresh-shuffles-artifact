@@ -2,7 +2,16 @@
 
 The accepted A100 measurements are now primary. The nine-model/eleven-configuration FP32-protection suite records91,611,072/91,611,072 hits; Qwen3-14B and32B extensions each record12,480,000/12,480,000. The32B FP32 profile is native first-layer execution; both large models also have full-model BF16/FP32-protection profiles.
 
-GPU protection precision and calibrator differ from the historical CPU suite. BF16-protection/legacy GPU bridges remain separate. Live vLLM attack recovery is41,344/41,344; byte-defense functionality is520/520 and rejection160/160. The KV-Cloak ordered restore adapter preserves outputs on90/100 targets; this is distinct from recovery accuracy. See `GPU_RESULTS.md` and `../results/gpu/index.json`.
+GPU protection precision and calibrator differ from the historical CPU suite.
+BF16-protection/legacy GPU bridges remain separate. The current602-prompt live
+vLLM run recovers359,936/359,936 token occurrences, passes6,020/6,020 functional
+cases and rejects19,264/19,264 tamper cases before model execution. Its separate
+KV-Cloak ordered-restore adapter preserves outputs on562/602 targets; this is
+distinct from attack recovery and VeilKV correctness. Current performance uses
+five length groups and1,000 calls per method, operation and group, retaining
+180,000 formal timings. See [GPU_RESULTS.md](GPU_RESULTS.md),
+[GPU602_LIVE.md](GPU602_LIVE.md), [LATENCY_LENGTHS_1K.md](LATENCY_LENGTHS_1K.md)
+and `results/gpu/index.json`.
 
 ## Auxiliary CPU reporting history
 
@@ -22,7 +31,7 @@ No model or recovery execution was performed for this change.
 
 ## Residual-error analysis
 
-The selected main total is 91,528,679/91,611,072, leaving 82,393 misses.
+The selected auxiliary CPU total is 91,528,679/91,611,072, leaving 82,393 misses.
 Llama-3.2-1B contributes 37,460; Qwen2.5-0.5B contributes six. Existing
 instrumented records reuse all 3,000 IDs per model, and all 12,000 seed counters
 agree with those two historical model rows. They cover 45.47231% of the current

@@ -1,7 +1,8 @@
 # Extended experiment details
 
-These retained details supplement the compact paper. No experiment or outcome
-is removed. GPU measurements are primary; historical CPU records remain auxiliary.
+These details supplement the compact paper. GPU measurements are primary;
+historical CPU records remain auxiliary. Current602-prompt studies replace the
+superseded smaller GPU cohorts; all outcomes in retained cohorts remain.
 
 ## Qwen0.5B category counts
 
@@ -45,9 +46,33 @@ Five-repeat GPU probe-session medians are 0.853/1.847 seconds for Qwen/Llama, in
 
 ## Native controls and live engine details
 
-The single-GPU integration uses vLLM 0.8.5.post1, its V0 UniProc executor, FlashAttention, eager execution and bf16 model caches. Each of four model/block-size cells has 100 functional inputs, 20 shared-prefix pairs, 10 isolation pairs and 40 tamper cases. All 520 functional cases preserve logits and six generated tokens exactly; all 160 tamper cases stop before model execution. Referenced GPU pages are zeroed between calls, then authenticated and restored before consumption. A 32-token public prefix shares physical pages; private identities are scoped before scheduling. Forty functional cases also transition epochs after two tokens.
+The current single-GPU integration uses vLLM0.8.5.post1, its V0 UniProc executor,
+FlashAttention, eager execution and bf16 model caches. Each of four model/block
+cells has602 ordinary requests,301 shared-prefix pairs,602 isolation pairs and
+4,816 tamper cases. All6,020 functional cases preserve logits and six generated
+tokens exactly; all19,264 tamper cases stop before model execution. Referenced
+GPU pages are cleared between calls and authenticated and restored before
+consumption. A32-token public prefix shares physical pages; private identities
+are checked before scheduling. Forty functional cases also transition epochs
+after two tokens.
 
-The separate Qwen0.5B/$b=16$ attack uses the same 100 frozen inputs and obtains 41,344/41,344 head--token hits from actual protected pages. Official KV-Cloak obfuscation uses FP32. Its defender-side ordered restoration additionally holds the permutation and actual-matrix inverse; these are not supplied to the attacker. This adapter preserves six-token outputs on 90/100 inputs; its logits differ from the unprotected path. VeilKV's byte-exact results and the attack's content-recovery results are reported separately. Native Llama-3.2-1B block-size controls at 16/32/64 preserve all 600 greedy decisions per size. The matching MMLU and SQuAD runs retain 14,042 and 10,570 items; scores are unchanged from plain inference (33.451% macro accuracy and 45.714% exact match). Real TEE deployment remains untested.
+The Qwen0.5B/$b=16$ attack uses the same602 frozen inputs and obtains
+359,936/359,936 head--token hits from actual protected pages. Official KV-Cloak
+obfuscation uses FP32. Its separate ordered-restore adapter holds the permutation
+and actual-matrix inverse, which are not supplied to the attacker. It preserves
+six-token outputs on562/602 inputs; its logits differ from the unprotected path.
+This adapter is distinct from VeilKV correctness and attack recovery. Native
+Llama-3.2-1B controls at block sizes16/32/64 preserve all3,612 greedy decisions
+per size. The retained MMLU and SQuAD studies use14,042 and10,570 items; scores
+are unchanged from plain inference (33.451% macro accuracy and45.714% exact
+match). Real TEE deployment remains untested. See [GPU602_LIVE.md](GPU602_LIVE.md)
+and [GPU602_NATIVE.md](GPU602_NATIVE.md) for the current protocols and records.
+
+## Original100-input engine diagnostics
+
+The following original unprotected-reference records are retained to support
+the selected numerical diagnostics. They are separate from the current602-input
+reference counts of555/602 and539/602, and from the current protected integration.
 
 With bf16 prefix caching and temperature zero, repeated Qwen0.5B outputs agree on 93/100 inputs at block size 16 and 92/100 at size 32. Three independent reruns reproduce both complete output transcripts at each size. Disabling prefix caching yields 100/100 agreement at both sizes in all three runs. At all 15 first-divergence events, competing selected tokens lie in the near-tied leading score group (top-two log-probability gaps 0--0.125). An FP32 control also yields agreement on all ten diagnostic inputs at both sizes. These controls identify prefix-cache-associated bf16 numerical sensitivity: small score changes can alter greedy choices near ties. The live integration retains its paired plain controls and exact byte/logit comparisons.
 

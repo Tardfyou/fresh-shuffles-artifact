@@ -19,9 +19,22 @@
   "cpu_results": "results/",
   "gpu_results": "results/gpu/",
   "catalog": "metadata/studies.json",
-  "gpu_execution_bundle": "veilkv-gpu-80g-experiments-20261109.zip",
-  "gpu_execution_version": "gpu80g-20261109-v2-fp32-protection",
   "previous_git_snapshot": "d88e129",
   "author_authorized_retired_gpu_cohorts": "metadata/gpu602/RETIRED_COHORTS.json",
-  "retained_cpu_and_main3000_ordering602_byte602_live_paths_preserved": true
+  "retained_cpu_and_main3000_ordering602_byte602_live_paths_preserved": true,
+  "original_gpu_execution_plan": {
+    "source_root": "sources/gpu-native",
+    "source_version": "gpu80g-20261109-v2-fp32-protection",
+    "jobs": "metadata/gpu/protocol/jobs.json",
+    "scope": "Original93-unit execution plan; current replacements are identified by results/gpu/index.json"
+  },
+  "execution_sources": {
+    "original_main": "sources/gpu-native",
+    "native602": "sources/gpu602-native",
+    "live602": "sources/vllm-live",
+    "latency_lengths_1k": "sources/latency-lengths-1k",
+    "unprotected_engine_diagnostics": "sources/vllm-repeat-diagnosis"
+  },
+  "current_results_index": "results/gpu/index.json",
+  "frozen_baseline_archives_required": true
 }

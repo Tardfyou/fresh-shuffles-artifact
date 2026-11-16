@@ -2,10 +2,13 @@
 
 This document accompanies the retained code and data. No new experiments are
 introduced here. Every original record and outcome keeps its original scope.
-`results/supplementary_reporting_values.json` retains the nine current checkpoint
-identifiers and eleven configuration-level diagnostic rows. Current aggregate
-statistics are in results/reporting_scope_20261108/summary.json; original
-full-scope measurements remain separately available.
+`results/supplementary_reporting_values.json` retains the auxiliary CPU checkpoint
+inventory and eleven configuration-level diagnostic rows. The auxiliary CPU
+aggregates are in `results/reporting_scope_20261108/summary.json`. Current primary
+GPU measurements are indexed in `results/gpu/index.json` and described in
+[GPU_RESULTS.md](GPU_RESULTS.md). Unless explicitly identified as current GPU
+results, the implementation and timing details below describe the retained CPU
+studies and their original scope.
 
 ## Environment and historical version scope
 
@@ -80,7 +83,7 @@ conventions. Its FP32/bf16 baseline maxima are Qwen 0.00042617/1.0469 and
 Llama 0.000086457/0.65625. Known-key software validation does not measure a
 production scheduler or hardware trust boundary.
 
-## Cache-operation timing details
+## Auxiliary CPU cache-operation timing details
 
 The matched workload uses one existing 512-token OR602 prompt, four threads,
 bf16 storage, 20 warm-ups and 100 calls per operation. Public/private lengths

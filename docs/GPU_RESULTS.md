@@ -13,13 +13,32 @@ integration is also accepted; see GPU602_LIVE.md. The original single-fixture GP
 ## Navigation
 
 - `results/gpu/index.json`: accepted runs.
-- `results/gpu/accepted/a100-80g-20261110-01/<job>/`: main/focused native
-  studies, byte validation, block-size controls, utility and timings.
+- `results/gpu/accepted/a100-80g-20261110-01/<job>/`: retained main recovery,
+  probe, ordering, privacy, byte validation, utility and calibration studies.
+- `results/gpu/accepted/gpu602-native-nonlive-20261114/<job>/`: current
+  focused native studies and unprotected engine references.
 - `results/gpu/accepted/gpu602-vllm-live-20261114/<job>/`: actual engine
   integration, protected-page consumption and content recovery.
 - `results/gpu/summaries/<run>/`: acceptance, recounts and plot inputs.
-- `sources/gpu-native/` and `sources/vllm-live/`: executable runners,
-  dependencies, source interfaces and frozen inputs.
+- `results/gpu/accepted/latency-lengths-1k-20261115/<job>/`: current
+  length-stratified timing observations.
+- `results/gpu/accepted/vllm-repeat-diagnosis-20261110-01/`: original
+  selected numerical diagnostics, separate from the current whole-cohort results.
+
+| Source tree | Role |
+|---|---|
+| `sources/gpu-native/` | Frozen original main execution sources; use retained jobs listed in the result index |
+| `sources/gpu602-native/` | Current50-job focused native plan and inputs |
+| `sources/vllm-live/` | Current602-prompt protected engine plan and inputs |
+| `sources/latency-lengths-1k/` | Current20-job stratified latency plan and inputs |
+| `sources/vllm-repeat-diagnosis/` | Original unprotected engine diagnostics |
+
+These source trees include their dependency files and frozen inputs. The
+original93-unit plan and its source version remain as historical execution
+metadata; do not use that plan's retired smaller-cohort or fixed512-token jobs
+as the current study. The included sources are sufficient without an external
+execution ZIP. Scientific baseline ZIPs, including their embedded CPU reference
+archives, are required by source-lock verification and are retained unchanged.
 
 Read each job's numbered `records-*.jsonl.gz` parts in sorted order. Parts
 cap expanded size at48MiB, except any individual larger observation. Compression
@@ -37,8 +56,12 @@ calibration runs on CPU; model cache generation and target decoding run on GPU.
 
 Separate BF16-protection/legacy GPU bridges reach99.999744% on Qwen0.5B,
 99.708467% on Llama1B,100% on14B and99.983558% on32B. Precision and
-calibrator differ from primary results. All93 formal and60 startup jobs are
-complete; the hardware change alone does not explain the difference from CPU.
+calibrator differ from primary results. The original execution plan contained
+93 formal units and60 startup units. After the authorized replacements, the
+original result directory retains53 formal and39 startup jobs. The native602
+run adds50 formal and10 startup jobs; live602 adds5 and5; the current timing
+run adds20 and20. Selected original engine diagnostics remain separate.
+The hardware change alone does not explain the difference from CPU.
 
 Native byte validation passes48,160/48,160 requests and96,320 consumer
 comparisons. Each large model now adds602 successful byte consumers. Known-key

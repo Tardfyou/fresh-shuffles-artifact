@@ -610,7 +610,15 @@
     "live_integration_index": "results/gpu/index.json",
     "latest_native602_run": "gpu602-native-nonlive-20261114",
     "latest_live602_run": "gpu602-vllm-live-20261114",
-    "latest_latency_run": "latency-lengths-1k-20261115"
+    "latest_latency_run": "latency-lengths-1k-20261115",
+    "expected_jobs_scope": "Original93-unit execution plan; current602 and latency plans are under execution_sources.",
+    "execution_sources": {
+      "original_main": "sources/gpu-native",
+      "native602": "sources/gpu602-native",
+      "live602": "sources/vllm-live",
+      "latency_lengths_1k": "sources/latency-lengths-1k",
+      "unprotected_engine_diagnostics": "sources/vllm-repeat-diagnosis"
+    }
   },
   "historical_validation": "metadata/audit/",
   "all_normal_negative_outcomes_retained": true,
@@ -632,5 +640,6 @@
       "smoke_declares_direct_byte_lock_pass": true,
       "resource_adaptation": "supplied operator note: live CPU threads8 to32; runtime settings snapshot not included"
     }
-  }
+  },
+  "measurement_scope_definition": "Each study measurement_scope and paths describe its retained record collection; primary_gpu_jobs and per-job run overrides identify current primary GPU measurements."
 }

@@ -7,17 +7,17 @@ and counts, and offline analysis for Repeat to Reveal and VeilKV.
 
 ## Start here
 
-- [Experiment inventory](docs/EXPERIMENTS.md): studies, cohorts and evidence.
+- [Current GPU measurements](docs/GPU_RESULTS.md): primary results, sources and offline checks.
 - [Dataset and result catalog](metadata/studies.json): one index of all studies.
 - [Current reporting scope](docs/REPORTING_SCOPE.md): GPU primary/CPU auxiliary, nine models, eleven
   configurations, and the original 3,000-prompt manifest.
 - [Defensive implementation and validation](docs/DEFENSE_SUPPLEMENT.md).
 - [Ordering study](docs/ORDERING_STUDY.md).
-- [GPU results and handoff layout](docs/GPU_RESULTS.md).
 - [Current602-prompt native results](docs/GPU602_NATIVE.md).
 - [Current602-prompt live integration](docs/GPU602_LIVE.md).
 - [Length-stratified1k performance measurements](docs/LATENCY_LENGTHS_1K.md).
 - [Technical details](docs/SUPPLEMENTARY_DETAILS.md).
+- [Auxiliary CPU experiment inventory](docs/EXPERIMENTS.md): retained studies and their original scopes.
 
 ## Directory layout
 
@@ -29,7 +29,7 @@ and counts, and offline analysis for Repeat to Reveal and VeilKV.
 | `data_sources/` | Dataset source and license information |
 | `experiments/kvcloak/` | Retained CPU experiment sources and historical records |
 | `defense_runtime/` | Runtime associated with the accepted CPU defense records |
-| `sources/` | Third-party source snapshots |
+| `sources/` | Frozen experiment runners, inputs and third-party source snapshots |
 | `tools/` | Offline checks and analysis |
 | `results/` | Retained CPU measurements at their recorded paths |
 | `results/gpu/` | Accepted GPU runs, profile summaries and their index |
@@ -37,10 +37,12 @@ and counts, and offline analysis for Repeat to Reveal and VeilKV.
 Accepted GPU results are the primary measurements; CPU results remain auxiliary.
 The main A100 suite, the accepted602-prompt native rerun and the602-prompt live vLLM attack/defense integration are indexed in
 `results/gpu/index.json`. Compressed record parts retain every observation.
-The separately issued `veilkv-gpu-80g-experiments-20261109.zip` defines the
-single-80GiB execution plan; its job specifications are mirrored in
-`metadata/gpu/protocol/`. Each returned run is checked before its portable
-records enter `results/gpu/`.
+The executable source trees are included under `sources/`; no separately issued
+ZIP is needed to inspect the release. `docs/GPU_RESULTS.md` maps each accepted
+run to its source and protocol. `metadata/gpu/protocol/` retains the original
+93-unit execution plan; the native602, live602 and latency studies have their
+own plans. Scientific baseline ZIPs inside source trees are required by their
+source-lock checks and remain part of the frozen reproduction inputs.
 
 ## Inspect saved results
 
@@ -49,6 +51,14 @@ model or external API calls:
 
 ```bash
 python tools/check_artifact_catalog.py
+python tools/inspect_gpu_results.py --root .
+python tools/inspect_gpu602_native.py --root .
+python tools/inspect_latency_lengths.py --root .
+```
+
+Auxiliary CPU records and derived historical analyses can be inspected separately:
+
+```bash
 python tools/summarize_reporting_scope.py --root . --out /tmp/veilkv-reporting-scope
 python tools/inspect_saved_review.py --root .
 python tools/inspect_final_observations.py --root .

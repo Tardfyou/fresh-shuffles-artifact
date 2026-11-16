@@ -471,5 +471,5 @@
       }
     }
   },
-  "reporting_scope": "Current manuscript selection: results/reporting_scope_20261108/summary.json. Original full-scope experiment files retain every recorded outcome."
+  "reporting_scope": "Auxiliary CPU selection: results/reporting_scope_20261108/summary.json. Current primary GPU measurements: results/gpu/index.json. Original full-scope experiment files retain every recorded outcome."
 }
