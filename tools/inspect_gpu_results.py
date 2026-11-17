@@ -14,10 +14,22 @@ def check(root):
     observed=summarize(raw)
     saved=json.loads((root/'results/gpu/summaries/a100-80g-20261110-01/PAPER_VALUES.json').read_text())
     assert observed==saved, 'Portable counters differ from accepted reporting values'
-    assert sum(x['total'] for n,x in observed['main'].items() if 'cpu_bridge' not in n and '14b' not in n and '32b' not in n)==91611072
+    primary={n:x for n,x in observed['main'].items()
+             if x['dtype']=='torch.float32' and x['protection_dtype']=='torch.float32'
+             and x['calibrator']=='corrected'}
+    catalog=json.loads((root/'metadata/studies.json').read_text())
+    scope=next(s for s in catalog['studies'] if s['id']=='main')['primary_reporting']
+    assert set(primary)==set(scope['jobs']) and len(primary)==scope['configurations']==13
+    models={json.loads((raw/n/'job.json').read_text())['model']['repo'] for n in primary}
+    assert len(models)==scope['models']==11
+    correct=sum(x['correct'] for x in primary.values())
+    total=sum(x['total'] for x in primary.values())
+    assert correct==total==scope['correct']==scope['total']==116571072
     from inspect_gpu_live602 import check as check_live
     result=check_live(root)
-    result.update(primary_correct=91611072,primary_total=91611072,main_profiles=len(observed['main']))
+    result.update(primary_correct=correct,primary_total=total,primary_models=len(models),
+                  primary_configurations=len(primary),main_profiles=len(primary),
+                  retained_main_profiles=len(observed['main']))
     return result
 
 

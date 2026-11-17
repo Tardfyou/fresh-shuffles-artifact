@@ -9,7 +9,7 @@ and counts, and offline analysis for Repeat to Reveal and VeilKV.
 
 - [Current GPU measurements](docs/GPU_RESULTS.md): primary results, sources and offline checks.
 - [Dataset and result catalog](metadata/studies.json): one index of all studies.
-- [Current reporting scope](docs/REPORTING_SCOPE.md): GPU primary/CPU auxiliary, nine models, eleven
+- [Current reporting scope](docs/REPORTING_SCOPE.md): GPU primary/CPU auxiliary, eleven models, thirteen
   configurations, and the original 3,000-prompt manifest.
 - [Defensive implementation and validation](docs/DEFENSE_SUPPLEMENT.md).
 - [Ordering study](docs/ORDERING_STUDY.md).
@@ -73,7 +73,7 @@ The primary manifest is
 its saved IDs; private-value cases are synthetic. All positive and negative outcomes in current accepted cohorts remain.
 Superseded smaller GPU cohorts have been removed; selected original engine
 diagnostics are retained. The smaller live integration cohort is superseded by the complete602 rerun. Historical twelve-configuration totals and the
-current eleven-configuration reporting summary have separate scopes.
+current thirteen-configuration GPU reporting summary have separate scopes.
 
 The accepted CPU large-model extension is in
 `results/cpu_large_models_20261110/`: Qwen3-14B and Qwen3-32B each reuse all3,000

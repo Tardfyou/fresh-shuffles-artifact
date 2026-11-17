@@ -102,7 +102,7 @@ has its own workload and does not supply a matched reconstruction-cost ranking.
 
 The two-model diagnostic follow-up retains median relative sign residuals
 0.00058/0.00091, minimum pair norms 0.00319/0.00358 and median head-mean
-projection residuals 0.110/0.069 (worst-row 1.045/1.053). The eleven current configuration
+projection residuals 0.110/0.069 (worst-row 1.045/1.053). The eleven auxiliary CPU configuration
 extrema in the JSON are not per-error attribution.
 
 Earlier logs have 68 worker events on seven head identities and 44 later

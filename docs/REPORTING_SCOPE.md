@@ -1,6 +1,6 @@
 # GPU-primary reporting
 
-The accepted A100 measurements are now primary. The nine-model/eleven-configuration FP32-protection suite records91,611,072/91,611,072 hits; Qwen3-14B and32B extensions each record12,480,000/12,480,000. The32B FP32 profile is native first-layer execution; both large models also have full-model BF16/FP32-protection profiles.
+The accepted A100 measurements are primary. Across eleven models (0.5B–32B) and thirteen configurations, FP32-protection recovery is116,571,072/116,571,072 (100%). All configurations use the same3,000 prompts, all KV heads and two shuffle seeds. The32B FP32 profile uses native first-layer execution to fit within one GPU. Additional BF16-model and legacy-calibrator profiles retain their own recorded conditions and are not counted again in this total. The exact thirteen jobs are listed in metadata/studies.json under main.primary_reporting.
 
 GPU protection precision and calibrator differ from the historical CPU suite.
 BF16-protection/legacy GPU bridges remain separate. The current602-prompt live
@@ -25,8 +25,8 @@ Every retained model keeps every prompt, head and permutation seed.
 Original main tables and follow-up records remain under their original result
 paths, including valid Phi positive and negative measurements. They document
 the full historical collection. Use results/reporting_scope_20261108/summary.json
-for the current manuscript total and selected diagnostic/epoch aggregates.
-The inventory and visual-summary files describe the current selection.
+for that auxiliary CPU selection and its diagnostic/epoch aggregates.
+The historical inventory and visual-summary files describe that selection.
 No model or recovery execution was performed for this change.
 
 ## Residual-error analysis

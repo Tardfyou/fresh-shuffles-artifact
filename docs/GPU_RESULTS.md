@@ -48,8 +48,9 @@ counts. Logs, databases and private failure traces stay outside the artifact.
 
 ## Profiles
 
-The nine-model/eleven-configuration FP32-protection suite records
-91,611,072/91,611,072 hits. Qwen3-14B/32B each record12,480,000/12,480,000.
+The eleven-model/thirteen-configuration FP32-protection suite (0.5B–32B)
+records116,571,072/116,571,072 hits on the same3,000 prompts, all KV heads
+and two shuffle seeds. The total includes the Qwen3-14B and32B rows.
 The14B FP32 run is full-model;32B FP32 uses native first-layer execution.
 Both also have full-model BF16 inference with FP32 protection. Corrected
 calibration runs on CPU; model cache generation and target decoding run on GPU.

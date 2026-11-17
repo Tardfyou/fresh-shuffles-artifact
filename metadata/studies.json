@@ -11,7 +11,7 @@
     {
       "id": "main",
       "measurement_scope": "accepted_cpu",
-      "sample_scale": "3,000 WildChat IDs; current 9 models/11 configurations;2 seeds",
+      "sample_scale": "3,000 WildChat IDs; auxiliary CPU selection9 models/11 configurations;2 seeds",
       "paths": [
         "results/main_public",
         "results/reporting_scope_20261108/summary.json",
@@ -24,7 +24,7 @@
           "Qwen3-32B"
         ],
         "prompts_per_model": 3000,
-        "scope": "CPU first-layer content recovery; separate from main-suite pooled total",
+        "scope": "Retained CPU first-layer measurements; auxiliary to current GPU reporting",
         "path": "results/cpu_large_models_20261110"
       },
       "primary_gpu_jobs": [
@@ -49,7 +49,32 @@
         "gpu_main_qwen3_32b_fp32_first_cpu_bridge"
       ],
       "primary_gpu_run": "a100-80g-20261110-01",
-      "cpu_measurement_role": "auxiliary"
+      "cpu_measurement_role": "auxiliary",
+      "primary_reporting": {
+        "models": 11,
+        "configurations": 13,
+        "parameter_range": "0.5B\u201332B",
+        "prompts_per_configuration": 3000,
+        "shuffle_seeds": 2,
+        "correct": 116571072,
+        "total": 116571072,
+        "percent": 100.0,
+        "jobs": [
+          "gpu_main_llama32_1b",
+          "gpu_main_olmo2_1b",
+          "gpu_main_qwen25_05b",
+          "gpu_main_qwen25_05b_b32",
+          "gpu_main_qwen25_05b_b8",
+          "gpu_main_qwen25_15b",
+          "gpu_main_qwen25_3b",
+          "gpu_main_qwen25_7b",
+          "gpu_main_qwen3_06b",
+          "gpu_main_qwen3_14b_fp32_full",
+          "gpu_main_qwen3_17b",
+          "gpu_main_qwen3_32b_fp32_first",
+          "gpu_main_tinyllama"
+        ]
+      }
     },
     {
       "id": "probe",

@@ -41,6 +41,11 @@ def check(root):
             assert (root/'results/gpu/accepted'/run/job).is_dir(), 'Missing primary job: '+job
     for job,run in index.get('primary_job_overrides', {}).items():
         assert run in run_ids and (root/'results/gpu/accepted'/run/job).is_dir()
+    main=next(study for study in catalog['studies'] if study['id']=='main')
+    scope=main['primary_reporting']
+    assert len(scope['jobs'])==len(set(scope['jobs']))==scope['configurations']==13
+    assert scope['models']==11 and scope['correct']==scope['total']==116571072
+    assert set(scope['jobs'])<=set(main['primary_gpu_jobs'])
     assert index['status']=='accepted_gpu_primary_cpu_auxiliary'
     assert not index.get('pending_latency_lengths_1k', False)
     assert catalog['gpu']['latest_live602_run']==index['primary_live_run'] in run_ids

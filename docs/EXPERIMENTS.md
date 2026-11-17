@@ -11,7 +11,7 @@ Repeated heads, seeds, sessions and analyses do not add independent users.
 
 | Study | Recorded scale | Evidence target |
 |---|---|---|
-| Main recovery | 3,000 prompts, current 11 configurations; historical 12 retained; two seeds | Content-multiset recovery across the current nine-model scope |
+| Auxiliary CPU main recovery | 3,000 prompts, selected 11 configurations; historical 12 retained; two seeds | Retained CPU content recovery; current GPU reporting covers eleven models and thirteen configurations |
 | Probe budget | 100 independent configurations at eight lengths | State coverage and calibration budget |
 | Fused path | 300 prompts, two KV heads | Fused/public-model separation |
 | Scaling | Same 100 prompts at four Qwen and two Llama ratios | Six empirical unchanged/fitted comparisons, retaining regressions |
