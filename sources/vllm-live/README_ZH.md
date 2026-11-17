@@ -1,94 +1,137 @@
-# 真实 vLLM KV 页接入：单卡 GPU 补充实验（v2）
+# Real vLLM KV-page integration: single-GPU supplementary study(v2)
 
-本包独立于原主 GPU 包，模型推理只在 CUDA/vLLM 上运行。复用已有 ordering602 输入，不另收集真实用户样本。不要覆盖服务器上正在运行的原包。
+This standalone bundle is independent of the original main GPU bundle. Model
+inference runs only through CUDA/vLLM. Reuse the existing ordering602 inputs;
+do not collect another user cohort or overwrite an active server bundle.
 
-## 内容和规模
+## Contents and scale
 
-| 部分 | 固定规模 | 验证内容 |
+| Component | Fixed scale | Validation |
 |---|---|---|
-| VeilKV 防御 | Qwen-0.5B、Llama-1B × 物理块16/32 | 每组602续写、301组公共前缀共享、602组相同私有文本隔离、4,816篡改案例 |
-| 攻击兼容 | Qwen-0.5B，物理块16，602条原输入 | 真实KV页保护出口上的重复输入校准和内容恢复 |
-| CUDA启动检查 | 四组防御＋一组攻击，共50案例 | 引擎接口、页布局、认证、实际消费、共享命中与记录守恒 |
+| VeilKV defense | Qwen0.5B/Llama1B x physical blocks16/32 | Per cell:602 ordinary continuations,301 shared-prefix pairs,602 same-private-text isolation pairs,4,816 tamper cases |
+| Attack compatibility | Qwen0.5B/block16,602 original inputs | Repeated-input calibration and content recovery at the real KV-page protection boundary |
+| CUDA startup checks | Four defense cells and one attack cell,50 cases total | Engine API, page layout, authentication, actual consumption, sharing and record accounting |
 
-正式队列共25,886案例。每个正常案例执行六步greedy生成；独立plain和duplicate-plain对照必须完全相同。公共前缀固定32 token，来自原清单，后接已有no_pad fixture正文，构建说明在protocol/INPUTS.json。保留全部输入、预测和正常负结果。
+The formal queue has25,886 cases. Normal cases generate six greedy tokens;
+independent plain and duplicate-plain references must match exactly. The public
+prefix has32 tokens from the original lists, followed by the existing no_pad
+fixture body; construction is specified in protocol/INPUTS.json. Retain every
+input, prediction and normal negative result.
 
-## 实际接入范围
+## Actual integration scope
 
-固定vLLM0.8.5.post1的V0/UniProc/FlashAttention/eager路径。Worker读取引擎实际物理缓存页及请求块表，在每次模型执行后将有效KV保护成host对象，并清零对应GPU页；下一次执行前认证所有相关对象后恢复到原物理页，模型真实消费这些页。可信CPU密码学和传输边界明确记录，不补CPU模型实验。
+Pin vLLM0.8.5.post1 with V0/UniProc, FlashAttention and eager execution. The worker
+reads real physical cache pages and request block tables. After each model step,
+it protects valid KV values as host objects and clears the corresponding GPU
+pages. Before the next step, authenticate every relevant object and restore its
+original physical pages, which the model actually consumes. Record trusted CPU
+cryptography and transfer boundaries; do not substitute CPU model experiments.
 
-请求进入调度器前加入缓存作用域：前32个策略公共token跨主体共享，后续私有块缓存身份加入主体和请求。记录真实num_cached_tokens及每步物理块表，核对共享页相同、私有页分离。VeilKV的16-token密码块组合成16/32-token物理页。
+Apply cache scope before scheduling. The first32 policy-public tokens may share
+across principals; private cache identity additionally includes principal and
+request. Record actual num_cached_tokens and per-step physical block tables.
+Shared pages must coincide and private pages remain disjoint. VeilKV16-token
+cryptographic blocks form16/32-token physical pages.
 
-攻击观察来自同一真实页保护出口；秘密参数与排列不传给恢复程序。合法恢复端另持排列，并用实际矩阵逆恢复物理行顺序：这是新增接入适配器，不冒充上游原生deobfuscate。保护出口仍调用官方obfuscate；FP32保护结果按FP32保存，不再量化回BF16。合法续写数值差单列保留。
+The attack observes the same real-page protection output; secrets and
+permutations are not supplied to recovery. A separate legitimate restore adapter
+holds the permutation and uses the actual matrix inverse to recover physical row
+order. This is an integration adapter, not an upstream-native deobfuscate claim.
+Protection still calls official obfuscate. FP32-protected output remains FP32
+instead of being requantized to BF16. Report legitimate continuation differences
+separately.
 
-本包测试单GPU、greedy、host保护存储、认证恢复、真实PagedAttention消费、前缀复用与请求隔离。多GPU、beam/COW、引擎CPU swap、真实TEE、生产服务不在本小规模协议内。CPU合成单测不代替CUDA启动检查。
+The study covers one GPU, greedy generation, host protection storage,
+authenticated restoration, real PagedAttention consumption, prefix reuse and
+request isolation. It does not cover multiple GPUs, beam/COW, engine CPU swap,
+real TEE hardware or production serving. CPU synthetic tests do not replace the
+CUDA startup checks.
 
-v1曾在源码守卫处误报；本版已修复，原现场保留。已有v1的恢复步骤见FIX_V2_ZH.md。
+The v1 source guard produced a false alarm; v2 corrected it and retained the
+original state. The original issued bundle includes FIX_V2_ZH.md recovery notes.
 
-## 1. 上传、解压和环境
+## 1. Upload, unpack and configure the environment
 
-上传veilkv-vllm-live-20261110-v2.zip到GPU服务器，执行：
+Upload veilkv-vllm-live-20261110-v2.zip and run:
 
 ```bash
 unzip ~/veilkv-vllm-live-20261110-v2.zip
 cd veilkv-vllm-live-v2
 ```
 
-在runtime/settings.json配置GPU编号、原主包模型缓存路径、输出路径、资源比例。复用原主包已有vLLM环境：
+Set the GPU index, existing model cache, output directory and resource fraction
+in runtime/settings.json. Reuse the main bundle's vLLM environment:
 
 ```bash
-export VEILKV_VLLM_PYTHON=/你的原主包目录/.venv-vllm/bin/python
+export VEILKV_VLLM_PYTHON=/path/to/main-bundle/.venv-vllm/bin/python
 bash scripts/bootstrap.sh
 ```
 
-也可以创建独立环境：
+Alternatively, create a separate environment:
 
 ```bash
 bash scripts/bootstrap.sh
 export VEILKV_VLLM_PYTHON="$PWD/.venv-vllm/bin/python"
 ```
 
-固定Torch2.6.0、HF4.51.3、vLLM0.8.5.post1。Claude只处理安装/路径和资源；科学接口代码不改。
-
-可先做不加载模型的源码预检：
+Pin Torch2.6.0, HF4.51.3 and vLLM0.8.5.post1. Environment/path/resource adaptations
+must not change the scientific API implementation. Source preflight without
+loading a model is available:
 
 ```bash
 "$VEILKV_VLLM_PYTHON" -m integration.api_guard
 ```
 
-## 2. GPU空闲后先启动检查
+## 2. Run startup checks when the GPU is free
 
-原主GPU队列优先。本包等待卡上无其它计算进程，不停止别人任务。这里仅0.5B/1B，不加载14B/32B；以vLLM资源比例调节，不设置原包70GiB硬上限。
+The main queue has priority. Wait for other compute processes and do not stop
+them. This study loads only0.5B/1B models, not14B/32B. Adjust the vLLM resource
+fraction rather than imposing the older bundle's70GiB hard cap.
 
 ```bash
 "$VEILKV_VLLM_PYTHON" -u -m integration.driver --phase smoke
 ```
 
-50案例完成且字节防御/认证门通过后产生SMOKE_GATE.json。攻击正常错误和KV-Cloak数值负结果照实保留，不要求恢复率100%才能完成账目验收。
+After all50 cases and byte-defense/authentication gates pass, write
+SMOKE_GATE.json. Preserve ordinary attack errors and KV-Cloak numerical failures;
+record accounting does not require100% attack recovery.
 
-## 3. 正式运行与查看进度
+## 3. Formal execution and progress
 
 ```bash
 nohup "$VEILKV_VLLM_PYTHON" -u -m integration.driver --phase all > runtime/queue.log 2>&1 &
 "$VEILKV_VLLM_PYTHON" -m integration.manage status
 ```
 
-也可分--phase defense或--phase attack。单GPU串行。重复执行核对并跳过已完整测量的ID；正常错误不覆盖。异常保存在attempts.jsonl，缺失同ID继续。
+`--phase defense` and `--phase attack` may run separately. Use one GPU serially.
+Repeated invocation checks and skips only complete IDs, preserving ordinary
+failures. Exceptions remain in attempts.jsonl and incomplete IDs resume.
 
-前台Ctrl-C可以停止本包；保留所有文件后重复同一phase恢复。若写盘断在最后一行，只用以下工具保留原片段再修复：
+Ctrl-C may stop this bundle. Keep all files and repeat the same phase to resume.
+If the last line is incomplete, preserve its fragment before repairing:
 
 ```bash
-"$VEILKV_VLLM_PYTHON" -m integration.manage repair --job 这里填job_id
+"$VEILKV_VLLM_PYTHON" -m integration.manage repair --job JOB_ID
 ```
 
-科学断言或接口核对失败，保留目录、stdout和完整错误交Codex；不软化阈值绕过。环境适配写runtime/ENVIRONMENT_ADAPTATIONS.md。
+On scientific-assertion or API failure, preserve the directory, stdout and full
+error for review; do not weaken thresholds. Record environment adaptations in
+runtime/ENVIRONMENT_ADAPTATIONS.md.
 
-## 4. 交付
+## 4. Handoff
 
 ```bash
 "$VEILKV_VLLM_PYTHON" -m integration.verify
 "$VEILKV_VLLM_PYTHON" -m integration.manage export
 ```
 
-交回vllm-live-private-handoff.zip：包含原记录、每次实际环境、受保护探针、估计参数、物理页/作用域证据、异常和ledger。此为私有验收包，不能直接推匿名仓。GPU验收后作为主要数据更新对应paper，CPU作为辅助对照。
+Return vllm-live-private-handoff.zip with original records, every actual
+environment, protected probes, parameter estimates, physical-page/scope evidence,
+exceptions and ledger. It is a private acceptance bundle, not an anonymous release.
+After GPU acceptance, matching measurements become primary and CPU records remain
+auxiliary.
 
-科学文件与随包基准逐字节核对，安装的关键vLLM接口也与固定上游源码比较。输入/精度/模型版本/算法/阈值固定。本包完成本地合成张量和结构测试；实际A100运行由CUDA smoke确认。
+Compare scientific files directly with the included baseline and critical vLLM
+interfaces with pinned upstream source. Inputs, precision, model revisions,
+algorithms and thresholds are fixed. Local synthetic-tensor and structural tests
+do not establish actual A100 execution; the CUDA startup gate does.

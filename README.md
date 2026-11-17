@@ -17,6 +17,7 @@ and counts, and offline analysis for Repeat to Reveal and VeilKV.
 - [Current602-prompt live integration](docs/GPU602_LIVE.md).
 - [Length-stratified1k performance measurements](docs/LATENCY_LENGTHS_1K.md).
 - [Technical details](docs/SUPPLEMENTARY_DETAILS.md).
+- [English release and original text data](docs/ENGLISH_RELEASE.md).
 - [Auxiliary CPU experiment inventory](docs/EXPERIMENTS.md): retained studies and their original scopes.
 
 ## Directory layout

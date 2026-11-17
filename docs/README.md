@@ -10,6 +10,7 @@ root unless a command explicitly changes directory.
 | [GPU602_LIVE.md](GPU602_LIVE.md) | Current602-prompt live attack and defense |
 | [LATENCY_LENGTHS_1K.md](LATENCY_LENGTHS_1K.md) | Current five-length timing study |
 | [REPORTING_SCOPE.md](REPORTING_SCOPE.md) | Current model and statistical reporting scope |
+| [ENGLISH_RELEASE.md](ENGLISH_RELEASE.md) | English documentation, annotations and preserved original text |
 | [EXPERIMENTS.md](EXPERIMENTS.md) | Auxiliary CPU experiment inventory and original cohort sizes |
 | [DEFENSE_SUPPLEMENT.md](DEFENSE_SUPPLEMENT.md) | CPU defensive runtime, dependencies and checks |
 | [ORDERING_STUDY.md](ORDERING_STUDY.md) | Local and GPT ordering records and metrics |

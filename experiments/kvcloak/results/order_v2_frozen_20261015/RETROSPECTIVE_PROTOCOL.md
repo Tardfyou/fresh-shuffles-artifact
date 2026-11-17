@@ -1,35 +1,64 @@
-# 顺序恢复实验：回溯整理的协议记录（RETROSPECTIVE — 非运行前独立存档）
+# Ordering experiment: retrospective protocol record
 
-**性质声明**：本文件于 2026-10-15 实验完成后回溯整理，内容来自 2026-10-08 的任务
-指令、代码中的 CONFIG 常量与代码评审记录。运行前未以独立文件形式预注册——这是
-流程缺陷，如实记录。各条目的"固化证据"指向运行前即存在的载体。
+**Status: RETROSPECTIVE, not independently archived before execution.**
+This record was assembled after the experiments on October 15, 2026, using
+the October 8 task instructions, CONFIG constants in the code, and code review
+records. It was not independently preregistered before execution. This process
+limitation is retained explicitly. Each evidence reference below identifies a
+record or implementation that already existed before execution.
 
-## 1. 冻结的实验条件（固化载体：exp_order_v2.py CONFIG，运行前写入代码）
-- 模型 Qwen2.5-0.5B；b=16；beam_width=16；top-1 输出；上下文上限 96；迭代 2 轮
-- 种子：校准 42；混淆 base 9000+样本序号；采样 dev=20260929 / main=+1 / boundary=+2
-  （main/boundary 独立种子，与 dev 无样本重叠——2026-10-07 修复并验证首个样本不同）
+## 1. Fixed experimental conditions
 
-## 2. 采样设计（固化载体：samples_main/boundary.jsonl，逐样本含原文与分组）
-- main：3 类别 × 4 长度桶(b1/b2/b4/b8) × 50，长度由 generate_sample_of_length 保证
-- boundary A：100 对同词袋不同方向（wrap 上下文两方向相同，多重集逐 token 一致、
-  仅主体位置不同——2026-10-13 验证记录：36 token/2 块、Counter 相等、2 位置差异）
-- boundary B：100 条随机 token 序列
-- dev：60 条（3×4×5），已观察、不进正式结果
+Evidence: CONFIG in `exp_order_v2.py`, implemented before execution.
 
-## 3. 对照与指标（固化载体：exp_order_v2.py run_experiment/evaluate，运行前实现）
-- 条件：end2end / random_order / oracle_ms / no_cross_block
-- 指标：position_accuracy（主）、exact_match、block_exact、trigram_overlap、
-  multiset_conservation、pa_by_block、random_baseline_pa（Σc²/b² 公式）
-- 禁止用真值选择 key/候选/seed；主结果只报 top-1
+- Model: Qwen2.5-0.5B; b=16; beam_width=16; top-1 output; context limit96; two iterations.
+- Seeds: calibration42; obfuscation9000 plus sample index; sampling dev=20260929,
+  main=dev+1, boundary=dev+2. Main and boundary use independent seeds and do not
+  overlap dev. This was corrected on October 7, 2026, and the first samples were
+  checked to differ.
 
-## 4. 已知数据局限（论文措辞需对应）
-- 逐 token 预测序列与原始词袋 Counter 未落盘；再生依赖固定种子确定性重跑
-  （全量约 35 小时），未执行
-- multiset_conservation 是 pred-vs-recovered 输入；recovered-vs-true 的逐样本等价
-  仅在 dev 期验证（60/60 oracle≡end2end），main 期为聚合一等价
-- random_order 基线在 resume 分段后使用续跑时的 rng 状态（记录于 bugfix 过程）
+## 2. Sampling design
 
-## 5. 运行事故与处置（固化载体：resume_info_*.json、代码未由独立运行前版本记录绑定，以保留的源文件为准）
-- 2026-10-07 磁盘满丢全量 → 改增量写盘重跑；输出迁移机械盘
-- 三进程并发同写 → 种子一致内容一致，按样本 ID 去重（600 唯一/0 坏行）
-- pair 样本首跑全 skip（<16 token）→ 共享 wrap 修复 + --resume 补跑
+Evidence: `samples_main/boundary.jsonl`, with source text and groups per sample.
+
+- Main: three categories x four length groups(b1/b2/b4/b8) x50 samples;
+  `generate_sample_of_length` enforces the lengths.
+- Boundary A:100 pairs with the same token multiset but different directions.
+  Both directions use the same wrapper context and identical token counts;
+  only the body positions differ. The October 13 check records36 tokens/two
+  blocks, equal Counters and two position differences.
+- Boundary B:100 random token sequences.
+- Dev:60 samples(3x4x5), already inspected and excluded from formal results.
+
+## 3. Controls and metrics
+
+Evidence: `run_experiment/evaluate` in `exp_order_v2.py`, implemented before execution.
+
+- Conditions: end2end, random_order, oracle_ms and no_cross_block.
+- Metrics: position_accuracy(primary), exact_match, block_exact,
+  trigram_overlap, multiset_conservation, pa_by_block and random_baseline_pa
+  (sum(c^2)/b^2).
+- Ground truth must not select a key, candidate or seed. Main results report top-1 only.
+
+## 4. Known data limitations
+
+- Per-token predictions and the original bag Counters were not saved.
+  Regeneration would require a deterministic rerun with the fixed seeds,
+  approximately35 hours for the complete study; it was not performed.
+- multiset_conservation compares predictions with the recovered input bags.
+  Per-sample equality between recovered and true bags was checked only in dev
+  (60/60 oracle=end2end); main retains aggregate equality only.
+- After resumed segments, random_order uses the resumed RNG state, as recorded
+  during the bug-fix process.
+
+## 5. Execution incidents and handling
+
+Evidence: `resume_info_*.json`. No independent pre-execution version record
+binds the code; the retained source files are authoritative.
+
+- October 7: a full-disk incident lost the complete output; execution was
+  repeated with incremental recording and outputs moved to another disk.
+- Three processes wrote concurrently. Identical seeds produced identical
+  content; sample-ID deduplication retains600 unique rows and zero malformed rows.
+- Initial pair samples were all skipped because they had fewer than16 tokens.
+  A shared wrapper corrected the inputs, followed by `--resume` for those samples.

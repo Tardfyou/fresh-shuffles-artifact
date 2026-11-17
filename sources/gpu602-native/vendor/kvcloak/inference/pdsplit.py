@@ -1,3 +1,4 @@
+# Publication copy: comments and docstrings translated to English; executable code unchanged.
 import argparse
 from datetime import datetime
 import hashlib
@@ -21,7 +22,7 @@ def prefill(
 
     inputs = tokenizer(input_text, return_tensors="pt").to(device)
 
-    # L0 模型推理时缺失 bos，手动补上
+    # Add the BOS token missing from L0 inference.
     bos_token_id = model.config.bos_token_id if model.config.bos_token_id else None
     if bos_token_id is not None:
         if isinstance(bos_token_id, int):
@@ -48,7 +49,7 @@ def prefill(
         (k.to(device="cpu", dtype=dtype), v.to(device="cpu", dtype=dtype))
         for (k, v) in past_key_values
     )
-    # 保存中间结果
+    # Save intermediate results.
     intermediate = {
         "attentions": outputs.attentions,
         "hidden_states": outputs.hidden_states,
@@ -61,15 +62,15 @@ def prefill(
         path = origin_dir / f"{name}.pt"
         torch.save(data, path)
 
-    # 获取下一个 token 的 logits
-    logits = outputs.logits[:, -1, :]  # 取最后一个 token 的 logits
-    probs = torch.nn.functional.softmax(logits, dim=-1)  # 转换为概率分布
-    next_token_id = torch.argmax(probs, dim=-1)  # 选择概率最高的 token
+    # Get logits for the next token.
+    logits = outputs.logits[:, -1, :]  # Take logits at the last token position.
+    probs = torch.nn.functional.softmax(logits, dim=-1)  # Convert logits to probabilities.
+    next_token_id = torch.argmax(probs, dim=-1)  # Select the most probable token.
 
-    # 将 token ID 转换为文本
+    # Decode the token ID as text.
     next_token = tokenizer.decode(next_token_id, skip_special_tokens=True)
 
-    # 保存结果
+    # Save results.
     result = {
         "input": input_text,
         "input length": inputs.input_ids.shape[-1],
@@ -85,7 +86,7 @@ def prefill(
     with open(result_path, "w", encoding="utf-8") as f:
         json.dump(result, f, ensure_ascii=False, indent=2)
 
-    # 不再在此处打印，由主循环控制
+    # The main loop controls printing.
     # print(f"Results saved to {result_path}")
     return past_key_values, next_token_id
 
@@ -97,8 +98,8 @@ def decode(
     max_length: int,
 ):
     generated_tokens = [next_token_id.item()]
-    current_token = next_token_id.view(1, 1)  # 保持输入维度为(batch_size=1, seq_len=1)
-    device = model.device  # 获取模型所在的设备
+    current_token = next_token_id.view(1, 1)  # Keep shape(batch_size=1, seq_len=1).
+    device = model.device  # Get the model device.
     dtype = model.dtype
     past_key_values = tuple(
         (k.to(device=device, dtype=dtype), v.to(device=device, dtype=dtype))
@@ -106,17 +107,17 @@ def decode(
     )
     past_key_values = DynamicCache.from_legacy_cache(past_key_values)
 
-    for _ in range(max_length - 1):  # 已生成1个token，继续生成max_length-1个
-        # 计算当前的past序列长度
+    for _ in range(max_length - 1):  # One token is ready; generate the remaining max_length-1 tokens.
+        # Compute the current past-sequence length.
         if past_key_values is not None:
             past_length = past_key_values[0][0].shape[2]
         else:
             past_length = 0
         current_length = past_length + current_token.size(1)
-        # 构造attention_mask，形状为 (1, current_length)
+        # Build attention_mask with shape(1, current_length).
         attention_mask = torch.ones(
             (1, current_length),
-            dtype=torch.long,  # 使用与prefill阶段相同的类型
+            dtype=torch.long,  # Use the same dtype as during prefill.
             device=device,
         )
 
@@ -128,16 +129,16 @@ def decode(
                 use_cache=True,
             )
 
-        # 获取下一个token
+        # Get the next token.
         next_token_logits = outputs.logits[:, -1, :]
         next_token_id = torch.argmax(next_token_logits, dim=-1)
 
-        # 更新状态
+        # Update state.
         generated_tokens.append(next_token_id.item())
         past_key_values = DynamicCache.from_legacy_cache(outputs.past_key_values)
-        current_token = next_token_id.view(1, 1)  # 保持输入维度
+        current_token = next_token_id.view(1, 1)  # Preserve the input shape.
 
-    # 将token IDs转换为文本
+    # Decode token IDs as text.
     return generated_tokens
 
 
@@ -174,9 +175,9 @@ def main():
     args = parser.parse_args()
     torch.manual_seed(42)
 
-    # 解析路径中的 ~
+    # Expand ~ in the path.
     model_path = Path(args.model_path).expanduser()
-    # 检查路径是否存在
+    # Check that the path exists.
     if not Path(model_path).is_dir():
         raise FileNotFoundError(f"Model path does not exist: {model_path}")
 
@@ -187,12 +188,12 @@ def main():
 
     tokenizer = AutoTokenizer.from_pretrained(
         model_path, trust_remote_code=True
-    )  # 加载tokenizer
+    )  # Load the tokenizer.
     model = AutoModelForCausalLM.from_pretrained(
         model_path, trust_remote_code=True, attn_implementation="eager"
     ).to(
         device, dtype
-    )  # 加载预训练模型
+    )  # Load the pretrained model.
     model.eval()
 
     dtype_name = str(dtype).split(".")[-1]

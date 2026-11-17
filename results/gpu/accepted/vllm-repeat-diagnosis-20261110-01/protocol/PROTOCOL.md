@@ -1,50 +1,85 @@
-# 诊断协议：未保护 vLLM 重复生成不一致（运行前固定）
+# Prespecified diagnostic protocol: inconsistent unprotected vLLM repeats
 
-目标：定位 vllm_baseline_b16 93/100、b32 92/100 两次生成不一致的原因，给出有证据的结论。不改主包/vllm-live 任何文件；本目录独立运作，全部结果与证据落盘于此。
+Goal: diagnose why repeated generations disagree in the original
+vllm_baseline_b16(93/100 agreement) and b32(92/100 agreement) runs, using saved
+evidence. Do not modify the main or live-vLLM bundles. This diagnostic directory
+operates independently and retains all results and evidence.
 
-## 固定事实（已核对）
+## Verified starting facts
 
-- 原始实现（runner/extended.py:194-226）：同一引擎实例，同一样本连续两次 `engine.generate`（temp=0, max_tokens=16, max_num_seqs=1, enforce_eager=True, enable_prefix_caching=True, BF16, TP=1, uni 后端, VLLM_USE_V1=0；b16: blocks=72/max_len=1024，b32: blocks=40）。
-- 每块尺寸 100 条记录均出自单次成功 invocation（b16=dd781495…，b32=c6ed3139…）；首次尝试的 CUDA invalid argument 错误发生在任何记录写入之前（并发互踩所致），与分歧无关。
-- 分歧样本：b16 7 条 / b32 8 条（交集 5 sid：0068/0119/0180/0307/0346），运行序位置分散（15–73），首分歧位置 0/1/5/6/8/9/10 不等，两块尺寸共有的分歧 sid 首分歧位置多相同（0068@1、0119@9、0307@8、0346@6）。
-- 输入直接取自原 records 的 input_ids（100 条），不重新 tokenize；b16/b32 输入集合断言一致。
+- Original implementation: runner/extended.py:194-226. The same engine generates
+  twice consecutively for one input, with temperature0, max_tokens16,
+  max_num_seqs1, eager execution, prefix caching enabled, BF16, TP1, the UniProc
+  backend and VLLM_USE_V1=0. Block16 uses72 blocks/max_len1024; block32 uses40 blocks.
+- Each block size has100 records from one successful invocation
+  (b16=dd781495..., b32=c6ed3139...). An initial CUDA invalid-argument error
+  occurred before any record was written because concurrent runs interfered;
+  it does not explain the measured divergences.
+- There are seven b16 and eight b32 divergent inputs, with five shared IDs:
+  0068/0119/0180/0307/0346. Their execution positions range15-73; first
+  divergences occur at positions0/1/5/6/8/9/10. Shared divergent inputs often
+  first differ at the same position:0068@1,0119@9,0307@8 and0346@6.
+- Reuse the100 original `input_ids` directly, without retokenization.
+  Assert that b16 and b32 have identical input sets.
 
-## 变体设计（每变体独立引擎进程，除研究项外与原设置逐项相同）
+## Planned variants
 
-| 变体 | prefix_caching | 每次生成前动作 | 比较结构 | 对应问题 |
+Each variant uses a separate engine process. All other settings match the
+original run exactly. This table records the intended protocol; the later
+source-based reclassification of B is documented in the run README.
+
+| Variant | Prefix caching | Action before generation | Comparison | Question |
 |---|---|---|---|---|
-| A | False | 无 | 同引擎两次 | 缓存关掉后是否仍分歧 |
-| B | True | 每次生成前 reset | 冷—冷 | 逐次全新 prefill 是否复现 |
-| C | True | 每对开始前 reset | 冷—热 | 复刻原结构，是否复现 |
-| C0 | True | 每对开始前 reset | 冷—热 | 同 C 但无 logprobs（插桩等价性对照） |
-| D | True | 预热一次后不 reset | 热—热 | 全命中路径是否一致 |
-| E(fp32) | True | 每对开始前 reset | 冷—热 | 仅 15 条分歧样本，dtype=float32，单列标示 |
+| A | False | None | Twice in the same engine | Does disabling caching remove disagreement? |
+| B | True | Reset before each generation | Cold-cold | Does a fresh prefill reproduce the effect? |
+| C | True | Reset before each pair | Cold-warm | Does the original comparison reproduce? |
+| C0 | True | Reset before each pair | Cold-warm | C without logprobs; instrumentation control |
+| D | True | Warm once, then no reset | Warm-warm | Is a full-cache-hit path consistent? |
+| E(FP32) | True | Reset before each pair | Cold-warm | Only15 divergent cases, dtype=float32, reported separately |
 
-- reset 使用 `scheduler.reset_prefix_cache()`（0.8.5 正式方法）；每次 reset 后记录返回值与 `get_num_free_gpu_blocks()`（应等于全部容量），未回满即标记 reset_failed 并中止该变体。
-- 每次生成前后记录空闲块数；输出记录 RequestOutput.metrics 全字段（时序证据）。
+- Use `scheduler.reset_prefix_cache()`, the vLLM0.8.5 method. After every reset,
+  record its return value and `get_num_free_gpu_blocks()`, which must equal the
+  complete capacity. Otherwise mark reset_failed and stop that variant.
+- Record free blocks before and after every generation, and all
+  RequestOutput.metrics timing fields.
 
-## 观测与数值证据
+## Observations and numerical evidence
 
-- 全部生成 `SamplingParams(temperature=0, max_tokens=16, logprobs=20)`（C0 除外）。
-- 每对生成记录：两次 token_ids、相等性、首个分歧位置；分歧步与前一一致步的 top-20 (token, logprob)、top1−top2 间隔、对侧 run 的同位 top-k；只比较同一生成历史下的同位分布。
-- 插桩等价性：C0（无 logprobs）与 C 的 token 输出必须完全一致，否则视为观测影响结果，作废并改用离线副本插桩。
+- Use `SamplingParams(temperature=0,max_tokens=16,logprobs=20)`, except C0.
+- For each pair, retain both token-ID sequences, equality and the first
+  differing position. At the differing step and preceding equal step, retain
+  top-20(token,logprob), top1-top2 gaps and the other run's corresponding
+  top-k. Compare distributions only under identical generation histories.
+- C0 and C must produce exactly the same token outputs. If they differ,
+  treat the instrumentation as affecting execution and use an offline copy.
 
-## 样本与顺序
+## Inputs and order
 
-- 阶段 1：15 条分歧样本 + 5 条一致样本（原运行序原样），变体顺序 C0→C→B→D→A→E。
-- 阶段 2（定位后）：关键对照在原 100 条 × b16/b32 各 ≥3 轮完整测量。
+- Stage1:15 divergent inputs plus five agreeing inputs in their original order.
+  Variant order: C0,C,B,D,A,E.
+- Stage2 after diagnosis: repeat the key controls on all100 original inputs
+  at both block sizes, for at least three complete rounds.
 
-## 判定框架（预先固定）
+## Prespecified interpretation
 
-- A 分歧 + B 分歧 → 与缓存无关的内核/调度非确定性。
-- A 一致 + B 分歧 → 冷 prefill 本身非确定（同一输入两次全量 prefill 出不同 logits）。
-- A 一致 + B 一致 + C 分歧 → 冷—热路径数值差（命中缓存 vs 重算）为因。
-- C 一致 + 原始仍分歧 → 原始运行中跨样本缓存状态（样本间共享前缀/驱逐）为因，需在阶段 2 复刻原逐样本连续结构验证。
-- D 分歧 → 热路径自身非确定。
-- E 消除分歧 → BF16 数值近平局参与（单列证据，不以此替代主判定）。
+- A and B disagree: kernel/scheduling nondeterminism independent of caching.
+- A agrees and B disagrees: cold-prefill nondeterminism; identical full inputs
+  can yield different logits.
+- A and B agree, C disagrees: numerical differences between cache reuse and recomputation.
+- C agrees but the original run disagrees: test cross-input cache state,
+  including shared prefixes/eviction, by reproducing the original continuous
+  per-input execution in stage2.
+- D disagrees: the warm path itself is nondeterministic.
+- E removes disagreement: BF16 near-ties contribute. Report this evidence
+  separately; it does not replace the main interpretation.
 
-不预先归因 BF16 误差；一切以对照矩阵 + 数值记录为准。正常分歧如实保留，不换种子、不删样本、不放宽指标。
+Do not attribute the result to BF16 in advance. Use the control matrix and
+numerical records. Retain every ordinary disagreement; do not change seeds,
+remove inputs or relax metrics.
 
-## 交付
+## Handoff
 
-`analysis/` 汇总脚本与结论、`records/` 全部逐样本记录、`scripts/` 实际源码、HANDOFF.md 回答四问：原因、支持对照、原基线是否需修复、对保护接入正确性比较的影响。
+Retain analysis scripts and conclusions in `analysis/`, all per-input records
+in `records/`, and actual source in `scripts/`. HANDOFF.md answers: the cause,
+supporting controls, whether the original baseline needs correction, and the
+effect on correctness comparisons for protected integration.

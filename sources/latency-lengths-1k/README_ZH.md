@@ -1,46 +1,94 @@
-# 多长度、每操作1,000次的性能补跑
+# Five-length latency study with1,000 calls per operation
 
-本包只补性能，不重跑恢复率、隐私、模型能力或live-vLLM集成。使用原性能实验的模型、精度、四种缓存保护方法、操作实现和计时边界；把单一512-token输入扩为五个长度档，并让每档每项操作正式测1,000次。
+This guide records the issued performance-only execution bundle. It does not
+rerun recovery, privacy, utility or live-vLLM integration. Models, precisions,
+four protection methods, operations and timing boundaries match the original
+performance study. Replace its single512-token fixture with five length groups
+and1,000 formal calls per operation in each group.
 
-## 采样与次数
+## Sampling and counts
 
-从既有主实验3,000条真实文本中抽取；按被测模型自身的固定tokenizer，把完整输入分为32–63、64–127、128–255、256–511、512–767token五档。保留原文，不截断、不补写文本。档内均匀随机有放回抽样1,000次，各方法使用完全相同的抽样清单；不按题材分类。同一文本可重复抽中，因此1,000是计时次数，不是1,000条不同输入。实际不同输入数与抽样清单已固定在protocol/SAMPLING.json、protocol/schedules/。
+Reuse the main3,000 real texts. Each tested model's pinned tokenizer assigns
+complete inputs to32-63,64-127,128-255,256-511 and512-767 tokens. Preserve source
+text without truncation or padding its wording. Within each group, draw1,000
+inputs uniformly with replacement; every method uses exactly the same schedule.
+There are no content-category quotas. Repeated texts remain, so1,000 counts
+timed calls rather than distinct inputs. Schedules and distinct-input counts
+are frozen in protocol/SAMPLING.json and protocol/schedules/.
 
-保留原四个性能配置：Llama3.1-8B/FP32的KV-Cloak块大小16、32、64，以及原Qwen2.5-0.5B/bf16/块大小16桥接配置。每配置覆盖五档，共20个正式任务。
+Retain four profiles: Llama-3.1-8B/FP32 at KV-Cloak block sizes16/32/64, and the
+original Qwen2.5-0.5B/bf16/block16 bridge. Five groups per profile give20 formal jobs.
 
-每任务包括：普通KV-Cloak、融合版KV-Cloak、VeilKV公开前缀方案、不共享的认证加密，各测保护和恢复，共8项；另测原来的未保护模型prefill。每项1,000次，因此每任务9,000条，正式总数180,000条。每项另有20次预热，不计入正式数。启动检查同样覆盖全部配置和长度档，每项2次，共360条，不代替正式测量。
+Each job measures protection and recovery for unfused KV-Cloak, fused KV-Cloak,
+VeilKV with a public prefix and authenticated encryption without sharing, plus
+the original unprotected-model prefill. Nine series x1,000 calls give9,000
+observations per job and180,000 formal observations. Each series has20 separate
+warmups. Startup checks cover every profile/group with two calls per series:
+360 observations, separate from formal measurements.
 
-## 保留的测量规则
+## Fixed measurement rules
 
-- 单张80GB GPU，串行；上限78GiB。默认16个CPU线程。复用既有原生环境和模型缓存，不装新模型。
-- 保护、恢复分别计时，开始和结束均同步CUDA。VeilKV/认证加密计入CPU密码运算和GPU↔CPU传输；KV-Cloak缓存留在GPU。
-- 缓存构造、配置准备、输入复制、nonce构造、恢复输入的预先保护在计时之外。融合版的VM仍在计时之外准备，不把这个结果当成融合模型prefill成本。
-- 每个抽中的输入先生成它自己的真实KV缓存。公开前缀按固定32-token长度计算并复用，然后接入其余文本，沿用已验收字节消费者的canonical-prefix构造，避免同一公开前缀因整段prefill长度不同而出现浮点字节冲突；这一步在计时之外，四种方法消费同一份缓存。每次操作都准备独立输入，保护/恢复顺序打乱。未保护prefill保持原来的单独计时阶段，使用同一输入清单。
-- 公共前缀仍为最多两个完整16-token块（最多32token），不共享基线为0。实际公开/私有长度逐条记录；长度恰32时公开部分可覆盖全部输入。这是固定前缀长度规则，不是固定共享比例。
-- 每次记录实际token数和KV字节数，按实际长度计算seconds/1,000tokens、ms/GiB；不再固定除以512。分别保留各模型/精度/块大小/长度档的原始耗时、中位数、p95、p99，不混池。
-- 每次使用新的请求nonce；保留所有错误和已完成测量，不为追求更好结果重测。正式测量中断后按记录键续跑，不拼旧100次记录。
+- Use one80GB GPU serially, with a78GiB allocation cap and16 CPU threads by
+  default. Reuse the existing native environment and model cache.
+- Time protection and recovery separately, synchronizing CUDA at both ends.
+  VeilKV/AEAD include CPU cryptography and GPU-CPU transfers; KV-Cloak caches
+  remain on GPU.
+- Cache construction, configuration preparation, input copying, nonce creation
+  and prior protection of recovery inputs remain outside timing. Fused VM inputs
+  are also prepared outside timing; this does not measure fused-model prefill.
+- Build each sampled input's actual cache. Process the fixed32-token public
+  prefix canonically and then the private text, reusing the accepted byte-consumer
+  construction. This avoids floating-point byte conflicts for identical prefixes
+  under different complete-prefill lengths. Preparation is untimed, and all four
+  methods receive the same cache. Prepare independent operation inputs and
+  randomize protection/recovery call order. Native unprotected prefill retains
+  its separate timing stage on the same input schedule.
+- Public content remains at most two complete16-token blocks(32 tokens);
+  no-sharing uses zero public tokens. Record actual public/private lengths.
+  A32-token input can be entirely public: this is a fixed prefix length, not a
+  fixed sharing fraction.
+- Record actual token counts and KV bytes. Compute seconds/1,000 tokens and
+  ms/GiB from each actual length/size, not a fixed512 denominator. Retain raw
+  timings, medians, p95 and p99 separately by model/precision/block/length group.
+- Use a new request nonce for each operation. Preserve errors and completed
+  timings; do not rerun unfavorable values. Resume interrupted formal work by
+  observation key without splicing in old100-call records.
 
-## 运行
+## Execution
 
-上传ZIP后解压到新目录。原生环境和模型缓存直接复用旧主GPU包：
+Unpack into a new directory and reuse the original native environment/cache:
 
 ```bash
 unzip veilkv-latency-lengths-1k-20261114.zip
 cd veilkv-latency-lengths-1k
-python3 run.py configure --old-native /旧主GPU包 --gpu 0
+python3 run.py configure --old-native /path/to/main-gpu-bundle --gpu 0
 nohup python3 -u run.py run > runtime/operator.log 2>&1 &
 python3 run.py status
 ```
 
-也可把--old-native指向已配置的GPU602包；工具会查找其native目录。若环境入口不同，可加--python /已有原生venv/bin/python --cache-dir /已有缓存/hub。不要解析venv入口的符号链接来替代这个路径。
+`--old-native` may instead point to the configured GPU602 bundle; the tool
+locates its native directory. For another environment entry, pass
+`--python /path/to/native-venv/bin/python --cache-dir /path/to/cache/hub`.
+Do not replace the venv entry with its resolved symlink target.
 
-队列先完成20个CUDA启动任务，再跑正式性能任务；检测到其它GPU任务时等待，不与正在执行的live任务抢卡。暂停可创建runtime/pause.flag；删除它后用同一run命令继续。环境故障核实并修复后，可用run --retry-blocked继续未完成任务，不删除已有记录。
+The20 CUDA startup jobs precede formal execution. Wait for other GPU work;
+do not compete with the running live integration. Create runtime/pause.flag to
+pause; remove it and repeat the same run command to continue. After fixing a
+verified environment failure, use `run --retry-blocked` for incomplete work,
+retaining every existing record.
 
 ```bash
 python3 run.py verify
 python3 run.py export
 ```
 
-将生成的latency-lengths-private-handoff-*.zip返回验收。export强制包含实际服务器源码快照、发行科学基线、冻结输入、全部计时、环境和错误。未完成时用export --partial返回现场；不会标记完成。请交回完整导出包，不手工只挑results压缩。
+Return the complete latency-lengths-private-handoff-*.zip for acceptance.
+Export requires the actual server source snapshot, issued scientific baseline,
+fixed inputs, all timings, environments and errors. For incomplete execution,
+use `export --partial`; it does not mark the run complete. Do not manually
+select only the results directory.
 
-本机只做离线分词、输入和协议检查，以及小型CPU合成缓存/真实密码运算的接口检查；没有GPU计时结果。论文和匿名结果包暂不改，实际结果验收后再更新。
+Preparation performed offline tokenization/input/protocol checks and small CPU
+synthetic-cache/real-cryptography interface checks, not GPU timing. At issuance,
+the manuscript and anonymous result archive were unchanged. Accepted results are
+now documented in docs/LATENCY_LENGTHS_1K.md in the consolidated artifact.

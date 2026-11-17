@@ -1,4 +1,4 @@
-| 配置 | 模型 | b | KV头×维度 | 状态数 | 恢复头数 | w误差max | S列cos | 攻击准确率min/mean | 对照(新钥) | 探针token | 耗时s |
+| Configuration | Model | b | KV heads x dimension | State count | Recovered heads | Max w error | S-column cosine | Attack accuracy min/mean | Fresh-key control | Probe tokens | Time(s) |
 |---|---|---|---|---|---|---|---|---|---|---|---|
 | fused | Qwen/Qwen2.5-0.5B | 16 | 2×64 | 16-16/16 | 0/2 | None | None | 1.0/1.0 | None | None | None |
 | llama32_1b | unsloth/Llama-3.2-1B | 16 | 8×64 | 16-16/16 | 8/8 | 0.0106 | 0.999997 | 0.9967/0.9983 | 0.0 | 3201 | 97.1 |

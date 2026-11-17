@@ -1,3 +1,4 @@
+# Publication copy: comments and docstrings translated to English; executable code unchanged.
 import argparse
 import hashlib
 import json
@@ -11,7 +12,7 @@ from pdsplit import prefill
 
 def main(model_name: str, device: torch.device, dtype: torch.dtype, dataset_name: str, max_samples: int = None):
     """
-    加载模型和数据集，为指定数据集中的每个用户输入生成并保存 KV 缓存。
+    Load the model and dataset, then generate and save the KV cache for each user input.
     """
     model_path = Path(f"~/model/{model_name}").expanduser()
     dataset_path = Path(dataset_name)
@@ -70,9 +71,9 @@ def main(model_name: str, device: torch.device, dtype: torch.dtype, dataset_name
                 instruction = item.get("instruction", "")
                 input_text = item.get("input", "")
 
-                # 构建 Alpaca 格式的 prompt
+                # Build an Alpaca-format prompt.
                 if input_text:
-                    # 包含 input 的格式
+                    # Format with an input field.
                     user_input = (
                         "Below is an instruction that describes a task, paired with an input that provides further context. "
                         "Write a response that appropriately completes the request.\n\n"
@@ -80,7 +81,7 @@ def main(model_name: str, device: torch.device, dtype: torch.dtype, dataset_name
                         f"### Input:\n{input_text}"
                     )
                 else:
-                    # 不含 input 的格式
+                    # Format without an input field.
                     user_input = (
                         "Below is an instruction that describes a task. "
                         "Write a response that appropriately completes the request.\n\n"

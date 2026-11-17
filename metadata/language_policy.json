@@ -1,0 +1,11 @@
+{
+  "documentation_language": "en",
+  "code_comments_and_docstrings_language": "en",
+  "raw_experimental_text_policy": "preserve_original",
+  "raw_input_or_output_translation_performed": false,
+  "historical_filenames_preserved_for_compatibility": true,
+  "publication_localization_after_measurement": true,
+  "scientific_baseline_copies_localized_consistently": true,
+  "guide": "docs/ENGLISH_RELEASE.md",
+  "offline_checker": "tools/check_english_materials.py"
+}

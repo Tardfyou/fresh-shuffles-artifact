@@ -1,7 +1,16 @@
-# 服务器操作范围
+# Server operation scope
 
-你负责复用原有原生环境和缓存、检查资源、串行启动/监督/续跑并完整导出。本包已固定五档有放回抽样、每操作1,000次和原测量边界；不修改科学源码、抽样清单、随机种子、精度、阈值、计时范围或结果。
+Reuse the existing native environment and model cache, inspect resources, and
+run, supervise, resume and export the serial queue completely. The five length
+groups, sampling with replacement,1,000 calls per operation and original timing
+boundaries are fixed. Do not change scientific code, input schedules, random
+seeds, precision, thresholds, timing boundaries or results.
 
-禁止删除错误、重跑正常完成但不理想的测量、拿旧100次结果补计数。遇问题保留现场，用run.py export --partial交回；只有明确的环境/资源问题修复后才用--retry-blocked继续。禁止自动启动本包以外的新实验。
+Do not delete errors, repeat completed measurements because their values are
+unfavorable, or use old100-call records to complete the new counts. Preserve the
+execution state on failure and return it with `run.py export --partial`.
+Use `--retry-blocked` only after diagnosing and fixing a clear environment or
+resource problem. Do not automatically start experiments outside this bundle.
 
-最终必须用run.py verify和run.py export，交回带source_snapshot和SCIENTIFIC_BASELINE的完整导出包。
+Finish with `run.py verify` and `run.py export`. Return the complete export,
+including source_snapshot and SCIENTIFIC_BASELINE.
